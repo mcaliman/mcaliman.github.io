@@ -1,0 +1,281 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>La parola riservata this in Java &#8211; Computer Programming</title>
+<meta name="description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
+<meta name="keywords" content="Java">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://mcaliman.github.io//images/so-simple-sample-image-1.jpg">
+
+<meta name="twitter:title" content="La parola riservata this in Java">
+<meta name="twitter:description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
+<meta name="twitter:creator" content="@mcaliman">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="La parola riservata this in Java">
+<meta property="og:description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
+<meta property="og:url" content="http://mcaliman.github.io//la-parola-riservata-this-in-java/">
+<meta property="og:site_name" content="Computer Programming">
+
+
+
+
+
+<link rel="canonical" href="http://mcaliman.github.io//la-parola-riservata-this-in-java/">
+<link href="http://mcaliman.github.io//feed.xml" type="application/atom+xml" rel="alternate" title="Computer Programming Feed">
+<link rel="author" href="https://plus.google.com/+MassimoCaliman?rel=author">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://mcaliman.github.io//assets/css/main.min.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="http://mcaliman.github.io//assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://mcaliman.github.io//favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://mcaliman.github.io//favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://mcaliman.github.io//images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://mcaliman.github.io//images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://mcaliman.github.io//images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://mcaliman.github.io//images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+	        
+			<li>
+				
+					<a href="http://mcaliman.github.io//">Home</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://mcaliman.github.io//about/">About</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://mcaliman.github.io//articles/">Articles</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://mcaliman.github.io//legal/">Legal</a>
+				 
+			</li>
+	        
+	        <li><a href="http://mcaliman.github.io//feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+	        <li class="dosearch"><i class="icon-search"></i> Search</li>
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<div class="search-wrapper">
+	<div class="search-form">
+		<input type="text" class="search-field" placeholder="Search...">
+		<i class="icon-remove-sign icon-2x"></i>
+		<ul class="search-results post-list"></ul><!-- /.search-results -->
+	</div><!-- /.search-form -->
+</div><!-- ./search-wrapper -->
+
+<header class="masthead">
+	
+</header><!-- /.masthead -->
+
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    <img src="http://mcaliman.github.io//images/so-simple-sample-image-1.jpg" class="entry-feature-image" alt="La parola riservata this in Java" style="margin-top:0;"><p class="image-credit">Photo Credit: <a href="http://mademistakes.com">Michael Rose</a>
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <span class="entry-tags"><a href="http://mcaliman.github.io//tags/#Java" title="Pages tagged Java">Java</a></span>
+        
+          <h1 class="entry-title">La parola riservata this in Java</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        <img src="http://mcaliman.github.io//images/bio-photo.jpg" alt="Massimo Caliman photo" class="author-photo">
+        <span class="author vcard">By <span class="fn"><a href="http://mcaliman.github.io//about/" title="About Massimo Caliman">Massimo Caliman</a></span></span>
+        <span class="entry-date date published"><time datetime="2007-01-05T23:45:33+01:00"><i class="icon-calendar-empty"></i> January 05, 2007</time></span>
+        
+        
+        <span><a href="http://mcaliman.github.io//la-parola-riservata-this-in-java/" rel="bookmark" title="La parola riservata this in Java"><i class="icon-link"></i> Permalink</a></span>
+        
+        <span class="social-share-facebook">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://mcaliman.github.io//la-parola-riservata-this-in-java/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
+        <span class="social-share-twitter">
+            <a href="https://twitter.com/intent/tweet?hashtags=&text=La parola riservata this in Java&url=http://mcaliman.github.io//la-parola-riservata-this-in-java/&via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
+        <span class="social-share-googleplus">
+            <a href="https://plus.google.com/share?url=http://mcaliman.github.io//la-parola-riservata-this-in-java/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
+            <!-- /.social-share -->
+      </footer>
+      <div class="entry-content">
+        <p>E’ possibile riscontrare due situazioni di interesse legate all’uso dei metodi la cui accurata gestione permette di migliorare 
+l’efficienza del codice: </p>
+
+<ul>
+  <li>omonimia parametri dei metodi e delle variabili della classe in cui i metodo sono definiti </li>
+  <li>molteplicità dei costruttori della classe </li>
+</ul>
+
+<p>La prima situazione deriva dal fatto che un tipico utilizzo dei metodi consiste nel fornire valori da assegnare alle variabili degli oggetti. 
+In tal caso è evidente che i parametri del metodo e i dati membro della classe possiedono la stessa semantica e pertanto non è ragionevole 
+identificare gli uni e gli altri con nomi diversi. </p>
+
+<p>Il problema che ne segue è quello di poter discriminare fra entità diverse che sono individuate con lo stesso identificatore. </p>
+
+<p>La seconda situazione nasce dalla funzione dei costruttori, il cui scopo è quello di fornire procedure diversificate di 
+inizializzazione degli oggetti che possono dipendere da particolari esigenze applicative. </p>
+
+<p>Tipicamente una classe mette a disposizione un costruttore con valori di default per le variabili degli oggetti e uno o più altri 
+costruttori per inizializzazioni specifiche. </p>
+
+<p>E’ ragionevole aspettarsi che la presenza dei molteplici costruttori, similari nelle loro funzionalità, comporti la duplicazione 
+di parte del codice o tali metodi con conseguente spreco di memoria. </p>
+
+<p>Al fine di fronteggiare le situazioni indicate, il linguaggio di programmazione Java mette a disposizione del programmatore la parola riservata this. </p>
+
+<p>Si tratta di una parola chiave che può essere sfruttata sotto due interpretazioni distinte:</p>
+
+<ul>
+  <li>il riferimento ad un oggetto </li>
+  <li>riferimento ad un altro costruttore </li>
+</ul>
+
+<p>Nella prima accezione, la parola this è sfruttata nella risoluzione di omonimie tra il parametro di un metodo e il nome di una variabile di istanza:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
+   <span class="kt">float</span> <span class="n">car</span><span class="o">;</span>
+   <span class="kt">void</span> <span class="nf">m</span><span class="o">(</span><span class="kt">float</span> <span class="n">var</span><span class="o">){</span>
+       <span class="k">this</span><span class="o">.</span><span class="na">var</span><span class="o">=</span><span class="n">var</span><span class="o">;</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Ci forza il compilatore ad interpretare la specifica this.var come un riferimento alla variabile di istanza var dell’oggetto in cui il metodo m()  è attivato.
+Pertanto, nel comando this.var=var, l’identificatore var a destra dell’operatore di assegnazione si riferisce al parametro del metodo, 
+mentre la specifica this.var collocata a sinistra dello stesso operatore si riferisce all’attributo dell’oggetto. </p>
+
+<p>La seconda accezione della parola this legata alla presenza di più costruttori. Al fine di ridurre il codice prodotto dal compilatore, 
+i costruttori di una classe possono essere ripartiti in un costruttore primario e uno o più altri costruttori secondari. 
+Mentre il costruttore primario è di per sè codificato, i costruttori secondari rimandano a quello primario riportandone i parametri
+di chiamata nella specifica this. La specifica di richiamo deve essere la prima istruzione che appare nel codice dei costruttori secondari.</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
+   <span class="kt">float</span> <span class="n">var</span><span class="o">;</span>
+   <span class="kd">public</span> <span class="nf">T</span><span class="o">(</span><span class="kt">float</span> <span class="n">var</span><span class="o">){</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">var</span><span class="o">=</span><span class="n">var</span><span class="o">;</span>
+   <span class="o">}</span>
+   <span class="kd">public</span> <span class="nf">T</span><span class="o">(){</span>
+      <span class="k">this</span><span class="o">(</span><span class="mf">0.03</span><span class="o">);</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://mcaliman.github.io//il-passaggio-di-parametri-in-java/" class="btn" title="Il passaggio di parametri in Java">Previous article</a>
+      
+      
+        <a href="http://mcaliman.github.io//gli-oggetti-in-java/" class="btn" title="Gli oggetti in Java">Next article</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2014 Massimo Caliman. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="http://twitter.com/mcaliman" title="Massimo Caliman on Twitter" target="_blank"><i class="icon-twitter icon-2x"></i></a>
+	
+	<a href="https://plus.google.com/+MassimoCaliman" title="Massimo Caliman on Google+" target="_blank"><i class="icon-google-plus icon-2x"></i></a>
+	<a href="http://linkedin.com/in/mcaliman" title="Massimo Caliman on LinkedIn" target="_blank"><i class="icon-linkedin icon-2x"></i></a>
+	
+	
+	
+	<a href="http://github.com/mcaliman" title="Massimo Caliman on Github" target="_blank"><i class="icon-github icon-2x"></i></a>
+	
+</div><!-- /.social-icons -->
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://mcaliman.github.io//assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://mcaliman.github.io//assets/js/scripts.min.js"></script>
+
+<!-- Jekyll Simple Search option -->
+<script>
+  $(document).ready(function() {
+      $('.search-field').simpleJekyllSearch({
+          jsonFile : 'http://mcaliman.github.io//search.json',
+          searchResults : '.search-results',
+          template : '<li><article><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></article></li>',
+          noResults: '<p>Nothing found.</p>'
+        });
+  });
+
+  (function( $, window, undefined ) {
+    
+     var bs = {
+          close: $(".icon-remove-sign"),
+          searchform: $(".search-form"),
+          canvas: $("body"),
+          dothis: $('.dosearch')
+      };
+    
+    bs.dothis.on('click', function() {
+      $('.search-wrapper').css({ display: "block" });
+      bs.searchform.toggleClass('active');
+      bs.searchform.find('input').focus();
+      bs.canvas.toggleClass('search-overlay');
+    });
+    
+      bs.close.on('click', function() {
+        $('.search-wrapper').removeAttr( 'style' );
+        bs.searchform.toggleClass('active');
+        bs.canvas.removeClass('search-overlay');
+    });
+  })( jQuery, window );
+</script>
+
+
+	        
+
+</body>
+</html>

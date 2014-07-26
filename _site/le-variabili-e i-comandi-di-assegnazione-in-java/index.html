@@ -1,0 +1,349 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Le variabili e i comandi di assegnazione &#8211; Computer Programming</title>
+<meta name="description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
+<meta name="keywords" content="Java">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://mcaliman.github.io//images/so-simple-sample-image-2.jpg">
+
+<meta name="twitter:title" content="Le variabili e i comandi di assegnazione">
+<meta name="twitter:description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
+<meta name="twitter:creator" content="@mcaliman">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Le variabili e i comandi di assegnazione">
+<meta property="og:description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
+<meta property="og:url" content="http://mcaliman.github.io//le-variabili-e%20i-comandi-di-assegnazione-in-java/">
+<meta property="og:site_name" content="Computer Programming">
+
+
+
+
+
+<link rel="canonical" href="http://mcaliman.github.io//le-variabili-e%20i-comandi-di-assegnazione-in-java/">
+<link href="http://mcaliman.github.io//feed.xml" type="application/atom+xml" rel="alternate" title="Computer Programming Feed">
+<link rel="author" href="https://plus.google.com/+MassimoCaliman?rel=author">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://mcaliman.github.io//assets/css/main.min.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="http://mcaliman.github.io//assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://mcaliman.github.io//favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://mcaliman.github.io//favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://mcaliman.github.io//images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://mcaliman.github.io//images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://mcaliman.github.io//images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://mcaliman.github.io//images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+	        
+			<li>
+				
+					<a href="http://mcaliman.github.io//">Home</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://mcaliman.github.io//about/">About</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://mcaliman.github.io//articles/">Articles</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://mcaliman.github.io//legal/">Legal</a>
+				 
+			</li>
+	        
+	        <li><a href="http://mcaliman.github.io//feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+	        <li class="dosearch"><i class="icon-search"></i> Search</li>
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<div class="search-wrapper">
+	<div class="search-form">
+		<input type="text" class="search-field" placeholder="Search...">
+		<i class="icon-remove-sign icon-2x"></i>
+		<ul class="search-results post-list"></ul><!-- /.search-results -->
+	</div><!-- /.search-form -->
+</div><!-- ./search-wrapper -->
+
+<header class="masthead">
+	
+</header><!-- /.masthead -->
+
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    <img src="http://mcaliman.github.io//images/so-simple-sample-image-2.jpg" class="entry-feature-image" alt="Le variabili e i comandi di assegnazione" style="margin-top:0;"><p class="image-credit">Photo Credit: <a href="http://mademistakes.com">Michael Rose</a>
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <span class="entry-tags"><a href="http://mcaliman.github.io//tags/#Java" title="Pages tagged Java">Java</a></span>
+        
+          <h1 class="entry-title">Le variabili e i comandi di assegnazione</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        <img src="http://mcaliman.github.io//images/bio-photo.jpg" alt="Massimo Caliman photo" class="author-photo">
+        <span class="author vcard">By <span class="fn"><a href="http://mcaliman.github.io//about/" title="About Massimo Caliman">Massimo Caliman</a></span></span>
+        <span class="entry-date date published"><time datetime="2003-01-02T23:45:33+01:00"><i class="icon-calendar-empty"></i> January 02, 2003</time></span>
+        
+        
+        <span><a href="http://mcaliman.github.io//le-variabili-e%20i-comandi-di-assegnazione-in-java/" rel="bookmark" title="Le variabili e i comandi di assegnazione"><i class="icon-link"></i> Permalink</a></span>
+        
+        <span class="social-share-facebook">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://mcaliman.github.io//le-variabili-e%20i-comandi-di-assegnazione-in-java/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
+        <span class="social-share-twitter">
+            <a href="https://twitter.com/intent/tweet?hashtags=&text=Le variabili e i comandi di assegnazione&url=http://mcaliman.github.io//le-variabili-e%20i-comandi-di-assegnazione-in-java/&via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
+        <span class="social-share-googleplus">
+            <a href="https://plus.google.com/share?url=http://mcaliman.github.io//le-variabili-e%20i-comandi-di-assegnazione-in-java/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
+            <!-- /.social-share -->
+      </footer>
+      <div class="entry-content">
+        <p>Diamo per prima cosa una definizione sufficientemente formale per i nostri scopi di variabile:
+Definizione di variabile
+Una variabile  una coppia composta da un nome, l’identificativo della variabile e un valore.</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">T</span> <span class="n">var</span> <span class="o">=</span> <span class="n">value</span> <span class="o">;</span></code></pre></div>
+
+<p>Le variabili di un programma memorizzano i dati che sono elaborati durante l’esecuzione.
+Nel corso dell’esecuzione del programma i valori della variabile sono modificati (se no sarebbero delle costanti).
+Le variabili nascono,vivono e muoiono,  compito nostro occuparci di loro,della loro vita,della loro visibilit (scope).
+Trattiamole bene,diamogli un nome rispettabile in modo che non ci odino e ci faccia passare notti insonni.
+Prima di essere usata una variabile deve essere dichiarata, la dichiarazione di una variabile  necessaria per riservare uno spazio
+di memoria in cui scrivere il suo valore, la dichiarazione definisce il tipo della variabile.</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">T</span> <span class="n">var</span><span class="o">;</span></code></pre></div>
+
+<p>dove T  il tipo, per esempio <strong>int</strong> , double e altro.
+Si possono avere come tipi, tipi di base che non sono oggetti oppure oggetti ( T diventa un nome di classe). 
+Sotto riportiamo alcuni esempi di dichiarazione di variabile:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="n">x</span> <span class="o">;</span> <span class="kt">double</span> <span class="n">y</span> <span class="o">;</span></code></pre></div>
+
+<p>Posso anche assegnare un valore alla variabile:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">;</span> <span class="kt">double</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">;</span></code></pre></div>
+
+<p>Il tipo dei valori della variabile serve per stabilire quanta memoria riservare alla variabile, nel caso del tipo int sono 4 byte.
+Se dovessimo rappresentare graficamente le dichiarazioni:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">;</span> 
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">;</span> 
+<span class="kt">int</span> <span class="n">z</span> <span class="o">;</span></code></pre></div>
+
+<p>x 0 y 2 z -</p>
+
+<p>dove - indica che z  stato dichiarato ma non inizializzato cio non gli  stato assegnato un valore.</p>
+
+<p>Diamo ora una definizione sufficientemente formale ai nostri scopi di un comandi di assegnazione.</p>
+
+<p>Definizione di comando di assegnazione</p>
+
+<p>Un comando di assegnazione  un’istruzione avente lo scopo di modificare il valore di una variabile.
+Si aggiunga anche di assegnare un valore ad una variabile che era solo stata dichiarata e che quindi aveva valore indefinito.</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">var</span> <span class="o">=</span> <span class="n">expr</span><span class="o">;</span></code></pre></div>
+
+<p>Dove var  il nome della variabile e expr una espressione il cui tipo  compatibile con il tipo di var.
+Il comando ha l’effetto di sostituire il valore della variabile il cui nome compare a sinistra (left-value) del segno di uguaglianza 
+con il valore che compare a destra.
+Per espressioni si intende un’entit sintattica composta da nomi di variabili, costanti e segni di operazioni 
+per stabilire l’ordine di valutazione degli operandi.</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">x</span> <span class="o">=</span> <span class="mi">12</span><span class="o">;</span></code></pre></div>
+
+<p>assegna alla variabile x il valore 12;</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">y</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span></code></pre></div>
+
+<p>un esempio di espressione.</p>
+
+<p>Abbiamo parlato fino ad ora dei tipi di variabile senza darne una definizione formale, corriamo subito ai ripari:</p>
+
+<p>Definizione di tipo di dato </p>
+
+<p>Un tipo di dati  costituito da un’insieme di valori e da un’ insieme di operazioni applicabile a tale valori.</p>
+
+<p>Come gi accennato prima i tipi di dato in java appartengono a 2 categorie principali :</p>
+
+<ul>
+  <li>Tipi primitivi : boolean, byte, short, int, long, float, double, char</li>
+  <li>Tipi classe : String ecc</li>
+</ul>
+
+<p>Segue una tabella che da per ogni tipo di valori che pu assumere le operazioni che si possono applicare.</p>
+
+<ul>
+  <li>boolean : false e true </li>
+  <li>byte : interi [-27,27-1] ( decimale, ottale , esadecimale) operazioni: + , - , *, / , %. </li>
+  <li>short : interi [-215, 215-1] ( decimale, ottale , esadecimale operazioni: + , - , * , / , %. </li>
+  <li>int numeri naturali [-231,231-1] ( decimale, ottale , esadecimale) operazioni: + , - , * , / , %. </li>
+  <li>long numeri naturali [-263,263-1] ( decimale, ottale , esadecimale) operazioni: + , - , * , / , %. </li>
+  <li>float numeri reali in formato IEEE754 a 32 bit notazione a virgola fissa e mobile: +, -, *, /. </li>
+  <li>double numeri reali in formato IEEE754 a 64 bit bit notazione a virgola fissa e mobile:+, -, *, /. </li>
+  <li>char caratteri, Unicode notazione simboli tra apici nessuna operazione. </li>
+  <li>String : Sequenza di caratteri, Unicode notazione simboli tra doppi apici nessuna operazione + (concatenazione)</li>
+</ul>
+
+<p>Le 4 operazioni aritmetiche sono rappresentate dai simboli + , - , * , /.</p>
+
+<p>Per i tipi di dato byte, short, int, long il simbolo / rappresenta il quoto dell’ operazione</p>
+
+<p>Per inserire un apice o un doppio apice dentro una stringa si scrive ' e " rispettivamente</p>
+
+<p>Aggiungiamo anche per completezza anche i simboli:
+  &amp;&amp; and logico o congiunzione 
+  || or logico o disgiunzione 
+  !  not o negazione</p>
+
+<p>Come gi accennato nel caso di una assegnazione del tipo </p>
+
+<div class="highlight"><pre><code class="java"><span class="n">T</span> <span class="n">var</span> <span class="o">=</span> <span class="n">expr</span></code></pre></div>
+
+<p>abbiamo detto che expr deve avere tipo compatibile con T (non necessariamente lo stesso)  utile a questo punto dare 
+la definizione di promozione e casting per tipi che definiscono i casi in cui il tipo di var e expr possono non coincidere 
+ma essere comunque corretti e applicabili.</p>
+
+<p>Definizione
+Qualora tanto il tipo della variabile quanto il tipo dell’ espressione rappresentino dati numerici e il tipo di expr  sottoinsieme 
+del tipo di var prima dell’ assegnazione avviene una conversione automatica detta promozione.
+Per esempio:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="n">i</span> <span class="o">;</span> 
+<span class="kt">byte</span> <span class="n">j</span> <span class="o">;</span> 
+<span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">;</span></code></pre></div>
+
+<p>Diamo ora invece una definizione di casting:</p>
+
+<p>Definizione</p>
+
+<p>Se il tipo di var e tipo di expr prevedono valori comuni ( tipicamente TypeOf (expr ) sottoinsieme TypeOf (var)) si pu pensare la 
+conversione esplicita detta casting cio : TypeOf(expr) –&gt; TypeOf(var). Questo se i valori numerici sono corretti e compatibili.</p>
+
+<p>Per esempio:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="n">i</span><span class="o">;</span> 
+<span class="kt">byte</span> <span class="n">j</span><span class="o">;</span> 
+<span class="n">j</span> <span class="o">=</span> <span class="o">(</span><span class="kt">byte</span><span class="o">)</span> <span class="n">i</span><span class="o">;</span></code></pre></div>
+
+<p>corretto solo se i  minore o uguale del valore massimo disponibile per byte.</p>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://mcaliman.github.io//le-feature-del-linguaggio-java-che-devi-conoscere/" class="btn" title="Le feature del linguaggio Java che devi conoscere">Previous article</a>
+      
+      
+        <a href="http://mcaliman.github.io//le-costanti-simboliche-in-java/" class="btn" title="Le costanti simboliche in Java">Next article</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2014 Massimo Caliman. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="http://twitter.com/mcaliman" title="Massimo Caliman on Twitter" target="_blank"><i class="icon-twitter icon-2x"></i></a>
+	
+	<a href="https://plus.google.com/+MassimoCaliman" title="Massimo Caliman on Google+" target="_blank"><i class="icon-google-plus icon-2x"></i></a>
+	<a href="http://linkedin.com/in/mcaliman" title="Massimo Caliman on LinkedIn" target="_blank"><i class="icon-linkedin icon-2x"></i></a>
+	
+	
+	
+	<a href="http://github.com/mcaliman" title="Massimo Caliman on Github" target="_blank"><i class="icon-github icon-2x"></i></a>
+	
+</div><!-- /.social-icons -->
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://mcaliman.github.io//assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://mcaliman.github.io//assets/js/scripts.min.js"></script>
+
+<!-- Jekyll Simple Search option -->
+<script>
+  $(document).ready(function() {
+      $('.search-field').simpleJekyllSearch({
+          jsonFile : 'http://mcaliman.github.io//search.json',
+          searchResults : '.search-results',
+          template : '<li><article><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></article></li>',
+          noResults: '<p>Nothing found.</p>'
+        });
+  });
+
+  (function( $, window, undefined ) {
+    
+     var bs = {
+          close: $(".icon-remove-sign"),
+          searchform: $(".search-form"),
+          canvas: $("body"),
+          dothis: $('.dosearch')
+      };
+    
+    bs.dothis.on('click', function() {
+      $('.search-wrapper').css({ display: "block" });
+      bs.searchform.toggleClass('active');
+      bs.searchform.find('input').focus();
+      bs.canvas.toggleClass('search-overlay');
+    });
+    
+      bs.close.on('click', function() {
+        $('.search-wrapper').removeAttr( 'style' );
+        bs.searchform.toggleClass('active');
+        bs.canvas.removeClass('search-overlay');
+    });
+  })( jQuery, window );
+</script>
+
+
+	        
+
+</body>
+</html>

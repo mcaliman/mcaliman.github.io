@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+
+
+
+  
+
+<title type="text">Computer Programming</title>
+<generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="http://mcaliman.github.io//feed.xml" />
+<link rel="alternate" type="text/html" href="http://mcaliman.github.io//" />
+<updated>2014-07-19T22:30:58+02:00</updated>
+<id>http://mcaliman.github.io//</id>
+<author>
+  <name>Massimo Caliman</name>
+  <uri>http://mcaliman.github.io//</uri>
+  <email>mcaliman@gmail.com</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[﻿Una Servlet per gestire il download di file in Java]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//una-servlet-per-gestire-il-download-di-file-in-java/"/>
+  <id>http://mcaliman.github.io//una-servlet-per-gestire-il-download-di-file-in-java</id>
+  <published>2014-07-16T00:45:33+02:00</published>
+  <updated>2014-07-16T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Java" term="Java" /><category scheme="http://mcaliman.github.io//tags/#Servlet" term="Servlet" />
+  <content type="html">
+  
+    &lt;p&gt;Vediamo in questo post come scrivere il codice di una Servlet java che ci permette di effettuare il trasferimento (il download) di un file dalla nostra applicazione server al client
+(il web browser dei nostri utenti).&lt;/p&gt;
+
+&lt;p&gt;Effettuando il click su un link che punta alla nostra servlet verrà avviato il download, vediamo il codice piuttosto intuitivo nelle linee sottostanti del post.&lt;/p&gt;
+
+&lt;p&gt;Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto (usando una qualche implementazione di InputStream nel nostro caso useremo FileInputStream); di
+determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di tipo HttpServletResponse della nostra servlet.&lt;/p&gt;
+
+&lt;p&gt;Nel nostro esempio il nome del file comprensivo di path è passato come parametro, rendendo la Servlet generica, utilizzabile per effettuare il download di qualsiasi file&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.FileInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.OutputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.servlet.ServletContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.servlet.ServletException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.servlet.annotation.WebServlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.servlet.http.HttpServlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.servlet.http.HttpServletRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.servlet.http.HttpServletResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+
+&lt;span class=&quot;nd&quot;&gt;@WebServlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;DownloadFileServlet&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlPatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/DownloadFileServlet&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DownloadFileServlet&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServlet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+
+    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;processRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServletResponse&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServletException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContentType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/html;charset=UTF-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filePath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getParameter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;file&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filePath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;FileInputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inputStream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;ServletContext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getServletContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mimeType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMimeType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filePath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mimeType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;mimeType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;application/octet-stream&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+            &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContentType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mimeType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContentLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+
+
+            &lt;span class=&quot;c1&quot;&gt;// forziamo il download del file&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headerKey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Content-Disposition&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headerValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;attachment; filename=\&amp;quot;%s\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setHeader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;headerKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headerValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+
+            &lt;span class=&quot;n&quot;&gt;OutputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;outputStream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getOutputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4096&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bytesRead&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bytesRead&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;outputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bytesRead&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;inputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;outputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//gestiamo eventuali errori come file non esistente&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;doGet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServletResponse&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServletException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;processRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;doPost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServletResponse&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServletException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;processRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Non dobbiamo aggiungere nulla alla nostra webapplication tramite il descrittore di deployment web.xml dato che abbiamo utilizzato la modalità tramite annotazioni&lt;/p&gt;
+
+&lt;p&gt;Per l’invocazione &lt;/p&gt;
+
+&lt;p&gt;http://localhost:8080/MyWebApplication//DownloadFileServlet?file=/path/file.ext&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//una-servlet-per-gestire-il-download-di-file-in-java/&quot;&gt;﻿Una Servlet per gestire il download di file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on July 16, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[﻿Inviare mail con allegati in Java]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//inviare-mail-con-allegati-in-java/"/>
+  <id>http://mcaliman.github.io//inviare-mail-con-allegati-in-java</id>
+  <published>2014-07-15T00:45:33+02:00</published>
+  <updated>2014-07-15T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Java" term="Java" /><category scheme="http://mcaliman.github.io//tags/#JavaMail" term="JavaMail" />
+  <content type="html">
+  
+    &lt;p&gt;Il package javax.mail è molto ricco, quindi in prima istanza può anche disorientare, vedremo nel codice presentato in questo post quanto ripaghi in flessibilità e potenzialità questa complessità. E’ vero, non ho un metodo semplice mail() come in altri linguaggi,  ma ho gli strumenti per crearmi anche un server di posta di tutto rispetto (ma questo lo approfondieremo in un prossimo post, riguardo il semplice metodo mail() possiamo anche crearcelo a partire dalle API come vedremo e sarà fatto su misura per le nostre esigenze)&lt;/p&gt;
+
+&lt;p&gt;Per creare la nostra utility faremo riferimento al pattern commmand&lt;/p&gt;
+
+&lt;p&gt;Per prima cosa definiamo una classe astratta che conterrà la gestione mailcap sempre utile quando si vuole gestire notifiche via mail da piattaforma Java.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.activation.CommandMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.activation.MailcapCommandMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AbstractMailCommand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mailcap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;MailcapCommandMap&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MailcapCommandMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CommandMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getDefaultCommandMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;mc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addMailcap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/html;; x-java-content-handler=com.sun.mail.handlers.text_html&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;mc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addMailcap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/xml;; x-java-content-handler=com.sun.mail.handlers.text_xml&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;mc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addMailcap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/plain;; x-java-content-handler=com.sun.mail.handlers.text_plain&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;mc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addMailcap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;multipart/*;; x-java-content-handler=com.sun.mail.handlers.multipart_mixed&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;mc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addMailcap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;message/rfc822;; x-java-content-handler=com.sun.mail.handlers.message_rfc822&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;CommandMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setDefaultCommandMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Segue a questo punto il codice della classe principale, la classe presenta metodi specifici per gestire anche l’invio di mail con autenticazione smtp.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Properties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.logging.Level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.logging.Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.activation.DataHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.activation.DataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.activation.FileDataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.BodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.Message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.MessagingException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.Multipart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.Session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.Transport&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.internet.AddressException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.internet.InternetAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.internet.MimeBodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.internet.MimeMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.internet.MimeMultipart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MailCommand&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AbstractMailCommand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Logger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLogger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;smtp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;myuser@domain.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;debugEnabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Session&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MimeMessage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attachments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;smtp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;smtp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;smtp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;debugEnabled&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mailcap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addAttachment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;BodyPart&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;messageBodyPart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;messageBodyPart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MimeBodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;DataSource&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileDataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;messageBodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setDataHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DataHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;messageBodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setFileName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;attachments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;messageBodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+
+
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//potevo usare il metodo con “base” se non mi interessa l’invio autenticato&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;MailCommandAuthenticator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;authenticator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MailCommandAuthenticator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Properties&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;props&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProperties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mail.smtp.host&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;smtp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mail.smtp.auth&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;session&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;authenticator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setDebug&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;debugEnabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;attachments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;();&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MimeMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initializeBase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Properties&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;props&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProperties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mail.smtp.host&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;smtp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;session&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setDebug&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;debugEnabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;attachments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;();&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MimeMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Session&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Properties&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;props&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProperties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mail.smtp.host&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;smtp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mail.smtp.auth&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;session&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setDebug&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;debugEnabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;attachments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;();&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MimeMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InternetAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addRecipient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RecipientType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;TO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InternetAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addCc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isNotEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addRecipient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RecipientType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;CC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InternetAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addBcc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bcc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AddressException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isNotEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bcc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addRecipient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RecipientType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;BCC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InternetAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bcc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setSubject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setSubject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setBody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isNotEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;Multipart&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multipart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MimeMultipart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;BodyPart&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;messageBodyPart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MimeBodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;messageBodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;multipart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addBodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;messageBodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;attachments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasNext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;BodyPart&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bodyPart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;multipart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addBodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;multipart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;attachments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;multipart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;Transport&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getTransport&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;smtp&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FINEST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Connect to host &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;smtp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; from &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; password &amp;#39;secret&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;tr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;tr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sendMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAllRecipients&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FINEST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Mail sent successfully&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;tr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SEVERE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Avrete notato la presenza di una classe MailCommandAuthenticator che serve proprio per la gestione dell’autenticazione al nostro server di posta&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.Authenticator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.PasswordAuthentication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MailCommandAuthenticator&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Authenticator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MailCommandAuthenticator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+   &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PasswordAuthentication&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getPasswordAuthentication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PasswordAuthentication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;E’ ora non ci resta che mostrare un esempio di utilizzo, ma prima aiutiamoci con una classe che realizza il pattern singleton &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MailCommandInstantiator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MailCommand&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MailCommand&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;smtp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;smtp..myserver.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;auth@myserver.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Secret&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;smtp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ed ora il codice di chiamata, si tratta di uno degli esempi possibili atto ad illustrare la flessibilità del mini framework che abbiamo realizzato e che voi personalizzerete secondo le vostre esigenze.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;MailCommand&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MailCommandInstantiator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;alice@myserver.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bob@myserver.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addCc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;alice@myserver.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addBcc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;alice@myserver.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setSubject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;The subject!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setBody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Body example.&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;        
+         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addAttachment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/home/mailattach/attachment.pdf&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;        
+         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//error management&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+           &lt;span class=&quot;c1&quot;&gt;//error management&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ovviamente posso aggiungere più allegati come è possibile o non aggiungerne affatto e quindi inviare solo tipiche mail di testo.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//inviare-mail-con-allegati-in-java/&quot;&gt;﻿Inviare mail con allegati in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on July 15, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Il metodo String.format una printf per Java]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//Il-metodo-string-format-una-printf-per-java/"/>
+  <id>http://mcaliman.github.io//Il-metodo-string-format-una-printf-per-java</id>
+  <published>2014-07-14T00:45:33+02:00</published>
+  <updated>2014-07-14T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Java" term="Java" /><category scheme="http://mcaliman.github.io//tags/#String" term="String" />
+  <content type="html">
+  
+    &lt;p&gt;﻿
+Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Java nè tantomeno alla 7, per chi non lo sapesse già la versione 7 del JDK, offre il metodo &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Un implementazione direi completa del caro e vecchio printf, non stampa di per sè ma ci permette di applicare la formattazione alla stringa che andremo poi a stampare tramite i classici metodi staticiprint() e println() di System.out.&lt;/p&gt;
+
+&lt;p&gt;Già questo basterebbe per togliersi un po’ di pigrizia ed eventuali vincoli e passare almeno alla versione 7 di Java.
+Vediamo la segnature riportata sopra, abbiamo i parametri format e la lista variabile di argomenti args che rappresentano le variabili che passeremo in successione e che saranno formattate. Riguardo il metodo format dalla documentazione ufficiale Oracle abbiamo la seguente descrizione&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;%[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argument_index$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;precision&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conversion&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;dove l’argomento opzionale argument_index  è un intero che indica la posizione dell’argomento nella lista stessa. 
+Il primo argomento e referenziato con 1$ il secondo con 2$ e così via, piuttosto facile e intuitivo anche se non si ha esperienza in C o C++.&lt;/p&gt;
+
+&lt;p&gt;flags opzionale anch’esso è il set di caratteri che modifica il formato dell’output i flag  validi dipendono dal valore per l’argomento conversion.&lt;/p&gt;
+
+&lt;p&gt;width opzionale intero non negativo indica il numero minimo di caratteri da scrivere sull’otput.&lt;/p&gt;
+
+&lt;p&gt;precision intero non negativo è utilizzato per limitare il numero di caratteri e il comportamento specifico è in base a valore di conversion.&lt;/p&gt;
+
+&lt;p&gt;Come visibile conversion è l’unico argomento obbligatorio ed indica la formattazione dipende dal tipo del dato.&lt;/p&gt;
+
+&lt;p&gt;Il meccanismo è lo stesso utilizzato nel linguaggio C un esempio può comunque chiarire meglio le idee, l’istruzione&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;%,6.2f&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;352.100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;formatta il nostro numero come un float (type), la virgola come separatore della parte decimale e precisione come da parametrizzazione data.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;mi&quot;&gt;352&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ovviamente tutto ciò non è limitato ai tipi di dato numerici ma vale anche per date e stringhe.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//Il-metodo-string-format-una-printf-per-java/&quot;&gt;Il metodo String.format una printf per Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on July 14, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Considerazioni su alcuni Linguaggi di Programmazione Parte 4]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/"/>
+  <id>http://mcaliman.github.io//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4</id>
+  <published>2014-07-13T00:45:33+02:00</published>
+  <updated>2014-07-13T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://mcaliman.github.io//tags/#Python" term="Python" /><category scheme="http://mcaliman.github.io//tags/#Java" term="Java" /><category scheme="http://mcaliman.github.io//tags/#C++" term="C++" />
+  <content type="html">
+  
+    &lt;p&gt;È meglio usare programmi di alta qualità senza costi di licenza, che costosi programmi proprietari di scarso valore. 
+&lt;em&gt;(Walter Bender, direttore del Media Lab del MIT)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;perch-imparare-python&quot;&gt;Perchè imparare Python?&lt;/h1&gt;
+&lt;p&gt;E’ ottimo per implementare o semplicemente descrivere algoritmi, in diversi corsi universitari è stato scelto per la sua pulizia,se ci pensate bene trasformare lo pseudocodice che normalmente viene utilizzato in codice Python è piuttosto immediato.
+Python è inoltre molto utilizzato in ambito scientifico , vi consiglio in merito alcuni libri: &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Python for Data Analysis,di Wes McKinney Ed. O’Reilly Media&lt;/li&gt;
+  &lt;li&gt;Bioinformatics Programming Using Python”Natural Language Processing with Python&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;perch-imparare-il-linguaggio-java&quot;&gt;Perchè imparare il linguaggio Java?&lt;/h1&gt;
+&lt;p&gt;Perchè diffuso,pulito è completamente OOP nonstante Edsger Dijkstra pensasse “Object-oriented programming is an exceptionally bad idea which could only have originated in California.” &lt;/p&gt;
+
+&lt;h1 id=&quot;perch-imparare-il-c&quot;&gt;Perchè imparare il C++?&lt;/h1&gt;
+&lt;p&gt;Il C++ è il principe dei linguaggi, lo puoi usare per realizzare ogni cosa. I Sistemi Operativi i  compilatori,interpreti e Virtual Machine che utilizziamo per far girare il nostro codice è scritto in C o C++.
+lo puoi usare per realizzare ogni cosa. I Sistemi Operativi i  compilatori,interpreti e Virtual Machine che utilizziamo per far girare il nostro codice è scritto in C o C++.&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 4&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Considerazioni su alcuni Linguaggi di Programmazione Parte 3]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/"/>
+  <id>http://mcaliman.github.io//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3</id>
+  <published>2014-07-12T00:45:33+02:00</published>
+  <updated>2014-07-12T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://mcaliman.github.io//tags/#Java" term="Java" /><category scheme="http://mcaliman.github.io//tags/#COBOL" term="COBOL" /><category scheme="http://mcaliman.github.io//tags/#BASIC" term="BASIC" /><category scheme="http://mcaliman.github.io//tags/#PHP" term="PHP" />
+  <content type="html">
+  
+    &lt;p&gt;I bravi programmatori sanno cosa scrivere, i migliori sanno cosa riscrivere (e riusare). 
+&lt;em&gt;(Eric Steven Raymond)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In diversi articoli online ho visto paragonare Java al COBOL del 21 secolo, parallelamente PHP al VisualBasic del 21 secolo,il parere può calzare in alcuni contesti, Java è divenuto il  linguaggio di sviluppo più utilizzato negli ultimi 13 anni, il parco di applicazioni sviluppato in questo linguaggio raggiungerà la massa critica di quelle sviluppate in COBOL negli ultimi 30 anni, PHP è semplice e il motivo di analogia con Visual Basic è evidente.&lt;/p&gt;
+
+&lt;p&gt;A parte questo il paragone non è dei più felici (sia per Java che per PHP), sappiamo cosa ne pensava pubblicamente  il grande Prof.Edsger Dijkstra di entrambi i linguaggi di programmazione.&lt;/p&gt;
+
+&lt;p&gt;“The use of COBOL cripples the mind; its teaching should, therefore, be regarded as a criminal offence.” &lt;/p&gt;
+
+&lt;p&gt;“It is practically impossible to teach good programming to students that have had a prior exposure to BASIC: as potential programmers they are mentally mutilated beyond hope of regeneration”&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 3&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on July 12, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Considerazioni su alcuni Linguaggi di Programmazione Parte 2]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/"/>
+  <id>http://mcaliman.github.io//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2</id>
+  <published>2014-07-11T00:45:33+02:00</published>
+  <updated>2014-07-11T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://mcaliman.github.io//tags/#Java" term="Java" /><category scheme="http://mcaliman.github.io//tags/#C" term="C" /><category scheme="http://mcaliman.github.io//tags/#C++" term="C++" /><category scheme="http://mcaliman.github.io//tags/#C%23" term="C#" /><category scheme="http://mcaliman.github.io//tags/#Ada" term="Ada" />
+  <content type="html">
+  
+    &lt;p&gt;Ogni buon lavoro software nasce da un problema personale di uno sviluppatore. 
+&lt;em&gt;(Eric Steven Raymond)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Java è rappresentativo di ciò che chiamereri linguaggi di categoria industriale/enterprise. Questa tipo di linguaggi di programmazione sono l’ottimale per applicazioni con più persone che lavorano al progetto. In questo tipo di progetti essere formale e attento può avere un impatto notevole..&lt;/p&gt;
+
+&lt;p&gt;Oltre a Java in questa categoria includo C++,C,C# e Ada. Ada è usato soprattuto in ambito militare.&lt;/p&gt;
+
+&lt;p&gt;Un altro fattore non trascurabile è che Java è il linguaggio di programmazione più insegnatato e popolare. Java è utilizzato per sistemi di grandi dimensioni da grandi gruppi di persone inoltre se si conosce C ++ l’apprendimento di Java è facilitato (a parere personale vale anche il viceversa).&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 2&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on July 11, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Considerazioni su alcuni Linguaggi di Programmazione Parte 1]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/"/>
+  <id>http://mcaliman.github.io//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1</id>
+  <published>2014-07-10T00:45:33+02:00</published>
+  <updated>2014-07-10T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://mcaliman.github.io//tags/#Python" term="Python" /><category scheme="http://mcaliman.github.io//tags/#Java" term="Java" /><category scheme="http://mcaliman.github.io//tags/#C" term="C" /><category scheme="http://mcaliman.github.io//tags/#C++" term="C++" /><category scheme="http://mcaliman.github.io//tags/#C%23" term="C#" /><category scheme="http://mcaliman.github.io//tags/#PHP" term="PHP" /><category scheme="http://mcaliman.github.io//tags/#Ruby" term="Ruby" /><category scheme="http://mcaliman.github.io//tags/#Perl" term="Perl" />
+  <content type="html">
+  
+    &lt;p&gt;Mai fidarsi di un computer che non è possibile gettare dalla finestra. 
+&lt;em&gt;(Steve Wozniak)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Python è un linguaggio piacevole per iniziare la programmazione per diverse ragioni.
+La sintassi è essenziale,chiara,non presenta orpelli sintattici, Java invece ha molto zucchero sintattico. &lt;/p&gt;
+
+&lt;p&gt;E’possibile scrivere programmi potenti e interessanti senza un sacco di lavoro. Tuttavia Python è un linguaggio dinamico e ne ha i pregi e difetti. Si potrebbe pensare a Python come un linguaggio abbastanza informale. Altri linguaggi, come Java,C# e C + + sono più formali.&lt;/p&gt;
+
+&lt;p&gt;Questi tre linguaggi di programmazione  hanno alcuni vantaggi evidenti. In primo luogo, la velocità: per i programmi molto grandi Java,C# e C + + danno migliori prestazioni. In secondo luogo la loro manutenzione è più facile.&lt;/p&gt;
+
+&lt;p&gt;Molto di ciò che rende facile usare Python è che si devono ricordare certe cose. Ad esempio se si imposta una variabile t come riferimento a un intero o un oggetto di un tipo T, e si ci dimentica poi che t è di questo tipo, poi si tenta di richiamare un metodo per una stringa su di esso,si otterrà un errore. Java,C# e C + + vi proteggono da questo tipo di errori,vi costringono a dichiarare in anticipo il tipo di oggetto e di ciascuna variabile prima di poter far riferimento ad essa.a&lt;/p&gt;
+
+&lt;p&gt;Python è rappresentativo di una intera classe di linguaggi, a volte indicato come linguaggi di scripting come PHP,Ruby e Perl. &lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 1&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on July 10, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[La gestione delle stringhe in Java]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//la-gestione-delle-stringhe-in-java/"/>
+  <id>http://mcaliman.github.io//la-gestione-delle-stringhe-in-java</id>
+  <published>2014-07-07T00:45:33+02:00</published>
+  <updated>2014-07-07T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Java" term="Java" /><category scheme="http://mcaliman.github.io//tags/#String" term="String" /><category scheme="http://mcaliman.github.io//tags/#StringBuffer" term="StringBuffer" /><category scheme="http://mcaliman.github.io//tags/#StringBuilder" term="StringBuilder" />
+  <content type="html">
+  
+    &lt;p&gt;L’ingegnere quantistico Seth Lloyd è convinto che l’universo sia un gigantesco computer. Speriamo non faccia girare Windows. &lt;em&gt;(Kevin Kelly)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Le stringhe sono il primo oggetto che normalmente si impara a gestire con un linguaggio di programmazione, in Java per l’oggetto principe in questo caso è String o più propriamente del pachage java.lang, a seguire le forme più evolute come StringBuffer e StringBuilder.&lt;/p&gt;
+
+&lt;p&gt;Un oggetto di tipo String è immutabile (immutable), cosa significa esattamente?
+Immutabile nel senso di memoria. Esso crea nuovi oggetti ogni volta che si creano stringhe o si assegna una nuova stringa / modificare il valore. Ecco perché si consiglia di fare attenzione quando si usano le stringhe.&lt;/p&gt;
+
+&lt;p&gt;Prendiamo ad esempio il seguente frammento di codice&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;hello boys!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;hi guys!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;con l’assegnazione a = “hi guys!” ho creato un nuovo oggetto di tipo String, non ho modificato lo stesso creato con new String(“hello boys”): anche se non ho utilizzato il costruttore con parametro.&lt;/p&gt;
+
+&lt;p&gt;In Java le stringhe sono quindi costanti, locazioni di memoria che contengono caratteri (come nel linguaggio C), immutabile è sinonimo di immodificabile.&lt;/p&gt;
+
+&lt;p&gt;Le stringhe sono oggetti di uso comune quindi i progettisti iniziali hanno pensato bene di realizzare alcune scorciatoie per il loro utilizzo quotidiano che non obbligasse ad utilizzare l’approccio puro ad oggetti attraverso metodi da richiamare sulle istanze.&lt;/p&gt;
+
+&lt;p&gt;Torniamo alla nostra stringa semplicemente denominata “a”, l’espressione &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;hi&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; guys!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;effettua la concatenazione delle stringhe “hi” e “ guys!” tramite l’operatore “+”, operatore che normalmente utilizziamo per la somma di due numeri, siamo di fronte all’overloading di un operatore, come in C++.&lt;/p&gt;
+
+&lt;p&gt;L’overloading dell operatore “+” ci permette di evitare la forma pura ad oggetti&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;hi&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot; guys!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;meno pratica, più formale certamente nonché object oriented.
+Le due forme &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;bye&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;e&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bye&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;sono equivalenti, l’assegnazione diretta surroga la chiamata esplicita del costruttore String(String) che costruisce un nuovo oggetto di tipo String a partire da una stringa esistente passata come parametro.&lt;/p&gt;
+
+&lt;p&gt;Gli oggetti di tipo String non sono array di caratteri quindi non possiamo applicarvi gli operatori classici degli array come ad esempio [ ] quindi non possiamo fare cose del tipo string[index] dove string è un oggetto instanziato dalla classe String e index è un intero maggiore o uguale a 0 che che indica la posizione del carattere a cui vogliamo accedere. 
+Per essere ancora più chiari, dato l’ oggetto c di tipo String del frammento di codice riportato sopra non possiamo scrivere c[0] per accedere al primo elemento che ha valore b, Il compilatore ci segnalerà un errore&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thread&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;main&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RuntimeException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Uncompilable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;required&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;but&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Non possiamo quindi neppure fare qualcosa come&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;per sovrascrivere il valore del carattere ‘b’ con il carattere ‘c’.&lt;/p&gt;
+
+&lt;p&gt;Per accedere all’elemento di indice 0 dobbiamo necessariamente utilizzare il metodo charAt()&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;che ritornerà il carattere ‘b’ a video, per esempio attraverso l’uso del metodo System.out.println() per stampare sulla console.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La classe Stringh rende disponibile molti metodi tra cui quelli di uso più comune permettono restituire la lunghezza della stringa&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lenofc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;nel nostro caso lenofc conterrà il valore intero 3 dato che “bye”.length() è 3 e quindi il predicato  “bye”.length()==3 ha valore true&lt;/p&gt;
+
+&lt;p&gt;Per controllare l’uguaglianza di due stringhe si può invece utilizzare il metodo equals() o equalsIgnoreCase() nel caso si desideri un controllo case insensitivi.&lt;/p&gt;
+
+&lt;p&gt;Le espressioni sotto ritornano entrambe il valore true per le variabili booleane b1 e b2&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bye&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equalsIgnoreCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Bye&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Volendo maggiore flessibilità in un operazione di confronto di stringhe possiamo utilizzare il metodo compareTo()  nella forma&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;compareTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;comp == 0 se a è uguale b 
+comp&amp;lt;0 se a&amp;lt;b, 
+comp&amp;gt;0  se a&amp;gt;b.&lt;/p&gt;
+
+&lt;p&gt;Il valore intero restituito è l’indice del primo carattere diverso.
+nel caso di esempio il valore per comp è 6 essendo a=”hi guys!” e b=”bye”&lt;/p&gt;
+
+&lt;p&gt;attenzione a.equals(b) è ovviamente diverso da a == b &lt;/p&gt;
+
+&lt;p&gt;Altri metodi di comune utilizzo sono substring(), replace(), naturalmente anche questi metodi non modificano l’oggetto su cui sono chiamati ma ne creano e ritornano uno nuovo.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// restituisce la sottostringa che va da 10  a 17 (18-1) &lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// restituisce una stringa con tutte le ‘E’  sostituite con ‘X’&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;dato il frammento di codice &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;ab123cd&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;avremo stampate nella console le 3 componenti “ab”,“123” e “cd”
+verificando che la prima e l’ultima sono costituite esclusivamente da lettere e la seconda solo da numeri abbiamo di fatto realizzato un controllo semplificato del formato di una targa europea.&lt;/p&gt;
+
+&lt;p&gt;per essere più completi il codice potrebbe essere il seguente&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;valid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isLetter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isLetter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isDigit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isDigit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isDigit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isLetter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isLetter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Character è una classe che ci permette di effettuare semplici controlli ma non solo, vi rimando alla documentazione ufficiale per i dettagli.&lt;/p&gt;
+
+&lt;p&gt;Per controlli e validazioni sulle stringhe i semplici i metodi fino ad ora esposti sono più che sufficienti, ma nel caso sia abbia necessità di scomodare le espressioni regolari si può ricorrere al metodo matches() che presa un espressione regolare regex ritorna true se la stringa su cui è richiamato la rispetta.&lt;/p&gt;
+
+&lt;p&gt;Per controllare la validità rispetto al formato di una targa europea possiamo utilizzare&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isValid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;^[a-zA-Z]{2}[0-9]{3,4}[a-zA-Z]{2}$&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Per la validazione formale di un indirizzo email possiamo utilizzare per esempio l’espressione regolare&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;^[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+]+(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-]+)*&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-]+(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]+)*(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,})&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Per la validazione di importi in dollari del tipo $1,234,567.89&lt;/td&gt;
+      &lt;td&gt;1234567.89&lt;/td&gt;
+      &lt;td&gt;$9.99&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;^(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|)([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})*|([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*))(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Per quelli in valuta euro nella forma -123123,12 €&lt;/td&gt;
+      &lt;td&gt;12312432134&lt;/td&gt;
+      &lt;td&gt;-12.234.123,23&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*-?((&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})*)|&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*)(,&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})?&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u20AC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)?&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Data e ora in formato europeo come 29/02/2008 15:30&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;(((((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])/(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13578&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]))|((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)/(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;469&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))|((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]))/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)/([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;((([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])|([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]))[:][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))|(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/(([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;48&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2468&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;048&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13579&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])|((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;48&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2468&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;048&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3579&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;00&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;((([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])|([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]))[:][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Solo date nella della forma 29/02/2008&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;^(?:(?:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])|(?:[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])/(?:(?:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])|(?:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;012&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]))/(?:(?:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Per la validazione di formato (non del codice di controllo) di un codice fiscale italiano&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;^[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A questo punto abbiamo visto già molto materiale che ci permette di utilizzare con le stringhe per elaborazioni e controlli che si presentano all’ordine del giorno nella carriera di uno sviluppatore.&lt;/p&gt;
+
+&lt;p&gt;L’uso di String però non si presta nei casi in cui la manipolazione della stessa è l’attività principale, a questo scopo sono presenti le classi StringBuffer e StringBuilder, ma più conosciuta e anziana in quanto a cittadinanza nel jdk è la StringBuffer è ed sincronizzata qualora non sia necessario gestire l’accesso condiviso della risorsa l’utilizzo di StringBuilder garantisce maggiore velocità e ci permettere di non creare una moltitudine di oggetti String spazzatura su cui il garbage collector dovrà impiegare stupidamente del tempo.&lt;/p&gt;
+
+&lt;p&gt;Per la precisione tutti i metodi di StringBuffer sono syncronized ovvero sincronizzati il che la rende thread-safe e meno performante di una sua versione non thread-safe, utilizzate StringBuilder nei casi in cui non sia presente criticità legata alla gestione dei thread i metodi esposti sono praticamente gli stessi per entrambe le classi.&lt;/p&gt;
+
+&lt;p&gt;I metodi di utilizzo più comuni per entrambe le classi sono rispettivamente append(),insert() e delete() nonchè charAt() oltre al metodo toString() che ci permette di ottenere una classica Stringa dai nostri oggetti di tipo StringBuffer e StringBuilder.&lt;/p&gt;
+
+&lt;p&gt;Un utilizzo comune degli oggetti di tipo StringBuilder e StringBuffer è la costruzione di stringhe dinamicamente in base a condizioni presenti nel nostro codice.&lt;/p&gt;
+
+&lt;p&gt;Sotto un esempio piuttosto di utilizzo elementare per i tre metodi &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;01234567900&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&amp;#39;8&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//inserisce 8 alla giusta posizione&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//cancella le due ultime cifre&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//Stampa 0123456789&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Lungi dall’essere una trattazione esaustiva dell’argomento e delle classi String,StringBuffer e StringBuilder quanto presentato copre la maggior parte dei casi d’uso, unica raccomandazione valida sempre e di esaminare la documentazione ufficiale sempre prima di reinventare la ruota. &lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//la-gestione-delle-stringhe-in-java/&quot;&gt;La gestione delle stringhe in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on July 07, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Il cms è morto viva jekyll!]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//il-cms-e-morto-viva-jekyll/"/>
+  <id>http://mcaliman.github.io//il-cms-e-morto-viva-jekyll</id>
+  <published>2014-06-23T00:45:33+02:00</published>
+  <updated>2014-06-23T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Jekyll" term="Jekyll" /><category scheme="http://mcaliman.github.io//tags/#CMS" term="CMS" /><category scheme="http://mcaliman.github.io//tags/#Blog" term="Blog" />
+  <content type="html">
+  
+    &lt;p&gt;Il test di un programma può essere usato per mostrare la presenza di bug, ma mai per mostrare la loro assenza.
+&lt;em&gt;(Edsger Dijkstra, Structured Programming, 1972)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Il titolo è provocatorio e al limite del capzioso. I sistemi CMS ovviamente non moriranno mai, almeno lo spero, progettarli e realizzarli mi dato lavoro per molti anni e penso lo farà ancora, ma per molti di noi sono un elemento pesante da gestire, distraggono dall’obbiettivo come i word processor. Una domanda frequente è perché usarli quando per la maggior parte dei compiti è sufficiente un normale editor di testo? Per il blogging nel corso degli anni ho provato un pò di tutto: blogger, wordpress e altri, nella maggior parte dei casi html statico è soddisfacente per molti di noi, di certo lo è per il mio blog.&lt;/p&gt;
+
+&lt;p&gt;Devo dire che, per pura casualità, sono incappato googlando in un blog fatto con jekyll e che parlava di jekyll, ho cominciato quindi a sperimentare e sono rimasto sorpreso: la produttiva è salita alle stelle, non solo non avevo bisogno di essere online per fare ogni cosa, ma la facevo meglio perché mi concentravo solo sul contenuto di quello che volevo comunicare, inoltre l’hosting per siti statici è risultato economicamente vantaggioso.&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//il-cms-e-morto-viva-jekyll/&quot;&gt;Il cms è morto viva jekyll!&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on June 23, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Installare Jekyll su ubuntu 14.04.]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//install-jekyll/"/>
+  <id>http://mcaliman.github.io//install-jekyll</id>
+  <published>2014-06-08T00:45:33+02:00</published>
+  <updated>2014-06-08T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Jekyll" term="Jekyll" />
+  <content type="html">
+  
+    &lt;p&gt;Per gli hacker un computer significa anche intrattenimento. Non i giochi, non le belle immagini sulla Rete. Il computer in sé è intrattenimento.
+&lt;em&gt;(Linus Torvalds, in Pekka Himanen, L’etica hacker e lo spirito dell’età dell’informazione, 2001)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Cosa ci serve&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ruby.&lt;/li&gt;
+  &lt;li&gt;RubyGems.&lt;/li&gt;
+  &lt;li&gt;Ubuntu 14.04.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Per prima cosa installiamo Ruby.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo apt-get install ruby ruby-dev make&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Verifichiamo la versione di ruby installata con il comando.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ruby -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Per essere sicuro che tutto funzioni dovresti ottenere la seguente versione di Ruby.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ruby 1.9.3p484 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2013-11-22 revision 43786&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;x86_64-linux&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Un piccolo workaround per fixare la gem CoffeeScript… ci serve il compilatore g++…&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo apt-get install g++&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;… e therubyracer.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo gem install therubyracer --nols-rdoc --no-ri&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Installiamo finalmente jekyll.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo gem install jekyll&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Verifichiamo la versione di jekyll installata con il comando.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;jekyll -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Dovresti ottenere qualcosa come.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;jekyll 2.0.3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Visita &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; per maggiori informazioni su come ottenere il massimo da Jekyll.&lt;/p&gt;
+
+&lt;p&gt;Trovi Jekyll su GitHub all’indirizzo &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//install-jekyll/&quot;&gt;Installare Jekyll su ubuntu 14.04.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on June 08, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Effettuare la login SSH senza digitare la password.]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//Effettuare-la-login-ssh-senza-digitare-la-password/"/>
+  <id>http://mcaliman.github.io//Effettuare-la-login-ssh-senza-digitare-la-password</id>
+  <published>2014-01-12T23:45:33+01:00</published>
+  <updated>2014-01-12T23:45:33+01:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#linux" term="linux" /><category scheme="http://mcaliman.github.io//tags/#ssh" term="ssh" /><category scheme="http://mcaliman.github.io//tags/#openssh" term="openssh" />
+  <content type="html">
+  
+    &lt;p&gt;Se si vuole usare &lt;code&gt;Linux&lt;/code&gt; e &lt;code&gt;OpenSSH&lt;/code&gt; per automatizzare delle attività e si ha la necessità di poter effettuare la login automatica dal un host &lt;code&gt;A&lt;/code&gt; con utente &lt;code&gt;a&lt;/code&gt; ad un host &lt;code&gt;B&lt;/code&gt; con utente &lt;code&gt;b&lt;/code&gt; senza inserire nessuna password questi sono i passo necessari: &lt;/p&gt;
+
+&lt;p&gt;Per prima cosa effettuare la login in su &lt;code&gt;A&lt;/code&gt; come utente &lt;code&gt;a&lt;/code&gt; e genera una coppia di chiavi di autenticazione (non inserire un passphrase)&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;a@A:~&amp;gt; ssh-keygen -t rsa
+
+Generating public/private rsa key pair.
+Enter file in which to save the key &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;/home/a/.ssh/id_rsa&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: 
+Created directory &lt;span class=&quot;s1&quot;&gt;&amp;#39;/home/a/.ssh&amp;#39;&lt;/span&gt;.
+Enter passphrase &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;empty &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;no passphrase&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: 
+Enter same passphrase again: 
+Your identification has been saved in /home/a/.ssh/id_rsa.
+Your public key has been saved in /home/a/.ssh/id_rsa.pub.
+The key fingerprint is:
+xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx a@A&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ora usa ssh per creare una directory &lt;code&gt;~/.ssh&lt;/code&gt; come utente &lt;code&gt;b&lt;/code&gt; su &lt;code&gt;B&lt;/code&gt; &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;a@A:~&amp;gt; ssh b@B mkdir -p .ssh
+b@B&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s password:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Infine accoda la nuova &lt;strong&gt;public key&lt;/strong&gt; dell’utente &lt;code&gt;a&lt;/code&gt; su &lt;code&gt;b@B:.ssh/authorized_keys&lt;/code&gt; e inserisci la password di &lt;code&gt;b&lt;/code&gt; l’ultima volta&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;a@A:~&amp;gt; cat .ssh/id_rsa.pub &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; ssh b@B &lt;span class=&quot;s1&quot;&gt;&amp;#39;cat &amp;gt;&amp;gt; .ssh/authorized_keys&amp;#39;&lt;/span&gt;
+b@B&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s password:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Da questo momento puoi effettuare la login in &lt;code&gt;B&lt;/code&gt; come utente &lt;code&gt;b&lt;/code&gt; da &lt;code&gt;A&lt;/code&gt; come utente &lt;code&gt;a&lt;/code&gt; senza password&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;a@A:~&amp;gt; ssh b@B&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//Effettuare-la-login-ssh-senza-digitare-la-password/&quot;&gt;Effettuare la login SSH senza digitare la password.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on January 12, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[GlassFish V3: la console amministrazione prendendo troppo tempo per caricare.]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/"/>
+  <id>http://mcaliman.github.io//glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare</id>
+  <published>2014-01-11T23:45:33+01:00</published>
+  <updated>2014-01-11T23:45:33+01:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Java" term="Java" /><category scheme="http://mcaliman.github.io//tags/#GlassFishV3" term="GlassFishV3" />
+  <content type="html">
+  
+    &lt;p&gt;Chiedersi se un computer possa pensare non è più interessante del chiedersi se un sottomarino possa nuotare.
+&lt;em&gt;(Edsger Dijkstra, The threats to computing science, 1984)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;La console di amministrazione di GlassFish V3 prendendo troppo tempo per caricare?&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Aprire il file %GLASSFISH_HOME/glassfish/domains/domain1/config/domain.xml&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;java-config&amp;gt;&lt;/span&gt; 
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;jvm-options&amp;gt;&lt;/span&gt;-Dcom.sun.enterprise.tools.admingui.NO_NETWORK=true&lt;span class=&quot;nt&quot;&gt;&amp;lt;/jvm-options&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/java-config&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;L’aggiunta di questa proprietà può essere anche fatta dal pannello di amministrazione nella sezione per i parametri della jvm &lt;/p&gt;
+
+&lt;p&gt;Questa proprietà a true blocca News, notifiche per la registrazione, ecc.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Rimuovere il jar per i tool di update (rimuovere e non rinominare l’estensione, effettuatene un backup prima)
+nome del file e path sono riporti di seguito&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;%GLASSFISH_HOME/glassfish/modules/console-updatecenter-plugin.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Cancellate poi anche le seguenti directory&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;%GLASSFISH_HOME/glassfish/domains/domain1/osgi-cache
+%GLASSFISH_HOME/glassfish/domains/domain1/generated&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ora potete far ripartire il server  (bin/asadmin start-domain) .&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/&quot;&gt;GlassFish V3: la console amministrazione prendendo troppo tempo per caricare.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on January 11, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[HOWTO FIX errore 'illegal pattern character g' JAXB in NetBeans .]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/"/>
+  <id>http://mcaliman.github.io//howto-fix-error-jaxb-netbeans-illegal-pattern-character-g</id>
+  <published>2014-01-10T23:45:33+01:00</published>
+  <updated>2014-01-10T23:45:33+01:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Java" term="Java" /><category scheme="http://mcaliman.github.io//tags/#JAXB" term="JAXB" /><category scheme="http://mcaliman.github.io//tags/#NetBeans" term="NetBeans" />
+  <content type="html">
+  
+    &lt;p&gt;Il computer non è una macchina intelligente che aiuta le persone stupide, anzi è una macchina stupida che funziona solo nelle mani delle persone intelligenti.
+&lt;em&gt;(Umberto Eco, Come scrivere una tesi di laurea con il personal computer, 1986 (prefazione))&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Presente nella versione 6.9 ma anche nella version 7.4.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nbproject&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml_binding_build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Illegal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;character&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&amp;#39;g&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SimpleDateFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SimpleDateFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;768&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SimpleDateFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SimpleDateFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;575&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SimpleDateFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SimpleDateFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sun&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;tools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;xjc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getPrologComment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;924&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sun&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;tools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;xjc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createCodeWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;909&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sun&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;tools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;xjc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createCodeWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;899&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sun&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;tools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;xjc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;XJC2Task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_doXJC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;XJC2Task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;523&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sun&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;tools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;xjc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;XJC2Task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;doXJC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;XJC2Task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;454&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sun&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;tools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;xjc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;XJC2Task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;XJC2Task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;379&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sun&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;istack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;tools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ProtectedTask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ProtectedTask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;103&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;apache&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;tools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ant&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;UnknownElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UnknownElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;291&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sun&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reflect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;GeneratedMethodAccessor51&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;invoke&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Unknown&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Si risolve aggiungendo.  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;-J-Duser.language=en&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;al proprietà netbeans_default_options nel file netbeans.conf&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/&quot;&gt;HOWTO FIX errore 'illegal pattern character g' JAXB in NetBeans .&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on January 10, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Come trovare il jar dove è contenuta una determinata classe (deployed in GlassFish).]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/"/>
+  <id>http://mcaliman.github.io//come-trovare-il-jar-dove-e-contenuta-una-determinata-classe</id>
+  <published>2014-01-03T23:45:33+01:00</published>
+  <updated>2014-01-03T23:45:33+01:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Java" term="Java" /><category scheme="http://mcaliman.github.io//tags/#GlassFish" term="GlassFish" />
+  <content type="html">
+  
+    &lt;p&gt;I Greci dicevano di una persona incolta: “Non sa leggere né nuotare”; oggi bisognerebbe aggiungere: “né usare un elaboratore”.
+&lt;em&gt;(Primo Levi e Tullio Regge, Dialogo, 1984)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Possiamo individuare il jar per la classe Base64 (ad esempio) con il codice.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Base64&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProtectionDomain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getCodeSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLocation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/&quot;&gt;Come trovare il jar dove è contenuta una determinata classe (deployed in GlassFish).&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on January 03, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Come impostare Virtualbox a schermo intero su Ubuntu 14.04]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404/"/>
+  <id>http://mcaliman.github.io//come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404</id>
+  <published>2014-01-02T23:45:33+01:00</published>
+  <updated>2014-01-02T23:45:33+01:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#VirtualBox" term="VirtualBox" /><category scheme="http://mcaliman.github.io//tags/#Ubuntu" term="Ubuntu" />
+  <content type="html">
+  
+    &lt;p&gt;I computer sono come gli Dei del Vecchio Testamento: pieni di regole e nessuna pietà.
+&lt;em&gt;(Joseph Campbell, Il potere del mito, 1988)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Se avete installato VirtualBox su ubuntu 14.04 ma la finestra è piccola (la risoluzione è 800x600) lavorare diventa veramente arduo. 
+La soluzione è installare VirtualBox Guest Addition, vi consiglio di lasciate perdere l’installazione dall’immagine cd e procedete con apt-get:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo apt-get install virtualbox-guest-x11&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;terminata l’installazione riavviate il sistema.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404/&quot;&gt;Come impostare Virtualbox a schermo intero su Ubuntu 14.04&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on January 02, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Pubblicare un sito con GitHub Pages.]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//pubblicare-un-sito-con-github-pages/"/>
+  <id>http://mcaliman.github.io//pubblicare-un-sito-con-github-pages</id>
+  <published>2014-01-01T23:45:33+01:00</published>
+  <updated>2014-01-01T23:45:33+01:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Jekyll" term="Jekyll" /><category scheme="http://mcaliman.github.io//tags/#GitHub" term="GitHub" /><category scheme="http://mcaliman.github.io//tags/#GitHubPages" term="GitHubPages" />
+  <content type="html">
+  
+    &lt;p&gt;L’informatica non riguarda i computer più di quanto l’astronomia riguardi i telescopi.
+&lt;em&gt;(Edsger Dijkstra)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Se vuoi pubblicare il sito all’indirizzo &lt;code&gt;http://USERNAME.github.com&lt;/code&gt; devi creare una repository (dall’account GitHub) 
+chiamato &lt;code&gt;USERNAME.github.com&lt;/code&gt;, nel mio caso &lt;code&gt;mcaliman.github.com&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;GITHUB_ACCOUNT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;USERNAME
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GITHUB_ACCOUNT&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.github.com
+git init
+git add .
+git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Initial commit&amp;quot;&lt;/span&gt;
+git remote add origin git@github.com:&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GITHUB_ACCOUNT&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GITHUB_ACCOUNT&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.github.com.git
+git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//pubblicare-un-sito-con-github-pages/&quot;&gt;Pubblicare un sito con GitHub Pages.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Come installare Ant su linux]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//come-installare-ant-su-linux/"/>
+  <id>http://mcaliman.github.io//come-installare-ant-su-linux</id>
+  <published>2013-01-01T23:45:33+01:00</published>
+  <updated>2013-01-01T23:45:33+01:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Ant" term="Ant" /><category scheme="http://mcaliman.github.io//tags/#Java" term="Java" /><category scheme="http://mcaliman.github.io//tags/#Linux" term="Linux" />
+  <content type="html">
+  
+    &lt;p&gt;Non provare mai a spiegare il computer a un profano. È più facile spiegare il sesso a una vergine.
+&lt;em&gt;(Robert Anson Heinlein, La Luna è una severa maestra, 1966)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Vediamo come installare ant, questo è requisito per l’installazione di GlassFish su linux.
+Scarichiamo il tar.gz dal sito e trasferiamolo in &lt;em&gt;/usr/local&lt;/em&gt;
+scompattiamo il file &lt;em&gt;apache-ant-1.7.1-bin.tar.gz&lt;/em&gt;
+con il comando&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;tar xvfz apache-ant-1.7.1-bin.tar.gz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;creiamo il nostro solito link simbolico con il comando ln&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ln -s apache-ant-1.7.1 ant&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;aggiungiamo in &lt;em&gt;/root/.bashrc&lt;/em&gt; (o nella nostra home di utente non root) le variabili di ambiente&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;ANT_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/ant
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;ANT_HOME
+&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ANT_HOME&lt;/span&gt;/bin:.:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;PATH&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//come-installare-ant-su-linux/&quot;&gt;Come installare Ant su linux&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Creare e configurare un DataSource MySQL in GlassFish Application Server]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/"/>
+  <id>http://mcaliman.github.io//creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server</id>
+  <published>2012-01-01T23:45:33+01:00</published>
+  <updated>2012-01-01T23:45:33+01:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#Java" term="Java" /><category scheme="http://mcaliman.github.io//tags/#DataSource" term="DataSource" /><category scheme="http://mcaliman.github.io//tags/#Glassfish" term="Glassfish" /><category scheme="http://mcaliman.github.io//tags/#MySQL" term="MySQL" />
+  <content type="html">
+  
+    &lt;p&gt;Mentre in fisica devi capire come è fatto il mondo, in informatica sei tu a crearlo. Dentro i confini del computer, sei tu il creatore. Controlli – almeno potenzialmente – tutto ciò che vi succede. Se sei abbastanza bravo, puoi essere un Dio. Su piccola scala.
+&lt;em&gt;(Linus Torvalds, Rivoluzionario per caso, 2001)&lt;/em&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Effettuare il download del JDBC driver per MySQL dall’indirizzo
+ http://dev.mysql.com/downloads/connector/j/3.1.html&lt;/li&gt;
+  &lt;li&gt;Estrare il contenuto del file zip.&lt;/li&gt;
+  &lt;li&gt;Copiate mysql-connector-java-x.x.x-bin.jar nel path GLASS_FISH_INSTALL_DIR\lib .&lt;/li&gt;
+  &lt;li&gt;Effettuare lo start di GlassFish Application Server con il comando asadmin.bat start-domain domain1’ dalla directory GLASS_FISH_INSTALL_DIR\bin .&lt;/li&gt;
+  &lt;li&gt;Effettuare il login alla console di amministrazione di GlassFish. L’url di default per la console di amministrazione è http://localhost:4848/login.jsf.&lt;/li&gt;
+  &lt;li&gt;Da menu Common Task espandere il menu Resources cliccando su Resources.&lt;/li&gt;
+  &lt;li&gt;Espandete il menu JDBC sotto resources.&lt;/li&gt;
+  &lt;li&gt;Cliccare su Connection Pools sotto il menu JDBC menu. La pagine dei Connection Pools page verrà visualizzata.&lt;/li&gt;
+  &lt;li&gt;Cliccare su New.&lt;/li&gt;
+  &lt;li&gt;Inserire un nome per il vostro pool di connessioni JDBC . Selezionate javax.sql.ConnectionPoolDataSource come Resource Type e selezionate MySQL come Database vendor.&lt;/li&gt;
+  &lt;li&gt;Cliccare su Next.&lt;/li&gt;
+  &lt;li&gt;Compilare i dettagli in accordo con le vostre nececessità. I campi obbligatori sono.
+a. DatabaseName
+b. Password
+c. URL (il formato dovrà essere jdbc:mysql://localhost:3306/test. Dove test è il nome del vostro database.)
+d. Url (il formato dovrà essere jdbc:mysql://localhost:3306/test. Dove test è il nome del vostro database.)
+e. ServerName
+f. User&lt;/li&gt;
+  &lt;li&gt;Cliccare su Finish. Ora è possibile tornare alla pagina dei Connection Pools.&lt;/li&gt;
+  &lt;li&gt;Ciccare sul Connection Pool creata per accedere alla pagina Edit Connection Pool.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Cliccare su Ping. Se il vostro connection pool è settato correttamente otterrete il messaggio Ping Succeeded.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ora cliccare su JDBC Resorces sotto il menu JDBC.&lt;/li&gt;
+  &lt;li&gt;Cliccare su New.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Inserire un JNDI Name per il vostro data source e selezionate il pool che avete creato seguendo le istruzioni dei passi precedenti (Pool Name).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Cliccare su OK. Avete terminato.
+Per ottenere una connessione usando un DataSource portete utilizzare il seguente codice di esempio.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InitialContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;DataSource&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;jdbc/mysqltest&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Connection&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;con&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ds&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getConnection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/&quot;&gt;Creare e configurare un DataSource MySQL in GlassFish Application Server&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2012.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[BPEL (Business Process Execution Language)]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//bpel/"/>
+  <id>http://mcaliman.github.io//bpel</id>
+  <published>2012-01-01T23:45:33+01:00</published>
+  <updated>2012-01-01T23:45:33+01:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#BPEL" term="BPEL" /><category scheme="http://mcaliman.github.io//tags/#SOA" term="SOA" />
+  <content type="html">
+  
+    &lt;p&gt;I computer sono incredibilmente veloci, accurati e stupidi. Gli uomini sono incredibilmente lenti, inaccurati e intelligenti. L’insieme dei due costituisce una forza incalcolabile.
+&lt;em&gt;(Albert Einstein (attribuito))&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;BPEL&lt;/strong&gt; &lt;em&gt;(Business Process Execution Language)&lt;/em&gt; è un linguaggio basato su XML costruito per descrivere formalmente i processi commerciali ed industriali in modo da permettere una suddivisione dei compiti tra attori diversi, in pratica permette di definire processi di workflow tramite XML.
+Normalmente un’applicazione BPEL viene invocata come servizio web ed interagisce con il mondo esterno esclusivamente invocando altri servizi web. 
+Rappresenta una forma di coordinazione di servizi Web, permettendo di comporli in maniera ricorsiva. 
+L’ambiente runtime all’interno del quale viene eseguito il processo è detto motore BPEL.&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//bpel/&quot;&gt;BPEL (Business Process Execution Language)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2012.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Installiamo mysql senza synaptic o apt]]></title>
+  <link rel="alternate" type="text/html" href="http://mcaliman.github.io//installiamo-mysql-senza-synaptic-o-apt/"/>
+  <id>http://mcaliman.github.io//installiamo-mysql-senza-synaptic-o-apt</id>
+  <published>2011-02-03T23:45:33+01:00</published>
+  <updated>2011-02-03T23:45:33+01:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://mcaliman.github.io/</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://mcaliman.github.io//tags/#MySQL" term="MySQL" />
+  <content type="html">
+  
+    &lt;p&gt;Scarichiamo il tar.gz dal sito di mysql www.mysql.com
+posizioniamolo in /usr/local scompattiamo il tar.gz con il comando&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;tar -xzf mysql-5.1.31-linux-i686-glibc23.tar.gz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;(abbiamo assunto da un caso reale che la versione sia la 5.1.31, in questo caso il nome del file è
+mysql-5.1.31-linux-i686-glibc23.tar.gz) creaimo il link simbolico mysql&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ln -s mysql-5.1.31-linux-i686-glibc23 mysql&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;creaimo utenti/gruppi&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;groupadd mysql
+useradd -g mysql mysql&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;inizializiamo il db&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;mysql
+./scripts/mysql_install_db --user&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mysql&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;aggiungiamo i permessi necessari alle directory&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;chown -R root:mysql .
+chown -R mysql:mysql data&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;facciamo partire il demone di mysql in background con il comando&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;./bin/mysqld_safe --user&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mysql &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;configuriamo le variabili di ambiente
+in /root/.bashrc (o nella propria home)
+aggiungiamo le righe&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MYSQL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/mysql
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;MYSQL
+&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$MYSQL&lt;/span&gt;/bin:.:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;PATH&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;aggiungiamo le righe anche in 
+/etc/init.d/bootmisc.sh
+per poter gestire l’avvio automatico del servizio di mysql&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MYSQL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/mysql
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;MYSQL
+&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$MYSQL&lt;/span&gt;/bin:.:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;PATH&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://mcaliman.github.io//installiamo-mysql-senza-synaptic-o-apt/&quot;&gt;Installiamo mysql senza synaptic o apt&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://mcaliman.github.io/&quot;&gt;Computer Programming&lt;/a&gt; on February 03, 2011.&lt;/p&gt;</content>
+</entry>
+
+</feed>
