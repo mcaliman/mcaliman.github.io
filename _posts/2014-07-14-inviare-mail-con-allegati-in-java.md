@@ -3,10 +3,6 @@ layout: post
 title:  "﻿Inviare mail con allegati in Java"
 date:   2014-07-14 22:45:33
 tags: [Java, JavaMail]
-image:
-  feature: so-simple-sample-image-3.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
 comments: false
 share: true
 ---

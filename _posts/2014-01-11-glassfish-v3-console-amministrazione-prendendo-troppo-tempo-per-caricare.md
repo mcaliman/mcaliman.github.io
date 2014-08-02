@@ -3,10 +3,6 @@ layout: post
 title:  "GlassFish V3: la console amministrazione prendendo troppo tempo per caricare."
 date:   2014-01-11 22:45:33
 tags: [Java, GlassFishV3]
-image:
-  feature: so-simple-sample-image-5.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
 comments: false
 share: true
 ---

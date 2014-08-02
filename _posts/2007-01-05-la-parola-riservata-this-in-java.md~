@@ -35,6 +35,7 @@ di parte del codice o tali metodi con conseguente spreco di memoria.
 Al fine di fronteggiare le situazioni indicate, il linguaggio di programmazione Java mette a disposizione del programmatore la parola riservata this. 
 
 Si tratta di una parola chiave che può essere sfruttata sotto due interpretazioni distinte:
+
 * il riferimento ad un oggetto 
 * riferimento ad un altro costruttore 
 

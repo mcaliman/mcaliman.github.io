@@ -3,10 +3,6 @@ layout: post
 title:  "Classi e metodi in Java"
 date:   2004-01-02 22:45:33
 tags: [Java]
-image:
-  feature: so-simple-sample-image-1.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
 comments: false
 share: true
 --- 

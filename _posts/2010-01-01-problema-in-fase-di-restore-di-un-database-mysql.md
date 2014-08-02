@@ -3,10 +3,6 @@ layout: post
 title:  "Problema in fase di restore di un database mysql"
 date:   2010-01-01 22:45:33
 tags: [MySQL]
-image:
-  feature: so-simple-sample-image-1.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
 comments: false
 share: true
 ---

@@ -3,10 +3,6 @@ layout: post
 title:  "Installiamo mysql senza synaptic o apt"
 date:   2011-02-03 22:45:33
 tags: [MySQL]
-image:
-  feature: so-simple-sample-image-1.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
 comments: false
 share: true
 ---

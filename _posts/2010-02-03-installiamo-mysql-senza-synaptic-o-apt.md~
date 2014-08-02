@@ -70,3 +70,4 @@ export MYSQL
 PATH=$MYSQL/bin:.:$PATH
 export PATH
 {% endhighlight %}
+

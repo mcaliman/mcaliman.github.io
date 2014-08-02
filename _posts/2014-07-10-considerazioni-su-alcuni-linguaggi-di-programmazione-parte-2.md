@@ -3,10 +3,6 @@ layout: post
 title:  "Considerazioni su alcuni Linguaggi di Programmazione Parte 2"
 date:   2014-07-10 22:45:33
 tags: [Linguaggi di programmazione,Java,C,C++,C#,Ada]
-image:
-  feature: so-simple-sample-image-1.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
 comments: false
 share: true
 ---

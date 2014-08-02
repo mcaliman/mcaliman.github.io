@@ -3,10 +3,6 @@ layout: post
 title:  "Il cms è morto viva jekyll!"
 date:   2014-06-22 22:45:33
 tags: [Jekyll, CMS, Blog]
-image:
-  feature: so-simple-sample-image-5.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
 comments: false
 share: true
 ---

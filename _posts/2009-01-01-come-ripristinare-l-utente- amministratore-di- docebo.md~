@@ -47,9 +47,12 @@ null,
 '0000-00-00 00:00:00',
 '0000-00-00 00:00:00');
 
-insert into core_group_members (idst,idstMember,filter) values ('1',last_insert_id(),'');
-insert into core_group_members (idst,idstMember,filter) values ('2',last_insert_id(),'');
-insert into core_group_members (idst,idstMember,filter) values ('3',last_insert_id(),'');
+insert into core_group_members (idst,idstMember,filter) 
+values ('1',last_insert_id(),'');
+insert into core_group_members (idst,idstMember,filter) 
+values ('2',last_insert_id(),'');
+insert into core_group_members (idst,idstMember,filter) 
+values ('3',last_insert_id(),'');
 {% endhighlight %}
 
 L'anomalia si verifica in modo casuale ed è imputabile a mio parere all'uso dell'engine **MyISAM** in luogo di **InnoDB**.

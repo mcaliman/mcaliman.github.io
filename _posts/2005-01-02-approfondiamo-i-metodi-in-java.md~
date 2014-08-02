@@ -80,6 +80,6 @@ i quali costituiscono i metodi che devono essere impiegati per istanziare gli og
 Definizione
 
 Un metodo costruttore di classe  un metodo con le seguenti proprietà :
-*  dichiarato public ( ma vedremo anche no)
+* dichiarato public ( ma vedremo anche no)
 * possiede lo stesso nome della classe
 * non ha definito nessun tipo di ritorno

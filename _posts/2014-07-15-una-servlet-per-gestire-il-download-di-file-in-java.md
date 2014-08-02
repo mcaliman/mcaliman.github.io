@@ -3,10 +3,6 @@ layout: post
 title:  "﻿Una Servlet per gestire il download di file in Java"
 date:   2014-07-15 22:45:33
 tags: [Java, Servlet]
-image:
-  feature: so-simple-sample-image-2.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
 comments: false
 share: true
 ---

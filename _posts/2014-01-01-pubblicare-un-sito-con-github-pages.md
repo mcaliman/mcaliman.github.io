@@ -3,10 +3,6 @@ layout: post
 title:  "Pubblicare un sito con GitHub Pages."
 date:   2014-01-01 22:45:33
 tags: [Jekyll,GitHub,GitHubPages]
-image:
-  feature: so-simple-sample-image-1.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
 comments: false
 share: true
 ---

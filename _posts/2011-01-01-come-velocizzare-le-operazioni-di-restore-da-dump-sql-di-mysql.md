@@ -3,10 +3,6 @@ layout: post
 title:  "Come velocizzare le operazioni di restore da dump sql di mysql"
 date:   2011-01-01 22:45:33
 tags: [MySQL]
-image:
-  feature: so-simple-sample-image-1.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
 comments: false
 share: true
 ---

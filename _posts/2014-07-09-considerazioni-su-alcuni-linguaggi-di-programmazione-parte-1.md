@@ -3,10 +3,6 @@ layout: post
 title:  "Considerazioni su alcuni Linguaggi di Programmazione Parte 1"
 date:   2014-07-09 22:45:33
 tags: [Linguaggi di programmazione,Python,Java,C,C++,C#,PHP,Ruby,Perl]
-image:
-  feature: so-simple-sample-image-1.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
 comments: false
 share: true
 ---

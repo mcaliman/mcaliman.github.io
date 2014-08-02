@@ -3,10 +3,6 @@ layout: post
 title:  "Il passaggio di parametri in Java"
 date:   2006-01-05 22:45:33
 tags: [Java]
-image:
-  feature: so-simple-sample-image-2.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
 comments: false
 share: true
 ---

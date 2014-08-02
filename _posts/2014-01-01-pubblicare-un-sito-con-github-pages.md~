@@ -17,7 +17,6 @@ L'informatica non riguarda i computer più di quanto l'astronomia riguardi i tel
 Se vuoi pubblicare il sito all'indirizzo `http://USERNAME.github.com` devi creare una repository (dall'account GitHub) 
 chiamato `USERNAME.github.com`, nel mio caso `mcaliman.github.com`
 
-
 {% highlight bash %}
 GITHUB_ACCOUNT=USERNAME
 cd ${GITHUB_ACCOUNT}.github.com

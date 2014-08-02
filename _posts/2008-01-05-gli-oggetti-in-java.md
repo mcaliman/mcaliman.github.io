@@ -3,10 +3,6 @@ layout: post
 title:  "Gli oggetti in Java"
 date:   2008-01-05 22:45:33
 tags: [Java]
-image:
-  feature: so-simple-sample-image-1.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
 comments: false
 share: true
 ---

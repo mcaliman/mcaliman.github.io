@@ -1,4 +1,4 @@
----
+--- 
 layout: post
 title:  "Le variabili array in Java"
 date:   2003-03-01 22:45:33
@@ -12,15 +12,15 @@ share: true
 ---
 
 
-Gli array sono disponibili nella maggior parte dei linguaggi di programmazione perché realizzano 
-la più semplice organizzazione di strutture dati complesse.
+Gli array sono disponibili nella maggior parte dei linguaggi di programmazione perchÃ¨ realizzano 
+la piÃ¹ semplice organizzazione di strutture dati complesse.
 
-Dichiarazione e allocazione
+#Dichiarazione e allocazione
 
-Iniziamo con qualche definizione un pò formale ma che sarà utile per fissare i concetti essenziali.
+Iniziamo con qualche definizione un piÃ¹ formale ma che sarÃ  utile per fissare i concetti essenziali.
 
 Definizione 
-Un array è una struttura dati che consente di rappresentare sequenze di dati dello stesso tipo. 
+Un array  una struttura dati che consente di rappresentare sequenze di dati dello stesso tipo. 
 Gli elementi costituenti un array possono essere rintracciati specificando la loro posizione.
 
 {% highlight java %}
@@ -33,9 +33,9 @@ definisce un array di nome var e tipo T di n elementi, gli elementi dell' array 
 var[0], var[1], ... , var[n-1]
 {% endhighlight %}
 
-n è anche detto dimensione o lunghezza dell' array;
+n anche detto dimensione o lunghezza dell' array;
 
-È possibile anche l' inizializzazione degli elementi contestualmente alla definizione
+possibile anche l'inizializzazione degli elementi contestualmente alla definizione
 
 {% highlight java %}
 T[] var = {values_0,value_1, ... ,value_n}
@@ -47,7 +47,7 @@ Per cui si hanno i valori dei singoli elementi pari a
 var[0] = value_0 ;var[1] = value_1 ;...var[n] = value_n ;
 {% endhighlight %}
 
-altrimenti la dichiarazione può svolgersi in 2 fasi
+altrimenti la dichiarazione puÃ² svolgersi in 2 fasi
 
 {% highlight java %}
 T[] var; var = new T[n] ;
@@ -59,7 +59,7 @@ oppure
 var = new T[] { value_0,value_1, ..., value_n }
 {% endhighlight %}
 
-ciascun elemento dell' array può essere usato allo stesso modo di una variabile
+ciascun elemento dell' array puÃ² essere usato allo stesso modo di una variabile
 
 dato l'array var { value_0,value_1, ... , value_n }
 
@@ -67,7 +67,7 @@ dato l'array var { value_0,value_1, ... , value_n }
 var[0] = value_0 ; var[1] = value_1 ;
 {% endhighlight %}
 
-posso modificare il secondo elemento dell' array , cioè var[1] con valore new_value_1 con l'istruzione
+posso modificare il secondo elemento dell' array , cioÃ¨ var[1] con valore new_value_1 con l'istruzione
 
 {% highlight java %}
 var[1] = new_value_1 ;
@@ -84,11 +84,11 @@ T x = var[i] ;
 in questo modo x ha il valore i-esimo dell' array var , ovviamente i deve avere un valore 
 compreso tra 0 e var.lenght0-1 che rappresenta la lunghezza dell' array var.
 
-Gli array multidimensionali
+#Gli array multidimensionali
 
 Gli array visti sino a questo momento sono di tipo monodimensionale ovvero costituiscono sequenze lineari di dati 
-omogenei e associabili ad un modello vettoriale. In realtà si possono avere anche array multidimensionali in cui ciascun 
-elemento è individuato non da un singolo indice ma da un numero di indici maggiore.
+omogenei e associabili ad un modello vettoriale. In realt si possono avere anche array multidimensionali in cui ciascun 
+elemento  individuato non da un singolo indice ma da un numero di indici maggiore.
 
 Per esempio la classica matrice
 

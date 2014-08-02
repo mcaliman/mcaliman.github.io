@@ -3,10 +3,6 @@ layout: post
 title:  "Le variabili array in Java"
 date:   2003-03-01 22:45:33
 tags: [Java]
-image:
-  feature: so-simple-sample-image-3.jpg
-  credit: Michael Rose
-  creditlink: http://mademistakes.com
 comments: false
 share: true
 ---
