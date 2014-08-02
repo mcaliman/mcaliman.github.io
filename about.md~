@@ -4,6 +4,10 @@ permalink: /about/
 title: About me
 tags: [about]
 modified: 2013-09-13
+image:
+  feature: so-simple-sample-image-4.jpg
+  credit: Michael Rose
+  creditlink: http://mademistakes.com
 ---
 
 Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta.
