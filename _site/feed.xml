@@ -7,29 +7,29 @@
 
 <title type="text">Computer Programming</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://massimocaliman.eu//feed.xml" />
-<link rel="alternate" type="text/html" href="http://massimocaliman.eu//" />
-<updated>2014-08-04T22:40:51+02:00</updated>
-<id>http://massimocaliman.eu//</id>
+<link rel="self" type="application/atom+xml" href="http://massimocaliman.eu/feed.xml" />
+<link rel="alternate" type="text/html" href="http://massimocaliman.eu/" />
+<updated>2014-08-04T22:43:00+02:00</updated>
+<id>http://massimocaliman.eu/</id>
 <author>
   <name>Massimo Caliman</name>
-  <uri>http://massimocaliman.eu//</uri>
+  <uri>http://massimocaliman.eu/</uri>
   <email>mcaliman@gmail.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[﻿Una Servlet per gestire il download di file in Java]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//una-servlet-per-gestire-il-download-di-file-in-java/"/>
-  <id>http://massimocaliman.eu//una-servlet-per-gestire-il-download-di-file-in-java</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/una-servlet-per-gestire-il-download-di-file-in-java/"/>
+  <id>http://massimocaliman.eu/una-servlet-per-gestire-il-download-di-file-in-java</id>
   <published>2014-07-16T00:45:33+02:00</published>
   <updated>2014-07-16T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu//tags/#Servlet" term="Servlet" />
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#Servlet" term="Servlet" />
   <content type="html">
   
     &lt;p&gt;Vediamo in questo post come scrivere il codice di una Servlet java che ci permette di effettuare il trasferimento (il download) di un file dalla nostra applicazione server al client
@@ -118,22 +118,22 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
 &lt;p&gt;http://localhost:8080/MyWebApplication//DownloadFileServlet?file=/path/file.ext&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//una-servlet-per-gestire-il-download-di-file-in-java/&quot;&gt;﻿Una Servlet per gestire il download di file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on July 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/una-servlet-per-gestire-il-download-di-file-in-java/&quot;&gt;﻿Una Servlet per gestire il download di file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[﻿Inviare mail con allegati in Java]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//inviare-mail-con-allegati-in-java/"/>
-  <id>http://massimocaliman.eu//inviare-mail-con-allegati-in-java</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/inviare-mail-con-allegati-in-java/"/>
+  <id>http://massimocaliman.eu/inviare-mail-con-allegati-in-java</id>
   <published>2014-07-15T00:45:33+02:00</published>
   <updated>2014-07-15T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu//tags/#JavaMail" term="JavaMail" />
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#JavaMail" term="JavaMail" />
   <content type="html">
   
     &lt;p&gt;Il package javax.mail è molto ricco, quindi in prima istanza può anche disorientare, vedremo nel codice presentato in questo post quanto ripaghi in flessibilità e potenzialità questa complessità. E’ vero, non ho un metodo semplice mail() come in altri linguaggi,  ma ho gli strumenti per crearmi anche un server di posta di tutto rispetto (ma questo lo approfondieremo in un prossimo post, riguardo il semplice metodo mail() possiamo anche crearcelo a partire dalle API come vedremo e sarà fatto su misura per le nostre esigenze)&lt;/p&gt;
@@ -400,22 +400,22 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
 &lt;p&gt;Ovviamente posso aggiungere più allegati come è possibile o non aggiungerne affatto e quindi inviare solo tipiche mail di testo.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//inviare-mail-con-allegati-in-java/&quot;&gt;﻿Inviare mail con allegati in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on July 15, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/inviare-mail-con-allegati-in-java/&quot;&gt;﻿Inviare mail con allegati in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Il metodo String.format una printf per Java]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//Il-metodo-string-format-una-printf-per-java/"/>
-  <id>http://massimocaliman.eu//Il-metodo-string-format-una-printf-per-java</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/Il-metodo-string-format-una-printf-per-java/"/>
+  <id>http://massimocaliman.eu/Il-metodo-string-format-una-printf-per-java</id>
   <published>2014-07-14T00:45:33+02:00</published>
   <updated>2014-07-14T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu//tags/#String" term="String" />
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#String" term="String" />
   <content type="html">
   
     &lt;p&gt;﻿
@@ -452,22 +452,22 @@ Il primo argomento e referenziato con 1$ il secondo con 2$ e così via, piuttost
 &lt;p&gt;Ovviamente tutto ciò non è limitato ai tipi di dato numerici ma vale anche per date e stringhe.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//Il-metodo-string-format-una-printf-per-java/&quot;&gt;Il metodo String.format una printf per Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on July 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/Il-metodo-string-format-una-printf-per-java/&quot;&gt;Il metodo String.format una printf per Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Considerazioni su alcuni Linguaggi di Programmazione Parte 4]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/"/>
-  <id>http://massimocaliman.eu//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/"/>
+  <id>http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4</id>
   <published>2014-07-13T00:45:33+02:00</published>
   <updated>2014-07-13T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://massimocaliman.eu//tags/#Python" term="Python" /><category scheme="http://massimocaliman.eu//tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu//tags/#C++" term="C++" />
+  <category scheme="http://massimocaliman.eu/tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://massimocaliman.eu/tags/#Python" term="Python" /><category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#C++" term="C++" />
   <content type="html">
   
     &lt;p&gt;È meglio usare programmi di alta qualità senza costi di licenza, che costosi programmi proprietari di scarso valore. 
@@ -491,22 +491,22 @@ lo puoi usare per realizzare ogni cosa. I Sistemi Operativi i  compilatori,inter
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 4&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 4&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Considerazioni su alcuni Linguaggi di Programmazione Parte 3]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/"/>
-  <id>http://massimocaliman.eu//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/"/>
+  <id>http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3</id>
   <published>2014-07-12T00:45:33+02:00</published>
   <updated>2014-07-12T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://massimocaliman.eu//tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu//tags/#COBOL" term="COBOL" /><category scheme="http://massimocaliman.eu//tags/#BASIC" term="BASIC" /><category scheme="http://massimocaliman.eu//tags/#PHP" term="PHP" />
+  <category scheme="http://massimocaliman.eu/tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#COBOL" term="COBOL" /><category scheme="http://massimocaliman.eu/tags/#BASIC" term="BASIC" /><category scheme="http://massimocaliman.eu/tags/#PHP" term="PHP" />
   <content type="html">
   
     &lt;p&gt;I bravi programmatori sanno cosa scrivere, i migliori sanno cosa riscrivere (e riusare). 
@@ -522,22 +522,22 @@ lo puoi usare per realizzare ogni cosa. I Sistemi Operativi i  compilatori,inter
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 3&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on July 12, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 3&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 12, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Considerazioni su alcuni Linguaggi di Programmazione Parte 2]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/"/>
-  <id>http://massimocaliman.eu//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/"/>
+  <id>http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2</id>
   <published>2014-07-11T00:45:33+02:00</published>
   <updated>2014-07-11T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://massimocaliman.eu//tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu//tags/#C" term="C" /><category scheme="http://massimocaliman.eu//tags/#C++" term="C++" /><category scheme="http://massimocaliman.eu//tags/#C%23" term="C#" /><category scheme="http://massimocaliman.eu//tags/#Ada" term="Ada" />
+  <category scheme="http://massimocaliman.eu/tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#C" term="C" /><category scheme="http://massimocaliman.eu/tags/#C++" term="C++" /><category scheme="http://massimocaliman.eu/tags/#C%23" term="C#" /><category scheme="http://massimocaliman.eu/tags/#Ada" term="Ada" />
   <content type="html">
   
     &lt;p&gt;Ogni buon lavoro software nasce da un problema personale di uno sviluppatore. 
@@ -551,22 +551,22 @@ lo puoi usare per realizzare ogni cosa. I Sistemi Operativi i  compilatori,inter
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 2&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on July 11, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 2&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 11, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Considerazioni su alcuni Linguaggi di Programmazione Parte 1]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/"/>
-  <id>http://massimocaliman.eu//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/"/>
+  <id>http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1</id>
   <published>2014-07-10T00:45:33+02:00</published>
   <updated>2014-07-10T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://massimocaliman.eu//tags/#Python" term="Python" /><category scheme="http://massimocaliman.eu//tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu//tags/#C" term="C" /><category scheme="http://massimocaliman.eu//tags/#C++" term="C++" /><category scheme="http://massimocaliman.eu//tags/#C%23" term="C#" /><category scheme="http://massimocaliman.eu//tags/#PHP" term="PHP" /><category scheme="http://massimocaliman.eu//tags/#Ruby" term="Ruby" /><category scheme="http://massimocaliman.eu//tags/#Perl" term="Perl" />
+  <category scheme="http://massimocaliman.eu/tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://massimocaliman.eu/tags/#Python" term="Python" /><category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#C" term="C" /><category scheme="http://massimocaliman.eu/tags/#C++" term="C++" /><category scheme="http://massimocaliman.eu/tags/#C%23" term="C#" /><category scheme="http://massimocaliman.eu/tags/#PHP" term="PHP" /><category scheme="http://massimocaliman.eu/tags/#Ruby" term="Ruby" /><category scheme="http://massimocaliman.eu/tags/#Perl" term="Perl" />
   <content type="html">
   
     &lt;p&gt;Mai fidarsi di un computer che non è possibile gettare dalla finestra. 
@@ -585,22 +585,22 @@ La sintassi è essenziale,chiara,non presenta orpelli sintattici, Java invece ha
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 1&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on July 10, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 1&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 10, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[La gestione delle stringhe in Java]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//la-gestione-delle-stringhe-in-java/"/>
-  <id>http://massimocaliman.eu//la-gestione-delle-stringhe-in-java</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/la-gestione-delle-stringhe-in-java/"/>
+  <id>http://massimocaliman.eu/la-gestione-delle-stringhe-in-java</id>
   <published>2014-07-07T00:45:33+02:00</published>
   <updated>2014-07-07T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu//tags/#String" term="String" /><category scheme="http://massimocaliman.eu//tags/#StringBuffer" term="StringBuffer" /><category scheme="http://massimocaliman.eu//tags/#StringBuilder" term="StringBuilder" />
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#String" term="String" /><category scheme="http://massimocaliman.eu/tags/#StringBuffer" term="StringBuffer" /><category scheme="http://massimocaliman.eu/tags/#StringBuilder" term="StringBuilder" />
   <content type="html">
   
     &lt;p&gt;L’ingegnere quantistico Seth Lloyd è convinto che l’universo sia un gigantesco computer. Speriamo non faccia girare Windows. &lt;em&gt;(Kevin Kelly)&lt;/em&gt;&lt;/p&gt;
@@ -786,22 +786,22 @@ verificando che la prima e l’ultima sono costituite esclusivamente da lettere 
 &lt;p&gt;Lungi dall’essere una trattazione esaustiva dell’argomento e delle classi String,StringBuffer e StringBuilder quanto presentato copre la maggior parte dei casi d’uso, unica raccomandazione valida sempre e di esaminare la documentazione ufficiale sempre prima di reinventare la ruota. &lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//la-gestione-delle-stringhe-in-java/&quot;&gt;La gestione delle stringhe in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on July 07, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/la-gestione-delle-stringhe-in-java/&quot;&gt;La gestione delle stringhe in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 07, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Il cms è morto viva jekyll!]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//il-cms-e-morto-viva-jekyll/"/>
-  <id>http://massimocaliman.eu//il-cms-e-morto-viva-jekyll</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/il-cms-e-morto-viva-jekyll/"/>
+  <id>http://massimocaliman.eu/il-cms-e-morto-viva-jekyll</id>
   <published>2014-06-23T00:45:33+02:00</published>
   <updated>2014-06-23T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Jekyll" term="Jekyll" /><category scheme="http://massimocaliman.eu//tags/#CMS" term="CMS" /><category scheme="http://massimocaliman.eu//tags/#Blog" term="Blog" />
+  <category scheme="http://massimocaliman.eu/tags/#Jekyll" term="Jekyll" /><category scheme="http://massimocaliman.eu/tags/#CMS" term="CMS" /><category scheme="http://massimocaliman.eu/tags/#Blog" term="Blog" />
   <content type="html">
   
     &lt;p&gt;Il test di un programma può essere usato per mostrare la presenza di bug, ma mai per mostrare la loro assenza.
@@ -813,22 +813,22 @@ verificando che la prima e l’ultima sono costituite esclusivamente da lettere 
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//il-cms-e-morto-viva-jekyll/&quot;&gt;Il cms è morto viva jekyll!&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on June 23, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/il-cms-e-morto-viva-jekyll/&quot;&gt;Il cms è morto viva jekyll!&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on June 23, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Installare Jekyll su ubuntu 14.04.]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//install-jekyll/"/>
-  <id>http://massimocaliman.eu//install-jekyll</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/install-jekyll/"/>
+  <id>http://massimocaliman.eu/install-jekyll</id>
   <published>2014-06-08T00:45:33+02:00</published>
   <updated>2014-06-08T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Jekyll" term="Jekyll" />
+  <category scheme="http://massimocaliman.eu/tags/#Jekyll" term="Jekyll" />
   <content type="html">
   
     &lt;p&gt;Per gli hacker un computer significa anche intrattenimento. Non i giochi, non le belle immagini sulla Rete. Il computer in sé è intrattenimento.
@@ -880,22 +880,22 @@ verificando che la prima e l’ultima sono costituite esclusivamente da lettere 
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//install-jekyll/&quot;&gt;Installare Jekyll su ubuntu 14.04.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on June 08, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/install-jekyll/&quot;&gt;Installare Jekyll su ubuntu 14.04.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on June 08, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Effettuare la login SSH senza digitare la password.]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//Effettuare-la-login-ssh-senza-digitare-la-password/"/>
-  <id>http://massimocaliman.eu//Effettuare-la-login-ssh-senza-digitare-la-password</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/Effettuare-la-login-ssh-senza-digitare-la-password/"/>
+  <id>http://massimocaliman.eu/Effettuare-la-login-ssh-senza-digitare-la-password</id>
   <published>2014-01-12T23:45:33+01:00</published>
   <updated>2014-01-12T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#linux" term="linux" /><category scheme="http://massimocaliman.eu//tags/#ssh" term="ssh" /><category scheme="http://massimocaliman.eu//tags/#openssh" term="openssh" />
+  <category scheme="http://massimocaliman.eu/tags/#linux" term="linux" /><category scheme="http://massimocaliman.eu/tags/#ssh" term="ssh" /><category scheme="http://massimocaliman.eu/tags/#openssh" term="openssh" />
   <content type="html">
   
     &lt;p&gt;Se si vuole usare &lt;code&gt;Linux&lt;/code&gt; e &lt;code&gt;OpenSSH&lt;/code&gt; per automatizzare delle attività e si ha la necessità di poter effettuare la login automatica dal un host &lt;code&gt;A&lt;/code&gt; con utente &lt;code&gt;a&lt;/code&gt; ad un host &lt;code&gt;B&lt;/code&gt; con utente &lt;code&gt;b&lt;/code&gt; senza inserire nessuna password questi sono i passo necessari: &lt;/p&gt;
@@ -930,22 +930,22 @@ b@B&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s password:&lt;/code&
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//Effettuare-la-login-ssh-senza-digitare-la-password/&quot;&gt;Effettuare la login SSH senza digitare la password.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on January 12, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/Effettuare-la-login-ssh-senza-digitare-la-password/&quot;&gt;Effettuare la login SSH senza digitare la password.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 12, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[GlassFish V3: la console amministrazione prendendo troppo tempo per caricare.]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/"/>
-  <id>http://massimocaliman.eu//glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/"/>
+  <id>http://massimocaliman.eu/glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare</id>
   <published>2014-01-11T23:45:33+01:00</published>
   <updated>2014-01-11T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu//tags/#GlassFishV3" term="GlassFishV3" />
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#GlassFishV3" term="GlassFishV3" />
   <content type="html">
   
     &lt;p&gt;Chiedersi se un computer possa pensare non è più interessante del chiedersi se un sottomarino possa nuotare.
@@ -981,22 +981,22 @@ nome del file e path sono riporti di seguito&lt;/li&gt;
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/&quot;&gt;GlassFish V3: la console amministrazione prendendo troppo tempo per caricare.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on January 11, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/&quot;&gt;GlassFish V3: la console amministrazione prendendo troppo tempo per caricare.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 11, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[HOWTO FIX errore 'illegal pattern character g' JAXB in NetBeans .]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/"/>
-  <id>http://massimocaliman.eu//howto-fix-error-jaxb-netbeans-illegal-pattern-character-g</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/"/>
+  <id>http://massimocaliman.eu/howto-fix-error-jaxb-netbeans-illegal-pattern-character-g</id>
   <published>2014-01-10T23:45:33+01:00</published>
   <updated>2014-01-10T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu//tags/#JAXB" term="JAXB" /><category scheme="http://massimocaliman.eu//tags/#NetBeans" term="NetBeans" />
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#JAXB" term="JAXB" /><category scheme="http://massimocaliman.eu/tags/#NetBeans" term="NetBeans" />
   <content type="html">
   
     &lt;p&gt;Il computer non è una macchina intelligente che aiuta le persone stupide, anzi è una macchina stupida che funziona solo nelle mani delle persone intelligenti.
@@ -1027,22 +1027,22 @@ nome del file e path sono riporti di seguito&lt;/li&gt;
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/&quot;&gt;HOWTO FIX errore 'illegal pattern character g' JAXB in NetBeans .&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on January 10, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/&quot;&gt;HOWTO FIX errore 'illegal pattern character g' JAXB in NetBeans .&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 10, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Come trovare il jar dove è contenuta una determinata classe (deployed in GlassFish).]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/"/>
-  <id>http://massimocaliman.eu//come-trovare-il-jar-dove-e-contenuta-una-determinata-classe</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/"/>
+  <id>http://massimocaliman.eu/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe</id>
   <published>2014-01-03T23:45:33+01:00</published>
   <updated>2014-01-03T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu//tags/#GlassFish" term="GlassFish" />
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#GlassFish" term="GlassFish" />
   <content type="html">
   
     &lt;p&gt;I Greci dicevano di una persona incolta: “Non sa leggere né nuotare”; oggi bisognerebbe aggiungere: “né usare un elaboratore”.
@@ -1054,22 +1054,22 @@ nome del file e path sono riporti di seguito&lt;/li&gt;
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/&quot;&gt;Come trovare il jar dove è contenuta una determinata classe (deployed in GlassFish).&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on January 03, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/&quot;&gt;Come trovare il jar dove è contenuta una determinata classe (deployed in GlassFish).&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 03, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Come impostare Virtualbox a schermo intero su Ubuntu 14.04]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404/"/>
-  <id>http://massimocaliman.eu//come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404/"/>
+  <id>http://massimocaliman.eu/come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404</id>
   <published>2014-01-02T23:45:33+01:00</published>
   <updated>2014-01-02T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#VirtualBox" term="VirtualBox" /><category scheme="http://massimocaliman.eu//tags/#Ubuntu" term="Ubuntu" />
+  <category scheme="http://massimocaliman.eu/tags/#VirtualBox" term="VirtualBox" /><category scheme="http://massimocaliman.eu/tags/#Ubuntu" term="Ubuntu" />
   <content type="html">
   
     &lt;p&gt;I computer sono come gli Dei del Vecchio Testamento: pieni di regole e nessuna pietà.
@@ -1083,22 +1083,22 @@ La soluzione è installare VirtualBox Guest Addition, vi consiglio di lasciate p
 &lt;p&gt;terminata l’installazione riavviate il sistema.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404/&quot;&gt;Come impostare Virtualbox a schermo intero su Ubuntu 14.04&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on January 02, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404/&quot;&gt;Come impostare Virtualbox a schermo intero su Ubuntu 14.04&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 02, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Pubblicare un sito con GitHub Pages.]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//pubblicare-un-sito-con-github-pages/"/>
-  <id>http://massimocaliman.eu//pubblicare-un-sito-con-github-pages</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/pubblicare-un-sito-con-github-pages/"/>
+  <id>http://massimocaliman.eu/pubblicare-un-sito-con-github-pages</id>
   <published>2014-01-01T23:45:33+01:00</published>
   <updated>2014-01-01T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Jekyll" term="Jekyll" /><category scheme="http://massimocaliman.eu//tags/#GitHub" term="GitHub" /><category scheme="http://massimocaliman.eu//tags/#GitHubPages" term="GitHubPages" />
+  <category scheme="http://massimocaliman.eu/tags/#Jekyll" term="Jekyll" /><category scheme="http://massimocaliman.eu/tags/#GitHub" term="GitHub" /><category scheme="http://massimocaliman.eu/tags/#GitHubPages" term="GitHubPages" />
   <content type="html">
   
     &lt;p&gt;L’informatica non riguarda i computer più di quanto l’astronomia riguardi i telescopi.
@@ -1117,22 +1117,22 @@ git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//pubblicare-un-sito-con-github-pages/&quot;&gt;Pubblicare un sito con GitHub Pages.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/pubblicare-un-sito-con-github-pages/&quot;&gt;Pubblicare un sito con GitHub Pages.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Come installare Ant su linux]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//come-installare-ant-su-linux/"/>
-  <id>http://massimocaliman.eu//come-installare-ant-su-linux</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/come-installare-ant-su-linux/"/>
+  <id>http://massimocaliman.eu/come-installare-ant-su-linux</id>
   <published>2013-01-01T23:45:33+01:00</published>
   <updated>2013-01-01T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Ant" term="Ant" /><category scheme="http://massimocaliman.eu//tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu//tags/#Linux" term="Linux" />
+  <category scheme="http://massimocaliman.eu/tags/#Ant" term="Ant" /><category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#Linux" term="Linux" />
   <content type="html">
   
     &lt;p&gt;Non provare mai a spiegare il computer a un profano. È più facile spiegare il sesso a una vergine.
@@ -1158,22 +1158,22 @@ con il comando&lt;/p&gt;
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//come-installare-ant-su-linux/&quot;&gt;Come installare Ant su linux&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/come-installare-ant-su-linux/&quot;&gt;Come installare Ant su linux&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Creare e configurare un DataSource MySQL in GlassFish Application Server]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/"/>
-  <id>http://massimocaliman.eu//creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/"/>
+  <id>http://massimocaliman.eu/creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server</id>
   <published>2012-01-01T23:45:33+01:00</published>
   <updated>2012-01-01T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu//tags/#DataSource" term="DataSource" /><category scheme="http://massimocaliman.eu//tags/#Glassfish" term="Glassfish" /><category scheme="http://massimocaliman.eu//tags/#MySQL" term="MySQL" />
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#DataSource" term="DataSource" /><category scheme="http://massimocaliman.eu/tags/#Glassfish" term="Glassfish" /><category scheme="http://massimocaliman.eu/tags/#MySQL" term="MySQL" />
   <content type="html">
   
     &lt;p&gt;Mentre in fisica devi capire come è fatto il mondo, in informatica sei tu a crearlo. Dentro i confini del computer, sei tu il creatore. Controlli – almeno potenzialmente – tutto ciò che vi succede. Se sei abbastanza bravo, puoi essere un Dio. Su piccola scala.
@@ -1219,22 +1219,22 @@ Per ottenere una connessione usando un DataSource portete utilizzare il seguente
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/&quot;&gt;Creare e configurare un DataSource MySQL in GlassFish Application Server&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2012.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/&quot;&gt;Creare e configurare un DataSource MySQL in GlassFish Application Server&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2012.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[BPEL (Business Process Execution Language)]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//bpel/"/>
-  <id>http://massimocaliman.eu//bpel</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/bpel/"/>
+  <id>http://massimocaliman.eu/bpel</id>
   <published>2012-01-01T23:45:33+01:00</published>
   <updated>2012-01-01T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#BPEL" term="BPEL" /><category scheme="http://massimocaliman.eu//tags/#SOA" term="SOA" />
+  <category scheme="http://massimocaliman.eu/tags/#BPEL" term="BPEL" /><category scheme="http://massimocaliman.eu/tags/#SOA" term="SOA" />
   <content type="html">
   
     &lt;p&gt;I computer sono incredibilmente veloci, accurati e stupidi. Gli uomini sono incredibilmente lenti, inaccurati e intelligenti. L’insieme dei due costituisce una forza incalcolabile.
@@ -1247,22 +1247,22 @@ L’ambiente runtime all’interno del quale viene eseguito il processo è detto
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//bpel/&quot;&gt;BPEL (Business Process Execution Language)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2012.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/bpel/&quot;&gt;BPEL (Business Process Execution Language)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2012.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Installiamo mysql senza synaptic o apt]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu//installiamo-mysql-senza-synaptic-o-apt/"/>
-  <id>http://massimocaliman.eu//installiamo-mysql-senza-synaptic-o-apt</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/installiamo-mysql-senza-synaptic-o-apt/"/>
+  <id>http://massimocaliman.eu/installiamo-mysql-senza-synaptic-o-apt</id>
   <published>2011-02-03T23:45:33+01:00</published>
   <updated>2011-02-03T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu/</uri>
+    <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu//tags/#MySQL" term="MySQL" />
+  <category scheme="http://massimocaliman.eu/tags/#MySQL" term="MySQL" />
   <content type="html">
   
     &lt;p&gt;Scarichiamo il tar.gz dal sito di mysql www.mysql.com
@@ -1314,7 +1314,7 @@ per poter gestire l’avvio automatico del servizio di mysql&lt;/p&gt;
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu//installiamo-mysql-senza-synaptic-o-apt/&quot;&gt;Installiamo mysql senza synaptic o apt&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu/&quot;&gt;Computer Programming&lt;/a&gt; on February 03, 2011.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/installiamo-mysql-senza-synaptic-o-apt/&quot;&gt;Installiamo mysql senza synaptic o apt&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on February 03, 2011.&lt;/p&gt;</content>
 </entry>
 
 </feed>
