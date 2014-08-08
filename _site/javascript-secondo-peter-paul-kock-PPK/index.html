@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Il passaggio di parametri in Java &#8211; Computer Programming</title>
+<title>Javascript secondo Peter Paul Kock (PPK) &#8211; Computer Programming</title>
 <meta name="description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
-<meta name="keywords" content="Java">
+<meta name="keywords" content="js">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://massimocaliman.eu/images/">
-<meta name="twitter:title" content="Il passaggio di parametri in Java">
+<meta name="twitter:title" content="Javascript secondo Peter Paul Kock (PPK)">
 <meta name="twitter:description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
 <meta name="twitter:creator" content="@mcaliman">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Il passaggio di parametri in Java">
+<meta property="og:title" content="Javascript secondo Peter Paul Kock (PPK)">
 <meta property="og:description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
-<meta property="og:url" content="http://massimocaliman.eu/il-passaggio-di-parametri-in-java/">
+<meta property="og:url" content="http://massimocaliman.eu/javascript-secondo-peter-paul-kock-PPK/">
 <meta property="og:site_name" content="Computer Programming">
 
 
 
 
 
-<link rel="canonical" href="http://massimocaliman.eu/il-passaggio-di-parametri-in-java/">
+<link rel="canonical" href="http://massimocaliman.eu/javascript-secondo-peter-paul-kock-PPK/">
 <link href="http://massimocaliman.eu/feed.xml" type="application/atom+xml" rel="alternate" title="Computer Programming Feed">
 <link rel="author" href="https://plus.google.com/+MassimoCaliman?rel=author">
 
@@ -123,99 +123,45 @@
     
     <div class="entry-wrapper">
       <header class="entry-header">
-        <span class="entry-tags"><a href="http://massimocaliman.eu/tags/#Java" title="Pages tagged Java">Java</a></span>
+        <span class="entry-tags"><a href="http://massimocaliman.eu/tags/#js" title="Pages tagged js">js</a></span>
         
-          <h1 class="entry-title">Il passaggio di parametri in Java</h1>
+          <h1 class="entry-title">Javascript secondo Peter Paul Kock (PPK)</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://massimocaliman.eu/images/bio-photo.jpg" alt="Massimo Caliman photo" class="author-photo">
         <span class="author vcard">By <span class="fn"><a href="http://massimocaliman.eu/about/" title="About Massimo Caliman">Massimo Caliman</a></span></span>
-        <span class="entry-date date published"><time datetime="2006-01-05T23:45:33+01:00"><i class="icon-calendar-empty"></i> January 05, 2006</time></span>
+        <span class="entry-date date published"><time datetime="2011-07-04T00:45:33+02:00"><i class="icon-calendar-empty"></i> July 04, 2011</time></span>
         
         
-        <span><a href="http://massimocaliman.eu/il-passaggio-di-parametri-in-java/" rel="bookmark" title="Il passaggio di parametri in Java"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="http://massimocaliman.eu/javascript-secondo-peter-paul-kock-PPK/" rel="bookmark" title="Javascript secondo Peter Paul Kock (PPK)"><i class="icon-link"></i> Permalink</a></span>
         
         <span class="social-share-facebook">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://massimocaliman.eu/il-passaggio-di-parametri-in-java/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://massimocaliman.eu/javascript-secondo-peter-paul-kock-PPK/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
         <span class="social-share-twitter">
-            <a href="https://twitter.com/intent/tweet?hashtags=&text=Il passaggio di parametri in Java&url=http://massimocaliman.eu/il-passaggio-di-parametri-in-java/&via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
+            <a href="https://twitter.com/intent/tweet?hashtags=&text=Javascript secondo Peter Paul Kock (PPK)&url=http://massimocaliman.eu/javascript-secondo-peter-paul-kock-PPK/&via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
         <span class="social-share-googleplus">
-            <a href="https://plus.google.com/share?url=http://massimocaliman.eu/il-passaggio-di-parametri-in-java/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
+            <a href="https://plus.google.com/share?url=http://massimocaliman.eu/javascript-secondo-peter-paul-kock-PPK/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
             <!-- /.social-share -->
       </footer>
       <div class="entry-content">
-        <p>Nella forma pi generica un metodo  caratterizzato da uno o pi parametri formali</p>
-
-<p>T1 p1, T2,p2  Tn pn</p>
-
-<p>un esempio pu essere dato dalla riga sotto</p>
-
-<p>int a,double b,long c,String d</p>
-
-<p>Questi definiscono gli identificatori delle entit su cui il metodo  chiamato ad operare, quali sono conosciuti dal metodo.
-Affinch il metodo possa effettuare la propria computazione  necessario che in corrispondenza della sua attivazione i 
-parametri formali vengano associati ai calcoli cui la computazione deve essere effettivamente applicata.</p>
-
-<p>Detti valori costituiscono i parametri attuali del metodo.</p>
-
-<p>Di solito i linguaggi di programmazione prevedono due modalit di legame tra i parametri attuale 
-quelli formali : </p>
-
-<ul>
-  <li>passaggio di parametri per valore </li>
-  <li>passaggio di parametri per indirizzo </li>
-</ul>
-
-<h1 id="passaggio-di-parametri-per-valore">Passaggio di parametri per valore</h1>
-<p>Con il passaggio di parametri per valore, 
-il parametro formale di un metodo identifica una locazione di memoria locale al metodo chiamato e nella quale 
-viene trascritto il valore del corrispondente parametro attuale. 
-In questo modo, il metodo lavora su una copia del valore del parametro attuale. </p>
-
-<p>Ne segue che ogni modifica apportata al parametro formale rimane localizzata nel metodo di pertinenza e 
-non pu essere esportata nell’ambiente chiamante. Questo significa che ogni volta che passate un parametro, 
-per esempio un intero int a di valore 10 ,e poi nel corso della computazione interna al metodo ne cambiate 
-il valore in 11,al rientro della chiamata il suo valore torner ad essere 10.</p>
-
-<div class="highlight"><pre><code class="java"><span class="c1">//dichiarazione e implementazione del metodo m1 che useremo per l&#39;esempio.</span>
-<span class="kd">private</span> <span class="kt">void</span> <span class="nf">m1</span><span class="o">(</span><span class="kt">int</span> <span class="n">value</span><span class="o">){</span>
-   <span class="n">value</span><span class="o">=</span><span class="mi">11</span><span class="o">;</span>
-   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;qui il valore di qualunque parametro passato vale 11 : value=&#39;&quot;</span><span class="o">+</span><span class="n">value</span><span class="o">);</span>
-<span class="o">}</span>
-<span class="c1">//altro</span>
-<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
-<span class="n">m1</span><span class="o">(</span><span class="n">a</span><span class="o">);</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;a ora vale ancora 10 : a=&quot;</span><span class="o">+</span><span class="n">a</span><span class="o">);</span></code></pre></div>
-
-<p>Quindi non posso usare (in java), un metodo per cambiare il valore di una variabile passata come parametro? 
-in realt non proprio cos,vedremo che con gli oggetti e gli array questo  possibile (e viene fatto usualmente).</p>
-
-<p>Come avrete notato ho cominciato ad introdurre il metodo statico println della classe System che opera sullo 
-stream standard out (il vostro video),non entreremo nel dettaglio di System per il momento.</p>
-
-<h1 id="passaggio-di-parametri-per-indirizzo">Passaggio di parametri per indirizzo.</h1>
-
-<p>In questo caso il parametro formale di un metodo identifica l’indirizzo di allocazione del corrispondente 
-parametro attuale, il quale deve essere una variabile. Il metodo viene quindi chiamato ad operare direttamente sulla 
-variabile allocata nel contesto del chiamante, pertanto ogni modifica apportata del metodo al parametro formale viene 
-esportato ripercuotendosi sul corrispondente parametro attuale.</p>
-
-<p>Formalmente, Java applica il passaggio per valore a tutti i metodi, ma qualora il parametro sia costituito 
-da un array o da un oggetto il risultato ottenuto  simile a quello ottenuto il passaggio per indirizzo, infatti
-in questo caso il parametro copiato  proprio l’indirizzo dell’array o dell’oggetto in questione. 
-Quindi le modifiche apportate a un array o a un oggetto da un metodo si ripercuotono sul contesto del chiamante. 
-Non  possibile invece esportare da un metodo un oggetto o array di nuova creazione se non con il comando return.</p>
+        <p>Se vi capita di dover lavorare in javascript, anche solo per copiare e incollare semplici script nel vostro sito fatevi un regalo,
+comprate e leggete “Java Script secondo Peter-Paul Kock” (Pearson Education) traduzione di PPK ON JAVASCRIPT.
+Uno dei pochi libri su javascript che non sia un reference o una semplice raccolta di banali script.
+Per chi non lo sapesse Peter Paul Kock conosciuto meglio come PPK è uno dei più autorevoli esperti di fama mondiale su Javascript, 
+il sito www.quirksmode.org che molti conoscono è una sua creazione, penso sia online da una decina di anni.
+Nel libro non troverete una raccolta di semplici script di esempio,didattici, di quelli che ormai si copiano ovunque, ma casi reali,per cui l’autore è stato pagato,
+si spiega come debuggare uno script,come usare le tecniche più avanzate e come evitare il più possibile i problemi di incompatibilità tra i vari browser.</p>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://massimocaliman.eu/approfondiamo-i-metodi-in-java/" class="btn" title="Approfondiamo i metodi in Java">Previous article</a>
+        <a href="http://massimocaliman.eu/uso-di-keytool-e-jarsigner/" class="btn" title="Uso di keytool e jarsigner">Previous article</a>
       
       
-        <a href="http://massimocaliman.eu/linux-il-comando-du/" class="btn" title="Linux: il comando du">Next article</a>
+        <a href="http://massimocaliman.eu/bpel/" class="btn" title="BPEL (Business Process Execution Language)">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>

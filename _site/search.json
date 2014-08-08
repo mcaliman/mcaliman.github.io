@@ -153,9 +153,65 @@
 		} ,
 	
 		{
+		  "title"      : "Javascript secondo Peter Paul Kock (PPK)",
+		  "category"   : "",
+		  "url"        : "http://massimocaliman.eu/javascript-secondo-peter-paul-kock-PPK/",
+		  "date"       : "2011-07-04 00:45:33 +0200",
+		  "shortdate"  : "July 04, 2011"
+		} ,
+	
+		{
+		  "title"      : "Uso di keytool e jarsigner",
+		  "category"   : "",
+		  "url"        : "http://massimocaliman.eu/uso-di-keytool-e-jarsigner/",
+		  "date"       : "2011-04-25 00:45:33 +0200",
+		  "shortdate"  : "April 25, 2011"
+		} ,
+	
+		{
+		  "title"      : "Errori comuni nella configurazione di Adobe PDF iFilter per SharePoint 2007",
+		  "category"   : "",
+		  "url"        : "http://massimocaliman.eu/errori-comuni-nella-configurazione-di-adobe-pdf-ifilter-per-sharepoint-2007/",
+		  "date"       : "2011-04-05 00:45:33 +0200",
+		  "shortdate"  : "April 05, 2011"
+		} ,
+	
+		{
+		  "title"      : "Well Formatted riferito ad un documento XML",
+		  "category"   : "",
+		  "url"        : "http://massimocaliman.eu/well-formatted-riferito-ad-un-documento-xml/",
+		  "date"       : "2011-03-07 23:45:33 +0100",
+		  "shortdate"  : "March 07, 2011"
+		} ,
+	
+		{
+		  "title"      : "Quel maledetto Content is not allowed in prolog",
+		  "category"   : "",
+		  "url"        : "http://massimocaliman.eu/quel-maledetto-content-is-not-allowed-in-prolog/",
+		  "date"       : "2011-02-27 23:45:33 +0100",
+		  "shortdate"  : "February 27, 2011"
+		} ,
+	
+		{
+		  "title"      : "Cose'è JAX-WS",
+		  "category"   : "",
+		  "url"        : "http://massimocaliman.eu/cose-e-jax-ws/",
+		  "date"       : "2011-02-27 23:45:33 +0100",
+		  "shortdate"  : "February 27, 2011"
+		} ,
+	
+		{
 		  "title"      : "Installiamo mysql senza synaptic o apt",
 		  "category"   : "",
 		  "url"        : "http://massimocaliman.eu/installiamo-mysql-senza-synaptic-o-apt/",
+		  "date"       : "2011-02-03 23:45:33 +0100",
+		  "shortdate"  : "February 03, 2011"
+		} ,
+	
+		{
+		  "title"      : "Estrarre dati dal codice fiscale con Excel",
+		  "category"   : "",
+		  "url"        : "http://massimocaliman.eu/estrarre-dati-dal-codice-fiscale-con-excel/",
 		  "date"       : "2011-02-03 23:45:33 +0100",
 		  "shortdate"  : "February 03, 2011"
 		} ,
@@ -206,6 +262,14 @@
 		  "url"        : "http://massimocaliman.eu/la-parola-riservata-this-in-java/",
 		  "date"       : "2007-01-05 23:45:33 +0100",
 		  "shortdate"  : "January 05, 2007"
+		} ,
+	
+		{
+		  "title"      : "Linux: il comando du",
+		  "category"   : "",
+		  "url"        : "http://massimocaliman.eu/linux-il-comando-du/",
+		  "date"       : "2007-01-01 23:45:33 +0100",
+		  "shortdate"  : "January 01, 2007"
 		} ,
 	
 		{
@@ -278,6 +342,14 @@
 		  "url"        : "http://massimocaliman.eu/articles/mokabyte-udp/",
 		  "date"       : "2000-03-30 00:00:00 +0200",
 		  "shortdate"  : "March 30, 2000"
+		} ,
+	
+		{
+		  "title"      : "Come cancellare l history comandi su linux.",
+		  "category"   : "",
+		  "url"        : "http://massimocaliman.eu/come-cancellare-history-comandi-linux/",
+		  "date"       : "2000-01-01 23:45:33 +0100",
+		  "shortdate"  : "January 01, 2000"
 		} ,
 	
 		{

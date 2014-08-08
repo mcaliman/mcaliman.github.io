@@ -9,7 +9,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://massimocaliman.eu/feed.xml" />
 <link rel="alternate" type="text/html" href="http://massimocaliman.eu/" />
-<updated>2014-08-04T22:43:00+02:00</updated>
+<updated>2014-08-08T22:04:54+02:00</updated>
 <id>http://massimocaliman.eu/</id>
 <author>
   <name>Massimo Caliman</name>
@@ -1252,69 +1252,29 @@ L’ambiente runtime all’interno del quale viene eseguito il processo è detto
 
 
 <entry>
-  <title type="html"><![CDATA[Installiamo mysql senza synaptic o apt]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/installiamo-mysql-senza-synaptic-o-apt/"/>
-  <id>http://massimocaliman.eu/installiamo-mysql-senza-synaptic-o-apt</id>
-  <published>2011-02-03T23:45:33+01:00</published>
-  <updated>2011-02-03T23:45:33+01:00</updated>
+  <title type="html"><![CDATA[Javascript secondo Peter Paul Kock (PPK)]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/javascript-secondo-peter-paul-kock-PPK/"/>
+  <id>http://massimocaliman.eu/javascript-secondo-peter-paul-kock-PPK</id>
+  <published>2011-07-04T00:45:33+02:00</published>
+  <updated>2011-07-04T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
     <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu/tags/#MySQL" term="MySQL" />
+  <category scheme="http://massimocaliman.eu/tags/#js" term="js" />
   <content type="html">
   
-    &lt;p&gt;Scarichiamo il tar.gz dal sito di mysql www.mysql.com
-posizioniamolo in /usr/local scompattiamo il tar.gz con il comando&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;tar -xzf mysql-5.1.31-linux-i686-glibc23.tar.gz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;(abbiamo assunto da un caso reale che la versione sia la 5.1.31, in questo caso il nome del file è
-mysql-5.1.31-linux-i686-glibc23.tar.gz) creaimo il link simbolico mysql&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ln -s mysql-5.1.31-linux-i686-glibc23 mysql&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;creaimo utenti/gruppi&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;groupadd mysql
-useradd -g mysql mysql&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;inizializiamo il db&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;mysql
-./scripts/mysql_install_db --user&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mysql&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;aggiungiamo i permessi necessari alle directory&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;chown -R root:mysql .
-chown -R mysql:mysql data&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;facciamo partire il demone di mysql in background con il comando&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;./bin/mysqld_safe --user&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mysql &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;configuriamo le variabili di ambiente
-in /root/.bashrc (o nella propria home)
-aggiungiamo le righe&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MYSQL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/mysql
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;MYSQL
-&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$MYSQL&lt;/span&gt;/bin:.:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;PATH&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;aggiungiamo le righe anche in 
-/etc/init.d/bootmisc.sh
-per poter gestire l’avvio automatico del servizio di mysql&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MYSQL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/mysql
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;MYSQL
-&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$MYSQL&lt;/span&gt;/bin:.:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;PATH&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+    &lt;p&gt;Se vi capita di dover lavorare in javascript, anche solo per copiare e incollare semplici script nel vostro sito fatevi un regalo,
+comprate e leggete “Java Script secondo Peter-Paul Kock” (Pearson Education) traduzione di PPK ON JAVASCRIPT.
+Uno dei pochi libri su javascript che non sia un reference o una semplice raccolta di banali script.
+Per chi non lo sapesse Peter Paul Kock conosciuto meglio come PPK è uno dei più autorevoli esperti di fama mondiale su Javascript, 
+il sito www.quirksmode.org che molti conoscono è una sua creazione, penso sia online da una decina di anni.
+Nel libro non troverete una raccolta di semplici script di esempio,didattici, di quelli che ormai si copiano ovunque, ma casi reali,per cui l’autore è stato pagato,
+si spiega come debuggare uno script,come usare le tecniche più avanzate e come evitare il più possibile i problemi di incompatibilità tra i vari browser.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/installiamo-mysql-senza-synaptic-o-apt/&quot;&gt;Installiamo mysql senza synaptic o apt&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on February 03, 2011.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/javascript-secondo-peter-paul-kock-PPK/&quot;&gt;Javascript secondo Peter Paul Kock (PPK)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 04, 2011.&lt;/p&gt;</content>
 </entry>
 
 </feed>
