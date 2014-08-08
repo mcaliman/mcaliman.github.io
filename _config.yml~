@@ -42,10 +42,16 @@ links:
     url: /
   - title: About
     url: /about/
-  - title: Articles
+  - title: Articoli
     url: /articles/
+  - title: Tags
+    url: /tags/
   - title: Legal
     url: /legal/
+  - title: website
+    url: http://www.caliman.biz
+    external: true
+
 #  - title: Made Mistakes
 #    url: http://mademistakes.com
 #    external: true

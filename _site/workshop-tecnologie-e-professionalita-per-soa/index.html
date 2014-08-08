@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>La parola riservata this in Java &#8211; Computer Programming</title>
+<title>Workshop Tecnologie e Professionalità per la SOA &#8211; Computer Programming</title>
 <meta name="description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
-<meta name="keywords" content="Java">
+<meta name="keywords" content="SOA">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://massimocaliman.eu/images/">
-<meta name="twitter:title" content="La parola riservata this in Java">
+<meta name="twitter:title" content="Workshop Tecnologie e Professionalità per la SOA">
 <meta name="twitter:description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
 <meta name="twitter:creator" content="@mcaliman">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="La parola riservata this in Java">
+<meta property="og:title" content="Workshop Tecnologie e Professionalità per la SOA">
 <meta property="og:description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
-<meta property="og:url" content="http://massimocaliman.eu/la-parola-riservata-this-in-java/">
+<meta property="og:url" content="http://massimocaliman.eu/workshop-tecnologie-e-professionalita-per-soa/">
 <meta property="og:site_name" content="Computer Programming">
 
 
 
 
 
-<link rel="canonical" href="http://massimocaliman.eu/la-parola-riservata-this-in-java/">
+<link rel="canonical" href="http://massimocaliman.eu/workshop-tecnologie-e-professionalita-per-soa/">
 <link href="http://massimocaliman.eu/feed.xml" type="application/atom+xml" rel="alternate" title="Computer Programming Feed">
 <link rel="author" href="https://plus.google.com/+MassimoCaliman?rel=author">
 
@@ -135,98 +135,62 @@
     
     <div class="entry-wrapper">
       <header class="entry-header">
-        <span class="entry-tags"><a href="http://massimocaliman.eu/tags/#Java" title="Pages tagged Java">Java</a></span>
+        <span class="entry-tags"><a href="http://massimocaliman.eu/tags/#SOA" title="Pages tagged SOA">SOA</a></span>
         
-          <h1 class="entry-title">La parola riservata this in Java</h1>
+          <h1 class="entry-title">Workshop Tecnologie e Professionalità per la SOA</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://massimocaliman.eu/images/bio-photo.jpg" alt="Massimo Caliman photo" class="author-photo">
         <span class="author vcard">By <span class="fn"><a href="http://massimocaliman.eu/about/" title="About Massimo Caliman">Massimo Caliman</a></span></span>
-        <span class="entry-date date published"><time datetime="2007-01-05T23:45:33+01:00"><i class="icon-calendar-empty"></i> January 05, 2007</time></span>
+        <span class="entry-date date published"><time datetime="2008-10-02T00:45:33+02:00"><i class="icon-calendar-empty"></i> October 02, 2008</time></span>
         
         
-        <span><a href="http://massimocaliman.eu/la-parola-riservata-this-in-java/" rel="bookmark" title="La parola riservata this in Java"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="http://massimocaliman.eu/workshop-tecnologie-e-professionalita-per-soa/" rel="bookmark" title="Workshop Tecnologie e Professionalità per la SOA"><i class="icon-link"></i> Permalink</a></span>
         
         <span class="social-share-facebook">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://massimocaliman.eu/la-parola-riservata-this-in-java/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://massimocaliman.eu/workshop-tecnologie-e-professionalita-per-soa/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
         <span class="social-share-twitter">
-            <a href="https://twitter.com/intent/tweet?hashtags=&text=La parola riservata this in Java&url=http://massimocaliman.eu/la-parola-riservata-this-in-java/&via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
+            <a href="https://twitter.com/intent/tweet?hashtags=&text=Workshop Tecnologie e Professionalità per la SOA&url=http://massimocaliman.eu/workshop-tecnologie-e-professionalita-per-soa/&via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
         <span class="social-share-googleplus">
-            <a href="https://plus.google.com/share?url=http://massimocaliman.eu/la-parola-riservata-this-in-java/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
+            <a href="https://plus.google.com/share?url=http://massimocaliman.eu/workshop-tecnologie-e-professionalita-per-soa/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
             <!-- /.social-share -->
       </footer>
       <div class="entry-content">
-        <p>E’ possibile riscontrare due situazioni di interesse legate all’uso dei metodi la cui accurata gestione permette di migliorare 
-l’efficienza del codice: </p>
-
-<ul>
-  <li>omonimia parametri dei metodi e delle variabili della classe in cui i metodo sono definiti </li>
-  <li>molteplicità dei costruttori della classe </li>
-</ul>
-
-<p>La prima situazione deriva dal fatto che un tipico utilizzo dei metodi consiste nel fornire valori da assegnare alle variabili degli oggetti. 
-In tal caso è evidente che i parametri del metodo e i dati membro della classe possiedono la stessa semantica e pertanto non è ragionevole 
-identificare gli uni e gli altri con nomi diversi. </p>
-
-<p>Il problema che ne segue è quello di poter discriminare fra entità diverse che sono individuate con lo stesso identificatore. </p>
-
-<p>La seconda situazione nasce dalla funzione dei costruttori, il cui scopo è quello di fornire procedure diversificate di 
-inizializzazione degli oggetti che possono dipendere da particolari esigenze applicative. </p>
-
-<p>Tipicamente una classe mette a disposizione un costruttore con valori di default per le variabili degli oggetti e uno o più altri 
-costruttori per inizializzazioni specifiche. </p>
-
-<p>E’ ragionevole aspettarsi che la presenza dei molteplici costruttori, similari nelle loro funzionalità, comporti la duplicazione 
-di parte del codice o tali metodi con conseguente spreco di memoria. </p>
-
-<p>Al fine di fronteggiare le situazioni indicate, il linguaggio di programmazione Java mette a disposizione del programmatore la parola riservata this. </p>
-
-<p>Si tratta di una parola chiave che può essere sfruttata sotto due interpretazioni distinte:</p>
-
-<ul>
-  <li>il riferimento ad un oggetto </li>
-  <li>riferimento ad un altro costruttore </li>
-</ul>
-
-<p>Nella prima accezione, la parola this è sfruttata nella risoluzione di omonimie tra il parametro di un metodo e il nome di una variabile di istanza:</p>
-
-<div class="highlight"><pre><code class="java"><span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
-   <span class="kt">float</span> <span class="n">car</span><span class="o">;</span>
-   <span class="kt">void</span> <span class="nf">m</span><span class="o">(</span><span class="kt">float</span> <span class="n">var</span><span class="o">){</span>
-       <span class="k">this</span><span class="o">.</span><span class="na">var</span><span class="o">=</span><span class="n">var</span><span class="o">;</span>
-   <span class="o">}</span>
-<span class="o">}</span></code></pre></div>
-
-<p>Ci forza il compilatore ad interpretare la specifica this.var come un riferimento alla variabile di istanza var dell’oggetto in cui il metodo m()  è attivato.
-Pertanto, nel comando this.var=var, l’identificatore var a destra dell’operatore di assegnazione si riferisce al parametro del metodo, 
-mentre la specifica this.var collocata a sinistra dello stesso operatore si riferisce all’attributo dell’oggetto. </p>
-
-<p>La seconda accezione della parola this legata alla presenza di più costruttori. Al fine di ridurre il codice prodotto dal compilatore, 
-i costruttori di una classe possono essere ripartiti in un costruttore primario e uno o più altri costruttori secondari. 
-Mentre il costruttore primario è di per sè codificato, i costruttori secondari rimandano a quello primario riportandone i parametri
-di chiamata nella specifica this. La specifica di richiamo deve essere la prima istruzione che appare nel codice dei costruttori secondari.</p>
-
-<div class="highlight"><pre><code class="java"><span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
-   <span class="kt">float</span> <span class="n">var</span><span class="o">;</span>
-   <span class="kd">public</span> <span class="nf">T</span><span class="o">(</span><span class="kt">float</span> <span class="n">var</span><span class="o">){</span>
-      <span class="k">this</span><span class="o">.</span><span class="na">var</span><span class="o">=</span><span class="n">var</span><span class="o">;</span>
-   <span class="o">}</span>
-   <span class="kd">public</span> <span class="nf">T</span><span class="o">(){</span>
-      <span class="k">this</span><span class="o">(</span><span class="mf">0.03</span><span class="o">);</span>
-   <span class="o">}</span>
-<span class="o">}</span></code></pre></div>
-
+        <p>Il 30 settembre scorso (30/09/2008) si è tenuto presso la sede di Confindustria Genova il workshop “Tecnologie e Professionalità per la SOA”.
+L’incontro aveva lo scopo di illustrare lo stato dell’arte della SOA presentandone le principali caratteristiche tecniche e modalità di utilizzo.
+La presentazione di una soluzione di mercato e delle sue applicazioni per chiudere con l’evidenziazione delle professioni richieste per l’implementazione di una SOA secondo lo standard EUCIP.
+Ho particolarmente apprezzato le relazioni del Prof.Egidio Astesiano “Andare SOA:fra imperativo e realtà” e dell’Ing.Andrea Rinaldi,
+Direttore Tecnico per i prodotti Gestionali di Microarea “Un ERP SOA-oriented:due casi di successo”.
+La SOA, Service Oriented Architecture, può essere definita come uno stile architetturale ICT che supporta,integrandoli,i processi di business tra loro interoperanti.
+Vi segnalo alcuni link interessanti presentati durante i vari interventi
+<a href="http://www.ctiliguria.it">http://www.ctiliguria.it</a>
+Il sito OASIS (OASIS is a not-for-profit consortium that drives the development, convergence and adoption of open standards for the global information society)
+http://www.omg.org/docs/ad/08-08-04.pdf
+Service oriented architecture Modeling Language (SoaML) - Specification for the UML Profile and Metamodel for Services (UPMS)
+http://www.ctiliguria.it/
+Il sito del CTI Liguria (Club per le tecnologie dell’informazione - Liguria)
+http://www.aicanet.it/
+Il sito di AICA (AICA - Associazione Italiana per l’Informatica ed il Calcolo Automatico)
+http://aicanet.net/soci/il-cantiere-dei-mestieri-ict/il-cantiere-dei-mestieri-ict
+Il Cantiere dei Mestieri ICT (insieme di servizi messi a disposizione da AICA per fornire via web ai propri Soci informazioni riguardanti la loro attività professionale) 
+http://www.infoq.com/zones/centrasite/
+CentraSite (The CentraSite Community is a portal for all things SOA and SOA Governance related, many of which are linked to CentraSite, the industry-leading SOA registry and repository, co-developed by Software AG and Fujitsu.)
+http://www.quasar.it/filedocumenti/microarea/magic%20link_wp_25.pdf
+http://www.columbusinformatica.it/upload/MagicLink.pdf
+(fonte Google) Informazioni sulla soluzione SOA-oriented “Magic Link” di Microarea (presentata dall’Ing.Rinaldi, dategli un occchiata ne vale la pena)
+http://www.microarea.it/Microarea.IT/default.aspx
+Il sito di Microarea S.p.A</p>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://massimocaliman.eu/linux-il-comando-du/" class="btn" title="Linux: il comando du">Previous article</a>
+        <a href="http://massimocaliman.eu/gli-oggetti-in-java/" class="btn" title="Gli oggetti in Java">Previous article</a>
       
       
-        <a href="http://massimocaliman.eu/gli-oggetti-in-java/" class="btn" title="Gli oggetti in Java">Next article</a>
+        <a href="http://massimocaliman.eu/come-ripristinare-l-utente-%20amministratore-di-%20docebo/" class="btn" title="Come ripristinare l'utente amministratore di Docebo">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>

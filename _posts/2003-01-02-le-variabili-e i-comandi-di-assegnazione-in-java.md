@@ -2,6 +2,7 @@
 layout: post
 title:  "Le variabili e i comandi di assegnazione"
 date:   2003-01-02 22:45:33
+category: articles
 tags: [Java]
 comments: false
 share: true
@@ -26,8 +27,8 @@ di memoria in cui scrivere il suo valore, la dichiarazione definisce il tipo del
 T var;
 {% endhighlight %}
 
-dove T  il tipo, per esempio **int** , double e altro.
-Si possono avere come tipi, tipi di base che non sono oggetti oppure oggetti ( T diventa un nome di classe). 
+dove `T`  il tipo, per esempio **int** , double e altro.
+Si possono avere come tipi, tipi di base che non sono oggetti oppure oggetti ( `T` diventa un nome di classe). 
 Sotto riportiamo alcuni esempi di dichiarazione di variabile:
 
 {% highlight java %}

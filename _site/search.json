@@ -249,6 +249,14 @@
 		} ,
 	
 		{
+		  "title"      : "Workshop Tecnologie e Professionalità per la SOA",
+		  "category"   : "",
+		  "url"        : "http://massimocaliman.eu/workshop-tecnologie-e-professionalita-per-soa/",
+		  "date"       : "2008-10-02 00:45:33 +0200",
+		  "shortdate"  : "October 02, 2008"
+		} ,
+	
+		{
 		  "title"      : "Gli oggetti in Java",
 		  "category"   : "",
 		  "url"        : "http://massimocaliman.eu/gli-oggetti-in-java/",
@@ -314,24 +322,24 @@
 	
 		{
 		  "title"      : "Le costanti simboliche in Java",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/le-costanti-simboliche-in-java/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/le-costanti-simboliche-in-java/",
 		  "date"       : "2003-02-03 23:45:33 +0100",
 		  "shortdate"  : "February 03, 2003"
 		} ,
 	
 		{
 		  "title"      : "Le variabili e i comandi di assegnazione",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/le-variabili-e%20i-comandi-di-assegnazione-in-java/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/le-variabili-e%20i-comandi-di-assegnazione-in-java/",
 		  "date"       : "2003-01-02 23:45:33 +0100",
 		  "shortdate"  : "January 02, 2003"
 		} ,
 	
 		{
 		  "title"      : "Le feature del linguaggio Java che devi conoscere",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/le-feature-del-linguaggio-java-che-devi-conoscere/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/le-feature-del-linguaggio-java-che-devi-conoscere/",
 		  "date"       : "2003-01-01 23:45:33 +0100",
 		  "shortdate"  : "January 01, 2003"
 		} ,
@@ -346,8 +354,8 @@
 	
 		{
 		  "title"      : "Come cancellare l history comandi su linux.",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/come-cancellare-history-comandi-linux/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/come-cancellare-history-comandi-linux/",
 		  "date"       : "2000-01-01 23:45:33 +0100",
 		  "shortdate"  : "January 01, 2000"
 		} ,

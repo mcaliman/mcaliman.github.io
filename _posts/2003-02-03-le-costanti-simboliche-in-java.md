@@ -2,6 +2,7 @@
 layout: post
 title:  "Le costanti simboliche in Java"
 date:   2003-02-03 22:45:33
+category: articles
 tags: [Java]
 comments: false
 share: true
