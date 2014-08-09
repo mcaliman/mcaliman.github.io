@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Javascript secondo Peter Paul Kock (PPK)"
+category: articles
 date:   2011-07-03 22:45:33
 tags: [js]
 comments: false

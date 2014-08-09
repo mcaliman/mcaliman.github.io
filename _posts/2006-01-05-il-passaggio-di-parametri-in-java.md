@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Il passaggio di parametri in Java"
+category: articles
 date:   2006-01-05 22:45:33
 tags: [Java]
 comments: false

@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Le feature del linguaggio Java che devi conoscere"
-date:   2003-01-01 22:45:33
 category: articles
+date:   2003-01-01 22:45:33
 tags: [Java]
 comments: false
 share: true

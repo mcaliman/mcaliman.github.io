@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "La parola riservata this in Java"
+category: articles
 date:   2007-01-05 22:45:33
 tags: [Java]
 comments: false

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Il metodo String.format una printf per Java"
+category: articles
 date:   2014-07-13 22:45:33
 tags: [Java, String]
 comments: false

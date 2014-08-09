@@ -2,320 +2,320 @@
 	
 		{
 		  "title"      : "﻿Una Servlet per gestire il download di file in Java",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/una-servlet-per-gestire-il-download-di-file-in-java/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/una-servlet-per-gestire-il-download-di-file-in-java/",
 		  "date"       : "2014-07-16 00:45:33 +0200",
 		  "shortdate"  : "July 16, 2014"
 		} ,
 	
 		{
 		  "title"      : "﻿Inviare mail con allegati in Java",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/inviare-mail-con-allegati-in-java/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/inviare-mail-con-allegati-in-java/",
 		  "date"       : "2014-07-15 00:45:33 +0200",
 		  "shortdate"  : "July 15, 2014"
 		} ,
 	
 		{
 		  "title"      : "Il metodo String.format una printf per Java",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/Il-metodo-string-format-una-printf-per-java/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/Il-metodo-string-format-una-printf-per-java/",
 		  "date"       : "2014-07-14 00:45:33 +0200",
 		  "shortdate"  : "July 14, 2014"
 		} ,
 	
 		{
 		  "title"      : "Considerazioni su alcuni Linguaggi di Programmazione Parte 4",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/",
 		  "date"       : "2014-07-13 00:45:33 +0200",
 		  "shortdate"  : "July 13, 2014"
 		} ,
 	
 		{
 		  "title"      : "Considerazioni su alcuni Linguaggi di Programmazione Parte 3",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/",
 		  "date"       : "2014-07-12 00:45:33 +0200",
 		  "shortdate"  : "July 12, 2014"
 		} ,
 	
 		{
 		  "title"      : "Considerazioni su alcuni Linguaggi di Programmazione Parte 2",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/",
 		  "date"       : "2014-07-11 00:45:33 +0200",
 		  "shortdate"  : "July 11, 2014"
 		} ,
 	
 		{
 		  "title"      : "Considerazioni su alcuni Linguaggi di Programmazione Parte 1",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/",
 		  "date"       : "2014-07-10 00:45:33 +0200",
 		  "shortdate"  : "July 10, 2014"
 		} ,
 	
 		{
 		  "title"      : "La gestione delle stringhe in Java",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/la-gestione-delle-stringhe-in-java/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/la-gestione-delle-stringhe-in-java/",
 		  "date"       : "2014-07-07 00:45:33 +0200",
 		  "shortdate"  : "July 07, 2014"
 		} ,
 	
 		{
 		  "title"      : "Il cms è morto viva jekyll!",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/il-cms-e-morto-viva-jekyll/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/il-cms-e-morto-viva-jekyll/",
 		  "date"       : "2014-06-23 00:45:33 +0200",
 		  "shortdate"  : "June 23, 2014"
 		} ,
 	
 		{
 		  "title"      : "Installare Jekyll su ubuntu 14.04.",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/install-jekyll/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/install-jekyll/",
 		  "date"       : "2014-06-08 00:45:33 +0200",
 		  "shortdate"  : "June 08, 2014"
 		} ,
 	
 		{
 		  "title"      : "Effettuare la login SSH senza digitare la password.",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/Effettuare-la-login-ssh-senza-digitare-la-password/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/Effettuare-la-login-ssh-senza-digitare-la-password/",
 		  "date"       : "2014-01-12 23:45:33 +0100",
 		  "shortdate"  : "January 12, 2014"
 		} ,
 	
 		{
 		  "title"      : "GlassFish V3: la console amministrazione prendendo troppo tempo per caricare.",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/",
 		  "date"       : "2014-01-11 23:45:33 +0100",
 		  "shortdate"  : "January 11, 2014"
 		} ,
 	
 		{
 		  "title"      : "HOWTO FIX errore 'illegal pattern character g' JAXB in NetBeans .",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/",
 		  "date"       : "2014-01-10 23:45:33 +0100",
 		  "shortdate"  : "January 10, 2014"
 		} ,
 	
 		{
 		  "title"      : "Come trovare il jar dove è contenuta una determinata classe (deployed in GlassFish).",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/",
 		  "date"       : "2014-01-03 23:45:33 +0100",
 		  "shortdate"  : "January 03, 2014"
 		} ,
 	
 		{
 		  "title"      : "Come impostare Virtualbox a schermo intero su Ubuntu 14.04",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404/",
 		  "date"       : "2014-01-02 23:45:33 +0100",
 		  "shortdate"  : "January 02, 2014"
 		} ,
 	
 		{
 		  "title"      : "Pubblicare un sito con GitHub Pages.",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/pubblicare-un-sito-con-github-pages/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/pubblicare-un-sito-con-github-pages/",
 		  "date"       : "2014-01-01 23:45:33 +0100",
 		  "shortdate"  : "January 01, 2014"
 		} ,
 	
 		{
 		  "title"      : "Come installare Ant su linux",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/come-installare-ant-su-linux/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/come-installare-ant-su-linux/",
 		  "date"       : "2013-01-01 23:45:33 +0100",
 		  "shortdate"  : "January 01, 2013"
 		} ,
 	
 		{
 		  "title"      : "Creare e configurare un DataSource MySQL in GlassFish Application Server",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/",
 		  "date"       : "2012-01-01 23:45:33 +0100",
 		  "shortdate"  : "January 01, 2012"
 		} ,
 	
 		{
 		  "title"      : "BPEL (Business Process Execution Language)",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/bpel/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/bpel/",
 		  "date"       : "2012-01-01 23:45:33 +0100",
 		  "shortdate"  : "January 01, 2012"
 		} ,
 	
 		{
 		  "title"      : "Javascript secondo Peter Paul Kock (PPK)",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/javascript-secondo-peter-paul-kock-PPK/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/javascript-secondo-peter-paul-kock-PPK/",
 		  "date"       : "2011-07-04 00:45:33 +0200",
 		  "shortdate"  : "July 04, 2011"
 		} ,
 	
 		{
 		  "title"      : "Uso di keytool e jarsigner",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/uso-di-keytool-e-jarsigner/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/uso-di-keytool-e-jarsigner/",
 		  "date"       : "2011-04-25 00:45:33 +0200",
 		  "shortdate"  : "April 25, 2011"
 		} ,
 	
 		{
 		  "title"      : "Errori comuni nella configurazione di Adobe PDF iFilter per SharePoint 2007",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/errori-comuni-nella-configurazione-di-adobe-pdf-ifilter-per-sharepoint-2007/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/errori-comuni-nella-configurazione-di-adobe-pdf-ifilter-per-sharepoint-2007/",
 		  "date"       : "2011-04-05 00:45:33 +0200",
 		  "shortdate"  : "April 05, 2011"
 		} ,
 	
 		{
 		  "title"      : "Well Formatted riferito ad un documento XML",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/well-formatted-riferito-ad-un-documento-xml/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/well-formatted-riferito-ad-un-documento-xml/",
 		  "date"       : "2011-03-07 23:45:33 +0100",
 		  "shortdate"  : "March 07, 2011"
 		} ,
 	
 		{
 		  "title"      : "Quel maledetto Content is not allowed in prolog",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/quel-maledetto-content-is-not-allowed-in-prolog/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/quel-maledetto-content-is-not-allowed-in-prolog/",
 		  "date"       : "2011-02-27 23:45:33 +0100",
 		  "shortdate"  : "February 27, 2011"
 		} ,
 	
 		{
 		  "title"      : "Cose'è JAX-WS",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/cose-e-jax-ws/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/cose-e-jax-ws/",
 		  "date"       : "2011-02-27 23:45:33 +0100",
 		  "shortdate"  : "February 27, 2011"
 		} ,
 	
 		{
 		  "title"      : "Installiamo mysql senza synaptic o apt",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/installiamo-mysql-senza-synaptic-o-apt/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/installiamo-mysql-senza-synaptic-o-apt/",
 		  "date"       : "2011-02-03 23:45:33 +0100",
 		  "shortdate"  : "February 03, 2011"
 		} ,
 	
 		{
 		  "title"      : "Estrarre dati dal codice fiscale con Excel",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/estrarre-dati-dal-codice-fiscale-con-excel/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/estrarre-dati-dal-codice-fiscale-con-excel/",
 		  "date"       : "2011-02-03 23:45:33 +0100",
 		  "shortdate"  : "February 03, 2011"
 		} ,
 	
 		{
 		  "title"      : "Come velocizzare le operazioni di restore da dump sql di mysql",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/come-velocizzare-le-operazioni-di-restore-da-dump-sql-di-mysql/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/come-velocizzare-le-operazioni-di-restore-da-dump-sql-di-mysql/",
 		  "date"       : "2011-01-01 23:45:33 +0100",
 		  "shortdate"  : "January 01, 2011"
 		} ,
 	
 		{
 		  "title"      : "Problema in fase di restore di un database mysql",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/problema-in-fase-di-restore-di-un-database-mysql/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/problema-in-fase-di-restore-di-un-database-mysql/",
 		  "date"       : "2010-01-01 23:45:33 +0100",
 		  "shortdate"  : "January 01, 2010"
 		} ,
 	
 		{
 		  "title"      : "Importazione utenti,corsi,utenti e corsi con I/O Task in Docebo",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/importazione-utenti-corsi-utenti-e-corsi-con-iotask-in-docebo/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/importazione-utenti-corsi-utenti-e-corsi-con-iotask-in-docebo/",
 		  "date"       : "2009-01-01 23:45:33 +0100",
 		  "shortdate"  : "January 01, 2009"
 		} ,
 	
 		{
 		  "title"      : "Come ripristinare l'utente amministratore di Docebo",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/come-ripristinare-l-utente-%20amministratore-di-%20docebo/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/come-ripristinare-l-utente-%20amministratore-di-%20docebo/",
 		  "date"       : "2009-01-01 23:45:33 +0100",
 		  "shortdate"  : "January 01, 2009"
 		} ,
 	
 		{
 		  "title"      : "Workshop Tecnologie e Professionalità per la SOA",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/workshop-tecnologie-e-professionalita-per-soa/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/workshop-tecnologie-e-professionalita-per-soa/",
 		  "date"       : "2008-10-02 00:45:33 +0200",
 		  "shortdate"  : "October 02, 2008"
 		} ,
 	
 		{
 		  "title"      : "Gli oggetti in Java",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/gli-oggetti-in-java/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/gli-oggetti-in-java/",
 		  "date"       : "2008-01-05 23:45:33 +0100",
 		  "shortdate"  : "January 05, 2008"
 		} ,
 	
 		{
 		  "title"      : "La parola riservata this in Java",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/la-parola-riservata-this-in-java/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/la-parola-riservata-this-in-java/",
 		  "date"       : "2007-01-05 23:45:33 +0100",
 		  "shortdate"  : "January 05, 2007"
 		} ,
 	
 		{
 		  "title"      : "Linux: il comando du",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/linux-il-comando-du/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/linux-il-comando-du/",
 		  "date"       : "2007-01-01 23:45:33 +0100",
 		  "shortdate"  : "January 01, 2007"
 		} ,
 	
 		{
 		  "title"      : "Il passaggio di parametri in Java",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/il-passaggio-di-parametri-in-java/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/il-passaggio-di-parametri-in-java/",
 		  "date"       : "2006-01-05 23:45:33 +0100",
 		  "shortdate"  : "January 05, 2006"
 		} ,
 	
 		{
 		  "title"      : "Approfondiamo i metodi in Java",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/approfondiamo-i-metodi-in-java/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/approfondiamo-i-metodi-in-java/",
 		  "date"       : "2005-01-02 23:45:33 +0100",
 		  "shortdate"  : "January 02, 2005"
 		} ,
 	
 		{
 		  "title"      : "Classi e metodi in Java",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/classi-e-metodi-in-java/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/classi-e-metodi-in-java/",
 		  "date"       : "2004-01-02 23:45:33 +0100",
 		  "shortdate"  : "January 02, 2004"
 		} ,
 	
 		{
 		  "title"      : "Introduzione alla OOP in Java",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/introduzione-alla-oop-in-java/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/introduzione-alla-oop-in-java/",
 		  "date"       : "2003-03-02 23:45:33 +0100",
 		  "shortdate"  : "March 02, 2003"
 		} ,
 	
 		{
 		  "title"      : "Le variabili array in Java",
-		  "category"   : "",
-		  "url"        : "http://massimocaliman.eu/le-variabili-array-in-java/",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/le-variabili-array-in-java/",
 		  "date"       : "2003-03-01 23:45:33 +0100",
 		  "shortdate"  : "March 01, 2003"
 		} ,

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Problema in fase di restore di un database mysql"
+category: articles
 date:   2010-01-01 22:45:33
 tags: [MySQL]
 comments: false

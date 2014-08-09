@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Introduzione alla OOP in Java"
+category: articles
 date:   2003-03-02 22:45:33
 tags: [Java]
 comments: false

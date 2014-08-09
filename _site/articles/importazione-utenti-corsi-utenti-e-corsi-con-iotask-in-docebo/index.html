@@ -1,0 +1,319 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Importazione utenti,corsi,utenti e corsi con I/O Task in Docebo &#8211; Computer Programming</title>
+<meta name="description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
+<meta name="keywords" content="Docebo">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://massimocaliman.eu/images/bio-photo.jpg">
+<meta name="twitter:title" content="Importazione utenti,corsi,utenti e corsi con I/O Task in Docebo">
+<meta name="twitter:description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
+<meta name="twitter:creator" content="@mcaliman">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Importazione utenti,corsi,utenti e corsi con I/O Task in Docebo">
+<meta property="og:description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
+<meta property="og:url" content="http://massimocaliman.eu/articles/importazione-utenti-corsi-utenti-e-corsi-con-iotask-in-docebo/">
+<meta property="og:site_name" content="Computer Programming">
+
+
+
+
+
+<link rel="canonical" href="http://massimocaliman.eu/articles/importazione-utenti-corsi-utenti-e-corsi-con-iotask-in-docebo/">
+<link href="http://massimocaliman.eu/feed.xml" type="application/atom+xml" rel="alternate" title="Computer Programming Feed">
+<link rel="author" href="https://plus.google.com/+MassimoCaliman?rel=author">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://massimocaliman.eu/assets/css/main.min.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="http://massimocaliman.eu/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://massimocaliman.eu/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://massimocaliman.eu/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://massimocaliman.eu/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://massimocaliman.eu/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://massimocaliman.eu/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://massimocaliman.eu/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+	        
+			<li>
+				
+					<a href="http://massimocaliman.eu/">Home</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://massimocaliman.eu/about/">About</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://massimocaliman.eu/articles/">Articoli</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://massimocaliman.eu/tags/">Tags</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://massimocaliman.eu/legal/">Legal</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://www.caliman.biz">website</a>
+				 
+			</li>
+	        
+	        <li><a href="http://massimocaliman.eu/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+	        <li class="dosearch"><i class="icon-search"></i> Search</li>
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<div class="search-wrapper">
+	<div class="search-form">
+		<input type="text" class="search-field" placeholder="Search...">
+		<i class="icon-remove-sign icon-2x"></i>
+		<ul class="search-results post-list"></ul><!-- /.search-results -->
+	</div><!-- /.search-form -->
+</div><!-- ./search-wrapper -->
+
+<header class="masthead">
+	<div class="wrap">
+        
+    		<a href="http://massimocaliman.eu/" class="site-logo" rel="home" title="Computer Programming"><img src="http://massimocaliman.eu/images/bio-photo.jpg" width="200" height="200" alt="Computer Programming logo" class="animated fadeInUp"></a>
+        
+        <h1 class="site-title animated fadeIn"><a href="http://massimocaliman.eu/">Computer Programming</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">Massimo Caliman's blog on Computer Science and Information Technology.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <span class="entry-tags"><a href="http://massimocaliman.eu/tags/#Docebo" title="Pages tagged Docebo">Docebo</a></span>
+        
+          <h1 class="entry-title">Importazione utenti,corsi,utenti e corsi con I/O Task in Docebo</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        <img src="http://massimocaliman.eu/images/bio-photo.jpg" alt="Massimo Caliman photo" class="author-photo">
+        <span class="author vcard">By <span class="fn"><a href="http://massimocaliman.eu/about/" title="About Massimo Caliman">Massimo Caliman</a></span></span>
+        <span class="entry-date date published"><time datetime="2009-01-01T23:45:33+01:00"><i class="icon-calendar-empty"></i> January 01, 2009</time></span>
+        
+        
+        <span><a href="http://massimocaliman.eu/articles/importazione-utenti-corsi-utenti-e-corsi-con-iotask-in-docebo/" rel="bookmark" title="Importazione utenti,corsi,utenti e corsi con I/O Task in Docebo"><i class="icon-link"></i> Permalink</a></span>
+        
+        <span class="social-share-facebook">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://massimocaliman.eu/articles/importazione-utenti-corsi-utenti-e-corsi-con-iotask-in-docebo/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
+        <span class="social-share-twitter">
+            <a href="https://twitter.com/intent/tweet?hashtags=articles&text=Importazione utenti,corsi,utenti e corsi con I/O Task in Docebo&url=http://massimocaliman.eu/articles/importazione-utenti-corsi-utenti-e-corsi-con-iotask-in-docebo/&via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
+        <span class="social-share-googleplus">
+            <a href="https://plus.google.com/share?url=http://massimocaliman.eu/articles/importazione-utenti-corsi-utenti-e-corsi-con-iotask-in-docebo/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
+            <!-- /.social-share -->
+      </footer>
+      <div class="entry-content">
+        <p>Chi ha necessità di importare utenti,corsi,associazioni tra utenti-corsi in maniera automatica e schedulata avrà necessariamente avuto a che fare con gli I/O Task.
+La schedulazione è subordinata alle impostazioni temporali nel pannello di amministrazione I/O Task e al lancio di una url particolare da cron. 
+Per la versione in esame (3.6.0.3) non è possibile lanciare nuovamente un task (giornaliero) qualora non fosse andato a buon fine,o semplicemente, se fosse necessario iterarlo nuovamente. Il task viene marcato come eseguito. 
+Una delle possibilità per poterlo rieseguire è modificare il campo <strong>last_execution</strong> della tabella <strong>core_taskportando</strong> la data a quella del giorno precedente.
+Il comportamento è evidente analizzando i sorgenti</p>
+
+<ul>
+  <li>docebo/doceboCore/class.module/class.iotask.php</li>
+  <li>docebo/doceboCore/lib/lib.iotask.php</li>
+</ul>
+
+<p>e le tabelle <strong>core_task</strong>,<strong>core_connection</strong>,<strong>core_connector</strong>.</p>
+
+<p>per una migliore comprensione sotto sono riportate le definizioni delle tabelle interessate</p>
+
+<h1 id="tabella-coretask">tabella core_task</h1>
+
+<div class="highlight"><pre><code class="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">core_task</span> <span class="p">(</span>
+<span class="n">name</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="n">description</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="n">conn_source</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="n">conn_destination</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="n">schedule_type</span> <span class="n">enum</span><span class="p">(</span><span class="s1">&#39;at&#39;</span><span class="p">,</span><span class="s1">&#39;any&#39;</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;at&#39;</span><span class="p">,</span>
+<span class="n">schedule</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="n">import_type</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="k">map</span> <span class="nb">text</span> <span class="k">not</span> <span class="k">null</span><span class="p">,</span>
+<span class="n">last_execution</span> <span class="n">datetime</span> <span class="k">default</span> <span class="k">null</span><span class="p">,</span>
+<span class="n">sequence</span> <span class="nb">int</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span><span class="p">,</span>
+<span class="k">primary</span> <span class="k">key</span>  <span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">MyISAM</span> <span class="k">default</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8</span></code></pre></div>
+
+<h1 id="tabella-coreconnection">tabella core_connection</h1>
+
+<div class="highlight"><pre><code class="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">core_connection</span> <span class="p">(</span>
+<span class="n">name</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="n">description</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">default</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="k">type</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="n">params</span> <span class="nb">text</span><span class="p">,</span>
+<span class="k">primary</span> <span class="k">key</span>  <span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">MyISAM</span> <span class="k">default</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8</span></code></pre></div>
+
+<h1 id="tabella-coreconnector">tabella core_connector</h1>
+
+<div class="highlight"><pre><code class="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">core_connector</span> <span class="p">(</span>
+<span class="k">type</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="n">file</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="k">class</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="k">primary</span> <span class="k">key</span>  <span class="p">(</span><span class="k">type</span><span class="p">)</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">MyISAM</span> <span class="k">default</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8</span></code></pre></div>
+
+<p>In rete non ho trovato al momento patch o informazioni particolareggiate in merito.Sono interessato ad approfondire il comportamento specifico di docebo in questo contesto,quindi non esitate a contattarmi,la versione utilizzata di <strong>Docebo</strong> è la <strong>3.6.0.3</strong>.</p>
+
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://massimocaliman.eu/articles/come-ripristinare-l-utente-%20amministratore-di-%20docebo/" class="btn" title="Come ripristinare l'utente amministratore di Docebo">Previous article</a>
+      
+      
+        <a href="http://massimocaliman.eu/articles/problema-in-fase-di-restore-di-un-database-mysql/" class="btn" title="Problema in fase di restore di un database mysql">Next article</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    
+<div class="google-ads" style="margin:10px 0;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-footer -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-5121145090824526"
+     data-ad-slot="9926976484"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<span>&copy; 2014 Massimo Caliman. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="http://twitter.com/mcaliman" title="Massimo Caliman on Twitter" target="_blank"><i class="icon-twitter icon-2x"></i></a>
+	
+	<a href="https://plus.google.com/+MassimoCaliman" title="Massimo Caliman on Google+" target="_blank"><i class="icon-google-plus icon-2x"></i></a>
+	<a href="http://linkedin.com/in/mcaliman" title="Massimo Caliman on LinkedIn" target="_blank"><i class="icon-linkedin icon-2x"></i></a>
+	
+	
+	
+	<a href="http://github.com/mcaliman" title="Massimo Caliman on Github" target="_blank"><i class="icon-github icon-2x"></i></a>
+	
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://massimocaliman.eu/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://massimocaliman.eu/assets/js/scripts.min.js"></script>
+
+<!-- Jekyll Simple Search option -->
+<script>
+  $(document).ready(function() {
+      $('.search-field').simpleJekyllSearch({
+          jsonFile : 'http://massimocaliman.eu/search.json',
+          searchResults : '.search-results',
+          template : '<li><article><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></article></li>',
+          noResults: '<p>Nothing found.</p>'
+        });
+  });
+
+  (function( $, window, undefined ) {
+    
+     var bs = {
+          close: $(".icon-remove-sign"),
+          searchform: $(".search-form"),
+          canvas: $("body"),
+          dothis: $('.dosearch')
+      };
+    
+    bs.dothis.on('click', function() {
+      $('.search-wrapper').css({ display: "block" });
+      bs.searchform.toggleClass('active');
+      bs.searchform.find('input').focus();
+      bs.canvas.toggleClass('search-overlay');
+    });
+    
+      bs.close.on('click', function() {
+        $('.search-wrapper').removeAttr( 'style' );
+        bs.searchform.toggleClass('active');
+        bs.canvas.removeClass('search-overlay');
+    });
+  })( jQuery, window );
+</script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-53230757-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+	        
+
+</body>
+</html>

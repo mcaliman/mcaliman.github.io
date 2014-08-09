@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Il cms è morto viva jekyll!"
+category: articles
 date:   2014-06-22 22:45:33
 tags: [Jekyll, CMS, Blog]
 comments: false
