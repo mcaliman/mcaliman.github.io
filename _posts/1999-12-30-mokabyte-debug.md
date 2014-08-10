@@ -15,7 +15,7 @@ Questo articolo vuole mostrare come sia possibile creare un sistema di package c
 di programmi scritti in Java.
 
 Oltre ad una esprerienza concreta (e' disponibile il nostro package completo di tutti i sorgenti nonche'
-i relativi file di documentazione in html generati con javadoc ) vuole essere un punto di partenza per
+i relativi file di documentazione in html generati con `javadoc` ) vuole essere un punto di partenza per
 realizzare qualcosa di personalizzato,tagliato su misura.
 
 #Premessa
@@ -29,13 +29,13 @@ situazione analoga anche in Java rispettando pero' i seguenti vincoli:
 * Poter disabilitare/abilitare il debugger senza effettuare onerose ricerche all'interno del nostro codice per commentare tutte le chiamate di debug.
 
 #Il problema
-A Java non manca niente per poter creare (come del resto avevamo fatto nel C++) delle classi Assert che
+A Java non manca niente per poter creare (come del resto avevamo fatto nel C++) delle classi `Assert` che
 possano ricoprire in modo abbastanza completo tale ruolo, fino a che pero' non si presenta il problema di
 eliminarle dal codice perche' magari e' stato ritenuto maturo e pronto per essere rilasciato come release
 finale (su questo argomento ci sarebbe da aprire un acceso dibattito, ma lasciamo stare). In questi casi o si
 abbandona lo standard e ci si appoggia a qualche precompilatore che svolga lo stesso ruolo come nel C (metodo
 da noi subito scartato, in quanto non rispettava le linee di progetto che ci eravamo imposti), oppure ci si
-arma di sana pazienza e si esegue una ricerca di tutte le chiamate alla classe Assert rimovendole o meglio
+arma di sana pazienza e si esegue una ricerca di tutte le chiamate alla classe `Assert` rimovendole o meglio
 commentandole. Se poi mettiamo il caso che sia necessario rimettere mano al nostro codice per effettuare delle
 modifiche (cosa del tutto normale e frequente), ecco che dobbiamo nuovamente andare a inserire le asserzioni
 eliminate precedentemente (se ci va bene dobbiamo solo de-commentarle). Tutto questo costa fatica, ma
@@ -69,21 +69,21 @@ public class Debug {
 }
 {% endhighlight %}
 
-Come si puo' vedere dal listato 1 nel package debugger e' definita una classe Debug analoga a quella del
-package nodebugger ma l'implementazione e' diversa, anzi nel package nodebugger il membro print(String msg) e'
-addirittura vuoto. Questo ci permette di utilizzare la classe debugger.Debug nel nostro codice sorgente
+Come si puo' vedere dal listato 1 nel package `debugger` e' definita una classe `Debug` analoga a quella del
+package `nodebugger` ma l'implementazione e' diversa, anzi nel package `nodebugger` il membro `print(String msg)` e'
+addirittura vuoto. Questo ci permette di utilizzare la classe `debugger.Debug` nel nostro codice sorgente
 richiamandone il metodo print qualora ci serva per stampare messaggi di debug, successivamente per disabilitare
-tale opzione bastera' modificare l'import della classe con quella nodebugger.Debug e tutte le chiamate alla
+tale opzione bastera' modificare l'import della classe con quella `nodebugger.Debug` e tutte le chiamate alla
 nostra print non verranno piu' risolte (o meglio un certo overhead probabilmente continuera' ad esserci in
 quanto la chiamata verra' comunque eseguita, ma sara' sicuramente molto inferiore rispetto al tempo di
-esecuzione della stampa sullo standard output che faceva la precedente funzione print. In pratica rimane solo
+esecuzione della stampa sullo standard output che faceva la precedente funzione `print`. In pratica rimane solo
 la chiamata nello stack, che forse un compilatore di bytecode intelligente potrebbe eliminare. In ogni caso
 questo overhead e' nella maggior parte dei casi sicuramente trascurabile). Logico che poi le varie funzioni di
 debug non si fermano solo alla semplice stampa di un messaggio sullo standard output/error ma ve ne saranno
 altre per molteplici scopi, dalle semplici funzioni di output di valori fino ad arrivare a funzioni piu'
 complesse per la gestione di timer, asserzioni, stack-trace, ecc. La regola e' che per una funzione
-implementata nella classe debugger.Debug ci sia una definizione (ma non l'implementazione) anche nella classe
-nodebugger.Debug in modo da poter interscambiare tali classi. Ci sono pero' alcune eccezioni, infatti davanti a
+implementata nella classe `debugger.Debug` ci sia una definizione (ma non l'implementazione) anche nella classe
+`nodebugger.Debug` in modo da poter interscambiare tali classi. Ci sono pero' alcune eccezioni, infatti davanti a
 un membro statico del tipo:
 
 {% highlight java %}
@@ -99,7 +99,6 @@ public class Debug {
 
 che viene utilizzato nel nostro codice sorgente in questo modo:
 
-
 {% highlight java %}
 //LISTATO 4: 
 package myprogram; 
@@ -112,18 +111,18 @@ public class MyClass {
 }
 {% endhighlight %}
 
-viene spontaneo chiedersi cosa succederebbe se si scambiasse la classe del package debugger con quella del
-nodebugger che magari non implementa tale funzione, ma restituisce un valore di default pari a zero o ancora
-peggio restituisce un puntatore null nel caso il valore di ritorno sia un oggetto. Sicuramente la soluzione
+viene spontaneo chiedersi cosa succederebbe se si scambiasse la classe del package `debugger` con quella del
+`nodebugger` che magari non implementa tale funzione, ma restituisce un valore di default pari a zero o ancora
+peggio restituisce un puntatore `null` nel caso il valore di ritorno sia un oggetto. Sicuramente la soluzione
 presentata in questo caso non e' ottimale, per cui e' necessario imporsi delle limitazioni progettuali: Non
-produrre mai delle situazioni di side-effect all'interno delle funzioni membro della classe Debug, in quanto
+produrre mai delle situazioni di side-effect all'interno delle funzioni membro della classe `Debug`, in quanto
 queste potrebbero creare brutte sorprese quando viene a mancare l'implementazione che le produce durante lo
-scambio dei due package. Cercare il piu' possibile di creare funzioni membro statiche di Debug che
-restituiscano void (cioe' niente), per ovviare al caso dell'esempio nel listato 4. Quando non si puo'
+scambio dei due package. Cercare il piu' possibile di creare funzioni membro statiche di `Debug` che
+restituiscano `void` (cioe' niente), per ovviare al caso dell'esempio nel listato 4. Quando non si puo'
 rispettare la seconda raccomandazione riportare, oltre che alla definizione, anche la stessa implementazione
-del metodo della classe del package debugger nel package nodebugger (anche se purtroppo in questo caso non si
+del metodo della classe del package `debugger` nel package `nodebugger` (anche se purtroppo in questo caso non si
 ha alcun beneficio dal lato delle prestazioni): in questo modo si e' sicuri che anche scambiando i package la
-nostra funzione getFreeMemory del precedente esempio si comporti sempre nello stesso modo. Seguendo queste
+nostra funzione `getFreeMemory` del precedente esempio si comporti sempre nello stesso modo. Seguendo queste
 raccomandazioni si dovrebbe riuscire a ovviare ai problemi derivanti dal side-effect (che comunque rimane
 sempre una tecnica per la quale e' sempre meglio valutare soluzioni alternative).
 
@@ -131,7 +130,7 @@ sempre una tecnica per la quale e' sempre meglio valutare soluzioni alternative)
 #Affiniamo la tecnica
 Per perfezionare ancora meglio quanto detto sopra, ma soprattutto per capitalizzare meglio il codice che
 andremo a scrivere si potrebbero definire altre due raccomandazioni: Prima di utilizzare le classi di debug,
-definire un'ulteriore classe di supporto che semplicemente eredita dalla classe Debug originale:
+definire un'ulteriore classe di supporto che semplicemente eredita dalla classe `Debug` originale:
 
 {% highlight java %}
 //LISTATO 5: 
@@ -141,7 +140,7 @@ public class MyDebug extends debugger.debug.Debug {
 }
 {% endhighlight %}
 
-Analogamente fare la stessa cosa per la classe Debug del package nodebug:
+Analogamente fare la stessa cosa per la classe `Debug` del package `nodebug`:
 
 {% highlight java %}
 //LISTATO 6: 
@@ -152,10 +151,10 @@ public class MyDebug extends debugger.nodebug.Debug {
 {% endhighlight %}
 
 Questo ci permettera' di disabilitare tutti i debug della nostra applicazione semplicemente cambiando la
-classe genitore della myprogram.debug.MyDebug con la classe debugger.nodebug.Debug.Stessa cosa vale per la
-classe myprogram.nodebug.MyDebug che potra' invece attivare tutti i debug attualmente disattivati.
+classe genitore della `myprogram.debug.MyDebug` con la classe `debugger.nodebug.Debug`.Stessa cosa vale per la
+classe `myprogram.nodebug.MyDebug` che potra' invece attivare tutti i debug attualmente disattivati.
 
-Utilizzare, poi, all'interno delle proprie classi sempre una estensione delle MyDebug in modo tale da avere
+Utilizzare, poi, all'interno delle proprie classi sempre una estensione delle `MyDebug` in modo tale da avere
 piu' livelli di debug indipendenti (o quasi) l'uno dall'altro. In questo modo si potranno attivare dei livelli
 piuttosto che altri ed avere un output di debug piu' chiaro da capire. Per esempio:
 
@@ -181,13 +180,13 @@ MyClass() {}
 
 #Finalmente il package debugger
 Mantenendo le linee di progetto fin qui definite si puo' passare all'implementazione dei vari package che
-formeranno il Debugger. Teniamo a precisare che quella qui riportata e' una soluzione di base nata sul campo ed
+formeranno il debugger. Teniamo a precisare che quella qui riportata e' una soluzione di base nata sul campo ed
 e' attualmente utilizzata in diversi programmi Java da noi sviluppati, ma nonostante tutto puo' comunque essere
-ampliata e personalizzata secondo le varie esigenze. Il package principale debugger e' suddiviso in ulteriori
-quattro package: assertion, debug, noassertion, nodebug. Il motivo della scelta di separare le asserzioni dal
+ampliata e personalizzata secondo le varie esigenze. Il package principale `debugger` e' suddiviso in ulteriori
+quattro package: `assertion`, `debug`, `noassertion`, `nodebug`. Il motivo della scelta di separare le asserzioni dal
 normale debug e' dovuto soprattutto al peso che noi diamo all'interno del nostro codice a queste. Infatti molto
 spesso ci capita di voler disabilitare ogni stampa/informazione di debug ma lasciare comunque attive le
-chiamate alla classe Assert, magari anche nel codice finale che viene rilasciato. Questa scelta ci facilita le
+chiamate alla classe `Assert`, magari anche nel codice finale che viene rilasciato. Questa scelta ci facilita le
 cose in quanto la gestione dei quattro package (simmetrici due a due) e' completamente indipendente l'uno
 dall'altro. Passiamo ad analizzare le singole classi, premettendo pero' che per approfondire ulteriormente si
 puo' sempre far riferimento alla relativa documentazione html dell'intero package (nonche' ai sorgenti java).
