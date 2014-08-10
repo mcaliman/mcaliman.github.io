@@ -9,7 +9,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://massimocaliman.eu/feed.xml" />
 <link rel="alternate" type="text/html" href="http://massimocaliman.eu/" />
-<updated>2014-08-10T18:29:50+02:00</updated>
+<updated>2014-08-10T20:20:05+02:00</updated>
 <id>http://massimocaliman.eu/</id>
 <author>
   <name>Massimo Caliman</name>
@@ -1192,10 +1192,10 @@ Per ottenere una connessione usando un DataSource portete utilizzare il seguente
     &lt;p&gt;I computer sono incredibilmente veloci, accurati e stupidi. Gli uomini sono incredibilmente lenti, inaccurati e intelligenti. L’insieme dei due costituisce una forza incalcolabile.
 &lt;em&gt;(Albert Einstein (attribuito))&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;BPEL&lt;/strong&gt; &lt;em&gt;(Business Process Execution Language)&lt;/em&gt; è un linguaggio basato su &lt;code&gt;XML&lt;/code&gt; costruito per descrivere formalmente i processi commerciali ed industriali in modo da permettere una suddivisione dei compiti tra attori diversi, in pratica permette di definire processi di workflow tramite XML.
+&lt;p&gt;&lt;strong&gt;BPEL&lt;/strong&gt; &lt;em&gt;(Business Process Execution Language)&lt;/em&gt; è un linguaggio basato su &lt;code&gt;XML&lt;/code&gt; costruito per descrivere formalmente i processi commerciali ed industriali in modo da permettere una suddivisione dei compiti tra attori diversi, in pratica permette di definire processi di workflow tramite &lt;code&gt;XML&lt;/code&gt;.
 Normalmente un’applicazione &lt;code&gt;BPEL&lt;/code&gt; viene invocata come servizio web ed interagisce con il mondo esterno esclusivamente invocando altri servizi web. 
 Rappresenta una forma di coordinazione di servizi Web, permettendo di comporli in maniera ricorsiva. 
-L’ambiente runtime all’interno del quale viene eseguito il processo è detto motore BPEL.&lt;/p&gt;
+L’ambiente runtime all’interno del quale viene eseguito il processo è detto motore &lt;code&gt;BPEL&lt;/code&gt;.&lt;/p&gt;
 
 
   
@@ -1214,7 +1214,7 @@ L’ambiente runtime all’interno del quale viene eseguito il processo è detto
     <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu/tags/#js" term="js" />
+  <category scheme="http://massimocaliman.eu/tags/#javascript" term="javascript" />
   <content type="html">
   
     &lt;p&gt;Se vi capita di dover lavorare in javascript, anche solo per copiare e incollare semplici script nel vostro sito fatevi un regalo,
