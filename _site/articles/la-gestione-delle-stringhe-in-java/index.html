@@ -161,9 +161,9 @@
       <div class="entry-content">
         <p>L’ingegnere quantistico Seth Lloyd è convinto che l’universo sia un gigantesco computer. Speriamo non faccia girare Windows. <em>(Kevin Kelly)</em></p>
 
-<p>Le stringhe sono il primo oggetto che normalmente si impara a gestire con un linguaggio di programmazione, in Java per l’oggetto principe in questo caso è String o più propriamente del pachage java.lang, a seguire le forme più evolute come StringBuffer e StringBuilder.</p>
+<p>Le stringhe sono il primo oggetto che normalmente si impara a gestire con un linguaggio di programmazione, in Java per l’oggetto principe in questo caso è String o più propriamente del pachage <code>java.lang</code>, a seguire le forme più evolute come <code>StringBuffer</code> e <code>StringBuilder</code>.</p>
 
-<p>Un oggetto di tipo String è immutabile (immutable), cosa significa esattamente?
+<p>Un oggetto di tipo <code>String</code> è immutabile (immutable), cosa significa esattamente?
 Immutabile nel senso di memoria. Esso crea nuovi oggetti ogni volta che si creano stringhe o si assegna una nuova stringa / modificare il valore. Ecco perché si consiglia di fare attenzione quando si usano le stringhe.</p>
 
 <p>Prendiamo ad esempio il seguente frammento di codice</p>
@@ -173,19 +173,19 @@ Immutabile nel senso di memoria. Esso crea nuovi oggetti ogni volta che si crean
 <span class="n">a</span> <span class="o">=</span> <span class="s">&quot;hi guys!&quot;</span><span class="o">;</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span><span class="o">);</span></code></pre></div>
 
-<p>con l’assegnazione a = “hi guys!” ho creato un nuovo oggetto di tipo String, non ho modificato lo stesso creato con new String(“hello boys”): anche se non ho utilizzato il costruttore con parametro.</p>
+<p>con l’assegnazione <code>a = “hi guys!”</code> ho creato un nuovo oggetto di tipo <code>String</code>, non ho modificato lo stesso creato con <code>new String(“hello boys”);</code> anche se non ho utilizzato il costruttore con parametro.</p>
 
 <p>In Java le stringhe sono quindi costanti, locazioni di memoria che contengono caratteri (come nel linguaggio C), immutabile è sinonimo di immodificabile.</p>
 
 <p>Le stringhe sono oggetti di uso comune quindi i progettisti iniziali hanno pensato bene di realizzare alcune scorciatoie per il loro utilizzo quotidiano che non obbligasse ad utilizzare l’approccio puro ad oggetti attraverso metodi da richiamare sulle istanze.</p>
 
-<p>Torniamo alla nostra stringa semplicemente denominata “a”, l’espressione </p>
+<p>Torniamo alla nostra stringa semplicemente denominata <code>a</code>, l’espressione </p>
 
 <div class="highlight"><pre><code class="java"><span class="n">a</span> <span class="o">=</span> <span class="s">&quot;hi&quot;</span> <span class="o">+</span> <span class="s">&quot; guys!&quot;</span><span class="o">;</span></code></pre></div>
 
-<p>effettua la concatenazione delle stringhe “hi” e “ guys!” tramite l’operatore “+”, operatore che normalmente utilizziamo per la somma di due numeri, siamo di fronte all’overloading di un operatore, come in C++.</p>
+<p>effettua la concatenazione delle stringhe <code>hi</code> e <code>guys!</code> tramite l’operatore <code>+</code>, operatore che normalmente utilizziamo per la somma di due numeri, siamo di fronte all’overloading di un operatore, come in C++.</p>
 
-<p>L’overloading dell operatore “+” ci permette di evitare la forma pura ad oggetti</p>
+<p>L’overloading dell operatore <code>+</code> ci permette di evitare la forma pura ad oggetti</p>
 
 <div class="highlight"><pre><code class="java"><span class="n">a</span> <span class="o">=</span> <span class="s">&quot;hi&quot;</span><span class="o">.</span><span class="na">concat</span><span class="o">(</span><span class="s">&quot; guys!&quot;</span><span class="o">);</span></code></pre></div>
 
@@ -198,10 +198,10 @@ Le due forme </p>
 
 <div class="highlight"><pre><code class="java"><span class="n">String</span> <span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">&quot;bye&quot;</span><span class="o">);</span></code></pre></div>
 
-<p>sono equivalenti, l’assegnazione diretta surroga la chiamata esplicita del costruttore String(String) che costruisce un nuovo oggetto di tipo String a partire da una stringa esistente passata come parametro.</p>
+<p>sono equivalenti, l’assegnazione diretta surroga la chiamata esplicita del costruttore <code>String(String)</code> che costruisce un nuovo oggetto di tipo <code>String</code> a partire da una stringa esistente passata come parametro.</p>
 
-<p>Gli oggetti di tipo String non sono array di caratteri quindi non possiamo applicarvi gli operatori classici degli array come ad esempio [ ] quindi non possiamo fare cose del tipo string[index] dove string è un oggetto instanziato dalla classe String e index è un intero maggiore o uguale a 0 che che indica la posizione del carattere a cui vogliamo accedere. 
-Per essere ancora più chiari, dato l’ oggetto c di tipo String del frammento di codice riportato sopra non possiamo scrivere c[0] per accedere al primo elemento che ha valore b, Il compilatore ci segnalerà un errore</p>
+<p>Gli oggetti di tipo <code>String</code> non sono array di caratteri quindi non possiamo applicarvi gli operatori classici degli array come ad esempio <code>[]</code> quindi non possiamo fare cose del tipo <code>string[index]</code> dove string è un oggetto instanziato dalla classe <code>String</code> e index è un intero maggiore o uguale a 0 che che indica la posizione del carattere a cui vogliamo accedere. 
+Per essere ancora più chiari, dato l’ oggetto c di tipo <code>String</code> del frammento di codice riportato sopra non possiamo scrivere c[0] per accedere al primo elemento che ha valore b, Il compilatore ci segnalerà un errore</p>
 
 <div class="highlight"><pre><code class="java"><span class="n">Exception</span> <span class="n">in</span> <span class="n">thread</span> <span class="s">&quot;main&quot;</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">RuntimeException</span><span class="o">:</span> <span class="n">Uncompilable</span> <span class="n">source</span> <span class="n">code</span> <span class="o">-</span> <span class="n">array</span> <span class="n">required</span><span class="o">,</span> <span class="n">but</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">String</span> <span class="n">found</span></code></pre></div>
 
@@ -209,25 +209,24 @@ Per essere ancora più chiari, dato l’ oggetto c di tipo String del frammento 
 
 <div class="highlight"><pre><code class="java"><span class="n">c</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="sc">&#39;c&#39;</span><span class="o">;</span></code></pre></div>
 
-<p>per sovrascrivere il valore del carattere ‘b’ con il carattere ‘c’.</p>
+<p>per sovrascrivere il valore del carattere <code>b</code> con il carattere <code>c</code>.</p>
 
-<p>Per accedere all’elemento di indice 0 dobbiamo necessariamente utilizzare il metodo charAt()</p>
+<p>Per accedere all’elemento di indice 0 dobbiamo necessariamente utilizzare il metodo <code>charAt()</code></p>
 
 <div class="highlight"><pre><code class="java"><span class="n">c</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span></code></pre></div>
 
-<p>che ritornerà il carattere ‘b’ a video, per esempio attraverso l’uso del metodo System.out.println() per stampare sulla console.</p>
+<p>che ritornerà il carattere <code>b</code> a video, per esempio attraverso l’uso del metodo <code>System.out.println()</code> per stampare sulla console.</p>
 
 <div class="highlight"><pre><code class="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span></code></pre></div>
 
-<p>La classe Stringh rende disponibile molti metodi tra cui quelli di uso più comune permettono restituire la lunghezza della stringa</p>
+<p>La classe <code>String</code> rende disponibile molti metodi tra cui quelli di uso più comune permettono restituire la lunghezza della stringa</p>
 
 <div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="n">lenofc</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">length</span><span class="o">();</span></code></pre></div>
 
-<p>nel nostro caso lenofc conterrà il valore intero 3 dato che “bye”.length() è 3 e quindi il predicato  “bye”.length()==3 ha valore true</p>
+<p>nel nostro caso lenofc conterrà il valore intero 3 dato che <code>“bye”.length()</code> è 3 e quindi il predicato  <code>“bye”.length()==3</code> ha valore <code>true</code></p>
 
-<p>Per controllare l’uguaglianza di due stringhe si può invece utilizzare il metodo equals() o equalsIgnoreCase() nel caso si desideri un controllo case insensitivi.</p>
-
-<p>Le espressioni sotto ritornano entrambe il valore true per le variabili booleane b1 e b2</p>
+<p>Per controllare l’uguaglianza di due stringhe si può invece utilizzare il metodo <code>equals()</code> o <code>equalsIgnoreCase()</code> nel caso si desideri un controllo case insensitivi.
+Le espressioni sotto ritornano entrambe il valore <code>true</code> per le variabili booleane b1 e b2</p>
 
 <div class="highlight"><pre><code class="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span>
 <span class="kt">boolean</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;bye&quot;</span><span class="o">);</span>
@@ -235,20 +234,22 @@ Per essere ancora più chiari, dato l’ oggetto c di tipo String del frammento 
 <span class="kt">boolean</span> <span class="n">b2</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="s">&quot;Bye&quot;</span><span class="o">);</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">b2</span><span class="o">);</span></code></pre></div>
 
-<p>Volendo maggiore flessibilità in un operazione di confronto di stringhe possiamo utilizzare il metodo compareTo()  nella forma</p>
+<p>Volendo maggiore flessibilità in un operazione di confronto di stringhe possiamo utilizzare il metodo <code>compareTo()</code>  nella forma</p>
 
 <div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="n">comp</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">b</span><span class="o">):</span></code></pre></div>
 
-<p>comp == 0 se a è uguale b 
-comp&lt;0 se a&lt;b, 
-comp&gt;0  se a&gt;b.</p>
+<ol>
+  <li>comp == 0 se a è uguale b </li>
+  <li>comp&lt;0 se a&lt;b, </li>
+  <li>comp&gt;0 se a&gt;b.</li>
+</ol>
 
 <p>Il valore intero restituito è l’indice del primo carattere diverso.
-nel caso di esempio il valore per comp è 6 essendo a=”hi guys!” e b=”bye”</p>
+nel caso di esempio il valore per comp è 6 essendo a uguale a ”hi guys!” e b uguale a ”bye”</p>
 
-<p>attenzione a.equals(b) è ovviamente diverso da a == b </p>
+<p>attenzione <code>a.equals(b)</code> è ovviamente diverso da <code>a == b</code> </p>
 
-<p>Altri metodi di comune utilizzo sono substring(), replace(), naturalmente anche questi metodi non modificano l’oggetto su cui sono chiamati ma ne creano e ritornano uno nuovo.</p>
+<p>Altri metodi di comune utilizzo sono <code>substring()</code>, <code>replace()</code>, naturalmente anche questi metodi non modificano l’oggetto su cui sono chiamati ma ne creano e ritornano uno nuovo.</p>
 
 <div class="highlight"><pre><code class="java"><span class="n">a</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="mi">18</span><span class="o">):</span><span class="c1">// restituisce la sottostringa che va da 10  a 17 (18-1) </span>
 <span class="n">a</span><span class="o">.</span><span class="na">replace</span><span class="o">(</span><span class="err">‘</span><span class="n">E</span><span class="err">’</span><span class="o">,</span><span class="err">’</span><span class="n">X</span><span class="err">’</span><span class="o">):</span><span class="c1">// restituisce una stringa con tutte le ‘E’  sostituite con ‘X’</span></code></pre></div>
@@ -275,7 +276,7 @@ verificando che la prima e l’ultima sono costituite esclusivamente da lettere 
 
 <p>Character è una classe che ci permette di effettuare semplici controlli ma non solo, vi rimando alla documentazione ufficiale per i dettagli.</p>
 
-<p>Per controlli e validazioni sulle stringhe i semplici i metodi fino ad ora esposti sono più che sufficienti, ma nel caso sia abbia necessità di scomodare le espressioni regolari si può ricorrere al metodo matches() che presa un espressione regolare regex ritorna true se la stringa su cui è richiamato la rispetta.</p>
+<p>Per controlli e validazioni sulle stringhe i semplici i metodi fino ad ora esposti sono più che sufficienti, ma nel caso sia abbia necessità di scomodare le espressioni regolari si può ricorrere al metodo <code>matches()</code> che presa un espressione regolare regex ritorna <code>true</code> se la stringa su cui è richiamato la rispetta.</p>
 
 <p>Per controllare la validità rispetto al formato di una targa europea possiamo utilizzare</p>
 
@@ -323,15 +324,15 @@ verificando che la prima e l’ultima sono costituite esclusivamente da lettere 
 
 <p>A questo punto abbiamo visto già molto materiale che ci permette di utilizzare con le stringhe per elaborazioni e controlli che si presentano all’ordine del giorno nella carriera di uno sviluppatore.</p>
 
-<p>L’uso di String però non si presta nei casi in cui la manipolazione della stessa è l’attività principale, a questo scopo sono presenti le classi StringBuffer e StringBuilder, ma più conosciuta e anziana in quanto a cittadinanza nel jdk è la StringBuffer è ed sincronizzata qualora non sia necessario gestire l’accesso condiviso della risorsa l’utilizzo di StringBuilder garantisce maggiore velocità e ci permettere di non creare una moltitudine di oggetti String spazzatura su cui il garbage collector dovrà impiegare stupidamente del tempo.</p>
+<p>L’uso di <code>String</code> però non si presta nei casi in cui la manipolazione della stessa è l’attività principale, a questo scopo sono presenti le classi <code>StringBuffer</code> e <code>StringBuilder</code>, ma più conosciuta e anziana in quanto a cittadinanza nel jdk è la <code>StringBuffer</code> è ed sincronizzata qualora non sia necessario gestire l’accesso condiviso della risorsa l’utilizzo di StringBuilder garantisce maggiore velocità e ci permettere di non creare una moltitudine di oggetti <code>String</code> spazzatura su cui il garbage collector dovrà impiegare stupidamente del tempo.</p>
 
-<p>Per la precisione tutti i metodi di StringBuffer sono syncronized ovvero sincronizzati il che la rende thread-safe e meno performante di una sua versione non thread-safe, utilizzate StringBuilder nei casi in cui non sia presente criticità legata alla gestione dei thread i metodi esposti sono praticamente gli stessi per entrambe le classi.</p>
+<p>Per la precisione tutti i metodi di <code>StringBuffer</code> sono syncronized ovvero sincronizzati il che la rende thread-safe e meno performante di una sua versione non thread-safe, utilizzate <code>StringBuilder</code> nei casi in cui non sia presente criticità legata alla gestione dei thread i metodi esposti sono praticamente gli stessi per entrambe le classi.</p>
 
-<p>I metodi di utilizzo più comuni per entrambe le classi sono rispettivamente append(),insert() e delete() nonchè charAt() oltre al metodo toString() che ci permette di ottenere una classica Stringa dai nostri oggetti di tipo StringBuffer e StringBuilder.</p>
+<p>I metodi di utilizzo più comuni per entrambe le classi sono rispettivamente <code>append()</code>,<code>insert()</code> e <code>delete()</code> nonchè <code>charAt()</code> oltre al metodo <code>toString()</code> che ci permette di ottenere una classica stringa dai nostri oggetti di tipo <code>StringBuffer</code> e <code>StringBuilder</code>.</p>
 
-<p>Un utilizzo comune degli oggetti di tipo StringBuilder e StringBuffer è la costruzione di stringhe dinamicamente in base a condizioni presenti nel nostro codice.</p>
+<p>Un utilizzo comune degli oggetti di tipo <code>StringBuilder</code> e <code>StringBuffer</code> è la costruzione di stringhe dinamicamente in base a condizioni presenti nel nostro codice.</p>
 
-<p>Sotto un esempio piuttosto di utilizzo elementare per i tre metodi </p>
+<p>Sotto un esempio piuttosto semplice di utilizzo elementare per i tre metodi </p>
 
 <div class="highlight"><pre><code class="java"><span class="n">StringBuilder</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="o">();</span>
 <span class="n">buffer</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;01234567900&quot;</span><span class="o">);</span>
@@ -339,7 +340,7 @@ verificando che la prima e l’ultima sono costituite esclusivamente da lettere 
 <span class="n">buffer</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">12</span><span class="o">);</span><span class="c1">//cancella le due ultime cifre</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">buffer</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span><span class="c1">//Stampa 0123456789</span></code></pre></div>
 
-<p>Lungi dall’essere una trattazione esaustiva dell’argomento e delle classi String,StringBuffer e StringBuilder quanto presentato copre la maggior parte dei casi d’uso, unica raccomandazione valida sempre e di esaminare la documentazione ufficiale sempre prima di reinventare la ruota. </p>
+<p>Lungi dall’essere una trattazione esaustiva dell’argomento e delle classi <code>String</code>,<code>StringBuffer</code> e <code>StringBuilder</code> quanto presentato copre la maggior parte dei casi d’uso, unica raccomandazione valida sempre e di esaminare la documentazione ufficiale sempre prima di reinventare la ruota. </p>
 
         
       </div><!-- /.entry-content -->

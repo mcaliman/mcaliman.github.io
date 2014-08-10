@@ -9,7 +9,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://massimocaliman.eu/feed.xml" />
 <link rel="alternate" type="text/html" href="http://massimocaliman.eu/" />
-<updated>2014-08-09T07:29:08+02:00</updated>
+<updated>2014-08-10T18:29:50+02:00</updated>
 <id>http://massimocaliman.eu/</id>
 <author>
   <name>Massimo Caliman</name>
@@ -32,13 +32,9 @@
   <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#Servlet" term="Servlet" />
   <content type="html">
   
-    &lt;p&gt;Vediamo in questo post come scrivere il codice di una Servlet java che ci permette di effettuare il trasferimento (il download) di un file dalla nostra applicazione server al client
-(il web browser dei nostri utenti).&lt;/p&gt;
-
-&lt;p&gt;Effettuando il click su un link che punta alla nostra servlet verrà avviato il download, vediamo il codice piuttosto intuitivo nelle linee sottostanti del post.&lt;/p&gt;
-
-&lt;p&gt;Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto (usando una qualche implementazione di InputStream nel nostro caso useremo FileInputStream); di
-determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di tipo HttpServletResponse della nostra servlet.&lt;/p&gt;
+    &lt;p&gt;Vediamo in questo post come scrivere il codice di una Servlet Java che ci permette di effettuare il trasferimento (il download) di un file dalla nostra applicazione server al client (il web browser dei nostri utenti).
+Effettuando il click su un link che punta alla nostra servlet verrà avviato il download, vediamo il codice piuttosto intuitivo nelle linee sottostanti del post.
+Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto (usando una qualche implementazione di &lt;code&gt;InputStream&lt;/code&gt; nel nostro caso useremo &lt;code&gt;FileInputStream&lt;/code&gt;); di determinare il tipo &lt;code&gt;MIME&lt;/code&gt; e riversare il tutto correnttamente sull’oggetto di tipo &lt;code&gt;HttpServletResponse&lt;/code&gt; della nostra Servlet.&lt;/p&gt;
 
 &lt;p&gt;Nel nostro esempio il nome del file comprensivo di path è passato come parametro, rendendo la Servlet generica, utilizzabile per effettuare il download di qualsiasi file&lt;/p&gt;
 
@@ -53,12 +49,11 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.servlet.http.HttpServletRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.servlet.http.HttpServletResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
-
 &lt;span class=&quot;nd&quot;&gt;@WebServlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;DownloadFileServlet&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlPatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/DownloadFileServlet&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DownloadFileServlet&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServlet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
-
-    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;processRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServletResponse&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServletException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;processRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServletResponse&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+      &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServletException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContentType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/html;charset=UTF-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filePath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getParameter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;file&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
@@ -69,18 +64,12 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
             &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mimeType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
                 &lt;span class=&quot;n&quot;&gt;mimeType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;application/octet-stream&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
             &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-
             &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContentType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mimeType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContentLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-
-
             &lt;span class=&quot;c1&quot;&gt;// forziamo il download del file&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headerKey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Content-Disposition&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headerValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;attachment; filename=\&amp;quot;%s\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setHeader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;headerKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headerValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-
             &lt;span class=&quot;n&quot;&gt;OutputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;outputStream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getOutputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
             &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4096&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
             &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bytesRead&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -94,13 +83,11 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-
     &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
     &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;doGet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServletResponse&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServletException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+       &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServletException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;processRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
 
     &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
     &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;doPost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServletResponse&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -108,14 +95,12 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
         &lt;span class=&quot;n&quot;&gt;processRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Non dobbiamo aggiungere nulla alla nostra webapplication tramite il descrittore di deployment web.xml dato che abbiamo utilizzato la modalità tramite annotazioni&lt;/p&gt;
+&lt;p&gt;Non dobbiamo aggiungere nulla alla nostra webapplication tramite il descrittore di deployment web.xml dato che abbiamo utilizzato la modalità tramite annotazioni. Per l’invocazione &lt;/p&gt;
 
-&lt;p&gt;Per l’invocazione &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;http://localhost:8080/MyWebApplication/DownloadFileServlet?file&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/path/file.ext&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;http://localhost:8080/MyWebApplication//DownloadFileServlet?file=/path/file.ext&lt;/p&gt;
 
   
   &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/una-servlet-per-gestire-il-download-di-file-in-java/&quot;&gt;﻿Una Servlet per gestire il download di file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 16, 2014.&lt;/p&gt;</content>
@@ -123,7 +108,7 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
 
 
 <entry>
-  <title type="html"><![CDATA[﻿Inviare mail con allegati in Java]]></title>
+  <title type="html"><![CDATA[Inviare mail con allegati in Java]]></title>
   <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/inviare-mail-con-allegati-in-java/"/>
   <id>http://massimocaliman.eu/articles/inviare-mail-con-allegati-in-java</id>
   <published>2014-07-15T00:45:33+02:00</published>
@@ -136,18 +121,14 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
   <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#JavaMail" term="JavaMail" />
   <content type="html">
   
-    &lt;p&gt;Il package javax.mail è molto ricco, quindi in prima istanza può anche disorientare, vedremo nel codice presentato in questo post quanto ripaghi in flessibilità e potenzialità questa complessità. E’ vero, non ho un metodo semplice mail() come in altri linguaggi,  ma ho gli strumenti per crearmi anche un server di posta di tutto rispetto (ma questo lo approfondieremo in un prossimo post, riguardo il semplice metodo mail() possiamo anche crearcelo a partire dalle API come vedremo e sarà fatto su misura per le nostre esigenze)&lt;/p&gt;
-
-&lt;p&gt;Per creare la nostra utility faremo riferimento al pattern commmand&lt;/p&gt;
-
-&lt;p&gt;Per prima cosa definiamo una classe astratta che conterrà la gestione mailcap sempre utile quando si vuole gestire notifiche via mail da piattaforma Java.&lt;/p&gt;
+    &lt;p&gt;Il package javax.mail è molto ricco, quindi in prima istanza può anche disorientare, vedremo nel codice presentato in questo post quanto ripaghi in flessibilità e potenzialità questa complessità. E’ vero, non ho un metodo semplice mail() come in altri linguaggi,  ma ho gli strumenti per crearmi anche un server di posta di tutto rispetto (ma questo lo approfondieremo in un prossimo post, riguardo il semplice metodo mail() possiamo anche crearcelo a partire dalle API come vedremo e sarà fatto su misura per le nostre esigenze)
+Per creare la nostra utility faremo riferimento al pattern commmand.
+Per prima cosa definiamo una classe astratta che conterrà la gestione mailcap sempre utile quando si vuole gestire notifiche via mail da piattaforma Java.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.activation.CommandMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.activation.MailcapCommandMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
-
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AbstractMailCommand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
 
    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mailcap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;MailcapCommandMap&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MailcapCommandMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CommandMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getDefaultCommandMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
@@ -170,8 +151,6 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Properties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.logging.Level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.logging.Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.activation.DataHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.activation.DataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.activation.FileDataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -189,8 +168,8 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
 
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MailCommand&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AbstractMailCommand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
-   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Logger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLogger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-
+   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Logger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+        &lt;span class=&quot;n&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLogger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;smtp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;myuser@domain.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -201,10 +180,8 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MimeMessage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attachments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
-
    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
 
    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;smtp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;smtp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;smtp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -214,8 +191,8 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mailcap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-
-   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addAttachment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addAttachment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+    &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;BodyPart&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;messageBodyPart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;messageBodyPart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MimeBodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
@@ -225,27 +202,20 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;attachments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;messageBodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-
-
-
    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//potevo usare il metodo con “base” se non mi interessa l’invio autenticato&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
 
    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;MailCommandAuthenticator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;authenticator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MailCommandAuthenticator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;Properties&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;props&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProperties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mail.smtp.host&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;smtp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mail.smtp.auth&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;session&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;authenticator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setDebug&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;debugEnabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;attachments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;();&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MimeMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
 
    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initializeBase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;Properties&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;props&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProperties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
@@ -255,7 +225,6 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;attachments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BodyPart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;();&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MimeMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
 
    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Session&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;Properties&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;props&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProperties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
@@ -267,17 +236,14 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MimeMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-
    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InternetAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-
    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addRecipient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RecipientType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;TO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InternetAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
 
    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addCc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isNotEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -285,28 +251,23 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
       &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-
    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addBcc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bcc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AddressException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isNotEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bcc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
          &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addRecipient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RecipientType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;BCC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InternetAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bcc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
       &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-
    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setSubject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setSubject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
 
    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setBody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-
    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isNotEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
 
    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -334,24 +295,20 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Avrete notato la presenza di una classe MailCommandAuthenticator che serve proprio per la gestione dell’autenticazione al nostro server di posta&lt;/p&gt;
+&lt;p&gt;Avrete notato la presenza di una classe &lt;code&gt;MailCommandAuthenticator&lt;/code&gt; che serve proprio per la gestione dell’autenticazione al nostro server di posta.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.Authenticator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.mail.PasswordAuthentication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
-
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MailCommandAuthenticator&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Authenticator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
 
    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
 
    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MailCommandAuthenticator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
 
    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PasswordAuthentication&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getPasswordAuthentication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -359,13 +316,11 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;E’ ora non ci resta che mostrare un esempio di utilizzo, ma prima aiutiamoci con una classe che realizza il pattern singleton &lt;/p&gt;
+&lt;p&gt;E’ ora non ci resta che mostrare un esempio di utilizzo, ma prima aiutiamoci con una classe che realizza il pattern &lt;code&gt;Singleton&lt;/code&gt; &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MailCommandInstantiator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
-
    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MailCommand&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
 
    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MailCommand&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -382,25 +337,25 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;MailCommand&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MailCommandInstantiator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;alice@myserver.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bob@myserver.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addCc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;alice@myserver.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addBcc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;alice@myserver.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setSubject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;The subject!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setBody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Body example.&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;        
-         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addAttachment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/home/mailattach/attachment.pdf&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;        
-         &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;alice@myserver.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bob@myserver.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addCc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;alice@myserver.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addBcc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;alice@myserver.ext&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setSubject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;The subject!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setBody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Body example.&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;        
+     &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addAttachment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/home/mailattach/attachment.pdf&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;        
+     &lt;span class=&quot;n&quot;&gt;mailCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//error management&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;//error management&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-           &lt;span class=&quot;c1&quot;&gt;//error management&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;//error management&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Ovviamente posso aggiungere più allegati come è possibile o non aggiungerne affatto e quindi inviare solo tipiche mail di testo.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/inviare-mail-con-allegati-in-java/&quot;&gt;﻿Inviare mail con allegati in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 15, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/inviare-mail-con-allegati-in-java/&quot;&gt;Inviare mail con allegati in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -423,23 +378,20 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Un implementazione direi completa del caro e vecchio printf, non stampa di per sè ma ci permette di applicare la formattazione alla stringa che andremo poi a stampare tramite i classici metodi staticiprint() e println() di System.out.&lt;/p&gt;
+&lt;p&gt;Un implementazione direi completa del caro e vecchio &lt;code&gt;printf&lt;/code&gt;, non stampa di per sè ma ci permette di applicare la formattazione alla stringa che andremo poi a stampare tramite i classici metodi statici &lt;code&gt;print()&lt;/code&gt; e &lt;code&gt;println()&lt;/code&gt; di &lt;code&gt;System.out&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Già questo basterebbe per togliersi un po’ di pigrizia ed eventuali vincoli e passare almeno alla versione 7 di Java.
 Vediamo la segnature riportata sopra, abbiamo i parametri format e la lista variabile di argomenti args che rappresentano le variabili che passeremo in successione e che saranno formattate. Riguardo il metodo format dalla documentazione ufficiale Oracle abbiamo la seguente descrizione&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;%[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argument_index$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;precision&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conversion&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;dove l’argomento opzionale argument_index  è un intero che indica la posizione dell’argomento nella lista stessa. 
-Il primo argomento e referenziato con 1$ il secondo con 2$ e così via, piuttosto facile e intuitivo anche se non si ha esperienza in C o C++.&lt;/p&gt;
+&lt;p&gt;dove l’argomento opzionale &lt;code&gt;argument_index&lt;/code&gt;  è un intero che indica la posizione dell’argomento nella lista stessa. 
+Il primo argomento e referenziato con &lt;code&gt;1$&lt;/code&gt; il secondo con &lt;code&gt;2$&lt;/code&gt; e così via, piuttosto facile e intuitivo anche se non si ha esperienza in C o C++.&lt;/p&gt;
 
-&lt;p&gt;flags opzionale anch’esso è il set di caratteri che modifica il formato dell’output i flag  validi dipendono dal valore per l’argomento conversion.&lt;/p&gt;
-
-&lt;p&gt;width opzionale intero non negativo indica il numero minimo di caratteri da scrivere sull’otput.&lt;/p&gt;
-
-&lt;p&gt;precision intero non negativo è utilizzato per limitare il numero di caratteri e il comportamento specifico è in base a valore di conversion.&lt;/p&gt;
-
-&lt;p&gt;Come visibile conversion è l’unico argomento obbligatorio ed indica la formattazione dipende dal tipo del dato.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;flags&lt;/code&gt; opzionale anch’esso è il set di caratteri che modifica il formato dell’output i flag  validi dipendono dal valore per l’argomento &lt;code&gt;conversion&lt;/code&gt;.
+&lt;code&gt;width&lt;/code&gt; opzionale intero non negativo indica il numero minimo di caratteri da scrivere sull’otput.
+&lt;code&gt;precision&lt;/code&gt; intero non negativo è utilizzato per limitare il numero di caratteri e il comportamento specifico è in base a valore di conversion.
+Come visibile &lt;code&gt;conversion&lt;/code&gt; è l’unico argomento obbligatorio ed indica la formattazione dipende dal tipo del dato.&lt;/p&gt;
 
 &lt;p&gt;Il meccanismo è lo stesso utilizzato nel linguaggio C un esempio può comunque chiarire meglio le idee, l’istruzione&lt;/p&gt;
 
@@ -579,7 +531,7 @@ La sintassi è essenziale,chiara,non presenta orpelli sintattici, Java invece ha
 
 &lt;p&gt;Questi tre linguaggi di programmazione  hanno alcuni vantaggi evidenti. In primo luogo, la velocità: per i programmi molto grandi Java,C# e C + + danno migliori prestazioni. In secondo luogo la loro manutenzione è più facile.&lt;/p&gt;
 
-&lt;p&gt;Molto di ciò che rende facile usare Python è che si devono ricordare certe cose. Ad esempio se si imposta una variabile t come riferimento a un intero o un oggetto di un tipo T, e si ci dimentica poi che t è di questo tipo, poi si tenta di richiamare un metodo per una stringa su di esso,si otterrà un errore. Java,C# e C + + vi proteggono da questo tipo di errori,vi costringono a dichiarare in anticipo il tipo di oggetto e di ciascuna variabile prima di poter far riferimento ad essa.a&lt;/p&gt;
+&lt;p&gt;Molto di ciò che rende facile usare Python è che si devono ricordare certe cose. Ad esempio se si imposta una variabile &lt;code&gt;t&lt;/code&gt; come riferimento a un intero o un oggetto di un tipo &lt;code&gt;T&lt;/code&gt;, e si ci dimentica poi che &lt;code&gt;t&lt;/code&gt; è di questo tipo, poi si tenta di richiamare un metodo per una stringa su di esso,si otterrà un errore. Java,C# e C + + vi proteggono da questo tipo di errori,vi costringono a dichiarare in anticipo il tipo di oggetto e di ciascuna variabile prima di poter far riferimento ad essa.a&lt;/p&gt;
 
 &lt;p&gt;Python è rappresentativo di una intera classe di linguaggi, a volte indicato come linguaggi di scripting come PHP,Ruby e Perl. &lt;/p&gt;
 
@@ -605,9 +557,9 @@ La sintassi è essenziale,chiara,non presenta orpelli sintattici, Java invece ha
   
     &lt;p&gt;L’ingegnere quantistico Seth Lloyd è convinto che l’universo sia un gigantesco computer. Speriamo non faccia girare Windows. &lt;em&gt;(Kevin Kelly)&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Le stringhe sono il primo oggetto che normalmente si impara a gestire con un linguaggio di programmazione, in Java per l’oggetto principe in questo caso è String o più propriamente del pachage java.lang, a seguire le forme più evolute come StringBuffer e StringBuilder.&lt;/p&gt;
+&lt;p&gt;Le stringhe sono il primo oggetto che normalmente si impara a gestire con un linguaggio di programmazione, in Java per l’oggetto principe in questo caso è String o più propriamente del pachage &lt;code&gt;java.lang&lt;/code&gt;, a seguire le forme più evolute come &lt;code&gt;StringBuffer&lt;/code&gt; e &lt;code&gt;StringBuilder&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Un oggetto di tipo String è immutabile (immutable), cosa significa esattamente?
+&lt;p&gt;Un oggetto di tipo &lt;code&gt;String&lt;/code&gt; è immutabile (immutable), cosa significa esattamente?
 Immutabile nel senso di memoria. Esso crea nuovi oggetti ogni volta che si creano stringhe o si assegna una nuova stringa / modificare il valore. Ecco perché si consiglia di fare attenzione quando si usano le stringhe.&lt;/p&gt;
 
 &lt;p&gt;Prendiamo ad esempio il seguente frammento di codice&lt;/p&gt;
@@ -617,19 +569,19 @@ Immutabile nel senso di memoria. Esso crea nuovi oggetti ogni volta che si crean
 &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;hi guys!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;con l’assegnazione a = “hi guys!” ho creato un nuovo oggetto di tipo String, non ho modificato lo stesso creato con new String(“hello boys”): anche se non ho utilizzato il costruttore con parametro.&lt;/p&gt;
+&lt;p&gt;con l’assegnazione &lt;code&gt;a = “hi guys!”&lt;/code&gt; ho creato un nuovo oggetto di tipo &lt;code&gt;String&lt;/code&gt;, non ho modificato lo stesso creato con &lt;code&gt;new String(“hello boys”);&lt;/code&gt; anche se non ho utilizzato il costruttore con parametro.&lt;/p&gt;
 
 &lt;p&gt;In Java le stringhe sono quindi costanti, locazioni di memoria che contengono caratteri (come nel linguaggio C), immutabile è sinonimo di immodificabile.&lt;/p&gt;
 
 &lt;p&gt;Le stringhe sono oggetti di uso comune quindi i progettisti iniziali hanno pensato bene di realizzare alcune scorciatoie per il loro utilizzo quotidiano che non obbligasse ad utilizzare l’approccio puro ad oggetti attraverso metodi da richiamare sulle istanze.&lt;/p&gt;
 
-&lt;p&gt;Torniamo alla nostra stringa semplicemente denominata “a”, l’espressione &lt;/p&gt;
+&lt;p&gt;Torniamo alla nostra stringa semplicemente denominata &lt;code&gt;a&lt;/code&gt;, l’espressione &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;hi&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; guys!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;effettua la concatenazione delle stringhe “hi” e “ guys!” tramite l’operatore “+”, operatore che normalmente utilizziamo per la somma di due numeri, siamo di fronte all’overloading di un operatore, come in C++.&lt;/p&gt;
+&lt;p&gt;effettua la concatenazione delle stringhe &lt;code&gt;hi&lt;/code&gt; e &lt;code&gt;guys!&lt;/code&gt; tramite l’operatore &lt;code&gt;+&lt;/code&gt;, operatore che normalmente utilizziamo per la somma di due numeri, siamo di fronte all’overloading di un operatore, come in C++.&lt;/p&gt;
 
-&lt;p&gt;L’overloading dell operatore “+” ci permette di evitare la forma pura ad oggetti&lt;/p&gt;
+&lt;p&gt;L’overloading dell operatore &lt;code&gt;+&lt;/code&gt; ci permette di evitare la forma pura ad oggetti&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;hi&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot; guys!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -642,10 +594,10 @@ Le due forme &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bye&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;sono equivalenti, l’assegnazione diretta surroga la chiamata esplicita del costruttore String(String) che costruisce un nuovo oggetto di tipo String a partire da una stringa esistente passata come parametro.&lt;/p&gt;
+&lt;p&gt;sono equivalenti, l’assegnazione diretta surroga la chiamata esplicita del costruttore &lt;code&gt;String(String)&lt;/code&gt; che costruisce un nuovo oggetto di tipo &lt;code&gt;String&lt;/code&gt; a partire da una stringa esistente passata come parametro.&lt;/p&gt;
 
-&lt;p&gt;Gli oggetti di tipo String non sono array di caratteri quindi non possiamo applicarvi gli operatori classici degli array come ad esempio [ ] quindi non possiamo fare cose del tipo string[index] dove string è un oggetto instanziato dalla classe String e index è un intero maggiore o uguale a 0 che che indica la posizione del carattere a cui vogliamo accedere. 
-Per essere ancora più chiari, dato l’ oggetto c di tipo String del frammento di codice riportato sopra non possiamo scrivere c[0] per accedere al primo elemento che ha valore b, Il compilatore ci segnalerà un errore&lt;/p&gt;
+&lt;p&gt;Gli oggetti di tipo &lt;code&gt;String&lt;/code&gt; non sono array di caratteri quindi non possiamo applicarvi gli operatori classici degli array come ad esempio &lt;code&gt;[]&lt;/code&gt; quindi non possiamo fare cose del tipo &lt;code&gt;string[index]&lt;/code&gt; dove string è un oggetto instanziato dalla classe &lt;code&gt;String&lt;/code&gt; e index è un intero maggiore o uguale a 0 che che indica la posizione del carattere a cui vogliamo accedere. 
+Per essere ancora più chiari, dato l’ oggetto c di tipo &lt;code&gt;String&lt;/code&gt; del frammento di codice riportato sopra non possiamo scrivere c[0] per accedere al primo elemento che ha valore b, Il compilatore ci segnalerà un errore&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thread&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;main&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RuntimeException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Uncompilable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;required&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;but&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -653,25 +605,24 @@ Per essere ancora più chiari, dato l’ oggetto c di tipo String del frammento 
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;per sovrascrivere il valore del carattere ‘b’ con il carattere ‘c’.&lt;/p&gt;
+&lt;p&gt;per sovrascrivere il valore del carattere &lt;code&gt;b&lt;/code&gt; con il carattere &lt;code&gt;c&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Per accedere all’elemento di indice 0 dobbiamo necessariamente utilizzare il metodo charAt()&lt;/p&gt;
+&lt;p&gt;Per accedere all’elemento di indice 0 dobbiamo necessariamente utilizzare il metodo &lt;code&gt;charAt()&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;che ritornerà il carattere ‘b’ a video, per esempio attraverso l’uso del metodo System.out.println() per stampare sulla console.&lt;/p&gt;
+&lt;p&gt;che ritornerà il carattere &lt;code&gt;b&lt;/code&gt; a video, per esempio attraverso l’uso del metodo &lt;code&gt;System.out.println()&lt;/code&gt; per stampare sulla console.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;La classe Stringh rende disponibile molti metodi tra cui quelli di uso più comune permettono restituire la lunghezza della stringa&lt;/p&gt;
+&lt;p&gt;La classe &lt;code&gt;String&lt;/code&gt; rende disponibile molti metodi tra cui quelli di uso più comune permettono restituire la lunghezza della stringa&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lenofc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;nel nostro caso lenofc conterrà il valore intero 3 dato che “bye”.length() è 3 e quindi il predicato  “bye”.length()==3 ha valore true&lt;/p&gt;
+&lt;p&gt;nel nostro caso lenofc conterrà il valore intero 3 dato che &lt;code&gt;“bye”.length()&lt;/code&gt; è 3 e quindi il predicato  &lt;code&gt;“bye”.length()==3&lt;/code&gt; ha valore &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Per controllare l’uguaglianza di due stringhe si può invece utilizzare il metodo equals() o equalsIgnoreCase() nel caso si desideri un controllo case insensitivi.&lt;/p&gt;
-
-&lt;p&gt;Le espressioni sotto ritornano entrambe il valore true per le variabili booleane b1 e b2&lt;/p&gt;
+&lt;p&gt;Per controllare l’uguaglianza di due stringhe si può invece utilizzare il metodo &lt;code&gt;equals()&lt;/code&gt; o &lt;code&gt;equalsIgnoreCase()&lt;/code&gt; nel caso si desideri un controllo case insensitivi.
+Le espressioni sotto ritornano entrambe il valore &lt;code&gt;true&lt;/code&gt; per le variabili booleane b1 e b2&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
 &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bye&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
@@ -679,20 +630,22 @@ Per essere ancora più chiari, dato l’ oggetto c di tipo String del frammento 
 &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equalsIgnoreCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Bye&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Volendo maggiore flessibilità in un operazione di confronto di stringhe possiamo utilizzare il metodo compareTo()  nella forma&lt;/p&gt;
+&lt;p&gt;Volendo maggiore flessibilità in un operazione di confronto di stringhe possiamo utilizzare il metodo &lt;code&gt;compareTo()&lt;/code&gt;  nella forma&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;compareTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;comp == 0 se a è uguale b 
-comp&amp;lt;0 se a&amp;lt;b, 
-comp&amp;gt;0  se a&amp;gt;b.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;comp == 0 se a è uguale b &lt;/li&gt;
+  &lt;li&gt;comp&amp;lt;0 se a&amp;lt;b, &lt;/li&gt;
+  &lt;li&gt;comp&amp;gt;0 se a&amp;gt;b.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;Il valore intero restituito è l’indice del primo carattere diverso.
-nel caso di esempio il valore per comp è 6 essendo a=”hi guys!” e b=”bye”&lt;/p&gt;
+nel caso di esempio il valore per comp è 6 essendo a uguale a ”hi guys!” e b uguale a ”bye”&lt;/p&gt;
 
-&lt;p&gt;attenzione a.equals(b) è ovviamente diverso da a == b &lt;/p&gt;
+&lt;p&gt;attenzione &lt;code&gt;a.equals(b)&lt;/code&gt; è ovviamente diverso da &lt;code&gt;a == b&lt;/code&gt; &lt;/p&gt;
 
-&lt;p&gt;Altri metodi di comune utilizzo sono substring(), replace(), naturalmente anche questi metodi non modificano l’oggetto su cui sono chiamati ma ne creano e ritornano uno nuovo.&lt;/p&gt;
+&lt;p&gt;Altri metodi di comune utilizzo sono &lt;code&gt;substring()&lt;/code&gt;, &lt;code&gt;replace()&lt;/code&gt;, naturalmente anche questi metodi non modificano l’oggetto su cui sono chiamati ma ne creano e ritornano uno nuovo.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// restituisce la sottostringa che va da 10  a 17 (18-1) &lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// restituisce una stringa con tutte le ‘E’  sostituite con ‘X’&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -719,7 +672,7 @@ verificando che la prima e l’ultima sono costituite esclusivamente da lettere 
 
 &lt;p&gt;Character è una classe che ci permette di effettuare semplici controlli ma non solo, vi rimando alla documentazione ufficiale per i dettagli.&lt;/p&gt;
 
-&lt;p&gt;Per controlli e validazioni sulle stringhe i semplici i metodi fino ad ora esposti sono più che sufficienti, ma nel caso sia abbia necessità di scomodare le espressioni regolari si può ricorrere al metodo matches() che presa un espressione regolare regex ritorna true se la stringa su cui è richiamato la rispetta.&lt;/p&gt;
+&lt;p&gt;Per controlli e validazioni sulle stringhe i semplici i metodi fino ad ora esposti sono più che sufficienti, ma nel caso sia abbia necessità di scomodare le espressioni regolari si può ricorrere al metodo &lt;code&gt;matches()&lt;/code&gt; che presa un espressione regolare regex ritorna &lt;code&gt;true&lt;/code&gt; se la stringa su cui è richiamato la rispetta.&lt;/p&gt;
 
 &lt;p&gt;Per controllare la validità rispetto al formato di una targa europea possiamo utilizzare&lt;/p&gt;
 
@@ -767,15 +720,15 @@ verificando che la prima e l’ultima sono costituite esclusivamente da lettere 
 
 &lt;p&gt;A questo punto abbiamo visto già molto materiale che ci permette di utilizzare con le stringhe per elaborazioni e controlli che si presentano all’ordine del giorno nella carriera di uno sviluppatore.&lt;/p&gt;
 
-&lt;p&gt;L’uso di String però non si presta nei casi in cui la manipolazione della stessa è l’attività principale, a questo scopo sono presenti le classi StringBuffer e StringBuilder, ma più conosciuta e anziana in quanto a cittadinanza nel jdk è la StringBuffer è ed sincronizzata qualora non sia necessario gestire l’accesso condiviso della risorsa l’utilizzo di StringBuilder garantisce maggiore velocità e ci permettere di non creare una moltitudine di oggetti String spazzatura su cui il garbage collector dovrà impiegare stupidamente del tempo.&lt;/p&gt;
+&lt;p&gt;L’uso di &lt;code&gt;String&lt;/code&gt; però non si presta nei casi in cui la manipolazione della stessa è l’attività principale, a questo scopo sono presenti le classi &lt;code&gt;StringBuffer&lt;/code&gt; e &lt;code&gt;StringBuilder&lt;/code&gt;, ma più conosciuta e anziana in quanto a cittadinanza nel jdk è la &lt;code&gt;StringBuffer&lt;/code&gt; è ed sincronizzata qualora non sia necessario gestire l’accesso condiviso della risorsa l’utilizzo di StringBuilder garantisce maggiore velocità e ci permettere di non creare una moltitudine di oggetti &lt;code&gt;String&lt;/code&gt; spazzatura su cui il garbage collector dovrà impiegare stupidamente del tempo.&lt;/p&gt;
 
-&lt;p&gt;Per la precisione tutti i metodi di StringBuffer sono syncronized ovvero sincronizzati il che la rende thread-safe e meno performante di una sua versione non thread-safe, utilizzate StringBuilder nei casi in cui non sia presente criticità legata alla gestione dei thread i metodi esposti sono praticamente gli stessi per entrambe le classi.&lt;/p&gt;
+&lt;p&gt;Per la precisione tutti i metodi di &lt;code&gt;StringBuffer&lt;/code&gt; sono syncronized ovvero sincronizzati il che la rende thread-safe e meno performante di una sua versione non thread-safe, utilizzate &lt;code&gt;StringBuilder&lt;/code&gt; nei casi in cui non sia presente criticità legata alla gestione dei thread i metodi esposti sono praticamente gli stessi per entrambe le classi.&lt;/p&gt;
 
-&lt;p&gt;I metodi di utilizzo più comuni per entrambe le classi sono rispettivamente append(),insert() e delete() nonchè charAt() oltre al metodo toString() che ci permette di ottenere una classica Stringa dai nostri oggetti di tipo StringBuffer e StringBuilder.&lt;/p&gt;
+&lt;p&gt;I metodi di utilizzo più comuni per entrambe le classi sono rispettivamente &lt;code&gt;append()&lt;/code&gt;,&lt;code&gt;insert()&lt;/code&gt; e &lt;code&gt;delete()&lt;/code&gt; nonchè &lt;code&gt;charAt()&lt;/code&gt; oltre al metodo &lt;code&gt;toString()&lt;/code&gt; che ci permette di ottenere una classica stringa dai nostri oggetti di tipo &lt;code&gt;StringBuffer&lt;/code&gt; e &lt;code&gt;StringBuilder&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Un utilizzo comune degli oggetti di tipo StringBuilder e StringBuffer è la costruzione di stringhe dinamicamente in base a condizioni presenti nel nostro codice.&lt;/p&gt;
+&lt;p&gt;Un utilizzo comune degli oggetti di tipo &lt;code&gt;StringBuilder&lt;/code&gt; e &lt;code&gt;StringBuffer&lt;/code&gt; è la costruzione di stringhe dinamicamente in base a condizioni presenti nel nostro codice.&lt;/p&gt;
 
-&lt;p&gt;Sotto un esempio piuttosto di utilizzo elementare per i tre metodi &lt;/p&gt;
+&lt;p&gt;Sotto un esempio piuttosto semplice di utilizzo elementare per i tre metodi &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;01234567900&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
@@ -783,7 +736,7 @@ verificando che la prima e l’ultima sono costituite esclusivamente da lettere 
 &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//cancella le due ultime cifre&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//Stampa 0123456789&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Lungi dall’essere una trattazione esaustiva dell’argomento e delle classi String,StringBuffer e StringBuilder quanto presentato copre la maggior parte dei casi d’uso, unica raccomandazione valida sempre e di esaminare la documentazione ufficiale sempre prima di reinventare la ruota. &lt;/p&gt;
+&lt;p&gt;Lungi dall’essere una trattazione esaustiva dell’argomento e delle classi &lt;code&gt;String&lt;/code&gt;,&lt;code&gt;StringBuffer&lt;/code&gt; e &lt;code&gt;StringBuilder&lt;/code&gt; quanto presentato copre la maggior parte dei casi d’uso, unica raccomandazione valida sempre e di esaminare la documentazione ufficiale sempre prima di reinventare la ruota. &lt;/p&gt;
 
   
   &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/la-gestione-delle-stringhe-in-java/&quot;&gt;La gestione delle stringhe in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 07, 2014.&lt;/p&gt;</content>
@@ -954,20 +907,20 @@ b@B&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s password:&lt;/code&
 &lt;p&gt;La console di amministrazione di GlassFish V3 prendendo troppo tempo per caricare?&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Aprire il file %GLASSFISH_HOME/glassfish/domains/domain1/config/domain.xml&lt;/li&gt;
+  &lt;li&gt;Aprire il file &lt;code&gt;%GLASSFISH_HOME/glassfish/domains/domain1/config/domain.xml&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;java-config&amp;gt;&lt;/span&gt; 
      &lt;span class=&quot;nt&quot;&gt;&amp;lt;jvm-options&amp;gt;&lt;/span&gt;-Dcom.sun.enterprise.tools.admingui.NO_NETWORK=true&lt;span class=&quot;nt&quot;&gt;&amp;lt;/jvm-options&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/java-config&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;L’aggiunta di questa proprietà può essere anche fatta dal pannello di amministrazione nella sezione per i parametri della jvm &lt;/p&gt;
+&lt;p&gt;L’aggiunta di questa proprietà può essere anche fatta dal pannello di amministrazione nella sezione per i parametri della JVM &lt;/p&gt;
 
-&lt;p&gt;Questa proprietà a true blocca News, notifiche per la registrazione, ecc.&lt;/p&gt;
+&lt;p&gt;Questa proprietà a &lt;code&gt;true&lt;/code&gt; blocca news, notifiche per la registrazione, ecc.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Rimuovere il jar per i tool di update (rimuovere e non rinominare l’estensione, effettuatene un backup prima)
-nome del file e path sono riporti di seguito&lt;/li&gt;
+Nome del file e path sono riporti di seguito&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;%GLASSFISH_HOME/glassfish/modules/console-updatecenter-plugin.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -977,7 +930,7 @@ nome del file e path sono riporti di seguito&lt;/li&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;%GLASSFISH_HOME/glassfish/domains/domain1/osgi-cache
 %GLASSFISH_HOME/glassfish/domains/domain1/generated&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Ora potete far ripartire il server  (bin/asadmin start-domain) .&lt;/p&gt;
+&lt;p&gt;Ora potete far ripartire il server con &lt;code&gt;bin/asadmin start-domain&lt;/code&gt; .&lt;/p&gt;
 
 
   
@@ -1023,7 +976,7 @@ nome del file e path sono riporti di seguito&lt;/li&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;-J-Duser.language=en&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;al proprietà netbeans_default_options nel file netbeans.conf&lt;/p&gt;
+&lt;p&gt;al proprietà &lt;code&gt;netbeans_default_options&lt;/code&gt; nel file &lt;code&gt;netbeans.conf&lt;/code&gt;&lt;/p&gt;
 
 
   
@@ -1048,7 +1001,7 @@ nome del file e path sono riporti di seguito&lt;/li&gt;
     &lt;p&gt;I Greci dicevano di una persona incolta: “Non sa leggere né nuotare”; oggi bisognerebbe aggiungere: “né usare un elaboratore”.
 &lt;em&gt;(Primo Levi e Tullio Regge, Dialogo, 1984)&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Possiamo individuare il jar per la classe Base64 (ad esempio) con il codice.&lt;/p&gt;
+&lt;p&gt;Possiamo individuare il jar per la classe &lt;code&gt;Base64&lt;/code&gt; (ad esempio) con il codice.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Base64&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProtectionDomain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getCodeSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLocation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -1076,7 +1029,7 @@ nome del file e path sono riporti di seguito&lt;/li&gt;
 &lt;em&gt;(Joseph Campbell, Il potere del mito, 1988)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Se avete installato VirtualBox su ubuntu 14.04 ma la finestra è piccola (la risoluzione è 800x600) lavorare diventa veramente arduo. 
-La soluzione è installare VirtualBox Guest Addition, vi consiglio di lasciate perdere l’installazione dall’immagine cd e procedete con apt-get:&lt;/p&gt;
+La soluzione è installare VirtualBox Guest Addition, vi consiglio di lasciate perdere l’installazione dall’immagine cd e procedete con &lt;code&gt;apt-get&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo apt-get install virtualbox-guest-x11&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -1139,17 +1092,16 @@ git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;em&gt;(Robert Anson Heinlein, La Luna è una severa maestra, 1966)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Vediamo come installare ant, questo è requisito per l’installazione di GlassFish su linux.
-Scarichiamo il tar.gz dal sito e trasferiamolo in &lt;em&gt;/usr/local&lt;/em&gt;
-scompattiamo il file &lt;em&gt;apache-ant-1.7.1-bin.tar.gz&lt;/em&gt;
-con il comando&lt;/p&gt;
+Scarichiamo il tar.gz dal sito e trasferiamolo in &lt;code&gt;/usr/local&lt;/code&gt;
+scompattiamo il file &lt;code&gt;apache-ant-1.7.1-bin.tar.gz&lt;/code&gt; con il comando&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;tar xvfz apache-ant-1.7.1-bin.tar.gz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;creiamo il nostro solito link simbolico con il comando ln&lt;/p&gt;
+&lt;p&gt;creiamo il nostro solito link simbolico con il comando &lt;code&gt;ln&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ln -s apache-ant-1.7.1 ant&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;aggiungiamo in &lt;em&gt;/root/.bashrc&lt;/em&gt; (o nella nostra home di utente non root) le variabili di ambiente&lt;/p&gt;
+&lt;p&gt;aggiungiamo in &lt;code&gt;/root/.bashrc&lt;/code&gt; (o nella nostra home di utente non root) le variabili di ambiente&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;ANT_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/ant
 &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;ANT_HOME
@@ -1173,7 +1125,7 @@ con il comando&lt;/p&gt;
     <uri>http://massimocaliman.eu</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#DataSource" term="DataSource" /><category scheme="http://massimocaliman.eu/tags/#Glassfish" term="Glassfish" /><category scheme="http://massimocaliman.eu/tags/#MySQL" term="MySQL" />
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#DataSource" term="DataSource" /><category scheme="http://massimocaliman.eu/tags/#GlassFish" term="GlassFish" /><category scheme="http://massimocaliman.eu/tags/#MySQL" term="MySQL" />
   <content type="html">
   
     &lt;p&gt;Mentre in fisica devi capire come è fatto il mondo, in informatica sei tu a crearlo. Dentro i confini del computer, sei tu il creatore. Controlli – almeno potenzialmente – tutto ciò che vi succede. Se sei abbastanza bravo, puoi essere un Dio. Su piccola scala.
@@ -1181,35 +1133,35 @@ con il comando&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Effettuare il download del JDBC driver per MySQL dall’indirizzo
- http://dev.mysql.com/downloads/connector/j/3.1.html&lt;/li&gt;
+http://dev.mysql.com/downloads/connector/j/3.1.html&lt;/li&gt;
   &lt;li&gt;Estrare il contenuto del file zip.&lt;/li&gt;
-  &lt;li&gt;Copiate mysql-connector-java-x.x.x-bin.jar nel path GLASS_FISH_INSTALL_DIR\lib .&lt;/li&gt;
-  &lt;li&gt;Effettuare lo start di GlassFish Application Server con il comando asadmin.bat start-domain domain1’ dalla directory GLASS_FISH_INSTALL_DIR\bin .&lt;/li&gt;
-  &lt;li&gt;Effettuare il login alla console di amministrazione di GlassFish. L’url di default per la console di amministrazione è http://localhost:4848/login.jsf.&lt;/li&gt;
-  &lt;li&gt;Da menu Common Task espandere il menu Resources cliccando su Resources.&lt;/li&gt;
-  &lt;li&gt;Espandete il menu JDBC sotto resources.&lt;/li&gt;
-  &lt;li&gt;Cliccare su Connection Pools sotto il menu JDBC menu. La pagine dei Connection Pools page verrà visualizzata.&lt;/li&gt;
-  &lt;li&gt;Cliccare su New.&lt;/li&gt;
-  &lt;li&gt;Inserire un nome per il vostro pool di connessioni JDBC . Selezionate javax.sql.ConnectionPoolDataSource come Resource Type e selezionate MySQL come Database vendor.&lt;/li&gt;
-  &lt;li&gt;Cliccare su Next.&lt;/li&gt;
+  &lt;li&gt;Copiate mysql-connector-java-x.x.x-bin.jar nel path &lt;code&gt;GLASS_FISH_INSTALL_DIR\lib&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Effettuare lo start di GlassFish Application Server con il comando &lt;code&gt;asadmin.bat start-domain domain1&lt;/code&gt; dalla directory    &lt;code&gt;GLASS_FISH_INSTALL_DIR\bin&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Effettuare il login alla console di amministrazione di GlassFish. L’url di default per la console di amministrazione è &lt;code&gt;http://localhost:4848/login.jsf&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Da menu &lt;code&gt;Common Task&lt;/code&gt; espandere il menu &lt;code&gt;Resources&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Espandete il menu &lt;code&gt;JDBC&lt;/code&gt; sotto &lt;code&gt;Resources&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Cliccare su &lt;code&gt;Connection Pools&lt;/code&gt; sotto il menu &lt;code&gt;JDBC&lt;/code&gt;. La pagine dei &lt;code&gt;Connection Pools&lt;/code&gt; page verrà visualizzata.&lt;/li&gt;
+  &lt;li&gt;Cliccare su &lt;code&gt;New&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Inserire un nome per il vostro pool di connessioni JDBC . Selezionate &lt;code&gt;javax.sql.ConnectionPoolDataSource&lt;/code&gt; come &lt;code&gt;Resource Type&lt;/code&gt; e selezionate &lt;code&gt;MySQL&lt;/code&gt; come Database vendor.&lt;/li&gt;
+  &lt;li&gt;Cliccare su &lt;code&gt;Next&lt;/code&gt;.&lt;/li&gt;
   &lt;li&gt;Compilare i dettagli in accordo con le vostre nececessità. I campi obbligatori sono.
-a. DatabaseName
-b. Password
-c. URL (il formato dovrà essere jdbc:mysql://localhost:3306/test. Dove test è il nome del vostro database.)
-d. Url (il formato dovrà essere jdbc:mysql://localhost:3306/test. Dove test è il nome del vostro database.)
-e. ServerName
-f. User&lt;/li&gt;
-  &lt;li&gt;Cliccare su Finish. Ora è possibile tornare alla pagina dei Connection Pools.&lt;/li&gt;
-  &lt;li&gt;Ciccare sul Connection Pool creata per accedere alla pagina Edit Connection Pool.&lt;/li&gt;
+a. &lt;code&gt;DatabaseName&lt;/code&gt;
+b. &lt;code&gt;Password&lt;/code&gt;
+c. &lt;code&gt;URL&lt;/code&gt; (il formato dovrà essere jdbc:mysql://localhost:3306/test. Dove test è il nome del vostro database.)
+d. &lt;code&gt;Url&lt;/code&gt; (il formato dovrà essere jdbc:mysql://localhost:3306/test. Dove test è il nome del vostro database.)
+e. &lt;code&gt;ServerName&lt;/code&gt;
+f. &lt;code&gt;User&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Cliccare su &lt;code&gt;Finish&lt;/code&gt;. Ora è possibile tornare alla pagina dei &lt;code&gt;Connection Pools&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Ciccare sul &lt;code&gt;Connection Pool&lt;/code&gt; creata per accedere alla pagina &lt;code&gt;Edit&lt;/code&gt;.&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Cliccare su Ping. Se il vostro connection pool è settato correttamente otterrete il messaggio Ping Succeeded.&lt;/p&gt;
+    &lt;p&gt;Cliccare su &lt;code&gt;Ping&lt;/code&gt;. Se il vostro connection pool è settato correttamente otterrete il messaggio Ping Succeeded.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Ora cliccare su JDBC Resorces sotto il menu JDBC.&lt;/li&gt;
-  &lt;li&gt;Cliccare su New.&lt;/li&gt;
+  &lt;li&gt;Ora cliccare su &lt;code&gt;JDBC Resorces&lt;/code&gt; sotto il menu &lt;code&gt;JDBC&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Cliccare su &lt;code&gt;New&lt;/code&gt;.&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Inserire un JNDI Name per il vostro data source e selezionate il pool che avete creato seguendo le istruzioni dei passi precedenti (Pool Name).&lt;/p&gt;
+    &lt;p&gt;Inserire un &lt;code&gt;JNDI Name&lt;/code&gt; per il vostro data source e selezionate il pool che avete creato seguendo le istruzioni dei passi precedenti (Pool Name).&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Cliccare su OK. Avete terminato.
+  &lt;li&gt;Cliccare su &lt;code&gt;OK&lt;/code&gt;. Avete terminato.
 Per ottenere una connessione usando un DataSource portete utilizzare il seguente codice di esempio.&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -1240,8 +1192,8 @@ Per ottenere una connessione usando un DataSource portete utilizzare il seguente
     &lt;p&gt;I computer sono incredibilmente veloci, accurati e stupidi. Gli uomini sono incredibilmente lenti, inaccurati e intelligenti. L’insieme dei due costituisce una forza incalcolabile.
 &lt;em&gt;(Albert Einstein (attribuito))&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;BPEL&lt;/strong&gt; &lt;em&gt;(Business Process Execution Language)&lt;/em&gt; è un linguaggio basato su XML costruito per descrivere formalmente i processi commerciali ed industriali in modo da permettere una suddivisione dei compiti tra attori diversi, in pratica permette di definire processi di workflow tramite XML.
-Normalmente un’applicazione BPEL viene invocata come servizio web ed interagisce con il mondo esterno esclusivamente invocando altri servizi web. 
+&lt;p&gt;&lt;strong&gt;BPEL&lt;/strong&gt; &lt;em&gt;(Business Process Execution Language)&lt;/em&gt; è un linguaggio basato su &lt;code&gt;XML&lt;/code&gt; costruito per descrivere formalmente i processi commerciali ed industriali in modo da permettere una suddivisione dei compiti tra attori diversi, in pratica permette di definire processi di workflow tramite XML.
+Normalmente un’applicazione &lt;code&gt;BPEL&lt;/code&gt; viene invocata come servizio web ed interagisce con il mondo esterno esclusivamente invocando altri servizi web. 
 Rappresenta una forma di coordinazione di servizi Web, permettendo di comporli in maniera ricorsiva. 
 L’ambiente runtime all’interno del quale viene eseguito il processo è detto motore BPEL.&lt;/p&gt;
 

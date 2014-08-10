@@ -159,13 +159,9 @@
             <!-- /.social-share -->
       </footer>
       <div class="entry-content">
-        <p>Vediamo in questo post come scrivere il codice di una Servlet java che ci permette di effettuare il trasferimento (il download) di un file dalla nostra applicazione server al client
-(il web browser dei nostri utenti).</p>
-
-<p>Effettuando il click su un link che punta alla nostra servlet verrà avviato il download, vediamo il codice piuttosto intuitivo nelle linee sottostanti del post.</p>
-
-<p>Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto (usando una qualche implementazione di InputStream nel nostro caso useremo FileInputStream); di
-determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di tipo HttpServletResponse della nostra servlet.</p>
+        <p>Vediamo in questo post come scrivere il codice di una Servlet Java che ci permette di effettuare il trasferimento (il download) di un file dalla nostra applicazione server al client (il web browser dei nostri utenti).
+Effettuando il click su un link che punta alla nostra servlet verrà avviato il download, vediamo il codice piuttosto intuitivo nelle linee sottostanti del post.
+Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto (usando una qualche implementazione di <code>InputStream</code> nel nostro caso useremo <code>FileInputStream</code>); di determinare il tipo <code>MIME</code> e riversare il tutto correnttamente sull’oggetto di tipo <code>HttpServletResponse</code> della nostra Servlet.</p>
 
 <p>Nel nostro esempio il nome del file comprensivo di path è passato come parametro, rendendo la Servlet generica, utilizzabile per effettuare il download di qualsiasi file</p>
 
@@ -180,12 +176,11 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
 <span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletRequest</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletResponse</span><span class="o">;</span>
 
-
 <span class="nd">@WebServlet</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&quot;DownloadFileServlet&quot;</span><span class="o">,</span> <span class="n">urlPatterns</span> <span class="o">=</span> <span class="o">{</span><span class="s">&quot;/DownloadFileServlet&quot;</span><span class="o">})</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">DownloadFileServlet</span> <span class="kd">extends</span> <span class="n">HttpServlet</span> <span class="o">{</span>
 
-
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">processRequest</span><span class="o">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">ServletException</span><span class="o">,</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">processRequest</span><span class="o">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> 
+      <span class="kd">throws</span> <span class="n">ServletException</span><span class="o">,</span> <span class="n">IOException</span> <span class="o">{</span>
         <span class="k">try</span> <span class="o">{</span>
             <span class="n">response</span><span class="o">.</span><span class="na">setContentType</span><span class="o">(</span><span class="s">&quot;text/html;charset=UTF-8&quot;</span><span class="o">);</span>
             <span class="n">String</span> <span class="n">filePath</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">&quot;file&quot;</span><span class="o">);</span>
@@ -196,18 +191,12 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
             <span class="k">if</span> <span class="o">(</span><span class="n">mimeType</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
                 <span class="n">mimeType</span> <span class="o">=</span> <span class="s">&quot;application/octet-stream&quot;</span><span class="o">;</span>
             <span class="o">}</span>
-
-
             <span class="n">response</span><span class="o">.</span><span class="na">setContentType</span><span class="o">(</span><span class="n">mimeType</span><span class="o">);</span>
             <span class="n">response</span><span class="o">.</span><span class="na">setContentLength</span><span class="o">((</span><span class="kt">int</span><span class="o">)</span> <span class="n">file</span><span class="o">.</span><span class="na">length</span><span class="o">());</span>
-
-
             <span class="c1">// forziamo il download del file</span>
             <span class="n">String</span> <span class="n">headerKey</span> <span class="o">=</span> <span class="s">&quot;Content-Disposition&quot;</span><span class="o">;</span>
             <span class="n">String</span> <span class="n">headerValue</span> <span class="o">=</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;attachment; filename=\&quot;%s\&quot;&quot;</span><span class="o">,</span> <span class="n">file</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
             <span class="n">response</span><span class="o">.</span><span class="na">setHeader</span><span class="o">(</span><span class="n">headerKey</span><span class="o">,</span> <span class="n">headerValue</span><span class="o">);</span>
-
-
             <span class="n">OutputStream</span> <span class="n">outputStream</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="na">getOutputStream</span><span class="o">();</span>
             <span class="kt">byte</span><span class="o">[]</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">4096</span><span class="o">];</span>
             <span class="kt">int</span> <span class="n">bytesRead</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
@@ -221,13 +210,11 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
         <span class="o">}</span>
     <span class="o">}</span>
 
-
     <span class="nd">@Override</span>
     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doGet</span><span class="o">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span>
-            <span class="kd">throws</span> <span class="n">ServletException</span><span class="o">,</span> <span class="n">IOException</span> <span class="o">{</span>
+       <span class="kd">throws</span> <span class="n">ServletException</span><span class="o">,</span> <span class="n">IOException</span> <span class="o">{</span>
         <span class="n">processRequest</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">);</span>
     <span class="o">}</span>
-
 
     <span class="nd">@Override</span>
     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doPost</span><span class="o">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span>
@@ -235,21 +222,19 @@ determinare il tipo MIME e riversare il tutto correnttamente sull’oggetto di t
         <span class="n">processRequest</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">);</span>
     <span class="o">}</span>
 
-
 <span class="o">}</span></code></pre></div>
 
-<p>Non dobbiamo aggiungere nulla alla nostra webapplication tramite il descrittore di deployment web.xml dato che abbiamo utilizzato la modalità tramite annotazioni</p>
+<p>Non dobbiamo aggiungere nulla alla nostra webapplication tramite il descrittore di deployment web.xml dato che abbiamo utilizzato la modalità tramite annotazioni. Per l’invocazione </p>
 
-<p>Per l’invocazione </p>
+<div class="highlight"><pre><code class="bash">http://localhost:8080/MyWebApplication/DownloadFileServlet?file<span class="o">=</span>/path/file.ext</code></pre></div>
 
-<p>http://localhost:8080/MyWebApplication//DownloadFileServlet?file=/path/file.ext</p>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://massimocaliman.eu/articles/inviare-mail-con-allegati-in-java/" class="btn" title="﻿Inviare mail con allegati in Java">Previous article</a>
+        <a href="http://massimocaliman.eu/articles/inviare-mail-con-allegati-in-java/" class="btn" title="Inviare mail con allegati in Java">Previous article</a>
       
       
     </nav><!-- /.pagination -->

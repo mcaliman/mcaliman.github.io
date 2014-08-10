@@ -8,7 +8,7 @@ comments: false
 share: true
 ---
 Ogni documento XML su cui lavoriamo dovrebbe essere formattato correttamente, salvato con il giusto encoding ecc.
-Un caso classico è il messaggio "Content is not allowed in prolog" (...SAXParseException)
+Un caso classico è il messaggio "Content is not allowed in prolog" (`SAXParseException`)
 Editiamo a mano il file con un editor (esadecimale) e togliamo in testa "ef bb bf".
 Visto che usiamo Java molto meglio mettere un piccolo work-around di appena due righe di codice :
 {% highlight java %}
@@ -16,9 +16,7 @@ Matcher matcher = (Pattern.compile("^([\\W]+)<")).matcher( xmlString.trim() );
 xmlString = matcher.replaceFirst("<");
 {% endhighlight %}
 
-
-Questo prima di passare il tutto al nostro oggetto SAXBuilder
-
+Questo prima di passare il tutto al nostro oggetto `SAXBuilder`
 
 {% highlight java %}
 SAXBuilder builder = new SAXBuilder();

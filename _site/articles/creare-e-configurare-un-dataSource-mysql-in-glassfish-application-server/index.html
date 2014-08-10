@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <title>Creare e configurare un DataSource MySQL in GlassFish Application Server &#8211; Computer Programming</title>
 <meta name="description" content="Massimo Caliman's blog on Computer Science and Information Technology.">
-<meta name="keywords" content="Java, DataSource, Glassfish, MySQL">
+<meta name="keywords" content="Java, DataSource, GlassFish, MySQL">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
@@ -137,7 +137,7 @@
     
     <div class="entry-wrapper">
       <header class="entry-header">
-        <span class="entry-tags"><a href="http://massimocaliman.eu/tags/#Java" title="Pages tagged Java">Java</a>&nbsp;&bull;&nbsp;<a href="http://massimocaliman.eu/tags/#DataSource" title="Pages tagged DataSource">DataSource</a>&nbsp;&bull;&nbsp;<a href="http://massimocaliman.eu/tags/#Glassfish" title="Pages tagged Glassfish">Glassfish</a>&nbsp;&bull;&nbsp;<a href="http://massimocaliman.eu/tags/#MySQL" title="Pages tagged MySQL">MySQL</a></span>
+        <span class="entry-tags"><a href="http://massimocaliman.eu/tags/#Java" title="Pages tagged Java">Java</a>&nbsp;&bull;&nbsp;<a href="http://massimocaliman.eu/tags/#DataSource" title="Pages tagged DataSource">DataSource</a>&nbsp;&bull;&nbsp;<a href="http://massimocaliman.eu/tags/#GlassFish" title="Pages tagged GlassFish">GlassFish</a>&nbsp;&bull;&nbsp;<a href="http://massimocaliman.eu/tags/#MySQL" title="Pages tagged MySQL">MySQL</a></span>
         
           <h1 class="entry-title">Creare e configurare un DataSource MySQL in GlassFish Application Server</h1>
         
@@ -164,35 +164,35 @@
 
 <ol>
   <li>Effettuare il download del JDBC driver per MySQL dall’indirizzo
- http://dev.mysql.com/downloads/connector/j/3.1.html</li>
+http://dev.mysql.com/downloads/connector/j/3.1.html</li>
   <li>Estrare il contenuto del file zip.</li>
-  <li>Copiate mysql-connector-java-x.x.x-bin.jar nel path GLASS_FISH_INSTALL_DIR\lib .</li>
-  <li>Effettuare lo start di GlassFish Application Server con il comando asadmin.bat start-domain domain1’ dalla directory GLASS_FISH_INSTALL_DIR\bin .</li>
-  <li>Effettuare il login alla console di amministrazione di GlassFish. L’url di default per la console di amministrazione è http://localhost:4848/login.jsf.</li>
-  <li>Da menu Common Task espandere il menu Resources cliccando su Resources.</li>
-  <li>Espandete il menu JDBC sotto resources.</li>
-  <li>Cliccare su Connection Pools sotto il menu JDBC menu. La pagine dei Connection Pools page verrà visualizzata.</li>
-  <li>Cliccare su New.</li>
-  <li>Inserire un nome per il vostro pool di connessioni JDBC . Selezionate javax.sql.ConnectionPoolDataSource come Resource Type e selezionate MySQL come Database vendor.</li>
-  <li>Cliccare su Next.</li>
+  <li>Copiate mysql-connector-java-x.x.x-bin.jar nel path <code>GLASS_FISH_INSTALL_DIR\lib</code>.</li>
+  <li>Effettuare lo start di GlassFish Application Server con il comando <code>asadmin.bat start-domain domain1</code> dalla directory    <code>GLASS_FISH_INSTALL_DIR\bin</code>.</li>
+  <li>Effettuare il login alla console di amministrazione di GlassFish. L’url di default per la console di amministrazione è <code>http://localhost:4848/login.jsf</code>.</li>
+  <li>Da menu <code>Common Task</code> espandere il menu <code>Resources</code>.</li>
+  <li>Espandete il menu <code>JDBC</code> sotto <code>Resources</code>.</li>
+  <li>Cliccare su <code>Connection Pools</code> sotto il menu <code>JDBC</code>. La pagine dei <code>Connection Pools</code> page verrà visualizzata.</li>
+  <li>Cliccare su <code>New</code>.</li>
+  <li>Inserire un nome per il vostro pool di connessioni JDBC . Selezionate <code>javax.sql.ConnectionPoolDataSource</code> come <code>Resource Type</code> e selezionate <code>MySQL</code> come Database vendor.</li>
+  <li>Cliccare su <code>Next</code>.</li>
   <li>Compilare i dettagli in accordo con le vostre nececessità. I campi obbligatori sono.
-a. DatabaseName
-b. Password
-c. URL (il formato dovrà essere jdbc:mysql://localhost:3306/test. Dove test è il nome del vostro database.)
-d. Url (il formato dovrà essere jdbc:mysql://localhost:3306/test. Dove test è il nome del vostro database.)
-e. ServerName
-f. User</li>
-  <li>Cliccare su Finish. Ora è possibile tornare alla pagina dei Connection Pools.</li>
-  <li>Ciccare sul Connection Pool creata per accedere alla pagina Edit Connection Pool.</li>
+a. <code>DatabaseName</code>
+b. <code>Password</code>
+c. <code>URL</code> (il formato dovrà essere jdbc:mysql://localhost:3306/test. Dove test è il nome del vostro database.)
+d. <code>Url</code> (il formato dovrà essere jdbc:mysql://localhost:3306/test. Dove test è il nome del vostro database.)
+e. <code>ServerName</code>
+f. <code>User</code></li>
+  <li>Cliccare su <code>Finish</code>. Ora è possibile tornare alla pagina dei <code>Connection Pools</code>.</li>
+  <li>Ciccare sul <code>Connection Pool</code> creata per accedere alla pagina <code>Edit</code>.</li>
   <li>
-    <p>Cliccare su Ping. Se il vostro connection pool è settato correttamente otterrete il messaggio Ping Succeeded.</p>
+    <p>Cliccare su <code>Ping</code>. Se il vostro connection pool è settato correttamente otterrete il messaggio Ping Succeeded.</p>
   </li>
-  <li>Ora cliccare su JDBC Resorces sotto il menu JDBC.</li>
-  <li>Cliccare su New.</li>
+  <li>Ora cliccare su <code>JDBC Resorces</code> sotto il menu <code>JDBC</code>.</li>
+  <li>Cliccare su <code>New</code>.</li>
   <li>
-    <p>Inserire un JNDI Name per il vostro data source e selezionate il pool che avete creato seguendo le istruzioni dei passi precedenti (Pool Name).</p>
+    <p>Inserire un <code>JNDI Name</code> per il vostro data source e selezionate il pool che avete creato seguendo le istruzioni dei passi precedenti (Pool Name).</p>
   </li>
-  <li>Cliccare su OK. Avete terminato.
+  <li>Cliccare su <code>OK</code>. Avete terminato.
 Per ottenere una connessione usando un DataSource portete utilizzare il seguente codice di esempio.</li>
 </ol>
 

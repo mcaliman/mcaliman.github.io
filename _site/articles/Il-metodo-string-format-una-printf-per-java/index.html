@@ -164,23 +164,20 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
 
 <div class="highlight"><pre><code class="java"><span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">String</span> <span class="n">format</span><span class="o">,</span> <span class="n">Object</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span></code></pre></div>
 
-<p>Un implementazione direi completa del caro e vecchio printf, non stampa di per sè ma ci permette di applicare la formattazione alla stringa che andremo poi a stampare tramite i classici metodi staticiprint() e println() di System.out.</p>
+<p>Un implementazione direi completa del caro e vecchio <code>printf</code>, non stampa di per sè ma ci permette di applicare la formattazione alla stringa che andremo poi a stampare tramite i classici metodi statici <code>print()</code> e <code>println()</code> di <code>System.out</code>.</p>
 
 <p>Già questo basterebbe per togliersi un po’ di pigrizia ed eventuali vincoli e passare almeno alla versione 7 di Java.
 Vediamo la segnature riportata sopra, abbiamo i parametri format e la lista variabile di argomenti args che rappresentano le variabili che passeremo in successione e che saranno formattate. Riguardo il metodo format dalla documentazione ufficiale Oracle abbiamo la seguente descrizione</p>
 
 <div class="highlight"><pre><code class="java"><span class="o">%[</span><span class="n">argument_index$</span><span class="o">][</span><span class="n">flags</span><span class="o">][</span><span class="n">width</span><span class="o">][.</span><span class="na">precision</span><span class="o">]</span><span class="n">conversion</span></code></pre></div>
 
-<p>dove l’argomento opzionale argument_index  è un intero che indica la posizione dell’argomento nella lista stessa. 
-Il primo argomento e referenziato con 1$ il secondo con 2$ e così via, piuttosto facile e intuitivo anche se non si ha esperienza in C o C++.</p>
+<p>dove l’argomento opzionale <code>argument_index</code>  è un intero che indica la posizione dell’argomento nella lista stessa. 
+Il primo argomento e referenziato con <code>1$</code> il secondo con <code>2$</code> e così via, piuttosto facile e intuitivo anche se non si ha esperienza in C o C++.</p>
 
-<p>flags opzionale anch’esso è il set di caratteri che modifica il formato dell’output i flag  validi dipendono dal valore per l’argomento conversion.</p>
-
-<p>width opzionale intero non negativo indica il numero minimo di caratteri da scrivere sull’otput.</p>
-
-<p>precision intero non negativo è utilizzato per limitare il numero di caratteri e il comportamento specifico è in base a valore di conversion.</p>
-
-<p>Come visibile conversion è l’unico argomento obbligatorio ed indica la formattazione dipende dal tipo del dato.</p>
+<p><code>flags</code> opzionale anch’esso è il set di caratteri che modifica il formato dell’output i flag  validi dipendono dal valore per l’argomento <code>conversion</code>.
+<code>width</code> opzionale intero non negativo indica il numero minimo di caratteri da scrivere sull’otput.
+<code>precision</code> intero non negativo è utilizzato per limitare il numero di caratteri e il comportamento specifico è in base a valore di conversion.
+Come visibile <code>conversion</code> è l’unico argomento obbligatorio ed indica la formattazione dipende dal tipo del dato.</p>
 
 <p>Il meccanismo è lo stesso utilizzato nel linguaggio C un esempio può comunque chiarire meglio le idee, l’istruzione</p>
 
@@ -200,7 +197,7 @@ Il primo argomento e referenziato con 1$ il secondo con 2$ e così via, piuttost
         <a href="http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/" class="btn" title="Considerazioni su alcuni Linguaggi di Programmazione Parte 4">Previous article</a>
       
       
-        <a href="http://massimocaliman.eu/articles/inviare-mail-con-allegati-in-java/" class="btn" title="﻿Inviare mail con allegati in Java">Next article</a>
+        <a href="http://massimocaliman.eu/articles/inviare-mail-con-allegati-in-java/" class="btn" title="Inviare mail con allegati in Java">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>

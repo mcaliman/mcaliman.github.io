@@ -36,6 +36,6 @@ Si risolve aggiungendo.
 "-J-Duser.language=en"  
 {% endhighlight %}
 
-al proprietà netbeans_default_options nel file netbeans.conf
+al proprietà `netbeans_default_options` nel file `netbeans.conf`
 
 
