@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Considerazioni sulla ricorsione",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/considerazioni-sulla-ricorsione/",
+		  "date"       : "2014-08-15 00:45:33 +0200",
+		  "shortdate"  : "August 15, 2014"
+		} ,
+	
+		{
 		  "title"      : "﻿Una Servlet per gestire il download di file in Java",
 		  "category"   : "articles",
 		  "url"        : "http://massimocaliman.eu/articles/una-servlet-per-gestire-il-download-di-file-in-java/",
