@@ -9,13 +9,235 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://massimocaliman.eu/feed.xml" />
 <link rel="alternate" type="text/html" href="http://massimocaliman.eu/" />
-<updated>2014-09-02T20:24:44+02:00</updated>
+<updated>2014-09-12T19:59:02+02:00</updated>
 <id>http://massimocaliman.eu/</id>
 <author>
   <name>Massimo Caliman</name>
   <uri>http://massimocaliman.eu/</uri>
   <email>mcaliman@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Scrivere e leggere file in Java 7 con try-with-resources]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/"/>
+  <id>http://massimocaliman.eu/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources</id>
+  <published>2014-09-14T00:45:33+02:00</published>
+  <updated>2014-09-14T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://massimocaliman.eu</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#JDK7" term="JDK7" />
+  <content type="html">
+  
+    &lt;p&gt;Leggere e scrivere file in Java 7 sfruttando il nuovo costrutto try-with-resource manleva lo sviluppatore dal compito di chiudere correttamente gli stream, sotto potete trovare due metodi di esempio.&lt;/p&gt;
+
+&lt;p&gt;Per scrivere un file&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;completed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Writer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;BufferedWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;OutputStreamWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileOutputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)))&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;completed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;completed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SEVERE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;completed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;e per leggerne il contenuto&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lineSeparator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FileNotFoundException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SEVERE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+             &lt;span class=&quot;n&quot;&gt;logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SEVERE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Quando il blocco try termina lo Stream verrà chiuso automaticamente. Questo è possibile perché le classi utilizzate nel blocco try-with-resources implementano l’interfaccia Java java.lang.AutoCloseable . &lt;/p&gt;
+
+&lt;p&gt;Tutte le classi che implementano questa interfaccia possono essere utilizzati all’interno del try-with-resources.&lt;/p&gt;
+
+&lt;p&gt;L’interfaccia AutoClosable ha un solo metodo close() &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AutoClosable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Implementare AutoClosable su un nostro oggetto non richiede molto sforzo come si può vedere da codice di esempio che riporto qui sotto.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AutoClosableExampleObject&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AutoCloseable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+   &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;//do stuff and close&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Se non vogliamo catturare l’eccezzione basta omettere la parte catch del blocco ed essa si propagherà come se fosse non gestita (proprio così un try senza catch e senza finally). Ad essere sinceri il codice sopra avrebbe potuto beneficiare di altre novità della versione 7 come ad esempio i catch con gestione multipla di eccezioni ma di questo ed altro si parlerà in un prossimo post.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/&quot;&gt;Scrivere e leggere file in Java 7 con try-with-resources&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on September 14, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Riguardo i limiti del calcolabile]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/riguardo-i-limiti-del-calcolabile/"/>
+  <id>http://massimocaliman.eu/articles/riguardo-i-limiti-del-calcolabile</id>
+  <published>2014-09-07T00:45:33+02:00</published>
+  <updated>2014-09-07T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://massimocaliman.eu</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://massimocaliman.eu/tags/#Python" term="Python" />
+  <content type="html">
+  
+    &lt;p&gt;Il seguente argomento, dovuto a L.J. Stockmeyer, è di natura puramente fisica ma
+mostra in modo chiaro cosa si intenda per limiti del calcolabile:&lt;/p&gt;
+
+&lt;p&gt;Il più potente calcolatore che si possa costruire non potrà mai essere
+più grande dell’universo (meno di 100 miliardi di anni luce
+di diametro), ne potrà essere costituito da elementi più piccoli di
+un protone (10^-13 cm di diametro), ne potrà trasmettere informazioni
+ad una velocita superiore a quella della luce (300.000 km/s).
+Quindi tale calcolatore non potrebbe avere più di 10^126 componenti.&lt;/p&gt;
+
+&lt;p&gt;A.R. Meyer e L.J. Stockmeyer hanno dimostrato che tale calcolatore
+impiegherebbe almeno 20 miliardi di anni per risolvere dei
+problemi la cui risolubilità è nota in linea di principio. &lt;/p&gt;
+
+&lt;p&gt;A quanto pare l’universo non ha una età superiore ai 20 miliardi di anni.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/riguardo-i-limiti-del-calcolabile/&quot;&gt;Riguardo i limiti del calcolabile&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on September 07, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Come ti swappo due variabili in un colpo solo con Python]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/"/>
+  <id>http://massimocaliman.eu/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python</id>
+  <published>2014-09-02T00:45:33+02:00</published>
+  <updated>2014-09-02T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://massimocaliman.eu</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://massimocaliman.eu/tags/#Python" term="Python" />
+  <content type="html">
+  
+    &lt;p&gt;Vi è mai capitato di scrivere qualcosa del genere ?&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ma giusto perché se siete maniacali della leggibilità del codice e vi scrivete ogni volta un metodo swap del caso… e non amate annegare in 100+ righe di codice qualcosa come questo&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;con Pyhton basta fare &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;magico no? Il bello delle tuple.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/&quot;&gt;Come ti swappo due variabili in un colpo solo con Python&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on September 02, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Secure httpbase tomcat authentication]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/secure-httpbase-tomcat-authentication/"/>
+  <id>http://massimocaliman.eu/articles/secure-httpbase-tomcat-authentication</id>
+  <published>2014-08-16T00:45:33+02:00</published>
+  <updated>2014-08-16T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://massimocaliman.eu</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://massimocaliman.eu/tags/#Tomcat" term="Tomcat" />
+  <content type="html">
+  
+    &lt;p&gt;Per impostare l’autenticazione base in una applicazione java in tomcat possiamo intervenire solo in due file&lt;/p&gt;
+
+&lt;p&gt;In tomcat-users.xml setting , dove configureremo gli utenti.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--?xml version=&amp;#39;1.0&amp;#39; encoding=&amp;#39;utf-8&amp;#39;?--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;tomcat-users&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;role&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rolename=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tomcat&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;role&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rolename=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;role1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;user&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;password=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tomcat&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;roles=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tomcat&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;username=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tomcat&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;user&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;password=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tomcat&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;roles=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;role1&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;username=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;role1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;user&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;password=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tomcat&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;roles=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tomcat,role1&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;username=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;both&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/user&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/user&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/user&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/role&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/role&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/tomcat-users&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Mentre nel file web.xml della nostra applicazione aggiungiamo le righe come sotto.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;ISO-8859-1&amp;quot;?--&amp;gt;&lt;/span&gt;  
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;web-app&amp;gt;&lt;/span&gt;    
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Define a Security Constraint on this Application --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;security-constraint&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;web-resource-collection&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;web-resource-name&amp;gt;&lt;/span&gt;Entire Application&lt;span class=&quot;nt&quot;&gt;&amp;lt;/web-resource-name&amp;gt;&lt;/span&gt;      
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;url-pattern&amp;gt;&lt;/span&gt;/*&lt;span class=&quot;nt&quot;&gt;&amp;lt;/url-pattern&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/web-resource-collection&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;auth-constraint&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;role-name&amp;gt;&lt;/span&gt;tomcat&lt;span class=&quot;nt&quot;&gt;&amp;lt;/role-name&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/auth-constraint&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/security-constraint&amp;gt;&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Define the Login Configuration for this Application --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;login-config&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;auth-method&amp;gt;&lt;/span&gt;BASIC&lt;span class=&quot;nt&quot;&gt;&amp;lt;/auth-method&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;realm-name&amp;gt;&lt;/span&gt;Application&lt;span class=&quot;nt&quot;&gt;&amp;lt;/realm-name&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/login-config&amp;gt;&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Security roles referenced by this web application --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;security-role&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;description&amp;gt;&lt;/span&gt;
+The role that is required to log in to the Manager Application
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/description&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;role-name&amp;gt;&lt;/span&gt;tomcat&lt;span class=&quot;nt&quot;&gt;&amp;lt;/role-name&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/security-role&amp;gt;&lt;/span&gt;
+
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/web-app&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/secure-httpbase-tomcat-authentication/&quot;&gt;Secure httpbase tomcat authentication&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on August 16, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1124,169 +1346,6 @@ La soluzione è installare VirtualBox Guest Addition, vi consiglio di lasciate p
 
   
   &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404/&quot;&gt;Come impostare Virtualbox a schermo intero su Ubuntu 14.04&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 02, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Pubblicare un sito con GitHub Pages.]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/pubblicare-un-sito-con-github-pages/"/>
-  <id>http://massimocaliman.eu/articles/pubblicare-un-sito-con-github-pages</id>
-  <published>2014-01-01T23:45:33+01:00</published>
-  <updated>2014-01-01T23:45:33+01:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://massimocaliman.eu/tags/#Jekyll" term="Jekyll" /><category scheme="http://massimocaliman.eu/tags/#GitHub" term="GitHub" /><category scheme="http://massimocaliman.eu/tags/#GitHubPages" term="GitHubPages" />
-  <content type="html">
-  
-    &lt;p&gt;L’informatica non riguarda i computer più di quanto l’astronomia riguardi i telescopi.
-&lt;em&gt;(Edsger Dijkstra)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Se vuoi pubblicare il sito all’indirizzo &lt;code&gt;http://USERNAME.github.com&lt;/code&gt; devi creare una repository (dall’account GitHub) 
-chiamato &lt;code&gt;USERNAME.github.com&lt;/code&gt;, nel mio caso &lt;code&gt;mcaliman.github.com&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;GITHUB_ACCOUNT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;USERNAME
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GITHUB_ACCOUNT&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.github.com
-git init
-git add .
-git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Initial commit&amp;quot;&lt;/span&gt;
-git remote add origin git@github.com:&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GITHUB_ACCOUNT&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GITHUB_ACCOUNT&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.github.com.git
-git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/pubblicare-un-sito-con-github-pages/&quot;&gt;Pubblicare un sito con GitHub Pages.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Come installare Ant su linux]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/come-installare-ant-su-linux/"/>
-  <id>http://massimocaliman.eu/articles/come-installare-ant-su-linux</id>
-  <published>2013-01-01T23:45:33+01:00</published>
-  <updated>2013-01-01T23:45:33+01:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://massimocaliman.eu/tags/#Ant" term="Ant" /><category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#Linux" term="Linux" />
-  <content type="html">
-  
-    &lt;p&gt;Non provare mai a spiegare il computer a un profano. È più facile spiegare il sesso a una vergine.
-&lt;em&gt;(Robert Anson Heinlein, La Luna è una severa maestra, 1966)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Vediamo come installare ant, questo è requisito per l’installazione di GlassFish su linux.
-Scarichiamo il tar.gz dal sito e trasferiamolo in &lt;code&gt;/usr/local&lt;/code&gt;
-scompattiamo il file &lt;code&gt;apache-ant-1.7.1-bin.tar.gz&lt;/code&gt; con il comando&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;tar xvfz apache-ant-1.7.1-bin.tar.gz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;creiamo il nostro solito link simbolico con il comando &lt;code&gt;ln&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ln -s apache-ant-1.7.1 ant&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;aggiungiamo in &lt;code&gt;/root/.bashrc&lt;/code&gt; (o nella nostra home di utente non root) le variabili di ambiente&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;ANT_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/ant
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;ANT_HOME
-&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ANT_HOME&lt;/span&gt;/bin:.:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;PATH&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/come-installare-ant-su-linux/&quot;&gt;Come installare Ant su linux&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2013.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Creare e configurare un DataSource MySQL in GlassFish Application Server]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/"/>
-  <id>http://massimocaliman.eu/articles/creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server</id>
-  <published>2012-01-01T23:45:33+01:00</published>
-  <updated>2012-01-01T23:45:33+01:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#DataSource" term="DataSource" /><category scheme="http://massimocaliman.eu/tags/#GlassFish" term="GlassFish" /><category scheme="http://massimocaliman.eu/tags/#MySQL" term="MySQL" />
-  <content type="html">
-  
-    &lt;p&gt;Mentre in fisica devi capire come è fatto il mondo, in informatica sei tu a crearlo. Dentro i confini del computer, sei tu il creatore. Controlli – almeno potenzialmente – tutto ciò che vi succede. Se sei abbastanza bravo, puoi essere un Dio. Su piccola scala.
-&lt;em&gt;(Linus Torvalds, Rivoluzionario per caso, 2001)&lt;/em&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Effettuare il download del JDBC driver per MySQL dall’indirizzo
-http://dev.mysql.com/downloads/connector/j/3.1.html&lt;/li&gt;
-  &lt;li&gt;Estrare il contenuto del file zip.&lt;/li&gt;
-  &lt;li&gt;Copiate mysql-connector-java-x.x.x-bin.jar nel path &lt;code&gt;GLASS_FISH_INSTALL_DIR\lib&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Effettuare lo start di GlassFish Application Server con il comando &lt;code&gt;asadmin.bat start-domain domain1&lt;/code&gt; dalla directory    &lt;code&gt;GLASS_FISH_INSTALL_DIR\bin&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Effettuare il login alla console di amministrazione di GlassFish. L’url di default per la console di amministrazione è &lt;code&gt;http://localhost:4848/login.jsf&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Da menu &lt;code&gt;Common Task&lt;/code&gt; espandere il menu &lt;code&gt;Resources&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Espandete il menu &lt;code&gt;JDBC&lt;/code&gt; sotto &lt;code&gt;Resources&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Cliccare su &lt;code&gt;Connection Pools&lt;/code&gt; sotto il menu &lt;code&gt;JDBC&lt;/code&gt;. La pagine dei &lt;code&gt;Connection Pools&lt;/code&gt; page verrà visualizzata.&lt;/li&gt;
-  &lt;li&gt;Cliccare su &lt;code&gt;New&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Inserire un nome per il vostro pool di connessioni JDBC . Selezionate &lt;code&gt;javax.sql.ConnectionPoolDataSource&lt;/code&gt; come &lt;code&gt;Resource Type&lt;/code&gt; e selezionate &lt;code&gt;MySQL&lt;/code&gt; come Database vendor.&lt;/li&gt;
-  &lt;li&gt;Cliccare su &lt;code&gt;Next&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Compilare i dettagli in accordo con le vostre nececessità. I campi obbligatori sono.
-a. &lt;code&gt;DatabaseName&lt;/code&gt;
-b. &lt;code&gt;Password&lt;/code&gt;
-c. &lt;code&gt;URL&lt;/code&gt; (il formato dovrà essere jdbc:mysql://localhost:3306/test. Dove test è il nome del vostro database.)
-d. &lt;code&gt;Url&lt;/code&gt; (il formato dovrà essere jdbc:mysql://localhost:3306/test. Dove test è il nome del vostro database.)
-e. &lt;code&gt;ServerName&lt;/code&gt;
-f. &lt;code&gt;User&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Cliccare su &lt;code&gt;Finish&lt;/code&gt;. Ora è possibile tornare alla pagina dei &lt;code&gt;Connection Pools&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Ciccare sul &lt;code&gt;Connection Pool&lt;/code&gt; creata per accedere alla pagina &lt;code&gt;Edit&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Cliccare su &lt;code&gt;Ping&lt;/code&gt;. Se il vostro connection pool è settato correttamente otterrete il messaggio Ping Succeeded.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Ora cliccare su &lt;code&gt;JDBC Resorces&lt;/code&gt; sotto il menu &lt;code&gt;JDBC&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Cliccare su &lt;code&gt;New&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Inserire un &lt;code&gt;JNDI Name&lt;/code&gt; per il vostro data source e selezionate il pool che avete creato seguendo le istruzioni dei passi precedenti (Pool Name).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Cliccare su &lt;code&gt;OK&lt;/code&gt;. Avete terminato.
-Per ottenere una connessione usando un DataSource portete utilizzare il seguente codice di esempio.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InitialContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;DataSource&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;jdbc/mysqltest&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Connection&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;con&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ds&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getConnection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/&quot;&gt;Creare e configurare un DataSource MySQL in GlassFish Application Server&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2012.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[BPEL (Business Process Execution Language)]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/bpel/"/>
-  <id>http://massimocaliman.eu/articles/bpel</id>
-  <published>2012-01-01T23:45:33+01:00</published>
-  <updated>2012-01-01T23:45:33+01:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://massimocaliman.eu/tags/#BPEL" term="BPEL" /><category scheme="http://massimocaliman.eu/tags/#SOA" term="SOA" />
-  <content type="html">
-  
-    &lt;p&gt;I computer sono incredibilmente veloci, accurati e stupidi. Gli uomini sono incredibilmente lenti, inaccurati e intelligenti. L’insieme dei due costituisce una forza incalcolabile.
-&lt;em&gt;(Albert Einstein (attribuito))&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;BPEL&lt;/strong&gt; &lt;em&gt;(Business Process Execution Language)&lt;/em&gt; è un linguaggio basato su &lt;code&gt;XML&lt;/code&gt; costruito per descrivere formalmente i processi commerciali ed industriali in modo da permettere una suddivisione dei compiti tra attori diversi, in pratica permette di definire processi di workflow tramite &lt;code&gt;XML&lt;/code&gt;.
-Normalmente un’applicazione &lt;code&gt;BPEL&lt;/code&gt; viene invocata come servizio web ed interagisce con il mondo esterno esclusivamente invocando altri servizi web. 
-Rappresenta una forma di coordinazione di servizi Web, permettendo di comporli in maniera ricorsiva. 
-L’ambiente runtime all’interno del quale viene eseguito il processo è detto motore &lt;code&gt;BPEL&lt;/code&gt;.&lt;/p&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/bpel/&quot;&gt;BPEL (Business Process Execution Language)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 01, 2012.&lt;/p&gt;</content>
 </entry>
 
 </feed>

@@ -1,6 +1,38 @@
 [
 	
 		{
+		  "title"      : "Scrivere e leggere file in Java 7 con try-with-resources",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/",
+		  "date"       : "2014-09-14 00:45:33 +0200",
+		  "shortdate"  : "September 14, 2014"
+		} ,
+	
+		{
+		  "title"      : "Riguardo i limiti del calcolabile",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/riguardo-i-limiti-del-calcolabile/",
+		  "date"       : "2014-09-07 00:45:33 +0200",
+		  "shortdate"  : "September 07, 2014"
+		} ,
+	
+		{
+		  "title"      : "Come ti swappo due variabili in un colpo solo con Python",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/",
+		  "date"       : "2014-09-02 00:45:33 +0200",
+		  "shortdate"  : "September 02, 2014"
+		} ,
+	
+		{
+		  "title"      : "Secure httpbase tomcat authentication",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/secure-httpbase-tomcat-authentication/",
+		  "date"       : "2014-08-16 00:45:33 +0200",
+		  "shortdate"  : "August 16, 2014"
+		} ,
+	
+		{
 		  "title"      : "Considerazioni sulla ricorsione",
 		  "category"   : "articles",
 		  "url"        : "http://massimocaliman.eu/articles/considerazioni-sulla-ricorsione/",
