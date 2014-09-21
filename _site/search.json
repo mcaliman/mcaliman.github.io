@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Concatenare PDF con iText in Java",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/concatenare-pdf-con-itext-in-java/",
+		  "date"       : "2014-09-19 00:45:33 +0200",
+		  "shortdate"  : "September 19, 2014"
+		} ,
+	
+		{
 		  "title"      : "Scrivere e leggere file in Java 7 con try-with-resources",
 		  "category"   : "articles",
 		  "url"        : "http://massimocaliman.eu/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/",
