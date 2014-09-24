@@ -9,13 +9,163 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://massimocaliman.eu/feed.xml" />
 <link rel="alternate" type="text/html" href="http://massimocaliman.eu/" />
-<updated>2014-09-21T10:42:45+02:00</updated>
+<updated>2014-09-24T22:33:11+02:00</updated>
 <id>http://massimocaliman.eu/</id>
 <author>
   <name>Massimo Caliman</name>
   <uri>http://massimocaliman.eu/</uri>
   <email>mcaliman@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Dizionari in Java]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/dizionari-in-java/"/>
+  <id>http://massimocaliman.eu/articles/dizionari-in-java</id>
+  <published>2014-09-25T00:45:33+02:00</published>
+  <updated>2014-09-25T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://massimocaliman.eu</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#Dizionari" term="Dizionari" /><category scheme="http://massimocaliman.eu/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <content type="html">
+  
+    &lt;p&gt;Nelle vecchie release del linguaggio Java il tipo di dato dizionario veniva realizzato a partire dalla classe &lt;code&gt;Dictionary&amp;lt;K,V&amp;gt;&lt;/code&gt; del package &lt;code&gt;java.util&lt;/code&gt;. 
+La classe &lt;code&gt;Dictionary&lt;/code&gt; è il genitore astratto di &lt;code&gt;Hashtable&lt;/code&gt;, che associa chiavi a valori. Ogni chiave e ogni valore è un oggetto. In ogni oggetto &lt;code&gt;Dictionary&lt;/code&gt;, ogni chiave è associata al più ad un valore. Dato un dizionario e una chiave, si può recuperare l’elemento associato. Qualsiasi oggetto non &lt;code&gt;null&lt;/code&gt; può essere utilizzato sia come una chiave che come valore. 
+Di norma, il metodo &lt;code&gt;equals&lt;/code&gt; deve essere implemantato da questa classe per decidere se due chiavi sono uguali.
+Benchè non ancora deprecata &lt;code&gt;Dictionary&lt;/code&gt; può essere considerata obsoleta ormai, in quando &lt;code&gt;Map&lt;/code&gt; è l’interfaccia standard per questo tipo di collezioni di dati. &lt;code&gt;Dictionary&lt;/code&gt; permane in quando da essa deriva direttamente la classe concreta &lt;code&gt;HashTable&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tuttora moltissimo codice utilizza ancora &lt;code&gt;HashTable&lt;/code&gt;, ecco il perchè della sua sopravvivenza, necessaria ai fini della retrocompatibilità.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Dictionary&lt;/code&gt; è stata comunque “svecchiata” da Sun ora Oracle riprogettandola con i generics, passando in rassegna il javadoc possiamo farci un idea piuttosto precisa della segnatura dei suoi metodi principali&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Enumeration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;elements&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ritorna una &lt;code&gt;Enumaration&lt;/code&gt; dei valori nel dizionario.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;V&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ritorna il valore con cui è mappata la chiave key nel dizionario&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ritorna &lt;code&gt;true&lt;/code&gt; se il dizionario è vuoto, &lt;code&gt;false&lt;/code&gt; altrimenti.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Enumeration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ritorna una &lt;code&gt;Enumaration&lt;/code&gt; delle chiavi presenti nel dizionario.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;V&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;K&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;V&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;mappa la chiave key con value nel dizionario, cioè inserisce la coppia key,value nel dizionario&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;V&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;rimuove la chiave e il valore corrispondente dal dizionario&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ritorna il numero di elementi distinti contenuti nel dizionario (cioè il numero delle chiavi).&lt;/p&gt;
+
+&lt;p&gt;Si tratta dei classici metodi di una generica struttura dati di tipo dizionario, approfondiamo l’aspetto teorico rispolverando un pò di nozioni:
+Un dizionario è una collezione di elementi a cui sono associate chiavi prese da un universo totalmente ordinato. La nozione di tipo di dato si usa per descrivere le operazioni di interesse su una collezione, in altre parole specifica cosa un’operazione deve fare, non come l’operazione può essere realizzata, questo corrisponde al concetto di interface nel linguaggio Java.&lt;/p&gt;
+
+&lt;p&gt;Una specifica in pseudolinguaggio può essere ad esempio quella riportata sotto&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;tipo&lt;/strong&gt;: 
+Dizionario&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;dati&lt;/strong&gt;: &lt;/p&gt;
+
+&lt;p&gt;Un insieme S di coppie (elemento,chiave)
+&lt;strong&gt;operazioni&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;insert(elemento e,chiave k) : &lt;em&gt;aggiunge a S una nuova coppia (e,k)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;delete(chiave k): &lt;em&gt;cancella da S la coppia con chiave k&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;search(chiave k) -&amp;gt; elemento : &lt;em&gt;se la chiave k è presente in S restituisce l’elemento e ad essa associata&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;più formalmente, prendendo in prestito le nozioni insiemistiche (perchè S è un insieme) abbiamo 
+S={ (e,k) | e∈elemento,k∈chiave }&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;insert(e,k)     realizza S = S∪(e,k)&lt;/li&gt;
+  &lt;li&gt;delete(k)       realizza S = S−(e,k) se (e,k)∈S&lt;/li&gt;
+  &lt;li&gt;search(k) -&amp;gt; e  realizza se k in S allora ritorna e, &lt;code&gt;null&lt;/code&gt; altrimenti.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Oggi di fatto la classe &lt;code&gt;HashTable&lt;/code&gt; non è più utilizza, le collezioni oggi sono molto più strutturate, pulite ed organiche.&lt;/p&gt;
+
+&lt;p&gt;Il posto di &lt;code&gt;Dictionary&lt;/code&gt; è stato preso da &lt;code&gt;Map&amp;lt;K,V&amp;gt;&lt;/code&gt;, che è un interfaccia al contrario di &lt;code&gt;Dictionary&lt;/code&gt; che è invece una classe astratta,&lt;code&gt;Map&lt;/code&gt; è quindi molto più flessibile dal punto di vista della OOP, o quantomeno della OOP adottata dal linguaggio Java (eredita multipla solo dal punto di vista delle interfacce alla release 7)&lt;/p&gt;
+
+&lt;p&gt;Con riferimento al suo javadoc abbiamo i metodi&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;clear&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;svuota la mappa.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;containsKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ritorna &lt;code&gt;true&lt;/code&gt; se la mappa contiene elementi per la chiave key.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;containsValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ritorna &lt;code&gt;true&lt;/code&gt; se la mappa contiene una o più chiavi per il valore specificato&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Entry&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entrySet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ritorna un &lt;code&gt;Set&lt;/code&gt; delle coppie (chiave,valore) contenute nella mappa.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;compara l’oggetto specificato con la quelli nella mappa (ugualianza).&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;V&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ritorna il valore associato alla chiave key se presente in mappa, &lt;code&gt;null&lt;/code&gt; altrimenti.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;hashCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ritorna il codice hash per la mappa.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ritorna &lt;code&gt;true&lt;/code&gt; se la mappa è vuota.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;keySet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ritorna un &lt;code&gt;Set&lt;/code&gt; con le chiavi della mappa (utile per iterare con &lt;code&gt;Iterator&lt;/code&gt;).&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;V&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;K&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;V&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;associa il valore specificato con la chiave passata.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;putAll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;copia tutti gli elementi della mappa m nella mappa.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;V&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;rimuove la coppia key-value per la key passata, se presente in mappa.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ritorna la dimensione della mappa ovvero il numero di coppie key-value contenute.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;ritorna una &lt;code&gt;Collection&lt;/code&gt; con i valori contenuti nella mappa.&lt;/p&gt;
+
+&lt;p&gt;Il set di metodi è piuttosto generoso, volendolo confrontare con le tipiche specifiche astratte comuni ad ogni mappa.
+Il tipo più comune di implementazioni di &lt;code&gt;Map&lt;/code&gt; è &lt;code&gt;HashMap&lt;/code&gt;. Approfondieremo questa classe nei prossimi post.&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/dizionari-in-java/&quot;&gt;Dizionari in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on September 25, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1377,33 +1527,6 @@ Nome del file e path sono riporti di seguito&lt;/li&gt;
 
   
   &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/&quot;&gt;HOWTO FIX errore 'illegal pattern character g' JAXB in NetBeans .&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 10, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Come trovare il jar dove è contenuta una determinata classe (deployed in GlassFish).]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/"/>
-  <id>http://massimocaliman.eu/articles/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe</id>
-  <published>2014-01-03T23:45:33+01:00</published>
-  <updated>2014-01-03T23:45:33+01:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#GlassFish" term="GlassFish" />
-  <content type="html">
-  
-    &lt;p&gt;I Greci dicevano di una persona incolta: “Non sa leggere né nuotare”; oggi bisognerebbe aggiungere: “né usare un elaboratore”.
-&lt;em&gt;(Primo Levi e Tullio Regge, Dialogo, 1984)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Possiamo individuare il jar per la classe &lt;code&gt;Base64&lt;/code&gt; (ad esempio) con il codice.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Base64&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProtectionDomain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getCodeSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLocation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/&quot;&gt;Come trovare il jar dove è contenuta una determinata classe (deployed in GlassFish).&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 03, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>

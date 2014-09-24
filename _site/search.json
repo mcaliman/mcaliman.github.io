@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Dizionari in Java",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/dizionari-in-java/",
+		  "date"       : "2014-09-25 00:45:33 +0200",
+		  "shortdate"  : "September 25, 2014"
+		} ,
+	
+		{
 		  "title"      : "Concatenare PDF con iText in Java",
 		  "category"   : "articles",
 		  "url"        : "http://massimocaliman.eu/articles/concatenare-pdf-con-itext-in-java/",
