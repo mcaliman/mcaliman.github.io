@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Usare HashMap in Java",
+		  "category"   : "articles",
+		  "url"        : "http://massimocaliman.eu/articles/usare-hashmap-in-java/",
+		  "date"       : "2014-09-28 00:45:33 +0200",
+		  "shortdate"  : "September 28, 2014"
+		} ,
+	
+		{
 		  "title"      : "Dizionari in Java",
 		  "category"   : "articles",
 		  "url"        : "http://massimocaliman.eu/articles/dizionari-in-java/",
