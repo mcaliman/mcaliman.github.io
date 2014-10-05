@@ -9,13 +9,617 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://massimocaliman.eu/feed.xml" />
 <link rel="alternate" type="text/html" href="http://massimocaliman.eu/" />
-<updated>2014-09-27T17:47:53+02:00</updated>
+<updated>2014-10-05T10:42:25+02:00</updated>
 <id>http://massimocaliman.eu/</id>
 <author>
   <name>Massimo Caliman</name>
   <uri>http://massimocaliman.eu/</uri>
   <email>mcaliman@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Alberi rappresentazioni collegate]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/alberi-rappresentazioni-collegate/"/>
+  <id>http://massimocaliman.eu/articles/alberi-rappresentazioni-collegate</id>
+  <published>2014-10-08T00:45:33+02:00</published>
+  <updated>2014-10-08T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://massimocaliman.eu</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#Alberi" term="Alberi" /><category scheme="http://massimocaliman.eu/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <content type="html">
+  
+    &lt;p&gt;Proseguendo nella trattazione degli alberi normalmente si preferiscono le ﻿rappresentazioni basate su strutture collegate 
+1. più flessibile di quelle idicizzate
+2. modifiche alla struttura più efficienti&lt;/p&gt;
+
+&lt;p&gt;Le principali sono tre&lt;/p&gt;
+
+&lt;h1 id=&quot;puntatore-ai-figli&quot;&gt;Puntatore ai figli&lt;/h1&gt;
+&lt;p&gt;Se ogni nodo ha al più grado d è possibile mantenere in ogni nodo un puntatore a ciscuno dei possibili figli
+Nel caso da 2 se un figlio è assente si pone il puntatore a Null Spazio richiesto O(n*d) che per d costante è O(n)&lt;/p&gt;
+
+&lt;h1 id=&quot;lista-figli&quot;&gt;Lista figli&lt;/h1&gt;
+&lt;p&gt;Se il numero massimo di figli non è noto a priori è possibile associare ad ogni nodo una lista di puntatori ai suoi figli questa lista può essere a sua volta rappresentata in maniera indicizzata collegata, spazio richiesto O(n) indipendentemente dal numero di figli di un nodo&lt;/p&gt;
+
+&lt;h1 id=&quot;primo-figlio-fratello-successivo&quot;&gt;Primo figlio fratello successivo&lt;/h1&gt;
+&lt;p&gt;Come variante alla precedente senza dover tenere la struttura dati addizionale (la lista figli)
+Per ogni nodo un puntatore al primo figlio (posto a null se non ci sono figli) e un puntatore al fratello successivo&lt;/p&gt;
+
+&lt;p&gt;Spazio richiesto O(n)
+Per scandire tutti i figli di un nodo basta scendere sul primo figlio e poi scandire tutti i fratelli successivi saltando di fratello in fratello.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/alberi-rappresentazioni-collegate/&quot;&gt;Alberi rappresentazioni collegate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on October 08, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Alberi rappresentazioni indicizzate]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/alberi-rappresentazioni-indicizzate/"/>
+  <id>http://massimocaliman.eu/articles/alberi-rappresentazioni-indicizzate</id>
+  <published>2014-10-07T00:45:33+02:00</published>
+  <updated>2014-10-07T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://massimocaliman.eu</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#Alberi" term="Alberi" /><category scheme="http://massimocaliman.eu/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <content type="html">
+  
+    &lt;p&gt;﻿Rappresentazioni indicizzate
+Basate su array vettore padri e vettori posizionali entrambe richiedono spazio O(n)&lt;/p&gt;
+
+&lt;h1 id=&quot;vettori-padri&quot;&gt;Vettori padri&lt;/h1&gt;
+&lt;p&gt;La più semplice
+Sia T = (N,A) albero con n nodi numerati da 0 a n-1 un vettore padri è un vettore P di dim n le cui celle contengono coppie (info,parent) per ogni indice v appartenente a [0,n-1]
+p[v].info è il contenuto informativo del nodo v
+p[v].parent = u sse vi è un arco (u,v) in A
+Se invece v è la radice p[v].parent=null
+usando il vettore dei padri da ogni nodo è possibile risalire in tempo O(1) al proprio padre mentre trovare un figlio richiede una scansione dell’array in tempo O(n)&lt;/p&gt;
+
+&lt;h1 id=&quot;vettore-posizionale&quot;&gt;Vettore posizionale&lt;/h1&gt;
+&lt;p&gt;Nel caso particolare degli alberi d-ari completi con d&amp;gt;=2 è possibile una rappresentazione indicizzata dove ogni nodo ha una posizione prestabilita.&lt;/p&gt;
+
+&lt;p&gt;Sia T=(N,A) albero d-ario, n nodi numerabili da 1 a n
+p vettore di dimensione n  t.c. p[v] contiene l’informazione associata al nodo v e t.c l’informazione associata all’i-esimo figlio di v è in posizione p[d*v+i] per i in [0,(d-1)]&lt;/p&gt;
+
+&lt;p&gt;Per semplicità la posizione 0 dell’array non è utilizzata lo spazio richiesto per n nodi è quindi n +1&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;da ogni nodo v è possibile risalire in tempo O(1) sia al proprio padre (che ha indice floor ceil v/d se v diversa da radice) che a uno qualunque dei figli&lt;/li&gt;
+  &lt;li&gt;per ogni v nodo, l’operazione padre(v) può quindi essere realizzata in tempo costante mentre l’operazione figli(v) richiede tempo O(grado(v))&lt;/li&gt;
+&lt;/ul&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/alberi-rappresentazioni-indicizzate/&quot;&gt;Alberi rappresentazioni indicizzate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on October 07, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Alberi in Java]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/alberi-in-java/"/>
+  <id>http://massimocaliman.eu/articles/alberi-in-java</id>
+  <published>2014-10-06T00:45:33+02:00</published>
+  <updated>2014-10-06T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://massimocaliman.eu</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#Alberi" term="Alberi" /><category scheme="http://massimocaliman.eu/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <content type="html">
+  
+    &lt;p&gt;﻿Dopo i post sulle strutture dati elementari passiamo a trattare gli alberi, prima di entrare nel dettaglio di come implementare strutture dati di questo tipo ne approfondiamo l’aspetto teorico.&lt;/p&gt;
+
+&lt;p&gt;Per prima cosa ne vediamo la definzione classica&lt;/p&gt;
+
+&lt;p&gt;Un albero (radicato) è una coppia &lt;code&gt;T=(N,A)&lt;/code&gt; costituita da un insieme &lt;code&gt;N&lt;/code&gt; di nodi e da un insieme &lt;code&gt;A&lt;/code&gt; di archi, &lt;code&gt;A&lt;/code&gt; è sottoinsieme proprio di &lt;code&gt;NxN&lt;/code&gt; (cioè del prodotto cartesiano di &lt;code&gt;N&lt;/code&gt; per &lt;code&gt;N&lt;/code&gt;), gli archi infatti sono coppie di nodi e il concetto di arco ne modella la relazione esistente.&lt;/p&gt;
+
+&lt;p&gt;Esiste una nomenclatura piuttosto intuitiva riguardo gli Alberi&lt;/p&gt;
+
+&lt;p&gt;In un albero ogni nodo v (tranne la radice) ha un solo genitore (o padre) u tale che (u,v) appartiene ad A (l’insieme degli archi)&lt;/p&gt;
+
+&lt;p&gt;Un nodo può avere 1 o più figli v t.c. (u,v) appartiene ad A e il loro numero è detto grado&lt;/p&gt;
+
+&lt;p&gt;Con queste definizioni abbiamo già fissato alcuni concetti importanti&lt;/p&gt;
+
+&lt;p&gt;Seguono le definizioni per 
+radice
+foglie
+nodi interni
+antenati
+discendenti
+profondità&lt;/p&gt;
+
+&lt;p&gt;i nodi con lo stesso padre vengono detti fratelli&lt;/p&gt;
+
+&lt;p&gt;alberi con foglie tutte sullo stesso livello vengono detti alberi completi&lt;/p&gt;
+
+&lt;p&gt;Un specifica base del tipo di dati Albero deve comprendere necessariamente operazioni come quelle riportate sotto&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;tipo
+   Albero
+dati
+   Un insieme di nodi N e uno di archi A
+operazioni
+   numNodi&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; -&amp;gt; intero &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;restituisce il numero di nodi presenti nell’albero&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   grado&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nodo v&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;-&amp;gt; intero &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;restituisce il numero di figli del nodo v&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   padre&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nodo v&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; -&amp;gt; nodo &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;restituisce il padre del nodo v o null se v è la radice&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   figli&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nodo v&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; -&amp;gt; &amp;lt;nodo,nodo,...,nodo&amp;gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;resitituisce uno dopo l’altro i figli del nodo v&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   aggiungiNodo&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nodo u&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; -&amp;gt; nodo &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;inserisce un nuovo nodo v come figlio di u nell’albero e lo restituisce, se v è il primo nodo 
+                           ad essere inserito nell’albero esso diventa radice e u viene ignorato&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   aggiungiSottoalbero&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Albero a,nodo u&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;inserisce nell’albero il sottoalbero a in modo che la radice di a diventi figlia di u&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   rimuoviSottoalbero&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nodo v&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;-&amp;gt;Albero &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stacca e restituisce l’intero sottoalbero radicato in v,
+   l’operazione cancella dall’albero il nodo v e tutti i suoi discendenti&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A questo punto passare dalla specifica in pseudocodice ad una in linguaggio Java è immediato. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;NodoInf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;//stuff&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AlberoInf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;numNodi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;grado&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;padre&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;figli&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;aggiungiNodo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;aggiungiSottoalbero&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Albero&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;Albero&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rimuoviSottoalbero&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Una struttura di questo tipo che non si porti dietro un certo contenuto informativo è di per se poco utile, Nodo dovrebbe infatti contenere come proprietà per esempio una chiave, un etichettà. Pensiamo ad esempio ad una struttura ad albero per rappresentare l’albero genealogico di una famigla.&lt;/p&gt;
+
+&lt;p&gt;Utilizzando i generics sarebbe infatti più interessante lavorare con classi di questo tipo
+&lt;code&gt;Tree&amp;lt;T&amp;gt;&lt;/code&gt; e &lt;code&gt;Node&amp;lt;T&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Nel JDK sono presenti implemetazioni interessanti come &lt;code&gt;javax.swing.tree.TreeModel&lt;/code&gt; e &lt;code&gt;javax.swing.tree.TreeNode&lt;/code&gt; utilizzata nelle Swing per la realizzazione delle GUI in ambiente desktop.&lt;/p&gt;
+
+&lt;p&gt;Esistono diverse possibili rappresentazioni per gli alberi sia basate su strutture indicizzate che collegate, quale scegliere dipende dal tipo di problemi che pensiamo di dover risolvere, se pensiamo che l’operazione più frequente o critica sia per esempio risalire ai figli di un nodo ne utilizzeremo una, se la l’operazione più critica e navigare per livelli l’albero ne utilizzeremo una ottimizzata per questo tipo di problema.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/alberi-in-java/&quot;&gt;Alberi in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on October 06, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Strutture indicizzate approfondimenti]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/strutture-indicizzate-approfondimento/"/>
+  <id>http://massimocaliman.eu/articles/strutture-indicizzate-approfondimento</id>
+  <published>2014-10-04T00:45:33+02:00</published>
+  <updated>2014-10-04T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://massimocaliman.eu</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#Strutture%20indicizzate" term="Strutture indicizzate" /><category scheme="http://massimocaliman.eu/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <content type="html">
+  
+    &lt;p&gt;﻿Riprendiamo il post sulle strutture indicizzate per un approfondimento.
+Abbiamo visto che il &lt;strong&gt;Java Collection Framework&lt;/strong&gt; ci fornisce già praticamente qualunque struttura di cui possiamo aver bisogno per il nostro lavoro. Avete mai avuto la curiosità di vedere come vengono implementate queste strutture? Il codice sorgente è pubblico, lo potete scaricare insieme al JDK ad ogni release, noterete che spesso e volentieri non vi è nulla di fantascientifico nell’implementazione di strutture come &lt;code&gt;ArratList&lt;/code&gt;, per esempio la specifica di implementazione vista in pseudocodice nel post sulle strutture indicizzate precedente a questo nella sostanza non vi differisce molto. Quello che fa la differenza sono le ottimizzazioni.&lt;/p&gt;
+
+&lt;p&gt;Entriamo nel dettaglio dello pseudocodice della classe ArrayOrdinato, e vediamo come sviluppare alcune idee di implementazione reali in Java.
+Lo faremo senza l’illusione di realizzare qualcosa di migliore dell’implementazione di Sun/Oracle si intende.
+Le operazioni di insert e delete comprendono la fase di riallocazione dell’array, come effettuare nella realtà queste operazioni?&lt;/p&gt;
+
+&lt;p&gt;Una prima versione, un pò pedante potrebbe essere la seguente. Assumiamo per semplicità di esposizione che l’array sia di semplici &lt;code&gt;int&lt;/code&gt; e non si debba gestire una tupla (elemento,chiave).&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Realloc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Realloc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;S[&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;]=&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;realloc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dealloc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Realloc&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Realloc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        
+        &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;realloc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dealloc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;L’effetto è quello voluto, usando un array di appoggio &lt;code&gt;t&lt;/code&gt;, il metodo &lt;code&gt;main()&lt;/code&gt; mostra alcune chiamate di test.&lt;/p&gt;
+
+&lt;p&gt;Possiamo utilizzare qualcosa di già pronto come &lt;code&gt;System.arraycopy()&lt;/code&gt; per arrivare ad una release più compatta. Per semplicità riporto solo i metodi coinvolti nel refactoring &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;realloc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;arraycopy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;arraycopy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dealloc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;arraycopy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;arraycopy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A guardar bene il resto dello pseudocodice rimanente è piuttosto esplicito, a basso livello per così dire, e la sua implementazione non dovrebbe rappresentare uno sforzo particolare.&lt;/p&gt;
+
+&lt;p&gt;Rimandiamo ad un post conclusivo le restanti considerazioni e implementazioni, seppur parziali, ma prima vi invito a dare un occhiata proprio al codice di &lt;code&gt;ArrayList&lt;/code&gt; ed affini.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/strutture-indicizzate-approfondimento/&quot;&gt;Strutture indicizzate approfondimenti&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on October 04, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Code o Queue]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/code-o-queue/"/>
+  <id>http://massimocaliman.eu/articles/code-o-queue</id>
+  <published>2014-10-02T00:45:33+02:00</published>
+  <updated>2014-10-02T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://massimocaliman.eu</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#Code%20o%20Queue" term="Code o Queue" /><category scheme="http://massimocaliman.eu/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <content type="html">
+  
+    &lt;p&gt;﻿Riprendiamo la trattazione delle strutture dati elementari. Nei post precedenti abbiamo visto le strutture indicizzate,quelle collegate e le Pile o Stack,uno altro dei tipo base più ricorrenti è la Coda o Queue, una specifica in pseudolinguaggio è riportata sotto.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;tipo Coda
+dati
+una sequenza S di n elementi
+operazioni
+isEmpty&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;-&amp;gt;result, restituisce &lt;span class=&quot;nb&quot;&gt;true &lt;/span&gt;se S è vuota, &lt;span class=&quot;nb&quot;&gt;false &lt;/span&gt;altrimenti
+enqueue&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;elem e&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, aggiunge e come ultimo elemento di S
+dequeue&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;-&amp;gt;elem, toglie da S il primo elemento e lo restituisce
+first&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;-&amp;gt;elem, restituisce il primo elemento di S &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;senza toglierlo da S&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Una naturale implementazione in Java della specifica è fornita da un interfaccia come quella seguente&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Coda&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;enqueue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;E&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;E&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dequeue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;E&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Anche in questo caso possiamo realizzare un implementazione in vari modi, sia utilizzando strutture indicizzate che collegate. &lt;/p&gt;
+
+&lt;p&gt;Come per il gli Stack la via più naturale e veloce è quella di utilizzare le classi concrete derivanti dall’interfaccia Java &lt;code&gt;Deque&lt;/code&gt;.
+Anche in questo caso possiamo utilizzare i metodi di Deque relativi al suo comportamento come Queue.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;addLast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;offerLast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;removeFirst&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pollFirst&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;getFirst&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;peekFirst&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Un classe wrapper che renda più facile l’utilizzo è la seguente (utilizza &lt;code&gt;LinkedList&lt;/code&gt; in luogo di &lt;code&gt;ArrayDeque&lt;/code&gt;)&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;QueueImpl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;enqueue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;E&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addLast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;E&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dequeue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;poll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/code-o-queue/&quot;&gt;Code o Queue&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on October 02, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Pile o Stack]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/pile-o-stack/"/>
+  <id>http://massimocaliman.eu/articles/pile-o-stack</id>
+  <published>2014-10-01T00:45:33+02:00</published>
+  <updated>2014-10-01T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://massimocaliman.eu</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#Pile%20o%20Stack" term="Pile o Stack" /><category scheme="http://massimocaliman.eu/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <content type="html">
+  
+    &lt;p&gt;﻿
+Uno dei tipo base più ricorrente è la Pila o Stack, una specifica in pseudolinguaggio è riportata sotto.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;tipo: Pila
+dati: una sequenza S di n elementi
+operazioni
+isEmpty&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; -&amp;gt; result , &lt;span class=&quot;nv&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true &lt;/span&gt;sse &lt;span class=&quot;nv&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;O, &lt;span class=&quot;nb&quot;&gt;false &lt;/span&gt;altrimenti
+push&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;elem e&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; aggiunge e come ultimo elemento di S
+pop&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;-&amp;gt; elem , toglie da S l’ultimo elemento e lo restituisce
+top&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;-&amp;gt;elem restituisce l’ultimo elemento di S &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;senza toglierlo da S&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In Java potremmo rendere la specifica come un interfaccia &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Pila&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;E&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;E&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;E&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;L’uso dei generics mi permette di non definire l’interfaccia per un tipo specifico.&lt;/p&gt;
+
+&lt;p&gt;Anche in questo caso possiamo realizzare un implementazione in vari modi, sia utilizzando strutture indicizzate che collegate.. &lt;/p&gt;
+
+&lt;p&gt;Il JDK fornisce comunque un implementazione di tutto rispetto sia per risolvere il problema degli Stack che delle Queue e lo fa con un unica interfaccia &lt;code&gt;Deque&amp;lt;E&amp;gt;&lt;/code&gt; da cui derivano le classi concrete &lt;code&gt;ArrayDeque&lt;/code&gt;, &lt;code&gt;ConcurrentLinkedDeque&lt;/code&gt;, &lt;code&gt;LinkedBlockingDeque&lt;/code&gt;, &lt;code&gt;LinkedList&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Deque definisce metodi sia per realizzare uno Stack che una Queue, vi rimando al javadoc per una trattazione più esauriente e mi limito a riportarne la lista.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Per il metodo &lt;code&gt;push(e)&lt;/code&gt; abbiamo &lt;code&gt;addFirst(e)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Per il &lt;code&gt;pop()&lt;/code&gt; abbiamo &lt;code&gt;removeFirst()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Per il &lt;code&gt;peek()&lt;/code&gt; o &lt;code&gt;top()&lt;/code&gt; invece &lt;code&gt;peekFirst()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;Deque&amp;lt;E&amp;gt;&lt;/code&gt; implementa l’interfaccia &lt;code&gt;Queue&amp;lt;E&amp;gt;&lt;/code&gt; , interfaccia implementata anche dalle classi
+&lt;code&gt;AbstractQueue&lt;/code&gt;, &lt;code&gt;ArrayBlockingQueue&lt;/code&gt;, &lt;code&gt;ArrayDeque&lt;/code&gt;, &lt;code&gt;ConcurrentLinkedDeque&lt;/code&gt;, &lt;code&gt;ConcurrentLinkedQueue&lt;/code&gt;, &lt;code&gt;DelayQueue&lt;/code&gt;, &lt;code&gt;LinkedBlockingDeque&lt;/code&gt;, &lt;code&gt;LinkedBlockingQueue&lt;/code&gt;, &lt;code&gt;LinkedList&lt;/code&gt;, &lt;code&gt;LinkedTransferQueue&lt;/code&gt;, &lt;code&gt;PriorityBlockingQueue&lt;/code&gt;, &lt;code&gt;PriorityQueue&lt;/code&gt;,&lt;code&gt;SynchronousQueue&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;La via più facile è utilizzare la vecchia classe &lt;code&gt;Stack&lt;/code&gt; di &lt;code&gt;java.util&lt;/code&gt;, ma non ne avremo grandi vantaggi, deriva dalla classe &lt;code&gt;Vector&lt;/code&gt; ed è disponibile dalla versione 1.0 del JDK&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lifo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;lifo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lifo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lifo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La classe consigliata è &lt;code&gt;ArrayDeque&amp;lt;E&amp;gt;&lt;/code&gt; un semplice caso d’uso è il seguente&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Deque&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayDeque&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;peek&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/pile-o-stack/&quot;&gt;Pile o Stack&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on October 01, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Strutture collegate]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/strutture-collegate/"/>
+  <id>http://massimocaliman.eu/articles/strutture-collegate</id>
+  <published>2014-09-30T00:45:33+02:00</published>
+  <updated>2014-09-30T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://massimocaliman.eu</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#Strutture%20collegate" term="Strutture collegate" /><category scheme="http://massimocaliman.eu/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <content type="html">
+  
+    &lt;p&gt;﻿I costituenti di base di una struttura collegata sono i record che come le celle degli array sono numerati e contengono ciascuno una collezione di oggetti. I numeri associati ai record sono i loro indirizzi in memoria (quindi globali nell’ambito del programma e non locali come nel caso degli array)
+Gli indirizzi in memoria non sono necessariamente consecutivi e sono costruiti in maniera dinamica.&lt;/p&gt;
+
+&lt;p&gt;Se un record A contiene l’indirizzo di un altro record B diremo che esiste un collegamento tra A e B realizzato tramite un puntatore.
+I puntatori permettono di esplorare una struttura collegata saltando di record in record è importante che ci sia un record da cui è possibile raggiungere tutti gli altri. 
+Tale record permette di inserire e cancellare agevolmente elementi. La struttura è aggiornanata tramite i puntatori (molto più sono più versatili degli array).&lt;/p&gt;
+
+&lt;p&gt;proprietà forte: è possibile aggiungere o togliere record ad una struttura collegata
+proprietà debole: gli indirizzi dei record di una struttura collegata non sono necessariamente consecutivi&lt;/p&gt;
+
+&lt;p&gt;Per cancellare record se non ho già indirizzo devo però effettuare una ricerca.&lt;/p&gt;
+
+&lt;p&gt;Una specifica per questo tipo di struttura è riportata sotto&lt;/p&gt;
+
+&lt;p&gt;classe StrutturaCollegata implementa Dizionario
+dati: S(n) = ThetaGrande (n)
+Una collezione di n record contenenti ciascuno una quadrupla (elem,chiave,next,prev)
+next e prev puntatori al successivo e al precedente record della collezione. Manteniamo inoltre un puntatore list che contiene l’indirizzo di un record se la collezione non è vuota e null altrimenti.&lt;/p&gt;
+
+&lt;p&gt;operazioni&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;insert&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;elem e,chiave k&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; T&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;o&quot;&gt;)=&lt;/span&gt;O&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+1.viene creato un record p con elemento e, chiave k
+2.if &lt;span class=&quot;nv&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;null &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;   &lt;/span&gt;p.next&amp;lt;-p
+   p.prev&amp;lt;-p
+   list&amp;lt;-p
+&lt;span class=&quot;k&quot;&gt;else &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;   &lt;/span&gt;si collega il record p tra list e list.next effettuando
+   p.next&amp;lt;-list.next
+   list.next.prev&amp;lt;-p
+   p.prev&amp;lt;-list
+   list.next&amp;lt;-p&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;trattandosi di una struttura collegata doppiamente linkata (doubly linked list) in fase di implementazione si debbono tenere presenti alcuni casi limite come ad esempio cancellazione dell’unico elemento presente in lista ecc.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;delete&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;chiave k&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; T&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;o&quot;&gt;)=&lt;/span&gt;O&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+1.si trova il record p con chiave k come nella search
+2.si effettua
+  p.prev.next&amp;lt;-p.next &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;il next del precedente di p punta al successore di p&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  p.next.prev&amp;lt;-p.prev &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;il prev del successore di p punta a prececessore di p&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+3.si distrugge il record p&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;search&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;chiave k&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; -&amp;gt; elem T&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;o&quot;&gt;)=&lt;/span&gt;O&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; null &lt;span class=&quot;k&quot;&gt;then return &lt;/span&gt;null
+&lt;span class=&quot;k&quot;&gt;else &lt;/span&gt;
+si scandisce la struttura saltando di record in record con p&amp;lt;-p.next fino a quando non diventa &lt;span class=&quot;nv&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;list 
+verificando se qualche p ha chiave k in caso positivo si restituisce l’elemento trovato altrimenti &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;null&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Per realizzare un implementazione in Java a partire dalla specifica vista sopra come prima cosa abbiamo bisogno realizzare una classe per modellare i record, ma per farlo dobbiamo anche modellare il contenuto informativo con una classe Info o Tuple, semplifichiamo in questa prima fase di analisi e supponiamo che sia la chiave (intera) che il valore (stringa) siano attributi della classe record stessa. &lt;/p&gt;
+
+&lt;p&gt;In altre parole evitiamo di gestire qualcosa del genere&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Tuple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;V&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Tuple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Tuple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;K&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;V&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Veniamo alla nostra classe &lt;code&gt;Record&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Record&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Record&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Record&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Avremmo potuto adottare già una versione generica come ad esempio&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RecordGen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;V&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Record&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Record&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/strutture-collegate/&quot;&gt;Strutture collegate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on September 30, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Strutture indicizzate]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/strutture-indicizzate/"/>
+  <id>http://massimocaliman.eu/articles/strutture-indicizzate</id>
+  <published>2014-09-29T00:45:33+02:00</published>
+  <updated>2014-09-29T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://massimocaliman.eu</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#Strutture%20indicizzate" term="Strutture indicizzate" /><category scheme="http://massimocaliman.eu/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <content type="html">
+  
+    &lt;p&gt;﻿Le strutture indicizzate sono collezioni di celle numerate che possono contenere elementi di tipo prestabilito. Assumeremo che in un array di dimensione h gli indici possano andare da 0 a h-1 o da 1 a h.&lt;/p&gt;
+
+&lt;p&gt;Normalmente si definiscono due proprietà, una comunemente detta forte l’altra debole.&lt;/p&gt;
+
+&lt;p&gt;proprietà forte: gli indici delle celle di un array sono numeri consecutivi.
+proprietà debole: non è possibile aggiungere nuove celle ad un array.&lt;/p&gt;
+
+&lt;p&gt;Una possibile implementazione di un array ordinato è riportata sotto (ed è un implementazione del tipo di dato dizionario)&lt;/p&gt;
+
+&lt;p&gt;classe: ArrayOrdinato implementa Dizionario
+dati: un array S di dimensione n contenente n coppie (elem,chiave) S(n) = Tetagrande(n)&lt;/p&gt;
+
+&lt;p&gt;In pratica non usiamo indici i (numerici) come  chiave ma come cella dove memorizzare la coppia (e,k)&lt;/p&gt;
+
+&lt;p&gt;Vediamo ora le operazioni comunemente definite su un dizionario&lt;/p&gt;
+
+&lt;p&gt;insert(elem e,chiave k) T(n) = O(n)&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Rialloca S aumentando la dimensione n di 1 (cioè&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;=&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;+ 1 ed n = n+1)&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Cerca i t.c. k&amp;lt;=S[i].chiave (è ordinato!)&lt;/li&gt;
+  &lt;li&gt;Pone S[j]&amp;lt;-S[j-1] per ogni j in [n-1,i+1] e pone S[i]&amp;lt;-(e,k)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In pratica sapendo che è ordinato basta che riallochiamo di una cella l’array,traslando il contenuto delle celle da i a n nelle nuove posizioni i+1 a n+1.&lt;/p&gt;
+
+&lt;p&gt;Identificata la posizione che deve occupare la coppia (e,k) da inserire, traslo le celle da i+1 in modo da liberare la cella i e mantenere l’ordinamento.&lt;/p&gt;
+
+&lt;p&gt;delete(chiave k) T(n)=O(n)&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Trovo l’indice i della coppia con chiave k in S ovvero trovo i t.c. S[i] = (e,k) dove k è quello dato. In altri termini trovo S[i].chiave=k&lt;/li&gt;
+  &lt;li&gt;Pone S[j]&amp;lt;-S[j+1] per ogni j, j in i,…,n-2&lt;/li&gt;
+  &lt;li&gt;Rialloca S diminuendo la dimensione di 1 (ho tolto un elemento e posso eliminare l’ultima cella dopo che ho traslato gli elementi&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;search(chiave k) -&amp;gt; elem T(n) = O(log n)&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Esegue l’algoritmo di ricerca binaria su S per verificare se S contiene k&lt;/li&gt;
+  &lt;li&gt;Se trova ritorna elemento altrimenti null&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Nel linguaggio Java la naturale implementazione è fornita tramite gli array che possono contenere anche oggetti oltre i tipi base, quindi anche coppie o tuple del tipo &lt;code&gt;&amp;lt;K,V&amp;gt;&lt;/code&gt; cioè coppie (chiave,valore)&lt;/p&gt;
+
+&lt;p&gt;Oltre agli array, struttura di base del linguaggio, possiamo ovviamente utilizzare le liste per esempio gli &lt;code&gt;ArrayList&lt;/code&gt; che adottano propriò questo tipo di filosofia più alcuni accorgimenti atti a rendere l’implementazione più efficiente.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/strutture-indicizzate/&quot;&gt;Strutture indicizzate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on September 29, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1122,497 +1726,6 @@ lo puoi usare per realizzare ogni cosa. I Sistemi Operativi i  compilatori,inter
 
   
   &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 4&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Considerazioni su alcuni Linguaggi di Programmazione Parte 3]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/"/>
-  <id>http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3</id>
-  <published>2014-07-12T00:45:33+02:00</published>
-  <updated>2014-07-12T00:45:33+02:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://massimocaliman.eu/tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#COBOL" term="COBOL" /><category scheme="http://massimocaliman.eu/tags/#BASIC" term="BASIC" /><category scheme="http://massimocaliman.eu/tags/#PHP" term="PHP" />
-  <content type="html">
-  
-    &lt;p&gt;I bravi programmatori sanno cosa scrivere, i migliori sanno cosa riscrivere (e riusare). 
-&lt;em&gt;(Eric Steven Raymond)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;In diversi articoli online ho visto paragonare Java al COBOL del 21 secolo, parallelamente PHP al VisualBasic del 21 secolo,il parere può calzare in alcuni contesti, Java è divenuto il  linguaggio di sviluppo più utilizzato negli ultimi 13 anni, il parco di applicazioni sviluppato in questo linguaggio raggiungerà la massa critica di quelle sviluppate in COBOL negli ultimi 30 anni, PHP è semplice e il motivo di analogia con Visual Basic è evidente.&lt;/p&gt;
-
-&lt;p&gt;A parte questo il paragone non è dei più felici (sia per Java che per PHP), sappiamo cosa ne pensava pubblicamente  il grande Prof.Edsger Dijkstra di entrambi i linguaggi di programmazione.&lt;/p&gt;
-
-&lt;p&gt;“The use of COBOL cripples the mind; its teaching should, therefore, be regarded as a criminal offence.” &lt;/p&gt;
-
-&lt;p&gt;“It is practically impossible to teach good programming to students that have had a prior exposure to BASIC: as potential programmers they are mentally mutilated beyond hope of regeneration”&lt;/p&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 3&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 12, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Considerazioni su alcuni Linguaggi di Programmazione Parte 2]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/"/>
-  <id>http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2</id>
-  <published>2014-07-11T00:45:33+02:00</published>
-  <updated>2014-07-11T00:45:33+02:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://massimocaliman.eu/tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#C" term="C" /><category scheme="http://massimocaliman.eu/tags/#C++" term="C++" /><category scheme="http://massimocaliman.eu/tags/#C%23" term="C#" /><category scheme="http://massimocaliman.eu/tags/#Ada" term="Ada" />
-  <content type="html">
-  
-    &lt;p&gt;Ogni buon lavoro software nasce da un problema personale di uno sviluppatore. 
-&lt;em&gt;(Eric Steven Raymond)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Java è rappresentativo di ciò che chiamereri linguaggi di categoria industriale/enterprise. Questa tipo di linguaggi di programmazione sono l’ottimale per applicazioni con più persone che lavorano al progetto. In questo tipo di progetti essere formale e attento può avere un impatto notevole..&lt;/p&gt;
-
-&lt;p&gt;Oltre a Java in questa categoria includo C++,C,C# e Ada. Ada è usato soprattuto in ambito militare.&lt;/p&gt;
-
-&lt;p&gt;Un altro fattore non trascurabile è che Java è il linguaggio di programmazione più insegnatato e popolare. Java è utilizzato per sistemi di grandi dimensioni da grandi gruppi di persone inoltre se si conosce C ++ l’apprendimento di Java è facilitato (a parere personale vale anche il viceversa).&lt;/p&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 2&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 11, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Considerazioni su alcuni Linguaggi di Programmazione Parte 1]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/"/>
-  <id>http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1</id>
-  <published>2014-07-10T00:45:33+02:00</published>
-  <updated>2014-07-10T00:45:33+02:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://massimocaliman.eu/tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://massimocaliman.eu/tags/#Python" term="Python" /><category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#C" term="C" /><category scheme="http://massimocaliman.eu/tags/#C++" term="C++" /><category scheme="http://massimocaliman.eu/tags/#C%23" term="C#" /><category scheme="http://massimocaliman.eu/tags/#PHP" term="PHP" /><category scheme="http://massimocaliman.eu/tags/#Ruby" term="Ruby" /><category scheme="http://massimocaliman.eu/tags/#Perl" term="Perl" />
-  <content type="html">
-  
-    &lt;p&gt;Mai fidarsi di un computer che non è possibile gettare dalla finestra. 
-&lt;em&gt;(Steve Wozniak)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Python è un linguaggio piacevole per iniziare la programmazione per diverse ragioni.
-La sintassi è essenziale,chiara,non presenta orpelli sintattici, Java invece ha molto zucchero sintattico. &lt;/p&gt;
-
-&lt;p&gt;E’possibile scrivere programmi potenti e interessanti senza un sacco di lavoro. Tuttavia Python è un linguaggio dinamico e ne ha i pregi e difetti. Si potrebbe pensare a Python come un linguaggio abbastanza informale. Altri linguaggi, come Java,C# e C + + sono più formali.&lt;/p&gt;
-
-&lt;p&gt;Questi tre linguaggi di programmazione  hanno alcuni vantaggi evidenti. In primo luogo, la velocità: per i programmi molto grandi Java,C# e C + + danno migliori prestazioni. In secondo luogo la loro manutenzione è più facile.&lt;/p&gt;
-
-&lt;p&gt;Molto di ciò che rende facile usare Python è che si devono ricordare certe cose. Ad esempio se si imposta una variabile &lt;code&gt;t&lt;/code&gt; come riferimento a un intero o un oggetto di un tipo &lt;code&gt;T&lt;/code&gt;, e si ci dimentica poi che &lt;code&gt;t&lt;/code&gt; è di questo tipo, poi si tenta di richiamare un metodo per una stringa su di esso,si otterrà un errore. Java,C# e C + + vi proteggono da questo tipo di errori,vi costringono a dichiarare in anticipo il tipo di oggetto e di ciascuna variabile prima di poter far riferimento ad essa.a&lt;/p&gt;
-
-&lt;p&gt;Python è rappresentativo di una intera classe di linguaggi, a volte indicato come linguaggi di scripting come PHP,Ruby e Perl. &lt;/p&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 1&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 10, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[La gestione delle stringhe in Java]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/la-gestione-delle-stringhe-in-java/"/>
-  <id>http://massimocaliman.eu/articles/la-gestione-delle-stringhe-in-java</id>
-  <published>2014-07-07T00:45:33+02:00</published>
-  <updated>2014-07-07T00:45:33+02:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#String" term="String" /><category scheme="http://massimocaliman.eu/tags/#StringBuffer" term="StringBuffer" /><category scheme="http://massimocaliman.eu/tags/#StringBuilder" term="StringBuilder" />
-  <content type="html">
-  
-    &lt;p&gt;L’ingegnere quantistico Seth Lloyd è convinto che l’universo sia un gigantesco computer. Speriamo non faccia girare Windows. &lt;em&gt;(Kevin Kelly)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Le stringhe sono il primo oggetto che normalmente si impara a gestire con un linguaggio di programmazione, in Java per l’oggetto principe in questo caso è String o più propriamente del pachage &lt;code&gt;java.lang&lt;/code&gt;, a seguire le forme più evolute come &lt;code&gt;StringBuffer&lt;/code&gt; e &lt;code&gt;StringBuilder&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Un oggetto di tipo &lt;code&gt;String&lt;/code&gt; è immutabile (immutable), cosa significa esattamente?
-Immutabile nel senso di memoria. Esso crea nuovi oggetti ogni volta che si creano stringhe o si assegna una nuova stringa / modificare il valore. Ecco perché si consiglia di fare attenzione quando si usano le stringhe.&lt;/p&gt;
-
-&lt;p&gt;Prendiamo ad esempio il seguente frammento di codice&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;hello boys!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;hi guys!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;con l’assegnazione &lt;code&gt;a = “hi guys!”&lt;/code&gt; ho creato un nuovo oggetto di tipo &lt;code&gt;String&lt;/code&gt;, non ho modificato lo stesso creato con &lt;code&gt;new String(“hello boys”);&lt;/code&gt; anche se non ho utilizzato il costruttore con parametro.&lt;/p&gt;
-
-&lt;p&gt;In Java le stringhe sono quindi costanti, locazioni di memoria che contengono caratteri (come nel linguaggio C), immutabile è sinonimo di immodificabile.&lt;/p&gt;
-
-&lt;p&gt;Le stringhe sono oggetti di uso comune quindi i progettisti iniziali hanno pensato bene di realizzare alcune scorciatoie per il loro utilizzo quotidiano che non obbligasse ad utilizzare l’approccio puro ad oggetti attraverso metodi da richiamare sulle istanze.&lt;/p&gt;
-
-&lt;p&gt;Torniamo alla nostra stringa semplicemente denominata &lt;code&gt;a&lt;/code&gt;, l’espressione &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;hi&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; guys!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;effettua la concatenazione delle stringhe &lt;code&gt;hi&lt;/code&gt; e &lt;code&gt;guys!&lt;/code&gt; tramite l’operatore &lt;code&gt;+&lt;/code&gt;, operatore che normalmente utilizziamo per la somma di due numeri, siamo di fronte all’overloading di un operatore, come in C++.&lt;/p&gt;
-
-&lt;p&gt;L’overloading dell operatore &lt;code&gt;+&lt;/code&gt; ci permette di evitare la forma pura ad oggetti&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;hi&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot; guys!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;meno pratica, più formale certamente nonché object oriented.
-Le due forme &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;bye&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;e&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bye&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;sono equivalenti, l’assegnazione diretta surroga la chiamata esplicita del costruttore &lt;code&gt;String(String)&lt;/code&gt; che costruisce un nuovo oggetto di tipo &lt;code&gt;String&lt;/code&gt; a partire da una stringa esistente passata come parametro.&lt;/p&gt;
-
-&lt;p&gt;Gli oggetti di tipo &lt;code&gt;String&lt;/code&gt; non sono array di caratteri quindi non possiamo applicarvi gli operatori classici degli array come ad esempio &lt;code&gt;[]&lt;/code&gt; quindi non possiamo fare cose del tipo &lt;code&gt;string[index]&lt;/code&gt; dove string è un oggetto instanziato dalla classe &lt;code&gt;String&lt;/code&gt; e index è un intero maggiore o uguale a 0 che che indica la posizione del carattere a cui vogliamo accedere. 
-Per essere ancora più chiari, dato l’ oggetto c di tipo &lt;code&gt;String&lt;/code&gt; del frammento di codice riportato sopra non possiamo scrivere c[0] per accedere al primo elemento che ha valore b, Il compilatore ci segnalerà un errore&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thread&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;main&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RuntimeException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Uncompilable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;required&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;but&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Non possiamo quindi neppure fare qualcosa come&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;per sovrascrivere il valore del carattere &lt;code&gt;b&lt;/code&gt; con il carattere &lt;code&gt;c&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Per accedere all’elemento di indice 0 dobbiamo necessariamente utilizzare il metodo &lt;code&gt;charAt()&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;che ritornerà il carattere &lt;code&gt;b&lt;/code&gt; a video, per esempio attraverso l’uso del metodo &lt;code&gt;System.out.println()&lt;/code&gt; per stampare sulla console.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;La classe &lt;code&gt;String&lt;/code&gt; rende disponibile molti metodi tra cui quelli di uso più comune permettono restituire la lunghezza della stringa&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lenofc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;nel nostro caso lenofc conterrà il valore intero 3 dato che &lt;code&gt;“bye”.length()&lt;/code&gt; è 3 e quindi il predicato  &lt;code&gt;“bye”.length()==3&lt;/code&gt; ha valore &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Per controllare l’uguaglianza di due stringhe si può invece utilizzare il metodo &lt;code&gt;equals()&lt;/code&gt; o &lt;code&gt;equalsIgnoreCase()&lt;/code&gt; nel caso si desideri un controllo case insensitivi.
-Le espressioni sotto ritornano entrambe il valore &lt;code&gt;true&lt;/code&gt; per le variabili booleane b1 e b2&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bye&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equalsIgnoreCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Bye&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Volendo maggiore flessibilità in un operazione di confronto di stringhe possiamo utilizzare il metodo &lt;code&gt;compareTo()&lt;/code&gt;  nella forma&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;compareTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;comp == 0 se a è uguale b &lt;/li&gt;
-  &lt;li&gt;comp&amp;lt;0 se a&amp;lt;b, &lt;/li&gt;
-  &lt;li&gt;comp&amp;gt;0 se a&amp;gt;b.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Il valore intero restituito è l’indice del primo carattere diverso.
-nel caso di esempio il valore per comp è 6 essendo a uguale a ”hi guys!” e b uguale a ”bye”&lt;/p&gt;
-
-&lt;p&gt;attenzione &lt;code&gt;a.equals(b)&lt;/code&gt; è ovviamente diverso da &lt;code&gt;a == b&lt;/code&gt; &lt;/p&gt;
-
-&lt;p&gt;Altri metodi di comune utilizzo sono &lt;code&gt;substring()&lt;/code&gt;, &lt;code&gt;replace()&lt;/code&gt;, naturalmente anche questi metodi non modificano l’oggetto su cui sono chiamati ma ne creano e ritornano uno nuovo.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// restituisce la sottostringa che va da 10  a 17 (18-1) &lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// restituisce una stringa con tutte le ‘E’  sostituite con ‘X’&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;dato il frammento di codice &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;ab123cd&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;avremo stampate nella console le 3 componenti “ab”,“123” e “cd”
-verificando che la prima e l’ultima sono costituite esclusivamente da lettere e la seconda solo da numeri abbiamo di fatto realizzato un controllo semplificato del formato di una targa europea.&lt;/p&gt;
-
-&lt;p&gt;per essere più completi il codice potrebbe essere il seguente&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;valid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isLetter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; 
-&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isLetter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isDigit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isDigit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isDigit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; 
-&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isLetter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Character&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isLetter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Character è una classe che ci permette di effettuare semplici controlli ma non solo, vi rimando alla documentazione ufficiale per i dettagli.&lt;/p&gt;
-
-&lt;p&gt;Per controlli e validazioni sulle stringhe i semplici i metodi fino ad ora esposti sono più che sufficienti, ma nel caso sia abbia necessità di scomodare le espressioni regolari si può ricorrere al metodo &lt;code&gt;matches()&lt;/code&gt; che presa un espressione regolare regex ritorna &lt;code&gt;true&lt;/code&gt; se la stringa su cui è richiamato la rispetta.&lt;/p&gt;
-
-&lt;p&gt;Per controllare la validità rispetto al formato di una targa europea possiamo utilizzare&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isValid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;^[a-zA-Z]{2}[0-9]{3,4}[a-zA-Z]{2}$&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Per la validazione formale di un indirizzo email possiamo utilizzare per esempio l’espressione regolare&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;^[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+]+(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-]+)*&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-]+(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]+)*(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,})&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Per la validazione di importi in dollari del tipo $1,234,567.89&lt;/td&gt;
-      &lt;td&gt;1234567.89&lt;/td&gt;
-      &lt;td&gt;$9.99&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;^(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|)([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})*|([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*))(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Per quelli in valuta euro nella forma -123123,12 €&lt;/td&gt;
-      &lt;td&gt;12312432134&lt;/td&gt;
-      &lt;td&gt;-12.234.123,23&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*-?((&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})*)|&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*)(,&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})?&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u20AC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)?&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Data e ora in formato europeo come 29/02/2008 15:30&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;(((((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])/(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13578&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]))|((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)/(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;469&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))|((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]))/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)/([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;((([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])|([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]))[:][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))|(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/(([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;48&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2468&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;048&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13579&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])|((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;48&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2468&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;048&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]|[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3579&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;00&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;((([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])|([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]))[:][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Solo date nella della forma 29/02/2008&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;^(?:(?:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])|(?:[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])/(?:(?:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])|(?:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;012&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]))/(?:(?:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Per la validazione di formato (non del codice di controllo) di un codice fiscale italiano&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;^[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Za&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;A questo punto abbiamo visto già molto materiale che ci permette di utilizzare con le stringhe per elaborazioni e controlli che si presentano all’ordine del giorno nella carriera di uno sviluppatore.&lt;/p&gt;
-
-&lt;p&gt;L’uso di &lt;code&gt;String&lt;/code&gt; però non si presta nei casi in cui la manipolazione della stessa è l’attività principale, a questo scopo sono presenti le classi &lt;code&gt;StringBuffer&lt;/code&gt; e &lt;code&gt;StringBuilder&lt;/code&gt;, ma più conosciuta e anziana in quanto a cittadinanza nel jdk è la &lt;code&gt;StringBuffer&lt;/code&gt; è ed sincronizzata qualora non sia necessario gestire l’accesso condiviso della risorsa l’utilizzo di StringBuilder garantisce maggiore velocità e ci permettere di non creare una moltitudine di oggetti &lt;code&gt;String&lt;/code&gt; spazzatura su cui il garbage collector dovrà impiegare stupidamente del tempo.&lt;/p&gt;
-
-&lt;p&gt;Per la precisione tutti i metodi di &lt;code&gt;StringBuffer&lt;/code&gt; sono syncronized ovvero sincronizzati il che la rende thread-safe e meno performante di una sua versione non thread-safe, utilizzate &lt;code&gt;StringBuilder&lt;/code&gt; nei casi in cui non sia presente criticità legata alla gestione dei thread i metodi esposti sono praticamente gli stessi per entrambe le classi.&lt;/p&gt;
-
-&lt;p&gt;I metodi di utilizzo più comuni per entrambe le classi sono rispettivamente &lt;code&gt;append()&lt;/code&gt;,&lt;code&gt;insert()&lt;/code&gt; e &lt;code&gt;delete()&lt;/code&gt; nonchè &lt;code&gt;charAt()&lt;/code&gt; oltre al metodo &lt;code&gt;toString()&lt;/code&gt; che ci permette di ottenere una classica stringa dai nostri oggetti di tipo &lt;code&gt;StringBuffer&lt;/code&gt; e &lt;code&gt;StringBuilder&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Un utilizzo comune degli oggetti di tipo &lt;code&gt;StringBuilder&lt;/code&gt; e &lt;code&gt;StringBuffer&lt;/code&gt; è la costruzione di stringhe dinamicamente in base a condizioni presenti nel nostro codice.&lt;/p&gt;
-
-&lt;p&gt;Sotto un esempio piuttosto semplice di utilizzo elementare per i tre metodi &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;01234567900&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&amp;#39;8&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//inserisce 8 alla giusta posizione&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//cancella le due ultime cifre&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//Stampa 0123456789&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Lungi dall’essere una trattazione esaustiva dell’argomento e delle classi &lt;code&gt;String&lt;/code&gt;,&lt;code&gt;StringBuffer&lt;/code&gt; e &lt;code&gt;StringBuilder&lt;/code&gt; quanto presentato copre la maggior parte dei casi d’uso, unica raccomandazione valida sempre e di esaminare la documentazione ufficiale sempre prima di reinventare la ruota. &lt;/p&gt;
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/la-gestione-delle-stringhe-in-java/&quot;&gt;La gestione delle stringhe in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on July 07, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Il cms è morto viva jekyll!]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/il-cms-e-morto-viva-jekyll/"/>
-  <id>http://massimocaliman.eu/articles/il-cms-e-morto-viva-jekyll</id>
-  <published>2014-06-23T00:45:33+02:00</published>
-  <updated>2014-06-23T00:45:33+02:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://massimocaliman.eu/tags/#Jekyll" term="Jekyll" /><category scheme="http://massimocaliman.eu/tags/#CMS" term="CMS" /><category scheme="http://massimocaliman.eu/tags/#Blog" term="Blog" />
-  <content type="html">
-  
-    &lt;p&gt;Il test di un programma può essere usato per mostrare la presenza di bug, ma mai per mostrare la loro assenza.
-&lt;em&gt;(Edsger Dijkstra, Structured Programming, 1972)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Il titolo è provocatorio e al limite del capzioso. I sistemi CMS ovviamente non moriranno mai, almeno lo spero, progettarli e realizzarli mi dato lavoro per molti anni e penso lo farà ancora, ma per molti di noi sono un elemento pesante da gestire, distraggono dall’obbiettivo come i word processor. Una domanda frequente è perché usarli quando per la maggior parte dei compiti è sufficiente un normale editor di testo? Per il blogging nel corso degli anni ho provato un pò di tutto: blogger, wordpress e altri, nella maggior parte dei casi html statico è soddisfacente per molti di noi, di certo lo è per il mio blog.&lt;/p&gt;
-
-&lt;p&gt;Devo dire che, per pura casualità, sono incappato googlando in un blog fatto con jekyll e che parlava di jekyll, ho cominciato quindi a sperimentare e sono rimasto sorpreso: la produttiva è salita alle stelle, non solo non avevo bisogno di essere online per fare ogni cosa, ma la facevo meglio perché mi concentravo solo sul contenuto di quello che volevo comunicare, inoltre l’hosting per siti statici è risultato economicamente vantaggioso.&lt;/p&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/il-cms-e-morto-viva-jekyll/&quot;&gt;Il cms è morto viva jekyll!&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on June 23, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Installare Jekyll su ubuntu 14.04.]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/install-jekyll/"/>
-  <id>http://massimocaliman.eu/articles/install-jekyll</id>
-  <published>2014-06-08T00:45:33+02:00</published>
-  <updated>2014-06-08T00:45:33+02:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://massimocaliman.eu/tags/#Jekyll" term="Jekyll" />
-  <content type="html">
-  
-    &lt;p&gt;Per gli hacker un computer significa anche intrattenimento. Non i giochi, non le belle immagini sulla Rete. Il computer in sé è intrattenimento.
-&lt;em&gt;(Linus Torvalds, in Pekka Himanen, L’etica hacker e lo spirito dell’età dell’informazione, 2001)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Cosa ci serve&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Ruby.&lt;/li&gt;
-  &lt;li&gt;RubyGems.&lt;/li&gt;
-  &lt;li&gt;Ubuntu 14.04.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Per prima cosa installiamo Ruby.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo apt-get install ruby ruby-dev make&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Verifichiamo la versione di ruby installata con il comando.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ruby -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Per essere sicuro che tutto funzioni dovresti ottenere la seguente versione di Ruby.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ruby 1.9.3p484 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2013-11-22 revision 43786&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;x86_64-linux&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Un piccolo workaround per fixare la gem CoffeeScript… ci serve il compilatore g++…&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo apt-get install g++&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;… e therubyracer.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo gem install therubyracer --nols-rdoc --no-ri&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Installiamo finalmente jekyll.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo gem install jekyll&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Verifichiamo la versione di jekyll installata con il comando.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;jekyll -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Dovresti ottenere qualcosa come.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;jekyll 2.0.3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Visita &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; per maggiori informazioni su come ottenere il massimo da Jekyll.&lt;/p&gt;
-
-&lt;p&gt;Trovi Jekyll su GitHub all’indirizzo &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/install-jekyll/&quot;&gt;Installare Jekyll su ubuntu 14.04.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on June 08, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Effettuare la login SSH senza digitare la password.]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/Effettuare-la-login-ssh-senza-digitare-la-password/"/>
-  <id>http://massimocaliman.eu/articles/Effettuare-la-login-ssh-senza-digitare-la-password</id>
-  <published>2014-01-12T23:45:33+01:00</published>
-  <updated>2014-01-12T23:45:33+01:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://massimocaliman.eu/tags/#linux" term="linux" /><category scheme="http://massimocaliman.eu/tags/#ssh" term="ssh" /><category scheme="http://massimocaliman.eu/tags/#openssh" term="openssh" />
-  <content type="html">
-  
-    &lt;p&gt;Se si vuole usare &lt;code&gt;Linux&lt;/code&gt; e &lt;code&gt;OpenSSH&lt;/code&gt; per automatizzare delle attività e si ha la necessità di poter effettuare la login automatica dal un host &lt;code&gt;A&lt;/code&gt; con utente &lt;code&gt;a&lt;/code&gt; ad un host &lt;code&gt;B&lt;/code&gt; con utente &lt;code&gt;b&lt;/code&gt; senza inserire nessuna password questi sono i passo necessari: &lt;/p&gt;
-
-&lt;p&gt;Per prima cosa effettuare la login in su &lt;code&gt;A&lt;/code&gt; come utente &lt;code&gt;a&lt;/code&gt; e genera una coppia di chiavi di autenticazione (non inserire un passphrase)&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;a@A:~&amp;gt; ssh-keygen -t rsa
-
-Generating public/private rsa key pair.
-Enter file in which to save the key &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;/home/a/.ssh/id_rsa&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: 
-Created directory &lt;span class=&quot;s1&quot;&gt;&amp;#39;/home/a/.ssh&amp;#39;&lt;/span&gt;.
-Enter passphrase &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;empty &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;no passphrase&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: 
-Enter same passphrase again: 
-Your identification has been saved in /home/a/.ssh/id_rsa.
-Your public key has been saved in /home/a/.ssh/id_rsa.pub.
-The key fingerprint is:
-xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx a@A&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Ora usa ssh per creare una directory &lt;code&gt;~/.ssh&lt;/code&gt; come utente &lt;code&gt;b&lt;/code&gt; su &lt;code&gt;B&lt;/code&gt; &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;a@A:~&amp;gt; ssh b@B mkdir -p .ssh
-b@B&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s password:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Infine accoda la nuova &lt;strong&gt;public key&lt;/strong&gt; dell’utente &lt;code&gt;a&lt;/code&gt; su &lt;code&gt;b@B:.ssh/authorized_keys&lt;/code&gt; e inserisci la password di &lt;code&gt;b&lt;/code&gt; l’ultima volta&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;a@A:~&amp;gt; cat .ssh/id_rsa.pub &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; ssh b@B &lt;span class=&quot;s1&quot;&gt;&amp;#39;cat &amp;gt;&amp;gt; .ssh/authorized_keys&amp;#39;&lt;/span&gt;
-b@B&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s password:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Da questo momento puoi effettuare la login in &lt;code&gt;B&lt;/code&gt; come utente &lt;code&gt;b&lt;/code&gt; da &lt;code&gt;A&lt;/code&gt; come utente &lt;code&gt;a&lt;/code&gt; senza password&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;a@A:~&amp;gt; ssh b@B&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/Effettuare-la-login-ssh-senza-digitare-la-password/&quot;&gt;Effettuare la login SSH senza digitare la password.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 12, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[GlassFish V3: la console amministrazione prendendo troppo tempo per caricare.]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.eu/articles/glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/"/>
-  <id>http://massimocaliman.eu/articles/glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare</id>
-  <published>2014-01-11T23:45:33+01:00</published>
-  <updated>2014-01-11T23:45:33+01:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.eu</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://massimocaliman.eu/tags/#Java" term="Java" /><category scheme="http://massimocaliman.eu/tags/#GlassFishV3" term="GlassFishV3" />
-  <content type="html">
-  
-    &lt;p&gt;Chiedersi se un computer possa pensare non è più interessante del chiedersi se un sottomarino possa nuotare.
-&lt;em&gt;(Edsger Dijkstra, The threats to computing science, 1984)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;La console di amministrazione di GlassFish V3 prendendo troppo tempo per caricare?&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Aprire il file &lt;code&gt;%GLASSFISH_HOME/glassfish/domains/domain1/config/domain.xml&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;java-config&amp;gt;&lt;/span&gt; 
-     &lt;span class=&quot;nt&quot;&gt;&amp;lt;jvm-options&amp;gt;&lt;/span&gt;-Dcom.sun.enterprise.tools.admingui.NO_NETWORK=true&lt;span class=&quot;nt&quot;&gt;&amp;lt;/jvm-options&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/java-config&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;L’aggiunta di questa proprietà può essere anche fatta dal pannello di amministrazione nella sezione per i parametri della JVM &lt;/p&gt;
-
-&lt;p&gt;Questa proprietà a &lt;code&gt;true&lt;/code&gt; blocca news, notifiche per la registrazione, ecc.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Rimuovere il jar per i tool di update (rimuovere e non rinominare l’estensione, effettuatene un backup prima)
-Nome del file e path sono riporti di seguito&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;%GLASSFISH_HOME/glassfish/modules/console-updatecenter-plugin.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Cancellate poi anche le seguenti directory&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;%GLASSFISH_HOME/glassfish/domains/domain1/osgi-cache
-%GLASSFISH_HOME/glassfish/domains/domain1/generated&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Ora potete far ripartire il server con &lt;code&gt;bin/asadmin start-domain&lt;/code&gt; .&lt;/p&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://massimocaliman.eu/articles/glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/&quot;&gt;GlassFish V3: la console amministrazione prendendo troppo tempo per caricare.&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.eu&quot;&gt;Computer Programming&lt;/a&gt; on January 11, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
