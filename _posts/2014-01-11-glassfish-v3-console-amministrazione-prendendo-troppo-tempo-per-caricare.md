@@ -4,7 +4,7 @@ title:  "GlassFish V3: la console amministrazione prendendo troppo tempo per car
 category: articles
 date:   2014-01-11 22:45:33
 tags: [Java, GlassFishV3]
-comments: false
+comments: true
 share: true
 ---
 

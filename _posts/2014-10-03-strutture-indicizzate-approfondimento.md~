@@ -93,4 +93,4 @@ public void dealloc(){
 
 A guardar bene il resto dello pseudocodice rimanente è piuttosto esplicito, a basso livello per così dire, e la sua implementazione non dovrebbe rappresentare uno sforzo particolare.
 
-Rimandiamo ad un post conclusivo le restanti considerazioni e implementazioni, seppur parziali, ma prima vi invito a dare un occhiata proprio al codice di ArrayList ed affini.
+Rimandiamo ad un post conclusivo le restanti considerazioni e implementazioni, seppur parziali, ma prima vi invito a dare un occhiata proprio al codice di `ArrayList` ed affini.

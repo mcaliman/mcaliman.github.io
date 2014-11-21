@@ -4,7 +4,7 @@ title:  "Considerazioni sulla ricorsione"
 category: articles
 date:   2014-08-14 22:45:33
 tags: [Java, recorsione]
-comments: false
+comments: true
 share: true
 ---
 

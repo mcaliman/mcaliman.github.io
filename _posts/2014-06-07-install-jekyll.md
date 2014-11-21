@@ -4,7 +4,7 @@ title:  "Installare Jekyll su ubuntu 14.04."
 category: articles
 date:   2014-06-07 22:45:33
 tags: [Jekyll]
-comments: false
+comments: true
 share: true
 ---
 

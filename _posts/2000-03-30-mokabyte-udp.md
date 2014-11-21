@@ -4,8 +4,8 @@ title: Java e il protocollo UDP
 description: "Introduzione ad uno dei protocolli piu' utilizzati in internet, lo User Datagram Protocol,publicato su MokaByte Numero 39,Marzo 2000,di Massimo Caliman e Nicola Merello."
 category: articles
 tags: [Java,UPD,Mokabyte]
-comments: false
-share: false
+comments: true
+share: true
 ---
 
 Introduzione ad uno dei protocolli piu' utilizzati in internet, lo User Datagram Protocol,

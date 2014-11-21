@@ -4,7 +4,7 @@ title:  "Pubblicare un sito con GitHub Pages."
 category: articles
 date:   2014-01-01 22:45:33
 tags: [Jekyll,GitHub,GitHubPages]
-comments: false
+comments: true
 share: true
 ---
 

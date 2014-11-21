@@ -4,7 +4,7 @@ title:  "Linux: il comando du"
 category: articles
 date:   2007-01-01 22:45:33
 tags: [Linux]
-comments: false
+comments: true
 share: true
 ---
 

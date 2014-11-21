@@ -4,7 +4,7 @@ title:  "Pile o Stack"
 category: articles
 date:   2014-09-30 22:45:33
 tags: [Java,Pile o Stack,Strutture Dati]
-comments: false
+comments: true
 share: true
 ---
 ﻿

@@ -4,7 +4,7 @@ title:  "Considerazioni su alcuni Linguaggi di Programmazione Parte 4"
 category: articles
 date:   2014-07-12 22:45:33
 tags: [Linguaggi di programmazione,Python,Java,C++]
-comments: false
+comments: true
 share: true
 ---
 

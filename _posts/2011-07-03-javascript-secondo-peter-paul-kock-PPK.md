@@ -4,7 +4,7 @@ title:  "Javascript secondo Peter Paul Kock (PPK)"
 category: articles
 date:   2011-07-03 22:45:33
 tags: [javascript]
-comments: false
+comments: true
 share: true
 ---
   

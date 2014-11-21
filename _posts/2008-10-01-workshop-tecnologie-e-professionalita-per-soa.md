@@ -4,8 +4,8 @@ title:  "Workshop Tecnologie e Professionalità per la SOA"
 category: articles
 date:   2008-10-01 22:45:33
 tags: [SOA]
-comments: false
-share: true 
+comments: true
+share: true
 ---
 
 Il 30 settembre scorso (30/09/2008) si è tenuto presso la sede di Confindustria Genova il workshop "Tecnologie e Professionalità per la SOA".

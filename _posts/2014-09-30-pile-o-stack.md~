@@ -8,7 +8,7 @@ comments: false
 share: true
 ---
 ﻿
-Uno dei tipo base più ricorrente è la Pila o Stack, una specifica in speudolinguaggio è riportata sotto.
+Uno dei tipo base più ricorrente è la Pila o Stack, una specifica in pseudolinguaggio è riportata sotto.
 {% highlight bash %}
 tipo: Pila
 dati: una sequenza S di n elementi

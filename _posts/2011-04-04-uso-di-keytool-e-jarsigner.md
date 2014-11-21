@@ -4,7 +4,7 @@ title:  "Uso di keytool e jarsigner"
 category: articles
 date:   2011-04-24 22:45:33
 tags: [Java]
-comments: false
+comments: true
 share: true
 ---
 

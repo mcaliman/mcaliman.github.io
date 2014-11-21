@@ -4,8 +4,8 @@ title:  "HOWTO FIX errore 'illegal pattern character g' JAXB in NetBeans ."
 category: articles
 date:   2014-01-10 22:45:33
 tags: [Java, JAXB, NetBeans]
-comments: false
-share: true 
+comments: true
+share: true
 ---
 
 Il computer non è una macchina intelligente che aiuta le persone stupide, anzi è una macchina stupida che funziona solo nelle mani delle persone intelligenti.

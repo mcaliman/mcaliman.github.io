@@ -4,7 +4,7 @@ title:  "Alberi rappresentazioni indicizzate"
 category: articles
 date:   2014-10-06 22:45:33
 tags: [Java,Alberi,Strutture Dati]
-comments: false
+comments: true
 share: true
 ---
 ﻿Rappresentazioni indicizzate

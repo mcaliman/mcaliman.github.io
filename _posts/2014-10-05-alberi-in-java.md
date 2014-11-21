@@ -4,7 +4,7 @@ title:  "Alberi in Java"
 category: articles
 date:   2014-10-05 22:45:33
 tags: [Java,Alberi,Strutture Dati]
-comments: false
+comments: true
 share: true
 ---
 ﻿Dopo i post sulle strutture dati elementari passiamo a trattare gli alberi, prima di entrare nel dettaglio di come implementare strutture dati di questo tipo ne approfondiamo l’aspetto teorico.

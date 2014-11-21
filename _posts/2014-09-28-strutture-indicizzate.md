@@ -4,7 +4,7 @@ title:  "Strutture indicizzate"
 category: articles
 date:   2014-09-28 22:45:33
 tags: [Java,Strutture indicizzate,Strutture Dati]
-comments: false
+comments: true
 share: true
 ---
 

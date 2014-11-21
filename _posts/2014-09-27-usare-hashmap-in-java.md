@@ -4,7 +4,7 @@ title:  "Usare HashMap in Java"
 category: articles
 date:   2014-09-27 22:45:33
 tags: [Java,Dizionari,HashMap,Strutture Dati]
-comments: false
+comments: true
 share: true
 ---
 

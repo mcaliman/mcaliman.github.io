@@ -44,7 +44,7 @@ getFirst()
 peekFirst()
 {% endhighlight %}
 
-Un classe wrapper che renda più facile l’utilizzo è la seguente (utilizza `LinkedList` in luogo di ArrayDeque)
+Un classe wrapper che renda più facile l’utilizzo è la seguente (utilizza `LinkedList` in luogo di `ArrayDeque`)
 
 {% highlight java %}
 public class QueueImpl<E> {

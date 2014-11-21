@@ -9,13 +9,63 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://caliman.org/feed.xml" />
 <link rel="alternate" type="text/html" href="http://caliman.org/" />
-<updated>2014-10-08T22:27:28+02:00</updated>
+<updated>2014-11-21T20:36:33+01:00</updated>
 <id>http://caliman.org/</id>
 <author>
   <name>Massimo Caliman</name>
   <uri>http://caliman.org/</uri>
   <email>mcaliman@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[JSF 2 forzare gli id generati dai tag]]></title>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/"/>
+  <id>http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag</id>
+  <published>2014-11-09T23:45:33+01:00</published>
+  <updated>2014-11-09T23:45:33+01:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://caliman.org</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JavaServerFaces" term="JavaServerFaces" /><category scheme="http://caliman.org/tags/#JSF2" term="JSF2" />
+  <content type="html">
+  
+    &lt;p&gt;I computer sono come gli Dei del Vecchio Testamento: pieni di regole e nessuna pietà. &lt;em&gt;(Joseph Campbell, Il potere del mito, 1988)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Quando usiamo tag come &lt;code&gt;inputHidden&lt;/code&gt; o &lt;code&gt;form&lt;/code&gt;, cioè componenti standard HTML delle JSF, gli attributi &lt;code&gt;id&lt;/code&gt; del corrispondente 
+tag HTML sono generati in automatico secondo regole precise.&lt;/p&gt;
+
+&lt;p&gt;ad esempio&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h:form&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;form1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;&amp;lt;t:inputHidden&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;field1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h:form&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;da luogo a questo codice HTML&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;form:field1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ovviamente non siamo costretti a valorizzare l’attributo &lt;code&gt;id&lt;/code&gt;, il rendering delle Java Server Faces si occupano di generarne in automatico di appropriati ed univoci.&lt;/p&gt;
+
+&lt;p&gt;Quando vogliamo però referenziare un dato componente tramite il suo &lt;code&gt;id&lt;/code&gt;, sia che si tratti di CSS o di Javascript questo comportamente ci impedisce di farlo (quantomeno ci rende la vita difficile, pensate a referenziare qualcosa come &lt;code&gt;#form:field1&lt;/code&gt; con JQuery, escape?).&lt;/p&gt;
+
+&lt;p&gt;In casi come questo possiamo dichiarare gli &lt;code&gt;id&lt;/code&gt; e a livello di &lt;code&gt;form&lt;/code&gt; specificare l’attributo &lt;code&gt;prependId=&quot;false&quot;&lt;/code&gt;. Applicato al codice visto sopra abbiamo&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h:form&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;form1&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;prependId=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;&amp;lt;t:inputHidden&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;field1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h:form&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;che darà luogo a &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;field1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Verrebbe la tentazione di utilizzarlo sempre, anche se non è necessario per interazioni con js o css. L’attributo si dovrà usare con attenzione, si può ottenere un errore di &lt;code&gt;id&lt;/code&gt; duplicato se si utilizza troppo spesso. In altre parole se non strettamente necessario, lasciamo che sia JSF a occuparsi di questi dettagli e a generare &lt;code&gt;id&lt;/code&gt; univoci per i nostri tag.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/&quot;&gt;JSF 2 forzare gli id generati dai tag&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on November 09, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1208,6 +1258,7 @@ The role that is required to log in to the Manager Application
 
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/web-app&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
   
   &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/secure-httpbase-tomcat-authentication/&quot;&gt;Secure httpbase tomcat authentication&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on August 16, 2014.&lt;/p&gt;</content>
 </entry>
@@ -1687,45 +1738,6 @@ Come visibile &lt;code&gt;conversion&lt;/code&gt; è l’unico argomento obbliga
 
   
   &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/Il-metodo-string-format-una-printf-per-java/&quot;&gt;Il metodo String.format una printf per Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on July 14, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Considerazioni su alcuni Linguaggi di Programmazione Parte 4]]></title>
-  <link rel="alternate" type="text/html" href="http://caliman.org/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/"/>
-  <id>http://caliman.org/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4</id>
-  <published>2014-07-13T00:45:33+02:00</published>
-  <updated>2014-07-13T00:45:33+02:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://caliman.org</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://caliman.org/tags/#Linguaggi%20di%20programmazione" term="Linguaggi di programmazione" /><category scheme="http://caliman.org/tags/#Python" term="Python" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#C++" term="C++" />
-  <content type="html">
-  
-    &lt;p&gt;È meglio usare programmi di alta qualità senza costi di licenza, che costosi programmi proprietari di scarso valore. 
-&lt;em&gt;(Walter Bender, direttore del Media Lab del MIT)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;perch-imparare-python&quot;&gt;Perchè imparare Python?&lt;/h1&gt;
-&lt;p&gt;E’ ottimo per implementare o semplicemente descrivere algoritmi, in diversi corsi universitari è stato scelto per la sua pulizia,se ci pensate bene trasformare lo pseudocodice che normalmente viene utilizzato in codice Python è piuttosto immediato.
-Python è inoltre molto utilizzato in ambito scientifico , vi consiglio in merito alcuni libri: &lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Python for Data Analysis,di Wes McKinney Ed. O’Reilly Media&lt;/li&gt;
-  &lt;li&gt;Bioinformatics Programming Using Python”Natural Language Processing with Python&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;perch-imparare-il-linguaggio-java&quot;&gt;Perchè imparare il linguaggio Java?&lt;/h1&gt;
-&lt;p&gt;Perchè diffuso,pulito è completamente OOP nonstante Edsger Dijkstra pensasse “Object-oriented programming is an exceptionally bad idea which could only have originated in California.” &lt;/p&gt;
-
-&lt;h1 id=&quot;perch-imparare-il-c&quot;&gt;Perchè imparare il C++?&lt;/h1&gt;
-&lt;p&gt;Il C++ è il principe dei linguaggi, lo puoi usare per realizzare ogni cosa. I Sistemi Operativi i  compilatori,interpreti e Virtual Machine che utilizziamo per far girare il nostro codice è scritto in C o C++.
-lo puoi usare per realizzare ogni cosa. I Sistemi Operativi i  compilatori,interpreti e Virtual Machine che utilizziamo per far girare il nostro codice è scritto in C o C++.&lt;/p&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/&quot;&gt;Considerazioni su alcuni Linguaggi di Programmazione Parte 4&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>

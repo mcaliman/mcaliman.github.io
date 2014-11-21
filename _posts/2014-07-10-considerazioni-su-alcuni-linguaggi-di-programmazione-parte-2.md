@@ -4,7 +4,7 @@ title:  "Considerazioni su alcuni Linguaggi di Programmazione Parte 2"
 category: articles
 date:   2014-07-10 22:45:33
 tags: [Linguaggi di programmazione,Java,C,C++,C#,Ada]
-comments: false
+comments: true
 share: true
 ---
 

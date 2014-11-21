@@ -1,13 +1,13 @@
-﻿---
+---
 layout: post
 title:  "Javascript secondo Peter Paul Kock (PPK)"
+category: articles
 date:   2011-07-03 22:45:33
-tags: [js]
+tags: [javascript]
 comments: false
 share: true
 ---
-
-
+  
 Se vi capita di dover lavorare in javascript, anche solo per copiare e incollare semplici script nel vostro sito fatevi un regalo,
 comprate e leggete "Java Script secondo Peter-Paul Kock" (Pearson Education) traduzione di PPK ON JAVASCRIPT.
 Uno dei pochi libri su javascript che non sia un reference o una semplice raccolta di banali script.

@@ -4,7 +4,7 @@ title:  "Strutture indicizzate approfondimenti"
 category: articles
 date:   2014-10-03 22:45:33
 tags: [Java,Strutture indicizzate,Strutture Dati]
-comments: false
+comments: true
 share: true
 ---
 ﻿Riprendiamo il post sulle strutture indicizzate per un approfondimento.

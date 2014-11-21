@@ -147,7 +147,7 @@
         <span class="author vcard">By <span class="fn"><a href="http://caliman.org/about/" title="About Massimo Caliman">Massimo Caliman</a></span></span>
         <span class="entry-date date published"><time datetime="2011-04-25T00:45:33+02:00"><i class="icon-calendar-empty"></i> April 25, 2011</time></span>
         
-        
+        <span class="entry-comments"><i class="icon-comment-alt"></i> <a href="#disqus_thread">Comment</a></span>
         <span><a href="http://caliman.org/articles/uso-di-keytool-e-jarsigner/" rel="bookmark" title="Uso di keytool e jarsigner"><i class="icon-link"></i> Permalink</a></span>
         
         <span class="social-share-facebook">
@@ -168,7 +168,7 @@
 <div class="highlight"><pre><code class="bash">jarsigner mycompany.jar mycompanyalias</code></pre></div>
 
 
-        
+        <div id="disqus_thread"></div><!-- /#disqus_thread -->
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
@@ -269,7 +269,27 @@
   })();
 </script>
 
-	        
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'mcaliman'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>	        
 
 </body>
 </html>

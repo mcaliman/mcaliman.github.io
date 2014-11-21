@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "JSF 2 forzare gli id generati dai tag",
+		  "category"   : "articles",
+		  "url"        : "http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/",
+		  "date"       : "2014-11-09 23:45:33 +0100",
+		  "shortdate"  : "November 09, 2014"
+		} ,
+	
+		{
 		  "title"      : "Alberi rappresentazioni collegate",
 		  "category"   : "articles",
 		  "url"        : "http://caliman.org/articles/alberi-rappresentazioni-collegate/",

@@ -4,7 +4,7 @@ title:  "Come ti swappo due variabili in un colpo solo con Python"
 category: articles
 date:   2014-09-01 22:45:33
 tags: [Python]
-comments: false
+comments: true
 share: true
 ---
 

@@ -54,11 +54,13 @@ delete(chiave k) T(n)=O(n)
 3.si distrugge il record p
 {% endhighlight %}
 
+{% highlight bash %}
 search(chiave k) -> elem T(n)=O(n)
 if list = null then return null
 else 
 si scandisce la struttura saltando di record in record con p<-p.next fino a quando non diventa p=list 
 verificando se qualche p ha chiave k in caso positivo si restituisce l’elemento trovato altrimenti `null`
+{% endhighlight %}
 
 Per realizzare un implementazione in Java a partire dalla specifica vista sopra come prima cosa abbiamo bisogno realizzare una classe per modellare i record, ma per farlo dobbiamo anche modellare il contenuto informativo con una classe Info o Tuple, semplifichiamo in questa prima fase di analisi e supponiamo che sia la chiave (intera) che il valore (stringa) siano attributi della classe record stessa. 
 

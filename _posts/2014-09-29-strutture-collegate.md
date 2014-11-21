@@ -4,7 +4,7 @@ title:  "Strutture collegate"
 category: articles
 date:   2014-09-29 22:45:33
 tags: [Java,Strutture collegate,Strutture Dati]
-comments: false
+comments: true
 share: true
 ---
 ﻿I costituenti di base di una struttura collegata sono i record che come le celle degli array sono numerati e contengono ciascuno una collezione di oggetti. I numeri associati ai record sono i loro indirizzi in memoria (quindi globali nell’ambito del programma e non locali come nel caso degli array)

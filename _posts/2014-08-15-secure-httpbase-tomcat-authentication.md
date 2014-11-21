@@ -4,7 +4,7 @@ title:  "Secure httpbase tomcat authentication"
 category: articles
 date:   2014-08-15 22:45:33
 tags: [Tomcat]
-comments: false
+comments: true
 share: true
 ---
 

@@ -5,8 +5,8 @@ description: "Il debug e le asserzioni,publicato su MokaByte Numero 36,Dicembre 
 category: articles
 date:   1999-12-30 22:45:33
 tags: [Java,Debug,Mokabyte]
-comments: false
-share: false
+comments: true
+share: true
 ---
 
 

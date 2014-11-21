@@ -4,7 +4,7 @@ title:  "Quel maledetto Content is not allowed in prolog"
 category: articles
 date:   2011-02-27 22:45:33
 tags: [Java]
-comments: false
+comments: true
 share: true
 ---
 Ogni documento XML su cui lavoriamo dovrebbe essere formattato correttamente, salvato con il giusto encoding ecc.

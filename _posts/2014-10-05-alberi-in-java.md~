@@ -76,5 +76,4 @@ Utilizzando i generics sarebbe infatti più interessante lavorare con classi di 
 
 Nel JDK sono presenti implemetazioni interessanti come `javax.swing.tree.TreeModel` e `javax.swing.tree.TreeNode` utilizzata nelle Swing per la realizzazione delle GUI in ambiente desktop.
 
-
 Esistono diverse possibili rappresentazioni per gli alberi sia basate su strutture indicizzate che collegate, quale scegliere dipende dal tipo di problemi che pensiamo di dover risolvere, se pensiamo che l’operazione più frequente o critica sia per esempio risalire ai figli di un nodo ne utilizzeremo una, se la l’operazione più critica e navigare per livelli l’albero ne utilizzeremo una ottimizzata per questo tipo di problema.

@@ -4,7 +4,7 @@ title:  "Approfondiamo i metodi in Java"
 category: articles
 date:   2005-01-02 22:45:33
 tags: [Java]
-comments: false
+comments: true
 share: true
 ---
 

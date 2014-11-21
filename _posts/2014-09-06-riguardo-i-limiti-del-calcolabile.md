@@ -4,7 +4,7 @@ title:  "Riguardo i limiti del calcolabile"
 category: articles
 date:   2014-09-06 22:45:33
 tags: [Python]
-comments: false
+comments: true
 share: true
 ---
 

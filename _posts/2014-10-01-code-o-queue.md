@@ -4,7 +4,7 @@ title:  "Code o Queue"
 category: articles
 date:   2014-10-01 22:45:33
 tags: [Java,Code o Queue,Strutture Dati]
-comments: false
+comments: true
 share: true
 ---
 ﻿Riprendiamo la trattazione delle strutture dati elementari. Nei post precedenti abbiamo visto le strutture indicizzate,quelle collegate e le Pile o Stack,uno altro dei tipo base più ricorrenti è la Coda o Queue, una specifica in pseudolinguaggio è riportata sotto.

@@ -4,7 +4,7 @@ title:  "Il passaggio di parametri in Java"
 category: articles
 date:   2006-01-05 22:45:33
 tags: [Java]
-comments: false
+comments: true
 share: true
 ---
 Nella forma pi generica un metodo  caratterizzato da uno o pi parametri formali
