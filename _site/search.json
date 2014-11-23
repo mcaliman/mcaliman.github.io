@@ -1,6 +1,22 @@
 [
 	
 		{
+		  "title"      : "Usare i Channel per copiare file in Java",
+		  "category"   : "articles",
+		  "url"        : "http://caliman.org/articles/usare-i-channel-per-copiare-file-in-java/",
+		  "date"       : "2014-11-15 23:45:33 +0100",
+		  "shortdate"  : "November 15, 2014"
+		} ,
+	
+		{
+		  "title"      : "Copiare file in Java 7 con la classe Files",
+		  "category"   : "articles",
+		  "url"        : "http://caliman.org/articles/copiare-file-in-java-7-classe-files-metodo-copy/",
+		  "date"       : "2014-11-10 23:45:33 +0100",
+		  "shortdate"  : "November 10, 2014"
+		} ,
+	
+		{
 		  "title"      : "JSF 2 forzare gli id generati dai tag",
 		  "category"   : "articles",
 		  "url"        : "http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/",
