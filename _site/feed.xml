@@ -5,11 +5,11 @@
 
   
 
-<title type="text">Computer Programming</title>
+<title type="text">Massimo Caliman's</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://caliman.org/feed.xml" />
 <link rel="alternate" type="text/html" href="http://caliman.org/" />
-<updated>2014-11-23T12:35:15+01:00</updated>
+<updated>2014-12-13T07:46:02+01:00</updated>
 <id>http://caliman.org/</id>
 <author>
   <name>Massimo Caliman</name>
@@ -52,7 +52,7 @@
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/usare-i-channel-per-copiare-file-in-java/&quot;&gt;Usare i Channel per copiare file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on November 15, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/usare-i-channel-per-copiare-file-in-java/&quot;&gt;Usare i Channel per copiare file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -79,7 +79,7 @@
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/copiare-file-in-java-7-classe-files-metodo-copy/&quot;&gt;Copiare file in Java 7 con la classe Files&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on November 10, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/copiare-file-in-java-7-classe-files-metodo-copy/&quot;&gt;Copiare file in Java 7 con la classe Files&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 10, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -129,7 +129,7 @@ tag HTML sono generati in automatico secondo regole precise.&lt;/p&gt;
 &lt;p&gt;Verrebbe la tentazione di utilizzarlo sempre, anche se non è necessario per interazioni con js o css. L’attributo si dovrà usare con attenzione, si può ottenere un errore di &lt;code&gt;id&lt;/code&gt; duplicato se si utilizza troppo spesso. In altre parole se non strettamente necessario, lasciamo che sia JSF a occuparsi di questi dettagli e a generare &lt;code&gt;id&lt;/code&gt; univoci per i nostri tag.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/&quot;&gt;JSF 2 forzare gli id generati dai tag&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on November 09, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/&quot;&gt;JSF 2 forzare gli id generati dai tag&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 09, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -168,7 +168,7 @@ Per ogni nodo un puntatore al primo figlio (posto a null se non ci sono figli) e
 Per scandire tutti i figli di un nodo basta scendere sul primo figlio e poi scandire tutti i fratelli successivi saltando di fratello in fratello.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-rappresentazioni-collegate/&quot;&gt;Alberi rappresentazioni collegate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on October 08, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-rappresentazioni-collegate/&quot;&gt;Alberi rappresentazioni collegate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 08, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -211,7 +211,7 @@ p vettore di dimensione n  t.c. p[v] contiene l’informazione associata al nodo
 &lt;/ul&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-rappresentazioni-indicizzate/&quot;&gt;Alberi rappresentazioni indicizzate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on October 07, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-rappresentazioni-indicizzate/&quot;&gt;Alberi rappresentazioni indicizzate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 07, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -298,7 +298,7 @@ operazioni
 &lt;p&gt;Esistono diverse possibili rappresentazioni per gli alberi sia basate su strutture indicizzate che collegate, quale scegliere dipende dal tipo di problemi che pensiamo di dover risolvere, se pensiamo che l’operazione più frequente o critica sia per esempio risalire ai figli di un nodo ne utilizzeremo una, se la l’operazione più critica e navigare per livelli l’albero ne utilizzeremo una ottimizzata per questo tipo di problema.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-in-java/&quot;&gt;Alberi in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on October 06, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-in-java/&quot;&gt;Alberi in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 06, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -403,7 +403,7 @@ Le operazioni di insert e delete comprendono la fase di riallocazione dell’arr
 &lt;p&gt;Rimandiamo ad un post conclusivo le restanti considerazioni e implementazioni, seppur parziali, ma prima vi invito a dare un occhiata proprio al codice di &lt;code&gt;ArrayList&lt;/code&gt; ed affini.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/strutture-indicizzate-approfondimento/&quot;&gt;Strutture indicizzate approfondimenti&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on October 04, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/strutture-indicizzate-approfondimento/&quot;&gt;Strutture indicizzate approfondimenti&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 04, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -475,7 +475,7 @@ Anche in questo caso possiamo utilizzare i metodi di Deque relativi al suo compo
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/code-o-queue/&quot;&gt;Code o Queue&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on October 02, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/code-o-queue/&quot;&gt;Code o Queue&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 02, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -551,7 +551,7 @@ top&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;-&amp;gt;elem restituisce l’
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/pile-o-stack/&quot;&gt;Pile o Stack&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on October 01, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/pile-o-stack/&quot;&gt;Pile o Stack&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 01, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -655,7 +655,7 @@ verificando se qualche p ha chiave k in caso positivo si restituisce l’element
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/strutture-collegate/&quot;&gt;Strutture collegate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on September 30, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/strutture-collegate/&quot;&gt;Strutture collegate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 30, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -733,7 +733,7 @@ dati: un array S di dimensione n contenente n coppie (elem,chiave) S(n) = Tetagr
 &lt;p&gt;Oltre agli array, struttura di base del linguaggio, possiamo ovviamente utilizzare le liste per esempio gli &lt;code&gt;ArrayList&lt;/code&gt; che adottano propriò questo tipo di filosofia più alcuni accorgimenti atti a rendere l’implementazione più efficiente.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/strutture-indicizzate/&quot;&gt;Strutture indicizzate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on September 29, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/strutture-indicizzate/&quot;&gt;Strutture indicizzate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 29, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -865,7 +865,7 @@ Questo metodo ritorna una versione thread-safe di &lt;code&gt;Map&lt;/code&gt;&l
 &lt;p&gt;Le Java Collections Framework riserva altre piacevoli sorprese e utilità, vedremo di approfondirle nei prossimi post, come al solito se avete richieste particolari riguardo un dato argomento  (per esempio &lt;code&gt;WeakHashMap&lt;/code&gt; o &lt;code&gt;LinkedHashMap&lt;/code&gt;) potete contattarmi via mail.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/usare-hashmap-in-java/&quot;&gt;Usare HashMap in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on September 28, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/usare-hashmap-in-java/&quot;&gt;Usare HashMap in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 28, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -1015,7 +1015,7 @@ Il tipo più comune di implementazioni di &lt;code&gt;Map&lt;/code&gt; è &lt;co
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/dizionari-in-java/&quot;&gt;Dizionari in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on September 25, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/dizionari-in-java/&quot;&gt;Dizionari in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 25, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -1102,7 +1102,7 @@ multiple catch ne della diamond notation. Peccato che nella versione che utilizz
 &lt;p&gt;infatti dal &lt;code&gt;reader&lt;/code&gt; vengono estratte le pagine del documento, una per una e poi aggiunte all’oggetto &lt;code&gt;copy&lt;/code&gt;.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/concatenare-pdf-con-itext-in-java/&quot;&gt;Concatenare PDF con iText in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on September 19, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/concatenare-pdf-con-itext-in-java/&quot;&gt;Concatenare PDF con iText in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 19, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -1183,7 +1183,7 @@ multiple catch ne della diamond notation. Peccato che nella versione che utilizz
 &lt;p&gt;Se non vogliamo catturare l’eccezzione basta omettere la parte catch del blocco ed essa si propagherà come se fosse non gestita (proprio così un try senza catch e senza finally). Ad essere sinceri il codice sopra avrebbe potuto beneficiare di altre novità della versione 7 come ad esempio i catch con gestione multipla di eccezioni ma di questo ed altro si parlerà in un prossimo post.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/&quot;&gt;Scrivere e leggere file in Java 7 con try-with-resources&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on September 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/&quot;&gt;Scrivere e leggere file in Java 7 con try-with-resources&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -1218,7 +1218,7 @@ problemi la cui risolubilità è nota in linea di principio. &lt;/p&gt;
 &lt;p&gt;A quanto pare l’universo non ha una età superiore ai 20 miliardi di anni.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/riguardo-i-limiti-del-calcolabile/&quot;&gt;Riguardo i limiti del calcolabile&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on September 07, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/riguardo-i-limiti-del-calcolabile/&quot;&gt;Riguardo i limiti del calcolabile&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 07, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -1253,7 +1253,7 @@ problemi la cui risolubilità è nota in linea di principio. &lt;/p&gt;
 &lt;p&gt;magico no? Il bello delle tuple.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/&quot;&gt;Come ti swappo due variabili in un colpo solo con Python&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on September 02, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/&quot;&gt;Come ti swappo due variabili in un colpo solo con Python&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 02, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -1325,7 +1325,7 @@ The role that is required to log in to the Manager Application
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/secure-httpbase-tomcat-authentication/&quot;&gt;Secure httpbase tomcat authentication&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on August 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/secure-httpbase-tomcat-authentication/&quot;&gt;Secure httpbase tomcat authentication&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on August 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -1412,7 +1412,7 @@ Un possibile implementazione in Java è la seguente&lt;/p&gt;
 &lt;p&gt;Durante la mia carriera in diverse occasioni ho avuto modo di sentir parlare della ricorsione come e peggio del diavolo, qualcosa di estremamente complesso e pericoloso, ma i danni peggiori personalmente li ho visti causati da metodi iterativi con una mezza dozzina di cicli annidati e condizioni di guardia in costrutti while così complesse da risultare incompresibili, figuariamoci debuggabili.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/considerazioni-sulla-ricorsione/&quot;&gt;Considerazioni sulla ricorsione&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on August 15, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/considerazioni-sulla-ricorsione/&quot;&gt;Considerazioni sulla ricorsione&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on August 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -1501,7 +1501,7 @@ Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/una-servlet-per-gestire-il-download-di-file-in-java/&quot;&gt;﻿Una Servlet per gestire il download di file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Computer Programming&lt;/a&gt; on July 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/una-servlet-per-gestire-il-download-di-file-in-java/&quot;&gt;﻿Una Servlet per gestire il download di file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on July 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>

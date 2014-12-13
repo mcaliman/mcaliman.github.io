@@ -1,5 +1,5 @@
-title:            Computer Programming 
-description:      Massimo Caliman's blog on Computer Science and Information Technology.
+title:            Massimo Caliman's 
+description:      blog on Computer Science.
 #logo:            site-logo.png
 logo:             bio-photo.jpg
 
@@ -25,7 +25,7 @@ owner:
   twitter: mcaliman
   facebook:
   github: mcaliman
-  stackexchange:
+  stackexchange: 
   linkedin: mcaliman
   instagram:
   flickr:
@@ -46,6 +46,8 @@ links:
     url: /
   - title: About
     url: /about/
+  - title: Contact
+    url: /contact/
   - title: Articoli
     url: /articles/
   - title: Tags
