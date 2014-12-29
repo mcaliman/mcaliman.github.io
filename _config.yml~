@@ -52,6 +52,8 @@ links:
     url: /articles/
   - title: Tags
     url: /tags/
+  - title: Categories
+    url: /categories/
   - title: Legal
     url: /legal/
   - title: website

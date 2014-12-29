@@ -1,7 +1,11 @@
 ---
 layout: page
-title: Latest Posts
+title: Home
 description: ""
+image:
+  feature: so-simple-sample-image-5.jpg
+  credit: Michael Rose
+  creditlink: http://mademistakes.com
 tags: [Home]
 ---
 
