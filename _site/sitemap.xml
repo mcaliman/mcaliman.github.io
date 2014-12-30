@@ -34,7 +34,7 @@
     </url>
     
     <url>
-        <loc>http://caliman.org/legal/</loc>
+        <loc>http://caliman.org/privacy/</loc>
     </url>
     
     <url>
@@ -47,6 +47,10 @@
     
     <url>
         <loc>http://caliman.org/tags/</loc>
+    </url>
+    
+    <url>
+        <loc>http://caliman.org/terms/</loc>
     </url>
     
     <url>

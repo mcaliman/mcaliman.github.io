@@ -54,8 +54,6 @@ links:
     url: /tags/
   - title: Categories
     url: /categories/
-  - title: Legal
-    url: /legal/
   - title: website
     url: http://www.caliman.biz
     external: true

@@ -1,6 +1,6 @@
 
 <div class="google-ads" style="margin:10px 0;">
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- blog-footer -->
 <ins class="adsbygoogle"
      style="display:inline-block;width:320px;height:50px"
@@ -10,6 +10,17 @@
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
+
+
+<div>
+<span>
+<!-- <a href="{{ site.url }}/support" title="support">   support</a> | -->
+<a href="{{ site.url }}/privacy" title="Privacy Policy">privacy</a> |
+<a href="{{ site.url }}/terms"   title="terms of service">     terms </a>   
+</span>
+</div>
+
+
 
 <span>&copy; {{ site.time | date: '%Y' }} {{ site.owner.name }}. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/">So Simple Theme</a>.</span>
 <div class="social-icons">
