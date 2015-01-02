@@ -9,7 +9,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://caliman.org/feed.xml" />
 <link rel="alternate" type="text/html" href="http://caliman.org/" />
-<updated>2015-01-02T20:19:18+01:00</updated>
+<updated>2015-01-02T20:37:04+01:00</updated>
 <id>http://caliman.org/</id>
 <author>
   <name>Massimo Caliman</name>
@@ -29,7 +29,7 @@
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" />
   <content type="html">
   
     &lt;p&gt;Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. &lt;em&gt;(Isaac Asimov, Il vento è cambiato, 1983)&lt;/em&gt;&lt;/p&gt;
@@ -67,7 +67,7 @@
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Java7" term="Java7" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Java7" term="Java7" />
   <content type="html">
   
     &lt;p&gt;Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. &lt;em&gt;(Isaac Asimov, Il vento è cambiato, 1983)&lt;/em&gt;&lt;/p&gt;
@@ -77,6 +77,7 @@
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
    &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
   
   &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/copiare-file-in-java-7-classe-files-metodo-copy/&quot;&gt;Copiare file in Java 7 con la classe Files&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 10, 2014.&lt;/p&gt;</content>
@@ -94,7 +95,7 @@
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JavaServerFaces" term="JavaServerFaces" /><category scheme="http://caliman.org/tags/#JSF2" term="JSF2" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JavaServerFaces" term="JavaServerFaces" /><category scheme="http://caliman.org/tags/#JSF2" term="JSF2" />
   <content type="html">
   
     &lt;p&gt;I computer sono come gli Dei del Vecchio Testamento: pieni di regole e nessuna pietà. &lt;em&gt;(Joseph Campbell, Il potere del mito, 1988)&lt;/em&gt;&lt;/p&gt;
@@ -144,7 +145,7 @@ tag HTML sono generati in automatico secondo regole precise.&lt;/p&gt;
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;Proseguendo nella trattazione degli alberi normalmente si preferiscono le ﻿rappresentazioni basate su strutture collegate 
@@ -183,7 +184,7 @@ Per scandire tutti i figli di un nodo basta scendere sul primo figlio e poi scan
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Rappresentazioni indicizzate
@@ -226,7 +227,7 @@ p vettore di dimensione n  t.c. p[v] contiene l’informazione associata al nodo
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Dopo i post sulle strutture dati elementari passiamo a trattare gli alberi, prima di entrare nel dettaglio di come implementare strutture dati di questo tipo ne approfondiamo l’aspetto teorico.&lt;/p&gt;
@@ -313,7 +314,7 @@ operazioni
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Strutture%20indicizzate" term="Strutture indicizzate" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Strutture%20indicizzate" term="Strutture indicizzate" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Riprendiamo il post sulle strutture indicizzate per un approfondimento.
@@ -418,7 +419,7 @@ Le operazioni di insert e delete comprendono la fase di riallocazione dell’arr
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Code%20o%20Queue" term="Code o Queue" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Code%20o%20Queue" term="Code o Queue" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Riprendiamo la trattazione delle strutture dati elementari. Nei post precedenti abbiamo visto le strutture indicizzate,quelle collegate e le Pile o Stack,uno altro dei tipo base più ricorrenti è la Coda o Queue, una specifica in pseudolinguaggio è riportata sotto.&lt;/p&gt;
@@ -490,7 +491,7 @@ Anche in questo caso possiamo utilizzare i metodi di Deque relativi al suo compo
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Pile%20o%20Stack" term="Pile o Stack" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Pile%20o%20Stack" term="Pile o Stack" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿
@@ -566,7 +567,7 @@ top&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;-&amp;gt;elem restituisce l’
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Strutture%20collegate" term="Strutture collegate" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Strutture%20collegate" term="Strutture collegate" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿I costituenti di base di una struttura collegata sono i record che come le celle degli array sono numerati e contengono ciascuno una collezione di oggetti. I numeri associati ai record sono i loro indirizzi in memoria (quindi globali nell’ambito del programma e non locali come nel caso degli array)
@@ -670,7 +671,7 @@ verificando se qualche p ha chiave k in caso positivo si restituisce l’element
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Strutture%20indicizzate" term="Strutture indicizzate" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Strutture%20indicizzate" term="Strutture indicizzate" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Le strutture indicizzate sono collezioni di celle numerate che possono contenere elementi di tipo prestabilito. Assumeremo che in un array di dimensione h gli indici possano andare da 0 a h-1 o da 1 a h.&lt;/p&gt;
@@ -748,7 +749,7 @@ dati: un array S di dimensione n contenente n coppie (elem,chiave) S(n) = Tetagr
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Dizionari" term="Dizionari" /><category scheme="http://caliman.org/tags/#HashMap" term="HashMap" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Dizionari" term="Dizionari" /><category scheme="http://caliman.org/tags/#HashMap" term="HashMap" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Riprendiamo da dove ci eravamo lasciati (vedi post precedente), dopo aver visto un pò di teoria sui dizionari e qualcosa sull’interfaccia &lt;code&gt;Map&lt;/code&gt; passiamo a esempi pratici. Parleremo esclusivamente della classe concreta &lt;code&gt;HashMap&lt;/code&gt;, la nuova, per così dire, &lt;code&gt;Hashtable&lt;/code&gt;.&lt;/p&gt;
@@ -880,7 +881,7 @@ Questo metodo ritorna una versione thread-safe di &lt;code&gt;Map&lt;/code&gt;&l
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Dizionari" term="Dizionari" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Dizionari" term="Dizionari" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;Nelle vecchie release del linguaggio Java il tipo di dato dizionario veniva realizzato a partire dalla classe &lt;code&gt;Dictionary&amp;lt;K,V&amp;gt;&lt;/code&gt; del package &lt;code&gt;java.util&lt;/code&gt;. 
@@ -1030,7 +1031,7 @@ Il tipo più comune di implementazioni di &lt;code&gt;Map&lt;/code&gt; è &lt;co
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JDK7" term="JDK7" /><category scheme="http://caliman.org/tags/#iText" term="iText" /><category scheme="http://caliman.org/tags/#PDF" term="PDF" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JDK7" term="JDK7" /><category scheme="http://caliman.org/tags/#iText" term="iText" /><category scheme="http://caliman.org/tags/#PDF" term="PDF" />
   <content type="html">
   
     &lt;p&gt;iText è sicuramente la libreria più diffusa e completa per l’elaborazione di file pdf, consiglio vivamente di darci un occhiata prima di valutare altri framework o reinventare l’acqua calda.&lt;/p&gt;
@@ -1117,7 +1118,7 @@ multiple catch ne della diamond notation. Peccato che nella versione che utilizz
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JDK7" term="JDK7" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JDK7" term="JDK7" />
   <content type="html">
   
     &lt;p&gt;Leggere e scrivere file in Java 7 sfruttando il nuovo costrutto try-with-resource manleva lo sviluppatore dal compito di chiudere correttamente gli stream, sotto potete trovare due metodi di esempio.&lt;/p&gt;
@@ -1198,7 +1199,7 @@ multiple catch ne della diamond notation. Peccato che nella versione che utilizz
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Python" term="Python" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Python" term="Python" />
   <content type="html">
   
     &lt;p&gt;Il seguente argomento, dovuto a L.J. Stockmeyer, è di natura puramente fisica ma
@@ -1233,7 +1234,7 @@ problemi la cui risolubilità è nota in linea di principio. &lt;/p&gt;
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Python" term="Python" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Python" term="Python" />
   <content type="html">
   
     &lt;p&gt;Vi è mai capitato di scrivere qualcosa del genere ?&lt;/p&gt;
@@ -1268,7 +1269,7 @@ problemi la cui risolubilità è nota in linea di principio. &lt;/p&gt;
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Tomcat" term="Tomcat" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Tomcat" term="Tomcat" />
   <content type="html">
   
     &lt;p&gt;Per impostare l’autenticazione base in una applicazione java in tomcat possiamo intervenire solo in due file&lt;/p&gt;
@@ -1340,7 +1341,7 @@ The role that is required to log in to the Manager Application
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#recorsione" term="recorsione" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#recorsione" term="recorsione" />
   <content type="html">
   
     &lt;p&gt;Nei linguaggi di programmazione la ripetizione di comandi o statement viene realizzata tramite cicli, realizzati normalmente con costrutti del tipo &lt;code&gt;for&lt;/code&gt;,&lt;code&gt;foreach&lt;/code&gt; e &lt;code&gt;white&lt;/code&gt;. Per particolari problemi la ricorsione rappresenta una valida arlternativa, più elegante, naturale  e semplice da realizzare.
@@ -1427,7 +1428,7 @@ Un possibile implementazione in Java è la seguente&lt;/p&gt;
     <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Servlet" term="Servlet" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Servlet" term="Servlet" />
   <content type="html">
   
     &lt;p&gt;Vediamo in questo post come scrivere il codice di una Servlet Java che ci permette di effettuare il trasferimento (il download) di un file dalla nostra applicazione server al client (il web browser dei nostri utenti).

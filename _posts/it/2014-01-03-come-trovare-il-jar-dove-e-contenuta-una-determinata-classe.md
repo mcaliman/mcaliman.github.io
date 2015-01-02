@@ -3,7 +3,7 @@ layout: post
 title:  "Come trovare il jar dove è contenuta una determinata classe (deployed in GlassFish)."
 category: articles
 date:   2014-01-03 22:45:33
-tags: [Java,GlassFish]
+tags: [Articoli disponibili in lingua italiana,lang_it,Java,GlassFish]
 comments: true
 share: true
 ---

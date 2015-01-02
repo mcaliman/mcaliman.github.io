@@ -3,7 +3,7 @@ layout: post
 title:  "Quel maledetto Content is not allowed in prolog"
 category: articles
 date:   2011-02-27 22:45:33
-tags: [Java]
+tags: [Articoli disponibili in lingua italiana,lang_it,Java]
 comments: true
 share: true
 ---

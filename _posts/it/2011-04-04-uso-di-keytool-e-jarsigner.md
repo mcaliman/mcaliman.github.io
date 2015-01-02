@@ -3,7 +3,7 @@ layout: post
 title:  "Uso di keytool e jarsigner"
 category: articles
 date:   2011-04-24 22:45:33
-tags: [Java]
+tags: [Articoli disponibili in lingua italiana,lang_it,Java]
 comments: true
 share: true
 ---

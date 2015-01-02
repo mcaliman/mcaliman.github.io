@@ -3,7 +3,7 @@ layout: post
 title:  "Well Formatted riferito ad un documento XML"
 category: articles
 date:   2011-03-07 22:45:33
-tags: [XML]
+tags: [Articoli disponibili in lingua italiana,lang_it,XML]
 comments: true
 share: true
 ---

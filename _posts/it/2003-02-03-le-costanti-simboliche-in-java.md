@@ -3,7 +3,7 @@ layout: post
 title:  "Le costanti simboliche in Java"
 category: articles
 date:   2003-02-03 22:45:33
-tags: [Java]
+tags: [Articoli disponibili in lingua italiana,lang_it,Java]
 comments: true
 share: true
 ---

@@ -3,7 +3,7 @@ layout: post
 title:  "Le variabili e i comandi di assegnazione"
 category: articles
 date:   2003-01-02 22:45:33
-tags: [Java]
+tags: [Articoli disponibili in lingua italiana,lang_it,Java]
 comments: true
 share: true
 ---

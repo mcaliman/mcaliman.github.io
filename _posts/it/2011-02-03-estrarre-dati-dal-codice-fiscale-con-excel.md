@@ -3,7 +3,7 @@ layout: post
 title:  "Estrarre dati dal codice fiscale con Excel"
 category: articles
 date:   2011-02-03 22:45:33
-tags: [Excel]
+tags: [Articoli disponibili in lingua italiana,lang_it,Excel]
 comments: true
 share: true
 ---

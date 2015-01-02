@@ -3,7 +3,7 @@ layout: post
 title:  "Creare e configurare un DataSource MySQL in GlassFish Application Server"
 category: articles
 date:   2012-01-01 22:45:33
-tags: [Java, DataSource, GlassFish, MySQL]
+tags: [Articoli disponibili in lingua italiana,lang_it,Java, DataSource, GlassFish, MySQL]
 comments: true
 share: true
 ---

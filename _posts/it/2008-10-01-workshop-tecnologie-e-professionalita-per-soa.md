@@ -3,7 +3,7 @@ layout: post
 title:  "Workshop Tecnologie e Professionalità per la SOA"
 category: articles
 date:   2008-10-01 22:45:33
-tags: [SOA]
+tags: [Articoli disponibili in lingua italiana,lang_it,SOA]
 comments: true
 share: true
 ---

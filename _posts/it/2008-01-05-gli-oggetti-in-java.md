@@ -3,7 +3,7 @@ layout: post
 title:  "Gli oggetti in Java"
 category: articles
 date:   2008-01-05 22:45:33
-tags: [Java]
+tags: [Articoli disponibili in lingua italiana,lang_it,Java]
 comments: true
 share: true
 ---

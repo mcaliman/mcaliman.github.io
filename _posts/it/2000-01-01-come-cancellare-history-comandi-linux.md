@@ -3,7 +3,7 @@ layout: post
 title: "Come cancellare l'history comandi su linux."
 category: articles
 date:   2000-01-01 22:45:33
-tags: [Linux,Bash]
+tags: [Articoli disponibili in lingua italiana,lang_it,Linux,Bash]
 comments: true
 share: true
 ---

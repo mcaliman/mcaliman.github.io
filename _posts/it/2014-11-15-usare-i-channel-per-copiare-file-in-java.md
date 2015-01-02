@@ -3,7 +3,7 @@ layout: post
 title:  "Usare i Channel per copiare file in Java"
 category: articles
 date:   2014-11-15 22:45:33
-tags: [Java]
+tags: [Articoli disponibili in lingua italiana,lang_it,Java]
 comments: true
 share: true
 ---

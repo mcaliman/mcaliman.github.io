@@ -3,7 +3,7 @@ layout: post
 title:  "Concatenare PDF con iText in Java"
 category: articles
 date:   2014-09-18 22:45:33
-tags: [Java,JDK7,iText,PDF]
+tags: [Articoli disponibili in lingua italiana,lang_it,Java,JDK7,iText,PDF]
 comments: true
 share: true
 ---

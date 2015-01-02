@@ -3,7 +3,7 @@ layout: post
 title:  "Javascript secondo Peter Paul Kock (PPK)"
 category: articles
 date:   2011-07-03 22:45:33
-tags: [javascript]
+tags: [Articoli disponibili in lingua italiana,lang_it,javascript]
 comments: true
 share: true
 ---
