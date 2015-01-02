@@ -14,10 +14,10 @@
 
 <div>
 <span>
-
 <a href="{{ site.url }}/privacy" title="Privacy policy">privacy</a> |
 <a href="{{ site.url }}/terms"   title="Terms of service">terms</a> |  
-<a href="{{ site.url }}/support" title="How to support">support</a> 
+<a href="{{ site.url }}/support" title="How to support">support</a> |
+<a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i>feed</a>
 </span>
 </div>
 
