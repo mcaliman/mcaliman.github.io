@@ -6,6 +6,12 @@ tags: [about]
 modified: 2013-09-13
 ---
 
+
+My name is Massimo Caliman and this is my personal Web site. I am software architect and senior software developer.I am working as IT specialist since 1995 and since 1998 almost exclusively of Enterprise Java applications. I am Java Italian Association member since 1999 and founder of Java User Group located in Genoa, I am AICA member (Associazione Italiana per l'Informatica ed il Calcolo Automatico) Italy's most prominent Association in the Information Technology field founded in 1961.
+I discovered my passion for Computer Science before I actually had a computer in 1985 when I readed many computer science and programming books.
+I made my passion my work.
+
+
 Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta.
 *(Isaac Asimov, Il vento è cambiato, 1983)*
 
