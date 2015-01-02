@@ -1,8 +1,0 @@
-<p>Per estrarre un certificato che già sappiamo essere nel nostro portachiavi</p>
-
-<div class="highlight"><pre><code class="bash">keytool -export -alias mycompanyalias -file mycompany.crt</code></pre></div>
-
-<p>per firmare un nostro <code>jar</code> con il certificato sopra</p>
-
-<div class="highlight"><pre><code class="bash">jarsigner mycompany.jar mycompanyalias</code></pre></div>
-
