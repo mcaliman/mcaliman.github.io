@@ -10,7 +10,7 @@ search:           true
 
 url: http://localhost:4000
 
-#url: http://caliman.org
+url: http://caliman.org
 
 #url: http://mcaliman.github.io
 #NO url: http://massimocaliman.eu
@@ -48,7 +48,7 @@ links:
     url: /about/
   - title: Contact
     url: /contact/
-  - title: Articoli
+  - title: Post
     url: /articles/
   - title: Tags
     url: /tags/
@@ -61,6 +61,40 @@ links:
 #  - title: Made Mistakes
 #    url: http://mademistakes.com
 #    external: true
+
+
+
+
+# multilanguage Begin provo rimuovere se errs
+# article available in english language | "articolo disponibile in lingua italiana"
+
+defaults:
+  -
+    scope:
+      path: _posts/en
+    values:
+      layout: post
+      lang: en
+  -
+    scope:
+      path: _posts/it
+    values:
+      layout: post
+      lang: it
+# multilanguage End
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/Rome
