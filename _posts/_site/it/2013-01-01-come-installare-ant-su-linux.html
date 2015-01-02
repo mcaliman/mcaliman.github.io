@@ -1,0 +1,20 @@
+<p>Non provare mai a spiegare il computer a un profano. È più facile spiegare il sesso a una vergine.
+<em>(Robert Anson Heinlein, La Luna è una severa maestra, 1966)</em></p>
+
+<p>Vediamo come installare ant, questo è requisito per l’installazione di GlassFish su linux.
+Scarichiamo il tar.gz dal sito e trasferiamolo in <code>/usr/local</code>
+scompattiamo il file <code>apache-ant-1.7.1-bin.tar.gz</code> con il comando</p>
+
+<div class="highlight"><pre><code class="bash">tar xvfz apache-ant-1.7.1-bin.tar.gz</code></pre></div>
+
+<p>creiamo il nostro solito link simbolico con il comando <code>ln</code></p>
+
+<div class="highlight"><pre><code class="bash">ln -s apache-ant-1.7.1 ant</code></pre></div>
+
+<p>aggiungiamo in <code>/root/.bashrc</code> (o nella nostra home di utente non root) le variabili di ambiente</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">ANT_HOME</span><span class="o">=</span>/usr/local/ant
+<span class="nb">export </span>ANT_HOME
+<span class="nv">PATH</span><span class="o">=</span><span class="nv">$ANT_HOME</span>/bin:.:<span class="nv">$PATH</span>
+<span class="nb">export </span>PATH</code></pre></div>
+

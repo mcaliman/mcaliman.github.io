@@ -1,0 +1,7 @@
+<p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>
+
+<p>In un post precedente vi ho mostrato i benefici dell’uso dei channel e del package nio. Ho anche accennato alla possibilità dalla versione 7 del JDK di utilizzare la classe Files per effettuare copie di file in modo immediato. Come al solito vi riporto sotto un semplice metodo che illustra l’esempio di utilizzo del metodo copy.</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">copy</span><span class="o">(</span><span class="n">File</span> <span class="n">source</span><span class="o">,</span> <span class="n">File</span> <span class="n">dest</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+   <span class="n">Files</span><span class="o">.</span><span class="na">copy</span><span class="o">(</span><span class="n">source</span><span class="o">.</span><span class="na">toPath</span><span class="o">(),</span> <span class="n">dest</span><span class="o">.</span><span class="na">toPath</span><span class="o">());</span>
+<span class="o">}</span></code></pre></div>

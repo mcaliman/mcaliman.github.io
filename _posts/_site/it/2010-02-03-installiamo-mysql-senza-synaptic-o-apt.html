@@ -1,0 +1,47 @@
+<p>Scarichiamo il tar.gz dal sito di mysql www.mysql.com
+posizioniamolo in /usr/local scompattiamo il tar.gz con il comando</p>
+
+<div class="highlight"><pre><code class="bash">tar -xzf mysql-5.1.31-linux-i686-glibc23.tar.gz</code></pre></div>
+
+<p>(abbiamo assunto da un caso reale che la versione sia la 5.1.31, in questo caso il nome del file è
+mysql-5.1.31-linux-i686-glibc23.tar.gz) creaimo il link simbolico mysql</p>
+
+<div class="highlight"><pre><code class="bash">ln -s mysql-5.1.31-linux-i686-glibc23 mysql</code></pre></div>
+
+<p>creaimo utenti/gruppi</p>
+
+<div class="highlight"><pre><code class="bash">groupadd mysql
+useradd -g mysql mysql</code></pre></div>
+
+<p>inizializiamo il db</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nb">cd </span>mysql
+./scripts/mysql_install_db --user<span class="o">=</span>mysql</code></pre></div>
+
+<p>aggiungiamo i permessi necessari alle directory</p>
+
+<div class="highlight"><pre><code class="bash">chown -R root:mysql .
+chown -R mysql:mysql data</code></pre></div>
+
+<p>facciamo partire il demone di mysql in background con il comando</p>
+
+<div class="highlight"><pre><code class="bash">./bin/mysqld_safe --user<span class="o">=</span>mysql <span class="p">&amp;</span></code></pre></div>
+
+<p>configuriamo le variabili di ambiente
+in /root/.bashrc (o nella propria home)
+aggiungiamo le righe</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">MYSQL</span><span class="o">=</span>/usr/local/mysql
+<span class="nb">export </span>MYSQL
+<span class="nv">PATH</span><span class="o">=</span><span class="nv">$MYSQL</span>/bin:.:<span class="nv">$PATH</span>
+<span class="nb">export </span>PATH</code></pre></div>
+
+<p>aggiungiamo le righe anche in 
+/etc/init.d/bootmisc.sh
+per poter gestire l’avvio automatico del servizio di mysql</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">MYSQL</span><span class="o">=</span>/usr/local/mysql
+<span class="nb">export </span>MYSQL
+<span class="nv">PATH</span><span class="o">=</span><span class="nv">$MYSQL</span>/bin:.:<span class="nv">$PATH</span>
+<span class="nb">export </span>PATH</code></pre></div>
+

@@ -1,0 +1,58 @@
+<p>﻿Le strutture indicizzate sono collezioni di celle numerate che possono contenere elementi di tipo prestabilito. Assumeremo che in un array di dimensione h gli indici possano andare da 0 a h-1 o da 1 a h.</p>
+
+<p>Normalmente si definiscono due proprietà, una comunemente detta forte l’altra debole.</p>
+
+<p>proprietà forte: gli indici delle celle di un array sono numeri consecutivi.
+proprietà debole: non è possibile aggiungere nuove celle ad un array.</p>
+
+<p>Una possibile implementazione di un array ordinato è riportata sotto (ed è un implementazione del tipo di dato dizionario)</p>
+
+<p>classe: ArrayOrdinato implementa Dizionario
+dati: un array S di dimensione n contenente n coppie (elem,chiave) S(n) = Tetagrande(n)</p>
+
+<p>In pratica non usiamo indici i (numerici) come  chiave ma come cella dove memorizzare la coppia (e,k)</p>
+
+<p>Vediamo ora le operazioni comunemente definite su un dizionario</p>
+
+<p>insert(elem e,chiave k) T(n) = O(n)</p>
+
+<ol>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Rialloca S aumentando la dimensione n di 1 (cioè</td>
+          <td>S</td>
+          <td>=</td>
+          <td>S</td>
+          <td>+ 1 ed n = n+1)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Cerca i t.c. k&lt;=S[i].chiave (è ordinato!)</li>
+  <li>Pone S[j]&lt;-S[j-1] per ogni j in [n-1,i+1] e pone S[i]&lt;-(e,k)</li>
+</ol>
+
+<p>In pratica sapendo che è ordinato basta che riallochiamo di una cella l’array,traslando il contenuto delle celle da i a n nelle nuove posizioni i+1 a n+1.</p>
+
+<p>Identificata la posizione che deve occupare la coppia (e,k) da inserire, traslo le celle da i+1 in modo da liberare la cella i e mantenere l’ordinamento.</p>
+
+<p>delete(chiave k) T(n)=O(n)</p>
+
+<ol>
+  <li>Trovo l’indice i della coppia con chiave k in S ovvero trovo i t.c. S[i] = (e,k) dove k è quello dato. In altri termini trovo S[i].chiave=k</li>
+  <li>Pone S[j]&lt;-S[j+1] per ogni j, j in i,…,n-2</li>
+  <li>Rialloca S diminuendo la dimensione di 1 (ho tolto un elemento e posso eliminare l’ultima cella dopo che ho traslato gli elementi</li>
+</ol>
+
+<p>search(chiave k) -&gt; elem T(n) = O(log n)</p>
+
+<ol>
+  <li>Esegue l’algoritmo di ricerca binaria su S per verificare se S contiene k</li>
+  <li>Se trova ritorna elemento altrimenti null</li>
+</ol>
+
+<p>Nel linguaggio Java la naturale implementazione è fornita tramite gli array che possono contenere anche oggetti oltre i tipi base, quindi anche coppie o tuple del tipo <code>&lt;K,V&gt;</code> cioè coppie (chiave,valore)</p>
+
+<p>Oltre agli array, struttura di base del linguaggio, possiamo ovviamente utilizzare le liste per esempio gli <code>ArrayList</code> che adottano propriò questo tipo di filosofia più alcuni accorgimenti atti a rendere l’implementazione più efficiente.</p>

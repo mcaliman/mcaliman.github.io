@@ -1,0 +1,130 @@
+<p>Nelle vecchie release del linguaggio Java il tipo di dato dizionario veniva realizzato a partire dalla classe <code>Dictionary&lt;K,V&gt;</code> del package <code>java.util</code>. 
+La classe <code>Dictionary</code> è il genitore astratto di <code>Hashtable</code>, che associa chiavi a valori. Ogni chiave e ogni valore è un oggetto. In ogni oggetto <code>Dictionary</code>, ogni chiave è associata al più ad un valore. Dato un dizionario e una chiave, si può recuperare l’elemento associato. Qualsiasi oggetto non <code>null</code> può essere utilizzato sia come una chiave che come valore. 
+Di norma, il metodo <code>equals</code> deve essere implemantato da questa classe per decidere se due chiavi sono uguali.
+Benchè non ancora deprecata <code>Dictionary</code> può essere considerata obsoleta ormai, in quando <code>Map</code> è l’interfaccia standard per questo tipo di collezioni di dati. <code>Dictionary</code> permane in quando da essa deriva direttamente la classe concreta <code>HashTable</code>.</p>
+
+<p>Tuttora moltissimo codice utilizza ancora <code>HashTable</code>, ecco il perchè della sua sopravvivenza, necessaria ai fini della retrocompatibilità.</p>
+
+<p><code>Dictionary</code> è stata comunque “svecchiata” da Sun ora Oracle riprogettandola con i generics, passando in rassegna il javadoc possiamo farci un idea piuttosto precisa della segnatura dei suoi metodi principali</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">abstract</span> <span class="n">Enumeration</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span> <span class="nf">elements</span><span class="o">()</span></code></pre></div>
+
+<p>ritorna una <code>Enumaration</code> dei valori nel dizionario.</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">abstract</span> <span class="n">V</span> <span class="nf">get</span><span class="o">(</span><span class="n">Object</span> <span class="n">key</span><span class="o">)</span></code></pre></div>
+
+<p>ritorna il valore con cui è mappata la chiave key nel dizionario</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">abstract</span> <span class="kt">boolean</span> <span class="nf">isEmpty</span><span class="o">()</span></code></pre></div>
+
+<p>ritorna <code>true</code> se il dizionario è vuoto, <code>false</code> altrimenti.</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">abstract</span> <span class="n">Enumeration</span><span class="o">&lt;</span><span class="n">K</span><span class="o">&gt;</span> <span class="nf">keys</span><span class="o">()</span></code></pre></div>
+
+<p>ritorna una <code>Enumaration</code> delle chiavi presenti nel dizionario.</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">abstract</span> <span class="n">V</span> <span class="nf">put</span><span class="o">(</span><span class="n">K</span> <span class="n">key</span><span class="o">,</span> <span class="n">V</span> <span class="n">value</span><span class="o">)</span></code></pre></div>
+
+<p>mappa la chiave key con value nel dizionario, cioè inserisce la coppia key,value nel dizionario</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">abstract</span> <span class="n">V</span> <span class="nf">remove</span><span class="o">(</span><span class="n">Object</span> <span class="n">key</span><span class="o">)</span></code></pre></div>
+
+<p>rimuove la chiave e il valore corrispondente dal dizionario</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">abstract</span> <span class="kt">int</span> <span class="nf">size</span><span class="o">()</span></code></pre></div>
+
+<p>ritorna il numero di elementi distinti contenuti nel dizionario (cioè il numero delle chiavi).</p>
+
+<p>Si tratta dei classici metodi di una generica struttura dati di tipo dizionario, approfondiamo l’aspetto teorico rispolverando un pò di nozioni:
+Un dizionario è una collezione di elementi a cui sono associate chiavi prese da un universo totalmente ordinato. La nozione di tipo di dato si usa per descrivere le operazioni di interesse su una collezione, in altre parole specifica cosa un’operazione deve fare, non come l’operazione può essere realizzata, questo corrisponde al concetto di interface nel linguaggio Java.</p>
+
+<p>Una specifica in pseudolinguaggio può essere ad esempio quella riportata sotto</p>
+
+<p><strong>tipo</strong>: 
+Dizionario</p>
+
+<p><strong>dati</strong>: </p>
+
+<p>Un insieme S di coppie (elemento,chiave)
+<strong>operazioni</strong>:</p>
+
+<ol>
+  <li>insert(elemento e,chiave k) : <em>aggiunge a S una nuova coppia (e,k)</em></li>
+  <li>delete(chiave k): <em>cancella da S la coppia con chiave k</em></li>
+  <li>search(chiave k) -&gt; elemento : <em>se la chiave k è presente in S restituisce l’elemento e ad essa associata</em></li>
+</ol>
+
+<p>più formalmente, prendendo in prestito le nozioni insiemistiche (perchè S è un insieme) abbiamo 
+S={ (e,k) | e∈elemento,k∈chiave }</p>
+
+<ol>
+  <li>insert(e,k)     realizza S = S∪(e,k)</li>
+  <li>delete(k)       realizza S = S−(e,k) se (e,k)∈S</li>
+  <li>search(k) -&gt; e  realizza se k in S allora ritorna e, <code>null</code> altrimenti.</li>
+</ol>
+
+<p>Oggi di fatto la classe <code>HashTable</code> non è più utilizza, le collezioni oggi sono molto più strutturate, pulite ed organiche.</p>
+
+<p>Il posto di <code>Dictionary</code> è stato preso da <code>Map&lt;K,V&gt;</code>, che è un interfaccia al contrario di <code>Dictionary</code> che è invece una classe astratta,<code>Map</code> è quindi molto più flessibile dal punto di vista della OOP, o quantomeno della OOP adottata dal linguaggio Java (eredita multipla solo dal punto di vista delle interfacce alla release 7)</p>
+
+<p>Con riferimento al suo javadoc abbiamo i metodi</p>
+
+<div class="highlight"><pre><code class="java"><span class="kt">void</span> <span class="nf">clear</span><span class="o">()</span></code></pre></div>
+
+<p>svuota la mappa.</p>
+
+<div class="highlight"><pre><code class="java"><span class="kt">boolean</span> <span class="nf">containsKey</span><span class="o">(</span><span class="n">Object</span> <span class="n">key</span><span class="o">)</span></code></pre></div>
+
+<p>ritorna <code>true</code> se la mappa contiene elementi per la chiave key.</p>
+
+<div class="highlight"><pre><code class="java"><span class="kt">boolean</span> <span class="nf">containsValue</span><span class="o">(</span><span class="n">Object</span> <span class="n">value</span><span class="o">)</span></code></pre></div>
+
+<p>ritorna <code>true</code> se la mappa contiene una o più chiavi per il valore specificato</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">Set</span><span class="o">&lt;</span><span class="n">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;&gt;</span> <span class="n">entrySet</span><span class="o">()</span></code></pre></div>
+
+<p>ritorna un <code>Set</code> delle coppie (chiave,valore) contenute nella mappa.</p>
+
+<div class="highlight"><pre><code class="java"><span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="n">Object</span> <span class="n">o</span><span class="o">)</span></code></pre></div>
+
+<p>compara l’oggetto specificato con la quelli nella mappa (ugualianza).</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">V</span> <span class="nf">get</span><span class="o">(</span><span class="n">Object</span> <span class="n">key</span><span class="o">)</span></code></pre></div>
+
+<p>ritorna il valore associato alla chiave key se presente in mappa, <code>null</code> altrimenti.</p>
+
+<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="nf">hashCode</span><span class="o">()</span></code></pre></div>
+
+<p>ritorna il codice hash per la mappa.</p>
+
+<div class="highlight"><pre><code class="java"><span class="kt">boolean</span> <span class="nf">isEmpty</span><span class="o">()</span></code></pre></div>
+
+<p>ritorna <code>true</code> se la mappa è vuota.</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">Set</span><span class="o">&lt;</span><span class="n">K</span><span class="o">&gt;</span> <span class="nf">keySet</span><span class="o">()</span></code></pre></div>
+
+<p>ritorna un <code>Set</code> con le chiavi della mappa (utile per iterare con <code>Iterator</code>).</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">V</span> <span class="nf">put</span><span class="o">(</span><span class="n">K</span> <span class="n">key</span><span class="o">,</span> <span class="n">V</span> <span class="n">value</span><span class="o">)</span></code></pre></div>
+
+<p>associa il valore specificato con la chiave passata.</p>
+
+<div class="highlight"><pre><code class="java"><span class="kt">void</span> <span class="nf">putAll</span><span class="o">(</span><span class="n">Map</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">K</span><span class="o">,?</span> <span class="kd">extends</span> <span class="n">V</span><span class="o">&gt;</span> <span class="n">m</span><span class="o">)</span></code></pre></div>
+
+<p>copia tutti gli elementi della mappa m nella mappa.</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">V</span> <span class="nf">remove</span><span class="o">(</span><span class="n">Object</span> <span class="n">key</span><span class="o">)</span></code></pre></div>
+
+<p>rimuove la coppia key-value per la key passata, se presente in mappa.</p>
+
+<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="nf">size</span><span class="o">()</span></code></pre></div>
+
+<p>ritorna la dimensione della mappa ovvero il numero di coppie key-value contenute.</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">Collection</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span> <span class="nf">values</span><span class="o">()</span></code></pre></div>
+
+<p>ritorna una <code>Collection</code> con i valori contenuti nella mappa.</p>
+
+<p>Il set di metodi è piuttosto generoso, volendolo confrontare con le tipiche specifiche astratte comuni ad ogni mappa.
+Il tipo più comune di implementazioni di <code>Map</code> è <code>HashMap</code>. Approfondieremo questa classe nei prossimi post.</p>
+

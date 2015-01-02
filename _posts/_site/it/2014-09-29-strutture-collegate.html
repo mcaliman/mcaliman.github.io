@@ -1,0 +1,84 @@
+<p>﻿I costituenti di base di una struttura collegata sono i record che come le celle degli array sono numerati e contengono ciascuno una collezione di oggetti. I numeri associati ai record sono i loro indirizzi in memoria (quindi globali nell’ambito del programma e non locali come nel caso degli array)
+Gli indirizzi in memoria non sono necessariamente consecutivi e sono costruiti in maniera dinamica.</p>
+
+<p>Se un record A contiene l’indirizzo di un altro record B diremo che esiste un collegamento tra A e B realizzato tramite un puntatore.
+I puntatori permettono di esplorare una struttura collegata saltando di record in record è importante che ci sia un record da cui è possibile raggiungere tutti gli altri. 
+Tale record permette di inserire e cancellare agevolmente elementi. La struttura è aggiornanata tramite i puntatori (molto più sono più versatili degli array).</p>
+
+<p>proprietà forte: è possibile aggiungere o togliere record ad una struttura collegata
+proprietà debole: gli indirizzi dei record di una struttura collegata non sono necessariamente consecutivi</p>
+
+<p>Per cancellare record se non ho già indirizzo devo però effettuare una ricerca.</p>
+
+<p>Una specifica per questo tipo di struttura è riportata sotto</p>
+
+<p>classe StrutturaCollegata implementa Dizionario
+dati: S(n) = ThetaGrande (n)
+Una collezione di n record contenenti ciascuno una quadrupla (elem,chiave,next,prev)
+next e prev puntatori al successivo e al precedente record della collezione. Manteniamo inoltre un puntatore list che contiene l’indirizzo di un record se la collezione non è vuota e null altrimenti.</p>
+
+<p>operazioni</p>
+
+<div class="highlight"><pre><code class="bash">insert<span class="o">(</span>elem e,chiave k<span class="o">)</span> T<span class="o">(</span>n<span class="o">)=</span>O<span class="o">(</span>1<span class="o">)</span>
+1.viene creato un record p con elemento e, chiave k
+2.if <span class="nv">list</span><span class="o">=</span>null <span class="k">then</span>
+<span class="k">   </span>p.next&lt;-p
+   p.prev&lt;-p
+   list&lt;-p
+<span class="k">else </span>
+<span class="k">   </span>si collega il record p tra list e list.next effettuando
+   p.next&lt;-list.next
+   list.next.prev&lt;-p
+   p.prev&lt;-list
+   list.next&lt;-p</code></pre></div>
+
+<p>trattandosi di una struttura collegata doppiamente linkata (doubly linked list) in fase di implementazione si debbono tenere presenti alcuni casi limite come ad esempio cancellazione dell’unico elemento presente in lista ecc.</p>
+
+<div class="highlight"><pre><code class="bash">delete<span class="o">(</span>chiave k<span class="o">)</span> T<span class="o">(</span>n<span class="o">)=</span>O<span class="o">(</span>n<span class="o">)</span>
+1.si trova il record p con chiave k come nella search
+2.si effettua
+  p.prev.next&lt;-p.next <span class="o">(</span>il next del precedente di p punta al successore di p<span class="o">)</span>
+  p.next.prev&lt;-p.prev <span class="o">(</span>il prev del successore di p punta a prececessore di p<span class="o">)</span>
+3.si distrugge il record p</code></pre></div>
+
+<div class="highlight"><pre><code class="bash">search<span class="o">(</span>chiave k<span class="o">)</span> -&gt; elem T<span class="o">(</span>n<span class="o">)=</span>O<span class="o">(</span>n<span class="o">)</span>
+<span class="k">if </span><span class="nv">list</span> <span class="o">=</span> null <span class="k">then return </span>null
+<span class="k">else </span>
+si scandisce la struttura saltando di record in record con p&lt;-p.next fino a quando non diventa <span class="nv">p</span><span class="o">=</span>list 
+verificando se qualche p ha chiave k in caso positivo si restituisce l’elemento trovato altrimenti <span class="sb">`</span>null<span class="sb">`</span></code></pre></div>
+
+<p>Per realizzare un implementazione in Java a partire dalla specifica vista sopra come prima cosa abbiamo bisogno realizzare una classe per modellare i record, ma per farlo dobbiamo anche modellare il contenuto informativo con una classe Info o Tuple, semplifichiamo in questa prima fase di analisi e supponiamo che sia la chiave (intera) che il valore (stringa) siano attributi della classe record stessa. </p>
+
+<p>In altre parole evitiamo di gestire qualcosa del genere</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tuple</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">K</span> <span class="n">key</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="n">V</span> <span class="n">value</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="nf">Tuple</span><span class="o">()</span> <span class="o">{</span>
+    
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nf">Tuple</span><span class="o">(</span><span class="n">K</span> <span class="n">k</span><span class="o">,</span><span class="n">V</span> <span class="n">v</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="n">k</span><span class="o">;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">v</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Veniamo alla nostra classe <code>Record</code></p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Record</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">Integer</span> <span class="n">key</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">value</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="n">Record</span> <span class="n">prev</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="n">Record</span> <span class="n">next</span><span class="o">;</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Avremmo potuto adottare già una versione generica come ad esempio</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RecordGen</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span><span class="n">V</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">K</span> <span class="n">key</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="n">V</span> <span class="n">value</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="n">Record</span> <span class="n">next</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="n">Record</span> <span class="n">prev</span><span class="o">;</span>
+<span class="o">}</span></code></pre></div>
+

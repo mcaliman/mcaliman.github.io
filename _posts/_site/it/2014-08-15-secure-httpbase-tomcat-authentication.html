@@ -1,0 +1,52 @@
+<p>Per impostare l’autenticazione base in una applicazione java in tomcat possiamo intervenire solo in due file</p>
+
+<p>In tomcat-users.xml setting , dove configureremo gli utenti.</p>
+
+<div class="highlight"><pre><code class="xml"><span class="c">&lt;!--?xml version=&#39;1.0&#39; encoding=&#39;utf-8&#39;?--&gt;</span>
+<span class="nt">&lt;tomcat-users&gt;</span>
+<span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;tomcat&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;role1&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;user</span> <span class="na">password=</span><span class="s">&quot;tomcat&quot;</span> <span class="na">roles=</span><span class="s">&quot;tomcat&quot;</span> <span class="na">username=</span><span class="s">&quot;tomcat&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;user</span> <span class="na">password=</span><span class="s">&quot;tomcat&quot;</span> <span class="na">roles=</span><span class="s">&quot;role1&quot;</span> <span class="na">username=</span><span class="s">&quot;role1&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;user</span> <span class="na">password=</span><span class="s">&quot;tomcat&quot;</span> <span class="na">roles=</span><span class="s">&quot;tomcat,role1&quot;</span> <span class="na">username=</span><span class="s">&quot;both&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/user&gt;</span>
+<span class="nt">&lt;/user&gt;</span>
+<span class="nt">&lt;/user&gt;</span>
+<span class="nt">&lt;/role&gt;</span>
+<span class="nt">&lt;/role&gt;</span>
+<span class="nt">&lt;/tomcat-users&gt;</span></code></pre></div>
+
+<p>Mentre nel file web.xml della nostra applicazione aggiungiamo le righe come sotto.</p>
+
+<div class="highlight"><pre><code class="xml"><span class="c">&lt;!--?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?--&gt;</span>  
+<span class="nt">&lt;web-app&gt;</span>    
+<span class="c">&lt;!-- Define a Security Constraint on this Application --&gt;</span>
+<span class="nt">&lt;security-constraint&gt;</span>
+<span class="nt">&lt;web-resource-collection&gt;</span>
+<span class="nt">&lt;web-resource-name&gt;</span>Entire Application<span class="nt">&lt;/web-resource-name&gt;</span>      
+<span class="nt">&lt;url-pattern&gt;</span>/*<span class="nt">&lt;/url-pattern&gt;</span>
+<span class="nt">&lt;/web-resource-collection&gt;</span>
+<span class="nt">&lt;auth-constraint&gt;</span>
+<span class="nt">&lt;role-name&gt;</span>tomcat<span class="nt">&lt;/role-name&gt;</span>
+<span class="nt">&lt;/auth-constraint&gt;</span>
+<span class="nt">&lt;/security-constraint&gt;</span>
+
+
+<span class="c">&lt;!-- Define the Login Configuration for this Application --&gt;</span>
+<span class="nt">&lt;login-config&gt;</span>
+<span class="nt">&lt;auth-method&gt;</span>BASIC<span class="nt">&lt;/auth-method&gt;</span>
+<span class="nt">&lt;realm-name&gt;</span>Application<span class="nt">&lt;/realm-name&gt;</span>
+<span class="nt">&lt;/login-config&gt;</span>
+
+
+<span class="c">&lt;!-- Security roles referenced by this web application --&gt;</span>
+<span class="nt">&lt;security-role&gt;</span>
+<span class="nt">&lt;description&gt;</span>
+The role that is required to log in to the Manager Application
+<span class="nt">&lt;/description&gt;</span>
+<span class="nt">&lt;role-name&gt;</span>tomcat<span class="nt">&lt;/role-name&gt;</span>
+<span class="nt">&lt;/security-role&gt;</span>
+
+
+<span class="nt">&lt;/web-app&gt;</span></code></pre></div>
+

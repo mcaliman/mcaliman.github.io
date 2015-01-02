@@ -1,0 +1,67 @@
+<p>﻿Dopo i post sulle strutture dati elementari passiamo a trattare gli alberi, prima di entrare nel dettaglio di come implementare strutture dati di questo tipo ne approfondiamo l’aspetto teorico.</p>
+
+<p>Per prima cosa ne vediamo la definzione classica</p>
+
+<p>Un albero (radicato) è una coppia <code>T=(N,A)</code> costituita da un insieme <code>N</code> di nodi e da un insieme <code>A</code> di archi, <code>A</code> è sottoinsieme proprio di <code>NxN</code> (cioè del prodotto cartesiano di <code>N</code> per <code>N</code>), gli archi infatti sono coppie di nodi e il concetto di arco ne modella la relazione esistente.</p>
+
+<p>Esiste una nomenclatura piuttosto intuitiva riguardo gli Alberi</p>
+
+<p>In un albero ogni nodo v (tranne la radice) ha un solo genitore (o padre) u tale che (u,v) appartiene ad A (l’insieme degli archi)</p>
+
+<p>Un nodo può avere 1 o più figli v t.c. (u,v) appartiene ad A e il loro numero è detto grado</p>
+
+<p>Con queste definizioni abbiamo già fissato alcuni concetti importanti</p>
+
+<p>Seguono le definizioni per 
+radice
+foglie
+nodi interni
+antenati
+discendenti
+profondità</p>
+
+<p>i nodi con lo stesso padre vengono detti fratelli</p>
+
+<p>alberi con foglie tutte sullo stesso livello vengono detti alberi completi</p>
+
+<p>Un specifica base del tipo di dati Albero deve comprendere necessariamente operazioni come quelle riportate sotto</p>
+
+<div class="highlight"><pre><code class="bash">tipo
+   Albero
+dati
+   Un insieme di nodi N e uno di archi A
+operazioni
+   numNodi<span class="o">()</span> -&gt; intero <span class="o">(</span>restituisce il numero di nodi presenti nell’albero<span class="o">)</span>
+   grado<span class="o">(</span>nodo v<span class="o">)</span>-&gt; intero <span class="o">(</span>restituisce il numero di figli del nodo v<span class="o">)</span>
+   padre<span class="o">(</span>nodo v<span class="o">)</span> -&gt; nodo <span class="o">(</span>restituisce il padre del nodo v o null se v è la radice<span class="o">)</span>
+   figli<span class="o">(</span>nodo v<span class="o">)</span> -&gt; &lt;nodo,nodo,...,nodo&gt; <span class="o">(</span>resitituisce uno dopo l’altro i figli del nodo v<span class="o">)</span>
+   aggiungiNodo<span class="o">(</span>nodo u<span class="o">)</span> -&gt; nodo <span class="o">(</span>inserisce un nuovo nodo v come figlio di u nell’albero e lo restituisce, se v è il primo nodo 
+                           ad essere inserito nell’albero esso diventa radice e u viene ignorato<span class="o">)</span>
+   aggiungiSottoalbero<span class="o">(</span>Albero a,nodo u<span class="o">)</span> <span class="o">(</span>inserisce nell’albero il sottoalbero a in modo che la radice di a diventi figlia di u<span class="o">)</span>
+   rimuoviSottoalbero<span class="o">(</span>nodo v<span class="o">)</span>-&gt;Albero <span class="o">(</span>stacca e restituisce l’intero sottoalbero radicato in v,
+   l’operazione cancella dall’albero il nodo v e tutti i suoi discendenti<span class="o">)</span></code></pre></div>
+
+<p>A questo punto passare dalla specifica in pseudocodice ad una in linguaggio Java è immediato. </p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">interface</span> <span class="nc">NodoInf</span> <span class="o">{</span>
+      <span class="c1">//stuff</span>
+<span class="o">}</span>
+
+<span class="kd">interface</span> <span class="nc">AlberoInf</span> <span class="o">{</span>
+   <span class="kt">int</span> <span class="nf">numNodi</span><span class="o">();</span>
+   <span class="kt">int</span> <span class="nf">grado</span><span class="o">(</span><span class="n">Nodo</span> <span class="n">v</span><span class="o">);</span>
+   <span class="n">Nodo</span> <span class="nf">padre</span><span class="o">(</span><span class="n">Nodo</span> <span class="n">v</span><span class="o">);</span>
+   <span class="n">List</span><span class="o">&lt;</span><span class="n">Nodo</span><span class="o">&gt;</span> <span class="nf">figli</span><span class="o">(</span><span class="n">Nodo</span> <span class="n">v</span><span class="o">);</span>
+   <span class="n">Nodo</span> <span class="nf">aggiungiNodo</span><span class="o">(</span><span class="n">Nodo</span> <span class="n">u</span><span class="o">);</span>
+   <span class="kt">void</span> <span class="nf">aggiungiSottoalbero</span><span class="o">(</span><span class="n">Albero</span> <span class="n">a</span><span class="o">,</span><span class="n">Nodo</span> <span class="n">u</span><span class="o">)</span> <span class="o">;</span>
+   <span class="n">Albero</span> <span class="nf">rimuoviSottoalbero</span><span class="o">(</span><span class="n">Nodo</span> <span class="n">v</span><span class="o">);</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Una struttura di questo tipo che non si porti dietro un certo contenuto informativo è di per se poco utile, Nodo dovrebbe infatti contenere come proprietà per esempio una chiave, un etichettà. Pensiamo ad esempio ad una struttura ad albero per rappresentare l’albero genealogico di una famigla.</p>
+
+<p>Utilizzando i generics sarebbe infatti più interessante lavorare con classi di questo tipo
+<code>Tree&lt;T&gt;</code> e <code>Node&lt;T&gt;</code>.</p>
+
+<p>Nel JDK sono presenti implemetazioni interessanti come <code>javax.swing.tree.TreeModel</code> e <code>javax.swing.tree.TreeNode</code> utilizzata nelle Swing per la realizzazione delle GUI in ambiente desktop.</p>
+
+<p>Esistono diverse possibili rappresentazioni per gli alberi sia basate su strutture indicizzate che collegate, quale scegliere dipende dal tipo di problemi che pensiamo di dover risolvere, se pensiamo che l’operazione più frequente o critica sia per esempio risalire ai figli di un nodo ne utilizzeremo una, se la l’operazione più critica e navigare per livelli l’albero ne utilizzeremo una ottimizzata per questo tipo di problema.</p>

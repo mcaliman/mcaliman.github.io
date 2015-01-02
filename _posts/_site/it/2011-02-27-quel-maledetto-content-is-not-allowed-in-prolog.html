@@ -1,0 +1,13 @@
+<p>Ogni documento XML su cui lavoriamo dovrebbe essere formattato correttamente, salvato con il giusto encoding ecc.
+Un caso classico è il messaggio “Content is not allowed in prolog” (<code>SAXParseException</code>)
+Editiamo a mano il file con un editor (esadecimale) e togliamo in testa “ef bb bf”.
+Visto che usiamo Java molto meglio mettere un piccolo work-around di appena due righe di codice :</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">Matcher</span> <span class="n">matcher</span> <span class="o">=</span> <span class="o">(</span><span class="n">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">&quot;^([\\W]+)&lt;&quot;</span><span class="o">)).</span><span class="na">matcher</span><span class="o">(</span> <span class="n">xmlString</span><span class="o">.</span><span class="na">trim</span><span class="o">()</span> <span class="o">);</span>
+<span class="n">xmlString</span> <span class="o">=</span> <span class="n">matcher</span><span class="o">.</span><span class="na">replaceFirst</span><span class="o">(</span><span class="s">&quot;&lt;&quot;</span><span class="o">);</span></code></pre></div>
+
+<p>Questo prima di passare il tutto al nostro oggetto <code>SAXBuilder</code></p>
+
+<div class="highlight"><pre><code class="java"><span class="n">SAXBuilder</span> <span class="n">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SAXBuilder</span><span class="o">();</span>
+<span class="n">Document</span> <span class="n">document</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">build</span><span class="o">(</span><span class="k">new</span> <span class="n">StringReader</span><span class="o">(</span><span class="n">xmlString</span><span class="o">));</span></code></pre></div>
+

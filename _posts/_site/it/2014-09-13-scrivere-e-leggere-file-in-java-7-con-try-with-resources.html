@@ -1,0 +1,61 @@
+<p>Leggere e scrivere file in Java 7 sfruttando il nuovo costrutto try-with-resource manleva lo sviluppatore dal compito di chiudere correttamente gli stream, sotto potete trovare due metodi di esempio.</p>
+
+<p>Per scrivere un file</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">write</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="n">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">boolean</span> <span class="n">completed</span><span class="o">;</span>
+        <span class="k">try</span> <span class="o">(</span><span class="n">Writer</span> <span class="n">writer</span> <span class="o">=</span> 
+<span class="k">new</span> <span class="nf">BufferedWriter</span><span class="o">(</span>
+<span class="k">new</span> <span class="nf">OutputStreamWriter</span><span class="o">(</span><span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="n">name</span><span class="o">),</span> <span class="s">&quot;utf-8&quot;</span><span class="o">)))</span> 
+<span class="o">{</span>
+            <span class="n">writer</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
+            <span class="n">completed</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">completed</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="n">logger</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="n">Level</span><span class="o">.</span><span class="na">SEVERE</span><span class="o">,</span> <span class="s">&quot;&quot;</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">completed</span><span class="o">;</span>
+    <span class="o">}</span></code></pre></div>
+
+<p>e per leggerne il contenuto</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="n">String</span> <span class="nf">read</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">String</span> <span class="n">text</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="k">try</span> <span class="o">(</span><span class="n">BufferedReader</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="n">name</span><span class="o">)))</span> <span class="o">{</span>
+            <span class="n">StringBuilder</span> <span class="n">string</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="o">();</span>
+            <span class="n">String</span> <span class="n">line</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
+            <span class="k">while</span> <span class="o">(</span><span class="n">line</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">string</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">line</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">lineSeparator</span><span class="o">());</span>
+                <span class="n">line</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
+            <span class="o">}</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">logger</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="n">Level</span><span class="o">.</span><span class="na">SEVERE</span><span class="o">,</span> <span class="s">&quot;&quot;</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+             <span class="n">logger</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="n">Level</span><span class="o">.</span><span class="na">SEVERE</span><span class="o">,</span> <span class="s">&quot;&quot;</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">text</span><span class="o">;</span>
+    <span class="o">}</span></code></pre></div>
+
+<p>Quando il blocco try termina lo Stream verrà chiuso automaticamente. Questo è possibile perché le classi utilizzate nel blocco try-with-resources implementano l’interfaccia Java java.lang.AutoCloseable . </p>
+
+<p>Tutte le classi che implementano questa interfaccia possono essere utilizzati all’interno del try-with-resources.</p>
+
+<p>L’interfaccia AutoClosable ha un solo metodo close() </p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">AutoClosable</span> <span class="o">{</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">close</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span><span class="o">;</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Implementare AutoClosable su un nostro oggetto non richiede molto sforzo come si può vedere da codice di esempio che riporto qui sotto.</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AutoClosableExampleObject</span> <span class="kd">implements</span> <span class="n">AutoCloseable</span> <span class="o">{</span>
+
+   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">close</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+      <span class="c1">//do stuff and close</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Se non vogliamo catturare l’eccezzione basta omettere la parte catch del blocco ed essa si propagherà come se fosse non gestita (proprio così un try senza catch e senza finally). Ad essere sinceri il codice sopra avrebbe potuto beneficiare di altre novità della versione 7 come ad esempio i catch con gestione multipla di eccezioni ma di questo ed altro si parlerà in un prossimo post.</p>
