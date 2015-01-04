@@ -41,6 +41,12 @@ body ads
 @media(min-width: 1000px) { .blog-post-left { width: 160px; height: 600px; } }
 </style>
 
+ <style>
+  .responsive-ads { width: 300px; height: 200px; }
+  @media(min-width: 518px) { .responsive-ads { width: 468px; height: 60px; } }
+  @media(min-width: 778px) { .responsive-ads { width: 728px; height: 90px; } }
+  @media(min-width: 1000px) { .responsive-ads { width: 160px; height: 600px; } }
+  </style>
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- blog-post-left -->
