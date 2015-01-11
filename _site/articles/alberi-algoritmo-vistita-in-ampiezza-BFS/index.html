@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>JSF 2 forzare gli id generati dai tag &#8211; Massimo Caliman's</title>
+<title>Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Search) &#8211; Massimo Caliman's</title>
 <meta name="description" content="blog on Computer Science.">
-<meta name="keywords" content="Articoli disponibili in lingua italiana, lang_it, Java, JavaServerFaces, JSF2">
+<meta name="keywords" content="Articoli disponibili in lingua italiana, lang_it, Java, Algoritmi, Alberi">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://caliman.org/images/bio-photo.jpg">
-<meta name="twitter:title" content="JSF 2 forzare gli id generati dai tag">
+<meta name="twitter:title" content="Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Search)">
 <meta name="twitter:description" content="blog on Computer Science.">
 <meta name="twitter:creator" content="@mcaliman">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JSF 2 forzare gli id generati dai tag">
+<meta property="og:title" content="Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Search)">
 <meta property="og:description" content="blog on Computer Science.">
-<meta property="og:url" content="http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/">
+<meta property="og:url" content="http://caliman.org/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/">
 <meta property="og:site_name" content="Massimo Caliman's">
 
 
 
 
 
-<link rel="canonical" href="http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/">
+<link rel="canonical" href="http://caliman.org/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/">
 
 <link href="http://caliman.org/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
 
@@ -141,27 +141,27 @@
     
     <div class="entry-wrapper">
       <header class="entry-header">
-        <span class="entry-tags"><a href="http://caliman.org/tags/#Articoli disponibili in lingua italiana" title="Pages tagged Articoli disponibili in lingua italiana">Articoli disponibili in lingua italiana</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#lang_it" title="Pages tagged lang_it">lang_it</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#Java" title="Pages tagged Java">Java</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#JavaServerFaces" title="Pages tagged JavaServerFaces">JavaServerFaces</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#JSF2" title="Pages tagged JSF2">JSF2</a></span>
+        <span class="entry-tags"><a href="http://caliman.org/tags/#Articoli disponibili in lingua italiana" title="Pages tagged Articoli disponibili in lingua italiana">Articoli disponibili in lingua italiana</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#lang_it" title="Pages tagged lang_it">lang_it</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#Java" title="Pages tagged Java">Java</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#Algoritmi" title="Pages tagged Algoritmi">Algoritmi</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#Alberi" title="Pages tagged Alberi">Alberi</a></span>
         
-          <h1 class="entry-title">JSF 2 forzare gli id generati dai tag</h1>
+          <h1 class="entry-title">Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Search)</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://caliman.org/images/bio-photo.jpg" alt="Massimo Caliman photo" class="author-photo">
         <span class="author vcard">By <span class="fn"><a href="http://caliman.org/about/" title="About Massimo Caliman">Massimo Caliman</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-11-09T23:45:33+01:00"><i class="icon-calendar-empty"></i> November 09, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-10-15T00:45:33+02:00"><i class="icon-calendar-empty"></i> October 15, 2014</time></span>
         
         <span class="entry-comments"><i class="icon-comment-alt"></i> <a href="#disqus_thread">Comment</a></span>
 
 
-        <span><a href="http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/" rel="bookmark" title="JSF 2 forzare gli id generati dai tag"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="http://caliman.org/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/" rel="bookmark" title="Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Search)"><i class="icon-link"></i> Permalink</a></span>
         
         <span class="social-share-facebook">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://caliman.org/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
         <span class="social-share-twitter">
-            <a href="https://twitter.com/intent/tweet?hashtags=articles&text=JSF 2 forzare gli id generati dai tag&url=http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/&via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
+            <a href="https://twitter.com/intent/tweet?hashtags=articles&text=Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Search)&url=http://caliman.org/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/&via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
         <span class="social-share-googleplus">
-            <a href="https://plus.google.com/share?url=http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
+            <a href="https://plus.google.com/share?url=http://caliman.org/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
             <!-- /.social-share -->
 
 
@@ -188,46 +188,33 @@
 
       </footer>
       <div class="entry-content">
-        <p>I computer sono come gli Dei del Vecchio Testamento: pieni di regole e nessuna pietà. <em>(Joseph Campbell, Il potere del mito, 1988)</em></p>
+        <p>﻿“PHP is a minor evil perpetrated and created by incompetent amateurs, whereas Perl is a great and insidious evil perpetrated by skilled but perverted professionals.”
+<em>(Jon Ribbens)</em></p>
 
-<p>Quando usiamo tag come <code>inputHidden</code> o <code>form</code>, cioè componenti standard HTML delle JSF, gli attributi <code>id</code> del corrispondente 
-tag HTML sono generati in automatico secondo regole precise.</p>
+<p>Partiamo dal algoritmo di generico di visita e usando una coda per rappresentare <code>S</code> otteniamo visita in ampiezza (Breadth First Search o BFS).</p>
 
-<p>ad esempio</p>
+<p>I nodi vengono visitati per livelli,prima radice,poi figli della radice,poi i figli dei figli.</p>
 
-<div class="highlight"><pre><code class="xml"><span class="nt">&lt;h:form</span> <span class="na">id=</span><span class="s">&quot;form1&quot;</span><span class="nt">&gt;</span>
-   <span class="nt">&lt;t:inputHidden</span> <span class="na">id=</span><span class="s">&quot;field1&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/h:form&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="java"><span class="n">algoritmo</span> <span class="nf">visitaBFS</span><span class="o">(</span><span class="n">nodo</span> <span class="n">r</span><span class="o">)</span>
+   <span class="n">Coda</span> <span class="n">C</span>
+   <span class="n">C</span><span class="o">.</span><span class="na">enqueue</span><span class="o">(</span><span class="n">r</span><span class="o">)</span>
+   <span class="k">while</span><span class="o">(</span><span class="n">not</span> <span class="n">C</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="k">do</span> 
+       <span class="n">u</span><span class="o">&lt;-</span><span class="n">C</span><span class="o">.</span><span class="na">dequeue</span><span class="o">()</span>
+       <span class="k">if</span><span class="o">(</span><span class="n">u</span><span class="o">&lt;&gt;</span><span class="kc">null</span><span class="o">)</span> <span class="n">then</span>
+           <span class="n">visit</span><span class="o">(</span><span class="n">u</span><span class="o">)</span>
+           <span class="n">C</span><span class="o">.</span><span class="na">enqueue</span><span class="o">(</span><span class="n">figlio</span> <span class="n">sx</span> <span class="n">di</span> <span class="n">u</span><span class="o">)</span>
+           <span class="n">C</span><span class="o">.</span><span class="na">enqueue</span><span class="o">(</span><span class="n">figlio</span> <span class="n">dx</span> <span class="n">di</span> <span class="n">u</span><span class="o">)</span></code></pre></div>
 
-<p>da luogo a questo codice HTML</p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name=</span><span class="s">&quot;form:field1&quot;</span><span class="nt">/&gt;</span></code></pre></div>
-
-<p>Ovviamente non siamo costretti a valorizzare l’attributo <code>id</code>, il rendering delle Java Server Faces si occupano di generarne in automatico di appropriati ed univoci.</p>
-
-<p>Quando vogliamo però referenziare un dato componente tramite il suo <code>id</code>, sia che si tratti di CSS o di Javascript questo comportamente ci impedisce di farlo (quantomeno ci rende la vita difficile, pensate a referenziare qualcosa come <code>#form:field1</code> con JQuery, escape?).</p>
-
-<p>In casi come questo possiamo dichiarare gli <code>id</code> e a livello di <code>form</code> specificare l’attributo <code>prependId="false"</code>. Applicato al codice visto sopra abbiamo</p>
-
-<div class="highlight"><pre><code class="xml"><span class="nt">&lt;h:form</span> <span class="na">id=</span><span class="s">&quot;form1&quot;</span> <span class="na">prependId=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
-   <span class="nt">&lt;t:inputHidden</span> <span class="na">id=</span><span class="s">&quot;field1&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/h:form&gt;</span></code></pre></div>
-
-<p>che darà luogo a </p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name=</span><span class="s">&quot;field1&quot;</span><span class="nt">/&gt;</span></code></pre></div>
-
-<p>Verrebbe la tentazione di utilizzarlo sempre, anche se non è necessario per interazioni con js o css. L’attributo si dovrà usare con attenzione, si può ottenere un errore di <code>id</code> duplicato se si utilizza troppo spesso. In altre parole se non strettamente necessario, lasciamo che sia JSF a occuparsi di questi dettagli e a generare <code>id</code> univoci per i nostri tag.</p>
 
         <div id="disqus_thread"></div><!-- /#disqus_thread -->
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://caliman.org/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/" class="btn" title="Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Search)">Previous article</a>
+        <a href="http://caliman.org/articles/alberi-algoritmo-vistita-in-profondita-DFS/" class="btn" title="Algoritmo di visita in profondità per un albero (DFS o Depth First Search)">Previous article</a>
       
       
-        <a href="http://caliman.org/articles/usare-i-channel-per-copiare-file-in-java/" class="btn" title="Usare i Channel per copiare file in Java">Next article</a>
+        <a href="http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/" class="btn" title="JSF 2 forzare gli id generati dai tag">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>
