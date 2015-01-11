@@ -7,29 +7,29 @@
 
 <title type="text">Massimo Caliman's</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
-<link rel="alternate" type="text/html" href="http://localhost:4000/" />
-<updated>2015-01-11T19:32:48+01:00</updated>
-<id>http://localhost:4000/</id>
+<link rel="self" type="application/atom+xml" href="http://caliman.org/feed.xml" />
+<link rel="alternate" type="text/html" href="http://caliman.org/" />
+<updated>2015-01-11T19:36:25+01:00</updated>
+<id>http://caliman.org/</id>
 <author>
   <name>Massimo Caliman</name>
-  <uri>http://localhost:4000/</uri>
+  <uri>http://caliman.org/</uri>
   <email>mcaliman@gmail.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[Usare i Channel per copiare file in Java]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/usare-i-channel-per-copiare-file-in-java/"/>
-  <id>http://localhost:4000/articles/usare-i-channel-per-copiare-file-in-java</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/usare-i-channel-per-copiare-file-in-java/"/>
+  <id>http://caliman.org/articles/usare-i-channel-per-copiare-file-in-java</id>
   <published>2014-11-15T23:45:33+01:00</published>
   <updated>2014-11-15T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" />
   <content type="html">
   
     &lt;p&gt;Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. &lt;em&gt;(Isaac Asimov, Il vento è cambiato, 1983)&lt;/em&gt;&lt;/p&gt;
@@ -52,22 +52,22 @@
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/usare-i-channel-per-copiare-file-in-java/&quot;&gt;Usare i Channel per copiare file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 15, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/usare-i-channel-per-copiare-file-in-java/&quot;&gt;Usare i Channel per copiare file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[JSF 2 forzare gli id generati dai tag]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/jsf-2-forzare-gli-id-generati-dai-tag/"/>
-  <id>http://localhost:4000/articles/jsf-2-forzare-gli-id-generati-dai-tag</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/"/>
+  <id>http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag</id>
   <published>2014-11-09T23:45:33+01:00</published>
   <updated>2014-11-09T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#JavaServerFaces" term="JavaServerFaces" /><category scheme="http://localhost:4000/tags/#JSF2" term="JSF2" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JavaServerFaces" term="JavaServerFaces" /><category scheme="http://caliman.org/tags/#JSF2" term="JSF2" />
   <content type="html">
   
     &lt;p&gt;I computer sono come gli Dei del Vecchio Testamento: pieni di regole e nessuna pietà. &lt;em&gt;(Joseph Campbell, Il potere del mito, 1988)&lt;/em&gt;&lt;/p&gt;
@@ -102,22 +102,22 @@ tag HTML sono generati in automatico secondo regole precise.&lt;/p&gt;
 &lt;p&gt;Verrebbe la tentazione di utilizzarlo sempre, anche se non è necessario per interazioni con js o css. L’attributo si dovrà usare con attenzione, si può ottenere un errore di &lt;code&gt;id&lt;/code&gt; duplicato se si utilizza troppo spesso. In altre parole se non strettamente necessario, lasciamo che sia JSF a occuparsi di questi dettagli e a generare &lt;code&gt;id&lt;/code&gt; univoci per i nostri tag.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/jsf-2-forzare-gli-id-generati-dai-tag/&quot;&gt;JSF 2 forzare gli id generati dai tag&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 09, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/&quot;&gt;JSF 2 forzare gli id generati dai tag&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 09, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Algoritmo di visita generica per un albero]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/alberi-algoritmo-vistita-generico/"/>
-  <id>http://localhost:4000/articles/alberi-algoritmo-vistita-generico</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-algoritmo-vistita-generico/"/>
+  <id>http://caliman.org/articles/alberi-algoritmo-vistita-generico</id>
   <published>2014-10-11T00:45:33+02:00</published>
   <updated>2014-10-11T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Algoritmi" term="Algoritmi" /><category scheme="http://localhost:4000/tags/#Alberi" term="Alberi" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Algoritmi" term="Algoritmi" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" />
   <content type="html">
   
     &lt;p&gt;Quando qualcuno dice, “Voglio un linguaggio di programmazione nel quale ho bisogno soltanto di dire
@@ -145,22 +145,22 @@ ciò che voglio venga fatto”, dagli un lecca-lecca
 &lt;p&gt;Ciò è evidente di per se ed è dimostrabile formalmente. La dimostrazione esula gli scopi di questo post che sono solo quelli di porre le basi a quelli successivi che ne approfondiscono gli aspetti teorici e pratici.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/alberi-algoritmo-vistita-generico/&quot;&gt;Algoritmo di visita generica per un albero&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 11, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-algoritmo-vistita-generico/&quot;&gt;Algoritmo di visita generica per un albero&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 11, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Alberi rappresentazioni collegate]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/alberi-rappresentazioni-collegate/"/>
-  <id>http://localhost:4000/articles/alberi-rappresentazioni-collegate</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-rappresentazioni-collegate/"/>
+  <id>http://caliman.org/articles/alberi-rappresentazioni-collegate</id>
   <published>2014-10-08T00:45:33+02:00</published>
   <updated>2014-10-08T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Alberi" term="Alberi" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;Proseguendo nella trattazione degli alberi normalmente si preferiscono le ﻿rappresentazioni basate su strutture collegate 
@@ -184,22 +184,22 @@ Per ogni nodo un puntatore al primo figlio (posto a null se non ci sono figli) e
 Per scandire tutti i figli di un nodo basta scendere sul primo figlio e poi scandire tutti i fratelli successivi saltando di fratello in fratello.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/alberi-rappresentazioni-collegate/&quot;&gt;Alberi rappresentazioni collegate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 08, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-rappresentazioni-collegate/&quot;&gt;Alberi rappresentazioni collegate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 08, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Alberi rappresentazioni indicizzate]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/alberi-rappresentazioni-indicizzate/"/>
-  <id>http://localhost:4000/articles/alberi-rappresentazioni-indicizzate</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-rappresentazioni-indicizzate/"/>
+  <id>http://caliman.org/articles/alberi-rappresentazioni-indicizzate</id>
   <published>2014-10-07T00:45:33+02:00</published>
   <updated>2014-10-07T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Alberi" term="Alberi" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Rappresentazioni indicizzate
@@ -227,22 +227,22 @@ p vettore di dimensione n  t.c. p[v] contiene l’informazione associata al nodo
 &lt;/ul&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/alberi-rappresentazioni-indicizzate/&quot;&gt;Alberi rappresentazioni indicizzate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 07, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-rappresentazioni-indicizzate/&quot;&gt;Alberi rappresentazioni indicizzate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 07, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Alberi in Java]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/alberi-in-java/"/>
-  <id>http://localhost:4000/articles/alberi-in-java</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-in-java/"/>
+  <id>http://caliman.org/articles/alberi-in-java</id>
   <published>2014-10-06T00:45:33+02:00</published>
   <updated>2014-10-06T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Alberi" term="Alberi" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Dopo i post sulle strutture dati elementari passiamo a trattare gli alberi, prima di entrare nel dettaglio di come implementare strutture dati di questo tipo ne approfondiamo l’aspetto teorico.&lt;/p&gt;
@@ -314,22 +314,22 @@ operazioni
 &lt;p&gt;Esistono diverse possibili rappresentazioni per gli alberi sia basate su strutture indicizzate che collegate, quale scegliere dipende dal tipo di problemi che pensiamo di dover risolvere, se pensiamo che l’operazione più frequente o critica sia per esempio risalire ai figli di un nodo ne utilizzeremo una, se la l’operazione più critica e navigare per livelli l’albero ne utilizzeremo una ottimizzata per questo tipo di problema.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/alberi-in-java/&quot;&gt;Alberi in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 06, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-in-java/&quot;&gt;Alberi in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 06, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Strutture indicizzate approfondimenti]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/strutture-indicizzate-approfondimento/"/>
-  <id>http://localhost:4000/articles/strutture-indicizzate-approfondimento</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/strutture-indicizzate-approfondimento/"/>
+  <id>http://caliman.org/articles/strutture-indicizzate-approfondimento</id>
   <published>2014-10-04T00:45:33+02:00</published>
   <updated>2014-10-04T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Strutture%20indicizzate" term="Strutture indicizzate" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Strutture%20indicizzate" term="Strutture indicizzate" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Riprendiamo il post sulle strutture indicizzate per un approfondimento.
@@ -419,22 +419,22 @@ Le operazioni di insert e delete comprendono la fase di riallocazione dell’arr
 &lt;p&gt;Rimandiamo ad un post conclusivo le restanti considerazioni e implementazioni, seppur parziali, ma prima vi invito a dare un occhiata proprio al codice di &lt;code&gt;ArrayList&lt;/code&gt; ed affini.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/strutture-indicizzate-approfondimento/&quot;&gt;Strutture indicizzate approfondimenti&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 04, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/strutture-indicizzate-approfondimento/&quot;&gt;Strutture indicizzate approfondimenti&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 04, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Code o Queue]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/code-o-queue/"/>
-  <id>http://localhost:4000/articles/code-o-queue</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/code-o-queue/"/>
+  <id>http://caliman.org/articles/code-o-queue</id>
   <published>2014-10-02T00:45:33+02:00</published>
   <updated>2014-10-02T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Code%20o%20Queue" term="Code o Queue" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Code%20o%20Queue" term="Code o Queue" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Riprendiamo la trattazione delle strutture dati elementari. Nei post precedenti abbiamo visto le strutture indicizzate,quelle collegate e le Pile o Stack,uno altro dei tipo base più ricorrenti è la Coda o Queue, una specifica in pseudolinguaggio è riportata sotto.&lt;/p&gt;
@@ -491,22 +491,22 @@ Anche in questo caso possiamo utilizzare i metodi di Deque relativi al suo compo
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/code-o-queue/&quot;&gt;Code o Queue&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 02, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/code-o-queue/&quot;&gt;Code o Queue&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 02, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Pile o Stack]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/pile-o-stack/"/>
-  <id>http://localhost:4000/articles/pile-o-stack</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/pile-o-stack/"/>
+  <id>http://caliman.org/articles/pile-o-stack</id>
   <published>2014-10-01T00:45:33+02:00</published>
   <updated>2014-10-01T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Pile%20o%20Stack" term="Pile o Stack" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Pile%20o%20Stack" term="Pile o Stack" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿
@@ -567,22 +567,22 @@ top&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;-&amp;gt;elem restituisce l’
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/pile-o-stack/&quot;&gt;Pile o Stack&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 01, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/pile-o-stack/&quot;&gt;Pile o Stack&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 01, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Strutture collegate]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/strutture-collegate/"/>
-  <id>http://localhost:4000/articles/strutture-collegate</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/strutture-collegate/"/>
+  <id>http://caliman.org/articles/strutture-collegate</id>
   <published>2014-09-30T00:45:33+02:00</published>
   <updated>2014-09-30T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Strutture%20collegate" term="Strutture collegate" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Strutture%20collegate" term="Strutture collegate" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿I costituenti di base di una struttura collegata sono i record che come le celle degli array sono numerati e contengono ciascuno una collezione di oggetti. I numeri associati ai record sono i loro indirizzi in memoria (quindi globali nell’ambito del programma e non locali come nel caso degli array)
@@ -671,22 +671,22 @@ verificando se qualche p ha chiave k in caso positivo si restituisce l’element
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/strutture-collegate/&quot;&gt;Strutture collegate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 30, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/strutture-collegate/&quot;&gt;Strutture collegate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 30, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Strutture indicizzate]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/strutture-indicizzate/"/>
-  <id>http://localhost:4000/articles/strutture-indicizzate</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/strutture-indicizzate/"/>
+  <id>http://caliman.org/articles/strutture-indicizzate</id>
   <published>2014-09-29T00:45:33+02:00</published>
   <updated>2014-09-29T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Strutture%20indicizzate" term="Strutture indicizzate" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Strutture%20indicizzate" term="Strutture indicizzate" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Le strutture indicizzate sono collezioni di celle numerate che possono contenere elementi di tipo prestabilito. Assumeremo che in un array di dimensione h gli indici possano andare da 0 a h-1 o da 1 a h.&lt;/p&gt;
@@ -749,22 +749,22 @@ dati: un array S di dimensione n contenente n coppie (elem,chiave) S(n) = Tetagr
 &lt;p&gt;Oltre agli array, struttura di base del linguaggio, possiamo ovviamente utilizzare le liste per esempio gli &lt;code&gt;ArrayList&lt;/code&gt; che adottano propriò questo tipo di filosofia più alcuni accorgimenti atti a rendere l’implementazione più efficiente.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/strutture-indicizzate/&quot;&gt;Strutture indicizzate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 29, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/strutture-indicizzate/&quot;&gt;Strutture indicizzate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 29, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Usare HashMap in Java]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/usare-hashmap-in-java/"/>
-  <id>http://localhost:4000/articles/usare-hashmap-in-java</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/usare-hashmap-in-java/"/>
+  <id>http://caliman.org/articles/usare-hashmap-in-java</id>
   <published>2014-09-28T00:45:33+02:00</published>
   <updated>2014-09-28T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Dizionari" term="Dizionari" /><category scheme="http://localhost:4000/tags/#HashMap" term="HashMap" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Dizionari" term="Dizionari" /><category scheme="http://caliman.org/tags/#HashMap" term="HashMap" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Riprendiamo da dove ci eravamo lasciati (vedi post precedente), dopo aver visto un pò di teoria sui dizionari e qualcosa sull’interfaccia &lt;code&gt;Map&lt;/code&gt; passiamo a esempi pratici. Parleremo esclusivamente della classe concreta &lt;code&gt;HashMap&lt;/code&gt;, la nuova, per così dire, &lt;code&gt;Hashtable&lt;/code&gt;.&lt;/p&gt;
@@ -881,22 +881,22 @@ Questo metodo ritorna una versione thread-safe di &lt;code&gt;Map&lt;/code&gt;&l
 &lt;p&gt;Le Java Collections Framework riserva altre piacevoli sorprese e utilità, vedremo di approfondirle nei prossimi post, come al solito se avete richieste particolari riguardo un dato argomento  (per esempio &lt;code&gt;WeakHashMap&lt;/code&gt; o &lt;code&gt;LinkedHashMap&lt;/code&gt;) potete contattarmi via mail.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/usare-hashmap-in-java/&quot;&gt;Usare HashMap in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 28, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/usare-hashmap-in-java/&quot;&gt;Usare HashMap in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 28, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Dizionari in Java]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/dizionari-in-java/"/>
-  <id>http://localhost:4000/articles/dizionari-in-java</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/dizionari-in-java/"/>
+  <id>http://caliman.org/articles/dizionari-in-java</id>
   <published>2014-09-25T00:45:33+02:00</published>
   <updated>2014-09-25T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Dizionari" term="Dizionari" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Dizionari" term="Dizionari" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;Nelle vecchie release del linguaggio Java il tipo di dato dizionario veniva realizzato a partire dalla classe &lt;code&gt;Dictionary&amp;lt;K,V&amp;gt;&lt;/code&gt; del package &lt;code&gt;java.util&lt;/code&gt;. 
@@ -1031,22 +1031,22 @@ Il tipo più comune di implementazioni di &lt;code&gt;Map&lt;/code&gt; è &lt;co
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/dizionari-in-java/&quot;&gt;Dizionari in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 25, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/dizionari-in-java/&quot;&gt;Dizionari in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 25, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Concatenare PDF con iText in Java]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/concatenare-pdf-con-itext-in-java/"/>
-  <id>http://localhost:4000/articles/concatenare-pdf-con-itext-in-java</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/concatenare-pdf-con-itext-in-java/"/>
+  <id>http://caliman.org/articles/concatenare-pdf-con-itext-in-java</id>
   <published>2014-09-19T00:45:33+02:00</published>
   <updated>2014-09-19T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#JDK7" term="JDK7" /><category scheme="http://localhost:4000/tags/#iText" term="iText" /><category scheme="http://localhost:4000/tags/#PDF" term="PDF" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JDK7" term="JDK7" /><category scheme="http://caliman.org/tags/#iText" term="iText" /><category scheme="http://caliman.org/tags/#PDF" term="PDF" />
   <content type="html">
   
     &lt;p&gt;iText è sicuramente la libreria più diffusa e completa per l’elaborazione di file pdf, consiglio vivamente di darci un occhiata prima di valutare altri framework o reinventare l’acqua calda.&lt;/p&gt;
@@ -1118,22 +1118,22 @@ multiple catch ne della diamond notation. Peccato che nella versione che utilizz
 &lt;p&gt;infatti dal &lt;code&gt;reader&lt;/code&gt; vengono estratte le pagine del documento, una per una e poi aggiunte all’oggetto &lt;code&gt;copy&lt;/code&gt;.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/concatenare-pdf-con-itext-in-java/&quot;&gt;Concatenare PDF con iText in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 19, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/concatenare-pdf-con-itext-in-java/&quot;&gt;Concatenare PDF con iText in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 19, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Scrivere e leggere file in Java 7 con try-with-resources]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/"/>
-  <id>http://localhost:4000/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/"/>
+  <id>http://caliman.org/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources</id>
   <published>2014-09-14T00:45:33+02:00</published>
   <updated>2014-09-14T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#JDK7" term="JDK7" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JDK7" term="JDK7" />
   <content type="html">
   
     &lt;p&gt;Leggere e scrivere file in Java 7 sfruttando il nuovo costrutto try-with-resource manleva lo sviluppatore dal compito di chiudere correttamente gli stream, sotto potete trovare due metodi di esempio.&lt;/p&gt;
@@ -1199,22 +1199,22 @@ multiple catch ne della diamond notation. Peccato che nella versione che utilizz
 &lt;p&gt;Se non vogliamo catturare l’eccezzione basta omettere la parte catch del blocco ed essa si propagherà come se fosse non gestita (proprio così un try senza catch e senza finally). Ad essere sinceri il codice sopra avrebbe potuto beneficiare di altre novità della versione 7 come ad esempio i catch con gestione multipla di eccezioni ma di questo ed altro si parlerà in un prossimo post.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/&quot;&gt;Scrivere e leggere file in Java 7 con try-with-resources&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/&quot;&gt;Scrivere e leggere file in Java 7 con try-with-resources&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Riguardo i limiti del calcolabile]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/riguardo-i-limiti-del-calcolabile/"/>
-  <id>http://localhost:4000/articles/riguardo-i-limiti-del-calcolabile</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/riguardo-i-limiti-del-calcolabile/"/>
+  <id>http://caliman.org/articles/riguardo-i-limiti-del-calcolabile</id>
   <published>2014-09-07T00:45:33+02:00</published>
   <updated>2014-09-07T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Python" term="Python" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Python" term="Python" />
   <content type="html">
   
     &lt;p&gt;Il seguente argomento, dovuto a L.J. Stockmeyer, è di natura puramente fisica ma
@@ -1234,22 +1234,22 @@ problemi la cui risolubilità è nota in linea di principio. &lt;/p&gt;
 &lt;p&gt;A quanto pare l’universo non ha una età superiore ai 20 miliardi di anni.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/riguardo-i-limiti-del-calcolabile/&quot;&gt;Riguardo i limiti del calcolabile&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 07, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/riguardo-i-limiti-del-calcolabile/&quot;&gt;Riguardo i limiti del calcolabile&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 07, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Come ti swappo due variabili in un colpo solo con Python]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/"/>
-  <id>http://localhost:4000/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/"/>
+  <id>http://caliman.org/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python</id>
   <published>2014-09-02T00:45:33+02:00</published>
   <updated>2014-09-02T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Python" term="Python" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Python" term="Python" />
   <content type="html">
   
     &lt;p&gt;Vi è mai capitato di scrivere qualcosa del genere ?&lt;/p&gt;
@@ -1269,22 +1269,22 @@ problemi la cui risolubilità è nota in linea di principio. &lt;/p&gt;
 &lt;p&gt;magico no? Il bello delle tuple.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/&quot;&gt;Come ti swappo due variabili in un colpo solo con Python&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 02, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/&quot;&gt;Come ti swappo due variabili in un colpo solo con Python&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 02, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Secure httpbase tomcat authentication]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/secure-httpbase-tomcat-authentication/"/>
-  <id>http://localhost:4000/articles/secure-httpbase-tomcat-authentication</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/secure-httpbase-tomcat-authentication/"/>
+  <id>http://caliman.org/articles/secure-httpbase-tomcat-authentication</id>
   <published>2014-08-16T00:45:33+02:00</published>
   <updated>2014-08-16T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Tomcat" term="Tomcat" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Tomcat" term="Tomcat" />
   <content type="html">
   
     &lt;p&gt;Per impostare l’autenticazione base in una applicazione java in tomcat possiamo intervenire solo in due file&lt;/p&gt;
@@ -1341,22 +1341,22 @@ The role that is required to log in to the Manager Application
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/secure-httpbase-tomcat-authentication/&quot;&gt;Secure httpbase tomcat authentication&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on August 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/secure-httpbase-tomcat-authentication/&quot;&gt;Secure httpbase tomcat authentication&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on August 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Considerazioni sulla ricorsione]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/considerazioni-sulla-ricorsione/"/>
-  <id>http://localhost:4000/articles/considerazioni-sulla-ricorsione</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/considerazioni-sulla-ricorsione/"/>
+  <id>http://caliman.org/articles/considerazioni-sulla-ricorsione</id>
   <published>2014-08-15T00:45:33+02:00</published>
   <updated>2014-08-15T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#recorsione" term="recorsione" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#recorsione" term="recorsione" />
   <content type="html">
   
     &lt;p&gt;Nei linguaggi di programmazione la ripetizione di comandi o statement viene realizzata tramite cicli, realizzati normalmente con costrutti del tipo &lt;code&gt;for&lt;/code&gt;,&lt;code&gt;foreach&lt;/code&gt; e &lt;code&gt;white&lt;/code&gt;. Per particolari problemi la ricorsione rappresenta una valida arlternativa, più elegante, naturale  e semplice da realizzare.
@@ -1428,22 +1428,22 @@ Un possibile implementazione in Java è la seguente&lt;/p&gt;
 &lt;p&gt;Durante la mia carriera in diverse occasioni ho avuto modo di sentir parlare della ricorsione come e peggio del diavolo, qualcosa di estremamente complesso e pericoloso, ma i danni peggiori personalmente li ho visti causati da metodi iterativi con una mezza dozzina di cicli annidati e condizioni di guardia in costrutti while così complesse da risultare incompresibili, figuariamoci debuggabili.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/considerazioni-sulla-ricorsione/&quot;&gt;Considerazioni sulla ricorsione&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on August 15, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/considerazioni-sulla-ricorsione/&quot;&gt;Considerazioni sulla ricorsione&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on August 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[﻿Una Servlet per gestire il download di file in Java]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/una-servlet-per-gestire-il-download-di-file-in-java/"/>
-  <id>http://localhost:4000/articles/una-servlet-per-gestire-il-download-di-file-in-java</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/una-servlet-per-gestire-il-download-di-file-in-java/"/>
+  <id>http://caliman.org/articles/una-servlet-per-gestire-il-download-di-file-in-java</id>
   <published>2014-07-16T00:45:33+02:00</published>
   <updated>2014-07-16T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Servlet" term="Servlet" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Servlet" term="Servlet" />
   <content type="html">
   
     &lt;p&gt;Vediamo in questo post come scrivere il codice di una Servlet Java che ci permette di effettuare il trasferimento (il download) di un file dalla nostra applicazione server al client (il web browser dei nostri utenti).
@@ -1517,7 +1517,7 @@ Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/una-servlet-per-gestire-il-download-di-file-in-java/&quot;&gt;﻿Una Servlet per gestire il download di file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on July 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/una-servlet-per-gestire-il-download-di-file-in-java/&quot;&gt;﻿Una Servlet per gestire il download di file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on July 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
