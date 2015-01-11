@@ -17,6 +17,14 @@
 		} ,
 	
 		{
+		  "title"      : "Algoritmo di visita in profondità per un albero (DFS o Depth First Search)",
+		  "category"   : "articles",
+		  "url"        : "http://caliman.org/articles/alberi-algoritmo-vistita-in-profondita-DFS/",
+		  "date"       : "2014-10-13 00:45:33 +0200",
+		  "shortdate"  : "October 13, 2014"
+		} ,
+	
+		{
 		  "title"      : "Algoritmo di visita generica per un albero",
 		  "category"   : "articles",
 		  "url"        : "http://caliman.org/articles/alberi-algoritmo-vistita-generico/",
