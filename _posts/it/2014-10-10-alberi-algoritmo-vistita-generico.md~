@@ -30,7 +30,7 @@ l’algortimo mantiene istante per istante in `S` i nodi che rappresentano i pun
 
 Rispetto ai costi in termini di spazio occupato in memoria e tempo per l’esecuzione abbiamo il teorema seguente.
 
-teorema
+teorema: 
 l'algoritmo di visita generica applicato alla radice di un albero con n nodi termina in O(n) iterazioni e lo spazio usato è O(n)
 
 Ciò è evidente di per se ed è dimostrabile formalmente. La dimostrazione esula gli scopi di questo post che sono solo quelli di porre le basi a quelli successivi che ne approfondiscono gli aspetti teorici e pratici.
