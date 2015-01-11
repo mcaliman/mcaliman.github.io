@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Copiare file in Java 7 con la classe Files &#8211; Massimo Caliman's</title>
+<title>Algoritmo di visita generica per un albero &#8211; Massimo Caliman's</title>
 <meta name="description" content="blog on Computer Science.">
-<meta name="keywords" content="Articoli disponibili in lingua italiana, lang_it, Java, Java7">
+<meta name="keywords" content="Articoli disponibili in lingua italiana, lang_it, Java, Algoritmi, Alberi">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://caliman.org/images/bio-photo.jpg">
-<meta name="twitter:title" content="Copiare file in Java 7 con la classe Files">
+<meta name="twitter:title" content="Algoritmo di visita generica per un albero">
 <meta name="twitter:description" content="blog on Computer Science.">
 <meta name="twitter:creator" content="@mcaliman">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Copiare file in Java 7 con la classe Files">
+<meta property="og:title" content="Algoritmo di visita generica per un albero">
 <meta property="og:description" content="blog on Computer Science.">
-<meta property="og:url" content="http://caliman.org/articles/copiare-file-in-java-7-classe-files-metodo-copy/">
+<meta property="og:url" content="http://caliman.org/articles/alberi-algoritmo-vistita-generico/">
 <meta property="og:site_name" content="Massimo Caliman's">
 
 
 
 
 
-<link rel="canonical" href="http://caliman.org/articles/copiare-file-in-java-7-classe-files-metodo-copy/">
+<link rel="canonical" href="http://caliman.org/articles/alberi-algoritmo-vistita-generico/">
 
 <link href="http://caliman.org/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
 
@@ -141,27 +141,27 @@
     
     <div class="entry-wrapper">
       <header class="entry-header">
-        <span class="entry-tags"><a href="http://caliman.org/tags/#Articoli disponibili in lingua italiana" title="Pages tagged Articoli disponibili in lingua italiana">Articoli disponibili in lingua italiana</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#lang_it" title="Pages tagged lang_it">lang_it</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#Java" title="Pages tagged Java">Java</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#Java7" title="Pages tagged Java7">Java7</a></span>
+        <span class="entry-tags"><a href="http://caliman.org/tags/#Articoli disponibili in lingua italiana" title="Pages tagged Articoli disponibili in lingua italiana">Articoli disponibili in lingua italiana</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#lang_it" title="Pages tagged lang_it">lang_it</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#Java" title="Pages tagged Java">Java</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#Algoritmi" title="Pages tagged Algoritmi">Algoritmi</a>&nbsp;&bull;&nbsp;<a href="http://caliman.org/tags/#Alberi" title="Pages tagged Alberi">Alberi</a></span>
         
-          <h1 class="entry-title">Copiare file in Java 7 con la classe Files</h1>
+          <h1 class="entry-title">Algoritmo di visita generica per un albero</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://caliman.org/images/bio-photo.jpg" alt="Massimo Caliman photo" class="author-photo">
         <span class="author vcard">By <span class="fn"><a href="http://caliman.org/about/" title="About Massimo Caliman">Massimo Caliman</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-11-10T23:45:33+01:00"><i class="icon-calendar-empty"></i> November 10, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-10-11T00:45:33+02:00"><i class="icon-calendar-empty"></i> October 11, 2014</time></span>
         
         <span class="entry-comments"><i class="icon-comment-alt"></i> <a href="#disqus_thread">Comment</a></span>
 
 
-        <span><a href="http://caliman.org/articles/copiare-file-in-java-7-classe-files-metodo-copy/" rel="bookmark" title="Copiare file in Java 7 con la classe Files"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="http://caliman.org/articles/alberi-algoritmo-vistita-generico/" rel="bookmark" title="Algoritmo di visita generica per un albero"><i class="icon-link"></i> Permalink</a></span>
         
         <span class="social-share-facebook">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://caliman.org/articles/copiare-file-in-java-7-classe-files-metodo-copy/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://caliman.org/articles/alberi-algoritmo-vistita-generico/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
         <span class="social-share-twitter">
-            <a href="https://twitter.com/intent/tweet?hashtags=articles&text=Copiare file in Java 7 con la classe Files&url=http://caliman.org/articles/copiare-file-in-java-7-classe-files-metodo-copy/&via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
+            <a href="https://twitter.com/intent/tweet?hashtags=articles&text=Algoritmo di visita generica per un albero&url=http://caliman.org/articles/alberi-algoritmo-vistita-generico/&via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
         <span class="social-share-googleplus">
-            <a href="https://plus.google.com/share?url=http://caliman.org/articles/copiare-file-in-java-7-classe-files-metodo-copy/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
+            <a href="https://plus.google.com/share?url=http://caliman.org/articles/alberi-algoritmo-vistita-generico/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
             <!-- /.social-share -->
 
 
@@ -188,24 +188,40 @@
 
       </footer>
       <div class="entry-content">
-        <p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>
+        <p>Quando qualcuno dice, “Voglio un linguaggio di programmazione nel quale ho bisogno soltanto di dire
+ciò che voglio venga fatto”, dagli un lecca-lecca
+<em>(Alan Perlis)</em></p>
 
-<p>In un post precedente vi ho mostrato i benefici dell’uso dei channel e del package nio. Ho anche accennato alla possibilità dalla versione 7 del JDK di utilizzare la classe Files per effettuare copie di file in modo immediato. Come al solito vi riporto sotto un semplice metodo che illustra l’esempio di utilizzo del metodo copy.</p>
+<p>﻿Uno dei compiti più comuni da svolgere su un albero è quello di effettuare una sua visita, cioè passare in rassegna ogni suo nodo. Con il termine in linguaggio naturale “passare in rassegna” intendiamo “applicare una qualche funzione” al nodo in esame fosse anche la semplice stampa a video che esso è stato visitato.</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">copy</span><span class="o">(</span><span class="n">File</span> <span class="n">source</span><span class="o">,</span> <span class="n">File</span> <span class="n">dest</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
-   <span class="n">Files</span><span class="o">.</span><span class="na">copy</span><span class="o">(</span><span class="n">source</span><span class="o">.</span><span class="na">toPath</span><span class="o">(),</span> <span class="n">dest</span><span class="o">.</span><span class="na">toPath</span><span class="o">());</span>
-<span class="o">}</span></code></pre></div>
+<p>Il procedimento di visita più generico possibile è visibile nell’algoritmo in pseudocodice riportato sotto</p>
 
+<div class="highlight"><pre><code class="java"><span class="n">algorithm</span> <span class="nf">generic_visit</span><span class="o">(</span><span class="n">nodo</span> <span class="n">r</span><span class="o">)</span>
+   <span class="n">S</span> <span class="o">:=</span> <span class="o">{</span><span class="n">r</span><span class="o">}</span>
+   <span class="k">while</span><span class="o">(</span><span class="n">S</span><span class="o">&lt;&gt;</span><span class="mi">0</span><span class="o">)</span> <span class="k">do</span>
+       <span class="n">u</span> <span class="o">:=</span> <span class="n">estrai</span> <span class="n">un</span> <span class="n">nodo</span> <span class="n">da</span> <span class="n">S</span>
+       <span class="n">visit</span><span class="o">(</span><span class="n">u</span><span class="o">)</span>
+       <span class="n">S</span> <span class="o">:=</span> <span class="n">S</span> <span class="n">unito</span> <span class="o">{</span><span class="n">figli</span> <span class="n">di</span> <span class="n">u</span><span class="o">}</span>
+  <span class="n">od</span></code></pre></div>
+
+<p>l’algortimo mantiene istante per istante in <code>S</code> i nodi che rappresentano i punti di ramificazione rimasti in sospeso e da cui la visita deve proseguire, diremo che questi nodi sono aperti e formano una frangia dell’albero, un nodo diventa chiuso quando è rimosso da <code>S</code>.</p>
+
+<p>Rispetto ai costi in termini di spazio occupato in memoria e tempo per l’esecuzione abbiamo il teorema seguente.</p>
+
+<p>teorema: 
+l’algoritmo di visita generica applicato alla radice di un albero con n nodi termina in O(n) iterazioni e lo spazio usato è O(n)</p>
+
+<p>Ciò è evidente di per se ed è dimostrabile formalmente. La dimostrazione esula gli scopi di questo post che sono solo quelli di porre le basi a quelli successivi che ne approfondiscono gli aspetti teorici e pratici.</p>
 
         <div id="disqus_thread"></div><!-- /#disqus_thread -->
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/" class="btn" title="JSF 2 forzare gli id generati dai tag">Previous article</a>
+        <a href="http://caliman.org/articles/alberi-rappresentazioni-collegate/" class="btn" title="Alberi rappresentazioni collegate">Previous article</a>
       
       
-        <a href="http://caliman.org/articles/usare-i-channel-per-copiare-file-in-java/" class="btn" title="Usare i Channel per copiare file in Java">Next article</a>
+        <a href="http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/" class="btn" title="JSF 2 forzare gli id generati dai tag">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>

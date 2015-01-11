@@ -9,7 +9,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://caliman.org/feed.xml" />
 <link rel="alternate" type="text/html" href="http://caliman.org/" />
-<updated>2015-01-04T08:21:11+01:00</updated>
+<updated>2015-01-11T19:23:03+01:00</updated>
 <id>http://caliman.org/</id>
 <author>
   <name>Massimo Caliman</name>
@@ -53,34 +53,6 @@
 
   
   &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/usare-i-channel-per-copiare-file-in-java/&quot;&gt;Usare i Channel per copiare file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 15, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Copiare file in Java 7 con la classe Files]]></title>
-  <link rel="alternate" type="text/html" href="http://caliman.org/articles/copiare-file-in-java-7-classe-files-metodo-copy/"/>
-  <id>http://caliman.org/articles/copiare-file-in-java-7-classe-files-metodo-copy</id>
-  <published>2014-11-10T23:45:33+01:00</published>
-  <updated>2014-11-10T23:45:33+01:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://caliman.org</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Java7" term="Java7" />
-  <content type="html">
-  
-    &lt;p&gt;Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. &lt;em&gt;(Isaac Asimov, Il vento è cambiato, 1983)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;In un post precedente vi ho mostrato i benefici dell’uso dei channel e del package nio. Ho anche accennato alla possibilità dalla versione 7 del JDK di utilizzare la classe Files per effettuare copie di file in modo immediato. Come al solito vi riporto sotto un semplice metodo che illustra l’esempio di utilizzo del metodo copy.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/copiare-file-in-java-7-classe-files-metodo-copy/&quot;&gt;Copiare file in Java 7 con la classe Files&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 10, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -131,6 +103,50 @@ tag HTML sono generati in automatico secondo regole precise.&lt;/p&gt;
 
   
   &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/&quot;&gt;JSF 2 forzare gli id generati dai tag&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 09, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Algoritmo di visita generica per un albero]]></title>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-algoritmo-vistita-generico/"/>
+  <id>http://caliman.org/articles/alberi-algoritmo-vistita-generico</id>
+  <published>2014-10-11T00:45:33+02:00</published>
+  <updated>2014-10-11T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://caliman.org</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Algoritmi" term="Algoritmi" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" />
+  <content type="html">
+  
+    &lt;p&gt;Quando qualcuno dice, “Voglio un linguaggio di programmazione nel quale ho bisogno soltanto di dire
+ciò che voglio venga fatto”, dagli un lecca-lecca
+&lt;em&gt;(Alan Perlis)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;﻿Uno dei compiti più comuni da svolgere su un albero è quello di effettuare una sua visita, cioè passare in rassegna ogni suo nodo. Con il termine in linguaggio naturale “passare in rassegna” intendiamo “applicare una qualche funzione” al nodo in esame fosse anche la semplice stampa a video che esso è stato visitato.&lt;/p&gt;
+
+&lt;p&gt;Il procedimento di visita più generico possibile è visibile nell’algoritmo in pseudocodice riportato sotto&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;algorithm&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;generic_visit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nodo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;estrai&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;un&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nodo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;da&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;visit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unito&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;figli&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;di&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;od&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;l’algortimo mantiene istante per istante in &lt;code&gt;S&lt;/code&gt; i nodi che rappresentano i punti di ramificazione rimasti in sospeso e da cui la visita deve proseguire, diremo che questi nodi sono aperti e formano una frangia dell’albero, un nodo diventa chiuso quando è rimosso da &lt;code&gt;S&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Rispetto ai costi in termini di spazio occupato in memoria e tempo per l’esecuzione abbiamo il teorema seguente.&lt;/p&gt;
+
+&lt;p&gt;teorema: 
+l’algoritmo di visita generica applicato alla radice di un albero con n nodi termina in O(n) iterazioni e lo spazio usato è O(n)&lt;/p&gt;
+
+&lt;p&gt;Ciò è evidente di per se ed è dimostrabile formalmente. La dimostrazione esula gli scopi di questo post che sono solo quelli di porre le basi a quelli successivi che ne approfondiscono gli aspetti teorici e pratici.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-algoritmo-vistita-generico/&quot;&gt;Algoritmo di visita generica per un albero&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 11, 2014.&lt;/p&gt;</content>
 </entry>
 
 
