@@ -9,13 +9,133 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://caliman.org/feed.xml" />
 <link rel="alternate" type="text/html" href="http://caliman.org/" />
-<updated>2015-01-11T20:11:35+01:00</updated>
+<updated>2015-01-12T23:16:00+01:00</updated>
 <id>http://caliman.org/</id>
 <author>
   <name>Massimo Caliman</name>
   <uri>http://caliman.org/</uri>
   <email>mcaliman@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Facili le dropdownbox con le JSF 2.2!]]></title>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/facili-le-dropdownbox-con-le-jsf-2/"/>
+  <id>http://caliman.org/articles/facili-le-dropdownbox-con-le-jsf-2</id>
+  <published>2014-12-16T23:45:33+01:00</published>
+  <updated>2014-12-16T23:45:33+01:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://caliman.org</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JavaServerFaces" term="JavaServerFaces" /><category scheme="http://caliman.org/tags/#JSF2" term="JSF2" />
+  <content type="html">
+  
+    &lt;p&gt;Un anno speso nell’intelligenza artificiale è abbastanza perchè una persona creda in Dio.
+&lt;em&gt;(Alan Perlis)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Realizzare mappature dirette tra una &lt;code&gt;Map&lt;/code&gt; e una dropdown box con le Java Server Faces 2.3 è immediato e facile. 
+Dato un Session Bean di esempio riportato sotto&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.Serializable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.LinkedHashMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.inject.Named&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.enterprise.context.SessionScoped&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@SessionScoped&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@Named&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ThatBean&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Serializable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//stuff...&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thatMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//stuff...&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thatId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//stuff...&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;thatMap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LinkedHashMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;thatMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;TheDesc1&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;TheKey1&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;thatMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;TheDesc2&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;TheKey2&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//stuff...&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getThatMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;thatMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//stuff...&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getThatId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thatId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//stuff...&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setThatId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thatId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;thatId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thatId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Il codice nel file jsf xhtml si riduce a ben poche righe&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h:selectOneMenu&lt;/span&gt;  &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#{thatBean .thatId}&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;f:selectItems&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#{thatBean.thatMap}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h:selectOneMenu&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;la mappatura è automatica con key e value (occhio è invertito) del tag option del tag select. 
+L’automatismo però ci può condizionare un bel pò modo di popolare la nostra &lt;code&gt;Map&lt;/code&gt;.
+Per un controllo più fine possiamo utilizzare la seguente forma&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h:selectOneMenu&lt;/span&gt;  &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#{thatBean.thatId}&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;&amp;lt;f:selectItems&lt;/span&gt; 
+      &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#{thatBean.thatMap.entrySet()}&amp;quot;&lt;/span&gt; 
+      &lt;span class=&quot;na&quot;&gt;var=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;entry&amp;quot;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;itemValue=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#{entry.key}&amp;quot;&lt;/span&gt; 
+      &lt;span class=&quot;na&quot;&gt;itemLabel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#{entry.value}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h:selectOneMenu&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Nei casi più semplici, se non abbiamo necessità di una &lt;code&gt;Map&lt;/code&gt; e posso mettere i valori hard coded&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h:selectOneMenu&lt;/span&gt;  &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#{thatBean.thatId}&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;&amp;lt;f:selectItem&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemValue=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Key1&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemLabel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Label1” /&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;   &amp;lt;f:selectItem itemValue=&amp;quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Key2&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemLabel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Label2&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h:selectOneMenu&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ecco il testo completo della pagina di esempio.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&amp;#39;1.0&amp;#39; encoding=&amp;#39;UTF-8&amp;#39; ?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html PUBLIC &amp;quot;-//W3C//DTD XHTML 1.0 Transitional//EN&amp;quot; &amp;quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&amp;quot;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.w3.org/1999/xhtml&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;xmlns:h=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://xmlns.jcp.org/jsf/html&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;xmlns:f=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://xmlns.jcp.org/jsf/core&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;&amp;lt;h:head&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Dropdown box examples&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h:head&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;&amp;lt;h:body&amp;gt;&lt;/span&gt;
+	   Dropdown box examples
+	   &lt;span class=&quot;nt&quot;&gt;&amp;lt;h:form&amp;gt;&lt;/span&gt;
+		   Select 1
+		   &lt;span class=&quot;nt&quot;&gt;&amp;lt;h:selectOneMenu&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#{thatBean .thatId}&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+		   	&lt;span class=&quot;nt&quot;&gt;&amp;lt;f:selectItems&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#{thatBean.thatMap}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+		   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h:selectOneMenu&amp;gt;&lt;/span&gt;
+		   Select 2
+		   &lt;span class=&quot;nt&quot;&gt;&amp;lt;h:selectOneMenu&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#{thatBean.thatId}&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+		   	&lt;span class=&quot;nt&quot;&gt;&amp;lt;f:selectItems&lt;/span&gt;
+		   	&lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#{thatBean.thatMap.entrySet()}&amp;quot;&lt;/span&gt;
+		   	&lt;span class=&quot;na&quot;&gt;var=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;entry&amp;quot;&lt;/span&gt;
+		   	&lt;span class=&quot;na&quot;&gt;itemValue=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#{entry.key}&amp;quot;&lt;/span&gt;
+		   	&lt;span class=&quot;na&quot;&gt;itemLabel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#{entry.value}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+		   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h:selectOneMenu&amp;gt;&lt;/span&gt;
+		   Select 3
+		   &lt;span class=&quot;nt&quot;&gt;&amp;lt;h:selectOneMenu&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#{thatBean.thatId}&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+		   	&lt;span class=&quot;nt&quot;&gt;&amp;lt;f:selectItem&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemValue=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Key1&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemLabel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Label1&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+		   	&lt;span class=&quot;nt&quot;&gt;&amp;lt;f:selectItem&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemValue=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Key2&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemLabel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Label2&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+		   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h:selectOneMenu&amp;gt;&lt;/span&gt;
+	   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h:form&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h:body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Una precisazione, le annotazioni &lt;code&gt;@SessionScoped&lt;/code&gt; e &lt;code&gt;@Named&lt;/code&gt; sostituiscono i vecchi e deprecati &lt;code&gt;@ManagedBean&lt;/code&gt; e &lt;code&gt;@SessionScoped&lt;/code&gt;
+che ovviamente possiamo continuare ad utilizzare per il momento.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/facili-le-dropdownbox-con-le-jsf-2/&quot;&gt;Facili le dropdownbox con le JSF 2.2!&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on December 16, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1361,78 +1481,6 @@ problemi la cui risolubilità è nota in linea di principio. &lt;/p&gt;
 
   
   &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/&quot;&gt;Come ti swappo due variabili in un colpo solo con Python&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on September 02, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Secure httpbase tomcat authentication]]></title>
-  <link rel="alternate" type="text/html" href="http://caliman.org/articles/secure-httpbase-tomcat-authentication/"/>
-  <id>http://caliman.org/articles/secure-httpbase-tomcat-authentication</id>
-  <published>2014-08-16T00:45:33+02:00</published>
-  <updated>2014-08-16T00:45:33+02:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://caliman.org</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Tomcat" term="Tomcat" />
-  <content type="html">
-  
-    &lt;p&gt;Per impostare l’autenticazione base in una applicazione java in tomcat possiamo intervenire solo in due file&lt;/p&gt;
-
-&lt;p&gt;In tomcat-users.xml setting , dove configureremo gli utenti.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--?xml version=&amp;#39;1.0&amp;#39; encoding=&amp;#39;utf-8&amp;#39;?--&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;tomcat-users&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;role&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rolename=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tomcat&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;role&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rolename=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;role1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;user&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;password=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tomcat&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;roles=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tomcat&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;username=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tomcat&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;user&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;password=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tomcat&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;roles=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;role1&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;username=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;role1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;user&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;password=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tomcat&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;roles=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tomcat,role1&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;username=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;both&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/user&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/user&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/user&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/role&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/role&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/tomcat-users&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Mentre nel file web.xml della nostra applicazione aggiungiamo le righe come sotto.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;ISO-8859-1&amp;quot;?--&amp;gt;&lt;/span&gt;  
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;web-app&amp;gt;&lt;/span&gt;    
-&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Define a Security Constraint on this Application --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;security-constraint&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;web-resource-collection&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;web-resource-name&amp;gt;&lt;/span&gt;Entire Application&lt;span class=&quot;nt&quot;&gt;&amp;lt;/web-resource-name&amp;gt;&lt;/span&gt;      
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;url-pattern&amp;gt;&lt;/span&gt;/*&lt;span class=&quot;nt&quot;&gt;&amp;lt;/url-pattern&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/web-resource-collection&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;auth-constraint&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;role-name&amp;gt;&lt;/span&gt;tomcat&lt;span class=&quot;nt&quot;&gt;&amp;lt;/role-name&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/auth-constraint&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/security-constraint&amp;gt;&lt;/span&gt;
-
-
-&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Define the Login Configuration for this Application --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;login-config&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;auth-method&amp;gt;&lt;/span&gt;BASIC&lt;span class=&quot;nt&quot;&gt;&amp;lt;/auth-method&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;realm-name&amp;gt;&lt;/span&gt;Application&lt;span class=&quot;nt&quot;&gt;&amp;lt;/realm-name&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/login-config&amp;gt;&lt;/span&gt;
-
-
-&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Security roles referenced by this web application --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;security-role&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;description&amp;gt;&lt;/span&gt;
-The role that is required to log in to the Manager Application
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/description&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;role-name&amp;gt;&lt;/span&gt;tomcat&lt;span class=&quot;nt&quot;&gt;&amp;lt;/role-name&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/security-role&amp;gt;&lt;/span&gt;
-
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/web-app&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/secure-httpbase-tomcat-authentication/&quot;&gt;Secure httpbase tomcat authentication&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on August 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
