@@ -13,16 +13,19 @@ share: true
 
 Partiamo dal algoritmo di generico di visita e usando una coda per rappresentare `S` otteniamo visita in ampiezza (Breadth First Search o BFS).
 
-I nodi vengono visitati per livelli,prima radice,poi figli della radice,poi i figli dei figli
+I nodi vengono visitati per livelli,prima radice,poi figli della radice,poi i figli dei figli.
 
 {% highlight java %}
-algoritmo visitaBFS(nodo r)
-   Coda C
+proc BFS(nodo r)
+   Queue C
    C.enqueue(r)
-   while(not C.isEmpty()) do 
-       u<-C.dequeue()
-       if(u<>null) then
+   while not C.isEmpty() do 
+       u ← C.dequeue()
+       if u ≠ null then
            visit(u)
-           C.enqueue(figlio sx di u)
-           C.enqueue(figlio dx di u)
+           C.enqueue(left_child_of(u))
+           C.enqueue(right_child_of(u))
+       fi	
+   od
+endproc 
 {% endhighlight %}

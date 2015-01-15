@@ -193,15 +193,18 @@
 
 <p>Partendo dall’algoritmo generico mostrato e usando per rappresentare <code>S</code> una Pila/Stack otteniamo la visita in profondità (o DFS cioè depth first search)</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">algoritmo</span> <span class="nf">visitaDFS</span><span class="o">(</span><span class="n">nodo</span> <span class="n">r</span><span class="o">)</span>
-   <span class="n">Pila</span> <span class="n">S</span>
+<div class="highlight"><pre><code class="java"><span class="n">proc</span> <span class="nf">DFS</span><span class="o">(</span><span class="n">node</span> <span class="n">r</span><span class="o">)</span>
+   <span class="n">Stack</span> <span class="n">S</span>
    <span class="n">S</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">r</span><span class="o">)</span>
-   <span class="k">while</span><span class="o">(</span><span class="n">not</span> <span class="n">S</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="k">do</span>
-      <span class="n">u</span><span class="o">&lt;-</span><span class="n">S</span><span class="o">.</span><span class="na">pop</span><span class="o">()</span>
-       <span class="k">if</span><span class="o">(</span><span class="n">u</span><span class="o">&lt;&gt;</span><span class="kc">null</span><span class="o">)</span> <span class="n">then</span>
+   <span class="k">while</span> <span class="n">not</span> <span class="n">S</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">()</span>  <span class="k">do</span>
+      <span class="n">u</span> <span class="err">←</span> <span class="n">S</span><span class="o">.</span><span class="na">pop</span><span class="o">()</span>
+       <span class="k">if</span> <span class="n">u</span> <span class="err">≠</span> <span class="kc">null</span> <span class="n">then</span>
             <span class="n">visit</span><span class="o">(</span><span class="n">u</span><span class="o">)</span>
-            <span class="n">S</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">figlio</span> <span class="n">destro</span> <span class="n">di</span> <span class="n">u</span><span class="o">)</span>
-            <span class="n">S</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">figlio</span> <span class="n">sinistro</span> <span class="n">di</span> <span class="n">u</span><span class="o">)</span></code></pre></div>
+            <span class="n">S</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">right_child_of</span><span class="o">(</span><span class="n">u</span><span class="o">))</span>
+            <span class="n">S</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">left_child_of</span><span class="o">(</span><span class="n">u</span><span class="o">))</span>
+       <span class="n">fi</span>
+   <span class="n">od</span>
+<span class="n">endproc</span></code></pre></div>
 
 <p>in una visita in profondità si prosegue la visita dall’ultimo nodo lasciato in sospeso
 poiché mettiamo in pila prima il figlio destro di ogni nodo e poi quello sinistro tenderemo a seguire tutti i figli sinistri andando in profondità fino a che non si raggiunge la prima foglia sinistra in generale si passerà a visitare ogni sotto-albero destro in un nodo solo quando il sotto-albero sinistro è stato complessivamente visitato</p>
@@ -216,11 +219,13 @@ la pila non appare esplicitamente nell’algoritmo in quanto è la pila di recor
 * visita simmetrica   = si effettua prima sinistra,poi radice e poi destra
 * visita in post ordine = prima sinistra,poi destra e infine radice</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">algoritmo</span> <span class="nf">visitaDFSRicorsiva</span><span class="o">(</span><span class="n">nodo</span> <span class="n">r</span><span class="o">)</span>
-     <span class="k">if</span><span class="o">(</span><span class="n">r</span><span class="o">=</span><span class="kc">null</span><span class="o">)</span> <span class="n">then</span> <span class="k">return</span>
+<div class="highlight"><pre><code class="java"><span class="c1">//DFS recursive visit</span>
+<span class="n">proc</span> <span class="nf">DFS</span><span class="o">(</span><span class="n">node</span> <span class="n">r</span><span class="o">)</span>
+     <span class="k">if</span> <span class="n">r</span> <span class="o">=</span> <span class="kc">null</span> <span class="n">then</span> <span class="k">return</span>
      <span class="n">visit</span><span class="o">(</span><span class="n">u</span><span class="o">)</span>
-     <span class="n">visitaDFSRicorsiva</span><span class="o">(</span><span class="n">figlio</span> <span class="n">sx</span> <span class="n">di</span> <span class="n">r</span><span class="o">)</span>
-     <span class="n">visitaDFSRicorsiva</span><span class="o">(</span><span class="n">figlio</span> <span class="n">dx</span> <span class="n">di</span> <span class="n">r</span><span class="o">)</span></code></pre></div>
+     <span class="n">DFS</span><span class="o">(</span><span class="n">left_child_of</span><span class="o">(</span><span class="n">r</span><span class="o">))</span>
+     <span class="n">DFS</span><span class="o">(</span><span class="n">right_child_of</span><span class="o">(</span><span class="n">r</span><span class="o">))</span>
+<span class="n">endproc</span></code></pre></div>
 
 
         <div id="disqus_thread"></div><!-- /#disqus_thread -->

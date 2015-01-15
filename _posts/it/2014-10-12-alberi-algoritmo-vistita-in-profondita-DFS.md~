@@ -11,18 +11,21 @@ share: true
 ﻿"La scienza è ciò che comprendiamo abbastanza bene da spiegarla a un computer. L'arte è tutto il resto"
 *(Donald Knuth)*
 
-Partendo dall’algoritmo generico mostrato e usando per rappresentare S una Pila/Stack otteniamo la visita in profondità (o DFS cioè depth first search)
+Partendo dall’algoritmo generico mostrato e usando per rappresentare `S` una Pila/Stack otteniamo la visita in profondità (o DFS cioè depth first search)
 
 {% highlight java %}
-algoritmo visitaDFS(nodo r)
-   Pila S
+proc DFS(node r)
+   Stack S
    S.push(r)
-   while(not S.isEmpty()) do
-      u<-S.pop()
-       if(u<>null) then
+   while not S.isEmpty()  do
+      u ← S.pop()
+       if u ≠ null then
             visit(u)
-            S.push(figlio destro di u)
-            S.push(figlio sinistro di u)
+            S.push(right_child_of(u))
+            S.push(left_child_of(u))
+       fi
+   od
+endproc 
 {% endhighlight %}
 
 in una visita in profondità si prosegue la visita dall’ultimo nodo lasciato in sospeso
@@ -30,7 +33,6 @@ poiché mettiamo in pila prima il figlio destro di ogni nodo e poi quello sinist
 
 
 Invertendo l’ordine in cui aggiungiamo i figli abbiamo la variante simmetrica
-
 
 La versione di visita in profondità ricorsiva mostrata sotto è molto più elegante:
 la pila non appare esplicitamente nell’algoritmo in quanto è la pila di record di attivazione  delle chiamate ricorsive per mantenere i nodi aperti.
@@ -41,9 +43,11 @@ Esitono le ovvie varianti se alteriamo l'ordine delle istruzioni di visita e di 
 * visita in post ordine = prima sinistra,poi destra e infine radice
 
 {% highlight java %}
-algoritmo visitaDFSRicorsiva(nodo r)
-     if(r=null) then return
+//DFS recursive visit
+proc DFS(node r)
+     if r = null then return
      visit(u)
-     visitaDFSRicorsiva(figlio sx di r)
-     visitaDFSRicorsiva(figlio dx di r)
+     DFS(left_child_of(r))
+     DFS(right_child_of(r))
+endproc
 {% endhighlight %}

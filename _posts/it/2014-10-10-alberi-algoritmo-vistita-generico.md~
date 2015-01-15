@@ -17,13 +17,14 @@ ciò che voglio venga fatto", dagli un lecca-lecca
 Il procedimento di visita più generico possibile è visibile nell'algoritmo in pseudocodice riportato sotto
 
 {% highlight java %}
-algorithm generic_visit(nodo r)
-   S := {r}
-   while(S ≠ 0) do
-       u := estrai un nodo da S
+proc generic_tree_visit(node r)
+   S ← { r }
+   while S ≠ ∅  do
+       u ← get node from S
        visit(u)
-       S := S unito {figli di u}
-  od
+       S ← S ∪ { children of u}
+   od
+endproc
 {% endhighlight %}
 
 l’algortimo mantiene istante per istante in `S` i nodi che rappresentano i punti di ramificazione rimasti in sospeso e da cui la visita deve proseguire, diremo che questi nodi sono aperti e formano una frangia dell’albero, un nodo diventa chiuso quando è rimosso da `S`.

@@ -196,13 +196,14 @@ ciò che voglio venga fatto”, dagli un lecca-lecca
 
 <p>Il procedimento di visita più generico possibile è visibile nell’algoritmo in pseudocodice riportato sotto</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">algorithm</span> <span class="nf">generic_visit</span><span class="o">(</span><span class="n">nodo</span> <span class="n">r</span><span class="o">)</span>
-   <span class="n">S</span> <span class="o">:=</span> <span class="o">{</span><span class="n">r</span><span class="o">}</span>
-   <span class="k">while</span><span class="o">(</span><span class="n">S</span> <span class="err">≠</span> <span class="mi">0</span><span class="o">)</span> <span class="k">do</span>
-       <span class="n">u</span> <span class="o">:=</span> <span class="n">estrai</span> <span class="n">un</span> <span class="n">nodo</span> <span class="n">da</span> <span class="n">S</span>
+<div class="highlight"><pre><code class="java"><span class="n">proc</span> <span class="nf">generic_tree_visit</span><span class="o">(</span><span class="n">node</span> <span class="n">r</span><span class="o">)</span>
+   <span class="n">S</span> <span class="err">←</span> <span class="o">{</span> <span class="n">r</span> <span class="o">}</span>
+   <span class="k">while</span> <span class="n">S</span> <span class="err">≠</span> <span class="err">∅</span>  <span class="k">do</span>
+       <span class="n">u</span> <span class="err">←</span> <span class="n">get</span> <span class="n">node</span> <span class="n">from</span> <span class="n">S</span>
        <span class="n">visit</span><span class="o">(</span><span class="n">u</span><span class="o">)</span>
-       <span class="n">S</span> <span class="o">:=</span> <span class="n">S</span> <span class="n">unito</span> <span class="o">{</span><span class="n">figli</span> <span class="n">di</span> <span class="n">u</span><span class="o">}</span>
-  <span class="n">od</span></code></pre></div>
+       <span class="n">S</span> <span class="err">←</span> <span class="n">S</span> <span class="err">∪</span> <span class="o">{</span> <span class="n">children</span> <span class="n">of</span> <span class="n">u</span><span class="o">}</span>
+   <span class="n">od</span>
+<span class="n">endproc</span></code></pre></div>
 
 <p>l’algortimo mantiene istante per istante in <code>S</code> i nodi che rappresentano i punti di ramificazione rimasti in sospeso e da cui la visita deve proseguire, diremo che questi nodi sono aperti e formano una frangia dell’albero, un nodo diventa chiuso quando è rimosso da <code>S</code>.</p>
 
