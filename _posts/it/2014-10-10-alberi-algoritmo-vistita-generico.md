@@ -19,7 +19,7 @@ Il procedimento di visita più generico possibile è visibile nell'algoritmo in 
 {% highlight java %}
 algorithm generic_visit(nodo r)
    S := {r}
-   while(S<>0) do
+   while(S ≠ 0) do
        u := estrai un nodo da S
        visit(u)
        S := S unito {figli di u}

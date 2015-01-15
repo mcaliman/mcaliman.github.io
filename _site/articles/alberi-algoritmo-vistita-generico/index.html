@@ -198,7 +198,7 @@ ciò che voglio venga fatto”, dagli un lecca-lecca
 
 <div class="highlight"><pre><code class="java"><span class="n">algorithm</span> <span class="nf">generic_visit</span><span class="o">(</span><span class="n">nodo</span> <span class="n">r</span><span class="o">)</span>
    <span class="n">S</span> <span class="o">:=</span> <span class="o">{</span><span class="n">r</span><span class="o">}</span>
-   <span class="k">while</span><span class="o">(</span><span class="n">S</span><span class="o">&lt;&gt;</span><span class="mi">0</span><span class="o">)</span> <span class="k">do</span>
+   <span class="k">while</span><span class="o">(</span><span class="n">S</span> <span class="err">≠</span> <span class="mi">0</span><span class="o">)</span> <span class="k">do</span>
        <span class="n">u</span> <span class="o">:=</span> <span class="n">estrai</span> <span class="n">un</span> <span class="n">nodo</span> <span class="n">da</span> <span class="n">S</span>
        <span class="n">visit</span><span class="o">(</span><span class="n">u</span><span class="o">)</span>
        <span class="n">S</span> <span class="o">:=</span> <span class="n">S</span> <span class="n">unito</span> <span class="o">{</span><span class="n">figli</span> <span class="n">di</span> <span class="n">u</span><span class="o">}</span>
