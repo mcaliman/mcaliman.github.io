@@ -225,7 +225,7 @@ f. <code>User</code></li>
 Per ottenere una connessione usando un DataSource portete utilizzare il seguente codice di esempio.</li>
 </ol>
 
-<div class="highlight"><pre><code class="java"><span class="n">Context</span> <span class="n">ctx</span> <span class="o">=</span> <span class="k">new</span> <span class="n">InitialContext</span><span class="o">();</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Context</span> <span class="n">ctx</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">InitialContext</span><span class="o">();</span>
 <span class="n">DataSource</span> <span class="n">ds</span> <span class="o">=</span> <span class="o">(</span><span class="n">DataSource</span><span class="o">)</span> <span class="n">ctx</span><span class="o">.</span><span class="na">lookup</span><span class="o">(</span><span class="s">&quot;jdbc/mysqltest&quot;</span><span class="o">);</span>
 <span class="n">Connection</span> <span class="n">con</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="na">getConnection</span><span class="o">();</span></code></pre></div>
 

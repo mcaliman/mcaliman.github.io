@@ -192,7 +192,7 @@
 Il bug a quanto pare è noto fin dal 2005, ne ho trovato riscontro in rete e su vari forum e gruppi di discussione. 
 Al momento non ho individuato patch ufficiali che risolvano il problema,uno dei consigli che ho spesso trovato è quello di ripristinare un backup del database. Una soluzione indolore è ripristinare l’utente admin con le istruzioni che riporto qui sotto. </p>
 
-<div class="highlight"><pre><code class="sql"><span class="k">insert</span> <span class="k">into</span> <span class="n">core_user</span> <span class="p">(</span>
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">insert</span> <span class="k">into</span> <span class="n">core_user</span> <span class="p">(</span>
 <span class="n">idst</span><span class="p">,</span>
 <span class="n">userid</span><span class="p">,</span>
 <span class="n">firstname</span><span class="p">,</span>
@@ -236,7 +236,7 @@ Sotto sono riportate le definizioni delle tabelle interessate</p>
 
 <h1 id="tabella-coreuser">tabella core_user</h1>
 
-<div class="highlight"><pre><code class="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">core_user</span> <span class="p">(</span>
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">core_user</span> <span class="p">(</span>
 <span class="n">idst</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span>
 <span class="n">userid</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
 <span class="n">firstname</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
@@ -258,7 +258,7 @@ Sotto sono riportate le definizioni delle tabelle interessate</p>
 
 <h1 id="tabella-coregroupmembers">tabella core_group_members</h1>
 
-<div class="highlight"><pre><code class="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">core_group_members</span> <span class="p">(</span>
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">core_group_members</span> <span class="p">(</span>
 <span class="n">idst</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span>
 <span class="n">idstMember</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span>
 <span class="n">filter</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>

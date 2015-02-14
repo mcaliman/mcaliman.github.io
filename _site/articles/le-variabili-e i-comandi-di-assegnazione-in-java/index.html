@@ -192,7 +192,7 @@
 Definizione di variabile
 Una variabile  una coppia composta da un nome, l’identificativo della variabile e un valore.</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">T</span> <span class="n">var</span> <span class="o">=</span> <span class="n">value</span> <span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span> <span class="n">var</span> <span class="o">=</span> <span class="n">value</span> <span class="o">;</span></code></pre></div>
 
 <p>Le variabili di un programma memorizzano i dati che sono elaborati durante l’esecuzione.
 Nel corso dell’esecuzione del programma i valori della variabile sono modificati (se no sarebbero delle costanti).
@@ -201,22 +201,22 @@ Trattiamole bene,diamogli un nome rispettabile in modo che non ci odino e ci fac
 Prima di essere usata una variabile deve essere dichiarata, la dichiarazione di una variabile  necessaria per riservare uno spazio
 di memoria in cui scrivere il suo valore, la dichiarazione definisce il tipo della variabile.</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">T</span> <span class="n">var</span><span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span> <span class="n">var</span><span class="o">;</span></code></pre></div>
 
 <p>dove <code>T</code>  il tipo, per esempio <strong>int</strong> , double e altro.
 Si possono avere come tipi, tipi di base che non sono oggetti oppure oggetti ( <code>T</code> diventa un nome di classe). 
 Sotto riportiamo alcuni esempi di dichiarazione di variabile:</p>
 
-<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="n">x</span> <span class="o">;</span> <span class="kt">double</span> <span class="n">y</span> <span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">x</span> <span class="o">;</span> <span class="kt">double</span> <span class="n">y</span> <span class="o">;</span></code></pre></div>
 
 <p>Posso anche assegnare un valore alla variabile:</p>
 
-<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">;</span> <span class="kt">double</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">;</span> <span class="kt">double</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">;</span></code></pre></div>
 
 <p>Il tipo dei valori della variabile serve per stabilire quanta memoria riservare alla variabile, nel caso del tipo int sono 4 byte.
 Se dovessimo rappresentare graficamente le dichiarazioni:</p>
 
-<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">;</span> 
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">;</span> 
 <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">;</span> 
 <span class="kt">int</span> <span class="n">z</span> <span class="o">;</span></code></pre></div>
 
@@ -231,7 +231,7 @@ Se dovessimo rappresentare graficamente le dichiarazioni:</p>
 <p>Un comando di assegnazione  un’istruzione avente lo scopo di modificare il valore di una variabile.
 Si aggiunga anche di assegnare un valore ad una variabile che era solo stata dichiarata e che quindi aveva valore indefinito.</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">var</span> <span class="o">=</span> <span class="n">expr</span><span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">var</span> <span class="o">=</span> <span class="n">expr</span><span class="o">;</span></code></pre></div>
 
 <p>Dove var  il nome della variabile e expr una espressione il cui tipo  compatibile con il tipo di var.
 Il comando ha l’effetto di sostituire il valore della variabile il cui nome compare a sinistra (left-value) del segno di uguaglianza 
@@ -239,11 +239,11 @@ con il valore che compare a destra.
 Per espressioni si intende un’entit sintattica composta da nomi di variabili, costanti e segni di operazioni 
 per stabilire l’ordine di valutazione degli operandi.</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">x</span> <span class="o">=</span> <span class="mi">12</span><span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">x</span> <span class="o">=</span> <span class="mi">12</span><span class="o">;</span></code></pre></div>
 
 <p>assegna alla variabile x il valore 12;</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">y</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">y</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span></code></pre></div>
 
 <p>un esempio di espressione.</p>
 
@@ -287,7 +287,7 @@ per stabilire l’ordine di valutazione degli operandi.</p>
 
 <p>Come gi accennato nel caso di una assegnazione del tipo </p>
 
-<div class="highlight"><pre><code class="java"><span class="n">T</span> <span class="n">var</span> <span class="o">=</span> <span class="n">expr</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span> <span class="n">var</span> <span class="o">=</span> <span class="n">expr</span></code></pre></div>
 
 <p>abbiamo detto che expr deve avere tipo compatibile con T (non necessariamente lo stesso)  utile a questo punto dare 
 la definizione di promozione e casting per tipi che definiscono i casi in cui il tipo di var e expr possono non coincidere 
@@ -298,7 +298,7 @@ Qualora tanto il tipo della variabile quanto il tipo dell’ espressione rappres
 del tipo di var prima dell’ assegnazione avviene una conversione automatica detta promozione.
 Per esempio:</p>
 
-<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="n">i</span> <span class="o">;</span> 
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">i</span> <span class="o">;</span> 
 <span class="kt">byte</span> <span class="n">j</span> <span class="o">;</span> 
 <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">;</span></code></pre></div>
 
@@ -311,7 +311,7 @@ conversione esplicita detta casting cio : TypeOf(expr) –&gt; TypeOf(var). Ques
 
 <p>Per esempio:</p>
 
-<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="n">i</span><span class="o">;</span> 
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">i</span><span class="o">;</span> 
 <span class="kt">byte</span> <span class="n">j</span><span class="o">;</span> 
 <span class="n">j</span> <span class="o">=</span> <span class="o">(</span><span class="kt">byte</span><span class="o">)</span> <span class="n">i</span><span class="o">;</span></code></pre></div>
 

@@ -230,7 +230,7 @@ datagramma IP I protocollo UDP non e’ affidabile: invia i datagrammi ma non ga
 destinazione sono quindi gli applicativi che lo utilizzano che devono preoccuparsi dell’affidabilita’ del
 servizio. La testata UDP e’ relativamente semplice.</p>
 
-<div class="highlight"><pre><code class="java"><span class="mi">0</span>       <span class="mi">7</span> <span class="mi">8</span>     <span class="mi">15</span> <span class="mi">16</span>    <span class="mi">23</span> <span class="mi">24</span>      <span class="mi">31</span> 
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="mi">0</span>       <span class="mi">7</span> <span class="mi">8</span>     <span class="mi">15</span> <span class="mi">16</span>    <span class="mi">23</span> <span class="mi">24</span>      <span class="mi">31</span> 
 <span class="o">+--------+--------+--------+--------+</span> 
 <span class="o">|</span> <span class="n">Source</span> <span class="o">|</span> <span class="n">Destination</span>              <span class="o">|</span> 
 <span class="o">|</span> <span class="n">Port</span>   <span class="o">|</span> <span class="n">Port</span>                     <span class="o">|</span> 
@@ -279,25 +279,25 @@ di cominciare a massacrare le nostre tastiere). Supponiamo di avere una personal
 questi dispositivi ambientali, dobbiamo aprire un socket sulla stessa porta sulla quale il dispositivo e’ in
 ascolto :</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">private</span> <span class="n">DatagramSocket</span> <span class="n">serverSocket</span> <span class="o">;</span> 
-<span class="kd">private</span> <span class="kt">int</span> <span class="n">serverPort</span> <span class="o">;</span> <span class="n">serverSocket</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DatagramSocket</span><span class="o">(</span><span class="n">serverPort</span><span class="o">)</span> <span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="n">DatagramSocket</span> <span class="n">serverSocket</span> <span class="o">;</span> 
+<span class="kd">private</span> <span class="kt">int</span> <span class="n">serverPort</span> <span class="o">;</span> <span class="n">serverSocket</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">DatagramSocket</span><span class="o">(</span><span class="n">serverPort</span><span class="o">)</span> <span class="o">;</span></code></pre></div>
 
 <p>Ora che abbiamo il nostro oggetto socket per l’UDP (notare che si utilizza per questa ragione un
 DatagramSocket) Settiamo il timeout a 5 secondi, da notare che il timeout di default varia da browser a browser
 se si decide di usare delle Applet, invece con le applicazioni ,che consiglio, le cose sono piu’ facili.</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">serverSocket</span><span class="o">.</span><span class="na">setSoTimeout</span><span class="o">(</span><span class="mi">5000</span><span class="o">)</span> <span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">serverSocket</span><span class="o">.</span><span class="na">setSoTimeout</span><span class="o">(</span><span class="mi">5000</span><span class="o">)</span> <span class="o">;</span></code></pre></div>
 
 <p>Adesso supponiamo di voler spedire un segnale al nostro dispositivo (ad esempio il classico segnale di
 inizializzazione) per fare questo dobbiamo costruire un oggetto di tipo DatagramPacket. A tale scopo usiamo il
 costruttore di cui useremo la seguente versione (vedremo poi nell’approfondimento perche’)</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">DatagramPacket</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">buf</span><span class="o">,</span> <span class="kt">int</span> <span class="n">length</span><span class="o">,</span> <span class="n">InetAddress</span> <span class="n">address</span><span class="o">,</span> <span class="kt">int</span> <span class="n">port</span><span class="o">)</span> 
-<span class="n">DatagramPacket</span> <span class="n">packet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DatagramPacket</span><span class="o">(</span><span class="n">data</span><span class="o">,</span><span class="n">data</span><span class="o">.</span><span class="na">length</span><span class="o">,</span><span class="n">address</span><span class="o">,</span> <span class="n">serverPort</span><span class="o">);</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">DatagramPacket</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">buf</span><span class="o">,</span> <span class="kt">int</span> <span class="n">length</span><span class="o">,</span> <span class="n">InetAddress</span> <span class="n">address</span><span class="o">,</span> <span class="kt">int</span> <span class="n">port</span><span class="o">)</span> 
+<span class="n">DatagramPacket</span> <span class="n">packet</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">DatagramPacket</span><span class="o">(</span><span class="n">data</span><span class="o">,</span><span class="n">data</span><span class="o">.</span><span class="na">length</span><span class="o">,</span><span class="n">address</span><span class="o">,</span> <span class="n">serverPort</span><span class="o">);</span></code></pre></div>
 
 <p>Quindi inviamolo al nostro dispositivo</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">serverSocket</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="n">packet</span><span class="o">);</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">serverSocket</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="n">packet</span><span class="o">);</span></code></pre></div>
 
 <p>A questo punto, direi che la prossima cosa da fare e’ aspettare il segnale di ritorno dal nostro
 dispositivo, che dovrebbe essere un echo nel migliore dei casi, un messaggio di errore o altro, dipende dal
@@ -307,12 +307,12 @@ dispositivo e dell’ architettura del sistema scelto permettendo.</p>
 non e’ sicuro, e quindi spetta a noi (qualora sia possibile, e non sempre lo e’) gestire a livello software un
 eventuale sistema di controllo degli errori.</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">DatagramPacket</span> <span class="n">packet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DatagramPacket</span><span class="o">(</span><span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">512</span><span class="o">],</span><span class="mi">512</span><span class="o">);</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">DatagramPacket</span> <span class="n">packet</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">DatagramPacket</span><span class="o">(</span><span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">512</span><span class="o">],</span><span class="mi">512</span><span class="o">);</span></code></pre></div>
 
 <p>Per metterci in ascolto sul socket utilizziamo il metodo receice, che e’ bloccante, cio’ blocca il flusso
 del programma finche’ non riceve un pacchetto o scade il timeout, sollevando un eccezione.</p>
 
-<div class="highlight"><pre><code class="java"><span class="k">try</span> <span class="o">{</span> 
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">try</span> <span class="o">{</span> 
    <span class="n">serverSocket</span><span class="o">.</span><span class="na">receive</span><span class="o">(</span><span class="n">packet</span><span class="o">);</span> 
 <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">java</span><span class="o">.</span><span class="na">io</span><span class="o">.</span><span class="na">InterruptedIOException</span> <span class="n">e</span><span class="o">){</span>
     <span class="c1">// gestiamo il timeout </span>
@@ -321,7 +321,7 @@ del programma finche’ non riceve un pacchetto o scade il timeout, sollevando u
 <p>Infine e’ sempre buona norma rimettere le cose al loro posto prima di chiudere l’applicazione, che tradotto
 significa che dobbiamo chiudere il socket con il metodo close.</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">serverSocket</span><span class="o">.</span><span class="na">close</span><span class="o">()</span> <span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">serverSocket</span><span class="o">.</span><span class="na">close</span><span class="o">()</span> <span class="o">;</span></code></pre></div>
 
 <p>Abbiamo visto come sia relativamente facile lavorare con UDP e Java, ben inteso l’argomento e’ ben piu’
 esteso, ma al contrario del piu’ diffuso e sicuro TCP/IP, bisogna tagliare le soluzioni su misura, di caso in
@@ -339,43 +339,43 @@ Sun.</p>
 dato da Java per implementare UDP. Cominciamo con la classe <code>DatagramPacket</code> : <code>DatagramPacket</code> ha due costruttori:
 uno si usa per ricevere dati dalla rete, l’altro per inviarli, sotto sono riportate le loro segnature.</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="nf">DatagramPacket</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">buff</span><span class="o">,</span> <span class="kt">int</span> <span class="n">len</span><span class="o">)</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="nf">DatagramPacket</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">buff</span><span class="o">,</span> <span class="kt">int</span> <span class="n">len</span><span class="o">)</span></code></pre></div>
 
 <p>in questo caso i dati si troveranno in buff</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="nf">DatagramPacket</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">buff</span><span class="o">,</span> <span class="kt">int</span> <span class="n">len</span><span class="o">,</span> <span class="n">InetAddress</span> <span class="n">addr</span><span class="o">,</span> <span class="kt">int</span> <span class="n">port</span><span class="o">)</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="nf">DatagramPacket</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">buff</span><span class="o">,</span> <span class="kt">int</span> <span class="n">len</span><span class="o">,</span> <span class="n">InetAddress</span> <span class="n">addr</span><span class="o">,</span> <span class="kt">int</span> <span class="n">port</span><span class="o">)</span></code></pre></div>
 
 <p>in quest’ altro si crea un datagramma per inviare il pacchetto di byte buff all’ host di indirizzo addr e
 alla porta port Per operare su un oggetto di DatagramPacket si sono poi i seguenti metodi :</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">synchronized</span> <span class="n">InetAddress</span> <span class="nf">getAddress</span><span class="o">()</span> 
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">synchronized</span> <span class="n">InetAddress</span> <span class="nf">getAddress</span><span class="o">()</span> 
 <span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">int</span> <span class="nf">getPort</span><span class="o">()</span> 
-<span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">byte</span><span class="o">[]</span> <span class="nf">getData</span><span class="o">()</span> <span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">int</span> <span class="n">getLength</span><span class="o">()</span></code></pre></div>
+<span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">byte</span><span class="o">[]</span> <span class="nf">getData</span><span class="o">()</span> <span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">int</span> <span class="nf">getLength</span><span class="o">()</span></code></pre></div>
 
 <p>La classe DatagramSocket invece serve per inviare o ricevere un datagramma, anche qui troviamo diversi
 costruttori :</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="nf">DatagramSocket</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">SocketException</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="nf">DatagramSocket</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">SocketException</span></code></pre></div>
 
 <p>legato ad una porta anonima, in quanto la porta di destinazione e’ parte del DatagramPacket.</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="nf">DatagramSocket</span><span class="o">(</span><span class="kt">int</span> <span class="n">port</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SocketException</span> 
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="nf">DatagramSocket</span><span class="o">(</span><span class="kt">int</span> <span class="n">port</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SocketException</span> 
 <span class="kd">public</span> <span class="nf">DatagramSocket</span><span class="o">(</span><span class="kt">int</span> <span class="n">port</span><span class="o">,</span> <span class="n">InetAddres</span> <span class="n">addr</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SocketException</span></code></pre></div>
 
 <p>vi sono poi i metodi :</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="n">DatagramPacket</span> <span class="n">o</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> 
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="n">DatagramPacket</span> <span class="n">o</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> 
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">receive</span><span class="o">(</span><span class="n">DatagramPacket</span> <span class="n">p</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> 
 <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getLocalPort</span><span class="o">()</span> 
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">close</span><span class="o">()</span></code></pre></div>
 
 <p>che ovviamente libera la porta occupata da quel socket Infine le opzioni per settare il timeout</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">setSoTimeout</span><span class="o">(</span><span class="kt">int</span> <span class="n">timeout</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SocketException</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">setSoTimeout</span><span class="o">(</span><span class="kt">int</span> <span class="n">timeout</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SocketException</span></code></pre></div>
 
 <p>e per conoscerne il valore</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">int</span> <span class="nf">getSoTimeout</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">int</span> <span class="nf">getSoTimeout</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span></code></pre></div>
 
 <h1 id="conclusione">Conclusione</h1>
 

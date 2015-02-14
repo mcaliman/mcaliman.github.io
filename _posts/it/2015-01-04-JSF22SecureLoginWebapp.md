@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "login e pagine sicure con JSF 2"
+title:  "Login e pagine sicure con JSF 2"
 category: articles
 date:   2015-01-04 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Java,Java7,JSF 2.2]

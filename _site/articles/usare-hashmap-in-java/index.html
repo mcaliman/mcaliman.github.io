@@ -203,29 +203,29 @@
 Anche se obsoleta possiamo usare <code>Hashtable</code> con i generic e passarla ad un <code>HashMap</code>
 ricordiamo che <code>Hashtable</code> è <code>syncronized</code>, <code>HashMap</code> non lo è.</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">Hashtable</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Hashtable</span><span class="o">&lt;&gt;();</span>
-<span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">(</span><span class="n">t</span><span class="o">);</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Hashtable</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Hashtable</span><span class="o">&lt;&gt;();</span>
+<span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">HashMap</span><span class="o">(</span><span class="n">t</span><span class="o">);</span></code></pre></div>
 
 <p>possiamo inizializzare settando il load factor (percentuale delle dimensione)  e la capacità iniziale.</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span><span class="c1">//initialiCapacity = 10</span>
-<span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">5</span><span class="o">);</span><span class="c1">//initialiCapacity = 10 e load factor=5%</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map1</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">HashMap</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span><span class="c1">//initialiCapacity = 10</span>
+<span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map2</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">HashMap</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">5</span><span class="o">);</span><span class="c1">//initialiCapacity = 10 e load factor=5%</span></code></pre></div>
 
 <p>aggiungiamo tre elementi stringa con rispettive chiavi intere alla mappa</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">&quot;Alfa&quot;</span><span class="o">);</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">&quot;Alfa&quot;</span><span class="o">);</span>
 <span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="s">&quot;Bravo&quot;</span><span class="o">);</span>
 <span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">&quot;Charlie&quot;</span><span class="o">);</span></code></pre></div>
 
 <p>recuperiamo il valore da <code>HashMap</code> data la chiave</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">Integer</span> <span class="n">key</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Integer</span> <span class="n">key</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
 <span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">map</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">key</span><span class="o">);</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Key: &quot;</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="s">&quot; value: &quot;</span> <span class="o">+</span> <span class="n">value</span><span class="o">);</span></code></pre></div>
 
 <p>Iteratiamo sulla <code>HashMap</code>        </p>
 
-<div class="highlight"><pre><code class="java"><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">keySetIterator</span> <span class="o">=</span> <span class="n">map</span><span class="o">.</span><span class="na">keySet</span><span class="o">().</span><span class="na">iterator</span><span class="o">();</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">keySetIterator</span> <span class="o">=</span> <span class="n">map</span><span class="o">.</span><span class="na">keySet</span><span class="o">().</span><span class="na">iterator</span><span class="o">();</span>
 <span class="k">while</span> <span class="o">(</span><span class="n">keySetIterator</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
             <span class="n">Integer</span> <span class="n">key1</span> <span class="o">=</span> <span class="n">keySetIterator</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
             <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;key: &quot;</span> <span class="o">+</span> <span class="n">key1</span> <span class="o">+</span> <span class="s">&quot; value: &quot;</span> <span class="o">+</span> <span class="n">map</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">key1</span><span class="o">));</span>
@@ -233,23 +233,23 @@ ricordiamo che <code>Hashtable</code> è <code>syncronized</code>, <code>HashMap
 
 <p>ritorna le dimensioni di una <code>HashMap</code> e la svuota</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Size of Map: &quot;</span> <span class="o">+</span> <span class="n">map</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Size of Map: &quot;</span> <span class="o">+</span> <span class="n">map</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
 <span class="n">map</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span> 
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Size of Map: &quot;</span> <span class="o">+</span> <span class="n">map</span><span class="o">.</span><span class="na">size</span><span class="o">());</span></code></pre></div>
 
 <p>controllo se contiene un dato valore o una data chiave</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Does HashMap contains 1 as key: &quot;</span> <span class="o">+</span> <span class="n">map</span><span class="o">.</span><span class="na">containsKey</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Does HashMap contains 1 as key: &quot;</span> <span class="o">+</span> <span class="n">map</span><span class="o">.</span><span class="na">containsKey</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Does HashMap contains Bravo as value: &quot;</span> <span class="o">+</span><span class="n">map</span><span class="o">.</span><span class="na">containsValue</span><span class="o">(</span><span class="s">&quot;Bravo&quot;</span><span class="o">));</span></code></pre></div>
 
 <p>controllo se contiene elementi o se è vuota</p>
 
-<div class="highlight"><pre><code class="java"><span class="kt">boolean</span> <span class="n">isEmpty</span> <span class="o">=</span> <span class="n">map</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">();</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">boolean</span> <span class="n">isEmpty</span> <span class="o">=</span> <span class="n">map</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">();</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Is HashMap is empty: &quot;</span> <span class="o">+</span> <span class="n">isEmpty</span><span class="o">);</span></code></pre></div>
 
 <p>rimuovo oggetti dalla mappa</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">key</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">key</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
 <span class="n">value</span> <span class="o">=</span> <span class="n">map</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">key</span><span class="o">);</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Following value is removed from Map: &quot;</span> <span class="o">+</span> <span class="n">value</span><span class="o">);</span></code></pre></div>
 
@@ -262,12 +262,12 @@ Le chiavi dovrebbe essere naturalmente comparabili e metodo  <code>compareTo()</
 Non esiste un metodo <code>Collections.sort()</code> definita per <code>Map</code> 
 è solo per liste come <code>ArrayList</code>,<code>LinkedList</code> ecc.        </p>
 
-<div class="highlight"><pre><code class="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Unsorted HashMap: &quot;</span> <span class="o">+</span> <span class="n">map</span><span class="o">);</span>
-<span class="n">TreeMap</span> <span class="n">sortedHashMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">(</span><span class="n">map</span><span class="o">);</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Unsorted HashMap: &quot;</span> <span class="o">+</span> <span class="n">map</span><span class="o">);</span>
+<span class="n">TreeMap</span> <span class="n">sortedHashMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">TreeMap</span><span class="o">(</span><span class="n">map</span><span class="o">);</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Sorted HashMap: &quot;</span> <span class="o">+</span> <span class="n">sortedHashMap</span><span class="o">);</span>
 
 
-<span class="n">sortedHashMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">(</span><span class="k">new</span> <span class="n">Comparator</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;()</span> <span class="o">{</span>
+<span class="n">sortedHashMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">TreeMap</span><span class="o">(</span><span class="k">new</span> <span class="n">Comparator</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;()</span> <span class="o">{</span>
             <span class="nd">@Override</span>
             <span class="kd">public</span> <span class="kt">int</span> <span class="nf">compare</span><span class="o">(</span><span class="n">Integer</span> <span class="n">k1</span><span class="o">,</span> <span class="n">Integer</span> <span class="n">k2</span><span class="o">)</span> <span class="o">{</span>
                 <span class="k">return</span> <span class="n">k2</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">k1</span><span class="o">);</span>
@@ -280,7 +280,7 @@ Non esiste un metodo <code>Collections.sort()</code> definita per <code>Map</cod
 
 <p>Stampa le chiavi dalla più grande alla più piccola</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Sorted HashMap: &quot;</span> <span class="o">+</span> <span class="n">sortedHashMap</span><span class="o">);</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Sorted HashMap: &quot;</span> <span class="o">+</span> <span class="n">sortedHashMap</span><span class="o">);</span></code></pre></div>
 
 <p>Se hai necessità di rendere synchronize una <code>HashMap</code> se devi usarla in ambiente multi-threaded.
 Se usi il JDK 1.5 o precedenti considera di usare <code>ConcurrentHashMap</code> in luogo di un HashMap perchè fornisce una migliore implementazione della gestione dei processi concurrenti. 
@@ -288,7 +288,7 @@ Se invece il tuo progetto è rimasto molto indietro come JDK usa <code>Hashtable
 Noi useremo <code>Collections.synchronizedMap(map)</code>. 
 Questo metodo ritorna una versione thread-safe di <code>Map</code></p>
 
-<div class="highlight"><pre><code class="java"><span class="n">Map</span> <span class="n">synchronizedMap</span> <span class="o">=</span> <span class="n">Collections</span><span class="o">.</span><span class="na">synchronizedMap</span><span class="o">(</span><span class="n">sortedHashMap</span><span class="o">);</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Map</span> <span class="n">synchronizedMap</span> <span class="o">=</span> <span class="n">Collections</span><span class="o">.</span><span class="na">synchronizedMap</span><span class="o">(</span><span class="n">sortedHashMap</span><span class="o">);</span>
 <span class="n">Set</span> <span class="n">set</span> <span class="o">=</span> <span class="n">synchronizedMap</span><span class="o">.</span><span class="na">entrySet</span><span class="o">();</span>
 <span class="kd">synchronized</span> <span class="o">(</span><span class="n">map</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">Iterator</span> <span class="n">i</span> <span class="o">=</span> <span class="n">set</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>

@@ -222,7 +222,7 @@ di parte del codice o tali metodi con conseguente spreco di memoria. </p>
 
 <p>Nella prima accezione, la parola this è sfruttata nella risoluzione di omonimie tra il parametro di un metodo e il nome di una variabile di istanza:</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
    <span class="kt">float</span> <span class="n">car</span><span class="o">;</span>
    <span class="kt">void</span> <span class="nf">m</span><span class="o">(</span><span class="kt">float</span> <span class="n">var</span><span class="o">){</span>
        <span class="k">this</span><span class="o">.</span><span class="na">var</span><span class="o">=</span><span class="n">var</span><span class="o">;</span>
@@ -238,7 +238,7 @@ i costruttori di una classe possono essere ripartiti in un costruttore primario 
 Mentre il costruttore primario è di per sè codificato, i costruttori secondari rimandano a quello primario riportandone i parametri
 di chiamata nella specifica this. La specifica di richiamo deve essere la prima istruzione che appare nel codice dei costruttori secondari.</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
    <span class="kt">float</span> <span class="n">var</span><span class="o">;</span>
    <span class="kd">public</span> <span class="nf">T</span><span class="o">(</span><span class="kt">float</span> <span class="n">var</span><span class="o">){</span>
       <span class="k">this</span><span class="o">.</span><span class="na">var</span><span class="o">=</span><span class="n">var</span><span class="o">;</span>

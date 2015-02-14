@@ -191,7 +191,7 @@
         <p>﻿
 Uno dei tipo base più ricorrente è la Pila o Stack, una specifica in pseudolinguaggio è riportata sotto.</p>
 
-<div class="highlight"><pre><code class="bash">tipo: Pila
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">tipo: Pila
 dati: una sequenza S di n elementi
 operazioni
 isEmpty<span class="o">()</span> -&gt; result , <span class="nv">result</span><span class="o">=</span><span class="nb">true </span>sse <span class="nv">S</span><span class="o">=</span>O, <span class="nb">false </span>altrimenti
@@ -201,7 +201,7 @@ top<span class="o">()</span>-&gt;elem restituisce l’ultimo elemento di S <span
 
 <p>In Java potremmo rendere la specifica come un interfaccia </p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Pila</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Pila</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isEmpty</span><span class="o">();</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">push</span><span class="o">(</span><span class="n">E</span> <span class="n">e</span><span class="o">);</span>
     <span class="kd">public</span> <span class="n">E</span> <span class="nf">pop</span><span class="o">();</span>
@@ -227,7 +227,7 @@ top<span class="o">()</span>-&gt;elem restituisce l’ultimo elemento di S <span
 
 <p>La via più facile è utilizzare la vecchia classe <code>Stack</code> di <code>java.util</code>, ma non ne avremo grandi vantaggi, deriva dalla classe <code>Vector</code> ed è disponibile dalla versione 1.0 del JDK</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">lifo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;();</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">lifo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;();</span>
 <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
     <span class="n">lifo</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
 <span class="o">}</span>
@@ -238,7 +238,7 @@ top<span class="o">()</span>-&gt;elem restituisce l’ultimo elemento di S <span
 
 <p>La classe consigliata è <code>ArrayDeque&lt;E&gt;</code> un semplice caso d’uso è il seguente</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">Deque</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayDeque</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Deque</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayDeque</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
 <span class="n">stack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
 <span class="n">Integer</span> <span class="n">value</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="na">pop</span><span class="o">();</span>
 <span class="kt">boolean</span> <span class="n">isEmpty</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">();</span>

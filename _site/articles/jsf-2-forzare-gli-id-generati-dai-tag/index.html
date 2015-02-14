@@ -195,13 +195,13 @@ tag HTML sono generati in automatico secondo regole precise.</p>
 
 <p>ad esempio</p>
 
-<div class="highlight"><pre><code class="xml"><span class="nt">&lt;h:form</span> <span class="na">id=</span><span class="s">&quot;form1&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;h:form</span> <span class="na">id=</span><span class="s">&quot;form1&quot;</span><span class="nt">&gt;</span>
    <span class="nt">&lt;t:inputHidden</span> <span class="na">id=</span><span class="s">&quot;field1&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/h:form&gt;</span></code></pre></div>
 
 <p>da luogo a questo codice HTML</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name=</span><span class="s">&quot;form:field1&quot;</span><span class="nt">/&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name=</span><span class="s">&quot;form:field1&quot;</span><span class="nt">/&gt;</span></code></pre></div>
 
 <p>Ovviamente non siamo costretti a valorizzare l’attributo <code>id</code>, il rendering delle Java Server Faces si occupano di generarne in automatico di appropriati ed univoci.</p>
 
@@ -209,13 +209,13 @@ tag HTML sono generati in automatico secondo regole precise.</p>
 
 <p>In casi come questo possiamo dichiarare gli <code>id</code> e a livello di <code>form</code> specificare l’attributo <code>prependId="false"</code>. Applicato al codice visto sopra abbiamo</p>
 
-<div class="highlight"><pre><code class="xml"><span class="nt">&lt;h:form</span> <span class="na">id=</span><span class="s">&quot;form1&quot;</span> <span class="na">prependId=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;h:form</span> <span class="na">id=</span><span class="s">&quot;form1&quot;</span> <span class="na">prependId=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
    <span class="nt">&lt;t:inputHidden</span> <span class="na">id=</span><span class="s">&quot;field1&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/h:form&gt;</span></code></pre></div>
 
 <p>che darà luogo a </p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name=</span><span class="s">&quot;field1&quot;</span><span class="nt">/&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name=</span><span class="s">&quot;field1&quot;</span><span class="nt">/&gt;</span></code></pre></div>
 
 <p>Verrebbe la tentazione di utilizzarlo sempre, anche se non è necessario per interazioni con js o css. L’attributo si dovrà usare con attenzione, si può ottenere un errore di <code>id</code> duplicato se si utilizza troppo spesso. In altre parole se non strettamente necessario, lasciamo che sia JSF a occuparsi di questi dettagli e a generare <code>id</code> univoci per i nostri tag.</p>
 

@@ -197,7 +197,7 @@
   <li>Aprire il file <code>%GLASSFISH_HOME/glassfish/domains/domain1/config/domain.xml</code></li>
 </ol>
 
-<div class="highlight"><pre><code class="xml"><span class="nt">&lt;java-config&gt;</span> 
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;java-config&gt;</span> 
      <span class="nt">&lt;jvm-options&gt;</span>-Dcom.sun.enterprise.tools.admingui.NO_NETWORK=true<span class="nt">&lt;/jvm-options&gt;</span>
 <span class="nt">&lt;/java-config&gt;</span></code></pre></div>
 
@@ -210,11 +210,11 @@
 Nome del file e path sono riporti di seguito</li>
 </ol>
 
-<div class="highlight"><pre><code class="bash">%GLASSFISH_HOME/glassfish/modules/console-updatecenter-plugin.jar</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">%GLASSFISH_HOME/glassfish/modules/console-updatecenter-plugin.jar</code></pre></div>
 
 <p>Cancellate poi anche le seguenti directory</p>
 
-<div class="highlight"><pre><code class="bash">%GLASSFISH_HOME/glassfish/domains/domain1/osgi-cache
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">%GLASSFISH_HOME/glassfish/domains/domain1/osgi-cache
 %GLASSFISH_HOME/glassfish/domains/domain1/generated</code></pre></div>
 
 <p>Ora potete far ripartire il server con <code>bin/asadmin start-domain</code> .</p>

@@ -232,7 +232,7 @@ sono definiti static in maniera tale che le chiamate siano eseguite tramite la c
 questa.Vediamo un esempio per chiarire meglio il concetto. Definiamo due package, uno lo chiamiamo debugger e
 l’altro nodebugger. Gia’ dai due nomi si dovrebbe capire quali siano le loro intenzioni:</p>
 
-<div class="highlight"><pre><code class="java"><span class="c1">//LISTATO 1: </span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">//LISTATO 1: </span>
 <span class="kn">package</span> <span class="n">debugger</span><span class="o">;</span> 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Debug</span> <span class="o">{</span> 
    <span class="kd">public</span> <span class="kd">final</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="n">String</span> <span class="n">msg</span><span class="o">)</span> <span class="o">{</span>
@@ -264,7 +264,7 @@ implementata nella classe <code>debugger.Debug</code> ci sia una definizione (ma
 <code>nodebugger.Debug</code> in modo da poter interscambiare tali classi. Ci sono pero’ alcune eccezioni, infatti davanti a
 un membro statico del tipo:</p>
 
-<div class="highlight"><pre><code class="java"><span class="c1">//LISTATO 3: </span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">//LISTATO 3: </span>
 <span class="kn">package</span> <span class="n">debugger</span><span class="o">;</span> 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Debug</span> <span class="o">{</span> 
    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">long</span> <span class="nf">getFreeMemory</span><span class="o">()</span> <span class="o">{</span> 
@@ -275,7 +275,7 @@ un membro statico del tipo:</p>
 
 <p>che viene utilizzato nel nostro codice sorgente in questo modo:</p>
 
-<div class="highlight"><pre><code class="java"><span class="c1">//LISTATO 4: </span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">//LISTATO 4: </span>
 <span class="kn">package</span> <span class="n">myprogram</span><span class="o">;</span> 
 <span class="kn">import</span> <span class="nn">debugger.debug.Debug</span><span class="o">;</span> 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyClass</span> <span class="o">{</span> 
@@ -305,7 +305,7 @@ sempre una tecnica per la quale e’ sempre meglio valutare soluzioni alternativ
 andremo a scrivere si potrebbero definire altre due raccomandazioni: Prima di utilizzare le classi di debug,
 definire un’ulteriore classe di supporto che semplicemente eredita dalla classe <code>Debug</code> originale:</p>
 
-<div class="highlight"><pre><code class="java"><span class="c1">//LISTATO 5: </span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">//LISTATO 5: </span>
 <span class="kn">package</span> <span class="n">myprogram</span><span class="o">.</span><span class="na">debug</span><span class="o">;</span> 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyDebug</span> <span class="kd">extends</span> <span class="n">debugger</span><span class="o">.</span><span class="na">debug</span><span class="o">.</span><span class="na">Debug</span> <span class="o">{</span>
 <span class="cm">/**/</span>
@@ -313,7 +313,7 @@ definire un’ulteriore classe di supporto che semplicemente eredita dalla class
 
 <p>Analogamente fare la stessa cosa per la classe <code>Debug</code> del package <code>nodebug</code>:</p>
 
-<div class="highlight"><pre><code class="java"><span class="c1">//LISTATO 6: </span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">//LISTATO 6: </span>
 <span class="kn">package</span> <span class="n">myprogram</span><span class="o">.</span><span class="na">nodebug</span><span class="o">;</span> 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyDebug</span> <span class="kd">extends</span> <span class="n">debugger</span><span class="o">.</span><span class="na">nodebug</span><span class="o">.</span><span class="na">Debug</span> <span class="o">{</span> 
 <span class="cm">/**/</span>
@@ -327,7 +327,7 @@ classe <code>myprogram.nodebug.MyDebug</code> che potra’ invece attivare tutti
 piu’ livelli di debug indipendenti (o quasi) l’uno dall’altro. In questo modo si potranno attivare dei livelli
 piuttosto che altri ed avere un output di debug piu’ chiaro da capire. Per esempio:</p>
 
-<div class="highlight"><pre><code class="java"><span class="c1">//LISTATO 7: </span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">//LISTATO 7: </span>
 <span class="kn">package</span> <span class="n">myprogram</span><span class="o">.</span><span class="na">main</span><span class="o">;</span> 
 <span class="c1">//Definisco dei livelli di debug class DebugLevel1 extends</span>
 <span class="n">myprogram</span><span class="o">.</span><span class="na">debug</span><span class="o">.</span><span class="na">MyDebug</span> <span class="o">{</span> <span class="cm">/**/</span> <span class="o">}</span> <span class="c1">//attualmente attivo </span>
@@ -397,7 +397,7 @@ sono stati mantenuti uguali anche nella relativa classe ‘fake’.
 #L’utilizzo
 Vediamo un esempio di utilizzo del package debugger:</p>
 
-<div class="highlight"><pre><code class="java"><span class="c1">//LISTATO 8: </span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">//LISTATO 8: </span>
 <span class="kn">package</span> <span class="n">myprogram</span><span class="o">.</span><span class="na">nodebug</span><span class="o">;</span> 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyDebug</span> <span class="kd">extends</span> <span class="n">debugger</span><span class="o">.</span><span class="na">nodebug</span><span class="o">.</span><span class="na">Debug</span> <span class="o">{</span> 
 <span class="cm">/*Inserire qui eventuali estensioni */</span> 

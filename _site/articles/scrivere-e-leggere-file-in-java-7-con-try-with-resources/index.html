@@ -192,11 +192,11 @@
 
 <p>Per scrivere un file</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">write</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="n">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">write</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="n">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
         <span class="kt">boolean</span> <span class="n">completed</span><span class="o">;</span>
         <span class="k">try</span> <span class="o">(</span><span class="n">Writer</span> <span class="n">writer</span> <span class="o">=</span> 
 <span class="k">new</span> <span class="nf">BufferedWriter</span><span class="o">(</span>
-<span class="k">new</span> <span class="nf">OutputStreamWriter</span><span class="o">(</span><span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="n">name</span><span class="o">),</span> <span class="s">&quot;utf-8&quot;</span><span class="o">)))</span> 
+<span class="k">new</span> <span class="nf">OutputStreamWriter</span><span class="o">(</span><span class="k">new</span> <span class="nf">FileOutputStream</span><span class="o">(</span><span class="n">name</span><span class="o">),</span> <span class="s">&quot;utf-8&quot;</span><span class="o">)))</span> 
 <span class="o">{</span>
             <span class="n">writer</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
             <span class="n">completed</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
@@ -209,10 +209,10 @@
 
 <p>e per leggerne il contenuto</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="n">String</span> <span class="nf">read</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">String</span> <span class="nf">read</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">String</span> <span class="n">text</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-        <span class="k">try</span> <span class="o">(</span><span class="n">BufferedReader</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="n">name</span><span class="o">)))</span> <span class="o">{</span>
-            <span class="n">StringBuilder</span> <span class="n">string</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="o">();</span>
+        <span class="k">try</span> <span class="o">(</span><span class="n">BufferedReader</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nf">FileReader</span><span class="o">(</span><span class="n">name</span><span class="o">)))</span> <span class="o">{</span>
+            <span class="n">StringBuilder</span> <span class="n">string</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">StringBuilder</span><span class="o">();</span>
             <span class="n">String</span> <span class="n">line</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
             <span class="k">while</span> <span class="o">(</span><span class="n">line</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
                 <span class="n">string</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">line</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">lineSeparator</span><span class="o">());</span>
@@ -233,14 +233,14 @@
 
 <p>L’interfaccia AutoClosable ha un solo metodo close() </p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">AutoClosable</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">AutoClosable</span> <span class="o">{</span>
 
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">close</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span><span class="o">;</span>
 <span class="o">}</span></code></pre></div>
 
 <p>Implementare AutoClosable su un nostro oggetto non richiede molto sforzo come si può vedere da codice di esempio che riporto qui sotto.</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AutoClosableExampleObject</span> <span class="kd">implements</span> <span class="n">AutoCloseable</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AutoClosableExampleObject</span> <span class="kd">implements</span> <span class="n">AutoCloseable</span> <span class="o">{</span>
 
    <span class="nd">@Override</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">close</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>

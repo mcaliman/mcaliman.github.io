@@ -199,45 +199,45 @@ la più semplice organizzazione di strutture dati complesse.</p>
 Un array  una struttura dati che consente di rappresentare sequenze di dati dello stesso tipo. 
 Gli elementi costituenti un array possono essere rintracciati specificando la loro posizione.</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">T</span><span class="o">[]</span> <span class="n">var</span> <span class="o">=</span> <span class="k">new</span> <span class="n">T</span><span class="o">[</span><span class="n">n</span><span class="o">];</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span><span class="o">[]</span> <span class="n">var</span> <span class="o">=</span> <span class="k">new</span> <span class="n">T</span><span class="o">[</span><span class="n">n</span><span class="o">];</span></code></pre></div>
 
 <p>definisce un array di nome var e tipo T di n elementi, gli elementi dell’ array sono</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">var</span><span class="o">[</span><span class="mi">0</span><span class="o">],</span> <span class="n">var</span><span class="o">[</span><span class="mi">1</span><span class="o">],</span> <span class="o">...</span> <span class="o">,</span> <span class="n">var</span><span class="o">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">var</span><span class="o">[</span><span class="mi">0</span><span class="o">],</span> <span class="n">var</span><span class="o">[</span><span class="mi">1</span><span class="o">],</span> <span class="o">...</span> <span class="o">,</span> <span class="n">var</span><span class="o">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span></code></pre></div>
 
 <p>n anche detto dimensione o lunghezza dell’ array;</p>
 
 <p>possibile anche l’inizializzazione degli elementi contestualmente alla definizione</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">T</span><span class="o">[]</span> <span class="n">var</span> <span class="o">=</span> <span class="o">{</span><span class="n">values_0</span><span class="o">,</span><span class="n">value_1</span><span class="o">,</span> <span class="o">...</span> <span class="o">,</span><span class="n">value_n</span><span class="o">}</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span><span class="o">[]</span> <span class="n">var</span> <span class="o">=</span> <span class="o">{</span><span class="n">values_0</span><span class="o">,</span><span class="n">value_1</span><span class="o">,</span> <span class="o">...</span> <span class="o">,</span><span class="n">value_n</span><span class="o">}</span></code></pre></div>
 
 <p>Per cui si hanno i valori dei singoli elementi pari a</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">var</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">value_0</span> <span class="o">;</span><span class="n">var</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">value_1</span> <span class="o">;...</span><span class="na">var</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">value_n</span> <span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">var</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">value_0</span> <span class="o">;</span><span class="n">var</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">value_1</span> <span class="o">;...</span><span class="na">var</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">value_n</span> <span class="o">;</span></code></pre></div>
 
 <p>altrimenti la dichiarazione può svolgersi in 2 fasi</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">T</span><span class="o">[]</span> <span class="n">var</span><span class="o">;</span> <span class="n">var</span> <span class="o">=</span> <span class="k">new</span> <span class="n">T</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span><span class="o">[]</span> <span class="n">var</span><span class="o">;</span> <span class="n">var</span> <span class="o">=</span> <span class="k">new</span> <span class="n">T</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">;</span></code></pre></div>
 
 <p>oppure</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">var</span> <span class="o">=</span> <span class="k">new</span> <span class="n">T</span><span class="o">[]</span> <span class="o">{</span> <span class="n">value_0</span><span class="o">,</span><span class="n">value_1</span><span class="o">,</span> <span class="o">...,</span> <span class="n">value_n</span> <span class="o">}</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">var</span> <span class="o">=</span> <span class="k">new</span> <span class="n">T</span><span class="o">[]</span> <span class="o">{</span> <span class="n">value_0</span><span class="o">,</span><span class="n">value_1</span><span class="o">,</span> <span class="o">...,</span> <span class="n">value_n</span> <span class="o">}</span></code></pre></div>
 
 <p>ciascun elemento dell’ array può essere usato allo stesso modo di una variabile</p>
 
 <p>dato l’array var { value_0,value_1, … , value_n }</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">var</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">value_0</span> <span class="o">;</span> <span class="n">var</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">value_1</span> <span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">var</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">value_0</span> <span class="o">;</span> <span class="n">var</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">value_1</span> <span class="o">;</span></code></pre></div>
 
 <p>posso modificare il secondo elemento dell’ array , cioè var[1] con valore new_value_1 con l’istruzione</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">var</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">new_value_1</span> <span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">var</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">new_value_1</span> <span class="o">;</span></code></pre></div>
 
 <p>trasformando var in { value_0,new_value_1, … , value_n }</p>
 
 <p>posso assegnare ad una variabile x del tipo compatibile con T il valore i-esimo di var semplicemente cosi</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">T</span> <span class="n">x</span> <span class="o">=</span> <span class="n">var</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span> <span class="n">x</span> <span class="o">=</span> <span class="n">var</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">;</span></code></pre></div>
 
 <p>in questo modo x ha il valore i-esimo dell’ array var , ovviamente i deve avere un valore 
 compreso tra 0 e var.lenght0-1 che rappresenta la lunghezza dell’ array var.</p>
@@ -250,16 +250,16 @@ elemento  individuato non da un singolo indice ma da un numero di indici maggior
 
 <p>Per esempio la classica matrice</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">T</span><span class="o">[][]</span> <span class="n">var</span> <span class="o">=</span> <span class="k">new</span> <span class="n">var</span> <span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">m</span><span class="o">];</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span><span class="o">[][]</span> <span class="n">var</span> <span class="o">=</span> <span class="k">new</span> <span class="n">var</span> <span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">m</span><span class="o">];</span></code></pre></div>
 
 <p>valgono le considerazioni fatte precedentemente per i tipi monodimensionali, 
 per inizializzare il valore di posizione o cordinate i,j posso scrivere</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">var</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">a_value</span> <span class="o">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">var</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">a_value</span> <span class="o">;</span></code></pre></div>
 
 <p>per l’ inizializzazione smart invece posso fare anche</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">T</span><span class="o">[][]</span> <span class="n">var</span> <span class="o">=</span> <span class="o">{</span> <span class="o">{</span><span class="n">value_0</span><span class="o">,</span> <span class="n">value_1</span><span class="o">,</span> <span class="o">...</span> <span class="o">,</span> <span class="n">value_n</span><span class="o">}</span> <span class="o">,</span> <span class="o">{</span> <span class="n">value_0</span><span class="o">,</span> <span class="n">value_1</span><span class="o">,</span> <span class="o">...</span> <span class="o">,</span> <span class="n">value_m</span> <span class="o">}</span> <span class="o">}</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span><span class="o">[][]</span> <span class="n">var</span> <span class="o">=</span> <span class="o">{</span> <span class="o">{</span><span class="n">value_0</span><span class="o">,</span> <span class="n">value_1</span><span class="o">,</span> <span class="o">...</span> <span class="o">,</span> <span class="n">value_n</span><span class="o">}</span> <span class="o">,</span> <span class="o">{</span> <span class="n">value_0</span><span class="o">,</span> <span class="n">value_1</span><span class="o">,</span> <span class="o">...</span> <span class="o">,</span> <span class="n">value_m</span> <span class="o">}</span> <span class="o">}</span></code></pre></div>
 
 
         <div id="disqus_thread"></div><!-- /#disqus_thread -->

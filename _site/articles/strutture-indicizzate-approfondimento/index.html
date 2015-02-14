@@ -197,7 +197,7 @@ Le operazioni di insert e delete comprendono la fase di riallocazione dell’arr
 
 <p>Una prima versione, un pò pedante potrebbe essere la seguente. Assumiamo per semplicità di esposizione che l’array sia di semplici <code>int</code> e non si debba gestire una tupla (elemento,chiave).</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Realloc</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Realloc</span> <span class="o">{</span>
 
     <span class="kt">int</span> <span class="n">n</span> <span class="o">;</span>
     <span class="kt">int</span><span class="o">[]</span> <span class="n">S</span> <span class="o">;</span>
@@ -239,7 +239,7 @@ Le operazioni di insert e delete comprendono la fase di riallocazione dell’arr
     <span class="o">}</span>
     
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">Realloc</span> <span class="n">r</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Realloc</span><span class="o">();</span>
+        <span class="n">Realloc</span> <span class="n">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Realloc</span><span class="o">();</span>
         <span class="n">r</span><span class="o">.</span><span class="na">print</span><span class="o">();</span>
         <span class="n">r</span><span class="o">.</span><span class="na">S</span><span class="o">[</span><span class="mi">0</span><span class="o">]=</span><span class="mi">1</span><span class="o">;</span>
         
@@ -254,7 +254,7 @@ Le operazioni di insert e delete comprendono la fase di riallocazione dell’arr
 
 <p>Possiamo utilizzare qualcosa di già pronto come <code>System.arraycopy()</code> per arrivare ad una release più compatta. Per semplicità riporto solo i metodi coinvolti nel refactoring </p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">realloc</span><span class="o">(){</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">realloc</span><span class="o">(){</span>
    <span class="kt">int</span><span class="o">[]</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
    <span class="n">System</span><span class="o">.</span><span class="na">arraycopy</span><span class="o">(</span><span class="n">S</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">t</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">n</span><span class="o">);</span>
    <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span>

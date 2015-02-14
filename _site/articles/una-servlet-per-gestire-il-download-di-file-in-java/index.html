@@ -194,7 +194,7 @@ Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto
 
 <p>Nel nostro esempio il nome del file comprensivo di path è passato come parametro, rendendo la Servlet generica, utilizzabile per effettuare il download di qualsiasi file</p>
 
-<div class="highlight"><pre><code class="java"><span class="kn">import</span> <span class="nn">java.io.File</span><span class="o">;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.io.File</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.io.FileInputStream</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.io.OutputStream</span><span class="o">;</span>
@@ -213,8 +213,8 @@ Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto
         <span class="k">try</span> <span class="o">{</span>
             <span class="n">response</span><span class="o">.</span><span class="na">setContentType</span><span class="o">(</span><span class="s">&quot;text/html;charset=UTF-8&quot;</span><span class="o">);</span>
             <span class="n">String</span> <span class="n">filePath</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">&quot;file&quot;</span><span class="o">);</span>
-            <span class="n">File</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">filePath</span><span class="o">);</span>
-            <span class="n">FileInputStream</span> <span class="n">inputStream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+            <span class="n">File</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="n">filePath</span><span class="o">);</span>
+            <span class="n">FileInputStream</span> <span class="n">inputStream</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">FileInputStream</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
             <span class="n">ServletContext</span> <span class="n">context</span> <span class="o">=</span> <span class="n">getServletContext</span><span class="o">();</span>
             <span class="n">String</span> <span class="n">mimeType</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getMimeType</span><span class="o">(</span><span class="n">filePath</span><span class="o">);</span>
             <span class="k">if</span> <span class="o">(</span><span class="n">mimeType</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
@@ -255,7 +255,7 @@ Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto
 
 <p>Non dobbiamo aggiungere nulla alla nostra webapplication tramite il descrittore di deployment web.xml dato che abbiamo utilizzato la modalità tramite annotazioni. Per l’invocazione </p>
 
-<div class="highlight"><pre><code class="bash">http://localhost:8080/MyWebApplication/DownloadFileServlet?file<span class="o">=</span>/path/file.ext</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">http://localhost:8080/MyWebApplication/DownloadFileServlet?file<span class="o">=</span>/path/file.ext</code></pre></div>
 
 
         <div id="disqus_thread"></div><!-- /#disqus_thread -->

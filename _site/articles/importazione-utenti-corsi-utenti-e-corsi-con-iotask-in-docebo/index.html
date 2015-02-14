@@ -205,7 +205,7 @@ Il comportamento è evidente analizzando i sorgenti</p>
 
 <h1 id="tabella-coretask">tabella core_task</h1>
 
-<div class="highlight"><pre><code class="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">core_task</span> <span class="p">(</span>
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">core_task</span> <span class="p">(</span>
 <span class="n">name</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
 <span class="n">description</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
 <span class="n">conn_source</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
@@ -221,7 +221,7 @@ Il comportamento è evidente analizzando i sorgenti</p>
 
 <h1 id="tabella-coreconnection">tabella core_connection</h1>
 
-<div class="highlight"><pre><code class="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">core_connection</span> <span class="p">(</span>
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">core_connection</span> <span class="p">(</span>
 <span class="n">name</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
 <span class="n">description</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">default</span> <span class="k">NULL</span><span class="p">,</span>
 <span class="k">type</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
@@ -231,7 +231,7 @@ Il comportamento è evidente analizzando i sorgenti</p>
 
 <h1 id="tabella-coreconnector">tabella core_connector</h1>
 
-<div class="highlight"><pre><code class="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">core_connector</span> <span class="p">(</span>
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">core_connector</span> <span class="p">(</span>
 <span class="k">type</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
 <span class="n">file</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
 <span class="k">class</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>

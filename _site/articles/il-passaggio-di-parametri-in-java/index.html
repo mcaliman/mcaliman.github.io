@@ -221,7 +221,7 @@ non pu essere esportata nell’ambiente chiamante. Questo significa che ogni vol
 per esempio un intero int a di valore 10 ,e poi nel corso della computazione interna al metodo ne cambiate 
 il valore in 11,al rientro della chiamata il suo valore torner ad essere 10.</p>
 
-<div class="highlight"><pre><code class="java"><span class="c1">//dichiarazione e implementazione del metodo m1 che useremo per l&#39;esempio.</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">//dichiarazione e implementazione del metodo m1 che useremo per l&#39;esempio.</span>
 <span class="kd">private</span> <span class="kt">void</span> <span class="nf">m1</span><span class="o">(</span><span class="kt">int</span> <span class="n">value</span><span class="o">){</span>
    <span class="n">value</span><span class="o">=</span><span class="mi">11</span><span class="o">;</span>
    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;qui il valore di qualunque parametro passato vale 11 : value=&#39;&quot;</span><span class="o">+</span><span class="n">value</span><span class="o">);</span>

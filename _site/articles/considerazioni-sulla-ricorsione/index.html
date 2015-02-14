@@ -196,7 +196,7 @@ Abbiamo la ricorsione quando una funzione (in Java un metodo) richiama se stesso
 <p>Il fattoriale può essere calcolato ricorsivamente osservando che <code>!n = n * !(n-1)</code>.
 Un possibile implementazione in Java è la seguente</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">factorial</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">){</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">factorial</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">){</span>
    <span class="k">if</span><span class="o">(</span><span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="o">)</span> <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
    <span class="k">else</span> <span class="k">return</span> <span class="n">n</span><span class="o">*</span><span class="n">factorial</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>
 <span class="o">}</span></code></pre></div>
@@ -215,21 +215,21 @@ Un possibile implementazione in Java è la seguente</p>
 
 <p>In altre parole e più formalmente, quando abbiamo schemi di questo tipo.</p>
 
-<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="nf">m</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">){</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="nf">m</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">){</span>
    <span class="k">if</span><span class="o">(</span><span class="n">g</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="k">return</span> <span class="n">x</span><span class="o">;</span>
    <span class="k">return</span> <span class="nf">m</span><span class="o">(</span><span class="n">f</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">+</span> <span class="n">y</span><span class="o">;</span>
 <span class="o">}</span></code></pre></div>
 
 <p>Un ulteriore esempio di ricorsione lineare è rappresentato dalla somma di elementi di una lista</p>
 
-<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="nf">sum</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span><span class="n">n</span><span class="o">){</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="nf">sum</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span><span class="n">n</span><span class="o">){</span>
    <span class="k">if</span><span class="o">(</span><span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="o">)</span> <span class="k">return</span> <span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
    <span class="k">else</span> <span class="nf">sum</span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">+</span> <span class="n">a</span><span class="o">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span>        
 <span class="o">}</span></code></pre></div>
 
 <p>L’inversione di un array, o meglio dell’ordine dei suoi elementi</p>
 
-<div class="highlight"><pre><code class="java"><span class="kt">void</span> <span class="nf">reverse</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span><span class="n">i</span><span class="o">,</span><span class="n">j</span><span class="o">){</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">reverse</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span><span class="n">i</span><span class="o">,</span><span class="n">j</span><span class="o">){</span>
    <span class="k">if</span><span class="o">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">j</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">swap</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">],</span><span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">]);</span>
        <span class="n">reverse</span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>        
@@ -241,13 +241,13 @@ Un possibile implementazione in Java è la seguente</p>
 
 <p>La ricorsione binaria si ha quando si fa uso di due chiamate ricorsive. Un esempio classico è la successione di Fibonacci.</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">f</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">f</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">+</span> <span class="n">f</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="o">]</span> <span class="o">(</span><span class="n">per</span> <span class="n">ogni</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">)</span></code></pre></div>
 
 <p>Un implementazione di esempio in Java è la seguente</p>
 
-<div class="highlight"><pre><code class="java"><span class="kt">int</span> <span class="nf">fibonacci</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">){</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="nf">fibonacci</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">){</span>
    <span class="k">if</span><span class="o">(</span><span class="n">k</span><span class="o">&lt;=</span><span class="mi">1</span><span class="o">)</span> <span class="k">return</span> <span class="n">k</span><span class="o">;</span>
    <span class="k">else</span> <span class="k">return</span> <span class="nf">fibonacci</span><span class="o">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="o">(</span><span class="n">k</span><span class="o">-</span><span class="mi">2</span><span class="o">);</span>
 <span class="o">}</span></code></pre></div>

@@ -64,6 +64,10 @@
 
     
     <url>
+        <loc>http://caliman.org/articles/JSF22SecureLoginWebapp/</loc>
+    </url>
+    
+    <url>
         <loc>http://caliman.org/articles/creare-un-custom-converter-in-jsf-2/</loc>
     </url>
     

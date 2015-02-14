@@ -195,13 +195,13 @@
 
 <p>I nodi vengono visitati per livelli,prima radice,poi figli della radice,poi i figli dei figli.</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">proc</span> <span class="nf">BFS</span><span class="o">(</span><span class="n">nodo</span> <span class="n">r</span><span class="o">)</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">proc</span> <span class="nf">BFS</span><span class="o">(</span><span class="n">nodo</span> <span class="n">r</span><span class="o">)</span>
    <span class="n">Queue</span> <span class="n">C</span>
    <span class="n">C</span><span class="o">.</span><span class="na">enqueue</span><span class="o">(</span><span class="n">r</span><span class="o">)</span>
    <span class="k">while</span> <span class="n">not</span> <span class="n">C</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">()</span> <span class="k">do</span> 
        <span class="n">u</span> <span class="err">←</span> <span class="n">C</span><span class="o">.</span><span class="na">dequeue</span><span class="o">()</span>
        <span class="k">if</span> <span class="n">u</span> <span class="err">≠</span> <span class="kc">null</span> <span class="n">then</span>
-           <span class="n">visit</span><span class="o">(</span><span class="n">u</span><span class="o">)</span>
+           <span class="nf">visit</span><span class="o">(</span><span class="n">u</span><span class="o">)</span>
            <span class="n">C</span><span class="o">.</span><span class="na">enqueue</span><span class="o">(</span><span class="n">left_child_of</span><span class="o">(</span><span class="n">u</span><span class="o">))</span>
            <span class="n">C</span><span class="o">.</span><span class="na">enqueue</span><span class="o">(</span><span class="n">right_child_of</span><span class="o">(</span><span class="n">u</span><span class="o">))</span>
        <span class="n">fi</span>	

@@ -190,7 +190,7 @@
       <div class="entry-content">
         <p>﻿Riprendiamo la trattazione delle strutture dati elementari. Nei post precedenti abbiamo visto le strutture indicizzate,quelle collegate e le Pile o Stack,uno altro dei tipo base più ricorrenti è la Coda o Queue, una specifica in pseudolinguaggio è riportata sotto.</p>
 
-<div class="highlight"><pre><code class="bash">tipo Coda
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">tipo Coda
 dati
 una sequenza S di n elementi
 operazioni
@@ -201,7 +201,7 @@ first<span class="o">()</span>-&gt;elem, restituisce il primo elemento di S <spa
 
 <p>Una naturale implementazione in Java della specifica è fornita da un interfaccia come quella seguente</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Coda</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Coda</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isEmpty</span><span class="o">();</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">enqueue</span><span class="o">(</span><span class="n">E</span> <span class="n">e</span><span class="o">);</span>
     <span class="kd">public</span> <span class="n">E</span> <span class="nf">dequeue</span><span class="o">();</span>
@@ -213,7 +213,7 @@ first<span class="o">()</span>-&gt;elem, restituisce il primo elemento di S <spa
 <p>Come per il gli Stack la via più naturale e veloce è quella di utilizzare le classi concrete derivanti dall’interfaccia Java <code>Deque</code>.
 Anche in questo caso possiamo utilizzare i metodi di Deque relativi al suo comportamento come Queue.</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">addLast</span><span class="o">(</span><span class="n">e</span><span class="o">)</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">addLast</span><span class="o">(</span><span class="n">e</span><span class="o">)</span>
 <span class="n">offerLast</span><span class="o">(</span><span class="n">e</span><span class="o">)</span>
 <span class="n">removeFirst</span><span class="o">()</span>
 <span class="n">pollFirst</span><span class="o">()</span>
@@ -222,7 +222,7 @@ Anche in questo caso possiamo utilizzare i metodi di Deque relativi al suo compo
 
 <p>Un classe wrapper che renda più facile l’utilizzo è la seguente (utilizza <code>LinkedList</code> in luogo di <code>ArrayDeque</code>)</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">QueueImpl</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">QueueImpl</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="o">{</span>
 
     <span class="kd">private</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
 

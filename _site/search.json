@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Login e pagine sicure con JSF 2",
+		  "category"   : "articles",
+		  "url"        : "http://caliman.org/articles/JSF22SecureLoginWebapp/",
+		  "date"       : "2015-01-04 23:45:33 +0100",
+		  "shortdate"  : "January 04, 2015"
+		} ,
+	
+		{
 		  "title"      : "Creare un custom Converter in JSF 2.2",
 		  "category"   : "articles",
 		  "url"        : "http://caliman.org/articles/creare-un-custom-converter-in-jsf-2/",
