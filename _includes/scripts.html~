@@ -69,7 +69,7 @@
 			$(document).ready(function() {
 				$.DivasCookies({
 					bannerText				: "This website uses cookies in order to improve your web experience. ",		// text for the Divas Cookies banner
-					cookiePolicyLink		: "/privacy/",		// link to the extended cookie policy
+					cookiePolicyLink		: "{{ site.url }}/privacy/",		// link to the extended cookie policy
 					cookiePolicyLinkText	: "More info",				// text for the link to the extended cookie policy
 					thirdPartyPolicyWidget	: "",						// if set to "iubenda" tries to use the Iubenda widget
 					acceptButtonText		: "OK",						// text for the close button
