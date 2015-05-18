@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Ubuntu 14.04.02 LTS abilitare l’utente root"
+category: articles
+date:   2015-05-13 22:45:33
+tags: [linux,ubuntu]
+comments: true
+share: true
+---
+
+Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. *(Isaac Asimov, Il vento è cambiato, 1983)*
+
+Per default è l’utente root su ubuntu è disabilitato, non vi sono particolari ragioni per attivarlo dato che è possibile ricorrere in modo più sicuro con il comando sudio. Se proprio vogliamo abilarlo creiamo la sua password per la prima volta con
+{% highlight bash %}
+$ sudo passwd
+
+potremo così diventare root con
+{% highlight bash %}
+$ su root

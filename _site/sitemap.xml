@@ -64,6 +64,26 @@
 
     
     <url>
+        <loc>http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/</loc>
+    </url>
+    
+    <url>
+        <loc>http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-git/</loc>
+    </url>
+    
+    <url>
+        <loc>http://caliman.org/articles/ubuntu-14.04.02-LTS-abilitare-root/</loc>
+    </url>
+    
+    <url>
+        <loc>http://caliman.org/articles/ubuntu-14.04.02-LTS-install-openssh/</loc>
+    </url>
+    
+    <url>
+        <loc>http://caliman.org/articles/debian-8-abilitare-sudo/</loc>
+    </url>
+    
+    <url>
         <loc>http://caliman.org/articles/JSF22SecureLoginWebapp/</loc>
     </url>
     
@@ -73,6 +93,10 @@
     
     <url>
         <loc>http://caliman.org/articles/facili-le-dropdownbox-con-le-jsf-2/</loc>
+    </url>
+    
+    <url>
+        <loc>http://caliman.org/articles/jsf-2-come-usare-i-commenti/</loc>
     </url>
     
     <url>

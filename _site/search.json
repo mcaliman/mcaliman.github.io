@@ -1,6 +1,46 @@
 [
 	
 		{
+		  "title"      : "Ubuntu 14.04.02 LTS installare subversion (svn)",
+		  "category"   : "articles",
+		  "url"        : "http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/",
+		  "date"       : "2015-05-16 00:45:33 +0200",
+		  "shortdate"  : "May 16, 2015"
+		} ,
+	
+		{
+		  "title"      : "Ubuntu 14.04.02 LTS installare git",
+		  "category"   : "articles",
+		  "url"        : "http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-git/",
+		  "date"       : "2015-05-15 00:45:33 +0200",
+		  "shortdate"  : "May 15, 2015"
+		} ,
+	
+		{
+		  "title"      : "Ubuntu 14.04.02 LTS abilitare l’utente root",
+		  "category"   : "articles",
+		  "url"        : "http://caliman.org/articles/ubuntu-14.04.02-LTS-abilitare-root/",
+		  "date"       : "2015-05-14 00:45:33 +0200",
+		  "shortdate"  : "May 14, 2015"
+		} ,
+	
+		{
+		  "title"      : "Ubuntu 14.04.02 LTS 64bit installare Open SSH",
+		  "category"   : "articles",
+		  "url"        : "http://caliman.org/articles/ubuntu-14.04.02-LTS-install-openssh/",
+		  "date"       : "2015-05-13 00:45:33 +0200",
+		  "shortdate"  : "May 13, 2015"
+		} ,
+	
+		{
+		  "title"      : "Abilitare il comando sudo su debian 8",
+		  "category"   : "articles",
+		  "url"        : "http://caliman.org/articles/debian-8-abilitare-sudo/",
+		  "date"       : "2015-05-02 00:45:33 +0200",
+		  "shortdate"  : "May 02, 2015"
+		} ,
+	
+		{
 		  "title"      : "Login e pagine sicure con JSF 2",
 		  "category"   : "articles",
 		  "url"        : "http://caliman.org/articles/JSF22SecureLoginWebapp/",
@@ -22,6 +62,14 @@
 		  "url"        : "http://caliman.org/articles/facili-le-dropdownbox-con-le-jsf-2/",
 		  "date"       : "2014-12-16 23:45:33 +0100",
 		  "shortdate"  : "December 16, 2014"
+		} ,
+	
+		{
+		  "title"      : "JSF 2 Come usare i commenti",
+		  "category"   : "articles",
+		  "url"        : "http://caliman.org/articles/jsf-2-come-usare-i-commenti/",
+		  "date"       : "2014-11-16 23:45:33 +0100",
+		  "shortdate"  : "November 16, 2014"
 		} ,
 	
 		{
