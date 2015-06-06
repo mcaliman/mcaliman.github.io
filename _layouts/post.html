@@ -32,14 +32,18 @@
 
 
         <span><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}"><i class="icon-link"></i> Permalink</a></span>
-        {% if page.share %}
+
+{% if false %}       
+       {% if page.share %}
         <span class="social-share-facebook">
             <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
         <span class="social-share-twitter">
             <a href="https://twitter.com/intent/tweet?hashtags={{ page.categories | join: ',' }}&text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{site.owner.twitter}}" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
         <span class="social-share-googleplus">
             <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
-            <!-- /.social-share -->{% endif %}
+            <!-- /.social-share -->
+       {% endif %}
+{% endif %}
 
 
 <!-- body ads BEGIN -->
@@ -50,6 +54,7 @@
 @media(min-width: 778px) { .blog-post-left { width: 728px; height: 90px; } }
 @media(min-width: 1000px) { .blog-post-left { width: 160px; height: 600px; } }
 </style>
+{% if false %}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- blog-post-left -->
 <ins class="adsbygoogle blog-post-left"
@@ -59,6 +64,8 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+{% endif %}
+
 </div>
 <!-- body ads END -->
 
@@ -66,7 +73,9 @@
       </footer>
       <div class="entry-content">
         {{ content }}
-        {% if site.disqus_shortname and page.comments %}<div id="disqus_thread"></div><!-- /#disqus_thread -->{% endif %}
+	{% if false %}
+	        {% if site.disqus_shortname and page.comments %}<div id="disqus_thread"></div><!-- /#disqus_thread -->{% endif %}
+	{% endif %}
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">

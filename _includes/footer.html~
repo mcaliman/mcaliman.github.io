@@ -1,5 +1,7 @@
 
 <div class="google-ads" style="margin:10px 0;">
+
+{% if false %}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- blog-footer -->
 <ins class="adsbygoogle"
@@ -9,6 +11,8 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+{% endif %}
+
 </div>
 
 
