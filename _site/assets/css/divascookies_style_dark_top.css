@@ -1,13 +1,13 @@
 /**
  * Divas Cookies jquery plugin for Cookie Policy banner stylesheet
  * @author: CodingDivas
- * @date: 2014/10/27
- * @version: 0.2 production
+ * @date: 2014/09/12
+ * @version: 0.1 development
  */
 
 .divascookies {
 	position: fixed;
-	top: 0;
+	bottom: 0;
 	width: 100%;
 	background: #313131;
 	color: #f9fafc;
@@ -17,24 +17,25 @@
 
 .divascookies > .divascookies-banner-container {
 	position: relative;
-	padding: 15px 20px;
+	padding: 15px 20px 5px;
 	overflow: hidden;
 	text-align: center;
 }
 
 .divascookies p.divascookies-banner-text {
 	position: relative;
-	line-height: 1.3em;
-	font-size: 1.4em;
+	line-height: 1.9em;
+	font-size: 14px;
 	display: inline-block;
-	padding: 0 10px 0 0;
+	padding: 0 10px 10px 0;
 }
 
 span.divascookies-policy-link {
 } 
 
 span.divascookies-policy-link a {
-	white-space: nowrap;	
+	white-space: nowrap;
+	color: #ff744c;
 }
 
 span.divascookies-policy-link a:hover {
@@ -44,15 +45,15 @@ span.divascookies-policy-link a:hover {
 
 .divascookies-banner-container > .divascookies-accept-button-container {
 	display: inline-block;
-	margin-top: 5px;
 }
 
-.divascookies-accept-button-container > .divascookies-accept-button-img {
-	
-}
+span.divascookies-policy-link iframe {
+	position: relative;
+	top: 6px;
+} 
 
 .divascookies-accept-button-container > .divascookies-accept-button-text {
-	font-size: 1.3em;
+	font-size: 13px;
 	cursor: pointer;
 	background: #f9fafc;
 	color: #313131;
@@ -66,3 +67,4 @@ span.divascookies-policy-link a:hover {
 .divascookies-accept-button-container > .divascookies-accept-button-text:hover {
 	background: #e3e4e6;
 }
+
