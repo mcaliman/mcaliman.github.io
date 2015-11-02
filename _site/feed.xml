@@ -7,29 +7,29 @@
 
 <title type="text">Massimo Caliman's</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
-<link rel="alternate" type="text/html" href="http://localhost:4000/" />
-<updated>2015-11-02T22:52:08+01:00</updated>
-<id>http://localhost:4000/</id>
+<link rel="self" type="application/atom+xml" href="http://caliman.org/feed.xml" />
+<link rel="alternate" type="text/html" href="http://caliman.org/" />
+<updated>2015-11-02T22:55:26+01:00</updated>
+<id>http://caliman.org/</id>
 <author>
   <name>Massimo Caliman</name>
-  <uri>http://localhost:4000/</uri>
+  <uri>http://caliman.org/</uri>
   <email>mcaliman@gmail.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[Ubuntu 14.04.02 LTS installare subversion (svn)]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/ubuntu-14.04.02-LTS-installare-subversion/"/>
-  <id>http://localhost:4000/articles/ubuntu-14.04.02-LTS-installare-subversion</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/"/>
+  <id>http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion</id>
   <published>2015-05-16T00:45:33+02:00</published>
   <updated>2015-05-16T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#linux" term="linux" /><category scheme="http://localhost:4000/tags/#ubuntu" term="ubuntu" />
+  <category scheme="http://caliman.org/tags/#linux" term="linux" /><category scheme="http://caliman.org/tags/#ubuntu" term="ubuntu" />
   <content type="html">
   
     &lt;p&gt;Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. &lt;em&gt;(Isaac Asimov, Il vento è cambiato, 1983)&lt;/em&gt;&lt;/p&gt;
@@ -54,22 +54,22 @@ l’url del repo è nel formato seguente&lt;/p&gt;
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/ubuntu-14.04.02-LTS-installare-subversion/&quot;&gt;Ubuntu 14.04.02 LTS installare subversion (svn)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 16, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/&quot;&gt;Ubuntu 14.04.02 LTS installare subversion (svn)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 16, 2015.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Ubuntu 14.04.02 LTS installare git]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/ubuntu-14.04.02-LTS-installare-git/"/>
-  <id>http://localhost:4000/articles/ubuntu-14.04.02-LTS-installare-git</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-git/"/>
+  <id>http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-git</id>
   <published>2015-05-15T00:45:33+02:00</published>
   <updated>2015-05-15T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#linux" term="linux" /><category scheme="http://localhost:4000/tags/#ubuntu" term="ubuntu" /><category scheme="http://localhost:4000/tags/#git" term="git" />
+  <category scheme="http://caliman.org/tags/#linux" term="linux" /><category scheme="http://caliman.org/tags/#ubuntu" term="ubuntu" /><category scheme="http://caliman.org/tags/#git" term="git" />
   <content type="html">
   
     &lt;p&gt;Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. &lt;em&gt;(Isaac Asimov, Il vento è cambiato, 1983)&lt;/em&gt;&lt;/p&gt;
@@ -95,22 +95,22 @@ sudo git config --global user.email &lt;span class=&quot;s2&quot;&gt;&amp;quot;m
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/ubuntu-14.04.02-LTS-installare-git/&quot;&gt;Ubuntu 14.04.02 LTS installare git&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 15, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-git/&quot;&gt;Ubuntu 14.04.02 LTS installare git&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 15, 2015.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Ubuntu 14.04.02 LTS abilitare l’utente root]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/ubuntu-14.04.02-LTS-abilitare-root/"/>
-  <id>http://localhost:4000/articles/ubuntu-14.04.02-LTS-abilitare-root</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/ubuntu-14.04.02-LTS-abilitare-root/"/>
+  <id>http://caliman.org/articles/ubuntu-14.04.02-LTS-abilitare-root</id>
   <published>2015-05-14T00:45:33+02:00</published>
   <updated>2015-05-14T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#linux" term="linux" /><category scheme="http://localhost:4000/tags/#ubuntu" term="ubuntu" />
+  <category scheme="http://caliman.org/tags/#linux" term="linux" /><category scheme="http://caliman.org/tags/#ubuntu" term="ubuntu" />
   <content type="html">
   
     &lt;p&gt;Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. &lt;em&gt;(Isaac Asimov, Il vento è cambiato, 1983)&lt;/em&gt;&lt;/p&gt;
@@ -125,22 +125,22 @@ sudo git config --global user.email &lt;span class=&quot;s2&quot;&gt;&amp;quot;m
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/ubuntu-14.04.02-LTS-abilitare-root/&quot;&gt;Ubuntu 14.04.02 LTS abilitare l’utente root&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 14, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/ubuntu-14.04.02-LTS-abilitare-root/&quot;&gt;Ubuntu 14.04.02 LTS abilitare l’utente root&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 14, 2015.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Ubuntu 14.04.02 LTS 64bit installare Open SSH]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/ubuntu-14.04.02-LTS-install-openssh/"/>
-  <id>http://localhost:4000/articles/ubuntu-14.04.02-LTS-install-openssh</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/ubuntu-14.04.02-LTS-install-openssh/"/>
+  <id>http://caliman.org/articles/ubuntu-14.04.02-LTS-install-openssh</id>
   <published>2015-05-13T00:45:33+02:00</published>
   <updated>2015-05-13T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#linux" term="linux" /><category scheme="http://localhost:4000/tags/#ubuntu" term="ubuntu" />
+  <category scheme="http://caliman.org/tags/#linux" term="linux" /><category scheme="http://caliman.org/tags/#ubuntu" term="ubuntu" />
   <content type="html">
   
     &lt;p&gt;Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. &lt;em&gt;(Isaac Asimov, Il vento è cambiato, 1983)&lt;/em&gt;&lt;/p&gt;
@@ -170,22 +170,22 @@ nel mio caso&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/ubuntu-14.04.02-LTS-install-openssh/&quot;&gt;Ubuntu 14.04.02 LTS 64bit installare Open SSH&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 13, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/ubuntu-14.04.02-LTS-install-openssh/&quot;&gt;Ubuntu 14.04.02 LTS 64bit installare Open SSH&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 13, 2015.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Abilitare il comando sudo su debian 8]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/debian-8-abilitare-sudo/"/>
-  <id>http://localhost:4000/articles/debian-8-abilitare-sudo</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/debian-8-abilitare-sudo/"/>
+  <id>http://caliman.org/articles/debian-8-abilitare-sudo</id>
   <published>2015-05-02T00:45:33+02:00</published>
   <updated>2015-05-02T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#linux" term="linux" /><category scheme="http://localhost:4000/tags/#debian" term="debian" /><category scheme="http://localhost:4000/tags/#debian%208" term="debian 8" />
+  <category scheme="http://caliman.org/tags/#linux" term="linux" /><category scheme="http://caliman.org/tags/#debian" term="debian" /><category scheme="http://caliman.org/tags/#debian%208" term="debian 8" />
   <content type="html">
   
     &lt;p&gt;Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. &lt;em&gt;(Isaac Asimov, Il vento è cambiato, 1983)&lt;/em&gt;&lt;/p&gt;
@@ -213,22 +213,22 @@ nel mio caso&lt;/p&gt;
 &lt;p&gt;dopo la riga &lt;code&gt;#includedir /etc/sudoers.d&lt;/code&gt;. Ora potete utilizzare sudo come d’abitudine su ubuntu.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/debian-8-abilitare-sudo/&quot;&gt;Abilitare il comando sudo su debian 8&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 02, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/debian-8-abilitare-sudo/&quot;&gt;Abilitare il comando sudo su debian 8&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 02, 2015.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Login e pagine sicure con JSF 2]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/JSF22SecureLoginWebapp/"/>
-  <id>http://localhost:4000/articles/JSF22SecureLoginWebapp</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/JSF22SecureLoginWebapp/"/>
+  <id>http://caliman.org/articles/JSF22SecureLoginWebapp</id>
   <published>2015-01-04T23:45:33+01:00</published>
   <updated>2015-01-04T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Java7" term="Java7" /><category scheme="http://localhost:4000/tags/#JSF%202.2" term="JSF 2.2" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Java7" term="Java7" /><category scheme="http://caliman.org/tags/#JSF%202.2" term="JSF 2.2" />
   <content type="html">
   
     &lt;p&gt;In questo post vediamo come realizzare un sistema minimo di login con sicurezza di base in una applicazione Java Server Faces 2.2.&lt;/p&gt;
@@ -525,22 +525,22 @@ Chiameremo i due bean &lt;code&gt;LoginBean&lt;/code&gt; e &lt;code&gt;Navigatio
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/JSF22SecureLoginWebapp/&quot;&gt;Login e pagine sicure con JSF 2&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 04, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/JSF22SecureLoginWebapp/&quot;&gt;Login e pagine sicure con JSF 2&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 04, 2015.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Creare un custom Converter in JSF 2.2]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/creare-un-custom-converter-in-jsf-2/"/>
-  <id>http://localhost:4000/articles/creare-un-custom-converter-in-jsf-2</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/creare-un-custom-converter-in-jsf-2/"/>
+  <id>http://caliman.org/articles/creare-un-custom-converter-in-jsf-2</id>
   <published>2015-01-01T23:45:33+01:00</published>
   <updated>2015-01-01T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#JavaServerFaces" term="JavaServerFaces" /><category scheme="http://localhost:4000/tags/#JSF2" term="JSF2" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JavaServerFaces" term="JavaServerFaces" /><category scheme="http://caliman.org/tags/#JSF2" term="JSF2" />
   <content type="html">
   
     &lt;p&gt;Un anno speso nell’intelligenza artificiale è abbastanza perchè una persona creda in Dio.
@@ -604,22 +604,22 @@ La forma con il converter ci permette di accentrare il modello di decodifica in 
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/creare-un-custom-converter-in-jsf-2/&quot;&gt;Creare un custom Converter in JSF 2.2&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 01, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/creare-un-custom-converter-in-jsf-2/&quot;&gt;Creare un custom Converter in JSF 2.2&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 01, 2015.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Facili le dropdownbox con le JSF 2.2!]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/facili-le-dropdownbox-con-le-jsf-2/"/>
-  <id>http://localhost:4000/articles/facili-le-dropdownbox-con-le-jsf-2</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/facili-le-dropdownbox-con-le-jsf-2/"/>
+  <id>http://caliman.org/articles/facili-le-dropdownbox-con-le-jsf-2</id>
   <published>2014-12-16T23:45:33+01:00</published>
   <updated>2014-12-16T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#JavaServerFaces" term="JavaServerFaces" /><category scheme="http://localhost:4000/tags/#JSF2" term="JSF2" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JavaServerFaces" term="JavaServerFaces" /><category scheme="http://caliman.org/tags/#JSF2" term="JSF2" />
   <content type="html">
   
     &lt;p&gt;Un anno speso nell’intelligenza artificiale è abbastanza perchè una persona creda in Dio.
@@ -724,22 +724,22 @@ Per un controllo più fine possiamo utilizzare la seguente forma&lt;/p&gt;
 che ovviamente possiamo continuare ad utilizzare per il momento.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/facili-le-dropdownbox-con-le-jsf-2/&quot;&gt;Facili le dropdownbox con le JSF 2.2!&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on December 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/facili-le-dropdownbox-con-le-jsf-2/&quot;&gt;Facili le dropdownbox con le JSF 2.2!&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on December 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[JSF 2 Come usare i commenti]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/jsf-2-come-usare-i-commenti/"/>
-  <id>http://localhost:4000/articles/jsf-2-come-usare-i-commenti</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/jsf-2-come-usare-i-commenti/"/>
+  <id>http://caliman.org/articles/jsf-2-come-usare-i-commenti</id>
   <published>2014-11-16T23:45:33+01:00</published>
   <updated>2014-11-16T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#JavaServerFaces" term="JavaServerFaces" /><category scheme="http://localhost:4000/tags/#JSF2" term="JSF2" />
+  <category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JavaServerFaces" term="JavaServerFaces" /><category scheme="http://caliman.org/tags/#JSF2" term="JSF2" />
   <content type="html">
   
     &lt;p&gt;Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. &lt;em&gt;(Isaac Asimov, Il vento è cambiato, 1983)&lt;/em&gt;&lt;/p&gt;
@@ -769,22 +769,22 @@ Il tag &lt;code&gt;ui:remove&lt;/code&gt; è quello che fa per me, lo uso spesso
 &lt;p&gt;Ciò che è delimitato dal tag verrà trattato alla stregua di un commento da un compilatore.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/jsf-2-come-usare-i-commenti/&quot;&gt;JSF 2 Come usare i commenti&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/jsf-2-come-usare-i-commenti/&quot;&gt;JSF 2 Come usare i commenti&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Usare i Channel per copiare file in Java]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/usare-i-channel-per-copiare-file-in-java/"/>
-  <id>http://localhost:4000/articles/usare-i-channel-per-copiare-file-in-java</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/usare-i-channel-per-copiare-file-in-java/"/>
+  <id>http://caliman.org/articles/usare-i-channel-per-copiare-file-in-java</id>
   <published>2014-11-15T23:45:33+01:00</published>
   <updated>2014-11-15T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" />
   <content type="html">
   
     &lt;p&gt;Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. &lt;em&gt;(Isaac Asimov, Il vento è cambiato, 1983)&lt;/em&gt;&lt;/p&gt;
@@ -807,22 +807,22 @@ Il tag &lt;code&gt;ui:remove&lt;/code&gt; è quello che fa per me, lo uso spesso
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/usare-i-channel-per-copiare-file-in-java/&quot;&gt;Usare i Channel per copiare file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 15, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/usare-i-channel-per-copiare-file-in-java/&quot;&gt;Usare i Channel per copiare file in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[JSF 2 forzare gli id generati dai tag]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/jsf-2-forzare-gli-id-generati-dai-tag/"/>
-  <id>http://localhost:4000/articles/jsf-2-forzare-gli-id-generati-dai-tag</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/"/>
+  <id>http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag</id>
   <published>2014-11-09T23:45:33+01:00</published>
   <updated>2014-11-09T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#JavaServerFaces" term="JavaServerFaces" /><category scheme="http://localhost:4000/tags/#JSF2" term="JSF2" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#JavaServerFaces" term="JavaServerFaces" /><category scheme="http://caliman.org/tags/#JSF2" term="JSF2" />
   <content type="html">
   
     &lt;p&gt;I computer sono come gli Dei del Vecchio Testamento: pieni di regole e nessuna pietà. &lt;em&gt;(Joseph Campbell, Il potere del mito, 1988)&lt;/em&gt;&lt;/p&gt;
@@ -857,22 +857,22 @@ tag HTML sono generati in automatico secondo regole precise.&lt;/p&gt;
 &lt;p&gt;Verrebbe la tentazione di utilizzarlo sempre, anche se non è necessario per interazioni con js o css. L’attributo si dovrà usare con attenzione, si può ottenere un errore di &lt;code&gt;id&lt;/code&gt; duplicato se si utilizza troppo spesso. In altre parole se non strettamente necessario, lasciamo che sia JSF a occuparsi di questi dettagli e a generare &lt;code&gt;id&lt;/code&gt; univoci per i nostri tag.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/jsf-2-forzare-gli-id-generati-dai-tag/&quot;&gt;JSF 2 forzare gli id generati dai tag&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 09, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/&quot;&gt;JSF 2 forzare gli id generati dai tag&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 09, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Search)]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/"/>
-  <id>http://localhost:4000/articles/alberi-algoritmo-vistita-in-ampiezza-BFS</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/"/>
+  <id>http://caliman.org/articles/alberi-algoritmo-vistita-in-ampiezza-BFS</id>
   <published>2014-10-15T00:45:33+02:00</published>
   <updated>2014-10-15T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Algoritmi" term="Algoritmi" /><category scheme="http://localhost:4000/tags/#Alberi" term="Alberi" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Algoritmi" term="Algoritmi" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" />
   <content type="html">
   
     &lt;p&gt;﻿“PHP is a minor evil perpetrated and created by incompetent amateurs, whereas Perl is a great and insidious evil perpetrated by skilled but perverted professionals.”
@@ -897,22 +897,22 @@ tag HTML sono generati in automatico secondo regole precise.&lt;/p&gt;
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/&quot;&gt;Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Search)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 15, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/&quot;&gt;Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Search)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Algoritmo di visita in profondità per un albero (DFS o Depth First Search)]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/alberi-algoritmo-vistita-in-profondita-DFS/"/>
-  <id>http://localhost:4000/articles/alberi-algoritmo-vistita-in-profondita-DFS</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-algoritmo-vistita-in-profondita-DFS/"/>
+  <id>http://caliman.org/articles/alberi-algoritmo-vistita-in-profondita-DFS</id>
   <published>2014-10-13T00:45:33+02:00</published>
   <updated>2014-10-13T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Algoritmi" term="Algoritmi" /><category scheme="http://localhost:4000/tags/#Alberi" term="Alberi" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Algoritmi" term="Algoritmi" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" />
   <content type="html">
   
     &lt;p&gt;﻿”La scienza è ciò che comprendiamo abbastanza bene da spiegarla a un computer. L’arte è tutto il resto”
@@ -956,22 +956,22 @@ la pila non appare esplicitamente nell’algoritmo in quanto è la pila di recor
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/alberi-algoritmo-vistita-in-profondita-DFS/&quot;&gt;Algoritmo di visita in profondità per un albero (DFS o Depth First Search)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 13, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-algoritmo-vistita-in-profondita-DFS/&quot;&gt;Algoritmo di visita in profondità per un albero (DFS o Depth First Search)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 13, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Algoritmo di visita generica per un albero]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/alberi-algoritmo-vistita-generico/"/>
-  <id>http://localhost:4000/articles/alberi-algoritmo-vistita-generico</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-algoritmo-vistita-generico/"/>
+  <id>http://caliman.org/articles/alberi-algoritmo-vistita-generico</id>
   <published>2014-10-11T00:45:33+02:00</published>
   <updated>2014-10-11T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Algoritmi" term="Algoritmi" /><category scheme="http://localhost:4000/tags/#Alberi" term="Alberi" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Algoritmi" term="Algoritmi" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" />
   <content type="html">
   
     &lt;p&gt;Quando qualcuno dice, “Voglio un linguaggio di programmazione nel quale ho bisogno soltanto di dire
@@ -1000,22 +1000,22 @@ ciò che voglio venga fatto”, dagli un lecca-lecca
 &lt;p&gt;Ciò è evidente di per se ed è dimostrabile formalmente. La dimostrazione esula gli scopi di questo post che sono solo quelli di porre le basi a quelli successivi che ne approfondiscono gli aspetti teorici e pratici.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/alberi-algoritmo-vistita-generico/&quot;&gt;Algoritmo di visita generica per un albero&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 11, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-algoritmo-vistita-generico/&quot;&gt;Algoritmo di visita generica per un albero&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 11, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Alberi rappresentazioni collegate]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/alberi-rappresentazioni-collegate/"/>
-  <id>http://localhost:4000/articles/alberi-rappresentazioni-collegate</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-rappresentazioni-collegate/"/>
+  <id>http://caliman.org/articles/alberi-rappresentazioni-collegate</id>
   <published>2014-10-08T00:45:33+02:00</published>
   <updated>2014-10-08T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Alberi" term="Alberi" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;Proseguendo nella trattazione degli alberi normalmente si preferiscono le ﻿rappresentazioni basate su strutture collegate 
@@ -1039,22 +1039,22 @@ Per ogni nodo un puntatore al primo figlio (posto a null se non ci sono figli) e
 Per scandire tutti i figli di un nodo basta scendere sul primo figlio e poi scandire tutti i fratelli successivi saltando di fratello in fratello.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/alberi-rappresentazioni-collegate/&quot;&gt;Alberi rappresentazioni collegate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 08, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-rappresentazioni-collegate/&quot;&gt;Alberi rappresentazioni collegate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 08, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Alberi rappresentazioni indicizzate]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/alberi-rappresentazioni-indicizzate/"/>
-  <id>http://localhost:4000/articles/alberi-rappresentazioni-indicizzate</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-rappresentazioni-indicizzate/"/>
+  <id>http://caliman.org/articles/alberi-rappresentazioni-indicizzate</id>
   <published>2014-10-07T00:45:33+02:00</published>
   <updated>2014-10-07T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Alberi" term="Alberi" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Rappresentazioni indicizzate
@@ -1082,22 +1082,22 @@ p vettore di dimensione n  t.c. p[v] contiene l’informazione associata al nodo
 &lt;/ul&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/alberi-rappresentazioni-indicizzate/&quot;&gt;Alberi rappresentazioni indicizzate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 07, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-rappresentazioni-indicizzate/&quot;&gt;Alberi rappresentazioni indicizzate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 07, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Alberi in Java]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/alberi-in-java/"/>
-  <id>http://localhost:4000/articles/alberi-in-java</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-in-java/"/>
+  <id>http://caliman.org/articles/alberi-in-java</id>
   <published>2014-10-06T00:45:33+02:00</published>
   <updated>2014-10-06T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Alberi" term="Alberi" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Alberi" term="Alberi" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Dopo i post sulle strutture dati elementari passiamo a trattare gli alberi, prima di entrare nel dettaglio di come implementare strutture dati di questo tipo ne approfondiamo l’aspetto teorico.&lt;/p&gt;
@@ -1169,22 +1169,22 @@ operazioni
 &lt;p&gt;Esistono diverse possibili rappresentazioni per gli alberi sia basate su strutture indicizzate che collegate, quale scegliere dipende dal tipo di problemi che pensiamo di dover risolvere, se pensiamo che l’operazione più frequente o critica sia per esempio risalire ai figli di un nodo ne utilizzeremo una, se la l’operazione più critica e navigare per livelli l’albero ne utilizzeremo una ottimizzata per questo tipo di problema.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/alberi-in-java/&quot;&gt;Alberi in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 06, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-in-java/&quot;&gt;Alberi in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 06, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Strutture indicizzate approfondimenti]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/strutture-indicizzate-approfondimento/"/>
-  <id>http://localhost:4000/articles/strutture-indicizzate-approfondimento</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/strutture-indicizzate-approfondimento/"/>
+  <id>http://caliman.org/articles/strutture-indicizzate-approfondimento</id>
   <published>2014-10-04T00:45:33+02:00</published>
   <updated>2014-10-04T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Strutture%20indicizzate" term="Strutture indicizzate" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Strutture%20indicizzate" term="Strutture indicizzate" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Riprendiamo il post sulle strutture indicizzate per un approfondimento.
@@ -1274,22 +1274,22 @@ Le operazioni di insert e delete comprendono la fase di riallocazione dell’arr
 &lt;p&gt;Rimandiamo ad un post conclusivo le restanti considerazioni e implementazioni, seppur parziali, ma prima vi invito a dare un occhiata proprio al codice di &lt;code&gt;ArrayList&lt;/code&gt; ed affini.&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/strutture-indicizzate-approfondimento/&quot;&gt;Strutture indicizzate approfondimenti&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 04, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/strutture-indicizzate-approfondimento/&quot;&gt;Strutture indicizzate approfondimenti&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 04, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Code o Queue]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/code-o-queue/"/>
-  <id>http://localhost:4000/articles/code-o-queue</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/code-o-queue/"/>
+  <id>http://caliman.org/articles/code-o-queue</id>
   <published>2014-10-02T00:45:33+02:00</published>
   <updated>2014-10-02T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Code%20o%20Queue" term="Code o Queue" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Code%20o%20Queue" term="Code o Queue" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿Riprendiamo la trattazione delle strutture dati elementari. Nei post precedenti abbiamo visto le strutture indicizzate,quelle collegate e le Pile o Stack,uno altro dei tipo base più ricorrenti è la Coda o Queue, una specifica in pseudolinguaggio è riportata sotto.&lt;/p&gt;
@@ -1346,22 +1346,22 @@ Anche in questo caso possiamo utilizzare i metodi di Deque relativi al suo compo
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/code-o-queue/&quot;&gt;Code o Queue&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 02, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/code-o-queue/&quot;&gt;Code o Queue&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 02, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Pile o Stack]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/pile-o-stack/"/>
-  <id>http://localhost:4000/articles/pile-o-stack</id>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/pile-o-stack/"/>
+  <id>http://caliman.org/articles/pile-o-stack</id>
   <published>2014-10-01T00:45:33+02:00</published>
   <updated>2014-10-01T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://caliman.org</uri>
     <email>mcaliman@gmail.com</email>
   </author>
-  <category scheme="http://localhost:4000/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://localhost:4000/tags/#lang_it" term="lang_it" /><category scheme="http://localhost:4000/tags/#Java" term="Java" /><category scheme="http://localhost:4000/tags/#Pile%20o%20Stack" term="Pile o Stack" /><category scheme="http://localhost:4000/tags/#Strutture%20Dati" term="Strutture Dati" />
+  <category scheme="http://caliman.org/tags/#Articoli%20disponibili%20in%20lingua%20italiana" term="Articoli disponibili in lingua italiana" /><category scheme="http://caliman.org/tags/#lang_it" term="lang_it" /><category scheme="http://caliman.org/tags/#Java" term="Java" /><category scheme="http://caliman.org/tags/#Pile%20o%20Stack" term="Pile o Stack" /><category scheme="http://caliman.org/tags/#Strutture%20Dati" term="Strutture Dati" />
   <content type="html">
   
     &lt;p&gt;﻿
@@ -1422,7 +1422,7 @@ top&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;-&amp;gt;elem restituisce l’
 
 
   
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/pile-o-stack/&quot;&gt;Pile o Stack&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 01, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/pile-o-stack/&quot;&gt;Pile o Stack&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 01, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
