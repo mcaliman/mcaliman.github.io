@@ -2,15 +2,15 @@
 <div class="google-ads" style="margin:10px 0;">
 
 {% if false %}
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- blog-footer -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:320px;height:50px"
-     data-ad-client="ca-pub-5121145090824526"
-     data-ad-slot="9926976484"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- blog-footer -->
+	<ins class="adsbygoogle"
+	     style="display:inline-block;width:320px;height:50px"
+	     data-ad-client="ca-pub-5121145090824526"
+	     data-ad-slot="9926976484"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
 {% endif %}
 
 </div>
@@ -23,6 +23,9 @@
 <a href="{{ site.url }}/support" title="How to support">support</a> |
 <a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i>feed</a>
 </span>
+<br/>
+<span>Questo sito non rappresenta una testata giornalistica, in quanto viene aggiornato senza alcuna periodicità.</span>
+<span>Non può pertanto considerarsi un prodotto editoriale ex L.62 7/3/2001.</span>
 </div>
 
 
