@@ -1,0 +1,372 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Alberi rappresentazioni indicizzate &#8211; Massimo Caliman's</title>
+<meta name="description" content="﻿Rappresentazioni indicizzate
+Basate su array vettore padri e vettori posizionali entrambe richiedono spazio O(n)
+
+Vettori padri
+La più semplice
+Sia T = (N,A) albero con n nodi numerati da 0 a n-1 un vettore padri è un vettore P di dim n le cui celle contengono coppie (info,parent) per ogni indice v appartenente a [0,n-1]
+p[v].info è il contenuto informativo del nodo v
+p[v].parent = u sse vi è un arco (u,v) in A
+Se invece v è la radice p[v].parent=null
+usando il vettore dei padri da ogni nodo è possibile risalire in tempo O(1) al proprio padre mentre trovare un figlio richiede una scansione dell’array in tempo O(n)
+
+Vettore posizionale
+Nel caso particolare degli alberi d-ari completi con d&gt;=2 è possibile una rappresentazione indicizzata dove ogni nodo ha una posizione prestabilita.
+
+Sia T=(N,A) albero d-ario, n nodi numerabili da 1 a n
+p vettore di dimensione n  t.c. p[v] contiene l’informazione associata al nodo v e t.c l’informazione associata all’i-esimo figlio di v è in posizione p[d*v+i] per i in [0,(d-1)]
+
+Per semplicità la posizione 0 dell’array non è utilizzata lo spazio richiesto per n nodi è quindi n +1
+
+
+  da ogni nodo v è possibile risalire in tempo O(1) sia al proprio padre (che ha indice floor ceil v/d se v diversa da radice) che a uno qualunque dei figli
+  per ogni v nodo, l’operazione padre(v) può quindi essere realizzata in tempo costante mentre l’operazione figli(v) richiede tempo O(grado(v))
+
+
+">
+<meta name="keywords" content="Articoli disponibili in lingua italiana, lang_it, Java, Alberi, Strutture Dati">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Alberi rappresentazioni indicizzate">
+<meta name="twitter:description" content="﻿Rappresentazioni indicizzate
+Basate su array vettore padri e vettori posizionali entrambe richiedono spazio O(n)
+
+Vettori padri
+La più semplice
+Sia T = (N,A) albero con n nodi numerati da 0 a n-1 un vettore padri è un vettore P di dim n le cui celle contengono coppie (info,parent) per ogni indice v appartenente a [0,n-1]
+p[v].info è il contenuto informativo del nodo v
+p[v].parent = u sse vi è un arco (u,v) in A
+Se invece v è la radice p[v].parent=null
+usando il vettore dei padri da ogni nodo è possibile risalire in tempo O(1) al proprio padre mentre trovare un figlio richiede una scansione dell’array in tempo O(n)
+
+Vettore posizionale
+Nel caso particolare degli alberi d-ari completi con d&gt;=2 è possibile una rappresentazione indicizzata dove ogni nodo ha una posizione prestabilita.
+
+Sia T=(N,A) albero d-ario, n nodi numerabili da 1 a n
+p vettore di dimensione n  t.c. p[v] contiene l’informazione associata al nodo v e t.c l’informazione associata all’i-esimo figlio di v è in posizione p[d*v+i] per i in [0,(d-1)]
+
+Per semplicità la posizione 0 dell’array non è utilizzata lo spazio richiesto per n nodi è quindi n +1
+
+
+  da ogni nodo v è possibile risalire in tempo O(1) sia al proprio padre (che ha indice floor ceil v/d se v diversa da radice) che a uno qualunque dei figli
+  per ogni v nodo, l’operazione padre(v) può quindi essere realizzata in tempo costante mentre l’operazione figli(v) richiede tempo O(grado(v))
+
+
+">
+<meta name="twitter:site" content="@mcaliman">
+<meta name="twitter:creator" content="@mcaliman">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/bio-photo.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="it_IT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Alberi rappresentazioni indicizzate">
+<meta property="og:description" content="﻿Rappresentazioni indicizzate
+Basate su array vettore padri e vettori posizionali entrambe richiedono spazio O(n)
+
+Vettori padri
+La più semplice
+Sia T = (N,A) albero con n nodi numerati da 0 a n-1 un vettore padri è un vettore P di dim n le cui celle contengono coppie (info,parent) per ogni indice v appartenente a [0,n-1]
+p[v].info è il contenuto informativo del nodo v
+p[v].parent = u sse vi è un arco (u,v) in A
+Se invece v è la radice p[v].parent=null
+usando il vettore dei padri da ogni nodo è possibile risalire in tempo O(1) al proprio padre mentre trovare un figlio richiede una scansione dell’array in tempo O(n)
+
+Vettore posizionale
+Nel caso particolare degli alberi d-ari completi con d&gt;=2 è possibile una rappresentazione indicizzata dove ogni nodo ha una posizione prestabilita.
+
+Sia T=(N,A) albero d-ario, n nodi numerabili da 1 a n
+p vettore di dimensione n  t.c. p[v] contiene l’informazione associata al nodo v e t.c l’informazione associata all’i-esimo figlio di v è in posizione p[d*v+i] per i in [0,(d-1)]
+
+Per semplicità la posizione 0 dell’array non è utilizzata lo spazio richiesto per n nodi è quindi n +1
+
+
+  da ogni nodo v è possibile risalire in tempo O(1) sia al proprio padre (che ha indice floor ceil v/d se v diversa da radice) che a uno qualunque dei figli
+  per ogni v nodo, l’operazione padre(v) può quindi essere realizzata in tempo costante mentre l’operazione figli(v) richiede tempo O(grado(v))
+
+
+">
+<meta property="og:url" content="http://localhost:4000/articles/alberi-rappresentazioni-indicizzate/">
+<meta property="og:site_name" content="Massimo Caliman's">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/articles/alberi-rappresentazioni-indicizzate/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+<link rel="stylesheet" href="http://localhost:4000/assets/css/divascookies_style_dark_top.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:4000/assets/css/prism.css" />
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/about/" >About</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/articles/" >Articles</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/tags/" >Tags</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/categories/" >Categories</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/contact/" >Contact</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://localhost:4000/" class="site-logo" rel="home" title="Massimo Caliman's"><img src="http://localhost:4000/images/bio-photo.jpg" width="200" height="200" alt="Massimo Caliman's logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://localhost:4000/">Massimo Caliman's</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">blog on Computer Science.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="http://localhost:4000/tags/#Articoli disponibili in lingua italiana" title="Pages tagged Articoli disponibili in lingua italiana">Articoli disponibili in lingua italiana</a></li><li><a href="http://localhost:4000/tags/#lang_it" title="Pages tagged lang_it">lang_it</a></li><li><a href="http://localhost:4000/tags/#Java" title="Pages tagged Java">Java</a></li><li><a href="http://localhost:4000/tags/#Alberi" title="Pages tagged Alberi">Alberi</a></li><li><a href="http://localhost:4000/tags/#Strutture Dati" title="Pages tagged Strutture Dati">Strutture Dati</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Alberi rappresentazioni indicizzate</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+        
+          <img src="http://localhost:4000/images/bio-photo.jpg" class="bio-photo" alt="Massimo Caliman bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Massimo Caliman</span></span>
+        <span class="entry-date date published"><time datetime="2014-10-07T00:45:33+02:00"><i class="fa fa-calendar-o"></i> October 07, 2014</time></span>
+        
+        
+        
+        
+      </footer>
+      <div class="entry-content">
+        <p>﻿Rappresentazioni indicizzate
+Basate su array vettore padri e vettori posizionali entrambe richiedono spazio O(n)</p>
+
+<h1 id="vettori-padri">Vettori padri</h1>
+<p>La più semplice
+Sia T = (N,A) albero con n nodi numerati da 0 a n-1 un vettore padri è un vettore P di dim n le cui celle contengono coppie (info,parent) per ogni indice v appartenente a [0,n-1]
+p[v].info è il contenuto informativo del nodo v
+p[v].parent = u sse vi è un arco (u,v) in A
+Se invece v è la radice p[v].parent=null
+usando il vettore dei padri da ogni nodo è possibile risalire in tempo O(1) al proprio padre mentre trovare un figlio richiede una scansione dell’array in tempo O(n)</p>
+
+<h1 id="vettore-posizionale">Vettore posizionale</h1>
+<p>Nel caso particolare degli alberi d-ari completi con d&gt;=2 è possibile una rappresentazione indicizzata dove ogni nodo ha una posizione prestabilita.</p>
+
+<p>Sia T=(N,A) albero d-ario, n nodi numerabili da 1 a n
+p vettore di dimensione n  t.c. p[v] contiene l’informazione associata al nodo v e t.c l’informazione associata all’i-esimo figlio di v è in posizione p[d*v+i] per i in [0,(d-1)]</p>
+
+<p>Per semplicità la posizione 0 dell’array non è utilizzata lo spazio richiesto per n nodi è quindi n +1</p>
+
+<ul>
+  <li>da ogni nodo v è possibile risalire in tempo O(1) sia al proprio padre (che ha indice floor ceil v/d se v diversa da radice) che a uno qualunque dei figli</li>
+  <li>per ogni v nodo, l’operazione padre(v) può quindi essere realizzata in tempo costante mentre l’operazione figli(v) richiede tempo O(grado(v))</li>
+</ul>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/articles/alberi-in-java/" class="btn" title="Alberi in Java">Previous</a>
+      
+      
+        <a href="http://localhost:4000/articles/alberi-rappresentazioni-collegate/" class="btn" title="Alberi rappresentazioni collegate">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<a href="http://localhost:4000/privacy" title="Privacy policy">privacy</a> |
+<a href="http://localhost:4000/terms"   title="Terms of service">terms</a> |  
+<a href="http://localhost:4000/support" title="How to support">support</a> |
+
+
+
+<br/>
+<span>Questo sito non rappresenta una testata giornalistica, in quanto viene aggiornato senza alcuna periodicità.</span><br/>
+<span>Non può pertanto considerarsi un prodotto editoriale ex L.62 7/3/2001.</span><br/>
+
+<span>&copy; 2015 Massimo Caliman. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/" rel="nofollow">So Simple Theme</a>.</span>
+
+
+<div class="social-icons">
+	<a href="https://twitter.com/mcaliman" title="Massimo Caliman on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	<a href="https://plus.google.com/+MassimoCalimanIT" title="Massimo Caliman on Google+" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a>
+	<a href="https://linkedin.com/in/mcaliman" title="Massimo Caliman on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/mcaliman" title="Massimo Caliman on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+
+  <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+
+
+
+
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://localhost:4000';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-53230757-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<!-- added by mcaliman BEGIN -->
+<!--
+		<script type="text/javascript" src="http://localhost:4000/assets/js/jquery-2.1.1.min.js"></script>
+		-->
+		<script type="text/javascript" src="http://localhost:4000/assets/js/jquery.divascookies-0.2.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$.DivasCookies({
+					// text for the Divas Cookies banner
+					bannerText: "Questo sito usa i cookies (anche di terze parti) a fini statistici e per migliorare la tua esperienza di navigazione.Proseguendo con la navigazione accetti l'uso dei cookies.",
+					
+					cookiePolicyLink		: "http://localhost:4000/privacy/",
+					// link to the extended cookie policy
+					cookiePolicyLinkText	: "Leggi la mia informativa su cookie e privacy..",				// text for the link to the extended cookie policy
+					thirdPartyPolicyWidget	: "",						// if set to "iubenda" tries to use the Iubenda widget
+					acceptButtonText		: "Ok ho capito!",						// text for the close button
+					acceptButtonSrc			: "",						// source for the close button image
+					openEffect				: "slideDown",				// opening effect for Divas Cookies banner ["fade", "slideUp", "slideDown", "slideLeft", "slideRight"]
+					openEffectDuration		: 600,						// duration of the opening effect (msec)
+					openEffectEasing		: "swing",					// easing for the opening effect
+					closeEffect				: "slideUp",				// closing effect for Divas Cookies banner ["fade", "slideUp", "slideDown", "slideLeft", "slideRight"]
+					closeEffectDuration		: 600,						// duration of the closing effect (msec)
+					closeEffectEasing		: "swing",					// easing for the closing effect
+					debugMode				: false,					// if true, the options are checked and warnings are shown
+					saveUserPreferences		: true						// if true, sets a cookie after the Divas Cookies is closed the first time and never shows it again
+				});
+			});
+		</script>
+		<script type="text/javascript" src="http://localhost:4000/assets/js/prism.js"></script>
+
+
+
+<!-- added by mcaliman END -->
+
+
+</body>
+</html>

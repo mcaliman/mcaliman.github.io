@@ -1,0 +1,26 @@
+---
+layout: page
+title: Home
+excerpt: ""
+search_omit: true
+---
+
+
+
+<h2>Welcome</h2>
+
+Hi, my name is Massimo Caliman and I am a software architect, senior analyst and developer.
+I am specialized in Java and this is my personal website.
+
+<h2>Benvenuti</h2>
+Sono Massimo Caliman, software architect e analista programmatore senior specializzato nella piattaforma Java e questo è il mio sito web personale. 
+
+<ul class="post-list">
+{% for post in site.posts limit:100 %} 
+<li>
+<article>
+	<a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% if false && post.excerpt %} <span class="excerpt">{{ post.excerpt }}</span>{% endif %}</a>
+</article>
+</li>
+{% endfor %}
+</ul>

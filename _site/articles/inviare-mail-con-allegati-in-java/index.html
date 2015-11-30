@@ -1,0 +1,521 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Inviare mail con allegati in Java &#8211; Massimo Caliman's</title>
+<meta name="description" content="Il package javax.mail è molto ricco, quindi in prima istanza può anche disorientare, vedremo nel codice presentato in questo post quanto ripaghi in flessibilità e potenzialità questa complessità. E’ vero, non ho un metodo semplice mail() come in altri linguaggi,  ma ho gli strumenti per crearmi anche un server di posta di tutto rispetto (ma questo lo approfondieremo in un prossimo post, riguardo il semplice metodo mail() possiamo anche crearcelo a partire dalle API come vedremo e sarà fatto su misura per le nostre esigenze)
+Per creare la nostra utility faremo riferimento al pattern commmand.
+Per prima cosa definiamo una classe astratta che conterrà la gestione mailcap sempre utile quando si vuole gestire notifiche via mail da piattaforma Java.
+
+">
+<meta name="keywords" content="Articoli disponibili in lingua italiana, lang_it, Java, JavaMail">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Inviare mail con allegati in Java">
+<meta name="twitter:description" content="Il package javax.mail è molto ricco, quindi in prima istanza può anche disorientare, vedremo nel codice presentato in questo post quanto ripaghi in flessibilità e potenzialità questa complessità. E’ vero, non ho un metodo semplice mail() come in altri linguaggi,  ma ho gli strumenti per crearmi anche un server di posta di tutto rispetto (ma questo lo approfondieremo in un prossimo post, riguardo il semplice metodo mail() possiamo anche crearcelo a partire dalle API come vedremo e sarà fatto su misura per le nostre esigenze)
+Per creare la nostra utility faremo riferimento al pattern commmand.
+Per prima cosa definiamo una classe astratta che conterrà la gestione mailcap sempre utile quando si vuole gestire notifiche via mail da piattaforma Java.
+
+">
+<meta name="twitter:site" content="@mcaliman">
+<meta name="twitter:creator" content="@mcaliman">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/bio-photo.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="it_IT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Inviare mail con allegati in Java">
+<meta property="og:description" content="Il package javax.mail è molto ricco, quindi in prima istanza può anche disorientare, vedremo nel codice presentato in questo post quanto ripaghi in flessibilità e potenzialità questa complessità. E’ vero, non ho un metodo semplice mail() come in altri linguaggi,  ma ho gli strumenti per crearmi anche un server di posta di tutto rispetto (ma questo lo approfondieremo in un prossimo post, riguardo il semplice metodo mail() possiamo anche crearcelo a partire dalle API come vedremo e sarà fatto su misura per le nostre esigenze)
+Per creare la nostra utility faremo riferimento al pattern commmand.
+Per prima cosa definiamo una classe astratta che conterrà la gestione mailcap sempre utile quando si vuole gestire notifiche via mail da piattaforma Java.
+
+">
+<meta property="og:url" content="http://localhost:4000/articles/inviare-mail-con-allegati-in-java/">
+<meta property="og:site_name" content="Massimo Caliman's">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/articles/inviare-mail-con-allegati-in-java/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+<link rel="stylesheet" href="http://localhost:4000/assets/css/divascookies_style_dark_top.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:4000/assets/css/prism.css" />
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/about/" >About</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/articles/" >Articles</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/tags/" >Tags</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/categories/" >Categories</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/contact/" >Contact</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://localhost:4000/" class="site-logo" rel="home" title="Massimo Caliman's"><img src="http://localhost:4000/images/bio-photo.jpg" width="200" height="200" alt="Massimo Caliman's logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://localhost:4000/">Massimo Caliman's</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">blog on Computer Science.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="http://localhost:4000/tags/#Articoli disponibili in lingua italiana" title="Pages tagged Articoli disponibili in lingua italiana">Articoli disponibili in lingua italiana</a></li><li><a href="http://localhost:4000/tags/#lang_it" title="Pages tagged lang_it">lang_it</a></li><li><a href="http://localhost:4000/tags/#Java" title="Pages tagged Java">Java</a></li><li><a href="http://localhost:4000/tags/#JavaMail" title="Pages tagged JavaMail">JavaMail</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Inviare mail con allegati in Java</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+        
+          <img src="http://localhost:4000/images/bio-photo.jpg" class="bio-photo" alt="Massimo Caliman bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Massimo Caliman</span></span>
+        <span class="entry-date date published"><time datetime="2014-07-15T00:45:33+02:00"><i class="fa fa-calendar-o"></i> July 15, 2014</time></span>
+        
+        
+        
+        
+      </footer>
+      <div class="entry-content">
+        <p>Il package javax.mail è molto ricco, quindi in prima istanza può anche disorientare, vedremo nel codice presentato in questo post quanto ripaghi in flessibilità e potenzialità questa complessità. E’ vero, non ho un metodo semplice mail() come in altri linguaggi,  ma ho gli strumenti per crearmi anche un server di posta di tutto rispetto (ma questo lo approfondieremo in un prossimo post, riguardo il semplice metodo mail() possiamo anche crearcelo a partire dalle API come vedremo e sarà fatto su misura per le nostre esigenze)
+Per creare la nostra utility faremo riferimento al pattern commmand.
+Per prima cosa definiamo una classe astratta che conterrà la gestione mailcap sempre utile quando si vuole gestire notifiche via mail da piattaforma Java.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">javax.activation.CommandMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.activation.MailcapCommandMap</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AbstractMailCommand</span> <span class="o">{</span>
+
+   <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">mailcap</span><span class="o">()</span> <span class="o">{</span>
+      <span class="n">MailcapCommandMap</span> <span class="n">mc</span> <span class="o">=</span> <span class="o">(</span><span class="n">MailcapCommandMap</span><span class="o">)</span> <span class="n">CommandMap</span><span class="o">.</span><span class="na">getDefaultCommandMap</span><span class="o">();</span>
+      <span class="n">mc</span><span class="o">.</span><span class="na">addMailcap</span><span class="o">(</span><span class="s">&quot;text/html;; x-java-content-handler=com.sun.mail.handlers.text_html&quot;</span><span class="o">);</span>
+      <span class="n">mc</span><span class="o">.</span><span class="na">addMailcap</span><span class="o">(</span><span class="s">&quot;text/xml;; x-java-content-handler=com.sun.mail.handlers.text_xml&quot;</span><span class="o">);</span>
+      <span class="n">mc</span><span class="o">.</span><span class="na">addMailcap</span><span class="o">(</span><span class="s">&quot;text/plain;; x-java-content-handler=com.sun.mail.handlers.text_plain&quot;</span><span class="o">);</span>
+      <span class="n">mc</span><span class="o">.</span><span class="na">addMailcap</span><span class="o">(</span><span class="s">&quot;multipart/*;; x-java-content-handler=com.sun.mail.handlers.multipart_mixed&quot;</span><span class="o">);</span>
+      <span class="n">mc</span><span class="o">.</span><span class="na">addMailcap</span><span class="o">(</span><span class="s">&quot;message/rfc822;; x-java-content-handler=com.sun.mail.handlers.message_rfc822&quot;</span><span class="o">);</span>
+      <span class="n">CommandMap</span><span class="o">.</span><span class="na">setDefaultCommandMap</span><span class="o">(</span><span class="n">mc</span><span class="o">);</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Segue a questo punto il codice della classe principale, la classe presenta metodi specifici per gestire anche l’invio di mail con autenticazione smtp.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.io.File</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Iterator</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Properties</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.logging.Level</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.logging.Logger</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.activation.DataHandler</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.activation.DataSource</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.activation.FileDataSource</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.BodyPart</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.Message</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.MessagingException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.Multipart</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.Session</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.Transport</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.internet.AddressException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.internet.InternetAddress</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.internet.MimeBodyPart</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.internet.MimeMessage</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.internet.MimeMultipart</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MailCommand</span> <span class="kd">extends</span> <span class="n">AbstractMailCommand</span> <span class="o">{</span>
+
+   <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Logger</span> <span class="n">logger</span> <span class="o">=</span> 
+        <span class="n">Logger</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">MailCommand</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+   <span class="kd">private</span> <span class="n">String</span> <span class="n">smtp</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="n">String</span> <span class="n">user</span> <span class="o">=</span> <span class="s">&quot;myuser@domain.ext&quot;</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="n">String</span> <span class="n">password</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="n">String</span> <span class="n">from</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="n">String</span> <span class="n">body</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">debugEnabled</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="n">Session</span> <span class="n">session</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="n">MimeMessage</span> <span class="n">message</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">BodyPart</span><span class="o">&gt;</span> <span class="n">attachments</span><span class="o">;</span>
+
+   <span class="kd">public</span> <span class="nf">MailCommand</span><span class="o">()</span> <span class="o">{</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="nf">MailCommand</span><span class="o">(</span><span class="n">String</span> <span class="n">smtp</span><span class="o">,</span> <span class="n">String</span> <span class="n">user</span><span class="o">,</span> <span class="n">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">smtp</span> <span class="o">=</span> <span class="n">smtp</span><span class="o">;</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">user</span> <span class="o">=</span> <span class="n">user</span><span class="o">;</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">password</span> <span class="o">=</span> <span class="n">password</span><span class="o">;</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">debugEnabled</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">mailcap</span><span class="o">();</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addAttachment</span><span class="o">(</span><span class="n">File</span> <span class="n">file</span><span class="o">)</span> 
+    <span class="kd">throws</span> <span class="n">IOException</span><span class="o">,</span> <span class="n">MessagingException</span> <span class="o">{</span>
+      <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">getName</span><span class="o">();</span>
+      <span class="n">BodyPart</span> <span class="n">messageBodyPart</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+      <span class="n">messageBodyPart</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">MimeBodyPart</span><span class="o">();</span>
+      <span class="n">DataSource</span> <span class="n">source</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">FileDataSource</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+      <span class="n">messageBodyPart</span><span class="o">.</span><span class="na">setDataHandler</span><span class="o">(</span><span class="k">new</span> <span class="nf">DataHandler</span><span class="o">(</span><span class="n">source</span><span class="o">));</span>
+      <span class="n">messageBodyPart</span><span class="o">.</span><span class="na">setFileName</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">attachments</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">messageBodyPart</span><span class="o">);</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">MessagingException</span> <span class="o">{</span>
+      <span class="n">initialize</span><span class="o">();</span> <span class="c1">//potevo usare il metodo con “base” se non mi interessa l’invio autenticato</span>
+   <span class="o">}</span>
+
+   <span class="kd">private</span> <span class="kt">void</span> <span class="nf">initialize</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">MessagingException</span> <span class="o">{</span>
+      <span class="n">MailCommandAuthenticator</span> <span class="n">authenticator</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">MailCommandAuthenticator</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">user</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">password</span><span class="o">);</span>
+      <span class="n">Properties</span> <span class="n">props</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getProperties</span><span class="o">();</span>
+      <span class="n">props</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;mail.smtp.host&quot;</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">smtp</span><span class="o">);</span>
+      <span class="n">props</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;mail.smtp.auth&quot;</span><span class="o">,</span> <span class="s">&quot;true&quot;</span><span class="o">);</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">session</span> <span class="o">=</span> <span class="n">Session</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">props</span><span class="o">,</span> <span class="n">authenticator</span><span class="o">);</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">session</span><span class="o">.</span><span class="na">setDebug</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">debugEnabled</span><span class="o">);</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">attachments</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">BodyPart</span><span class="o">&gt;();</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">message</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">MimeMessage</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">session</span><span class="o">);</span>
+   <span class="o">}</span>
+
+   <span class="kd">private</span> <span class="kt">void</span> <span class="nf">initializeBase</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">MessagingException</span> <span class="o">{</span>
+      <span class="n">Properties</span> <span class="n">props</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getProperties</span><span class="o">();</span>
+      <span class="n">props</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;mail.smtp.host&quot;</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">smtp</span><span class="o">);</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">session</span> <span class="o">=</span> <span class="n">Session</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">props</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">session</span><span class="o">.</span><span class="na">setDebug</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">debugEnabled</span><span class="o">);</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">attachments</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">BodyPart</span><span class="o">&gt;();</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">message</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">MimeMessage</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">session</span><span class="o">);</span>
+   <span class="o">}</span>
+
+   <span class="kd">private</span> <span class="kt">void</span> <span class="nf">initialize</span><span class="o">(</span><span class="n">Session</span> <span class="n">session</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">MessagingException</span> <span class="o">{</span>
+      <span class="n">Properties</span> <span class="n">props</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getProperties</span><span class="o">();</span>
+      <span class="n">props</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;mail.smtp.host&quot;</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">smtp</span><span class="o">);</span>
+      <span class="n">props</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;mail.smtp.auth&quot;</span><span class="o">,</span> <span class="s">&quot;true&quot;</span><span class="o">);</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">session</span> <span class="o">=</span> <span class="n">session</span><span class="o">;</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">session</span><span class="o">.</span><span class="na">setDebug</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">debugEnabled</span><span class="o">);</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">attachments</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">BodyPart</span><span class="o">&gt;();</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">message</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">MimeMessage</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">session</span><span class="o">);</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setFrom</span><span class="o">(</span><span class="n">String</span> <span class="n">from</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">MessagingException</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">from</span> <span class="o">=</span> <span class="n">from</span><span class="o">;</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">message</span><span class="o">.</span><span class="na">setFrom</span><span class="o">(</span><span class="k">new</span> <span class="nf">InternetAddress</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">from</span><span class="o">));</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addTo</span><span class="o">(</span><span class="n">String</span> <span class="n">to</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">MessagingException</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">message</span><span class="o">.</span><span class="na">addRecipient</span><span class="o">(</span><span class="n">Message</span><span class="o">.</span><span class="na">RecipientType</span><span class="o">.</span><span class="na">TO</span><span class="o">,</span> <span class="k">new</span> <span class="nf">InternetAddress</span><span class="o">(</span><span class="n">to</span><span class="o">));</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addCc</span><span class="o">(</span><span class="n">String</span> <span class="n">cc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">MessagingException</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">isNotEmpty</span><span class="o">(</span><span class="n">cc</span><span class="o">))</span> <span class="o">{</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">message</span><span class="o">.</span><span class="na">addRecipient</span><span class="o">(</span><span class="n">Message</span><span class="o">.</span><span class="na">RecipientType</span><span class="o">.</span><span class="na">CC</span><span class="o">,</span> <span class="k">new</span> <span class="nf">InternetAddress</span><span class="o">(</span><span class="n">cc</span><span class="o">));</span>
+      <span class="o">}</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addBcc</span><span class="o">(</span><span class="n">String</span> <span class="n">bcc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">AddressException</span><span class="o">,</span> <span class="n">MessagingException</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">isNotEmpty</span><span class="o">(</span><span class="n">bcc</span><span class="o">))</span> <span class="o">{</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">message</span><span class="o">.</span><span class="na">addRecipient</span><span class="o">(</span><span class="n">Message</span><span class="o">.</span><span class="na">RecipientType</span><span class="o">.</span><span class="na">BCC</span><span class="o">,</span> <span class="k">new</span> <span class="nf">InternetAddress</span><span class="o">(</span><span class="n">bcc</span><span class="o">));</span>
+      <span class="o">}</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSubject</span><span class="o">(</span><span class="n">String</span> <span class="n">subject</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">MessagingException</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">message</span><span class="o">.</span><span class="na">setSubject</span><span class="o">(</span><span class="n">subject</span><span class="o">);</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setBody</span><span class="o">(</span><span class="n">String</span> <span class="n">body</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">body</span> <span class="o">=</span> <span class="n">body</span><span class="o">;</span>
+   <span class="o">}</span>
+
+   <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">isNotEmpty</span><span class="o">(</span><span class="n">String</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">value</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">value</span><span class="o">.</span><span class="na">trim</span><span class="o">().</span><span class="na">length</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">;</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">try</span> <span class="o">{</span>
+         <span class="n">Multipart</span> <span class="n">multipart</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">MimeMultipart</span><span class="o">();</span>
+         <span class="n">BodyPart</span> <span class="n">messageBodyPart</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">MimeBodyPart</span><span class="o">();</span>
+         <span class="n">messageBodyPart</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">body</span><span class="o">);</span>
+         <span class="n">multipart</span><span class="o">.</span><span class="na">addBodyPart</span><span class="o">(</span><span class="n">messageBodyPart</span><span class="o">);</span>
+         <span class="k">for</span> <span class="o">(</span><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">BodyPart</span><span class="o">&gt;</span> <span class="n">it</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">attachments</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span> <span class="n">it</span><span class="o">.</span><span class="na">hasNext</span><span class="o">();)</span> <span class="o">{</span>
+            <span class="n">BodyPart</span> <span class="n">bodyPart</span> <span class="o">=</span> <span class="n">it</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+            <span class="n">multipart</span><span class="o">.</span><span class="na">addBodyPart</span><span class="o">(</span><span class="n">bodyPart</span><span class="o">);</span>
+            <span class="n">message</span><span class="o">.</span><span class="na">setContent</span><span class="o">(</span><span class="n">multipart</span><span class="o">);</span>
+         <span class="o">}</span>
+         <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">attachments</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+            <span class="n">message</span><span class="o">.</span><span class="na">setContent</span><span class="o">(</span><span class="n">multipart</span><span class="o">);</span>
+         <span class="o">}</span>
+         <span class="n">Transport</span> <span class="n">tr</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">getTransport</span><span class="o">(</span><span class="s">&quot;smtp&quot;</span><span class="o">);</span>
+         <span class="n">logger</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="n">Level</span><span class="o">.</span><span class="na">FINEST</span><span class="o">,</span> <span class="s">&quot;Connect to host &quot;</span> <span class="o">+</span> <span class="n">smtp</span> <span class="o">+</span> <span class="s">&quot; from &quot;</span> <span class="o">+</span> <span class="n">from</span> <span class="o">+</span> <span class="s">&quot; password &#39;secret&#39;&quot;</span><span class="o">);</span>
+         <span class="n">tr</span><span class="o">.</span><span class="na">connect</span><span class="o">();</span>
+         <span class="n">tr</span><span class="o">.</span><span class="na">sendMessage</span><span class="o">(</span><span class="n">message</span><span class="o">,</span> <span class="n">message</span><span class="o">.</span><span class="na">getAllRecipients</span><span class="o">());</span>
+         <span class="n">logger</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="n">Level</span><span class="o">.</span><span class="na">FINEST</span><span class="o">,</span> <span class="s">&quot;Mail sent successfully&quot;</span><span class="o">);</span>
+         <span class="n">tr</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">MessagingException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+         <span class="n">logger</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="n">Level</span><span class="o">.</span><span class="na">SEVERE</span><span class="o">,</span> <span class="s">&quot;&quot;</span><span class="o">,</span> <span class="n">ex</span><span class="o">);</span>
+      <span class="o">}</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Avrete notato la presenza di una classe <code>MailCommandAuthenticator</code> che serve proprio per la gestione dell’autenticazione al nostro server di posta.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">javax.mail.Authenticator</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.mail.PasswordAuthentication</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MailCommandAuthenticator</span> <span class="kd">extends</span> <span class="n">Authenticator</span> <span class="o">{</span>
+
+   <span class="kd">private</span> <span class="n">String</span> <span class="n">user</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="n">String</span> <span class="n">password</span><span class="o">;</span>
+
+   <span class="kd">public</span> <span class="nf">MailCommandAuthenticator</span><span class="o">(</span><span class="n">String</span> <span class="n">user</span><span class="o">,</span> <span class="n">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">user</span> <span class="o">=</span> <span class="n">user</span><span class="o">;</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">password</span> <span class="o">=</span> <span class="n">password</span><span class="o">;</span>
+   <span class="o">}</span>
+
+   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="n">PasswordAuthentication</span> <span class="nf">getPasswordAuthentication</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="k">new</span> <span class="nf">PasswordAuthentication</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">user</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">password</span><span class="o">);</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>E’ ora non ci resta che mostrare un esempio di utilizzo, ma prima aiutiamoci con una classe che realizza il pattern <code>Singleton</code></p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MailCommandInstantiator</span> <span class="o">{</span>
+
+   <span class="kd">private</span> <span class="kd">static</span> <span class="n">MailCommand</span> <span class="n">instance</span><span class="o">;</span>
+
+   <span class="kd">public</span> <span class="kd">static</span> <span class="n">MailCommand</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">instance</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+         <span class="n">String</span> <span class="n">smtp</span> <span class="o">=</span> <span class="s">&quot;smtp..myserver.ext&quot;</span><span class="o">;</span>
+         <span class="n">String</span> <span class="n">user</span> <span class="o">=</span> <span class="s">&quot;auth@myserver.ext&quot;</span><span class="o">;</span>
+         <span class="n">String</span> <span class="n">password</span> <span class="o">=</span> <span class="s">&quot;Secret&quot;</span><span class="o">;</span>
+         <span class="n">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">MailCommand</span><span class="o">(</span><span class="n">smtp</span><span class="o">,</span> <span class="n">user</span><span class="o">,</span> <span class="n">password</span><span class="o">);</span>
+      <span class="o">}</span>
+      <span class="k">return</span> <span class="n">instance</span><span class="o">;</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Ed ora il codice di chiamata, si tratta di uno degli esempi possibili atto ad illustrare la flessibilità del mini framework che abbiamo realizzato e che voi personalizzerete secondo le vostre esigenze.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">MailCommand</span> <span class="n">mailCommand</span> <span class="o">=</span> <span class="n">MailCommandInstantiator</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+<span class="k">try</span> <span class="o">{</span>
+     <span class="n">mailCommand</span><span class="o">.</span><span class="na">init</span><span class="o">();</span>
+     <span class="n">mailCommand</span><span class="o">.</span><span class="na">setFrom</span><span class="o">(</span><span class="s">&quot;alice@myserver.ext&quot;</span><span class="o">);</span>
+     <span class="n">mailCommand</span><span class="o">.</span><span class="na">addTo</span><span class="o">(</span><span class="s">&quot;bob@myserver.ext&quot;</span><span class="o">);</span>
+     <span class="n">mailCommand</span><span class="o">.</span><span class="na">addCc</span><span class="o">(</span><span class="s">&quot;alice@myserver.ext&quot;</span><span class="o">);</span>
+     <span class="n">mailCommand</span><span class="o">.</span><span class="na">addBcc</span><span class="o">(</span><span class="s">&quot;alice@myserver.ext&quot;</span><span class="o">);</span>
+     <span class="n">mailCommand</span><span class="o">.</span><span class="na">setSubject</span><span class="o">(</span><span class="s">&quot;The subject!&quot;</span><span class="o">);</span>
+     <span class="n">mailCommand</span><span class="o">.</span><span class="na">setBody</span><span class="o">(</span><span class="s">&quot;Body example.&quot;</span><span class="o">);</span>        
+     <span class="n">mailCommand</span><span class="o">.</span><span class="na">addAttachment</span><span class="o">(</span><span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">&quot;/home/mailattach/attachment.pdf&quot;</span><span class="o">));</span>        
+     <span class="n">mailCommand</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+     <span class="c1">//error management</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">MessagingException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+     <span class="c1">//error management</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Ovviamente posso aggiungere più allegati come è possibile o non aggiungerne affatto e quindi inviare solo tipiche mail di testo.</p>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/articles/Il-metodo-string-format-una-printf-per-java/" class="btn" title="Il metodo String.format una printf per Java">Previous</a>
+      
+      
+        <a href="http://localhost:4000/articles/una-servlet-per-gestire-il-download-di-file-in-java/" class="btn" title="﻿Una Servlet per gestire il download di file in Java">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<a href="http://localhost:4000/privacy" title="Privacy policy">privacy</a> |
+<a href="http://localhost:4000/terms"   title="Terms of service">terms</a> |  
+<a href="http://localhost:4000/support" title="How to support">support</a> |
+
+
+
+<br/>
+<span>Questo sito non rappresenta una testata giornalistica, in quanto viene aggiornato senza alcuna periodicità.</span><br/>
+<span>Non può pertanto considerarsi un prodotto editoriale ex L.62 7/3/2001.</span><br/>
+
+<span>&copy; 2015 Massimo Caliman. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/" rel="nofollow">So Simple Theme</a>.</span>
+
+
+<div class="social-icons">
+	<a href="https://twitter.com/mcaliman" title="Massimo Caliman on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	<a href="https://plus.google.com/+MassimoCalimanIT" title="Massimo Caliman on Google+" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a>
+	<a href="https://linkedin.com/in/mcaliman" title="Massimo Caliman on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/mcaliman" title="Massimo Caliman on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+
+  <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+
+
+
+
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://localhost:4000';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-53230757-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<!-- added by mcaliman BEGIN -->
+<!--
+		<script type="text/javascript" src="http://localhost:4000/assets/js/jquery-2.1.1.min.js"></script>
+		-->
+		<script type="text/javascript" src="http://localhost:4000/assets/js/jquery.divascookies-0.2.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$.DivasCookies({
+					// text for the Divas Cookies banner
+					bannerText: "Questo sito usa i cookies (anche di terze parti) a fini statistici e per migliorare la tua esperienza di navigazione.Proseguendo con la navigazione accetti l'uso dei cookies.",
+					
+					cookiePolicyLink		: "http://localhost:4000/privacy/",
+					// link to the extended cookie policy
+					cookiePolicyLinkText	: "Leggi la mia informativa su cookie e privacy..",				// text for the link to the extended cookie policy
+					thirdPartyPolicyWidget	: "",						// if set to "iubenda" tries to use the Iubenda widget
+					acceptButtonText		: "Ok ho capito!",						// text for the close button
+					acceptButtonSrc			: "",						// source for the close button image
+					openEffect				: "slideDown",				// opening effect for Divas Cookies banner ["fade", "slideUp", "slideDown", "slideLeft", "slideRight"]
+					openEffectDuration		: 600,						// duration of the opening effect (msec)
+					openEffectEasing		: "swing",					// easing for the opening effect
+					closeEffect				: "slideUp",				// closing effect for Divas Cookies banner ["fade", "slideUp", "slideDown", "slideLeft", "slideRight"]
+					closeEffectDuration		: 600,						// duration of the closing effect (msec)
+					closeEffectEasing		: "swing",					// easing for the closing effect
+					debugMode				: false,					// if true, the options are checked and warnings are shown
+					saveUserPreferences		: true						// if true, sets a cookie after the Divas Cookies is closed the first time and never shows it again
+				});
+			});
+		</script>
+		<script type="text/javascript" src="http://localhost:4000/assets/js/prism.js"></script>
+
+
+
+<!-- added by mcaliman END -->
+
+
+</body>
+</html>

@@ -9,9 +9,11 @@
 # Site wide configuration
 
 title: Massimo Caliman's 
-locale: en_US
+#locale: en_US
+locale: it_IT
 description: blog on Computer Science.
-logo: site-logo.png
+#logo: site-logo.png
+logo: bio-photo.jpg
 search: true
 url: http://localhost:4000
 

@@ -11,7 +11,8 @@
 title: Massimo Caliman's 
 locale: en_US
 description: blog on Computer Science.
-logo: site-logo.png
+#logo: site-logo.png
+logo: bio-photo.jpg
 search: true
 url: http://localhost:4000
 
@@ -56,7 +57,7 @@ owner:
   pinterest: #username
   weibo: #userid
   google:
-    plus: +MassimoCalimanIT
+    plus: MassimoCalimanIT
     analytics: UA-53230757-1
     verify:
     ad-client:
