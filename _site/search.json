@@ -1810,6 +1810,12 @@ di programmi scritti in Java.</p>
   
 
   
+    ,{
+      "title"			: "Contact",
+      "link"			: "http://localhost:4000/contact/",
+      "excerpt"		: ""
+    }
+  
 
   
 
@@ -1826,11 +1832,15 @@ di programmi scritti in Java.</p>
   
 
   
+
+  
     ,{
-      "title"			: "privacy & cookie policy",
-      "link"			: "http://localhost:4000/privacy-cookie-policy/",
-      "excerpt"		: "..."
+      "title"			: "Theme Setup",
+      "link"			: "http://localhost:4000/theme-setup/",
+      "excerpt"		: "Instructions on how to install and customize the Jekyll theme So Simple."
     }
+  
+
   
 
   
@@ -1838,16 +1848,6 @@ di programmi scritti in Java.</p>
       "title"			: "privacy & cookie policy",
       "link"			: "http://localhost:4000/v2/privacy-cookie-policy/",
       "excerpt"		: "..."
-    }
-  
-
-  
-
-  
-    ,{
-      "title"			: "Theme Setup",
-      "link"			: "http://localhost:4000/theme-setup/",
-      "excerpt"		: "Instructions on how to install and customize the Jekyll theme So Simple."
     }
   
 
