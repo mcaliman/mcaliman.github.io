@@ -1814,6 +1814,8 @@ di programmi scritti in Java.</p>
   
 
   
+
+  
     ,{
       "title"			: "Home",
       "link"			: "http://localhost:4000/v2/",
@@ -1824,6 +1826,12 @@ di programmi scritti in Java.</p>
   
 
   
+    ,{
+      "title"			: "privacy & cookie policy",
+      "link"			: "http://localhost:4000/privacy-cookie-policy/",
+      "excerpt"		: "..."
+    }
+  
 
   
     ,{
@@ -1833,6 +1841,14 @@ di programmi scritti in Java.</p>
     }
   
 
+  
+
+  
+    ,{
+      "title"			: "Theme Setup",
+      "link"			: "http://localhost:4000/theme-setup/",
+      "excerpt"		: "Instructions on how to install and customize the Jekyll theme So Simple."
+    }
   
 
   
@@ -1848,13 +1864,13 @@ di programmi scritti in Java.</p>
   
 
   
-    ,{
-      "title"			: "Theme Setup",
-      "link"			: "http://localhost:4000/theme-setup/",
-      "excerpt"		: "Instructions on how to install and customize the Jekyll theme So Simple."
-    }
-  
 
+  
+    ,{
+      "title"			: "Privacy Policy",
+      "link"			: "http://localhost:4000/privacy/",
+      "excerpt"		: ""
+    }
   
 
   
@@ -1881,8 +1897,24 @@ di programmi scritti in Java.</p>
 
   
     ,{
+      "title"			: "How to support this blog",
+      "link"			: "http://localhost:4000/support/",
+      "excerpt"		: ""
+    }
+  
+
+  
+    ,{
       "title"			: "Tag Index",
       "link"			: "http://localhost:4000/tags/",
+      "excerpt"		: ""
+    }
+  
+
+  
+    ,{
+      "title"			: "Terms and conditions",
+      "link"			: "http://localhost:4000/terms/",
       "excerpt"		: ""
     }
   

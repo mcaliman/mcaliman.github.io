@@ -75,6 +75,9 @@
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
 
+<link rel="stylesheet" href="http://localhost:4000/assets/css/divascookies_style_dark_top.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:4000/assets/css/prism.css" />
+
 </head>
 
 <body id="page">
@@ -167,7 +170,19 @@ Here are a few places to touch base:</p>
   <footer role="contentinfo" class="entry-wrapper">
     
 
+<a href="http://localhost:4000/privacy" title="Privacy policy">privacy</a> |
+<a href="http://localhost:4000/terms"   title="Terms of service">terms</a> |  
+<a href="http://localhost:4000/support" title="How to support">support</a> |
+
+
+
+<br/>
+<span>Questo sito non rappresenta una testata giornalistica, in quanto viene aggiornato senza alcuna periodicità.</span><br/>
+<span>Non può pertanto considerarsi un prodotto editoriale ex L.62 7/3/2001.</span><br/>
+
 <span>&copy; 2015 Massimo Caliman. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/" rel="nofollow">So Simple Theme</a>.</span>
+
+
 <div class="social-icons">
 	<a href="https://twitter.com/mcaliman" title="Massimo Caliman on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
 	
@@ -180,7 +195,12 @@ Here are a few places to touch base:</p>
 	
   
 	
+
   <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+
+
+
+
 </div><!-- /.social-icons -->
 
   </footer>
@@ -211,6 +231,41 @@ Here are a few places to touch base:</p>
   })();
 </script>
 
+
+
+<!-- added by mcaliman BEGIN -->
+<!--
+		<script type="text/javascript" src="http://localhost:4000/assets/js/jquery-2.1.1.min.js"></script>
+		-->
+		<script type="text/javascript" src="http://localhost:4000/assets/js/jquery.divascookies-0.2.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$.DivasCookies({
+					// text for the Divas Cookies banner
+					bannerText: "Questo sito usa i cookies (anche di terze parti) a fini statistici e per migliorare la tua esperienza di navigazione.Proseguendo con la navigazione accetti l'uso dei cookies.",
+					
+					cookiePolicyLink		: "http://localhost:4000/privacy/",
+					// link to the extended cookie policy
+					cookiePolicyLinkText	: "Leggi la mia informativa su cookie e privacy..",				// text for the link to the extended cookie policy
+					thirdPartyPolicyWidget	: "",						// if set to "iubenda" tries to use the Iubenda widget
+					acceptButtonText		: "Ok ho capito!",						// text for the close button
+					acceptButtonSrc			: "",						// source for the close button image
+					openEffect				: "slideDown",				// opening effect for Divas Cookies banner ["fade", "slideUp", "slideDown", "slideLeft", "slideRight"]
+					openEffectDuration		: 600,						// duration of the opening effect (msec)
+					openEffectEasing		: "swing",					// easing for the opening effect
+					closeEffect				: "slideUp",				// closing effect for Divas Cookies banner ["fade", "slideUp", "slideDown", "slideLeft", "slideRight"]
+					closeEffectDuration		: 600,						// duration of the closing effect (msec)
+					closeEffectEasing		: "swing",					// easing for the closing effect
+					debugMode				: false,					// if true, the options are checked and warnings are shown
+					saveUserPreferences		: true						// if true, sets a cookie after the Divas Cookies is closed the first time and never shows it again
+				});
+			});
+		</script>
+		<script type="text/javascript" src="http://localhost:4000/assets/js/prism.js"></script>
+
+
+
+<!-- added by mcaliman END -->
 
 
 </body>
