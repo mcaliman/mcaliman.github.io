@@ -1,0 +1,691 @@
+[
+	
+		{
+		  "title"      : "MathJax Example",
+		  "category"   : "",
+		  "url"        : "http://localhost:4000/blog/mathjax-example/",
+		  "date"       : "2015-08-10 14:08:50 +0200",
+		  "shortdate"  : "August 10, 2015"
+		} ,
+	
+		{
+		  "title"      : "Ubuntu 14.04.02 LTS installare subversion (svn)",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/ubuntu-14.04.02-LTS-installare-subversion/",
+		  "date"       : "2015-05-16 00:45:33 +0200",
+		  "shortdate"  : "May 16, 2015"
+		} ,
+	
+		{
+		  "title"      : "Ubuntu 14.04.02 LTS installare git",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/ubuntu-14.04.02-LTS-installare-git/",
+		  "date"       : "2015-05-15 00:45:33 +0200",
+		  "shortdate"  : "May 15, 2015"
+		} ,
+	
+		{
+		  "title"      : "Ubuntu 14.04.02 LTS abilitare l’utente root",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/ubuntu-14.04.02-LTS-abilitare-root/",
+		  "date"       : "2015-05-14 00:45:33 +0200",
+		  "shortdate"  : "May 14, 2015"
+		} ,
+	
+		{
+		  "title"      : "Ubuntu 14.04.02 LTS 64bit installare Open SSH",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/ubuntu-14.04.02-LTS-install-openssh/",
+		  "date"       : "2015-05-13 00:45:33 +0200",
+		  "shortdate"  : "May 13, 2015"
+		} ,
+	
+		{
+		  "title"      : "Abilitare il comando sudo su debian 8",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/debian-8-abilitare-sudo/",
+		  "date"       : "2015-05-02 00:45:33 +0200",
+		  "shortdate"  : "May 02, 2015"
+		} ,
+	
+		{
+		  "title"      : "Login e pagine sicure con JSF 2",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/JSF22SecureLoginWebapp/",
+		  "date"       : "2015-01-04 23:45:33 +0100",
+		  "shortdate"  : "January 04, 2015"
+		} ,
+	
+		{
+		  "title"      : "Creare un custom Converter in JSF 2.2",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/creare-un-custom-converter-in-jsf-2/",
+		  "date"       : "2015-01-01 23:45:33 +0100",
+		  "shortdate"  : "January 01, 2015"
+		} ,
+	
+		{
+		  "title"      : "Facili le dropdownbox con le JSF 2.2!",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/facili-le-dropdownbox-con-le-jsf-2/",
+		  "date"       : "2014-12-16 23:45:33 +0100",
+		  "shortdate"  : "December 16, 2014"
+		} ,
+	
+		{
+		  "title"      : "JSF 2 Come usare i commenti",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/jsf-2-come-usare-i-commenti/",
+		  "date"       : "2014-11-16 23:45:33 +0100",
+		  "shortdate"  : "November 16, 2014"
+		} ,
+	
+		{
+		  "title"      : "Usare i Channel per copiare file in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/usare-i-channel-per-copiare-file-in-java/",
+		  "date"       : "2014-11-15 23:45:33 +0100",
+		  "shortdate"  : "November 15, 2014"
+		} ,
+	
+		{
+		  "title"      : "JSF 2 forzare gli id generati dai tag",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/jsf-2-forzare-gli-id-generati-dai-tag/",
+		  "date"       : "2014-11-09 23:45:33 +0100",
+		  "shortdate"  : "November 09, 2014"
+		} ,
+	
+		{
+		  "title"      : "Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Search)",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/",
+		  "date"       : "2014-10-15 00:45:33 +0200",
+		  "shortdate"  : "October 15, 2014"
+		} ,
+	
+		{
+		  "title"      : "Algoritmo di visita in profondità per un albero (DFS o Depth First Search)",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/alberi-algoritmo-vistita-in-profondita-DFS/",
+		  "date"       : "2014-10-13 00:45:33 +0200",
+		  "shortdate"  : "October 13, 2014"
+		} ,
+	
+		{
+		  "title"      : "Algoritmo di visita generica per un albero",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/alberi-algoritmo-vistita-generico/",
+		  "date"       : "2014-10-11 00:45:33 +0200",
+		  "shortdate"  : "October 11, 2014"
+		} ,
+	
+		{
+		  "title"      : "Alberi rappresentazioni collegate",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/alberi-rappresentazioni-collegate/",
+		  "date"       : "2014-10-08 00:45:33 +0200",
+		  "shortdate"  : "October 08, 2014"
+		} ,
+	
+		{
+		  "title"      : "Alberi rappresentazioni indicizzate",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/alberi-rappresentazioni-indicizzate/",
+		  "date"       : "2014-10-07 00:45:33 +0200",
+		  "shortdate"  : "October 07, 2014"
+		} ,
+	
+		{
+		  "title"      : "Alberi in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/alberi-in-java/",
+		  "date"       : "2014-10-06 00:45:33 +0200",
+		  "shortdate"  : "October 06, 2014"
+		} ,
+	
+		{
+		  "title"      : "Strutture indicizzate approfondimenti",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/strutture-indicizzate-approfondimento/",
+		  "date"       : "2014-10-04 00:45:33 +0200",
+		  "shortdate"  : "October 04, 2014"
+		} ,
+	
+		{
+		  "title"      : "Code o Queue",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/code-o-queue/",
+		  "date"       : "2014-10-02 00:45:33 +0200",
+		  "shortdate"  : "October 02, 2014"
+		} ,
+	
+		{
+		  "title"      : "Pile o Stack",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/pile-o-stack/",
+		  "date"       : "2014-10-01 00:45:33 +0200",
+		  "shortdate"  : "October 01, 2014"
+		} ,
+	
+		{
+		  "title"      : "Strutture collegate",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/strutture-collegate/",
+		  "date"       : "2014-09-30 00:45:33 +0200",
+		  "shortdate"  : "September 30, 2014"
+		} ,
+	
+		{
+		  "title"      : "Strutture indicizzate",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/strutture-indicizzate/",
+		  "date"       : "2014-09-29 00:45:33 +0200",
+		  "shortdate"  : "September 29, 2014"
+		} ,
+	
+		{
+		  "title"      : "Usare HashMap in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/usare-hashmap-in-java/",
+		  "date"       : "2014-09-28 00:45:33 +0200",
+		  "shortdate"  : "September 28, 2014"
+		} ,
+	
+		{
+		  "title"      : "Dizionari in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/dizionari-in-java/",
+		  "date"       : "2014-09-25 00:45:33 +0200",
+		  "shortdate"  : "September 25, 2014"
+		} ,
+	
+		{
+		  "title"      : "Concatenare PDF con iText in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/concatenare-pdf-con-itext-in-java/",
+		  "date"       : "2014-09-19 00:45:33 +0200",
+		  "shortdate"  : "September 19, 2014"
+		} ,
+	
+		{
+		  "title"      : "Scrivere e leggere file in Java 7 con try-with-resources",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/",
+		  "date"       : "2014-09-14 00:45:33 +0200",
+		  "shortdate"  : "September 14, 2014"
+		} ,
+	
+		{
+		  "title"      : "Riguardo i limiti del calcolabile",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/riguardo-i-limiti-del-calcolabile/",
+		  "date"       : "2014-09-07 00:45:33 +0200",
+		  "shortdate"  : "September 07, 2014"
+		} ,
+	
+		{
+		  "title"      : "Come ti swappo due variabili in un colpo solo con Python",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/",
+		  "date"       : "2014-09-02 00:45:33 +0200",
+		  "shortdate"  : "September 02, 2014"
+		} ,
+	
+		{
+		  "title"      : "Secure httpbase tomcat authentication",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/secure-httpbase-tomcat-authentication/",
+		  "date"       : "2014-08-16 00:45:33 +0200",
+		  "shortdate"  : "August 16, 2014"
+		} ,
+	
+		{
+		  "title"      : "Considerazioni sulla ricorsione",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/considerazioni-sulla-ricorsione/",
+		  "date"       : "2014-08-15 00:45:33 +0200",
+		  "shortdate"  : "August 15, 2014"
+		} ,
+	
+		{
+		  "title"      : "Hello World",
+		  "category"   : "",
+		  "url"        : "http://localhost:4000/blog/hello-world/",
+		  "date"       : "2014-08-08 21:39:55 +0200",
+		  "shortdate"  : "August 08, 2014"
+		} ,
+	
+		{
+		  "title"      : "﻿Una Servlet per gestire il download di file in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/una-servlet-per-gestire-il-download-di-file-in-java/",
+		  "date"       : "2014-07-16 00:45:33 +0200",
+		  "shortdate"  : "July 16, 2014"
+		} ,
+	
+		{
+		  "title"      : "Inviare mail con allegati in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/inviare-mail-con-allegati-in-java/",
+		  "date"       : "2014-07-15 00:45:33 +0200",
+		  "shortdate"  : "July 15, 2014"
+		} ,
+	
+		{
+		  "title"      : "Il metodo String.format una printf per Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/Il-metodo-string-format-una-printf-per-java/",
+		  "date"       : "2014-07-14 00:45:33 +0200",
+		  "shortdate"  : "July 14, 2014"
+		} ,
+	
+		{
+		  "title"      : "Considerazioni su alcuni Linguaggi di Programmazione Parte 4",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/",
+		  "date"       : "2014-07-13 00:45:33 +0200",
+		  "shortdate"  : "July 13, 2014"
+		} ,
+	
+		{
+		  "title"      : "Considerazioni su alcuni Linguaggi di Programmazione Parte 3",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/",
+		  "date"       : "2014-07-12 00:45:33 +0200",
+		  "shortdate"  : "July 12, 2014"
+		} ,
+	
+		{
+		  "title"      : "Considerazioni su alcuni Linguaggi di Programmazione Parte 2",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/",
+		  "date"       : "2014-07-11 00:45:33 +0200",
+		  "shortdate"  : "July 11, 2014"
+		} ,
+	
+		{
+		  "title"      : "Considerazioni su alcuni Linguaggi di Programmazione Parte 1",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/",
+		  "date"       : "2014-07-10 00:45:33 +0200",
+		  "shortdate"  : "July 10, 2014"
+		} ,
+	
+		{
+		  "title"      : "La gestione delle stringhe in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/la-gestione-delle-stringhe-in-java/",
+		  "date"       : "2014-07-07 00:45:33 +0200",
+		  "shortdate"  : "July 07, 2014"
+		} ,
+	
+		{
+		  "title"      : "Il cms è morto viva jekyll!",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/il-cms-e-morto-viva-jekyll/",
+		  "date"       : "2014-06-23 00:45:33 +0200",
+		  "shortdate"  : "June 23, 2014"
+		} ,
+	
+		{
+		  "title"      : "Override Author Byline Test Post",
+		  "category"   : "",
+		  "url"        : "http://localhost:4000/articles/author-override/",
+		  "date"       : "2014-06-19 00:00:00 +0200",
+		  "shortdate"  : "June 19, 2014"
+		} ,
+	
+		{
+		  "title"      : "Installare Jekyll su ubuntu 14.04.",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/install-jekyll/",
+		  "date"       : "2014-06-08 00:45:33 +0200",
+		  "shortdate"  : "June 08, 2014"
+		} ,
+	
+		{
+		  "title"      : "Effettuare la login SSH senza digitare la password.",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/Effettuare-la-login-ssh-senza-digitare-la-password/",
+		  "date"       : "2014-01-12 23:45:33 +0100",
+		  "shortdate"  : "January 12, 2014"
+		} ,
+	
+		{
+		  "title"      : "GlassFish V3: la console amministrazione prendendo troppo tempo per caricare.",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/",
+		  "date"       : "2014-01-11 23:45:33 +0100",
+		  "shortdate"  : "January 11, 2014"
+		} ,
+	
+		{
+		  "title"      : "HOWTO FIX errore 'illegal pattern character g' JAXB in NetBeans .",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/",
+		  "date"       : "2014-01-10 23:45:33 +0100",
+		  "shortdate"  : "January 10, 2014"
+		} ,
+	
+		{
+		  "title"      : "Come trovare il jar dove è contenuta una determinata classe (deployed in GlassFish).",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/",
+		  "date"       : "2014-01-03 23:45:33 +0100",
+		  "shortdate"  : "January 03, 2014"
+		} ,
+	
+		{
+		  "title"      : "Come impostare Virtualbox a schermo intero su Ubuntu 14.04",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404/",
+		  "date"       : "2014-01-02 23:45:33 +0100",
+		  "shortdate"  : "January 02, 2014"
+		} ,
+	
+		{
+		  "title"      : "Pubblicare un sito con GitHub Pages.",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/pubblicare-un-sito-con-github-pages/",
+		  "date"       : "2014-01-01 23:45:33 +0100",
+		  "shortdate"  : "January 01, 2014"
+		} ,
+	
+		{
+		  "title"      : "Syntax Highlighting Post",
+		  "category"   : "",
+		  "url"        : "http://localhost:4000/articles/code-highlighting-post/",
+		  "date"       : "2013-08-16 00:00:00 +0200",
+		  "shortdate"  : "August 16, 2013"
+		} ,
+	
+		{
+		  "title"      : "Sample Link Post",
+		  "category"   : "",
+		  "url"        : "http://localhost:4000/articles/sample-link-post/",
+		  "date"       : "2013-08-12 00:00:00 +0200",
+		  "shortdate"  : "August 12, 2013"
+		} ,
+	
+		{
+		  "title"      : "A Post with a Video",
+		  "category"   : "",
+		  "url"        : "http://localhost:4000/articles/video-post/",
+		  "date"       : "2013-06-25 00:00:00 +0200",
+		  "shortdate"  : "June 25, 2013"
+		} ,
+	
+		{
+		  "title"      : "Post with Large Feature Image and Text",
+		  "category"   : "",
+		  "url"        : "http://localhost:4000/articles/readability-feature-post/",
+		  "date"       : "2013-05-23 00:00:00 +0200",
+		  "shortdate"  : "May 23, 2013"
+		} ,
+	
+		{
+		  "title"      : "A Post with Images",
+		  "category"   : "",
+		  "url"        : "http://localhost:4000/articles/sample-post-images/",
+		  "date"       : "2013-05-22 00:00:00 +0200",
+		  "shortdate"  : "May 22, 2013"
+		} ,
+	
+		{
+		  "title"      : "Come installare Ant su linux",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/come-installare-ant-su-linux/",
+		  "date"       : "2013-01-01 23:45:33 +0100",
+		  "shortdate"  : "January 01, 2013"
+		} ,
+	
+		{
+		  "title"      : "Testing Readability with a Bunch of Text",
+		  "category"   : "",
+		  "url"        : "http://localhost:4000/articles/readability-post/",
+		  "date"       : "2012-05-22 00:00:00 +0200",
+		  "shortdate"  : "May 22, 2012"
+		} ,
+	
+		{
+		  "title"      : "Creare e configurare un DataSource MySQL in GlassFish Application Server",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/",
+		  "date"       : "2012-01-01 23:45:33 +0100",
+		  "shortdate"  : "January 01, 2012"
+		} ,
+	
+		{
+		  "title"      : "BPEL (Business Process Execution Language)",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/bpel/",
+		  "date"       : "2012-01-01 23:45:33 +0100",
+		  "shortdate"  : "January 01, 2012"
+		} ,
+	
+		{
+		  "title"      : "Javascript secondo Peter Paul Kock (PPK)",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/javascript-secondo-peter-paul-kock-PPK/",
+		  "date"       : "2011-07-04 00:45:33 +0200",
+		  "shortdate"  : "July 04, 2011"
+		} ,
+	
+		{
+		  "title"      : "Uso di keytool e jarsigner",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/uso-di-keytool-e-jarsigner/",
+		  "date"       : "2011-04-25 00:45:33 +0200",
+		  "shortdate"  : "April 25, 2011"
+		} ,
+	
+		{
+		  "title"      : "Errori comuni nella configurazione di Adobe PDF iFilter per SharePoint 2007",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/errori-comuni-nella-configurazione-di-adobe-pdf-ifilter-per-sharepoint-2007/",
+		  "date"       : "2011-04-05 00:45:33 +0200",
+		  "shortdate"  : "April 05, 2011"
+		} ,
+	
+		{
+		  "title"      : "Sample Post",
+		  "category"   : "",
+		  "url"        : "http://localhost:4000/articles/sample-post/",
+		  "date"       : "2011-03-10 00:00:00 +0100",
+		  "shortdate"  : "March 10, 2011"
+		} ,
+	
+		{
+		  "title"      : "Well Formatted riferito ad un documento XML",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/well-formatted-riferito-ad-un-documento-xml/",
+		  "date"       : "2011-03-07 23:45:33 +0100",
+		  "shortdate"  : "March 07, 2011"
+		} ,
+	
+		{
+		  "title"      : "Quel maledetto Content is not allowed in prolog",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/quel-maledetto-content-is-not-allowed-in-prolog/",
+		  "date"       : "2011-02-27 23:45:33 +0100",
+		  "shortdate"  : "February 27, 2011"
+		} ,
+	
+		{
+		  "title"      : "Cose'è JAX-WS",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/cose-e-jax-ws/",
+		  "date"       : "2011-02-27 23:45:33 +0100",
+		  "shortdate"  : "February 27, 2011"
+		} ,
+	
+		{
+		  "title"      : "Installiamo mysql senza synaptic o apt",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/installiamo-mysql-senza-synaptic-o-apt/",
+		  "date"       : "2011-02-03 23:45:33 +0100",
+		  "shortdate"  : "February 03, 2011"
+		} ,
+	
+		{
+		  "title"      : "Estrarre dati dal codice fiscale con Excel",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/estrarre-dati-dal-codice-fiscale-con-excel/",
+		  "date"       : "2011-02-03 23:45:33 +0100",
+		  "shortdate"  : "February 03, 2011"
+		} ,
+	
+		{
+		  "title"      : "Come velocizzare le operazioni di restore da dump sql di mysql",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/come-velocizzare-le-operazioni-di-restore-da-dump-sql-di-mysql/",
+		  "date"       : "2011-01-01 23:45:33 +0100",
+		  "shortdate"  : "January 01, 2011"
+		} ,
+	
+		{
+		  "title"      : "Problema in fase di restore di un database mysql",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/problema-in-fase-di-restore-di-un-database-mysql/",
+		  "date"       : "2010-01-01 23:45:33 +0100",
+		  "shortdate"  : "January 01, 2010"
+		} ,
+	
+		{
+		  "title"      : "Importazione utenti,corsi,utenti e corsi con I/O Task in Docebo",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/importazione-utenti-corsi-utenti-e-corsi-con-iotask-in-docebo/",
+		  "date"       : "2009-01-01 23:45:33 +0100",
+		  "shortdate"  : "January 01, 2009"
+		} ,
+	
+		{
+		  "title"      : "Come ripristinare l'utente amministratore di Docebo",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/come-ripristinare-l-utente-%20amministratore-di-%20docebo/",
+		  "date"       : "2009-01-01 23:45:33 +0100",
+		  "shortdate"  : "January 01, 2009"
+		} ,
+	
+		{
+		  "title"      : "Workshop Tecnologie e Professionalità per la SOA",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/workshop-tecnologie-e-professionalita-per-soa/",
+		  "date"       : "2008-10-02 00:45:33 +0200",
+		  "shortdate"  : "October 02, 2008"
+		} ,
+	
+		{
+		  "title"      : "Gli oggetti in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/gli-oggetti-in-java/",
+		  "date"       : "2008-01-05 23:45:33 +0100",
+		  "shortdate"  : "January 05, 2008"
+		} ,
+	
+		{
+		  "title"      : "La parola riservata this in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/la-parola-riservata-this-in-java/",
+		  "date"       : "2007-01-05 23:45:33 +0100",
+		  "shortdate"  : "January 05, 2007"
+		} ,
+	
+		{
+		  "title"      : "Linux: il comando du",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/linux-il-comando-du/",
+		  "date"       : "2007-01-01 23:45:33 +0100",
+		  "shortdate"  : "January 01, 2007"
+		} ,
+	
+		{
+		  "title"      : "Il passaggio di parametri in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/il-passaggio-di-parametri-in-java/",
+		  "date"       : "2006-01-05 23:45:33 +0100",
+		  "shortdate"  : "January 05, 2006"
+		} ,
+	
+		{
+		  "title"      : "Approfondiamo i metodi in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/approfondiamo-i-metodi-in-java/",
+		  "date"       : "2005-01-02 23:45:33 +0100",
+		  "shortdate"  : "January 02, 2005"
+		} ,
+	
+		{
+		  "title"      : "Classi e metodi in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/classi-e-metodi-in-java/",
+		  "date"       : "2004-01-02 23:45:33 +0100",
+		  "shortdate"  : "January 02, 2004"
+		} ,
+	
+		{
+		  "title"      : "Introduzione alla OOP in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/introduzione-alla-oop-in-java/",
+		  "date"       : "2003-03-02 23:45:33 +0100",
+		  "shortdate"  : "March 02, 2003"
+		} ,
+	
+		{
+		  "title"      : "Le variabili array in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/le-variabili-array-in-java/",
+		  "date"       : "2003-03-01 23:45:33 +0100",
+		  "shortdate"  : "March 01, 2003"
+		} ,
+	
+		{
+		  "title"      : "Le costanti simboliche in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/le-costanti-simboliche-in-java/",
+		  "date"       : "2003-02-03 23:45:33 +0100",
+		  "shortdate"  : "February 03, 2003"
+		} ,
+	
+		{
+		  "title"      : "Le variabili e i comandi di assegnazione",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/le-variabili-e%20i-comandi-di-assegnazione-in-java/",
+		  "date"       : "2003-01-02 23:45:33 +0100",
+		  "shortdate"  : "January 02, 2003"
+		} ,
+	
+		{
+		  "title"      : "Le feature del linguaggio Java che devi conoscere",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/le-feature-del-linguaggio-java-che-devi-conoscere/",
+		  "date"       : "2003-01-01 23:45:33 +0100",
+		  "shortdate"  : "January 01, 2003"
+		} ,
+	
+		{
+		  "title"      : "Java e il protocollo UDP",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/mokabyte-udp/",
+		  "date"       : "2000-03-30 00:00:00 +0200",
+		  "shortdate"  : "March 30, 2000"
+		} ,
+	
+		{
+		  "title"      : "Come cancellare l'history comandi su linux.",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/come-cancellare-history-comandi-linux/",
+		  "date"       : "2000-01-01 23:45:33 +0100",
+		  "shortdate"  : "January 01, 2000"
+		} ,
+	
+		{
+		  "title"      : "Un package per il debugging in Java",
+		  "category"   : "articles",
+		  "url"        : "http://localhost:4000/v2/articles/mokabyte-debug/",
+		  "date"       : "1999-12-30 23:45:33 +0100",
+		  "shortdate"  : "December 30, 1999"
+		} 
+	
+]

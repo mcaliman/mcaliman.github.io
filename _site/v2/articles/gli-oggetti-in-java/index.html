@@ -1,0 +1,402 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Gli oggetti in Java &#8211; Massimo Caliman's</title>
+<meta name="description" content="Da ogni classe  possibile ottenere mediante l&#8217; istanzanziazione una o pi entit, ciascuna delle quali costituisce una 
+copia della struttura dati descritta dalla classe nelle sue componenti dinamiche e di cui condivide i metodi di accesso alle informazioni.
+
+">
+<meta name="keywords" content="Articoli disponibili in lingua italiana, lang_it, Java">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Gli oggetti in Java">
+<meta name="twitter:description" content="Da ogni classe  possibile ottenere mediante l&#8217; istanzanziazione una o pi entit, ciascuna delle quali costituisce una 
+copia della struttura dati descritta dalla classe nelle sue componenti dinamiche e di cui condivide i metodi di accesso alle informazioni.
+
+">
+<meta name="twitter:site" content="@mcaliman">
+<meta name="twitter:creator" content="@mcaliman">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gli oggetti in Java">
+<meta property="og:description" content="Da ogni classe  possibile ottenere mediante l&#8217; istanzanziazione una o pi entit, ciascuna delle quali costituisce una 
+copia della struttura dati descritta dalla classe nelle sue componenti dinamiche e di cui condivide i metodi di accesso alle informazioni.
+
+">
+<meta property="og:url" content="http://localhost:4000/v2/articles/gli-oggetti-in-java/">
+<meta property="og:site_name" content="Massimo Caliman's">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/v2/articles/gli-oggetti-in-java/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/about/" >About</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/articles/" >Articles</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/blog/" >Blog</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/theme-setup/" >Theme Setup</a></li>
+		  
+		    
+		        
+		        
+		    <li><a href="http://mademistakes.com" target="_blank">Made Mistakes</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://localhost:4000/" class="site-logo" rel="home" title="Massimo Caliman's"><img src="http://localhost:4000/images/site-logo.png" width="200" height="200" alt="Massimo Caliman's logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://localhost:4000/">Massimo Caliman's</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">blog on Computer Science.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="http://localhost:4000/tags/#Articoli disponibili in lingua italiana" title="Pages tagged Articoli disponibili in lingua italiana">Articoli disponibili in lingua italiana</a></li><li><a href="http://localhost:4000/tags/#lang_it" title="Pages tagged lang_it">lang_it</a></li><li><a href="http://localhost:4000/tags/#Java" title="Pages tagged Java">Java</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Gli oggetti in Java</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+        
+          <img src="http://localhost:4000/images/bio-photo.jpg" class="bio-photo" alt="Massimo Caliman bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Massimo Caliman</span></span>
+        <span class="entry-date date published"><time datetime="2008-01-05T23:45:33+01:00"><i class="fa fa-calendar-o"></i> January 05, 2008</time></span>
+        
+        
+        <span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=Articolidisponibiliinlinguaitaliana,lang_it,Java&amp;text=Gli%20oggetti%20in%20Java&amp;url=http://localhost:4000/v2/articles/gli-oggetti-in-java/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/v2/articles/gli-oggetti-in-java/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=http://localhost:4000/v2/articles/gli-oggetti-in-java/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>Da ogni classe  possibile ottenere mediante l’ istanzanziazione una o pi entit, ciascuna delle quali costituisce una 
+copia della struttura dati descritta dalla classe nelle sue componenti dinamiche e di cui condivide i metodi di accesso alle informazioni.</p>
+
+<p>Definizione 
+Un oggetto realizza un’istanza di classe di cui rispecchia la struttura dati e condivide i metodi.</p>
+
+<p>L’istanziazione di pi oggetti di una stessa classe comporta quindi la duplicazione della stessa struttura dati, pur rappresentando informazioni differenziate.
+A tale fine ogni oggetto deve includere una copia degli attributi definiti nella propria classe di afferenza quali attributi di istanza; 
+disporre di metodi dinamici derivati da tali classi; avere garantito l’acceso a tutte le componenti statiche della classe; 
+costituire un’entit chiusa ai cui attributi non  possibile accedere se non tramite dei metodi propri dell’oggetto.
+L’ultima propriet descrittiva evidenzia un ulteriore aspetto che caratterizza gli oggetti, quello di costituire entit isolate, completamente
+definite nella propria semantica e completamente autonome dal punto di vista computazionale.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
+   <span class="n">TA1</span> <span class="n">var</span> <span class="o">;</span>
+   <span class="kd">static</span> <span class="n">TB1</span> <span class="n">glbB1</span><span class="o">;</span>
+   <span class="kt">void</span> <span class="nf">mAk</span><span class="o">(){</span>
+   <span class="c1">//stuff!</span>
+   <span class="o">}</span>
+   <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mBk</span><span class="o">(){</span>
+   <span class="c1">//stuff!</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Si supponga che vengano istanziati gli oggetti obj1 e obj2 della classe T. 
+Sia l’oggetto obj1 che l’oggetto obj2 posseggono una copia locale degli attributi d’istanza var e dei metodi dinamici mAk(). 
+Non possiedono invece copie proprie degli attributi di classe gblBk e dei metodi mBk() in quanto qualificati come static. 
+A tali entit che sono proprie della classe T possono tuttavia riferire in modo diretto dal momento che ne costituiscono istanze.
+Tutti gli oggetti che si intendono utilizzare in un programma vanno dichiarati. 
+La dichiarazione degli identificatori (detti anche reference) degli oggetti di una classe  similare alla usuali dichiarazioni di variabile. 
+Essa consiste nello specificare la classe di afferenza che ne diventa quindi il tipo, seguita dalla lista degli oggetti identificatori degli stessi.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span> <span class="n">obj1</span><span class="o">,</span> <span class="n">obj2</span><span class="o">,...,</span><span class="n">objN</span><span class="o">;</span></code></pre></div>
+
+<p>Una volta dichiarati gli oggetti, devono essere istanziati e inizializzati. L’istanziazione di un oggetto consiste nella creazione in memoria,
+e pi precisamente nella heap, di un’entit contenente una copia delle variabili di istanza e dei metodi dinamici della classe di afferenza.
+Definizione (di heap) La heap costituisce quella parte della memoria che  riservata a contenere i dati dinamici dei programmi.
+Nei sistemi attuali la memoria riservata ad ogni applicazione  suddivisa in una parte statica, uno stack e una heap. 
+L’allocazione  effettuata dall’operatore new applicato al costruttore della classe e l’indirizzo dell’entit allocata  assegnato 
+all’identificatore dell’oggetto.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">T</span><span class="o">();</span></code></pre></div>
+
+<p>ovviamente posso fare tutto in una sol colpo.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">T</span><span class="o">();</span></code></pre></div>
+
+<p>dichiarato ed istanziato et voil!</p>
+
+<h1 id="messaggimessaggi-e-ancora-messaggi">Messaggi,messaggi e ancora messaggi.</h1>
+
+<p>Classi ed oggetti costituiscono un ambiente di esecuzione per i processi computazionali descritti dai loro metodi. 
+Il problema principale della OOP risiede nella necessit di innescare in queste entit le computazioni che sono richieste dall’applicazione. 
+Tale obiettivo  raggiunto realizzando un supporto esclusivo basato sullo scambio di messaggi, nel cui contesto l’oggetto va considerato
+alla stregua di un’entit capace di: inoltrare messaggi ad altri oggetti; ricevere messaggi ed elaborare tali messaggi mediante propri metodi.</p>
+
+<p>Definizione 
+Un messaggio costituisce la richiesta di attivazione di un metodo proprio di un oggetto o di una classe, 
+da far eseguire su un opportuno insieme di informazioni comunicate all’entit destinataria.</p>
+
+<p>L’ inoltro di un messaggio richiede lo specifico destinarsi del messaggio da concatenare con l’identificatore del metodo da attivare 
+dotato dagli opportuni parametri attuali. 
+Si sottolinea il fatto che che alle classi possono essere inoltrati messaggi per l’attivazione di metodi statici, 
+mentre agli oggetti sono inoltrabili messaggi per l’esecuzione di metodi dinamici.</p>
+
+<p>In entrambi i casi la sintassi  similare :</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span><span class="o">.</span><span class="na">m1</span><span class="o">();</span>
+<span class="n">obj</span><span class="o">.</span><span class="na">m2</span><span class="o">();</span></code></pre></div>
+
+<p>Una volta completato il metodo richiesto, l’entit destinataria del messaggio pu restituire all’oggetto mittente gli eventuali dati forniti 
+dalla computazione del metodo. Sembra superfluo sottolineare che lo scambio di messaggi fornisce lo strumento attraverso il quale oggetti di 
+classe diverse sono messi in condizione di interagire tra loro. Ci permette alle relative classi di proporsi esse stesse quali modelli interagenti, 
+la cui architettura d’insieme pu concorrere alla definizione di modelli caratterizzati da maggior livello di complessit.</p>
+
+<p>Il trasferimento di informazioni tra oggetti  realizzato in java mediante lo scambio di messaggi.
+Chiamo metodi (eventualmente passandogli altri oggetti come parametri formali) su oggetti (eventualmente facendomi ritornare valori che sono altri oggetti) ? 
+scambi messaggi tra oggetti..</p>
+
+<p>Questi comprendono l’attivazione, nell’oggetto destinatario, del metodo specificato dal messaggio e l’eventuale esportazione nell’oggetto mittente 
+dei risultati dell’esecuzione di tali metodi. Come si  visto, il passaggio di parametri previsto dal linguaggio di programmazione Java  sempre 
+per valore e ci comporta che i valori dei parametri formali al momento dell’attivazione di un metodo vengano perduti quando il metodo completa la 
+sua esecuzione. Qualsiasi esportazione di informazione da un metodo pu quindi avvenire esclusivamente per il tramite del comando return.</p>
+
+<p>Tale comportamento  perfettamente aderente alla semantica del passaggio per valore quando un parametro  costituito da un tipo di dato primitivo. 
+Qualora il parametro sia costituito da un oggetto (o da un array, che ne costituisce un caso particolare) il passaggio per valore presenta tuttavia 
+degli effetti collaterali (o side effect) che lo rendono per certi aspetti simile al passaggio per indirizzo. Ci  conseguenza del modo in cui Java 
+alloca gli oggetti: la creazione di un oggetto infatti causa l’allocazione nella heap di una classe di afferenza. Tale istanza  resa accessibile 
+mediante un identificatore di indirizzo denominato handle (o reference) che  associato all’oggetto istanziato.
+Nel momento in cui un oggetto  passato quale parametro ad un metodo, solamente il valore del suo handle viene copiato nel parametro formale e ci 
+permette al metodo di modificare il contenuto dell’oggetto stesso, rendendo tali modifiche permanenti, indipendentemente dal fatto che a quel punto
+ il valore del parametro formale venga distrutto.
+Palese quanto sia errato creare all’ interno del metodo una nuova istanza di oggetto e assegnarla al parametro formale: l’handle verrebbe infatti 
+rimosso in fase di restituzione del controllo al modulo chiamante, per questo  necessario il comando return.</p>
+
+<p>Tradotto in codice</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">T</span><span class="o">();</span>
+<span class="kt">void</span> <span class="nf">m</span><span class="o">(</span><span class="n">T</span> <span class="n">p</span><span class="o">){</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">T</span><span class="o">();</span> <span class="c1">//ma perchè?!ditemi perchè!</span>
+<span class="o">}</span></code></pre></div>
+
+<p>decliniamo il nostro esempio generico in uno più pratico usando la classe String (che guarda un po serve per lavorare sulle stringhe,ora che 
+abbiamo qualche attrezzo teorico in più possiamo cominciare a lavorare con oggetti reali) supponiamo per ipotesi di avere un oggetto String p così 
+dichiarato e istanziato</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="s">&quot;non si frega mr.handle!&quot;</span><span class="o">);</span></code></pre></div>
+
+<p>e di aver definito un metodo m come sotto riportato.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">m</span><span class="o">(</span><span class="n">String</span> <span class="n">p</span><span class="o">){</span>
+   <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="s">&quot;maledetto mr.handle!&quot;</span><span class="o">);</span>
+<span class="o">}</span></code></pre></div>
+
+<p>e consideriamo il seguente blocco di codice</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="s">&quot;non si frega mr.handle!&quot;</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+<span class="n">m</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">p</span><span class="o">);</span></code></pre></div>
+
+<p>sulla nostra console vedremmo stampato per due volte “non si frega mr.handle!” Vediamo ora come avremmo potuto risolvere 
+il problema con l’uso del comando return. Innanzitutto avremmo dovuto modificare la segnatura del nostro metodo m() i modo che 
+potesse ritornare un valore del tipo compatibile con il parametro formale. Quindi non avremmo pi void come tipo di ritorno ma T.</p>
+
+<p>Vediamo la nuova versione del metodo m che fa al caso nostro.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span> <span class="nf">m</span><span class="o">(</span><span class="n">T</span> <span class="n">p</span><span class="o">){</span>
+   <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">T</span><span class="o">();</span> 
+   <span class="k">return</span> <span class="n">p</span><span class="o">;</span>
+   <span class="c1">//attenzione non ho fregato mr.handle,ma ho ottenuto l&#39;effetto pratico che mi interessava</span>
+      <span class="c1">//se cos vi piace...</span>
+<span class="o">}</span></code></pre></div>
+
+<p>e la nuova modalità di utilizzo</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">T</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">T</span><span class="o">();</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">m</span><span class="o">(</span><span class="n">p</span><span class="o">);</span></code></pre></div>
+
+<p>decliniamo nuovamente l’esempio sulle stringhe</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">//nuova versione del nostro metodo &quot;m&quot;</span>
+<span class="n">String</span> <span class="nf">m</span><span class="o">(</span><span class="n">String</span> <span class="n">p</span><span class="o">){</span>
+   <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="s">&quot;maledetto mr.handle!&quot;</span><span class="o">);</span>
+   <span class="k">return</span> <span class="n">p</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="c1">//nuova chiamata del nostro metodo</span>
+<span class="n">String</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="s">&quot;non si frega mr.handle!&quot;</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+<span class="c1">//qui stampo &quot;non si frega mr.handle!&quot;</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">m</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+<span class="c1">//qui stampo &quot;maledetto mr.handle!&quot;</span></code></pre></div>
+
+<p>Scrivere un metodo in questi modi per modificare il valore di una stringa non è molto sensato ne pulito se vogliamo, ma 
+ci ha fatto capire qualcosa di più su alcuni concetti fondamentali.</p>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/v2/articles/la-parola-riservata-this-in-java/" class="btn" title="La parola riservata this in Java">Previous</a>
+      
+      
+        <a href="http://localhost:4000/v2/articles/workshop-tecnologie-e-professionalita-per-soa/" class="btn" title="Workshop Tecnologie e Professionalità per la SOA">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2015 Massimo Caliman. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/mcaliman" title="Massimo Caliman on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	<a href="https://plus.google.com/+MassimoCalimanIT" title="Massimo Caliman on Google+" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a>
+	<a href="https://linkedin.com/in/mcaliman" title="Massimo Caliman on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/mcaliman" title="Massimo Caliman on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://localhost:4000';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-53230757-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

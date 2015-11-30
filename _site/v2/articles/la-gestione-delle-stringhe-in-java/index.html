@@ -1,0 +1,424 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>La gestione delle stringhe in Java &#8211; Massimo Caliman's</title>
+<meta name="description" content="L’ingegnere quantistico Seth Lloyd è convinto che l’universo sia un gigantesco computer. Speriamo non faccia girare Windows. (Kevin Kelly)
+
+">
+<meta name="keywords" content="Articoli disponibili in lingua italiana, lang_it, Java, String, StringBuffer, StringBuilder">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="La gestione delle stringhe in Java">
+<meta name="twitter:description" content="L’ingegnere quantistico Seth Lloyd è convinto che l’universo sia un gigantesco computer. Speriamo non faccia girare Windows. (Kevin Kelly)
+
+">
+<meta name="twitter:site" content="@mcaliman">
+<meta name="twitter:creator" content="@mcaliman">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="La gestione delle stringhe in Java">
+<meta property="og:description" content="L’ingegnere quantistico Seth Lloyd è convinto che l’universo sia un gigantesco computer. Speriamo non faccia girare Windows. (Kevin Kelly)
+
+">
+<meta property="og:url" content="http://localhost:4000/v2/articles/la-gestione-delle-stringhe-in-java/">
+<meta property="og:site_name" content="Massimo Caliman's">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/v2/articles/la-gestione-delle-stringhe-in-java/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/about/" >About</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/articles/" >Articles</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/blog/" >Blog</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/theme-setup/" >Theme Setup</a></li>
+		  
+		    
+		        
+		        
+		    <li><a href="http://mademistakes.com" target="_blank">Made Mistakes</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://localhost:4000/" class="site-logo" rel="home" title="Massimo Caliman's"><img src="http://localhost:4000/images/site-logo.png" width="200" height="200" alt="Massimo Caliman's logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://localhost:4000/">Massimo Caliman's</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">blog on Computer Science.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="http://localhost:4000/tags/#Articoli disponibili in lingua italiana" title="Pages tagged Articoli disponibili in lingua italiana">Articoli disponibili in lingua italiana</a></li><li><a href="http://localhost:4000/tags/#lang_it" title="Pages tagged lang_it">lang_it</a></li><li><a href="http://localhost:4000/tags/#Java" title="Pages tagged Java">Java</a></li><li><a href="http://localhost:4000/tags/#String" title="Pages tagged String">String</a></li><li><a href="http://localhost:4000/tags/#StringBuffer" title="Pages tagged StringBuffer">StringBuffer</a></li><li><a href="http://localhost:4000/tags/#StringBuilder" title="Pages tagged StringBuilder">StringBuilder</a></li>
+        </ul>
+        
+          <h1 class="entry-title">La gestione delle stringhe in Java</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+        
+          <img src="http://localhost:4000/images/bio-photo.jpg" class="bio-photo" alt="Massimo Caliman bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Massimo Caliman</span></span>
+        <span class="entry-date date published"><time datetime="2014-07-07T00:45:33+02:00"><i class="fa fa-calendar-o"></i> July 07, 2014</time></span>
+        
+        
+        <span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=Articolidisponibiliinlinguaitaliana,lang_it,Java,String,StringBuffer,StringBuilder&amp;text=La%20gestione%20delle%20stringhe%20in%20Java&amp;url=http://localhost:4000/v2/articles/la-gestione-delle-stringhe-in-java/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/v2/articles/la-gestione-delle-stringhe-in-java/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=http://localhost:4000/v2/articles/la-gestione-delle-stringhe-in-java/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>L’ingegnere quantistico Seth Lloyd è convinto che l’universo sia un gigantesco computer. Speriamo non faccia girare Windows. <em>(Kevin Kelly)</em></p>
+
+<p>Le stringhe sono il primo oggetto che normalmente si impara a gestire con un linguaggio di programmazione, in Java per l’oggetto principe in questo caso è String o più propriamente del pachage <code>java.lang</code>, a seguire le forme più evolute come <code>StringBuffer</code> e <code>StringBuilder</code>.</p>
+
+<p>Un oggetto di tipo <code>String</code> è immutabile (immutable), cosa significa esattamente?
+Immutabile nel senso di memoria. Esso crea nuovi oggetti ogni volta che si creano stringhe o si assegna una nuova stringa / modificare il valore. Ecco perché si consiglia di fare attenzione quando si usano le stringhe.</p>
+
+<p>Prendiamo ad esempio il seguente frammento di codice</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="s">&quot;hello boys!&quot;</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span><span class="o">);</span>
+<span class="n">a</span> <span class="o">=</span> <span class="s">&quot;hi guys!&quot;</span><span class="o">;</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span><span class="o">);</span></code></pre></div>
+
+<p>con l’assegnazione <code>a = “hi guys!”</code> ho creato un nuovo oggetto di tipo <code>String</code>, non ho modificato lo stesso creato con <code>new String(“hello boys”);</code> anche se non ho utilizzato il costruttore con parametro.</p>
+
+<p>In Java le stringhe sono quindi costanti, locazioni di memoria che contengono caratteri (come nel linguaggio C), immutabile è sinonimo di immodificabile.</p>
+
+<p>Le stringhe sono oggetti di uso comune quindi i progettisti iniziali hanno pensato bene di realizzare alcune scorciatoie per il loro utilizzo quotidiano che non obbligasse ad utilizzare l’approccio puro ad oggetti attraverso metodi da richiamare sulle istanze.</p>
+
+<p>Torniamo alla nostra stringa semplicemente denominata <code>a</code>, l’espressione</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">a</span> <span class="o">=</span> <span class="s">&quot;hi&quot;</span> <span class="o">+</span> <span class="s">&quot; guys!&quot;</span><span class="o">;</span></code></pre></div>
+
+<p>effettua la concatenazione delle stringhe <code>hi</code> e <code>guys!</code> tramite l’operatore <code>+</code>, operatore che normalmente utilizziamo per la somma di due numeri, siamo di fronte all’overloading di un operatore, come in C++.</p>
+
+<p>L’overloading dell operatore <code>+</code> ci permette di evitare la forma pura ad oggetti</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">a</span> <span class="o">=</span> <span class="s">&quot;hi&quot;</span><span class="o">.</span><span class="na">concat</span><span class="o">(</span><span class="s">&quot; guys!&quot;</span><span class="o">);</span></code></pre></div>
+
+<p>meno pratica, più formale certamente nonché object oriented.
+Le due forme</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">b</span> <span class="o">=</span> <span class="s">&quot;bye&quot;</span><span class="o">;</span></code></pre></div>
+
+<p>e</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="s">&quot;bye&quot;</span><span class="o">);</span></code></pre></div>
+
+<p>sono equivalenti, l’assegnazione diretta surroga la chiamata esplicita del costruttore <code>String(String)</code> che costruisce un nuovo oggetto di tipo <code>String</code> a partire da una stringa esistente passata come parametro.</p>
+
+<p>Gli oggetti di tipo <code>String</code> non sono array di caratteri quindi non possiamo applicarvi gli operatori classici degli array come ad esempio <code>[]</code> quindi non possiamo fare cose del tipo <code>string[index]</code> dove string è un oggetto instanziato dalla classe <code>String</code> e index è un intero maggiore o uguale a 0 che che indica la posizione del carattere a cui vogliamo accedere. 
+Per essere ancora più chiari, dato l’ oggetto c di tipo <code>String</code> del frammento di codice riportato sopra non possiamo scrivere c[0] per accedere al primo elemento che ha valore b, Il compilatore ci segnalerà un errore</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Exception</span> <span class="n">in</span> <span class="n">thread</span> <span class="s">&quot;main&quot;</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">RuntimeException</span><span class="o">:</span> <span class="n">Uncompilable</span> <span class="n">source</span> <span class="n">code</span> <span class="o">-</span> <span class="n">array</span> <span class="n">required</span><span class="o">,</span> <span class="n">but</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">String</span> <span class="n">found</span></code></pre></div>
+
+<p>Non possiamo quindi neppure fare qualcosa come</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">c</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="sc">&#39;c&#39;</span><span class="o">;</span></code></pre></div>
+
+<p>per sovrascrivere il valore del carattere <code>b</code> con il carattere <code>c</code>.</p>
+
+<p>Per accedere all’elemento di indice 0 dobbiamo necessariamente utilizzare il metodo <code>charAt()</code></p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">c</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span></code></pre></div>
+
+<p>che ritornerà il carattere <code>b</code> a video, per esempio attraverso l’uso del metodo <code>System.out.println()</code> per stampare sulla console.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span></code></pre></div>
+
+<p>La classe <code>String</code> rende disponibile molti metodi tra cui quelli di uso più comune permettono restituire la lunghezza della stringa</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">lenofc</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">length</span><span class="o">();</span></code></pre></div>
+
+<p>nel nostro caso lenofc conterrà il valore intero 3 dato che <code>“bye”.length()</code> è 3 e quindi il predicato  <code>“bye”.length()==3</code> ha valore <code>true</code></p>
+
+<p>Per controllare l’uguaglianza di due stringhe si può invece utilizzare il metodo <code>equals()</code> o <code>equalsIgnoreCase()</code> nel caso si desideri un controllo case insensitivi.
+Le espressioni sotto ritornano entrambe il valore <code>true</code> per le variabili booleane b1 e b2</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span>
+<span class="kt">boolean</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;bye&quot;</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">b1</span><span class="o">);</span>
+<span class="kt">boolean</span> <span class="n">b2</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="s">&quot;Bye&quot;</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">b2</span><span class="o">);</span></code></pre></div>
+
+<p>Volendo maggiore flessibilità in un operazione di confronto di stringhe possiamo utilizzare il metodo <code>compareTo()</code>  nella forma</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">comp</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">b</span><span class="o">):</span></code></pre></div>
+
+<ol>
+  <li>comp == 0 se a è uguale b</li>
+  <li>comp&lt;0 se a&lt;b,</li>
+  <li>comp&gt;0 se a&gt;b.</li>
+</ol>
+
+<p>Il valore intero restituito è l’indice del primo carattere diverso.
+nel caso di esempio il valore per comp è 6 essendo a uguale a ”hi guys!” e b uguale a ”bye”</p>
+
+<p>attenzione <code>a.equals(b)</code> è ovviamente diverso da <code>a == b</code></p>
+
+<p>Altri metodi di comune utilizzo sono <code>substring()</code>, <code>replace()</code>, naturalmente anche questi metodi non modificano l’oggetto su cui sono chiamati ma ne creano e ritornano uno nuovo.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">a</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="mi">18</span><span class="o">):</span><span class="c1">// restituisce la sottostringa che va da 10  a 17 (18-1) </span>
+<span class="n">a</span><span class="o">.</span><span class="na">replace</span><span class="o">(</span><span class="err">‘</span><span class="n">E</span><span class="err">’</span><span class="o">,</span><span class="err">’</span><span class="n">X</span><span class="err">’</span><span class="o">):</span><span class="c1">// restituisce una stringa con tutte le ‘E’  sostituite con ‘X’</span></code></pre></div>
+
+<p>dato il frammento di codice</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">targa</span> <span class="o">=</span> <span class="s">&quot;ab123cd&quot;</span><span class="o">;</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">targa</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">2</span><span class="o">));</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">targa</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span><span class="mi">5</span><span class="o">));</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">targa</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span><span class="mi">7</span><span class="o">));</span></code></pre></div>
+
+<p>avremo stampate nella console le 3 componenti “ab”,“123” e “cd”
+verificando che la prima e l’ultima sono costituite esclusivamente da lettere e la seconda solo da numeri abbiamo di fatto realizzato un controllo semplificato del formato di una targa europea.</p>
+
+<p>per essere più completi il codice potrebbe essere il seguente</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">boolean</span> <span class="n">valid</span> <span class="o">=</span> <span class="n">Character</span><span class="o">.</span><span class="na">isLetter</span><span class="o">(</span><span class="n">targa</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">))</span> <span class="o">&amp;&amp;</span> 
+<span class="n">Character</span><span class="o">.</span><span class="na">isLetter</span><span class="o">(</span><span class="n">targa</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">1</span><span class="o">))</span> <span class="o">&amp;&amp;</span>
+<span class="n">Character</span><span class="o">.</span><span class="na">isDigit</span><span class="o">(</span><span class="n">targa</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">2</span><span class="o">))</span> <span class="o">&amp;&amp;</span>
+<span class="n">Character</span><span class="o">.</span><span class="na">isDigit</span><span class="o">(</span><span class="n">targa</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">3</span><span class="o">))</span> <span class="o">&amp;&amp;</span>
+<span class="n">Character</span><span class="o">.</span><span class="na">isDigit</span><span class="o">(</span><span class="n">targa</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">4</span><span class="o">))</span> <span class="o">&amp;&amp;</span> 
+<span class="n">Character</span><span class="o">.</span><span class="na">isLetter</span><span class="o">(</span><span class="n">targa</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">5</span><span class="o">))</span> <span class="o">;</span>
+<span class="n">Character</span><span class="o">.</span><span class="na">isLetter</span><span class="o">(</span><span class="n">targa</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">6</span><span class="o">))</span> <span class="o">;</span></code></pre></div>
+
+<p>Character è una classe che ci permette di effettuare semplici controlli ma non solo, vi rimando alla documentazione ufficiale per i dettagli.</p>
+
+<p>Per controlli e validazioni sulle stringhe i semplici i metodi fino ad ora esposti sono più che sufficienti, ma nel caso sia abbia necessità di scomodare le espressioni regolari si può ricorrere al metodo <code>matches()</code> che presa un espressione regolare regex ritorna <code>true</code> se la stringa su cui è richiamato la rispetta.</p>
+
+<p>Per controllare la validità rispetto al formato di una targa europea possiamo utilizzare</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">boolean</span> <span class="n">isValid</span> <span class="o">=</span> <span class="n">targa</span><span class="o">.</span><span class="na">matches</span><span class="o">(</span><span class="s">&quot;^[a-zA-Z]{2}[0-9]{3,4}[a-zA-Z]{2}$&quot;</span><span class="o">);</span></code></pre></div>
+
+<p>Per la validazione formale di un indirizzo email possiamo utilizzare per esempio l’espressione regolare</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">^[</span><span class="n">_A</span><span class="o">-</span><span class="n">Za</span><span class="o">-</span><span class="n">z0</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="err">\\</span><span class="o">+]+(</span><span class="err">\\</span><span class="o">.[</span><span class="n">_A</span><span class="o">-</span><span class="n">Za</span><span class="o">-</span><span class="n">z0</span><span class="o">-</span><span class="mi">9</span><span class="o">-]+)*</span><span class="err">@</span><span class="o">[</span><span class="n">A</span><span class="o">-</span><span class="n">Za</span><span class="o">-</span><span class="n">z0</span><span class="o">-</span><span class="mi">9</span><span class="o">-]+(</span><span class="err">\\</span><span class="o">.[</span><span class="n">A</span><span class="o">-</span><span class="n">Za</span><span class="o">-</span><span class="n">z0</span><span class="o">-</span><span class="mi">9</span><span class="o">]+)*(</span><span class="err">\\</span><span class="o">.[</span><span class="n">A</span><span class="o">-</span><span class="n">Za</span><span class="o">-</span><span class="n">z</span><span class="o">]{</span><span class="mi">2</span><span class="o">,})</span><span class="n">$</span></code></pre></div>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Per la validazione di importi in dollari del tipo $1,234,567.89</td>
+      <td>1234567.89</td>
+      <td>$9.99</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">^(</span><span class="err">\</span><span class="n">$</span><span class="o">|)([</span><span class="mi">1</span><span class="o">-</span><span class="mi">9</span><span class="o">]</span><span class="err">\</span><span class="n">d</span><span class="o">{</span><span class="mi">0</span><span class="o">,</span><span class="mi">2</span><span class="o">}(</span><span class="err">\</span><span class="o">,</span><span class="err">\</span><span class="n">d</span><span class="o">{</span><span class="mi">3</span><span class="o">})*|([</span><span class="mi">1</span><span class="o">-</span><span class="mi">9</span><span class="o">]</span><span class="err">\</span><span class="n">d</span><span class="o">*))(</span><span class="err">\</span><span class="o">.</span><span class="err">\</span><span class="n">d</span><span class="o">{</span><span class="mi">2</span><span class="o">})?</span><span class="n">$</span></code></pre></div>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Per quelli in valuta euro nella forma -123123,12 €</td>
+      <td>12312432134</td>
+      <td>-12.234.123,23</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">^</span><span class="err">\</span><span class="n">s</span><span class="o">*-?((</span><span class="err">\</span><span class="n">d</span><span class="o">{</span><span class="mi">1</span><span class="o">,</span><span class="mi">3</span><span class="o">}(</span><span class="err">\</span><span class="o">.(</span><span class="err">\</span><span class="n">d</span><span class="o">){</span><span class="mi">3</span><span class="o">})*)|</span><span class="err">\</span><span class="n">d</span><span class="o">*)(,</span><span class="err">\</span><span class="n">d</span><span class="o">{</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">})?</span><span class="err">\</span><span class="n">s</span><span class="o">?(</span><span class="err">\</span><span class="n">u20AC</span><span class="o">)?</span><span class="err">\</span><span class="n">s</span><span class="o">*</span><span class="n">$</span></code></pre></div>
+
+<p>Data e ora in formato europeo come 29/02/2008 15:30</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">(((((</span><span class="mi">0</span><span class="o">[</span><span class="mi">1</span><span class="o">-</span><span class="mi">9</span><span class="o">]|[</span><span class="mi">12</span><span class="o">][</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]|</span><span class="mi">3</span><span class="o">[</span><span class="mi">01</span><span class="o">])/(</span><span class="mi">0</span><span class="o">[</span><span class="mi">13578</span><span class="o">]|</span><span class="mi">1</span><span class="o">[</span><span class="mi">02</span><span class="o">]))|((</span><span class="mi">0</span><span class="o">[</span><span class="mi">1</span><span class="o">-</span><span class="mi">9</span><span class="o">]|[</span><span class="mi">12</span><span class="o">][</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]|</span><span class="mi">30</span><span class="o">)/(</span><span class="mi">0</span><span class="o">[</span><span class="mi">469</span><span class="o">]|</span><span class="mi">11</span><span class="o">))|((</span><span class="mi">0</span><span class="o">[</span><span class="mi">1</span><span class="o">-</span><span class="mi">9</span><span class="o">]|[</span><span class="mi">1</span><span class="o">][</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]|</span><span class="mi">2</span><span class="o">[</span><span class="mi">0</span><span class="o">-</span><span class="mi">8</span><span class="o">]))/</span><span class="mi">02</span><span class="o">)/([</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]{</span><span class="mi">3</span><span class="o">}[</span><span class="mi">1</span><span class="o">-</span><span class="mi">9</span><span class="o">]|[</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]{</span><span class="mi">2</span><span class="o">}[</span><span class="mi">1</span><span class="o">-</span><span class="mi">9</span><span class="o">][</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]{</span><span class="mi">1</span><span class="o">}|[</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]{</span><span class="mi">1</span><span class="o">}[</span><span class="mi">1</span><span class="o">-</span><span class="mi">9</span><span class="o">][</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]{</span><span class="mi">2</span><span class="o">}|[</span><span class="mi">1</span><span class="o">-</span><span class="mi">9</span><span class="o">][</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]{</span><span class="mi">3</span><span class="o">})</span> <span class="o">((([</span><span class="mi">0</span><span class="o">-</span><span class="mi">1</span><span class="o">][</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">])|([</span><span class="mi">2</span><span class="o">][</span><span class="mi">0</span><span class="o">-</span><span class="mi">3</span><span class="o">]))[:][</span><span class="mi">0</span><span class="o">-</span><span class="mi">5</span><span class="o">][</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]</span><span class="n">$</span><span class="o">))|(</span><span class="mi">29</span><span class="o">/</span><span class="mi">02</span><span class="o">/(([</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]{</span><span class="mi">2</span><span class="o">})(</span><span class="mi">0</span><span class="o">[</span><span class="mi">48</span><span class="o">]|[</span><span class="mi">2468</span><span class="o">][</span><span class="mi">048</span><span class="o">]|[</span><span class="mi">13579</span><span class="o">][</span><span class="mi">26</span><span class="o">])|((</span><span class="mi">0</span><span class="o">[</span><span class="mi">48</span><span class="o">]|[</span><span class="mi">2468</span><span class="o">][</span><span class="mi">048</span><span class="o">]|[</span><span class="mi">3579</span><span class="o">][</span><span class="mi">26</span><span class="o">])</span><span class="mi">00</span><span class="o">))</span> <span class="o">((([</span><span class="mi">0</span><span class="o">-</span><span class="mi">1</span><span class="o">][</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">])|([</span><span class="mi">2</span><span class="o">][</span><span class="mi">0</span><span class="o">-</span><span class="mi">3</span><span class="o">]))[:][</span><span class="mi">0</span><span class="o">-</span><span class="mi">5</span><span class="o">][</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]</span><span class="n">$</span><span class="o">)))</span></code></pre></div>
+
+<p>Solo date nella della forma 29/02/2008</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">^(?:(?:</span><span class="mi">0</span><span class="o">?[</span><span class="mi">1</span><span class="o">-</span><span class="mi">9</span><span class="o">])|(?:[</span><span class="mi">12</span><span class="o">]</span><span class="err">\</span><span class="n">d</span><span class="o">)|</span><span class="mi">3</span><span class="o">[</span><span class="mi">01</span><span class="o">])/(?:(?:</span><span class="mi">0</span><span class="o">?[</span><span class="mi">1</span><span class="o">-</span><span class="mi">9</span><span class="o">])|(?:</span><span class="mi">1</span><span class="o">[</span><span class="mi">012</span><span class="o">]))/(?:(?:</span><span class="mi">19</span><span class="o">|</span><span class="mi">20</span><span class="o">))</span><span class="err">\</span><span class="n">d</span><span class="o">{</span><span class="mi">2</span><span class="o">}</span><span class="n">$</span></code></pre></div>
+
+<p>Per la validazione di formato (non del codice di controllo) di un codice fiscale italiano</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">^[</span><span class="n">A</span><span class="o">-</span><span class="n">Za</span><span class="o">-</span><span class="n">z</span><span class="o">]{</span><span class="mi">6</span><span class="o">}[</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]{</span><span class="mi">2</span><span class="o">}[</span><span class="n">A</span><span class="o">-</span><span class="n">Za</span><span class="o">-</span><span class="n">z</span><span class="o">]{</span><span class="mi">1</span><span class="o">}[</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]{</span><span class="mi">2</span><span class="o">}[</span><span class="n">A</span><span class="o">-</span><span class="n">Za</span><span class="o">-</span><span class="n">z</span><span class="o">]{</span><span class="mi">1</span><span class="o">}[</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]{</span><span class="mi">3</span><span class="o">}[</span><span class="n">A</span><span class="o">-</span><span class="n">Za</span><span class="o">-</span><span class="n">z</span><span class="o">]{</span><span class="mi">1</span><span class="o">}</span><span class="n">$</span></code></pre></div>
+
+<p>A questo punto abbiamo visto già molto materiale che ci permette di utilizzare con le stringhe per elaborazioni e controlli che si presentano all’ordine del giorno nella carriera di uno sviluppatore.</p>
+
+<p>L’uso di <code>String</code> però non si presta nei casi in cui la manipolazione della stessa è l’attività principale, a questo scopo sono presenti le classi <code>StringBuffer</code> e <code>StringBuilder</code>, ma più conosciuta e anziana in quanto a cittadinanza nel jdk è la <code>StringBuffer</code> è ed sincronizzata qualora non sia necessario gestire l’accesso condiviso della risorsa l’utilizzo di StringBuilder garantisce maggiore velocità e ci permettere di non creare una moltitudine di oggetti <code>String</code> spazzatura su cui il garbage collector dovrà impiegare stupidamente del tempo.</p>
+
+<p>Per la precisione tutti i metodi di <code>StringBuffer</code> sono syncronized ovvero sincronizzati il che la rende thread-safe e meno performante di una sua versione non thread-safe, utilizzate <code>StringBuilder</code> nei casi in cui non sia presente criticità legata alla gestione dei thread i metodi esposti sono praticamente gli stessi per entrambe le classi.</p>
+
+<p>I metodi di utilizzo più comuni per entrambe le classi sono rispettivamente <code>append()</code>,<code>insert()</code> e <code>delete()</code> nonchè <code>charAt()</code> oltre al metodo <code>toString()</code> che ci permette di ottenere una classica stringa dai nostri oggetti di tipo <code>StringBuffer</code> e <code>StringBuilder</code>.</p>
+
+<p>Un utilizzo comune degli oggetti di tipo <code>StringBuilder</code> e <code>StringBuffer</code> è la costruzione di stringhe dinamicamente in base a condizioni presenti nel nostro codice.</p>
+
+<p>Sotto un esempio piuttosto semplice di utilizzo elementare per i tre metodi</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">StringBuilder</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">StringBuilder</span><span class="o">();</span>
+<span class="n">buffer</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;01234567900&quot;</span><span class="o">);</span>
+<span class="n">buffer</span><span class="o">.</span><span class="na">insert</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span> <span class="sc">&#39;8&#39;</span><span class="o">);</span><span class="c1">//inserisce 8 alla giusta posizione</span>
+<span class="n">buffer</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">12</span><span class="o">);</span><span class="c1">//cancella le due ultime cifre</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">buffer</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span><span class="c1">//Stampa 0123456789</span></code></pre></div>
+
+<p>Lungi dall’essere una trattazione esaustiva dell’argomento e delle classi <code>String</code>,<code>StringBuffer</code> e <code>StringBuilder</code> quanto presentato copre la maggior parte dei casi d’uso, unica raccomandazione valida sempre e di esaminare la documentazione ufficiale sempre prima di reinventare la ruota.</p>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/v2/articles/il-cms-e-morto-viva-jekyll/" class="btn" title="Il cms è morto viva jekyll!">Previous</a>
+      
+      
+        <a href="http://localhost:4000/v2/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/" class="btn" title="Considerazioni su alcuni Linguaggi di Programmazione Parte 1">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2015 Massimo Caliman. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/mcaliman" title="Massimo Caliman on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	<a href="https://plus.google.com/+MassimoCalimanIT" title="Massimo Caliman on Google+" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a>
+	<a href="https://linkedin.com/in/mcaliman" title="Massimo Caliman on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/mcaliman" title="Massimo Caliman on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://localhost:4000';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-53230757-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

@@ -1,114 +1,64 @@
-#
+# 
 # author	    : Massimo Caliman, mcaliman@gmail.com
+# release           : v3s
 # last update       : 2015-11-30
 # to build use      : bundle exec jekyll build
 # to run server use : bundle exec jekyll build
 #
 
-title:            Massimo Caliman's 
-description:      blog on Computer Science.
-#logo:            site-logo.png
-logo:             bio-photo.jpg
+# Site wide configuration
 
-
-#disqus_shortname: mcaliman
-
-
-search:           true
-# Change url to your domain. Leave localhost server or blank when working locally.
-# You don't need to specify the protocol if you want it available on http and https. Example: //localhost:4000
-
+title: Massimo Caliman's 
+locale: en_US
+description: blog on Computer Science.
+logo: site-logo.png
+search: true
 url: http://localhost:4000
-#url: http://caliman.org
 
+# Jekyll configuration
 
-# Owner/author information
-owner:
-  name:           Massimo Caliman
-  avatar:         bio-photo.jpg
-  email:          mcaliman@gmail.com
-  # Social networking links used in footer. Update and remove as you like.
-  twitter: mcaliman
-  facebook:
-  github: mcaliman
-  stackexchange: http://stackoverflow.com/users/4294752/mcaliman
-  linkedin: mcaliman
-  instagram:
-  flickr:
-  tumblr:
-  # For Google Authorship https://plus.google.com/authorship
-  # google_plus: https://plus.google.com/+MassimoCaliman
-
-# Analytics and webmaster tools stuff goes here
-google_analytics: UA-53230757-1
-google_verify:
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
-
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: Home
-    url: /
-  - title: About
-    url: /about/
-  - title: Contact
-    url: /contact/
-  - title: Post
-    url: /articles/
-  - title: Tags
-    url: /tags/
-  - title: Categories
-    url: /categories/
-
-#  - title: Made Mistakes
-#    url: http://mademistakes.com
-#    external: true
-
-
-
-
-# multilanguage Begin provo rimuovere se errs
-# article available in english language | "articoli disponibili in lingua italiana"
-
-defaults:
-  -
-    scope:
-      path: _posts/en
-    values:
-      layout: post
-      lang: en
-  -
-    scope:
-      path: _posts/it
-    values:
-      layout: post
-      lang: it
-# multilanguage End
-
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Europe/Rome
-future:      true
-highlighter: pygments
-markdown:    kramdown
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
 
 kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
+  toc_levels: 1..2
+  enable_coderay: false
 
-  coderay:
-    coderay_line_numbers:
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
+mathjax: true
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Gemfile", "Capfile", "README.md", "LICENSE", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
+
+
+# Site owner
+owner:
+  name: Massimo Caliman
+  avatar: bio-photo.jpg
+  email: mcaliman@gmail.com
+  disqus-shortname:
+  twitter: mcaliman
+  facebook: #username
+  github: mcaliman
+  stackexchange: #http://stackoverflow.com/users/4294752/mcaliman
+  linkedin: mcaliman
+  instagram: #username
+  flickr: #username
+  tumblr: #username
+  pinterest: #username
+  weibo: #userid
+  google:
+    plus: +MassimoCalimanIT
+    analytics: UA-53230757-1
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:

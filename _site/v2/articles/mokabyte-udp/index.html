@@ -1,0 +1,1031 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Java e il protocollo UDP &#8211; Massimo Caliman's</title>
+<meta name="description" content="Introduzione ad uno dei protocolli piu’ utilizzati in internet, lo User Datagram Protocol,
+publicato su MokaByte Numero 39,Marzo 2000,di Massimo Caliman e Nicola Merello
+
+Nonostante che l’importanza di Java stia crescendo e che l’ interesse nei confronti del Networking sia
+sempre maggiore, la programmazione di rete in Java è ancora per molti aspetti oscura.
+Eppure è molto semplice, in questo articolo ci concentreremo su tutto cio’ che ha che fare con il
+protocollo UDP e le classi Java.
+
+Introduzione
+Spesso si preferisce ancora scrivere applicazioni di questo tipo ancora in C/C++ (e in alcuni casi
+limitati, questo è effettivamente consigliabile) ma si può farlo benissimo anche in Java ed è più facile e
+veloce.
+
+Per affrontare questo articolo, non è necessario essere specialisti della rete, una conoscenza dei concetti
+basilari della rete e’ comunque richiesta, dato che si fara’ riferimento ai termini piu’ comuni che si
+incontrano quando ci si avventura in questa branca della programmazione.
+
+Cominciamo con una note dolente : la rete e’ l’area meno supportata dalla maggior parte delle
+implementazioni Java, non ci sono errori rilevanti relativi al Networking ma, se si puo’ scegliere
+l’implementazione e quindi la piattaforma, e’ meglio optare per quella della Sun per Solaris.
+A questo punto il lettore potrebbe, assalito da qualche dubbio, chiedersi perche’ dovrebbe avventurasi
+nella programmazione di rete in Java. Basta dare uno sguardo alla lista delle classi che il linguaggio offre
+per trattare problematiche di rete per rispondere a questa domanda.
+
+Java (in particolare il package java.net) fornisce delle ottime astrazioni alle problematiche di rete e non
+bisogna essere dei guru della rete. Attenzione pero’, Java attualmente conosce le reti basate su sistemi IP,
+quindi altre (minori) architetture rimangono fuori ma non e’ assolutamente un problema, dato che ormai IP oltre
+a essere lo standard di Internet (quello con la I maiuscola, la grande rete) sta ormai per divenire anche
+quello delle piccole internet aziendali..
+In rete i dati viaggiano per mezzo di pacchetti chiamati datagram. Nelle reti IP ogni datagramma contiene
+un intestazione lunga dai 20byte ai 60 byte ed un insieme di dati che contiene fino a 65.515byte.
+
+L’User Datagram Protocol ovvero UDP
+
+UDP (User Datagram Protocol )e’ un protocollo di trasporto semplice, senza connessione, che si basa sul
+trasferimento di datagrammi. Potete trovare la sua descrizione completa nel documento RFC768 . Qui ne daremo
+solo una breve descrizione per poter cominciare subito a sperimentare con le classi Java . Ogni operazione di
+output di un processo che usa il trasporto UDP produce un datagramma UDP, che viene Viene incapsulato in un
+datagramma IP I protocollo UDP non e’ affidabile: invia i datagrammi ma non garantisce che arrivino a
+destinazione sono quindi gli applicativi che lo utilizzano che devono preoccuparsi dell’affidabilita’ del
+servizio. La testata UDP e’ relativamente semplice.
+
+0       7 8     15 16    23 24      31 
++--------+--------+--------+--------+ 
+| Source | Destination              | 
+| Port   | Port                     | 
++--------+--------+--------+--------+ 
+|        |                          | 
+| Length | Checksum                 | 
++--------+--------+--------+--------+ 
+| 
+| data octets ... 
++---------------- ...
+
+User Datagram Header Format
+I campi Source Porte e Destination Port sono ovviamente la sorgente e la destinazione del pacchetto. Il
+campo Length e’ la lunghezza dell’intero datagramma UDP (testata + dati) in byte. Il valore minimo e’ 8, ma in
+realta’ questo campo non viene gestito dal protocollo, il quale sa che la lunghezza totale e’ la lunghezza di
+un datagramma IP meno i 20 byte della testata IP. Il campo Checksum e’ opzionale. Il checksum e’ un campo di
+controllo end-to-end: e’ calcolato dal mittente e verificato dal ricevitore del pacchetto. Se il pacchetto UDP
+e’ errato, viene scartato silenziosamente, senza generazione di messaggi d’errore. L’opzionalita’ dei checksum
+di UDP implica una velocita’ maggiore delle operazioni se disabilitata, ma puo’ naturalmente fornire sorgenti
+irrecuperabili di errori, specie su una rete non Ethernet o quando il datagramma UDP transiti da router.
+
+Casi d’uso del protocollo UDP
+Se si lavora nel campo dell’ integrazione di dispositivi per la rilevazione di campo e computer (ad esempio
+sensori di temperatura o piu’ generici rilevatori di campo, da quelli classici per le tessere badge ai piu’
+recenti di impronte digitali) ci si trovera’ molto probabilmente a dover utilizzare il protocollo UDP. Perche’
+il protocollo UDP e non il piu’ affidabile TCP/IP o addirittura http (cosi magari tiriamo in ballo le Servlet)? 
+Perche’ il protocollo UDP e’ piu’ facile da implementare a livello di firmware, quindi costa meno ai
+costruttori in termini di sviluppo ecc.
+
+Ed e’ gia UDP
+UDP e’ il cugino povero di TCP, molto veloce ma poco affidabile. Quando lo usiamo per inviare dei dati non
+possiamo in nessun modo sapere se sono arrivati, ne se sono arrivati nell’ordine nel quale sono partiti. Dove
+si usa UDP ? Si puo’ usare per implementare un protocollo di trasferimento file come ad esempio NSF (Network
+File System, la sua ultima versione puo’ usare sia TCP che UDP), TFTP (Trivial FTP) ed altri (il multicasting
+si affida a UDP per la sperimentazione). Con UDP e’ l’applicazione che si deve preoccupare della affidabilita’,
+prendendosi cura dei pacchetti mancanti o fuori sequenza cio’ significa molto lavoro, si puo’ fare ma prima e’
+conveniente pensare se si poteva usare TCP. Le classi fondamentali che si devono conoscere con UDP sono
+DatagramPacket e DatagramSocket. Il package e’ sempre il solito java.net, che e’ stato trattato piu’ che bene
+sia su Mokabyte che in molti testi, ma attenzione ci sono differenze (delle modifiche) tra la sua
+implementazione dal JDK1.1 al JDK1.2. Chi utilizza il Jbuilder3 della Imprise per lo sviluppo puo’ andare nell’
+help in linea alla sezione Networking Features e poi selezionare Change in JDK 1.1.
+
+Finalmente un po’ di codice!
+E’ adesso cominciamo a scrivere un po’ di codice (chissa’ perche’ noi programmatori abbiamo sempre fretta
+di cominciare a massacrare le nostre tastiere). Supponiamo di avere una personal collegato in rete ad uno di
+questi dispositivi ambientali, dobbiamo aprire un socket sulla stessa porta sulla quale il dispositivo e’ in
+ascolto :
+
+private DatagramSocket serverSocket ; 
+private int serverPort ; serverSocket = new DatagramSocket(serverPort) ;
+
+Ora che abbiamo il nostro oggetto socket per l’UDP (notare che si utilizza per questa ragione un
+DatagramSocket) Settiamo il timeout a 5 secondi, da notare che il timeout di default varia da browser a browser
+se si decide di usare delle Applet, invece con le applicazioni ,che consiglio, le cose sono piu’ facili.
+
+serverSocket.setSoTimeout(5000) ;
+
+Adesso supponiamo di voler spedire un segnale al nostro dispositivo (ad esempio il classico segnale di
+inizializzazione) per fare questo dobbiamo costruire un oggetto di tipo DatagramPacket. A tale scopo usiamo il
+costruttore di cui useremo la seguente versione (vedremo poi nell’approfondimento perche’)
+
+DatagramPacket(byte[] buf, int length, InetAddress address, int port) 
+DatagramPacket packet = new DatagramPacket(data,data.length,address, serverPort);
+
+Quindi inviamolo al nostro dispositivo
+
+serverSocket.send(packet);
+
+A questo punto, direi che la prossima cosa da fare e’ aspettare il segnale di ritorno dal nostro
+dispositivo, che dovrebbe essere un echo nel migliore dei casi, un messaggio di errore o altro, dipende dal
+dispositivo e dell’ architettura del sistema scelto permettendo.
+
+Creiamo il DatagramPacket vuoto che conterra’ il pacchetto ritornato, ricordandoci che il protocollo UDP
+non e’ sicuro, e quindi spetta a noi (qualora sia possibile, e non sempre lo e’) gestire a livello software un
+eventuale sistema di controllo degli errori.
+
+DatagramPacket packet = new DatagramPacket(new byte[512],512);
+
+Per metterci in ascolto sul socket utilizziamo il metodo receice, che e’ bloccante, cio’ blocca il flusso
+del programma finche’ non riceve un pacchetto o scade il timeout, sollevando un eccezione.
+
+try { 
+   serverSocket.receive(packet); 
+}catch(java.io.InterruptedIOException e){
+    // gestiamo il timeout 
+}
+
+Infine e’ sempre buona norma rimettere le cose al loro posto prima di chiudere l’applicazione, che tradotto
+significa che dobbiamo chiudere il socket con il metodo close.
+
+serverSocket.close() ;
+
+Abbiamo visto come sia relativamente facile lavorare con UDP e Java, ben inteso l’argomento e’ ben piu’
+esteso, ma al contrario del piu’ diffuso e sicuro TCP/IP, bisogna tagliare le soluzioni su misura, di caso in
+caso, con un occhio di riguardo ai dispositivi con cui si deve colloquiare. Infatti essi dettano le regole del
+gioco e lo fanno a proprio vantaggio, o meglio questo e’ quello che fanno i loro costruttori. Un ultima nota
+prima di passare all’approfondimento : cercate di non disseminare di oggetti DatagramPacket le vostre
+applicazioni, progettate sempre classi wrapper, vi rendera’ molto piu’ facile la vita quando dovrete fare i
+conti con qualche classe deprecata o qualche baco della liberia, inoltre fate sempre dei test conoscitivi in
+modo da sapere prima come si comporta la vostra implementazione di UDP su sistemi operativi diversi come NT,
+quando ad esempio la JVM va in crash ma il socket non ne vuole sapere di chiudersi e altre sorpresine di mamma
+Sun.
+
+L’approfondimento
+Dopo gli stralci di codice visti sopra, cerchiamo un approccio piu’ ragionato e sistematico a quanto ci e’
+dato da Java per implementare UDP. Cominciamo con la classe DatagramPacket : DatagramPacket ha due costruttori:
+uno si usa per ricevere dati dalla rete, l’altro per inviarli, sotto sono riportate le loro segnature.
+
+public DatagramPacket(byte[] buff, int len)
+
+in questo caso i dati si troveranno in buff
+
+public DatagramPacket(byte[] buff, int len, InetAddress addr, int port)
+
+in quest’ altro si crea un datagramma per inviare il pacchetto di byte buff all’ host di indirizzo addr e
+alla porta port Per operare su un oggetto di DatagramPacket si sono poi i seguenti metodi :
+
+public synchronized InetAddress getAddress() 
+public synchronized int getPort() 
+public synchronized byte[] getData() public synchronized int getLength()
+
+La classe DatagramSocket invece serve per inviare o ricevere un datagramma, anche qui troviamo diversi
+costruttori :
+
+public DatagramSocket() throws SocketException
+
+legato ad una porta anonima, in quanto la porta di destinazione e’ parte del DatagramPacket.
+
+public DatagramSocket(int port) throws SocketException 
+public DatagramSocket(int port, InetAddres addr) throws SocketException
+
+vi sono poi i metodi :
+
+public void send(DatagramPacket o) throws IOException 
+public void receive(DatagramPacket p) throws IOException 
+public int getLocalPort() 
+public void close()
+
+che ovviamente libera la porta occupata da quel socket Infine le opzioni per settare il timeout
+
+public synchronized void setSoTimeout(int timeout) throws SocketException
+
+e per conoscerne il valore
+
+public synchronized int getSoTimeout() throws IOException
+
+Conclusione
+
+Abbiamo visto come sia facile e produttivo realizzare applicazioni che implementano il protocollo UDP con
+Java, ne abbiamo individuato i punti di forza e le debolezza. Probabilmente chi ha a che fare come gli autori
+con software di questa tipologia, vedra’ presto passare i costruttori verso i piu’ evoluti TCP o HTTP, esistono
+gia’ infatti interessanti esempio di rilevatori di campo che utilizzano questi protocolli, specialmente http,
+ma a parte i mercati USA, che tanto per cambiare sono sempre un decennio avanti a noi (dopotutto hanno iniziato
+prima), dove sono ormai lo standard di fatto, in casa nostra si sentira’ parlare di UDP ancora per molto.
+Quindi occhio ai datagrammi.
+
+">
+<meta name="keywords" content="Articoli disponibili in lingua italiana, lang_it, Java, UPD, Mokabyte">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Java e il protocollo UDP">
+<meta name="twitter:description" content="Introduzione ad uno dei protocolli piu’ utilizzati in internet, lo User Datagram Protocol,
+publicato su MokaByte Numero 39,Marzo 2000,di Massimo Caliman e Nicola Merello
+
+Nonostante che l’importanza di Java stia crescendo e che l’ interesse nei confronti del Networking sia
+sempre maggiore, la programmazione di rete in Java è ancora per molti aspetti oscura.
+Eppure è molto semplice, in questo articolo ci concentreremo su tutto cio’ che ha che fare con il
+protocollo UDP e le classi Java.
+
+Introduzione
+Spesso si preferisce ancora scrivere applicazioni di questo tipo ancora in C/C++ (e in alcuni casi
+limitati, questo è effettivamente consigliabile) ma si può farlo benissimo anche in Java ed è più facile e
+veloce.
+
+Per affrontare questo articolo, non è necessario essere specialisti della rete, una conoscenza dei concetti
+basilari della rete e’ comunque richiesta, dato che si fara’ riferimento ai termini piu’ comuni che si
+incontrano quando ci si avventura in questa branca della programmazione.
+
+Cominciamo con una note dolente : la rete e’ l’area meno supportata dalla maggior parte delle
+implementazioni Java, non ci sono errori rilevanti relativi al Networking ma, se si puo’ scegliere
+l’implementazione e quindi la piattaforma, e’ meglio optare per quella della Sun per Solaris.
+A questo punto il lettore potrebbe, assalito da qualche dubbio, chiedersi perche’ dovrebbe avventurasi
+nella programmazione di rete in Java. Basta dare uno sguardo alla lista delle classi che il linguaggio offre
+per trattare problematiche di rete per rispondere a questa domanda.
+
+Java (in particolare il package java.net) fornisce delle ottime astrazioni alle problematiche di rete e non
+bisogna essere dei guru della rete. Attenzione pero’, Java attualmente conosce le reti basate su sistemi IP,
+quindi altre (minori) architetture rimangono fuori ma non e’ assolutamente un problema, dato che ormai IP oltre
+a essere lo standard di Internet (quello con la I maiuscola, la grande rete) sta ormai per divenire anche
+quello delle piccole internet aziendali..
+In rete i dati viaggiano per mezzo di pacchetti chiamati datagram. Nelle reti IP ogni datagramma contiene
+un intestazione lunga dai 20byte ai 60 byte ed un insieme di dati che contiene fino a 65.515byte.
+
+L’User Datagram Protocol ovvero UDP
+
+UDP (User Datagram Protocol )e’ un protocollo di trasporto semplice, senza connessione, che si basa sul
+trasferimento di datagrammi. Potete trovare la sua descrizione completa nel documento RFC768 . Qui ne daremo
+solo una breve descrizione per poter cominciare subito a sperimentare con le classi Java . Ogni operazione di
+output di un processo che usa il trasporto UDP produce un datagramma UDP, che viene Viene incapsulato in un
+datagramma IP I protocollo UDP non e’ affidabile: invia i datagrammi ma non garantisce che arrivino a
+destinazione sono quindi gli applicativi che lo utilizzano che devono preoccuparsi dell’affidabilita’ del
+servizio. La testata UDP e’ relativamente semplice.
+
+0       7 8     15 16    23 24      31 
++--------+--------+--------+--------+ 
+| Source | Destination              | 
+| Port   | Port                     | 
++--------+--------+--------+--------+ 
+|        |                          | 
+| Length | Checksum                 | 
++--------+--------+--------+--------+ 
+| 
+| data octets ... 
++---------------- ...
+
+User Datagram Header Format
+I campi Source Porte e Destination Port sono ovviamente la sorgente e la destinazione del pacchetto. Il
+campo Length e’ la lunghezza dell’intero datagramma UDP (testata + dati) in byte. Il valore minimo e’ 8, ma in
+realta’ questo campo non viene gestito dal protocollo, il quale sa che la lunghezza totale e’ la lunghezza di
+un datagramma IP meno i 20 byte della testata IP. Il campo Checksum e’ opzionale. Il checksum e’ un campo di
+controllo end-to-end: e’ calcolato dal mittente e verificato dal ricevitore del pacchetto. Se il pacchetto UDP
+e’ errato, viene scartato silenziosamente, senza generazione di messaggi d’errore. L’opzionalita’ dei checksum
+di UDP implica una velocita’ maggiore delle operazioni se disabilitata, ma puo’ naturalmente fornire sorgenti
+irrecuperabili di errori, specie su una rete non Ethernet o quando il datagramma UDP transiti da router.
+
+Casi d’uso del protocollo UDP
+Se si lavora nel campo dell’ integrazione di dispositivi per la rilevazione di campo e computer (ad esempio
+sensori di temperatura o piu’ generici rilevatori di campo, da quelli classici per le tessere badge ai piu’
+recenti di impronte digitali) ci si trovera’ molto probabilmente a dover utilizzare il protocollo UDP. Perche’
+il protocollo UDP e non il piu’ affidabile TCP/IP o addirittura http (cosi magari tiriamo in ballo le Servlet)? 
+Perche’ il protocollo UDP e’ piu’ facile da implementare a livello di firmware, quindi costa meno ai
+costruttori in termini di sviluppo ecc.
+
+Ed e’ gia UDP
+UDP e’ il cugino povero di TCP, molto veloce ma poco affidabile. Quando lo usiamo per inviare dei dati non
+possiamo in nessun modo sapere se sono arrivati, ne se sono arrivati nell’ordine nel quale sono partiti. Dove
+si usa UDP ? Si puo’ usare per implementare un protocollo di trasferimento file come ad esempio NSF (Network
+File System, la sua ultima versione puo’ usare sia TCP che UDP), TFTP (Trivial FTP) ed altri (il multicasting
+si affida a UDP per la sperimentazione). Con UDP e’ l’applicazione che si deve preoccupare della affidabilita’,
+prendendosi cura dei pacchetti mancanti o fuori sequenza cio’ significa molto lavoro, si puo’ fare ma prima e’
+conveniente pensare se si poteva usare TCP. Le classi fondamentali che si devono conoscere con UDP sono
+DatagramPacket e DatagramSocket. Il package e’ sempre il solito java.net, che e’ stato trattato piu’ che bene
+sia su Mokabyte che in molti testi, ma attenzione ci sono differenze (delle modifiche) tra la sua
+implementazione dal JDK1.1 al JDK1.2. Chi utilizza il Jbuilder3 della Imprise per lo sviluppo puo’ andare nell’
+help in linea alla sezione Networking Features e poi selezionare Change in JDK 1.1.
+
+Finalmente un po’ di codice!
+E’ adesso cominciamo a scrivere un po’ di codice (chissa’ perche’ noi programmatori abbiamo sempre fretta
+di cominciare a massacrare le nostre tastiere). Supponiamo di avere una personal collegato in rete ad uno di
+questi dispositivi ambientali, dobbiamo aprire un socket sulla stessa porta sulla quale il dispositivo e’ in
+ascolto :
+
+private DatagramSocket serverSocket ; 
+private int serverPort ; serverSocket = new DatagramSocket(serverPort) ;
+
+Ora che abbiamo il nostro oggetto socket per l’UDP (notare che si utilizza per questa ragione un
+DatagramSocket) Settiamo il timeout a 5 secondi, da notare che il timeout di default varia da browser a browser
+se si decide di usare delle Applet, invece con le applicazioni ,che consiglio, le cose sono piu’ facili.
+
+serverSocket.setSoTimeout(5000) ;
+
+Adesso supponiamo di voler spedire un segnale al nostro dispositivo (ad esempio il classico segnale di
+inizializzazione) per fare questo dobbiamo costruire un oggetto di tipo DatagramPacket. A tale scopo usiamo il
+costruttore di cui useremo la seguente versione (vedremo poi nell’approfondimento perche’)
+
+DatagramPacket(byte[] buf, int length, InetAddress address, int port) 
+DatagramPacket packet = new DatagramPacket(data,data.length,address, serverPort);
+
+Quindi inviamolo al nostro dispositivo
+
+serverSocket.send(packet);
+
+A questo punto, direi che la prossima cosa da fare e’ aspettare il segnale di ritorno dal nostro
+dispositivo, che dovrebbe essere un echo nel migliore dei casi, un messaggio di errore o altro, dipende dal
+dispositivo e dell’ architettura del sistema scelto permettendo.
+
+Creiamo il DatagramPacket vuoto che conterra’ il pacchetto ritornato, ricordandoci che il protocollo UDP
+non e’ sicuro, e quindi spetta a noi (qualora sia possibile, e non sempre lo e’) gestire a livello software un
+eventuale sistema di controllo degli errori.
+
+DatagramPacket packet = new DatagramPacket(new byte[512],512);
+
+Per metterci in ascolto sul socket utilizziamo il metodo receice, che e’ bloccante, cio’ blocca il flusso
+del programma finche’ non riceve un pacchetto o scade il timeout, sollevando un eccezione.
+
+try { 
+   serverSocket.receive(packet); 
+}catch(java.io.InterruptedIOException e){
+    // gestiamo il timeout 
+}
+
+Infine e’ sempre buona norma rimettere le cose al loro posto prima di chiudere l’applicazione, che tradotto
+significa che dobbiamo chiudere il socket con il metodo close.
+
+serverSocket.close() ;
+
+Abbiamo visto come sia relativamente facile lavorare con UDP e Java, ben inteso l’argomento e’ ben piu’
+esteso, ma al contrario del piu’ diffuso e sicuro TCP/IP, bisogna tagliare le soluzioni su misura, di caso in
+caso, con un occhio di riguardo ai dispositivi con cui si deve colloquiare. Infatti essi dettano le regole del
+gioco e lo fanno a proprio vantaggio, o meglio questo e’ quello che fanno i loro costruttori. Un ultima nota
+prima di passare all’approfondimento : cercate di non disseminare di oggetti DatagramPacket le vostre
+applicazioni, progettate sempre classi wrapper, vi rendera’ molto piu’ facile la vita quando dovrete fare i
+conti con qualche classe deprecata o qualche baco della liberia, inoltre fate sempre dei test conoscitivi in
+modo da sapere prima come si comporta la vostra implementazione di UDP su sistemi operativi diversi come NT,
+quando ad esempio la JVM va in crash ma il socket non ne vuole sapere di chiudersi e altre sorpresine di mamma
+Sun.
+
+L’approfondimento
+Dopo gli stralci di codice visti sopra, cerchiamo un approccio piu’ ragionato e sistematico a quanto ci e’
+dato da Java per implementare UDP. Cominciamo con la classe DatagramPacket : DatagramPacket ha due costruttori:
+uno si usa per ricevere dati dalla rete, l’altro per inviarli, sotto sono riportate le loro segnature.
+
+public DatagramPacket(byte[] buff, int len)
+
+in questo caso i dati si troveranno in buff
+
+public DatagramPacket(byte[] buff, int len, InetAddress addr, int port)
+
+in quest’ altro si crea un datagramma per inviare il pacchetto di byte buff all’ host di indirizzo addr e
+alla porta port Per operare su un oggetto di DatagramPacket si sono poi i seguenti metodi :
+
+public synchronized InetAddress getAddress() 
+public synchronized int getPort() 
+public synchronized byte[] getData() public synchronized int getLength()
+
+La classe DatagramSocket invece serve per inviare o ricevere un datagramma, anche qui troviamo diversi
+costruttori :
+
+public DatagramSocket() throws SocketException
+
+legato ad una porta anonima, in quanto la porta di destinazione e’ parte del DatagramPacket.
+
+public DatagramSocket(int port) throws SocketException 
+public DatagramSocket(int port, InetAddres addr) throws SocketException
+
+vi sono poi i metodi :
+
+public void send(DatagramPacket o) throws IOException 
+public void receive(DatagramPacket p) throws IOException 
+public int getLocalPort() 
+public void close()
+
+che ovviamente libera la porta occupata da quel socket Infine le opzioni per settare il timeout
+
+public synchronized void setSoTimeout(int timeout) throws SocketException
+
+e per conoscerne il valore
+
+public synchronized int getSoTimeout() throws IOException
+
+Conclusione
+
+Abbiamo visto come sia facile e produttivo realizzare applicazioni che implementano il protocollo UDP con
+Java, ne abbiamo individuato i punti di forza e le debolezza. Probabilmente chi ha a che fare come gli autori
+con software di questa tipologia, vedra’ presto passare i costruttori verso i piu’ evoluti TCP o HTTP, esistono
+gia’ infatti interessanti esempio di rilevatori di campo che utilizzano questi protocolli, specialmente http,
+ma a parte i mercati USA, che tanto per cambiare sono sempre un decennio avanti a noi (dopotutto hanno iniziato
+prima), dove sono ormai lo standard di fatto, in casa nostra si sentira’ parlare di UDP ancora per molto.
+Quindi occhio ai datagrammi.
+
+">
+<meta name="twitter:site" content="@mcaliman">
+<meta name="twitter:creator" content="@mcaliman">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java e il protocollo UDP">
+<meta property="og:description" content="Introduzione ad uno dei protocolli piu’ utilizzati in internet, lo User Datagram Protocol,
+publicato su MokaByte Numero 39,Marzo 2000,di Massimo Caliman e Nicola Merello
+
+Nonostante che l’importanza di Java stia crescendo e che l’ interesse nei confronti del Networking sia
+sempre maggiore, la programmazione di rete in Java è ancora per molti aspetti oscura.
+Eppure è molto semplice, in questo articolo ci concentreremo su tutto cio’ che ha che fare con il
+protocollo UDP e le classi Java.
+
+Introduzione
+Spesso si preferisce ancora scrivere applicazioni di questo tipo ancora in C/C++ (e in alcuni casi
+limitati, questo è effettivamente consigliabile) ma si può farlo benissimo anche in Java ed è più facile e
+veloce.
+
+Per affrontare questo articolo, non è necessario essere specialisti della rete, una conoscenza dei concetti
+basilari della rete e’ comunque richiesta, dato che si fara’ riferimento ai termini piu’ comuni che si
+incontrano quando ci si avventura in questa branca della programmazione.
+
+Cominciamo con una note dolente : la rete e’ l’area meno supportata dalla maggior parte delle
+implementazioni Java, non ci sono errori rilevanti relativi al Networking ma, se si puo’ scegliere
+l’implementazione e quindi la piattaforma, e’ meglio optare per quella della Sun per Solaris.
+A questo punto il lettore potrebbe, assalito da qualche dubbio, chiedersi perche’ dovrebbe avventurasi
+nella programmazione di rete in Java. Basta dare uno sguardo alla lista delle classi che il linguaggio offre
+per trattare problematiche di rete per rispondere a questa domanda.
+
+Java (in particolare il package java.net) fornisce delle ottime astrazioni alle problematiche di rete e non
+bisogna essere dei guru della rete. Attenzione pero’, Java attualmente conosce le reti basate su sistemi IP,
+quindi altre (minori) architetture rimangono fuori ma non e’ assolutamente un problema, dato che ormai IP oltre
+a essere lo standard di Internet (quello con la I maiuscola, la grande rete) sta ormai per divenire anche
+quello delle piccole internet aziendali..
+In rete i dati viaggiano per mezzo di pacchetti chiamati datagram. Nelle reti IP ogni datagramma contiene
+un intestazione lunga dai 20byte ai 60 byte ed un insieme di dati che contiene fino a 65.515byte.
+
+L’User Datagram Protocol ovvero UDP
+
+UDP (User Datagram Protocol )e’ un protocollo di trasporto semplice, senza connessione, che si basa sul
+trasferimento di datagrammi. Potete trovare la sua descrizione completa nel documento RFC768 . Qui ne daremo
+solo una breve descrizione per poter cominciare subito a sperimentare con le classi Java . Ogni operazione di
+output di un processo che usa il trasporto UDP produce un datagramma UDP, che viene Viene incapsulato in un
+datagramma IP I protocollo UDP non e’ affidabile: invia i datagrammi ma non garantisce che arrivino a
+destinazione sono quindi gli applicativi che lo utilizzano che devono preoccuparsi dell’affidabilita’ del
+servizio. La testata UDP e’ relativamente semplice.
+
+0       7 8     15 16    23 24      31 
++--------+--------+--------+--------+ 
+| Source | Destination              | 
+| Port   | Port                     | 
++--------+--------+--------+--------+ 
+|        |                          | 
+| Length | Checksum                 | 
++--------+--------+--------+--------+ 
+| 
+| data octets ... 
++---------------- ...
+
+User Datagram Header Format
+I campi Source Porte e Destination Port sono ovviamente la sorgente e la destinazione del pacchetto. Il
+campo Length e’ la lunghezza dell’intero datagramma UDP (testata + dati) in byte. Il valore minimo e’ 8, ma in
+realta’ questo campo non viene gestito dal protocollo, il quale sa che la lunghezza totale e’ la lunghezza di
+un datagramma IP meno i 20 byte della testata IP. Il campo Checksum e’ opzionale. Il checksum e’ un campo di
+controllo end-to-end: e’ calcolato dal mittente e verificato dal ricevitore del pacchetto. Se il pacchetto UDP
+e’ errato, viene scartato silenziosamente, senza generazione di messaggi d’errore. L’opzionalita’ dei checksum
+di UDP implica una velocita’ maggiore delle operazioni se disabilitata, ma puo’ naturalmente fornire sorgenti
+irrecuperabili di errori, specie su una rete non Ethernet o quando il datagramma UDP transiti da router.
+
+Casi d’uso del protocollo UDP
+Se si lavora nel campo dell’ integrazione di dispositivi per la rilevazione di campo e computer (ad esempio
+sensori di temperatura o piu’ generici rilevatori di campo, da quelli classici per le tessere badge ai piu’
+recenti di impronte digitali) ci si trovera’ molto probabilmente a dover utilizzare il protocollo UDP. Perche’
+il protocollo UDP e non il piu’ affidabile TCP/IP o addirittura http (cosi magari tiriamo in ballo le Servlet)? 
+Perche’ il protocollo UDP e’ piu’ facile da implementare a livello di firmware, quindi costa meno ai
+costruttori in termini di sviluppo ecc.
+
+Ed e’ gia UDP
+UDP e’ il cugino povero di TCP, molto veloce ma poco affidabile. Quando lo usiamo per inviare dei dati non
+possiamo in nessun modo sapere se sono arrivati, ne se sono arrivati nell’ordine nel quale sono partiti. Dove
+si usa UDP ? Si puo’ usare per implementare un protocollo di trasferimento file come ad esempio NSF (Network
+File System, la sua ultima versione puo’ usare sia TCP che UDP), TFTP (Trivial FTP) ed altri (il multicasting
+si affida a UDP per la sperimentazione). Con UDP e’ l’applicazione che si deve preoccupare della affidabilita’,
+prendendosi cura dei pacchetti mancanti o fuori sequenza cio’ significa molto lavoro, si puo’ fare ma prima e’
+conveniente pensare se si poteva usare TCP. Le classi fondamentali che si devono conoscere con UDP sono
+DatagramPacket e DatagramSocket. Il package e’ sempre il solito java.net, che e’ stato trattato piu’ che bene
+sia su Mokabyte che in molti testi, ma attenzione ci sono differenze (delle modifiche) tra la sua
+implementazione dal JDK1.1 al JDK1.2. Chi utilizza il Jbuilder3 della Imprise per lo sviluppo puo’ andare nell’
+help in linea alla sezione Networking Features e poi selezionare Change in JDK 1.1.
+
+Finalmente un po’ di codice!
+E’ adesso cominciamo a scrivere un po’ di codice (chissa’ perche’ noi programmatori abbiamo sempre fretta
+di cominciare a massacrare le nostre tastiere). Supponiamo di avere una personal collegato in rete ad uno di
+questi dispositivi ambientali, dobbiamo aprire un socket sulla stessa porta sulla quale il dispositivo e’ in
+ascolto :
+
+private DatagramSocket serverSocket ; 
+private int serverPort ; serverSocket = new DatagramSocket(serverPort) ;
+
+Ora che abbiamo il nostro oggetto socket per l’UDP (notare che si utilizza per questa ragione un
+DatagramSocket) Settiamo il timeout a 5 secondi, da notare che il timeout di default varia da browser a browser
+se si decide di usare delle Applet, invece con le applicazioni ,che consiglio, le cose sono piu’ facili.
+
+serverSocket.setSoTimeout(5000) ;
+
+Adesso supponiamo di voler spedire un segnale al nostro dispositivo (ad esempio il classico segnale di
+inizializzazione) per fare questo dobbiamo costruire un oggetto di tipo DatagramPacket. A tale scopo usiamo il
+costruttore di cui useremo la seguente versione (vedremo poi nell’approfondimento perche’)
+
+DatagramPacket(byte[] buf, int length, InetAddress address, int port) 
+DatagramPacket packet = new DatagramPacket(data,data.length,address, serverPort);
+
+Quindi inviamolo al nostro dispositivo
+
+serverSocket.send(packet);
+
+A questo punto, direi che la prossima cosa da fare e’ aspettare il segnale di ritorno dal nostro
+dispositivo, che dovrebbe essere un echo nel migliore dei casi, un messaggio di errore o altro, dipende dal
+dispositivo e dell’ architettura del sistema scelto permettendo.
+
+Creiamo il DatagramPacket vuoto che conterra’ il pacchetto ritornato, ricordandoci che il protocollo UDP
+non e’ sicuro, e quindi spetta a noi (qualora sia possibile, e non sempre lo e’) gestire a livello software un
+eventuale sistema di controllo degli errori.
+
+DatagramPacket packet = new DatagramPacket(new byte[512],512);
+
+Per metterci in ascolto sul socket utilizziamo il metodo receice, che e’ bloccante, cio’ blocca il flusso
+del programma finche’ non riceve un pacchetto o scade il timeout, sollevando un eccezione.
+
+try { 
+   serverSocket.receive(packet); 
+}catch(java.io.InterruptedIOException e){
+    // gestiamo il timeout 
+}
+
+Infine e’ sempre buona norma rimettere le cose al loro posto prima di chiudere l’applicazione, che tradotto
+significa che dobbiamo chiudere il socket con il metodo close.
+
+serverSocket.close() ;
+
+Abbiamo visto come sia relativamente facile lavorare con UDP e Java, ben inteso l’argomento e’ ben piu’
+esteso, ma al contrario del piu’ diffuso e sicuro TCP/IP, bisogna tagliare le soluzioni su misura, di caso in
+caso, con un occhio di riguardo ai dispositivi con cui si deve colloquiare. Infatti essi dettano le regole del
+gioco e lo fanno a proprio vantaggio, o meglio questo e’ quello che fanno i loro costruttori. Un ultima nota
+prima di passare all’approfondimento : cercate di non disseminare di oggetti DatagramPacket le vostre
+applicazioni, progettate sempre classi wrapper, vi rendera’ molto piu’ facile la vita quando dovrete fare i
+conti con qualche classe deprecata o qualche baco della liberia, inoltre fate sempre dei test conoscitivi in
+modo da sapere prima come si comporta la vostra implementazione di UDP su sistemi operativi diversi come NT,
+quando ad esempio la JVM va in crash ma il socket non ne vuole sapere di chiudersi e altre sorpresine di mamma
+Sun.
+
+L’approfondimento
+Dopo gli stralci di codice visti sopra, cerchiamo un approccio piu’ ragionato e sistematico a quanto ci e’
+dato da Java per implementare UDP. Cominciamo con la classe DatagramPacket : DatagramPacket ha due costruttori:
+uno si usa per ricevere dati dalla rete, l’altro per inviarli, sotto sono riportate le loro segnature.
+
+public DatagramPacket(byte[] buff, int len)
+
+in questo caso i dati si troveranno in buff
+
+public DatagramPacket(byte[] buff, int len, InetAddress addr, int port)
+
+in quest’ altro si crea un datagramma per inviare il pacchetto di byte buff all’ host di indirizzo addr e
+alla porta port Per operare su un oggetto di DatagramPacket si sono poi i seguenti metodi :
+
+public synchronized InetAddress getAddress() 
+public synchronized int getPort() 
+public synchronized byte[] getData() public synchronized int getLength()
+
+La classe DatagramSocket invece serve per inviare o ricevere un datagramma, anche qui troviamo diversi
+costruttori :
+
+public DatagramSocket() throws SocketException
+
+legato ad una porta anonima, in quanto la porta di destinazione e’ parte del DatagramPacket.
+
+public DatagramSocket(int port) throws SocketException 
+public DatagramSocket(int port, InetAddres addr) throws SocketException
+
+vi sono poi i metodi :
+
+public void send(DatagramPacket o) throws IOException 
+public void receive(DatagramPacket p) throws IOException 
+public int getLocalPort() 
+public void close()
+
+che ovviamente libera la porta occupata da quel socket Infine le opzioni per settare il timeout
+
+public synchronized void setSoTimeout(int timeout) throws SocketException
+
+e per conoscerne il valore
+
+public synchronized int getSoTimeout() throws IOException
+
+Conclusione
+
+Abbiamo visto come sia facile e produttivo realizzare applicazioni che implementano il protocollo UDP con
+Java, ne abbiamo individuato i punti di forza e le debolezza. Probabilmente chi ha a che fare come gli autori
+con software di questa tipologia, vedra’ presto passare i costruttori verso i piu’ evoluti TCP o HTTP, esistono
+gia’ infatti interessanti esempio di rilevatori di campo che utilizzano questi protocolli, specialmente http,
+ma a parte i mercati USA, che tanto per cambiare sono sempre un decennio avanti a noi (dopotutto hanno iniziato
+prima), dove sono ormai lo standard di fatto, in casa nostra si sentira’ parlare di UDP ancora per molto.
+Quindi occhio ai datagrammi.
+
+">
+<meta property="og:url" content="http://localhost:4000/v2/articles/mokabyte-udp/">
+<meta property="og:site_name" content="Massimo Caliman's">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/v2/articles/mokabyte-udp/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/about/" >About</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/articles/" >Articles</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/blog/" >Blog</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/theme-setup/" >Theme Setup</a></li>
+		  
+		    
+		        
+		        
+		    <li><a href="http://mademistakes.com" target="_blank">Made Mistakes</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://localhost:4000/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://localhost:4000/" class="site-logo" rel="home" title="Massimo Caliman's"><img src="http://localhost:4000/images/site-logo.png" width="200" height="200" alt="Massimo Caliman's logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://localhost:4000/">Massimo Caliman's</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">blog on Computer Science.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="http://localhost:4000/tags/#Articoli disponibili in lingua italiana" title="Pages tagged Articoli disponibili in lingua italiana">Articoli disponibili in lingua italiana</a></li><li><a href="http://localhost:4000/tags/#lang_it" title="Pages tagged lang_it">lang_it</a></li><li><a href="http://localhost:4000/tags/#Java" title="Pages tagged Java">Java</a></li><li><a href="http://localhost:4000/tags/#UPD" title="Pages tagged UPD">UPD</a></li><li><a href="http://localhost:4000/tags/#Mokabyte" title="Pages tagged Mokabyte">Mokabyte</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Java e il protocollo UDP</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+        
+          <img src="http://localhost:4000/images/bio-photo.jpg" class="bio-photo" alt="Massimo Caliman bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Massimo Caliman</span></span>
+        <span class="entry-date date published"><time datetime="2000-03-30T00:00:00+02:00"><i class="fa fa-calendar-o"></i> March 30, 2000</time></span>
+        
+        
+        <span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=Articolidisponibiliinlinguaitaliana,lang_it,Java,UPD,Mokabyte&amp;text=Java%20e%20il%20protocollo%20UDP&amp;url=http://localhost:4000/v2/articles/mokabyte-udp/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/v2/articles/mokabyte-udp/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=http://localhost:4000/v2/articles/mokabyte-udp/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+      </footer>
+      <div class="entry-content">
+        <p>Introduzione ad uno dei protocolli piu’ utilizzati in internet, lo User Datagram Protocol,
+publicato su <strong>MokaByte Numero 39,Marzo 2000,di Massimo Caliman e Nicola Merello</strong></p>
+
+<p>Nonostante che l’importanza di Java stia crescendo e che l’ interesse nei confronti del Networking sia
+sempre maggiore, la programmazione di rete in Java è ancora per molti aspetti oscura.
+Eppure è molto semplice, in questo articolo ci concentreremo su tutto cio’ che ha che fare con il
+protocollo UDP e le classi Java.</p>
+
+<h1 id="introduzione">Introduzione</h1>
+<p>Spesso si preferisce ancora scrivere applicazioni di questo tipo ancora in C/C++ (e in alcuni casi
+limitati, questo è effettivamente consigliabile) ma si può farlo benissimo anche in Java ed è più facile e
+veloce.</p>
+
+<p>Per affrontare questo articolo, non è necessario essere specialisti della rete, una conoscenza dei concetti
+basilari della rete e’ comunque richiesta, dato che si fara’ riferimento ai termini piu’ comuni che si
+incontrano quando ci si avventura in questa branca della programmazione.</p>
+
+<p>Cominciamo con una note dolente : la rete e’ l’area meno supportata dalla maggior parte delle
+implementazioni Java, non ci sono errori rilevanti relativi al Networking ma, se si puo’ scegliere
+l’implementazione e quindi la piattaforma, e’ meglio optare per quella della Sun per Solaris.
+A questo punto il lettore potrebbe, assalito da qualche dubbio, chiedersi perche’ dovrebbe avventurasi
+nella programmazione di rete in Java. Basta dare uno sguardo alla lista delle classi che il linguaggio offre
+per trattare problematiche di rete per rispondere a questa domanda.</p>
+
+<p>Java (in particolare il package java.net) fornisce delle ottime astrazioni alle problematiche di rete e non
+bisogna essere dei guru della rete. Attenzione pero’, Java attualmente conosce le reti basate su sistemi IP,
+quindi altre (minori) architetture rimangono fuori ma non e’ assolutamente un problema, dato che ormai IP oltre
+a essere lo standard di Internet (quello con la I maiuscola, la grande rete) sta ormai per divenire anche
+quello delle piccole internet aziendali..
+In rete i dati viaggiano per mezzo di pacchetti chiamati datagram. Nelle reti IP ogni datagramma contiene
+un intestazione lunga dai 20byte ai 60 byte ed un insieme di dati che contiene fino a 65.515byte.</p>
+
+<h1 id="luser-datagram-protocol-ovvero-udp">L’User Datagram Protocol ovvero UDP</h1>
+
+<p>UDP (User Datagram Protocol )e’ un protocollo di trasporto semplice, senza connessione, che si basa sul
+trasferimento di datagrammi. Potete trovare la sua descrizione completa nel documento <code>RFC768</code> . Qui ne daremo
+solo una breve descrizione per poter cominciare subito a sperimentare con le classi Java . Ogni operazione di
+output di un processo che usa il trasporto UDP produce un datagramma UDP, che viene Viene incapsulato in un
+datagramma IP I protocollo UDP non e’ affidabile: invia i datagrammi ma non garantisce che arrivino a
+destinazione sono quindi gli applicativi che lo utilizzano che devono preoccuparsi dell’affidabilita’ del
+servizio. La testata UDP e’ relativamente semplice.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="mi">0</span>       <span class="mi">7</span> <span class="mi">8</span>     <span class="mi">15</span> <span class="mi">16</span>    <span class="mi">23</span> <span class="mi">24</span>      <span class="mi">31</span> 
+<span class="o">+--------+--------+--------+--------+</span> 
+<span class="o">|</span> <span class="n">Source</span> <span class="o">|</span> <span class="n">Destination</span>              <span class="o">|</span> 
+<span class="o">|</span> <span class="n">Port</span>   <span class="o">|</span> <span class="n">Port</span>                     <span class="o">|</span> 
+<span class="o">+--------+--------+--------+--------+</span> 
+<span class="o">|</span>        <span class="o">|</span>                          <span class="o">|</span> 
+<span class="o">|</span> <span class="n">Length</span> <span class="o">|</span> <span class="n">Checksum</span>                 <span class="o">|</span> 
+<span class="o">+--------+--------+--------+--------+</span> 
+<span class="o">|</span> 
+<span class="o">|</span> <span class="n">data</span> <span class="n">octets</span> <span class="o">...</span> 
+<span class="o">+----------------</span> <span class="o">...</span></code></pre></div>
+
+<h1 id="user-datagram-header-format">User Datagram Header Format</h1>
+<p>I campi Source Porte e Destination Port sono ovviamente la sorgente e la destinazione del pacchetto. Il
+campo Length e’ la lunghezza dell’intero datagramma UDP (testata + dati) in byte. Il valore minimo e’ 8, ma in
+realta’ questo campo non viene gestito dal protocollo, il quale sa che la lunghezza totale e’ la lunghezza di
+un datagramma IP meno i 20 byte della testata IP. Il campo Checksum e’ opzionale. Il checksum e’ un campo di
+controllo end-to-end: e’ calcolato dal mittente e verificato dal ricevitore del pacchetto. Se il pacchetto UDP
+e’ errato, viene scartato silenziosamente, senza generazione di messaggi d’errore. L’opzionalita’ dei checksum
+di UDP implica una velocita’ maggiore delle operazioni se disabilitata, ma puo’ naturalmente fornire sorgenti
+irrecuperabili di errori, specie su una rete non Ethernet o quando il datagramma UDP transiti da router.</p>
+
+<h1 id="casi-duso-del-protocollo-udp">Casi d’uso del protocollo UDP</h1>
+<p>Se si lavora nel campo dell’ integrazione di dispositivi per la rilevazione di campo e computer (ad esempio
+sensori di temperatura o piu’ generici rilevatori di campo, da quelli classici per le tessere badge ai piu’
+recenti di impronte digitali) ci si trovera’ molto probabilmente a dover utilizzare il protocollo UDP. Perche’
+il protocollo UDP e non il piu’ affidabile TCP/IP o addirittura http (cosi magari tiriamo in ballo le Servlet)? 
+Perche’ il protocollo UDP e’ piu’ facile da implementare a livello di firmware, quindi costa meno ai
+costruttori in termini di sviluppo ecc.</p>
+
+<h1 id="ed-e-gia-udp">Ed e’ gia UDP</h1>
+<p>UDP e’ il cugino povero di TCP, molto veloce ma poco affidabile. Quando lo usiamo per inviare dei dati non
+possiamo in nessun modo sapere se sono arrivati, ne se sono arrivati nell’ordine nel quale sono partiti. Dove
+si usa UDP ? Si puo’ usare per implementare un protocollo di trasferimento file come ad esempio NSF (Network
+File System, la sua ultima versione puo’ usare sia TCP che UDP), TFTP (Trivial FTP) ed altri (il multicasting
+si affida a UDP per la sperimentazione). Con UDP e’ l’applicazione che si deve preoccupare della affidabilita’,
+prendendosi cura dei pacchetti mancanti o fuori sequenza cio’ significa molto lavoro, si puo’ fare ma prima e’
+conveniente pensare se si poteva usare TCP. Le classi fondamentali che si devono conoscere con UDP sono
+DatagramPacket e DatagramSocket. Il package e’ sempre il solito java.net, che e’ stato trattato piu’ che bene
+sia su Mokabyte che in molti testi, ma attenzione ci sono differenze (delle modifiche) tra la sua
+implementazione dal JDK1.1 al JDK1.2. Chi utilizza il Jbuilder3 della Imprise per lo sviluppo puo’ andare nell’
+help in linea alla sezione Networking Features e poi selezionare Change in JDK 1.1.</p>
+
+<h1 id="finalmente-un-po-di-codice">Finalmente un po’ di codice!</h1>
+<p>E’ adesso cominciamo a scrivere un po’ di codice (chissa’ perche’ noi programmatori abbiamo sempre fretta
+di cominciare a massacrare le nostre tastiere). Supponiamo di avere una personal collegato in rete ad uno di
+questi dispositivi ambientali, dobbiamo aprire un socket sulla stessa porta sulla quale il dispositivo e’ in
+ascolto :</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="n">DatagramSocket</span> <span class="n">serverSocket</span> <span class="o">;</span> 
+<span class="kd">private</span> <span class="kt">int</span> <span class="n">serverPort</span> <span class="o">;</span> <span class="n">serverSocket</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">DatagramSocket</span><span class="o">(</span><span class="n">serverPort</span><span class="o">)</span> <span class="o">;</span></code></pre></div>
+
+<p>Ora che abbiamo il nostro oggetto socket per l’UDP (notare che si utilizza per questa ragione un
+DatagramSocket) Settiamo il timeout a 5 secondi, da notare che il timeout di default varia da browser a browser
+se si decide di usare delle Applet, invece con le applicazioni ,che consiglio, le cose sono piu’ facili.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">serverSocket</span><span class="o">.</span><span class="na">setSoTimeout</span><span class="o">(</span><span class="mi">5000</span><span class="o">)</span> <span class="o">;</span></code></pre></div>
+
+<p>Adesso supponiamo di voler spedire un segnale al nostro dispositivo (ad esempio il classico segnale di
+inizializzazione) per fare questo dobbiamo costruire un oggetto di tipo DatagramPacket. A tale scopo usiamo il
+costruttore di cui useremo la seguente versione (vedremo poi nell’approfondimento perche’)</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">DatagramPacket</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">buf</span><span class="o">,</span> <span class="kt">int</span> <span class="n">length</span><span class="o">,</span> <span class="n">InetAddress</span> <span class="n">address</span><span class="o">,</span> <span class="kt">int</span> <span class="n">port</span><span class="o">)</span> 
+<span class="n">DatagramPacket</span> <span class="n">packet</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">DatagramPacket</span><span class="o">(</span><span class="n">data</span><span class="o">,</span><span class="n">data</span><span class="o">.</span><span class="na">length</span><span class="o">,</span><span class="n">address</span><span class="o">,</span> <span class="n">serverPort</span><span class="o">);</span></code></pre></div>
+
+<p>Quindi inviamolo al nostro dispositivo</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">serverSocket</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="n">packet</span><span class="o">);</span></code></pre></div>
+
+<p>A questo punto, direi che la prossima cosa da fare e’ aspettare il segnale di ritorno dal nostro
+dispositivo, che dovrebbe essere un echo nel migliore dei casi, un messaggio di errore o altro, dipende dal
+dispositivo e dell’ architettura del sistema scelto permettendo.</p>
+
+<p>Creiamo il DatagramPacket vuoto che conterra’ il pacchetto ritornato, ricordandoci che il protocollo UDP
+non e’ sicuro, e quindi spetta a noi (qualora sia possibile, e non sempre lo e’) gestire a livello software un
+eventuale sistema di controllo degli errori.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">DatagramPacket</span> <span class="n">packet</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">DatagramPacket</span><span class="o">(</span><span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">512</span><span class="o">],</span><span class="mi">512</span><span class="o">);</span></code></pre></div>
+
+<p>Per metterci in ascolto sul socket utilizziamo il metodo receice, che e’ bloccante, cio’ blocca il flusso
+del programma finche’ non riceve un pacchetto o scade il timeout, sollevando un eccezione.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="k">try</span> <span class="o">{</span> 
+   <span class="n">serverSocket</span><span class="o">.</span><span class="na">receive</span><span class="o">(</span><span class="n">packet</span><span class="o">);</span> 
+<span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">java</span><span class="o">.</span><span class="na">io</span><span class="o">.</span><span class="na">InterruptedIOException</span> <span class="n">e</span><span class="o">){</span>
+    <span class="c1">// gestiamo il timeout </span>
+<span class="o">}</span></code></pre></div>
+
+<p>Infine e’ sempre buona norma rimettere le cose al loro posto prima di chiudere l’applicazione, che tradotto
+significa che dobbiamo chiudere il socket con il metodo close.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">serverSocket</span><span class="o">.</span><span class="na">close</span><span class="o">()</span> <span class="o">;</span></code></pre></div>
+
+<p>Abbiamo visto come sia relativamente facile lavorare con UDP e Java, ben inteso l’argomento e’ ben piu’
+esteso, ma al contrario del piu’ diffuso e sicuro TCP/IP, bisogna tagliare le soluzioni su misura, di caso in
+caso, con un occhio di riguardo ai dispositivi con cui si deve colloquiare. Infatti essi dettano le regole del
+gioco e lo fanno a proprio vantaggio, o meglio questo e’ quello che fanno i loro costruttori. Un ultima nota
+prima di passare all’approfondimento : cercate di non disseminare di oggetti DatagramPacket le vostre
+applicazioni, progettate sempre classi wrapper, vi rendera’ molto piu’ facile la vita quando dovrete fare i
+conti con qualche classe deprecata o qualche baco della liberia, inoltre fate sempre dei test conoscitivi in
+modo da sapere prima come si comporta la vostra implementazione di UDP su sistemi operativi diversi come NT,
+quando ad esempio la JVM va in crash ma il socket non ne vuole sapere di chiudersi e altre sorpresine di mamma
+Sun.</p>
+
+<h1 id="lapprofondimento">L’approfondimento</h1>
+<p>Dopo gli stralci di codice visti sopra, cerchiamo un approccio piu’ ragionato e sistematico a quanto ci e’
+dato da Java per implementare UDP. Cominciamo con la classe <code>DatagramPacket</code> : <code>DatagramPacket</code> ha due costruttori:
+uno si usa per ricevere dati dalla rete, l’altro per inviarli, sotto sono riportate le loro segnature.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="nf">DatagramPacket</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">buff</span><span class="o">,</span> <span class="kt">int</span> <span class="n">len</span><span class="o">)</span></code></pre></div>
+
+<p>in questo caso i dati si troveranno in buff</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="nf">DatagramPacket</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">buff</span><span class="o">,</span> <span class="kt">int</span> <span class="n">len</span><span class="o">,</span> <span class="n">InetAddress</span> <span class="n">addr</span><span class="o">,</span> <span class="kt">int</span> <span class="n">port</span><span class="o">)</span></code></pre></div>
+
+<p>in quest’ altro si crea un datagramma per inviare il pacchetto di byte buff all’ host di indirizzo addr e
+alla porta port Per operare su un oggetto di DatagramPacket si sono poi i seguenti metodi :</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">synchronized</span> <span class="n">InetAddress</span> <span class="nf">getAddress</span><span class="o">()</span> 
+<span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">int</span> <span class="nf">getPort</span><span class="o">()</span> 
+<span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">byte</span><span class="o">[]</span> <span class="nf">getData</span><span class="o">()</span> <span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">int</span> <span class="nf">getLength</span><span class="o">()</span></code></pre></div>
+
+<p>La classe DatagramSocket invece serve per inviare o ricevere un datagramma, anche qui troviamo diversi
+costruttori :</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="nf">DatagramSocket</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">SocketException</span></code></pre></div>
+
+<p>legato ad una porta anonima, in quanto la porta di destinazione e’ parte del DatagramPacket.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="nf">DatagramSocket</span><span class="o">(</span><span class="kt">int</span> <span class="n">port</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SocketException</span> 
+<span class="kd">public</span> <span class="nf">DatagramSocket</span><span class="o">(</span><span class="kt">int</span> <span class="n">port</span><span class="o">,</span> <span class="n">InetAddres</span> <span class="n">addr</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SocketException</span></code></pre></div>
+
+<p>vi sono poi i metodi :</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="n">DatagramPacket</span> <span class="n">o</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> 
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">receive</span><span class="o">(</span><span class="n">DatagramPacket</span> <span class="n">p</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> 
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getLocalPort</span><span class="o">()</span> 
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">close</span><span class="o">()</span></code></pre></div>
+
+<p>che ovviamente libera la porta occupata da quel socket Infine le opzioni per settare il timeout</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">setSoTimeout</span><span class="o">(</span><span class="kt">int</span> <span class="n">timeout</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SocketException</span></code></pre></div>
+
+<p>e per conoscerne il valore</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">int</span> <span class="nf">getSoTimeout</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span></code></pre></div>
+
+<h1 id="conclusione">Conclusione</h1>
+
+<p>Abbiamo visto come sia facile e produttivo realizzare applicazioni che implementano il protocollo UDP con
+Java, ne abbiamo individuato i punti di forza e le debolezza. Probabilmente chi ha a che fare come gli autori
+con software di questa tipologia, vedra’ presto passare i costruttori verso i piu’ evoluti TCP o HTTP, esistono
+gia’ infatti interessanti esempio di rilevatori di campo che utilizzano questi protocolli, specialmente http,
+ma a parte i mercati USA, che tanto per cambiare sono sempre un decennio avanti a noi (dopotutto hanno iniziato
+prima), dove sono ormai lo standard di fatto, in casa nostra si sentira’ parlare di UDP ancora per molto.
+Quindi occhio ai datagrammi.</p>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/v2/articles/come-cancellare-history-comandi-linux/" class="btn" title="Come cancellare l'history comandi su linux.">Previous</a>
+      
+      
+        <a href="http://localhost:4000/v2/articles/le-feature-del-linguaggio-java-che-devi-conoscere/" class="btn" title="Le feature del linguaggio Java che devi conoscere">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2015 Massimo Caliman. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/mcaliman" title="Massimo Caliman on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	<a href="https://plus.google.com/+MassimoCalimanIT" title="Massimo Caliman on Google+" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a>
+	<a href="https://linkedin.com/in/mcaliman" title="Massimo Caliman on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/mcaliman" title="Massimo Caliman on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://localhost:4000';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-53230757-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>
