@@ -1,3 +1,10 @@
+#
+# author	    : Massimo Caliman, mcaliman@gmail.com
+# last update       : 2015-11-30
+# to build use      : bundle exec jekyll build
+# to run server use : bundle exec jekyll build
+#
+
 title:            Massimo Caliman's 
 description:      blog on Computer Science.
 #logo:            site-logo.png
