@@ -15,7 +15,8 @@ description: blog on Computer Science.
 #logo: site-logo.png
 logo: bio-photo.jpg
 search: true
-url: http://localhost:4000
+#url: http://localhost:4000
+url: http://caliman.org
 
 # Jekyll configuration
 

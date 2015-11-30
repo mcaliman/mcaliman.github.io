@@ -3,7 +3,7 @@
   
     {
       "title"			: "Ubuntu 14.04.02 LTS installare subversion (svn)",
-      "link"			: "http://localhost:4000/articles/ubuntu-14.04.02-LTS-installare-subversion/",
+      "link"			: "http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/",
       "excerpt"		: "<p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>
 
 "
@@ -13,7 +13,7 @@
   
     ,{
       "title"			: "Ubuntu 14.04.02 LTS installare git",
-      "link"			: "http://localhost:4000/articles/ubuntu-14.04.02-LTS-installare-git/",
+      "link"			: "http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-git/",
       "excerpt"		: "<p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>
 
 "
@@ -23,7 +23,7 @@
   
     ,{
       "title"			: "Ubuntu 14.04.02 LTS abilitare l’utente root",
-      "link"			: "http://localhost:4000/articles/ubuntu-14.04.02-LTS-abilitare-root/",
+      "link"			: "http://caliman.org/articles/ubuntu-14.04.02-LTS-abilitare-root/",
       "excerpt"		: "<p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>
 
 "
@@ -33,7 +33,7 @@
   
     ,{
       "title"			: "Ubuntu 14.04.02 LTS 64bit installare Open SSH",
-      "link"			: "http://localhost:4000/articles/ubuntu-14.04.02-LTS-install-openssh/",
+      "link"			: "http://caliman.org/articles/ubuntu-14.04.02-LTS-install-openssh/",
       "excerpt"		: "<p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>
 
 "
@@ -43,7 +43,7 @@
   
     ,{
       "title"			: "Abilitare il comando sudo su debian 8",
-      "link"			: "http://localhost:4000/articles/debian-8-abilitare-sudo/",
+      "link"			: "http://caliman.org/articles/debian-8-abilitare-sudo/",
       "excerpt"		: "<p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>
 
 "
@@ -53,7 +53,7 @@
   
     ,{
       "title"			: "Login e pagine sicure con JSF 2",
-      "link"			: "http://localhost:4000/articles/JSF22SecureLoginWebapp/",
+      "link"			: "http://caliman.org/articles/JSF22SecureLoginWebapp/",
       "excerpt"		: "<p>In questo post vediamo come realizzare un sistema minimo di login con sicurezza di base in una applicazione Java Server Faces 2.2.</p>
 
 "
@@ -63,7 +63,7 @@
   
     ,{
       "title"			: "Creare un custom Converter in JSF 2.2",
-      "link"			: "http://localhost:4000/articles/creare-un-custom-converter-in-jsf-2/",
+      "link"			: "http://caliman.org/articles/creare-un-custom-converter-in-jsf-2/",
       "excerpt"		: "<p>Un anno speso nell’intelligenza artificiale è abbastanza perchè una persona creda in Dio.
 <em>(Alan Perlis)</em></p>
 
@@ -74,7 +74,7 @@
   
     ,{
       "title"			: "Facili le dropdownbox con le JSF 2.2!",
-      "link"			: "http://localhost:4000/articles/facili-le-dropdownbox-con-le-jsf-2/",
+      "link"			: "http://caliman.org/articles/facili-le-dropdownbox-con-le-jsf-2/",
       "excerpt"		: "<p>Un anno speso nell’intelligenza artificiale è abbastanza perchè una persona creda in Dio.
 <em>(Alan Perlis)</em></p>
 
@@ -85,7 +85,7 @@
   
     ,{
       "title"			: "JSF 2 Come usare i commenti",
-      "link"			: "http://localhost:4000/articles/jsf-2-come-usare-i-commenti/",
+      "link"			: "http://caliman.org/articles/jsf-2-come-usare-i-commenti/",
       "excerpt"		: "<p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>
 
 "
@@ -95,7 +95,7 @@
   
     ,{
       "title"			: "Usare i Channel per copiare file in Java",
-      "link"			: "http://localhost:4000/articles/usare-i-channel-per-copiare-file-in-java/",
+      "link"			: "http://caliman.org/articles/usare-i-channel-per-copiare-file-in-java/",
       "excerpt"		: "<p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>
 
 "
@@ -105,7 +105,7 @@
   
     ,{
       "title"			: "JSF 2 forzare gli id generati dai tag",
-      "link"			: "http://localhost:4000/articles/jsf-2-forzare-gli-id-generati-dai-tag/",
+      "link"			: "http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/",
       "excerpt"		: "<p>I computer sono come gli Dei del Vecchio Testamento: pieni di regole e nessuna pietà. <em>(Joseph Campbell, Il potere del mito, 1988)</em></p>
 
 "
@@ -115,7 +115,7 @@
   
     ,{
       "title"			: "Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Search)",
-      "link"			: "http://localhost:4000/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/",
+      "link"			: "http://caliman.org/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/",
       "excerpt"		: "<p>﻿“PHP is a minor evil perpetrated and created by incompetent amateurs, whereas Perl is a great and insidious evil perpetrated by skilled but perverted professionals.”
 <em>(Jon Ribbens)</em></p>
 
@@ -143,7 +143,7 @@
   
     ,{
       "title"			: "Algoritmo di visita in profondità per un albero (DFS o Depth First Search)",
-      "link"			: "http://localhost:4000/articles/alberi-algoritmo-vistita-in-profondita-DFS/",
+      "link"			: "http://caliman.org/articles/alberi-algoritmo-vistita-in-profondita-DFS/",
       "excerpt"		: "<p>﻿”La scienza è ciò che comprendiamo abbastanza bene da spiegarla a un computer. L’arte è tutto il resto”
 <em>(Donald Knuth)</em></p>
 
@@ -190,7 +190,7 @@ la pila non appare esplicitamente nell’algoritmo in quanto è la pila di recor
   
     ,{
       "title"			: "Algoritmo di visita generica per un albero",
-      "link"			: "http://localhost:4000/articles/alberi-algoritmo-vistita-generico/",
+      "link"			: "http://caliman.org/articles/alberi-algoritmo-vistita-generico/",
       "excerpt"		: "<p>Quando qualcuno dice, “Voglio un linguaggio di programmazione nel quale ho bisogno soltanto di dire
 ciò che voglio venga fatto”, dagli un lecca-lecca
 <em>(Alan Perlis)</em></p>
@@ -223,7 +223,7 @@ ciò che voglio venga fatto”, dagli un lecca-lecca
   
     ,{
       "title"			: "Alberi rappresentazioni collegate",
-      "link"			: "http://localhost:4000/articles/alberi-rappresentazioni-collegate/",
+      "link"			: "http://caliman.org/articles/alberi-rappresentazioni-collegate/",
       "excerpt"		: "<p>Proseguendo nella trattazione degli alberi normalmente si preferiscono le ﻿rappresentazioni basate su strutture collegate 
 1. più flessibile di quelle idicizzate
 2. modifiche alla struttura più efficienti</p>
@@ -251,7 +251,7 @@ Per scandire tutti i figli di un nodo basta scendere sul primo figlio e poi scan
   
     ,{
       "title"			: "Alberi rappresentazioni indicizzate",
-      "link"			: "http://localhost:4000/articles/alberi-rappresentazioni-indicizzate/",
+      "link"			: "http://caliman.org/articles/alberi-rappresentazioni-indicizzate/",
       "excerpt"		: "<p>﻿Rappresentazioni indicizzate
 Basate su array vettore padri e vettori posizionali entrambe richiedono spazio O(n)</p>
 
@@ -283,7 +283,7 @@ p vettore di dimensione n  t.c. p[v] contiene l’informazione associata al nodo
   
     ,{
       "title"			: "Alberi in Java",
-      "link"			: "http://localhost:4000/articles/alberi-in-java/",
+      "link"			: "http://caliman.org/articles/alberi-in-java/",
       "excerpt"		: "<p>﻿Dopo i post sulle strutture dati elementari passiamo a trattare gli alberi, prima di entrare nel dettaglio di come implementare strutture dati di questo tipo ne approfondiamo l’aspetto teorico.</p>
 
 <p>Per prima cosa ne vediamo la definzione classica</p>
@@ -359,7 +359,7 @@ operazioni
   
     ,{
       "title"			: "Strutture indicizzate approfondimenti",
-      "link"			: "http://localhost:4000/articles/strutture-indicizzate-approfondimento/",
+      "link"			: "http://caliman.org/articles/strutture-indicizzate-approfondimento/",
       "excerpt"		: "<p>﻿Riprendiamo il post sulle strutture indicizzate per un approfondimento.
 Abbiamo visto che il <strong>Java Collection Framework</strong> ci fornisce già praticamente qualunque struttura di cui possiamo aver bisogno per il nostro lavoro. Avete mai avuto la curiosità di vedere come vengono implementate queste strutture? Il codice sorgente è pubblico, lo potete scaricare insieme al JDK ad ogni release, noterete che spesso e volentieri non vi è nulla di fantascientifico nell’implementazione di strutture come <code>ArratList</code>, per esempio la specifica di implementazione vista in pseudocodice nel post sulle strutture indicizzate precedente a questo nella sostanza non vi differisce molto. Quello che fa la differenza sono le ottimizzazioni.</p>
 
@@ -453,7 +453,7 @@ Le operazioni di insert e delete comprendono la fase di riallocazione dell’arr
   
     ,{
       "title"			: "Code o Queue",
-      "link"			: "http://localhost:4000/articles/code-o-queue/",
+      "link"			: "http://caliman.org/articles/code-o-queue/",
       "excerpt"		: "<p>﻿Riprendiamo la trattazione delle strutture dati elementari. Nei post precedenti abbiamo visto le strutture indicizzate,quelle collegate e le Pile o Stack,uno altro dei tipo base più ricorrenti è la Coda o Queue, una specifica in pseudolinguaggio è riportata sotto.</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">tipo Coda
@@ -513,7 +513,7 @@ Anche in questo caso possiamo utilizzare i metodi di Deque relativi al suo compo
   
     ,{
       "title"			: "Pile o Stack",
-      "link"			: "http://localhost:4000/articles/pile-o-stack/",
+      "link"			: "http://caliman.org/articles/pile-o-stack/",
       "excerpt"		: "<p>﻿
 Uno dei tipo base più ricorrente è la Pila o Stack, una specifica in pseudolinguaggio è riportata sotto.</p>
 
@@ -577,7 +577,7 @@ top<span class="o">()</span>-&gt;elem restituisce l’ultimo elemento di S <span
   
     ,{
       "title"			: "Strutture collegate",
-      "link"			: "http://localhost:4000/articles/strutture-collegate/",
+      "link"			: "http://caliman.org/articles/strutture-collegate/",
       "excerpt"		: "<p>﻿I costituenti di base di una struttura collegata sono i record che come le celle degli array sono numerati e contengono ciascuno una collezione di oggetti. I numeri associati ai record sono i loro indirizzi in memoria (quindi globali nell’ambito del programma e non locali come nel caso degli array)
 Gli indirizzi in memoria non sono necessariamente consecutivi e sono costruiti in maniera dinamica.</p>
 
@@ -669,7 +669,7 @@ verificando se qualche p ha chiave k in caso positivo si restituisce l’element
   
     ,{
       "title"			: "Strutture indicizzate",
-      "link"			: "http://localhost:4000/articles/strutture-indicizzate/",
+      "link"			: "http://caliman.org/articles/strutture-indicizzate/",
       "excerpt"		: "<p>﻿Le strutture indicizzate sono collezioni di celle numerate che possono contenere elementi di tipo prestabilito. Assumeremo che in un array di dimensione h gli indici possano andare da 0 a h-1 o da 1 a h.</p>
 
 <p>Normalmente si definiscono due proprietà, una comunemente detta forte l’altra debole.</p>
@@ -736,7 +736,7 @@ dati: un array S di dimensione n contenente n coppie (elem,chiave) S(n) = Tetagr
   
     ,{
       "title"			: "Usare HashMap in Java",
-      "link"			: "http://localhost:4000/articles/usare-hashmap-in-java/",
+      "link"			: "http://caliman.org/articles/usare-hashmap-in-java/",
       "excerpt"		: "<p>﻿Riprendiamo da dove ci eravamo lasciati (vedi post precedente), dopo aver visto un pò di teoria sui dizionari e qualcosa sull’interfaccia <code>Map</code> passiamo a esempi pratici. Parleremo esclusivamente della classe concreta <code>HashMap</code>, la nuova, per così dire, <code>Hashtable</code>.</p>
 
 <p>Prima di iniziare ricordiamo le differenze principali tra le due</p>
@@ -857,7 +857,7 @@ Questo metodo ritorna una versione thread-safe di <code>Map</code></p>
   
     ,{
       "title"			: "Dizionari in Java",
-      "link"			: "http://localhost:4000/articles/dizionari-in-java/",
+      "link"			: "http://caliman.org/articles/dizionari-in-java/",
       "excerpt"		: "<p>Nelle vecchie release del linguaggio Java il tipo di dato dizionario veniva realizzato a partire dalla classe <code>Dictionary&lt;K,V&gt;</code> del package <code>java.util</code>. 
 La classe <code>Dictionary</code> è il genitore astratto di <code>Hashtable</code>, che associa chiavi a valori. Ogni chiave e ogni valore è un oggetto. In ogni oggetto <code>Dictionary</code>, ogni chiave è associata al più ad un valore. Dato un dizionario e una chiave, si può recuperare l’elemento associato. Qualsiasi oggetto non <code>null</code> può essere utilizzato sia come una chiave che come valore. 
 Di norma, il metodo <code>equals</code> deve essere implemantato da questa classe per decidere se due chiavi sono uguali.
@@ -870,7 +870,7 @@ Benchè non ancora deprecata <code>Dictionary</code> può essere considerata obs
   
     ,{
       "title"			: "Concatenare PDF con iText in Java",
-      "link"			: "http://localhost:4000/articles/concatenare-pdf-con-itext-in-java/",
+      "link"			: "http://caliman.org/articles/concatenare-pdf-con-itext-in-java/",
       "excerpt"		: "<p>iText è sicuramente la libreria più diffusa e completa per l’elaborazione di file pdf, consiglio vivamente di darci un occhiata prima di valutare altri framework o reinventare l’acqua calda.</p>
 
 "
@@ -880,7 +880,7 @@ Benchè non ancora deprecata <code>Dictionary</code> può essere considerata obs
   
     ,{
       "title"			: "Scrivere e leggere file in Java 7 con try-with-resources",
-      "link"			: "http://localhost:4000/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/",
+      "link"			: "http://caliman.org/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/",
       "excerpt"		: "<p>Leggere e scrivere file in Java 7 sfruttando il nuovo costrutto try-with-resource manleva lo sviluppatore dal compito di chiudere correttamente gli stream, sotto potete trovare due metodi di esempio.</p>
 
 "
@@ -890,7 +890,7 @@ Benchè non ancora deprecata <code>Dictionary</code> può essere considerata obs
   
     ,{
       "title"			: "Riguardo i limiti del calcolabile",
-      "link"			: "http://localhost:4000/articles/riguardo-i-limiti-del-calcolabile/",
+      "link"			: "http://caliman.org/articles/riguardo-i-limiti-del-calcolabile/",
       "excerpt"		: "<p>Il seguente argomento, dovuto a L.J. Stockmeyer, è di natura puramente fisica ma
 mostra in modo chiaro cosa si intenda per limiti del calcolabile:</p>
 
@@ -901,7 +901,7 @@ mostra in modo chiaro cosa si intenda per limiti del calcolabile:</p>
   
     ,{
       "title"			: "Come ti swappo due variabili in un colpo solo con Python",
-      "link"			: "http://localhost:4000/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/",
+      "link"			: "http://caliman.org/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/",
       "excerpt"		: "<p>Vi è mai capitato di scrivere qualcosa del genere ?</p>
 
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">swap</span><span class="o">(</span><span class="n">x</span><span class="o">,</span><span class="n">y</span><span class="o">)</span></code></pre></div>
@@ -925,7 +925,7 @@ mostra in modo chiaro cosa si intenda per limiti del calcolabile:</p>
   
     ,{
       "title"			: "Secure httpbase tomcat authentication",
-      "link"			: "http://localhost:4000/articles/secure-httpbase-tomcat-authentication/",
+      "link"			: "http://caliman.org/articles/secure-httpbase-tomcat-authentication/",
       "excerpt"		: "<p>Per impostare l&#8217;autenticazione base in una applicazione java in tomcat possiamo intervenire solo in due file</p>
 
 "
@@ -935,7 +935,7 @@ mostra in modo chiaro cosa si intenda per limiti del calcolabile:</p>
   
     ,{
       "title"			: "Considerazioni sulla ricorsione",
-      "link"			: "http://localhost:4000/articles/considerazioni-sulla-ricorsione/",
+      "link"			: "http://caliman.org/articles/considerazioni-sulla-ricorsione/",
       "excerpt"		: "<p>Nei linguaggi di programmazione la ripetizione di comandi o statement viene realizzata tramite cicli, realizzati normalmente con costrutti del tipo <code>for</code>,<code>foreach</code> e <code>white</code>. Per particolari problemi la ricorsione rappresenta una valida arlternativa, più elegante, naturale  e semplice da realizzare.
 Abbiamo la ricorsione quando una funzione (in Java un metodo) richiama se stesso.</p>
 
@@ -946,7 +946,7 @@ Abbiamo la ricorsione quando una funzione (in Java un metodo) richiama se stesso
   
     ,{
       "title"			: "﻿Una Servlet per gestire il download di file in Java",
-      "link"			: "http://localhost:4000/articles/una-servlet-per-gestire-il-download-di-file-in-java/",
+      "link"			: "http://caliman.org/articles/una-servlet-per-gestire-il-download-di-file-in-java/",
       "excerpt"		: "<p>Vediamo in questo post come scrivere il codice di una Servlet Java che ci permette di effettuare il trasferimento (il download) di un file dalla nostra applicazione server al client (il web browser dei nostri utenti).
 Effettuando il click su un link che punta alla nostra servlet verrà avviato il download, vediamo il codice piuttosto intuitivo nelle linee sottostanti del post.
 Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto (usando una qualche implementazione di <code>InputStream</code> nel nostro caso useremo <code>FileInputStream</code>); di determinare il tipo <code>MIME</code> e riversare il tutto correnttamente sull’oggetto di tipo <code>HttpServletResponse</code> della nostra Servlet.</p>
@@ -958,7 +958,7 @@ Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto
   
     ,{
       "title"			: "Inviare mail con allegati in Java",
-      "link"			: "http://localhost:4000/articles/inviare-mail-con-allegati-in-java/",
+      "link"			: "http://caliman.org/articles/inviare-mail-con-allegati-in-java/",
       "excerpt"		: "<p>Il package javax.mail è molto ricco, quindi in prima istanza può anche disorientare, vedremo nel codice presentato in questo post quanto ripaghi in flessibilità e potenzialità questa complessità. E’ vero, non ho un metodo semplice mail() come in altri linguaggi,  ma ho gli strumenti per crearmi anche un server di posta di tutto rispetto (ma questo lo approfondieremo in un prossimo post, riguardo il semplice metodo mail() possiamo anche crearcelo a partire dalle API come vedremo e sarà fatto su misura per le nostre esigenze)
 Per creare la nostra utility faremo riferimento al pattern commmand.
 Per prima cosa definiamo una classe astratta che conterrà la gestione mailcap sempre utile quando si vuole gestire notifiche via mail da piattaforma Java.</p>
@@ -970,7 +970,7 @@ Per prima cosa definiamo una classe astratta che conterrà la gestione mailcap s
   
     ,{
       "title"			: "Il metodo String.format una printf per Java",
-      "link"			: "http://localhost:4000/articles/Il-metodo-string-format-una-printf-per-java/",
+      "link"			: "http://caliman.org/articles/Il-metodo-string-format-una-printf-per-java/",
       "excerpt"		: "<p>﻿
 Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Java nè tantomeno alla 7, per chi non lo sapesse già la versione 7 del JDK, offre il metodo</p>
 
@@ -981,7 +981,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "Considerazioni su alcuni Linguaggi di Programmazione Parte 4",
-      "link"			: "http://localhost:4000/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/",
+      "link"			: "http://caliman.org/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/",
       "excerpt"		: "<p>È meglio usare programmi di alta qualità senza costi di licenza, che costosi programmi proprietari di scarso valore. 
 <em>(Walter Bender, direttore del Media Lab del MIT)</em></p>
 
@@ -992,7 +992,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "Considerazioni su alcuni Linguaggi di Programmazione Parte 3",
-      "link"			: "http://localhost:4000/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/",
+      "link"			: "http://caliman.org/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/",
       "excerpt"		: "<p>I bravi programmatori sanno cosa scrivere, i migliori sanno cosa riscrivere (e riusare). 
 <em>(Eric Steven Raymond)</em></p>
 
@@ -1003,7 +1003,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "Considerazioni su alcuni Linguaggi di Programmazione Parte 2",
-      "link"			: "http://localhost:4000/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/",
+      "link"			: "http://caliman.org/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/",
       "excerpt"		: "<p>Ogni buon lavoro software nasce da un problema personale di uno sviluppatore. 
 <em>(Eric Steven Raymond)</em></p>
 
@@ -1014,7 +1014,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "Considerazioni su alcuni Linguaggi di Programmazione Parte 1",
-      "link"			: "http://localhost:4000/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/",
+      "link"			: "http://caliman.org/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/",
       "excerpt"		: "<p>Mai fidarsi di un computer che non è possibile gettare dalla finestra. 
 <em>(Steve Wozniak)</em></p>
 
@@ -1025,7 +1025,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "La gestione delle stringhe in Java",
-      "link"			: "http://localhost:4000/articles/la-gestione-delle-stringhe-in-java/",
+      "link"			: "http://caliman.org/articles/la-gestione-delle-stringhe-in-java/",
       "excerpt"		: "<p>L’ingegnere quantistico Seth Lloyd è convinto che l’universo sia un gigantesco computer. Speriamo non faccia girare Windows. <em>(Kevin Kelly)</em></p>
 
 "
@@ -1035,7 +1035,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "Il cms è morto viva jekyll!",
-      "link"			: "http://localhost:4000/articles/il-cms-e-morto-viva-jekyll/",
+      "link"			: "http://caliman.org/articles/il-cms-e-morto-viva-jekyll/",
       "excerpt"		: "<p>Il test di un programma può essere usato per mostrare la presenza di bug, ma mai per mostrare la loro assenza.
 <em>(Edsger Dijkstra, Structured Programming, 1972)</em></p>
 
@@ -1046,7 +1046,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "Installare Jekyll su ubuntu 14.04.",
-      "link"			: "http://localhost:4000/articles/install-jekyll/",
+      "link"			: "http://caliman.org/articles/install-jekyll/",
       "excerpt"		: "<p>Per gli hacker un computer significa anche intrattenimento. Non i giochi, non le belle immagini sulla Rete. Il computer in sé è intrattenimento.
 <em>(Linus Torvalds, in Pekka Himanen, L’etica hacker e lo spirito dell’età dell’informazione, 2001)</em></p>
 
@@ -1057,7 +1057,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "Effettuare la login SSH senza digitare la password.",
-      "link"			: "http://localhost:4000/articles/Effettuare-la-login-ssh-senza-digitare-la-password/",
+      "link"			: "http://caliman.org/articles/Effettuare-la-login-ssh-senza-digitare-la-password/",
       "excerpt"		: "<p>Se si vuole usare <code>Linux</code> e <code>OpenSSH</code> per automatizzare delle attività e si ha la necessità di poter effettuare la login automatica dal un host <code>A</code> con utente <code>a</code> ad un host <code>B</code> con utente <code>b</code> senza inserire nessuna password questi sono i passo necessari:</p>
 
 "
@@ -1067,7 +1067,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "GlassFish V3: la console amministrazione prendendo troppo tempo per caricare.",
-      "link"			: "http://localhost:4000/articles/glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/",
+      "link"			: "http://caliman.org/articles/glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/",
       "excerpt"		: "<p>Chiedersi se un computer possa pensare non è più interessante del chiedersi se un sottomarino possa nuotare.
 <em>(Edsger Dijkstra, The threats to computing science, 1984)</em></p>
 
@@ -1078,7 +1078,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "HOWTO FIX errore 'illegal pattern character g' JAXB in NetBeans .",
-      "link"			: "http://localhost:4000/articles/howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/",
+      "link"			: "http://caliman.org/articles/howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/",
       "excerpt"		: "<p>Il computer non è una macchina intelligente che aiuta le persone stupide, anzi è una macchina stupida che funziona solo nelle mani delle persone intelligenti.
 <em>(Umberto Eco, Come scrivere una tesi di laurea con il personal computer, 1986 (prefazione))</em></p>
 
@@ -1089,7 +1089,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "Come trovare il jar dove è contenuta una determinata classe (deployed in GlassFish).",
-      "link"			: "http://localhost:4000/articles/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/",
+      "link"			: "http://caliman.org/articles/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/",
       "excerpt"		: "<p>I Greci dicevano di una persona incolta: “Non sa leggere né nuotare”; oggi bisognerebbe aggiungere: “né usare un elaboratore”.
 <em>(Primo Levi e Tullio Regge, Dialogo, 1984)</em></p>
 
@@ -1100,7 +1100,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "Come impostare Virtualbox a schermo intero su Ubuntu 14.04",
-      "link"			: "http://localhost:4000/articles/come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404/",
+      "link"			: "http://caliman.org/articles/come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404/",
       "excerpt"		: "<p>I computer sono come gli Dei del Vecchio Testamento: pieni di regole e nessuna pietà.
 <em>(Joseph Campbell, Il potere del mito, 1988)</em></p>
 
@@ -1111,7 +1111,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "Pubblicare un sito con GitHub Pages.",
-      "link"			: "http://localhost:4000/articles/pubblicare-un-sito-con-github-pages/",
+      "link"			: "http://caliman.org/articles/pubblicare-un-sito-con-github-pages/",
       "excerpt"		: "<p>L’informatica non riguarda i computer più di quanto l’astronomia riguardi i telescopi.
 <em>(Edsger Dijkstra)</em></p>
 
@@ -1122,7 +1122,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "Come installare Ant su linux",
-      "link"			: "http://localhost:4000/articles/come-installare-ant-su-linux/",
+      "link"			: "http://caliman.org/articles/come-installare-ant-su-linux/",
       "excerpt"		: "<p>Non provare mai a spiegare il computer a un profano. È più facile spiegare il sesso a una vergine.
 <em>(Robert Anson Heinlein, La Luna è una severa maestra, 1966)</em></p>
 
@@ -1133,7 +1133,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "Creare e configurare un DataSource MySQL in GlassFish Application Server",
-      "link"			: "http://localhost:4000/articles/creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/",
+      "link"			: "http://caliman.org/articles/creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/",
       "excerpt"		: "<p>Mentre in fisica devi capire come è fatto il mondo, in informatica sei tu a crearlo. Dentro i confini del computer, sei tu il creatore. Controlli – almeno potenzialmente – tutto ciò che vi succede. Se sei abbastanza bravo, puoi essere un Dio. Su piccola scala.
 <em>(Linus Torvalds, Rivoluzionario per caso, 2001)</em></p>
 
@@ -1144,7 +1144,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "BPEL (Business Process Execution Language)",
-      "link"			: "http://localhost:4000/articles/bpel/",
+      "link"			: "http://caliman.org/articles/bpel/",
       "excerpt"		: "<p>I computer sono incredibilmente veloci, accurati e stupidi. Gli uomini sono incredibilmente lenti, inaccurati e intelligenti. L&#8217;insieme dei due costituisce una forza incalcolabile.
 <em>(Albert Einstein (attribuito))</em></p>
 
@@ -1155,7 +1155,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "Javascript secondo Peter Paul Kock (PPK)",
-      "link"			: "http://localhost:4000/articles/javascript-secondo-peter-paul-kock-PPK/",
+      "link"			: "http://caliman.org/articles/javascript-secondo-peter-paul-kock-PPK/",
       "excerpt"		: "<p>Se vi capita di dover lavorare in javascript, anche solo per copiare e incollare semplici script nel vostro sito fatevi un regalo,
 comprate e leggete “Java Script secondo Peter-Paul Kock” (Pearson Education) traduzione di PPK ON JAVASCRIPT.
 Uno dei pochi libri su javascript che non sia un reference o una semplice raccolta di banali script.
@@ -1171,7 +1171,7 @@ si spiega come debuggare uno script,come usare le tecniche più avanzate e come 
   
     ,{
       "title"			: "Uso di keytool e jarsigner",
-      "link"			: "http://localhost:4000/articles/uso-di-keytool-e-jarsigner/",
+      "link"			: "http://caliman.org/articles/uso-di-keytool-e-jarsigner/",
       "excerpt"		: "<p>Per estrarre un certificato che già sappiamo essere nel nostro portachiavi</p>
 
 "
@@ -1181,7 +1181,7 @@ si spiega come debuggare uno script,come usare le tecniche più avanzate e come 
   
     ,{
       "title"			: "Errori comuni nella configurazione di Adobe PDF iFilter per SharePoint 2007",
-      "link"			: "http://localhost:4000/articles/errori-comuni-nella-configurazione-di-adobe-pdf-ifilter-per-sharepoint-2007/",
+      "link"			: "http://caliman.org/articles/errori-comuni-nella-configurazione-di-adobe-pdf-ifilter-per-sharepoint-2007/",
       "excerpt"		: "<p>Un errore comune in cui si può incorrere nell’installare iFilter per SharePoint 2007 è quello di dimenticare di sostituire il valore della chiave</p>
 
 "
@@ -1191,7 +1191,7 @@ si spiega come debuggare uno script,come usare le tecniche più avanzate e come 
   
     ,{
       "title"			: "Well Formatted riferito ad un documento XML",
-      "link"			: "http://localhost:4000/articles/well-formatted-riferito-ad-un-documento-xml/",
+      "link"			: "http://caliman.org/articles/well-formatted-riferito-ad-un-documento-xml/",
       "excerpt"		: "<p>Con well formatted si intende in senso letterario &#8220;ben formattato&#8221;, un documento XML che segue le la sintassi elementare di un documento XML.</p>
 
 "
@@ -1201,7 +1201,7 @@ si spiega come debuggare uno script,come usare le tecniche più avanzate e come 
   
     ,{
       "title"			: "Quel maledetto Content is not allowed in prolog",
-      "link"			: "http://localhost:4000/articles/quel-maledetto-content-is-not-allowed-in-prolog/",
+      "link"			: "http://caliman.org/articles/quel-maledetto-content-is-not-allowed-in-prolog/",
       "excerpt"		: "<p>Ogni documento XML su cui lavoriamo dovrebbe essere formattato correttamente, salvato con il giusto encoding ecc.
 Un caso classico è il messaggio “Content is not allowed in prolog” (<code>SAXParseException</code>)
 Editiamo a mano il file con un editor (esadecimale) e togliamo in testa “ef bb bf”.
@@ -1217,7 +1217,7 @@ Visto che usiamo Java molto meglio mettere un piccolo work-around di appena due 
   
     ,{
       "title"			: "Cose'è JAX-WS",
-      "link"			: "http://localhost:4000/articles/cose-e-jax-ws/",
+      "link"			: "http://caliman.org/articles/cose-e-jax-ws/",
       "excerpt"		: "<p>JAX-WS sta per Java API for XML Web Services.
 JAX-WS fa parte della piattaforma Java EE di Sun Microsystems (ora Oracle). Come altre API di Java EE usa le annotazioni, introdotto in Java SE 5, per semplificare lo sviluppo e la distribuzione di client di servizi web.
 L’implementazione di riferimento di JAX-WS è sviluppata come open source e fa parte del progetto GlassFish, application server Java EE open source.
@@ -1230,7 +1230,7 @@ Potete trovare altre informazioni http://jax-ws.java.net</p>
   
     ,{
       "title"			: "Installiamo mysql senza synaptic o apt",
-      "link"			: "http://localhost:4000/articles/installiamo-mysql-senza-synaptic-o-apt/",
+      "link"			: "http://caliman.org/articles/installiamo-mysql-senza-synaptic-o-apt/",
       "excerpt"		: "<p>Scarichiamo il tar.gz dal sito di mysql www.mysql.com
 posizioniamolo in /usr/local scompattiamo il tar.gz con il comando</p>
 
@@ -1241,7 +1241,7 @@ posizioniamolo in /usr/local scompattiamo il tar.gz con il comando</p>
   
     ,{
       "title"			: "Estrarre dati dal codice fiscale con Excel",
-      "link"			: "http://localhost:4000/articles/estrarre-dati-dal-codice-fiscale-con-excel/",
+      "link"			: "http://caliman.org/articles/estrarre-dati-dal-codice-fiscale-con-excel/",
       "excerpt"		: "<p>Assumiamo che il nostro codice fiscale sia contenuto nella cella A1.</p>
 
 "
@@ -1251,7 +1251,7 @@ posizioniamolo in /usr/local scompattiamo il tar.gz con il comando</p>
   
     ,{
       "title"			: "Come velocizzare le operazioni di restore da dump sql di mysql",
-      "link"			: "http://localhost:4000/articles/come-velocizzare-le-operazioni-di-restore-da-dump-sql-di-mysql/",
+      "link"			: "http://caliman.org/articles/come-velocizzare-le-operazioni-di-restore-da-dump-sql-di-mysql/",
       "excerpt"		: "<p>Per velocizzare le operazioni di restore di un dump sql in mysql è possibile procedere come riportato sotto</p>
 
 "
@@ -1261,7 +1261,7 @@ posizioniamolo in /usr/local scompattiamo il tar.gz con il comando</p>
   
     ,{
       "title"			: "Problema in fase di restore di un database mysql",
-      "link"			: "http://localhost:4000/articles/problema-in-fase-di-restore-di-un-database-mysql/",
+      "link"			: "http://caliman.org/articles/problema-in-fase-di-restore-di-un-database-mysql/",
       "excerpt"		: "<p>Se vi capita di avere problemi in fase di restore da un dump mysql provate a impostare queste variabili prima di lanciare il comando source</p>
 
 "
@@ -1271,7 +1271,7 @@ posizioniamolo in /usr/local scompattiamo il tar.gz con il comando</p>
   
     ,{
       "title"			: "Importazione utenti,corsi,utenti e corsi con I/O Task in Docebo",
-      "link"			: "http://localhost:4000/articles/importazione-utenti-corsi-utenti-e-corsi-con-iotask-in-docebo/",
+      "link"			: "http://caliman.org/articles/importazione-utenti-corsi-utenti-e-corsi-con-iotask-in-docebo/",
       "excerpt"		: "<p>Chi ha necessità di importare utenti,corsi,associazioni tra utenti-corsi in maniera automatica e schedulata avrà necessariamente avuto a che fare con gli I/O Task.
 La schedulazione è subordinata alle impostazioni temporali nel pannello di amministrazione I/O Task e al lancio di una url particolare da cron. 
 Per la versione in esame (3.6.0.3) non è possibile lanciare nuovamente un task (giornaliero) qualora non fosse andato a buon fine,o semplicemente, se fosse necessario iterarlo nuovamente. Il task viene marcato come eseguito. 
@@ -1285,7 +1285,7 @@ Il comportamento è evidente analizzando i sorgenti</p>
   
     ,{
       "title"			: "Come ripristinare l'utente amministratore di Docebo",
-      "link"			: "http://localhost:4000/articles/come-ripristinare-l-utente-%20amministratore-di-%20docebo/",
+      "link"			: "http://caliman.org/articles/come-ripristinare-l-utente-%20amministratore-di-%20docebo/",
       "excerpt"		: "<p>In fase di importazione da file <strong>CSV</strong>, <strong>Docebo</strong> talvolta cancella l’utente admin e non è più possibile accedere al pannello di amministrazione.
 Il bug a quanto pare è noto fin dal 2005, ne ho trovato riscontro in rete e su vari forum e gruppi di discussione. 
 Al momento non ho individuato patch ufficiali che risolvano il problema,uno dei consigli che ho spesso trovato è quello di ripristinare un backup del database. Una soluzione indolore è ripristinare l’utente admin con le istruzioni che riporto qui sotto.</p>
@@ -1297,7 +1297,7 @@ Al momento non ho individuato patch ufficiali che risolvano il problema,uno dei 
   
     ,{
       "title"			: "Workshop Tecnologie e Professionalità per la SOA",
-      "link"			: "http://localhost:4000/articles/workshop-tecnologie-e-professionalita-per-soa/",
+      "link"			: "http://caliman.org/articles/workshop-tecnologie-e-professionalita-per-soa/",
       "excerpt"		: "<p>Il 30 settembre scorso (30/09/2008) si è tenuto presso la sede di Confindustria Genova il workshop “Tecnologie e Professionalità per la SOA”.
 L’incontro aveva lo scopo di illustrare lo stato dell’arte della SOA presentandone le principali caratteristiche tecniche e modalità di utilizzo.
 La presentazione di una soluzione di mercato e delle sue applicazioni per chiudere con l’evidenziazione delle professioni richieste per l’implementazione di una SOA secondo lo standard EUCIP.
@@ -1330,7 +1330,7 @@ Il sito di Microarea S.p.A</p>
   
     ,{
       "title"			: "Gli oggetti in Java",
-      "link"			: "http://localhost:4000/articles/gli-oggetti-in-java/",
+      "link"			: "http://caliman.org/articles/gli-oggetti-in-java/",
       "excerpt"		: "<p>Da ogni classe  possibile ottenere mediante l&#8217; istanzanziazione una o pi entit, ciascuna delle quali costituisce una 
 copia della struttura dati descritta dalla classe nelle sue componenti dinamiche e di cui condivide i metodi di accesso alle informazioni.</p>
 
@@ -1341,7 +1341,7 @@ copia della struttura dati descritta dalla classe nelle sue componenti dinamiche
   
     ,{
       "title"			: "La parola riservata this in Java",
-      "link"			: "http://localhost:4000/articles/la-parola-riservata-this-in-java/",
+      "link"			: "http://caliman.org/articles/la-parola-riservata-this-in-java/",
       "excerpt"		: "<p>E&#8217; possibile riscontrare due situazioni di interesse legate all&#8217;uso dei metodi la cui accurata gestione permette di migliorare 
 l&#8217;efficienza del codice:</p>
 
@@ -1352,7 +1352,7 @@ l&#8217;efficienza del codice:</p>
   
     ,{
       "title"			: "Linux: il comando du",
-      "link"			: "http://localhost:4000/articles/linux-il-comando-du/",
+      "link"			: "http://caliman.org/articles/linux-il-comando-du/",
       "excerpt"		: "<p>il comando &#8220;du&#8221; mostra lo spazio disco usato.
 Uso:
 du -s -h .
@@ -1370,7 +1370,7 @@ mcaliman@deimos:~# du -s -h .</p>
   
     ,{
       "title"			: "Il passaggio di parametri in Java",
-      "link"			: "http://localhost:4000/articles/il-passaggio-di-parametri-in-java/",
+      "link"			: "http://caliman.org/articles/il-passaggio-di-parametri-in-java/",
       "excerpt"		: "<p>Nella forma pi generica un metodo  caratterizzato da uno o pi parametri formali</p>
 
 "
@@ -1380,7 +1380,7 @@ mcaliman@deimos:~# du -s -h .</p>
   
     ,{
       "title"			: "Approfondiamo i metodi in Java",
-      "link"			: "http://localhost:4000/articles/approfondiamo-i-metodi-in-java/",
+      "link"			: "http://caliman.org/articles/approfondiamo-i-metodi-in-java/",
       "excerpt"		: "<h1 id="definizione-dei-metodi">Definizione dei metodi</h1>
 
 "
@@ -1390,7 +1390,7 @@ mcaliman@deimos:~# du -s -h .</p>
   
     ,{
       "title"			: "Classi e metodi in Java",
-      "link"			: "http://localhost:4000/articles/classi-e-metodi-in-java/",
+      "link"			: "http://caliman.org/articles/classi-e-metodi-in-java/",
       "excerpt"		: "<p>Classi e metodi costituiscono le componenti di base della programmazione ad oggetti alla quale forniscono gli 
 elementi di incapsulamento e di limitazione di accesso ai dati.</p>
 
@@ -1401,7 +1401,7 @@ elementi di incapsulamento e di limitazione di accesso ai dati.</p>
   
     ,{
       "title"			: "Introduzione alla OOP in Java",
-      "link"			: "http://localhost:4000/articles/introduzione-alla-oop-in-java/",
+      "link"			: "http://caliman.org/articles/introduzione-alla-oop-in-java/",
       "excerpt"		: "<p>La programmazione nei linguaggi orientati agli oggetti (<strong>Object Oriented Programming</strong> o più semplicemente <strong>OOP</strong>) 
 si basa su tipologie di entità denominate classi ed oggetti. Java è un linguaggio OOP.</p>
 
@@ -1412,7 +1412,7 @@ si basa su tipologie di entità denominate classi ed oggetti. Java è un linguag
   
     ,{
       "title"			: "Le variabili array in Java",
-      "link"			: "http://localhost:4000/articles/le-variabili-array-in-java/",
+      "link"			: "http://caliman.org/articles/le-variabili-array-in-java/",
       "excerpt"		: "<p>Gli array sono disponibili nella maggior parte dei linguaggi di programmazione perchè realizzano 
 la più semplice organizzazione di strutture dati complesse.</p>
 
@@ -1423,7 +1423,7 @@ la più semplice organizzazione di strutture dati complesse.</p>
   
     ,{
       "title"			: "Le costanti simboliche in Java",
-      "link"			: "http://localhost:4000/articles/le-costanti-simboliche-in-java/",
+      "link"			: "http://caliman.org/articles/le-costanti-simboliche-in-java/",
       "excerpt"		: "<p>Una variabile che non cambia mai valore è di fatto una costante, si può in java esplicitare un vincolo a tale condizione di immutabilità
 tramite la parola chiave <strong>final</strong>.</p>
 
@@ -1434,7 +1434,7 @@ tramite la parola chiave <strong>final</strong>.</p>
   
     ,{
       "title"			: "Le variabili e i comandi di assegnazione",
-      "link"			: "http://localhost:4000/articles/le-variabili-e%20i-comandi-di-assegnazione-in-java/",
+      "link"			: "http://caliman.org/articles/le-variabili-e%20i-comandi-di-assegnazione-in-java/",
       "excerpt"		: "<p>Diamo per prima cosa una definizione sufficientemente formale per i nostri scopi di variabile:
 Definizione di variabile
 Una variabile  una coppia composta da un nome, l&#8217;identificativo della variabile e un valore.</p>
@@ -1446,7 +1446,7 @@ Una variabile  una coppia composta da un nome, l&#8217;identificativo della vari
   
     ,{
       "title"			: "Le feature del linguaggio Java che devi conoscere",
-      "link"			: "http://localhost:4000/articles/le-feature-del-linguaggio-java-che-devi-conoscere/",
+      "link"			: "http://caliman.org/articles/le-feature-del-linguaggio-java-che-devi-conoscere/",
       "excerpt"		: "<p>Se vuoi che Java diventi il tuo linguaggio di programmazione principale
 i seguenti aspetti dovranno diventarti familiari, sono aspetti comuni in qualunque linguaggio di programmazione.</p>
 
@@ -1457,7 +1457,7 @@ i seguenti aspetti dovranno diventarti familiari, sono aspetti comuni in qualunq
   
     ,{
       "title"			: "Java e il protocollo UDP",
-      "link"			: "http://localhost:4000/articles/mokabyte-udp/",
+      "link"			: "http://caliman.org/articles/mokabyte-udp/",
       "excerpt"		: "<p>Introduzione ad uno dei protocolli piu’ utilizzati in internet, lo User Datagram Protocol,
 publicato su <strong>MokaByte Numero 39,Marzo 2000,di Massimo Caliman e Nicola Merello</strong></p>
 
@@ -1664,7 +1664,7 @@ Quindi occhio ai datagrammi.</p>
   
     ,{
       "title"			: "Come cancellare l'history comandi su linux.",
-      "link"			: "http://localhost:4000/articles/come-cancellare-history-comandi-linux/",
+      "link"			: "http://caliman.org/articles/come-cancellare-history-comandi-linux/",
       "excerpt"		: "<p>Per cancellare l&#8217;history dei comandi su linux potete usate il comando</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">history</span> -c</code></pre></div>
@@ -1676,7 +1676,7 @@ Quindi occhio ai datagrammi.</p>
   
     ,{
       "title"			: "Un package per il debugging in Java",
-      "link"			: "http://localhost:4000/articles/mokabyte-debug/",
+      "link"			: "http://caliman.org/articles/mokabyte-debug/",
       "excerpt"		: "<p>Pubblicato su <strong>MokaByte Numero 36 Dicembre 1999,di Massimo Caliman e Nicola Merello</strong>.
 Questo articolo vuole mostrare come sia possibile creare un sistema di package che faciliti il debugging
 di programmi scritti in Java.</p>
@@ -1692,7 +1692,7 @@ di programmi scritti in Java.</p>
   
     ,{
       "title"			: "About me",
-      "link"			: "http://localhost:4000/about/",
+      "link"			: "http://caliman.org/about/",
       "excerpt"		: ""
     }
   
@@ -1700,7 +1700,7 @@ di programmi scritti in Java.</p>
   
     ,{
       "title"			: "Category Index",
-      "link"			: "http://localhost:4000/categories/",
+      "link"			: "http://caliman.org/categories/",
       "excerpt"		: ""
     }
   
@@ -1708,7 +1708,7 @@ di programmi scritti in Java.</p>
   
     ,{
       "title"			: "Contact",
-      "link"			: "http://localhost:4000/contact/",
+      "link"			: "http://caliman.org/contact/",
       "excerpt"		: ""
     }
   
@@ -1720,7 +1720,7 @@ di programmi scritti in Java.</p>
   
     ,{
       "title"			: "Theme Setup",
-      "link"			: "http://localhost:4000/theme-setup/",
+      "link"			: "http://caliman.org/theme-setup/",
       "excerpt"		: "Instructions on how to install and customize the Jekyll theme So Simple."
     }
   
@@ -1738,7 +1738,7 @@ di programmi scritti in Java.</p>
   
     ,{
       "title"			: "Privacy Policy",
-      "link"			: "http://localhost:4000/privacy/",
+      "link"			: "http://caliman.org/privacy/",
       "excerpt"		: ""
     }
   
@@ -1748,7 +1748,7 @@ di programmi scritti in Java.</p>
   
     ,{
       "title"			: "How to support this blog",
-      "link"			: "http://localhost:4000/support/",
+      "link"			: "http://caliman.org/support/",
       "excerpt"		: ""
     }
   
@@ -1756,7 +1756,7 @@ di programmi scritti in Java.</p>
   
     ,{
       "title"			: "Tag Index",
-      "link"			: "http://localhost:4000/tags/",
+      "link"			: "http://caliman.org/tags/",
       "excerpt"		: ""
     }
   
@@ -1764,7 +1764,7 @@ di programmi scritti in Java.</p>
   
     ,{
       "title"			: "Terms and conditions",
-      "link"			: "http://localhost:4000/terms/",
+      "link"			: "http://caliman.org/terms/",
       "excerpt"		: ""
     }
   
