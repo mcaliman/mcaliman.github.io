@@ -1,343 +1,343 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/</loc>
+    <loc>http://localhost:4000/articles/ubuntu-14.04.02-LTS-installare-subversion/</loc>
     <lastmod>2015-05-16T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-git/</loc>
+    <loc>http://localhost:4000/articles/ubuntu-14.04.02-LTS-installare-git/</loc>
     <lastmod>2015-05-15T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/ubuntu-14.04.02-LTS-abilitare-root/</loc>
+    <loc>http://localhost:4000/articles/ubuntu-14.04.02-LTS-abilitare-root/</loc>
     <lastmod>2015-05-14T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/ubuntu-14.04.02-LTS-install-openssh/</loc>
+    <loc>http://localhost:4000/articles/ubuntu-14.04.02-LTS-install-openssh/</loc>
     <lastmod>2015-05-13T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/debian-8-abilitare-sudo/</loc>
+    <loc>http://localhost:4000/articles/debian-8-abilitare-sudo/</loc>
     <lastmod>2015-05-02T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/JSF22SecureLoginWebapp/</loc>
+    <loc>http://localhost:4000/articles/JSF22SecureLoginWebapp/</loc>
     <lastmod>2015-01-04T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/creare-un-custom-converter-in-jsf-2/</loc>
+    <loc>http://localhost:4000/articles/creare-un-custom-converter-in-jsf-2/</loc>
     <lastmod>2015-01-01T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/facili-le-dropdownbox-con-le-jsf-2/</loc>
+    <loc>http://localhost:4000/articles/facili-le-dropdownbox-con-le-jsf-2/</loc>
     <lastmod>2014-12-16T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/jsf-2-come-usare-i-commenti/</loc>
+    <loc>http://localhost:4000/articles/jsf-2-come-usare-i-commenti/</loc>
     <lastmod>2014-11-16T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/usare-i-channel-per-copiare-file-in-java/</loc>
+    <loc>http://localhost:4000/articles/usare-i-channel-per-copiare-file-in-java/</loc>
     <lastmod>2014-11-15T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/jsf-2-forzare-gli-id-generati-dai-tag/</loc>
+    <loc>http://localhost:4000/articles/jsf-2-forzare-gli-id-generati-dai-tag/</loc>
     <lastmod>2014-11-09T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/</loc>
+    <loc>http://localhost:4000/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/</loc>
     <lastmod>2014-10-15T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/alberi-algoritmo-vistita-in-profondita-DFS/</loc>
+    <loc>http://localhost:4000/articles/alberi-algoritmo-vistita-in-profondita-DFS/</loc>
     <lastmod>2014-10-13T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/alberi-algoritmo-vistita-generico/</loc>
+    <loc>http://localhost:4000/articles/alberi-algoritmo-vistita-generico/</loc>
     <lastmod>2014-10-11T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/alberi-rappresentazioni-collegate/</loc>
+    <loc>http://localhost:4000/articles/alberi-rappresentazioni-collegate/</loc>
     <lastmod>2014-10-08T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/alberi-rappresentazioni-indicizzate/</loc>
+    <loc>http://localhost:4000/articles/alberi-rappresentazioni-indicizzate/</loc>
     <lastmod>2014-10-07T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/alberi-in-java/</loc>
+    <loc>http://localhost:4000/articles/alberi-in-java/</loc>
     <lastmod>2014-10-06T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/strutture-indicizzate-approfondimento/</loc>
+    <loc>http://localhost:4000/articles/strutture-indicizzate-approfondimento/</loc>
     <lastmod>2014-10-04T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/code-o-queue/</loc>
+    <loc>http://localhost:4000/articles/code-o-queue/</loc>
     <lastmod>2014-10-02T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/pile-o-stack/</loc>
+    <loc>http://localhost:4000/articles/pile-o-stack/</loc>
     <lastmod>2014-10-01T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/strutture-collegate/</loc>
+    <loc>http://localhost:4000/articles/strutture-collegate/</loc>
     <lastmod>2014-09-30T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/strutture-indicizzate/</loc>
+    <loc>http://localhost:4000/articles/strutture-indicizzate/</loc>
     <lastmod>2014-09-29T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/usare-hashmap-in-java/</loc>
+    <loc>http://localhost:4000/articles/usare-hashmap-in-java/</loc>
     <lastmod>2014-09-28T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/dizionari-in-java/</loc>
+    <loc>http://localhost:4000/articles/dizionari-in-java/</loc>
     <lastmod>2014-09-25T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/concatenare-pdf-con-itext-in-java/</loc>
+    <loc>http://localhost:4000/articles/concatenare-pdf-con-itext-in-java/</loc>
     <lastmod>2014-09-19T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/</loc>
+    <loc>http://localhost:4000/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/</loc>
     <lastmod>2014-09-14T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/riguardo-i-limiti-del-calcolabile/</loc>
+    <loc>http://localhost:4000/articles/riguardo-i-limiti-del-calcolabile/</loc>
     <lastmod>2014-09-07T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/</loc>
+    <loc>http://localhost:4000/articles/come-ti-swappo-due-variabili-in-un-colpo-solo-con-python/</loc>
     <lastmod>2014-09-02T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/secure-httpbase-tomcat-authentication/</loc>
+    <loc>http://localhost:4000/articles/secure-httpbase-tomcat-authentication/</loc>
     <lastmod>2014-08-16T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/considerazioni-sulla-ricorsione/</loc>
+    <loc>http://localhost:4000/articles/considerazioni-sulla-ricorsione/</loc>
     <lastmod>2014-08-15T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/una-servlet-per-gestire-il-download-di-file-in-java/</loc>
+    <loc>http://localhost:4000/articles/una-servlet-per-gestire-il-download-di-file-in-java/</loc>
     <lastmod>2014-07-16T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/inviare-mail-con-allegati-in-java/</loc>
+    <loc>http://localhost:4000/articles/inviare-mail-con-allegati-in-java/</loc>
     <lastmod>2014-07-15T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/Il-metodo-string-format-una-printf-per-java/</loc>
+    <loc>http://localhost:4000/articles/Il-metodo-string-format-una-printf-per-java/</loc>
     <lastmod>2014-07-14T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/</loc>
+    <loc>http://localhost:4000/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-4/</loc>
     <lastmod>2014-07-13T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/</loc>
+    <loc>http://localhost:4000/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-3/</loc>
     <lastmod>2014-07-12T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/</loc>
+    <loc>http://localhost:4000/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-2/</loc>
     <lastmod>2014-07-11T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/</loc>
+    <loc>http://localhost:4000/articles/considerazioni-su-alcuni-linguaggi-di-programmazione-parte-1/</loc>
     <lastmod>2014-07-10T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/la-gestione-delle-stringhe-in-java/</loc>
+    <loc>http://localhost:4000/articles/la-gestione-delle-stringhe-in-java/</loc>
     <lastmod>2014-07-07T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/il-cms-e-morto-viva-jekyll/</loc>
+    <loc>http://localhost:4000/articles/il-cms-e-morto-viva-jekyll/</loc>
     <lastmod>2014-06-23T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/install-jekyll/</loc>
+    <loc>http://localhost:4000/articles/install-jekyll/</loc>
     <lastmod>2014-06-08T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/Effettuare-la-login-ssh-senza-digitare-la-password/</loc>
+    <loc>http://localhost:4000/articles/Effettuare-la-login-ssh-senza-digitare-la-password/</loc>
     <lastmod>2014-01-12T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/</loc>
+    <loc>http://localhost:4000/articles/glassfish-v3-console-amministrazione-prendendo-troppo-tempo-per-caricare/</loc>
     <lastmod>2014-01-11T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/</loc>
+    <loc>http://localhost:4000/articles/howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/</loc>
     <lastmod>2014-01-10T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/</loc>
+    <loc>http://localhost:4000/articles/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/</loc>
     <lastmod>2014-01-03T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404/</loc>
+    <loc>http://localhost:4000/articles/come-impostare-virtualbox-a-schermo-intero-su-ubuntu-1404/</loc>
     <lastmod>2014-01-02T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/pubblicare-un-sito-con-github-pages/</loc>
+    <loc>http://localhost:4000/articles/pubblicare-un-sito-con-github-pages/</loc>
     <lastmod>2014-01-01T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/come-installare-ant-su-linux/</loc>
+    <loc>http://localhost:4000/articles/come-installare-ant-su-linux/</loc>
     <lastmod>2013-01-01T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/</loc>
+    <loc>http://localhost:4000/articles/creare-e-configurare-un-dataSource-mysql-in-glassfish-application-server/</loc>
     <lastmod>2012-01-01T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/bpel/</loc>
+    <loc>http://localhost:4000/articles/bpel/</loc>
     <lastmod>2012-01-01T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/javascript-secondo-peter-paul-kock-PPK/</loc>
+    <loc>http://localhost:4000/articles/javascript-secondo-peter-paul-kock-PPK/</loc>
     <lastmod>2011-07-04T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/uso-di-keytool-e-jarsigner/</loc>
+    <loc>http://localhost:4000/articles/uso-di-keytool-e-jarsigner/</loc>
     <lastmod>2011-04-25T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/errori-comuni-nella-configurazione-di-adobe-pdf-ifilter-per-sharepoint-2007/</loc>
+    <loc>http://localhost:4000/articles/errori-comuni-nella-configurazione-di-adobe-pdf-ifilter-per-sharepoint-2007/</loc>
     <lastmod>2011-04-05T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/well-formatted-riferito-ad-un-documento-xml/</loc>
+    <loc>http://localhost:4000/articles/well-formatted-riferito-ad-un-documento-xml/</loc>
     <lastmod>2011-03-07T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/quel-maledetto-content-is-not-allowed-in-prolog/</loc>
+    <loc>http://localhost:4000/articles/quel-maledetto-content-is-not-allowed-in-prolog/</loc>
     <lastmod>2011-02-27T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/cose-e-jax-ws/</loc>
+    <loc>http://localhost:4000/articles/cose-e-jax-ws/</loc>
     <lastmod>2011-02-27T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/installiamo-mysql-senza-synaptic-o-apt/</loc>
+    <loc>http://localhost:4000/articles/installiamo-mysql-senza-synaptic-o-apt/</loc>
     <lastmod>2011-02-03T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/estrarre-dati-dal-codice-fiscale-con-excel/</loc>
+    <loc>http://localhost:4000/articles/estrarre-dati-dal-codice-fiscale-con-excel/</loc>
     <lastmod>2011-02-03T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/come-velocizzare-le-operazioni-di-restore-da-dump-sql-di-mysql/</loc>
+    <loc>http://localhost:4000/articles/come-velocizzare-le-operazioni-di-restore-da-dump-sql-di-mysql/</loc>
     <lastmod>2011-01-01T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/problema-in-fase-di-restore-di-un-database-mysql/</loc>
+    <loc>http://localhost:4000/articles/problema-in-fase-di-restore-di-un-database-mysql/</loc>
     <lastmod>2010-01-01T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/importazione-utenti-corsi-utenti-e-corsi-con-iotask-in-docebo/</loc>
+    <loc>http://localhost:4000/articles/importazione-utenti-corsi-utenti-e-corsi-con-iotask-in-docebo/</loc>
     <lastmod>2009-01-01T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/come-ripristinare-l-utente-%20amministratore-di-%20docebo/</loc>
+    <loc>http://localhost:4000/articles/come-ripristinare-l-utente-%20amministratore-di-%20docebo/</loc>
     <lastmod>2009-01-01T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/workshop-tecnologie-e-professionalita-per-soa/</loc>
+    <loc>http://localhost:4000/articles/workshop-tecnologie-e-professionalita-per-soa/</loc>
     <lastmod>2008-10-02T00:45:33+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/gli-oggetti-in-java/</loc>
+    <loc>http://localhost:4000/articles/gli-oggetti-in-java/</loc>
     <lastmod>2008-01-05T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/la-parola-riservata-this-in-java/</loc>
+    <loc>http://localhost:4000/articles/la-parola-riservata-this-in-java/</loc>
     <lastmod>2007-01-05T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/linux-il-comando-du/</loc>
+    <loc>http://localhost:4000/articles/linux-il-comando-du/</loc>
     <lastmod>2007-01-01T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/il-passaggio-di-parametri-in-java/</loc>
+    <loc>http://localhost:4000/articles/il-passaggio-di-parametri-in-java/</loc>
     <lastmod>2006-01-05T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/approfondiamo-i-metodi-in-java/</loc>
+    <loc>http://localhost:4000/articles/approfondiamo-i-metodi-in-java/</loc>
     <lastmod>2005-01-02T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/classi-e-metodi-in-java/</loc>
+    <loc>http://localhost:4000/articles/classi-e-metodi-in-java/</loc>
     <lastmod>2004-01-02T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/introduzione-alla-oop-in-java/</loc>
+    <loc>http://localhost:4000/articles/introduzione-alla-oop-in-java/</loc>
     <lastmod>2003-03-02T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/le-variabili-array-in-java/</loc>
+    <loc>http://localhost:4000/articles/le-variabili-array-in-java/</loc>
     <lastmod>2003-03-01T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/le-costanti-simboliche-in-java/</loc>
+    <loc>http://localhost:4000/articles/le-costanti-simboliche-in-java/</loc>
     <lastmod>2003-02-03T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/le-variabili-e%20i-comandi-di-assegnazione-in-java/</loc>
+    <loc>http://localhost:4000/articles/le-variabili-e%20i-comandi-di-assegnazione-in-java/</loc>
     <lastmod>2003-01-02T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/le-feature-del-linguaggio-java-che-devi-conoscere/</loc>
+    <loc>http://localhost:4000/articles/le-feature-del-linguaggio-java-che-devi-conoscere/</loc>
     <lastmod>2003-01-01T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/mokabyte-udp/</loc>
+    <loc>http://localhost:4000/articles/mokabyte-udp/</loc>
     <lastmod>2000-03-30T00:00:00+02:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/come-cancellare-history-comandi-linux/</loc>
+    <loc>http://localhost:4000/articles/come-cancellare-history-comandi-linux/</loc>
     <lastmod>2000-01-01T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/articles/mokabyte-debug/</loc>
+    <loc>http://localhost:4000/articles/mokabyte-debug/</loc>
     <lastmod>1999-12-30T23:45:33+01:00</lastmod>
   </url>
   <url>
-    <loc>http://caliman.org/about/</loc>
+    <loc>http://localhost:4000/about/</loc>
   </url>
   <url>
-    <loc>http://caliman.org/categories/</loc>
+    <loc>http://localhost:4000/categories/</loc>
   </url>
   <url>
-    <loc>http://caliman.org/contact/</loc>
+    <loc>http://localhost:4000/contact/</loc>
   </url>
   <url>
-    <loc>http://caliman.org/</loc>
+    <loc>http://localhost:4000/</loc>
   </url>
   <url>
-    <loc>http://caliman.org/theme-setup/</loc>
+    <loc>http://localhost:4000/theme-setup/</loc>
   </url>
   <url>
-    <loc>http://caliman.org/tags/</loc>
+    <loc>http://localhost:4000/tags/</loc>
   </url>
   <url>
-    <loc>http://caliman.org/blog/</loc>
+    <loc>http://localhost:4000/blog/</loc>
   </url>
   <url>
-    <loc>http://caliman.org/articles/</loc>
+    <loc>http://localhost:4000/articles/</loc>
   </url>
   <url>
-    <loc>http://caliman.org/privacy/</loc>
+    <loc>http://localhost:4000/privacy/</loc>
   </url>
   <url>
-    <loc>http://caliman.org/support/</loc>
+    <loc>http://localhost:4000/support/</loc>
   </url>
   <url>
-    <loc>http://caliman.org/tags/</loc>
+    <loc>http://localhost:4000/tags/</loc>
   </url>
   <url>
-    <loc>http://caliman.org/terms/</loc>
+    <loc>http://localhost:4000/terms/</loc>
   </url>
 </urlset>
