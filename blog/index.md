@@ -5,7 +5,7 @@ excerpt: "An archive of blog posts sorted by date."
 search_omit: true
 ---
 
-<h2>Nota: sto trasferendo i post sul Java nel nuovo blog dedicato [**javamaniax.com**](http://javamaniax.com)</h2>
+<p>Nota: sto trasferendo i post su Java nel nuovo blog dedicato <a href="http://javamaniax.com">javamaniax.com</a></p>
 
 <ul class="post-list">
     {% for post in site.categories.blog %}
