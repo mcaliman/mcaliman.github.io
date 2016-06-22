@@ -1,9 +1,9 @@
 # 
 # author	    : Massimo Caliman, mcaliman@gmail.com
-# release           : v3s
-# last update       : 2015-11-30
+# release           : 16.6
+# last update       : 2016-06-22
 # to build use      : bundle exec jekyll build
-# to run server use : bundle exec jekyll build
+# to run server use : bundle exec jekyll serve
 #
 
 # Site wide configuration
@@ -15,8 +15,8 @@ description: blog on Computer Science.
 #logo: site-logo.png
 logo: bio-photo.jpg
 search: true
-# url: http://localhost:4000
-url: http://caliman.org
+url: http://localhost:4000
+# url: http://caliman.org
 
 # Jekyll configuration
 
@@ -59,7 +59,7 @@ owner:
   pinterest: #username
   weibo: #userid
   google:
-    plus: MassimoCalimanIT
+    plus: #MassimoCalimanIT
     analytics: UA-53230757-1
     verify:
     ad-client: ca-pub-5121145090824526

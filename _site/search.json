@@ -926,7 +926,7 @@ mostra in modo chiaro cosa si intenda per limiti del calcolabile:</p>
     ,{
       "title"			: "Secure httpbase tomcat authentication",
       "link"			: "http://caliman.org/articles/secure-httpbase-tomcat-authentication/",
-      "excerpt"		: "<p>Per impostare l&#8217;autenticazione base in una applicazione java in tomcat possiamo intervenire solo in due file</p>
+      "excerpt"		: "<p>Per impostare l’autenticazione base in una applicazione java in tomcat possiamo intervenire solo in due file</p>
 
 "
     }
@@ -1145,7 +1145,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
     ,{
       "title"			: "BPEL (Business Process Execution Language)",
       "link"			: "http://caliman.org/articles/bpel/",
-      "excerpt"		: "<p>I computer sono incredibilmente veloci, accurati e stupidi. Gli uomini sono incredibilmente lenti, inaccurati e intelligenti. L&#8217;insieme dei due costituisce una forza incalcolabile.
+      "excerpt"		: "<p>I computer sono incredibilmente veloci, accurati e stupidi. Gli uomini sono incredibilmente lenti, inaccurati e intelligenti. L’insieme dei due costituisce una forza incalcolabile.
 <em>(Albert Einstein (attribuito))</em></p>
 
 "
@@ -1192,7 +1192,7 @@ si spiega come debuggare uno script,come usare le tecniche più avanzate e come 
     ,{
       "title"			: "Well Formatted riferito ad un documento XML",
       "link"			: "http://caliman.org/articles/well-formatted-riferito-ad-un-documento-xml/",
-      "excerpt"		: "<p>Con well formatted si intende in senso letterario &#8220;ben formattato&#8221;, un documento XML che segue le la sintassi elementare di un documento XML.</p>
+      "excerpt"		: "<p>Con well formatted si intende in senso letterario “ben formattato”, un documento XML che segue le la sintassi elementare di un documento XML.</p>
 
 "
     }
@@ -1331,7 +1331,7 @@ Il sito di Microarea S.p.A</p>
     ,{
       "title"			: "Gli oggetti in Java",
       "link"			: "http://caliman.org/articles/gli-oggetti-in-java/",
-      "excerpt"		: "<p>Da ogni classe  possibile ottenere mediante l&#8217; istanzanziazione una o pi entit, ciascuna delle quali costituisce una 
+      "excerpt"		: "<p>Da ogni classe  possibile ottenere mediante l’ istanzanziazione una o pi entit, ciascuna delle quali costituisce una 
 copia della struttura dati descritta dalla classe nelle sue componenti dinamiche e di cui condivide i metodi di accesso alle informazioni.</p>
 
 "
@@ -1342,8 +1342,8 @@ copia della struttura dati descritta dalla classe nelle sue componenti dinamiche
     ,{
       "title"			: "La parola riservata this in Java",
       "link"			: "http://caliman.org/articles/la-parola-riservata-this-in-java/",
-      "excerpt"		: "<p>E&#8217; possibile riscontrare due situazioni di interesse legate all&#8217;uso dei metodi la cui accurata gestione permette di migliorare 
-l&#8217;efficienza del codice:</p>
+      "excerpt"		: "<p>E’ possibile riscontrare due situazioni di interesse legate all’uso dei metodi la cui accurata gestione permette di migliorare 
+l’efficienza del codice:</p>
 
 "
     }
@@ -1353,13 +1353,13 @@ l&#8217;efficienza del codice:</p>
     ,{
       "title"			: "Linux: il comando du",
       "link"			: "http://caliman.org/articles/linux-il-comando-du/",
-      "excerpt"		: "<p>il comando &#8220;du&#8221; mostra lo spazio disco usato.
+      "excerpt"		: "<p>il comando “du” mostra lo spazio disco usato.
 Uso:
 du -s -h .
 Dove:
-&#8220;-s&#8221; indica &#8211;summarise display only a total for each argument.
-&#8220;-h&#8221; indica &#8211;human-readable print sizes in human readable format (e.g., 1K 234M 2G).
-&#8220;.&#8221; indica di applicare alla directory corrente.
+“-s” indica –summarise display only a total for each argument.
+“-h” indica –human-readable print sizes in human readable format (e.g., 1K 234M 2G).
+“.” indica di applicare alla directory corrente.
 Esempio:
 mcaliman@deimos:~# du -s -h .</p>
 
@@ -1437,7 +1437,7 @@ tramite la parola chiave <strong>final</strong>.</p>
       "link"			: "http://caliman.org/articles/le-variabili-e%20i-comandi-di-assegnazione-in-java/",
       "excerpt"		: "<p>Diamo per prima cosa una definizione sufficientemente formale per i nostri scopi di variabile:
 Definizione di variabile
-Una variabile  una coppia composta da un nome, l&#8217;identificativo della variabile e un valore.</p>
+Una variabile  una coppia composta da un nome, l’identificativo della variabile e un valore.</p>
 
 "
     }
@@ -1665,7 +1665,7 @@ Quindi occhio ai datagrammi.</p>
     ,{
       "title"			: "Come cancellare l'history comandi su linux.",
       "link"			: "http://caliman.org/articles/come-cancellare-history-comandi-linux/",
-      "excerpt"		: "<p>Per cancellare l&#8217;history dei comandi su linux potete usate il comando</p>
+      "excerpt"		: "<p>Per cancellare l’history dei comandi su linux potete usate il comando</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">history</span> -c</code></pre></div>
 
