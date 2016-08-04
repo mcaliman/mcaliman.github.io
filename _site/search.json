@@ -2,6 +2,39 @@
 
   
     {
+      "title"			: "le funzioni in R",
+      "link"			: "http://caliman.org/articles/linguaggio_r_funzioni/",
+      "excerpt"		: "<p>Le funzioni sono create usando la direttiva <code>function()</code> e memorizzate come qualsiasi altro oggetto in R. 
+In particolare sono oggetti di classe funzione.</p>
+
+"
+    }
+  
+
+  
+    ,{
+      "title"			: "Le strutture di controllo di R",
+      "link"			: "http://caliman.org/articles/linguaggio_r_strutture_di_controllo/",
+      "excerpt"		: "<p>Le strutture di controllo in R consentono di controllare il flusso di esecuzione del programma, in base alle condizioni a runtime in maniera non dissimile da qualsiasi altro linguaggio imperativo (come C,Java,Python), vediamo velocemente le parole riservate dedicate alle strutture di controllo</p>
+
+"
+    }
+  
+
+  
+    ,{
+      "title"			: "Linguaggio R introduzione",
+      "link"			: "http://caliman.org/articles/linguaggio_r_introduzione/",
+      "excerpt"		: "<p>Ho scoperto il linguaggio di programmazione R quasi per caso e ne sono rimasto affascinato.
+La prima cosa da sapere è che R è più di un linguaggio di programmazione, è anche un ambiente di sviluppo completo. 
+Basato sul linguaggio S è utilizzato per la gestione e l’analisi statistica di dati per la produzione di grafici ed è disponibile gratuitamente sotto i vincoli della licenza GPL.</p>
+
+"
+    }
+  
+
+  
+    ,{
       "title"			: "Ubuntu 14.04.02 LTS installare subversion (svn)",
       "link"			: "http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/",
       "excerpt"		: "<p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>

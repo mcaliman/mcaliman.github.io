@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Regole di Scoping in R"
+category: articles
+date:   2016-02-10 22:45:33
+tags: [datascience,R]
+comments: true
+share: true
+---
+
+## Lexical Scoping
+
+Si consideri la seguente funzione
+
+f <- function(x, y) {
+x^2 + y / z
+}
+
+Questa funzione ha 2 argomenti x e y formali . Nel corpo della funzione c'è un altro simbolo z .
+In questo caso z è detta una variabile libera . Le regole di visibilità di un linguaggio determinano come i valori sono
+assegnato a variabili libere . variabili libere non sono argomenti formali e non sono variabili locali
+
+

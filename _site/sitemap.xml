@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://caliman.org/articles/linguaggio_r_funzioni/</loc>
+    <lastmod>2016-01-20T23:45:33+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://caliman.org/articles/linguaggio_r_strutture_di_controllo/</loc>
+    <lastmod>2016-01-15T23:45:33+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://caliman.org/articles/linguaggio_r_introduzione/</loc>
+    <lastmod>2016-01-10T23:45:33+01:00</lastmod>
+  </url>
+  <url>
     <loc>http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/</loc>
     <lastmod>2015-05-16T00:45:33+02:00</lastmod>
   </url>

@@ -5,17 +5,19 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Ubuntu 14.04.02 LTS installare subversion (svn) &#8211; Massimo Caliman's</title>
-<meta name="description" content="Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. (Isaac Asimov, Il vento è cambiato, 1983)
+<title>le funzioni in R &#8211; Massimo Caliman's</title>
+<meta name="description" content="Le funzioni sono create usando la direttiva function() e memorizzate come qualsiasi altro oggetto in R. 
+In particolare sono oggetti di classe funzione.
 
 ">
-<meta name="keywords" content="linux, ubuntu">
+<meta name="keywords" content="datascience, R">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Ubuntu 14.04.02 LTS installare subversion (svn)">
-<meta name="twitter:description" content="Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. (Isaac Asimov, Il vento è cambiato, 1983)
+<meta name="twitter:title" content="le funzioni in R">
+<meta name="twitter:description" content="Le funzioni sono create usando la direttiva function() e memorizzate come qualsiasi altro oggetto in R. 
+In particolare sono oggetti di classe funzione.
 
 ">
 <meta name="twitter:site" content="@mcaliman">
@@ -27,18 +29,19 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="it_IT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu 14.04.02 LTS installare subversion (svn)">
-<meta property="og:description" content="Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. (Isaac Asimov, Il vento è cambiato, 1983)
+<meta property="og:title" content="le funzioni in R">
+<meta property="og:description" content="Le funzioni sono create usando la direttiva function() e memorizzate come qualsiasi altro oggetto in R. 
+In particolare sono oggetti di classe funzione.
 
 ">
-<meta property="og:url" content="http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/">
+<meta property="og:url" content="http://caliman.org/articles/linguaggio_r_funzioni/">
 <meta property="og:site_name" content="Massimo Caliman's">
 
 
 
 
 
-<link rel="canonical" href="http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/">
+<link rel="canonical" href="http://caliman.org/articles/linguaggio_r_funzioni/">
 <link href="http://caliman.org/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -137,10 +140,10 @@
     <div class="entry-wrapper">
       <header class="entry-header">
         <ul class="entry-tags">
-          <li><a href="http://caliman.org/tags/#linux" title="Pages tagged linux">linux</a></li><li><a href="http://caliman.org/tags/#ubuntu" title="Pages tagged ubuntu">ubuntu</a></li>
+          <li><a href="http://caliman.org/tags/#datascience" title="Pages tagged datascience">datascience</a></li><li><a href="http://caliman.org/tags/#R" title="Pages tagged R">R</a></li>
         </ul>
         
-          <h1 class="entry-title">Ubuntu 14.04.02 LTS installare subversion (svn)</h1>
+          <h1 class="entry-title">le funzioni in R</h1>
         
       </header>
       <footer class="entry-meta">
@@ -150,17 +153,17 @@
           <img src="http://caliman.org/images/bio-photo.jpg" class="bio-photo" alt="Massimo Caliman bio photo"></a>
         
         <span class="author vcard">By <span class="fn">Massimo Caliman</span></span>
-        <span class="entry-date date published"><time datetime="2015-05-16T00:45:33+02:00"><i class="fa fa-calendar-o"></i> May 16, 2015</time></span>
+        <span class="entry-date date published"><time datetime="2016-01-20T23:45:33+01:00"><i class="fa fa-calendar-o"></i> January 20, 2016</time></span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         <span class="social-share-twitter">
-  <a href="https://twitter.com/intent/tweet?hashtags=linux,ubuntu&amp;text=Ubuntu%2014.04.02%20LTS%20installare%20subversion%20(svn)&amp;url=http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+  <a href="https://twitter.com/intent/tweet?hashtags=datascience,R&amp;text=le%20funzioni%20in%20R&amp;url=http://caliman.org/articles/linguaggio_r_funzioni/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
 </span>
 <span class="social-share-facebook">
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://caliman.org/articles/linguaggio_r_funzioni/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
 </span>
 <span class="social-share-googleplus">
-  <a href="https://plus.google.com/share?url=http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+  <a href="https://plus.google.com/share?url=http://caliman.org/articles/linguaggio_r_funzioni/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
 </span>
 <!-- /.social-share -->
         
@@ -177,25 +180,68 @@
 </div><!-- /.google-ads --><!-- /.google-ads -->
       </footer>
       <div class="entry-content">
-        <p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>
+        <p>Le funzioni sono create usando la direttiva <code>function()</code> e memorizzate come qualsiasi altro oggetto in R. 
+In particolare sono oggetti di classe funzione.</p>
 
-<p>Anche in questo caso apt è più che generoso</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">f &lt;- <span class="k">function</span><span class="o">(</span>&lt;arguments&gt;<span class="o">)</span> <span class="o">{</span>
+   <span class="c"># corpo della funzione</span>
+<span class="o">}</span></code></pre></div>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo apt-get install subversion</code></pre></div>
+<p>Le funzioni in R sono <code>first class objects</code>, il che significa che possono essere trattate come qualsiasi altro oggetto in R: possono essere passati come argomenti per altre funzioni e possono essere nidificate (in questo modo si può definire una funzione all’interno di un’altra funzione),il valore di ritorno di una funzione è l’ultima espressione da valutare nel corpo della funzione.</p>
 
-<p>Non installiamo con apache perché accederemo a svn tramite ssh in modo molto più sicuro.
-Per prima cosa creiamo la directory che ospiterà il nostro progetto e repo</p>
+<h2 id="argomenti-di-una-funzione">Argomenti di una funzione</h2>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir /var/svn/MyApplication</code></pre></div>
+<p>Gli argomenti formali sono argomenti inclusi nella definizione di una funzione
+Non tutte le chiamate a una funzione si avvalgono di tutti gli argomenti formali, in quanto
+un argomento di una funzione potrebbe essere mancante o potrebbero avere valori di default.</p>
 
-<p>“informiamo” svn che questa directory è un repository</p>
+<h2 id="il-matching-degli-argomenti">Il matching degli argomenti</h2>
+<p>Qualcosa che trovo veramente comodo: il match degli argomenti di una funzione può avvenire per posizione o per nome
+Le seguenti chiamate sono equivalenti</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">svnadmin create /var/svn/MyApplication</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">dati &lt;- rnorm<span class="o">(</span>100<span class="o">)</span>
+sd<span class="o">(</span>dati<span class="o">)</span>
+sd<span class="o">(</span><span class="nv">x</span> <span class="o">=</span> dati<span class="o">)</span>
+sd<span class="o">(</span><span class="nv">x</span> <span class="o">=</span> dati, na.rm <span class="o">=</span> FALSE<span class="o">)</span>
+sd<span class="o">(</span>na.rm <span class="o">=</span> FALSE, <span class="nv">x</span> <span class="o">=</span> dati<span class="o">)</span>
+sd<span class="o">(</span>na.rm <span class="o">=</span> FALSE, dati<span class="o">)</span></code></pre></div>
 
-<p>A questo punto dal nostro IDE preferitò possiamo effettuare un checkout o inizializzare il repo con quando abbiamo in locale, 
-l’url del repo è nel formato seguente</p>
+<p>Anche se è permesso, non vi sconsiglio di giocare troppo con l’ordine naturale (ordine della definizione di funzione) degli argomenti,serve solo a fare confusione.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">svn+ssh://svnserver/var/svn/MyApplication</code></pre></div>
+<p>E’ possibile combinare corrispondenza posizionale con corrispondenza in base al nome .
+Quando un argomento viene accompagnato dal nome,viene tolto della lista degli argomenti e gli argomenti senza nome rimanenti sono abbinati nell’ordine in cui sono elencati nella definizione della funzione.</p>
+
+<p>Personalmente, data una funzione, trovo più utile utilizzare solo o l’una o l’altra (o solo per posizione o solo per nome), ma se vi doveste trovare di fronte a codice scritto con questa modalità mixed è utile conoscere le regole del gioco.</p>
+
+<h2 id="definire-una-funzione">definire una funzione</h2>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">f &lt;- <span class="k">function</span><span class="o">(</span>a, <span class="nv">b</span> <span class="o">=</span> 1, <span class="nv">c</span> <span class="o">=</span> 2, <span class="nv">d</span> <span class="o">=</span> NULL<span class="o">)</span> <span class="o">{</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Oltre a non specificare un valore di default , è possibile anche impostare un valore di argomento NULL .</p>
+
+<h2 id="lazy-evaluation">Lazy Evaluation</h2>
+<p>Gli argomenti a funzioni vengono valutate lazy, in modo che siano valutati solo quando necessario .</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">f &lt;- <span class="k">function</span><span class="o">(</span>a, b<span class="o">)</span> <span class="o">{</span>
+   a^2
+<span class="o">}</span>
+f<span class="o">(</span>2<span class="o">)</span>
+<span class="c">## [1] 4</span></code></pre></div>
+
+<p>Questa funzione non utilizza effettivamente l’argomento b e chiamare f (2) non produrrà un errore.</p>
+
+<p>Mentre per l’esempio sotto l’errore viene prodotto per ovvie ragioni.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">f &lt;- <span class="k">function</span><span class="o">(</span>a, b<span class="o">)</span> <span class="o">{</span>
+   print<span class="o">(</span>a<span class="o">)</span>
+   print<span class="o">(</span>b<span class="o">)</span>
+<span class="o">}</span>
+f<span class="o">(</span>45<span class="o">)</span>
+<span class="c">## [1] 45</span>
+<span class="c">## Error: argument &quot;b&quot; is missing, with no default</span></code></pre></div>
+
+<p>Esiste poi l’argomento … ma di questo parleremo in un altro post.</p>
 
 
         
@@ -228,10 +274,8 @@ l’url del repo è nel formato seguente</p>
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-git/" class="btn" title="Ubuntu 14.04.02 LTS installare git">Previous</a>
+        <a href="http://caliman.org/articles/linguaggio_r_strutture_di_controllo/" class="btn" title="Le strutture di controllo di R">Previous</a>
       
-      
-        <a href="http://caliman.org/articles/linguaggio_r_introduzione/" class="btn" title="Linguaggio R introduzione">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
