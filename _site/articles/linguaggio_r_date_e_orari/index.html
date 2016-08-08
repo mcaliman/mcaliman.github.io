@@ -5,20 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>le funzioni in R &#8211; Massimo Caliman's</title>
-<meta name="description" content="Le funzioni sono create usando la direttiva function() e memorizzate come qualsiasi altro oggetto in R. 
-In particolare sono oggetti di classe funzione.
-
+<title>Oggetti data, orari e intervalli di tempo in R &#8211; Massimo Caliman's</title>
+<meta name="description" content="
 ">
 <meta name="keywords" content="datascience, R">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="le funzioni in R">
-<meta name="twitter:description" content="Le funzioni sono create usando la direttiva function() e memorizzate come qualsiasi altro oggetto in R. 
-In particolare sono oggetti di classe funzione.
-
+<meta name="twitter:title" content="Oggetti data, orari e intervalli di tempo in R">
+<meta name="twitter:description" content="
 ">
 <meta name="twitter:site" content="@mcaliman">
 <meta name="twitter:creator" content="@mcaliman">
@@ -29,19 +25,17 @@ In particolare sono oggetti di classe funzione.
 <!-- Open Graph -->
 <meta property="og:locale" content="it_IT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="le funzioni in R">
-<meta property="og:description" content="Le funzioni sono create usando la direttiva function() e memorizzate come qualsiasi altro oggetto in R. 
-In particolare sono oggetti di classe funzione.
-
+<meta property="og:title" content="Oggetti data, orari e intervalli di tempo in R">
+<meta property="og:description" content="
 ">
-<meta property="og:url" content="http://caliman.org/articles/linguaggio_r_funzioni/">
+<meta property="og:url" content="http://caliman.org/articles/linguaggio_r_date_e_orari/">
 <meta property="og:site_name" content="Massimo Caliman's">
 
 
 
 
 
-<link rel="canonical" href="http://caliman.org/articles/linguaggio_r_funzioni/">
+<link rel="canonical" href="http://caliman.org/articles/linguaggio_r_date_e_orari/">
 <link href="http://caliman.org/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -143,7 +137,7 @@ In particolare sono oggetti di classe funzione.
           <li><a href="http://caliman.org/tags/#datascience" title="Pages tagged datascience">datascience</a></li><li><a href="http://caliman.org/tags/#R" title="Pages tagged R">R</a></li>
         </ul>
         
-          <h1 class="entry-title">le funzioni in R</h1>
+          <h1 class="entry-title">Oggetti data, orari e intervalli di tempo in R</h1>
         
       </header>
       <footer class="entry-meta">
@@ -153,17 +147,17 @@ In particolare sono oggetti di classe funzione.
           <img src="http://caliman.org/images/bio-photo.jpg" class="bio-photo" alt="Massimo Caliman bio photo"></a>
         
         <span class="author vcard">By <span class="fn">Massimo Caliman</span></span>
-        <span class="entry-date date published"><time datetime="2016-01-20T23:45:33+01:00"><i class="fa fa-calendar-o"></i> January 20, 2016</time></span>
+        <span class="entry-date date published"><time datetime="2016-02-10T23:45:33+01:00"><i class="fa fa-calendar-o"></i> February 10, 2016</time></span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         <span class="social-share-twitter">
-  <a href="https://twitter.com/intent/tweet?hashtags=datascience,R&amp;text=le%20funzioni%20in%20R&amp;url=http://caliman.org/articles/linguaggio_r_funzioni/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+  <a href="https://twitter.com/intent/tweet?hashtags=datascience,R&amp;text=Oggetti%20data,%20orari%20e%20intervalli%20di%20tempo%20in%20R&amp;url=http://caliman.org/articles/linguaggio_r_date_e_orari/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
 </span>
 <span class="social-share-facebook">
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http://caliman.org/articles/linguaggio_r_funzioni/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://caliman.org/articles/linguaggio_r_date_e_orari/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
 </span>
 <span class="social-share-googleplus">
-  <a href="https://plus.google.com/share?url=http://caliman.org/articles/linguaggio_r_funzioni/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+  <a href="https://plus.google.com/share?url=http://caliman.org/articles/linguaggio_r_date_e_orari/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
 </span>
 <!-- /.social-share -->
         
@@ -180,68 +174,92 @@ In particolare sono oggetti di classe funzione.
 </div><!-- /.google-ads --><!-- /.google-ads -->
       </footer>
       <div class="entry-content">
-        <p>Le funzioni sono create usando la direttiva <code>function()</code> e memorizzate come qualsiasi altro oggetto in R. 
-In particolare sono oggetti di classe funzione.</p>
+        
+<h2 id="la-classe-date">La classe Date</h2>
+<p>R ha una speciale rappresentazione di oggetti date e ora,le date sono rappresentate tramite la classe <code>Date</code>,orari e intervalli di tempo con le classi <code>POSIXct</code> o <code>POSIXlt</code>. 
+Le date vengono memorizzate internamente come il numero di giorni dal 1/1/1970 mentre gli orari e intervalli sono memorizzati internamente come il numero di secondi trascorsi dal 1/1/1970</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">f &lt;- <span class="k">function</span><span class="o">(</span>&lt;arguments&gt;<span class="o">)</span> <span class="o">{</span>
-   <span class="c"># corpo della funzione</span>
-<span class="o">}</span></code></pre></div>
+<h2 id="classi-per-orari-e-intervalli-di-tempo">Classi per orari e intervalli di tempo</h2>
+<p>Le date sono rappresentate dalla classe <code>Date</code> e possono essere sottoposte a coercizione (conosciuto con il nome di cast in altri linguaggi) da una stringa di caratteri nel seguente modo</p>
 
-<p>Le funzioni in R sono <code>first class objects</code>, il che significa che possono essere trattate come qualsiasi altro oggetto in R: possono essere passati come argomenti per altre funzioni e possono essere nidificate (in questo modo si può definire una funzione all’interno di un’altra funzione),il valore di ritorno di una funzione è l’ultima espressione da valutare nel corpo della funzione.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">x &lt;- as.Date<span class="o">(</span><span class="s2">&quot;1970-01-01&quot;</span><span class="o">)</span>
+x
+<span class="o">[</span>1<span class="o">]</span> <span class="s2">&quot;1970-01-01&quot;</span>
+&gt; class<span class="o">(</span>x<span class="o">)</span>
+<span class="o">[</span>1<span class="o">]</span> <span class="s2">&quot;Date&quot;</span></code></pre></div>
 
-<h2 id="argomenti-di-una-funzione">Argomenti di una funzione</h2>
+<p>Orari e intervalli di tempo sono rappresentate utilizzando le classi
+<code>POSIXct</code> e <code>POSIXlt</code></p>
 
-<p>Gli argomenti formali sono argomenti inclusi nella definizione di una funzione
-Non tutte le chiamate a una funzione si avvalgono di tutti gli argomenti formali, in quanto
-un argomento di una funzione potrebbe essere mancante o potrebbero avere valori di default.</p>
+<ul>
+  <li>
+    <p><code>POSIXct</code> sotto il “cofano” è solo un grande numero intero e si usa quando si desidera memorizzare orari in qualcosa di simile a un frame di dati</p>
+  </li>
+  <li>
+    <p><code>POSIXlt</code> ha “detro” una lista e memorizza una serie di altre informazioni utili come il giorno della settimana, giorno dell’anno , mese , giorno del mese (ed è più utile quando bisogna effettuare manipolazioni)</p>
+  </li>
+</ul>
 
-<h2 id="il-matching-degli-argomenti">Il matching degli argomenti</h2>
-<p>Qualcosa che trovo veramente comodo: il match degli argomenti di una funzione può avvenire per posizione o per nome
-Le seguenti chiamate sono equivalenti</p>
+<p>Ci sono un certo numero di funzioni generiche per gli oggetti di tipo date e orari</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">dati &lt;- rnorm<span class="o">(</span>100<span class="o">)</span>
-sd<span class="o">(</span>dati<span class="o">)</span>
-sd<span class="o">(</span><span class="nv">x</span> <span class="o">=</span> dati<span class="o">)</span>
-sd<span class="o">(</span><span class="nv">x</span> <span class="o">=</span> dati, na.rm <span class="o">=</span> FALSE<span class="o">)</span>
-sd<span class="o">(</span>na.rm <span class="o">=</span> FALSE, <span class="nv">x</span> <span class="o">=</span> dati<span class="o">)</span>
-sd<span class="o">(</span>na.rm <span class="o">=</span> FALSE, dati<span class="o">)</span></code></pre></div>
+<ul>
+  <li><code>weekdays</code> : ritorna il giorno della settimana</li>
+  <li><code>months</code> : ritorna il nome del mese</li>
+  <li><code>quarters</code> : ritorna il numero del quadrimestre (“Q1”, “Q2”, “Q3”,“Q4”)</li>
+</ul>
 
-<p>Anche se è permesso, non vi sconsiglio di giocare troppo con l’ordine naturale (ordine della definizione di funzione) degli argomenti,serve solo a fare confusione.</p>
+<p>gli orari possono essere ottenuti da una stringa di caratteri utilizzando le funzioni <code>as.POSIXlt</code> o <code>as.POSIXct</code>.</p>
 
-<p>E’ possibile combinare corrispondenza posizionale con corrispondenza in base al nome .
-Quando un argomento viene accompagnato dal nome,viene tolto della lista degli argomenti e gli argomenti senza nome rimanenti sono abbinati nell’ordine in cui sono elencati nella definizione della funzione.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">t1 &lt;- Sys.time<span class="o">()</span>
+posix1&lt;- as.POSIXlt<span class="o">(</span>t1<span class="o">)</span>
+posix1<span class="nv">$sec</span> <span class="c">#prende la parte secondi, posso farlo perchè l&#39;ho costruito come POSIXlt</span></code></pre></div>
 
-<p>Personalmente, data una funzione, trovo più utile utilizzare solo o l’una o l’altra (o solo per posizione o solo per nome), ma se vi doveste trovare di fronte a codice scritto con questa modalità mixed è utile conoscere le regole del gioco.</p>
+<p>oppure posso utilizzare il format <code>POSIXct</code>.</p>
 
-<h2 id="definire-una-funzione">definire una funzione</h2>
+<p>nel caso in cui le date siano scritte in un formato diverso si può usare la funzione <code>strptime</code></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">f &lt;- <span class="k">function</span><span class="o">(</span>a, <span class="nv">b</span> <span class="o">=</span> 1, <span class="nv">c</span> <span class="o">=</span> 2, <span class="nv">d</span> <span class="o">=</span> NULL<span class="o">)</span> <span class="o">{</span>
-<span class="o">}</span></code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">datestring &lt;- c<span class="o">(</span><span class="s2">&quot;January 10, 2012 10:40&quot;</span>, <span class="s2">&quot;December 9, 2011 9:10&quot;</span><span class="o">)</span>
+x &lt;- strptime<span class="o">(</span>datestring, <span class="s2">&quot;%B %d, %Y %H:%M&quot;</span><span class="o">)</span>
+<span class="c">#restituisce &quot;2012-01-10 10:40:00 EST&quot; &quot;2011-12-09 09:10:00 EST&quot; ed è interessante notare che l&#39;ho applicato ad una lista</span></code></pre></div>
 
-<p>Oltre a non specificare un valore di default , è possibile anche impostare un valore di argomento NULL .</p>
+<h2 id="operazioni-su-oggetti-di-tipo-date-e-posix">Operazioni su oggetti di tipo Date e POSIX*</h2>
 
-<h2 id="lazy-evaluation">Lazy Evaluation</h2>
-<p>Gli argomenti a funzioni vengono valutate lazy, in modo che siano valutati solo quando necessario .</p>
+<p>È possibile utilizzare le operazioni matematiche <code>+</code> e <code>-</code> su date e orari e così anche quelli di confronto come <code>==</code> e <code>&lt;=</code></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">f &lt;- <span class="k">function</span><span class="o">(</span>a, b<span class="o">)</span> <span class="o">{</span>
-   a^2
-<span class="o">}</span>
-f<span class="o">(</span>2<span class="o">)</span>
-<span class="c">## [1] 4</span></code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">lct &lt;- Sys.getlocale<span class="o">(</span><span class="s2">&quot;LC_TIME&quot;</span><span class="o">)</span><span class="p">;</span> Sys.setlocale<span class="o">(</span><span class="s2">&quot;LC_TIME&quot;</span>, <span class="s2">&quot;C&quot;</span><span class="o">)</span>
+x &lt;- as.Date<span class="o">(</span><span class="s2">&quot;2012-01-01&quot;</span><span class="o">)</span><span class="p">;</span>y &lt;- strptime<span class="o">(</span><span class="s2">&quot;January 10, 2012 10:40&quot;</span>, <span class="s2">&quot;%B %d, %Y %H:%M&quot;</span><span class="o">)</span>
+x-y
 
-<p>Questa funzione non utilizza effettivamente l’argomento b e chiamare f (2) non produrrà un errore.</p>
+Error in x - y : argomento non numerico trasformato in operatore binario
+Inoltre: Warning message:
+Metodi incompatibili <span class="o">(</span><span class="s2">&quot;-.Date&quot;</span>, <span class="s2">&quot;-.POSIXt&quot;</span><span class="o">)</span> per <span class="s2">&quot;-&quot;</span> 
 
-<p>Mentre per l’esempio sotto l’errore viene prodotto per ovvie ragioni.</p>
+x &lt;- as.POSIXlt<span class="o">(</span>x<span class="o">)</span> <span class="c"># i tipi erano incompatibili trasformo tutto in POSIXlt</span>
+x-y
+Time difference of -9.402778 days
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">f &lt;- <span class="k">function</span><span class="o">(</span>a, b<span class="o">)</span> <span class="o">{</span>
-   print<span class="o">(</span>a<span class="o">)</span>
-   print<span class="o">(</span>b<span class="o">)</span>
-<span class="o">}</span>
-f<span class="o">(</span>45<span class="o">)</span>
-<span class="c">## [1] 45</span>
-<span class="c">## Error: argument &quot;b&quot; is missing, with no default</span></code></pre></div>
+<span class="c"># unclass ci dice anche che l&#39;unico attributo a cui possiamo attingere è quello che abbiamo giù ottenuto e cioè la differenza in giorni</span>
+&gt; unclass<span class="o">(</span>differenza<span class="o">)</span>
+<span class="o">[</span>1<span class="o">]</span> -9.402778
+attr<span class="o">(</span>,<span class="s2">&quot;units&quot;</span><span class="o">)</span>
+<span class="o">[</span>1<span class="o">]</span> <span class="s2">&quot;days&quot;</span>
 
-<p>Esiste poi l’argomento … ma di questo parleremo in un altro post.</p>
+<span class="c">#come anticipato posso applicare anche gli operatori di ordinamento</span>
+
+x&gt;y
+<span class="o">[</span>1<span class="o">]</span> FALSE</code></pre></div>
+
+<p>tiene anche traccia degli anni bisestili , ora legale e fusi orari .</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">&gt; x &lt;- as.Date<span class="o">(</span><span class="s2">&quot;2012-03-01&quot;</span><span class="o">)</span> 
+&gt; y &lt;- as.Date<span class="o">(</span><span class="s2">&quot;2012-02-28&quot;</span><span class="o">)</span>
+&gt; x-y
+Time difference of <span class="m">2</span> days</code></pre></div>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">x &lt;- as.POSIXct<span class="o">(</span><span class="s2">&quot;2012-10-25 01:00:00&quot;</span><span class="o">)</span>
+y &lt;- as.POSIXct<span class="o">(</span><span class="s2">&quot;2012-10-25 06:00:00&quot;</span>, <span class="nv">tz</span> <span class="o">=</span> <span class="s2">&quot;GMT&quot;</span><span class="o">)</span>
+y-x
+Time difference of <span class="m">1</span> hours</code></pre></div>
 
 
         
@@ -274,10 +292,8 @@ f<span class="o">(</span>45<span class="o">)</span>
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://caliman.org/articles/linguaggio_r_strutture_di_controllo/" class="btn" title="Le strutture di controllo di R">Previous</a>
+        <a href="http://caliman.org/articles/linguaggio_r_funzioni/" class="btn" title="le funzioni in R">Previous</a>
       
-      
-        <a href="http://caliman.org/articles/linguaggio_r_date_e_orari/" class="btn" title="Oggetti data, orari e intervalli di tempo in R">Next</a>
       
     </nav><!-- /.pagination -->
   </article>

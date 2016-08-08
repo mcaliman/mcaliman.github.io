@@ -4,13 +4,120 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://caliman.org/feed.xml" />
 <link rel="alternate" type="text/html" href="http://caliman.org" />
-<updated>2016-08-04T21:54:53+02:00</updated>
+<updated>2016-08-08T19:22:04+02:00</updated>
 <id>http://caliman.org/</id>
 <author>
   <name>Massimo Caliman</name>
   <uri>http://caliman.org/</uri>
   <email>mcaliman@gmail.com</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Oggetti data, orari e intervalli di tempo in R]]></title>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/linguaggio_r_date_e_orari/" />
+  <id>http://caliman.org/articles/linguaggio_r_date_e_orari</id>
+  <published>2016-02-10T23:45:33+01:00</published>
+  <updated>2016-02-10T23:45:33+01:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://caliman.org</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <content type="html">
+    
+&lt;h2 id=&quot;la-classe-date&quot;&gt;La classe Date&lt;/h2&gt;
+&lt;p&gt;R ha una speciale rappresentazione di oggetti date e ora,le date sono rappresentate tramite la classe &lt;code&gt;Date&lt;/code&gt;,orari e intervalli di tempo con le classi &lt;code&gt;POSIXct&lt;/code&gt; o &lt;code&gt;POSIXlt&lt;/code&gt;. 
+Le date vengono memorizzate internamente come il numero di giorni dal 1/1/1970 mentre gli orari e intervalli sono memorizzati internamente come il numero di secondi trascorsi dal 1/1/1970&lt;/p&gt;
+
+&lt;h2 id=&quot;classi-per-orari-e-intervalli-di-tempo&quot;&gt;Classi per orari e intervalli di tempo&lt;/h2&gt;
+&lt;p&gt;Le date sono rappresentate dalla classe &lt;code&gt;Date&lt;/code&gt; e possono essere sottoposte a coercizione (conosciuto con il nome di cast in altri linguaggi) da una stringa di caratteri nel seguente modo&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;x &amp;lt;- as.Date&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;1970-01-01&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+x
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;1970-01-01&amp;quot;&lt;/span&gt;
+&amp;gt; class&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Date&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Orari e intervalli di tempo sono rappresentate utilizzando le classi
+&lt;code&gt;POSIXct&lt;/code&gt; e &lt;code&gt;POSIXlt&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;POSIXct&lt;/code&gt; sotto il “cofano” è solo un grande numero intero e si usa quando si desidera memorizzare orari in qualcosa di simile a un frame di dati&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;POSIXlt&lt;/code&gt; ha “detro” una lista e memorizza una serie di altre informazioni utili come il giorno della settimana, giorno dell’anno , mese , giorno del mese (ed è più utile quando bisogna effettuare manipolazioni)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ci sono un certo numero di funzioni generiche per gli oggetti di tipo date e orari&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;weekdays&lt;/code&gt; : ritorna il giorno della settimana&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;months&lt;/code&gt; : ritorna il nome del mese&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;quarters&lt;/code&gt; : ritorna il numero del quadrimestre (“Q1”, “Q2”, “Q3”,“Q4”)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;gli orari possono essere ottenuti da una stringa di caratteri utilizzando le funzioni &lt;code&gt;as.POSIXlt&lt;/code&gt; o &lt;code&gt;as.POSIXct&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;t1 &amp;lt;- Sys.time&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+posix1&amp;lt;- as.POSIXlt&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;t1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+posix1&lt;span class=&quot;nv&quot;&gt;$sec&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#prende la parte secondi, posso farlo perchè l&amp;#39;ho costruito come POSIXlt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;oppure posso utilizzare il format &lt;code&gt;POSIXct&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;nel caso in cui le date siano scritte in un formato diverso si può usare la funzione &lt;code&gt;strptime&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;datestring &amp;lt;- c&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;January 10, 2012 10:40&amp;quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&amp;quot;December 9, 2011 9:10&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+x &amp;lt;- strptime&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;datestring, &lt;span class=&quot;s2&quot;&gt;&amp;quot;%B %d, %Y %H:%M&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#restituisce &amp;quot;2012-01-10 10:40:00 EST&amp;quot; &amp;quot;2011-12-09 09:10:00 EST&amp;quot; ed è interessante notare che l&amp;#39;ho applicato ad una lista&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;operazioni-su-oggetti-di-tipo-date-e-posix&quot;&gt;Operazioni su oggetti di tipo Date e POSIX*&lt;/h2&gt;
+
+&lt;p&gt;È possibile utilizzare le operazioni matematiche &lt;code&gt;+&lt;/code&gt; e &lt;code&gt;-&lt;/code&gt; su date e orari e così anche quelli di confronto come &lt;code&gt;==&lt;/code&gt; e &lt;code&gt;&amp;lt;=&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;lct &amp;lt;- Sys.getlocale&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;LC_TIME&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; Sys.setlocale&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;LC_TIME&amp;quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&amp;quot;C&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+x &amp;lt;- as.Date&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;2012-01-01&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;y &amp;lt;- strptime&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;January 10, 2012 10:40&amp;quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&amp;quot;%B %d, %Y %H:%M&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+x-y
+
+Error in x - y : argomento non numerico trasformato in operatore binario
+Inoltre: Warning message:
+Metodi incompatibili &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;-.Date&amp;quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&amp;quot;-.POSIXt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; per &lt;span class=&quot;s2&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt; 
+
+x &amp;lt;- as.POSIXlt&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# i tipi erano incompatibili trasformo tutto in POSIXlt&lt;/span&gt;
+x-y
+Time difference of -9.402778 days
+
+&lt;span class=&quot;c&quot;&gt;# unclass ci dice anche che l&amp;#39;unico attributo a cui possiamo attingere è quello che abbiamo giù ottenuto e cioè la differenza in giorni&lt;/span&gt;
+&amp;gt; unclass&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;differenza&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -9.402778
+attr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&amp;quot;units&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;days&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#come anticipato posso applicare anche gli operatori di ordinamento&lt;/span&gt;
+
+x&amp;gt;y
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; FALSE&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;tiene anche traccia degli anni bisestili , ora legale e fusi orari .&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; x &amp;lt;- as.Date&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;2012-03-01&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+&amp;gt; y &amp;lt;- as.Date&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;2012-02-28&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&amp;gt; x-y
+Time difference of &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; days&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;x &amp;lt;- as.POSIXct&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;2012-10-25 01:00:00&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+y &amp;lt;- as.POSIXct&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;2012-10-25 06:00:00&amp;quot;&lt;/span&gt;, &lt;span class=&quot;nv&quot;&gt;tz&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;GMT&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+y-x
+Time difference of &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; hours&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/linguaggio_r_date_e_orari/&quot;&gt;Oggetti data, orari e intervalli di tempo in R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on February 10, 2016.&lt;/p&gt;
+  </content>
+</entry>
 
 
   
@@ -1400,93 +1507,6 @@ p vettore di dimensione n  t.c. p[v] contiene l’informazione associata al nodo
 &lt;/ul&gt;
 
     &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-rappresentazioni-indicizzate/&quot;&gt;Alberi rappresentazioni indicizzate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 07, 2014.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[Alberi in Java]]></title>
-  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-in-java/" />
-  <id>http://caliman.org/articles/alberi-in-java</id>
-  <published>2014-10-06T00:45:33+02:00</published>
-  <updated>2014-10-06T00:45:33+02:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://caliman.org</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;﻿Dopo i post sulle strutture dati elementari passiamo a trattare gli alberi, prima di entrare nel dettaglio di come implementare strutture dati di questo tipo ne approfondiamo l’aspetto teorico.&lt;/p&gt;
-
-&lt;p&gt;Per prima cosa ne vediamo la definzione classica&lt;/p&gt;
-
-&lt;p&gt;Un albero (radicato) è una coppia &lt;code&gt;T=(N,A)&lt;/code&gt; costituita da un insieme &lt;code&gt;N&lt;/code&gt; di nodi e da un insieme &lt;code&gt;A&lt;/code&gt; di archi, &lt;code&gt;A&lt;/code&gt; è sottoinsieme proprio di &lt;code&gt;NxN&lt;/code&gt; (cioè del prodotto cartesiano di &lt;code&gt;N&lt;/code&gt; per &lt;code&gt;N&lt;/code&gt;), gli archi infatti sono coppie di nodi e il concetto di arco ne modella la relazione esistente.&lt;/p&gt;
-
-&lt;p&gt;Esiste una nomenclatura piuttosto intuitiva riguardo gli Alberi&lt;/p&gt;
-
-&lt;p&gt;In un albero ogni nodo v (tranne la radice) ha un solo genitore (o padre) u tale che (u,v) appartiene ad A (l’insieme degli archi)&lt;/p&gt;
-
-&lt;p&gt;Un nodo può avere 1 o più figli v t.c. (u,v) appartiene ad A e il loro numero è detto grado&lt;/p&gt;
-
-&lt;p&gt;Con queste definizioni abbiamo già fissato alcuni concetti importanti&lt;/p&gt;
-
-&lt;p&gt;Seguono le definizioni per 
-radice
-foglie
-nodi interni
-antenati
-discendenti
-profondità&lt;/p&gt;
-
-&lt;p&gt;i nodi con lo stesso padre vengono detti fratelli&lt;/p&gt;
-
-&lt;p&gt;alberi con foglie tutte sullo stesso livello vengono detti alberi completi&lt;/p&gt;
-
-&lt;p&gt;Un specifica base del tipo di dati Albero deve comprendere necessariamente operazioni come quelle riportate sotto&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;tipo
-   Albero
-dati
-   Un insieme di nodi N e uno di archi A
-operazioni
-   numNodi&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; -&amp;gt; intero &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;restituisce il numero di nodi presenti nell’albero&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-   grado&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nodo v&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;-&amp;gt; intero &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;restituisce il numero di figli del nodo v&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-   padre&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nodo v&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; -&amp;gt; nodo &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;restituisce il padre del nodo v o null se v è la radice&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-   figli&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nodo v&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; -&amp;gt; &amp;lt;nodo,nodo,...,nodo&amp;gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;resitituisce uno dopo l’altro i figli del nodo v&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-   aggiungiNodo&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nodo u&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; -&amp;gt; nodo &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;inserisce un nuovo nodo v come figlio di u nell’albero e lo restituisce, se v è il primo nodo 
-                           ad essere inserito nell’albero esso diventa radice e u viene ignorato&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-   aggiungiSottoalbero&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Albero a,nodo u&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;inserisce nell’albero il sottoalbero a in modo che la radice di a diventi figlia di u&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-   rimuoviSottoalbero&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nodo v&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;-&amp;gt;Albero &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stacca e restituisce l’intero sottoalbero radicato in v,
-   l’operazione cancella dall’albero il nodo v e tutti i suoi discendenti&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;A questo punto passare dalla specifica in pseudocodice ad una in linguaggio Java è immediato.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;NodoInf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;//stuff&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AlberoInf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;numNodi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;grado&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;padre&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;figli&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;aggiungiNodo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-   &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;aggiungiSottoalbero&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Albero&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;Albero&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rimuoviSottoalbero&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nodo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Una struttura di questo tipo che non si porti dietro un certo contenuto informativo è di per se poco utile, Nodo dovrebbe infatti contenere come proprietà per esempio una chiave, un etichettà. Pensiamo ad esempio ad una struttura ad albero per rappresentare l’albero genealogico di una famigla.&lt;/p&gt;
-
-&lt;p&gt;Utilizzando i generics sarebbe infatti più interessante lavorare con classi di questo tipo
-&lt;code&gt;Tree&amp;lt;T&amp;gt;&lt;/code&gt; e &lt;code&gt;Node&amp;lt;T&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Nel JDK sono presenti implemetazioni interessanti come &lt;code&gt;javax.swing.tree.TreeModel&lt;/code&gt; e &lt;code&gt;javax.swing.tree.TreeNode&lt;/code&gt; utilizzata nelle Swing per la realizzazione delle GUI in ambiente desktop.&lt;/p&gt;
-
-&lt;p&gt;Esistono diverse possibili rappresentazioni per gli alberi sia basate su strutture indicizzate che collegate, quale scegliere dipende dal tipo di problemi che pensiamo di dover risolvere, se pensiamo che l’operazione più frequente o critica sia per esempio risalire ai figli di un nodo ne utilizzeremo una, se la l’operazione più critica e navigare per livelli l’albero ne utilizzeremo una ottimizzata per questo tipo di problema.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-in-java/&quot;&gt;Alberi in Java&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 06, 2014.&lt;/p&gt;
   </content>
 </entry>
 

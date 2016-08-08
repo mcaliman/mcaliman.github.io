@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Oggetti data, orari e intervalli di tempo in R",
+      "link"			: "http://caliman.org/articles/linguaggio_r_date_e_orari/",
+      "excerpt"		: "
+"
+    }
+  
+
+  
+    ,{
       "title"			: "le funzioni in R",
       "link"			: "http://caliman.org/articles/linguaggio_r_funzioni/",
       "excerpt"		: "<p>Le funzioni sono create usando la direttiva <code>function()</code> e memorizzate come qualsiasi altro oggetto in R. 
