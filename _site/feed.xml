@@ -4,13 +4,80 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://caliman.org/feed.xml" />
 <link rel="alternate" type="text/html" href="http://caliman.org" />
-<updated>2016-08-09T12:55:28+02:00</updated>
+<updated>2016-08-09T17:16:20+02:00</updated>
 <id>http://caliman.org/</id>
 <author>
   <name>Massimo Caliman</name>
   <uri>http://caliman.org/</uri>
   <email>mcaliman@gmail.com</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Interfacce con il mondo esterno in R]]></title>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/" />
+  <id>http://caliman.org/articles/linguaggio_r_ interfacce_con_il_ mondo_esterno</id>
+  <published>2016-04-02T00:45:33+02:00</published>
+  <updated>2016-04-02T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://caliman.org</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <content type="html">
+    
+&lt;p&gt;I dati vengono letti tramite interfacce di collegamento . Le connessioni possono essere a file o url per esempio .&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;file&lt;/code&gt;, apre una connessione a un file&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;gzfile&lt;/code&gt;, apre un collegamento ad un file compresso con gzip&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;bzfile&lt;/code&gt;, apre un collegamento ad un file compresso con bzip2&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;url&lt;/code&gt;, apre un collegamento a una pagina web&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Per connettersi ad un file&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; str&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;file&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;, &lt;span class=&quot;nv&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;, &lt;span class=&quot;nv&quot;&gt;blocking&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; TRUE,
+&lt;span class=&quot;nv&quot;&gt;encoding&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; getOption&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;encoding&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Descrizione è il nome del file open è un codice che indica&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“r” sola lettura&lt;/li&gt;
+  &lt;li&gt;“w” scrittura (e inizializzazione di un nuovo file)&lt;/li&gt;
+  &lt;li&gt;“a” append&lt;/li&gt;
+  &lt;li&gt;“rb”, “wb”, “ab” lettura,scrittura, o append in binary mode (Windows)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In generale, i collegamenti sono strumenti potenti che consentono di navigare file o altri oggetti esterni. 
+In pratica, spesso non abbiamo bisogno di trattare con l’interfaccia di collegamento direttamente .&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;con &amp;lt;- file&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;foo.txt&amp;quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+data &amp;lt;- read.csv&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+close&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;equivale a&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;data &amp;lt;- read.csv&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;foo.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;lettura per righe di un file di testo&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;con &amp;lt;- gzfile&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;example.gz&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+x &amp;lt;- readLines&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;con, 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;writeLines&lt;/code&gt; prende un vettore di caratteri e scrive ciascun elemento  una riga alla volta su un file di testo.
+&lt;code&gt;readLines&lt;/code&gt; può essere utile per la lettura per linee di pagine web&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;con &amp;lt;- url&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;http://google.com&amp;quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+x &amp;lt;- readLines&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/&quot;&gt;Interfacce con il mondo esterno in R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on April 02, 2016.&lt;/p&gt;
+  </content>
+</entry>
 
 
   
@@ -1578,45 +1645,6 @@ ciò che voglio venga fatto”, dagli un lecca-lecca
 &lt;p&gt;Ciò è evidente di per se ed è dimostrabile formalmente. La dimostrazione esula gli scopi di questo post che sono solo quelli di porre le basi a quelli successivi che ne approfondiscono gli aspetti teorici e pratici.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-algoritmo-vistita-generico/&quot;&gt;Algoritmo di visita generica per un albero&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 11, 2014.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[Alberi rappresentazioni collegate]]></title>
-  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-rappresentazioni-collegate/" />
-  <id>http://caliman.org/articles/alberi-rappresentazioni-collegate</id>
-  <published>2014-10-08T00:45:33+02:00</published>
-  <updated>2014-10-08T00:45:33+02:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://caliman.org</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;Proseguendo nella trattazione degli alberi normalmente si preferiscono le ﻿rappresentazioni basate su strutture collegate 
-1. più flessibile di quelle idicizzate
-2. modifiche alla struttura più efficienti&lt;/p&gt;
-
-&lt;p&gt;Le principali sono tre&lt;/p&gt;
-
-&lt;h1 id=&quot;puntatore-ai-figli&quot;&gt;Puntatore ai figli&lt;/h1&gt;
-&lt;p&gt;Se ogni nodo ha al più grado d è possibile mantenere in ogni nodo un puntatore a ciscuno dei possibili figli
-Nel caso da 2 se un figlio è assente si pone il puntatore a Null Spazio richiesto O(n*d) che per d costante è O(n)&lt;/p&gt;
-
-&lt;h1 id=&quot;lista-figli&quot;&gt;Lista figli&lt;/h1&gt;
-&lt;p&gt;Se il numero massimo di figli non è noto a priori è possibile associare ad ogni nodo una lista di puntatori ai suoi figli questa lista può essere a sua volta rappresentata in maniera indicizzata collegata, spazio richiesto O(n) indipendentemente dal numero di figli di un nodo&lt;/p&gt;
-
-&lt;h1 id=&quot;primo-figlio-fratello-successivo&quot;&gt;Primo figlio fratello successivo&lt;/h1&gt;
-&lt;p&gt;Come variante alla precedente senza dover tenere la struttura dati addizionale (la lista figli)
-Per ogni nodo un puntatore al primo figlio (posto a null se non ci sono figli) e un puntatore al fratello successivo&lt;/p&gt;
-
-&lt;p&gt;Spazio richiesto O(n)
-Per scandire tutti i figli di un nodo basta scendere sul primo figlio e poi scandire tutti i fratelli successivi saltando di fratello in fratello.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-rappresentazioni-collegate/&quot;&gt;Alberi rappresentazioni collegate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 08, 2014.&lt;/p&gt;
   </content>
 </entry>
 

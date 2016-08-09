@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://caliman.org/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/</loc>
+    <lastmod>2016-04-02T00:45:33+02:00</lastmod>
+  </url>
+  <url>
     <loc>http://caliman.org/articles/linguaggio_r_funzioni_che_implementano_cicli/</loc>
     <lastmod>2016-03-01T23:45:33+01:00</lastmod>
   </url>

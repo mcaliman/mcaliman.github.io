@@ -2,6 +2,15 @@
 
   
     {
+      "title"			: "Interfacce con il mondo esterno in R",
+      "link"			: "http://caliman.org/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/",
+      "excerpt"		: "
+"
+    }
+  
+
+  
+    ,{
       "title"			: "Funzioni che implementano cicli in R",
       "link"			: "http://caliman.org/articles/linguaggio_r_funzioni_che_implementano_cicli/",
       "excerpt"		: "<h2 id="loop-dalla-riga-di-comando">Loop dalla riga di comando</h2>
