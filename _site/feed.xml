@@ -4,13 +4,166 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://caliman.org/feed.xml" />
 <link rel="alternate" type="text/html" href="http://caliman.org" />
-<updated>2016-08-08T19:22:04+02:00</updated>
+<updated>2016-08-09T12:55:28+02:00</updated>
 <id>http://caliman.org/</id>
 <author>
   <name>Massimo Caliman</name>
   <uri>http://caliman.org/</uri>
   <email>mcaliman@gmail.com</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Funzioni che implementano cicli in R]]></title>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/linguaggio_r_funzioni_che_implementano_cicli/" />
+  <id>http://caliman.org/articles/linguaggio_r_funzioni_che_implementano_cicli</id>
+  <published>2016-03-01T23:45:33+01:00</published>
+  <updated>2016-03-01T23:45:33+01:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://caliman.org</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;loop-dalla-riga-di-comando&quot;&gt;Loop dalla riga di comando&lt;/h2&gt;
+
+&lt;p&gt;I costrutti  &lt;code&gt;for&lt;/code&gt;, &lt;code&gt;while&lt;/code&gt; i loop in generale sono è utili in fase di programmazione, ma non sono particolarmente facili quando si lavora in modo interattivo da riga di comando. Ci sono alcune funzioni che implementano loop per rendere la vita più facile. Sono le funzioni &lt;code&gt;*apply&lt;/code&gt; (&lt;code&gt;lapply&lt;/code&gt;,&lt;code&gt;sapply&lt;/code&gt;,&lt;code&gt;apply&lt;/code&gt;,&lt;code&gt;tapply&lt;/code&gt;,&lt;code&gt;mapply&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;Una funzione ausiliaria utile in combinazione con le funzioni &lt;code&gt;*apply&lt;/code&gt; è &lt;code&gt;split&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;lapply&quot;&gt;lapply&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;lapply&lt;/code&gt; accetta tre argomenti: (1) una lista X; (2) una funzione FUN; (3) altri argomenti attraverso il suo … argomento . Se X non è un elenco , sarà costretto ad un elenco utilizzando &lt;code&gt;as.list&lt;/code&gt;
+Il loop reale è fatto internamente in codice C (quindi attenzione sul lato dati ottenuti dal profiling).
+&lt;code&gt;lapply&lt;/code&gt; restituisce sempre un elenco, indipendentemente dalla classe di ingresso .&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;f &amp;lt;- &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;x+1&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+l &amp;lt;- 1:4
+y &amp;lt;- lapply&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;x,f&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+y
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; 2
+
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;2&lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; 3
+
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;3&lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; 4
+
+&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;4&lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; 5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;sapply&quot;&gt;sapply&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;sapply&lt;/code&gt; tenta di semplificare il risultato di &lt;code&gt;lappy&lt;/code&gt; se possibile.
+Se il risultato è una lista in cui ogni elemento è di lunghezza 1, viene restituito un vettore
+Se il risultato è una lista in cui ogni elemento è un vettore della stessa lunghezza ( &amp;gt; 1 ) , viene restituita una matrice.
+Se &lt;code&gt;sapply&lt;/code&gt; non riesce a semplificare viene ritornata  una lista.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; z&amp;lt;-sapply&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;x,f&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&amp;gt; z
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4&lt;/span&gt; 5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Comodo non trovate?&lt;/p&gt;
+
+&lt;h2 id=&quot;apply&quot;&gt;apply&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;apply&lt;/code&gt; viene utilizzato per la valutazione di una funzione ( spesso di natura anonima ) sulle colonne o righe di un array.
+E’ utilizzato più spesso per applicare una funzione alle righe o colonne di una matrice
+Non è più veloce che scrivere un ciclo for, ma funziona in una sola riga.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; str&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;apply&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;X, MARGIN, FUN, ...&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;MARGIN è un vettore intero che indica quali margini debbano essere “mantenuti”
+L’esempio sotto spero possa chiarire meglio (rnorm ci serve solo per popolare una matrice con una distribuzione normale)&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;x &amp;lt;- matrix&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;rnorm&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;200&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, 20, 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&amp;gt; x &amp;lt;- matrix&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;rnorm&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;200&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, 20, 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&amp;gt; x
+            &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;,1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;,2&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;,3&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;,4&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;,5&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;,6&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.3963635 -0.62742303  0.8559908  0.041758983  0.27968550 -1.51067608
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;2,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  2.7989429 -0.31108344  1.1125721  0.493892152 -0.99877881 -0.03635573
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;3,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  1.2729939  0.68517518 -0.5754894  0.001258338  0.89842612  0.76899917
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;4,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.1972043  0.14728076  0.5571848 -2.317407366 -0.94433394  0.22643282
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;5,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -1.0229955 -0.88704721 -0.2349964 -0.583044998 -0.38175450  0.79859082
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;6,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -2.2307039 -0.88393872 -1.1304861 -0.980230092 -1.19778042 -0.43944938
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;7,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.3239625 -0.07626231 -0.9167339  0.801793737  0.04583193 -0.44677327
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;8,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -2.1721930 -1.82162706 -0.1360091 -0.182583486  0.55254262 -0.55473856
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;9,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.5550490  0.17079315  0.3854185 -0.373603391 -1.23080985 -0.21907699
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;10,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -1.2234382 -1.87715072  0.6801925 -0.017450599  0.58342107  1.06882246
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;11,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.6361036  0.97475767 -0.3576995 -0.976218424 -0.31131696 -0.68747609
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;12,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.8353006  0.10183363 -0.0431286  0.806635605  0.03548096  0.21567848
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;13,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.5288823 -0.63436779  0.6056696  1.327055934  1.14380212  1.37146119
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;14,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -1.9836052 -0.73356595 -0.6248551 -2.267205407  0.02242875  0.16491377
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;15,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.8844882 -0.80770863 -1.9859983 -0.451040532 -0.32321439 -0.01792890
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;16,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  1.0193884  2.37281492  2.4778778 -0.360414709 -2.43461189  0.30425171
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;17,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.8749364  0.08347713  0.8584569  0.517227375 -0.65717674  0.67537576
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;18,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  1.2128844 -0.69963544  1.4121788  0.318647904  1.81284950 -2.80769002
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;19,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -1.0978996 -0.65164157  0.3670463  0.324967520  0.30765970  1.63676395
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;20,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.2675550  0.48960663 -0.1027670 -0.120393201 -0.17096206 -0.91307091
+             &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;,7&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;,8&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;,9&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;,10&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -2.07670554  1.23033091  0.76424487  1.12007931
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;2,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.50517705  0.37403268 -0.45168099  0.33952347
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;3,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.61391033 -1.38076619 -0.36363689  0.26394571
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;4,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.44591035 -0.49826675 -1.24337397 -0.82563916
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;5,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  1.37051701  0.12793799 -0.85043741  0.61634465
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;6,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.28234386  0.81821623  1.77128818  0.51458107
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;7,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -1.38204064  1.33920876  1.18078293 -1.75728697
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;8,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.27306276  0.60752641  1.90182306  0.21603295
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;9,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -1.01114509 -0.19292137 -2.46298102  0.39364777
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;10,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.49441357 -0.92996020  0.68627864  0.77054459
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;11,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.60748224  0.68570630  0.85982787 -1.03110133
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;12,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.05768264 -0.02326520 -0.02293647  0.45317369
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;13,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.44162534  0.01338081 -0.83990493  0.23590051
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;14,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.19310634 -0.67757005 -0.56180696  1.91955470
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;15,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.37236650 -2.81973163  0.28650254 -1.45773888
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;16,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.70371313  1.34526893  0.41251129  0.32920038
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;17,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.52115092  0.92246177 -0.70595800 -0.74992266
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;18,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.25084633  1.41506634  0.67849775  1.00418821
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;19,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.74722596 -0.57426375  0.65830451 -0.01854943
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;20,&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -2.49597657  0.85960698 -0.18431592  0.34410820
+&amp;gt;  apply&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;x, 2, mean&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.19912313 -0.24928564  0.16022123 -0.19981773 -0.14843056 -0.02009729
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;7&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.23467453  0.13209995  0.07565145  0.13402934&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;mapply&quot;&gt;mapply&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;mapply&lt;/code&gt; è un versione multivariate di apply che applica una funzione in parallelo su una serie di argomenti .
+Un esempio è riportato sotto, l1 contiene gli stessi elementi di l2
+rep è una funzione che “replica” l’elemento passato un numero di volte richiesto e lo ritorna come elenco, p.e.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; rep&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1,5&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;l1&amp;lt;-list&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;rep&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1, 4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, rep&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2, 3&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, rep&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;3, 2&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, rep&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;4, 1&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+
+l2&amp;lt;-mapply&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;rep, 1:4, 4:1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;tapply&quot;&gt;tapply&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tapply&lt;/code&gt; viene utilizzato per applicare una funzione su sottoinsiemi di un vettore&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;x &amp;lt;- c&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;rnorm&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, runif&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, rnorm&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;10, 1&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+f &amp;lt;- gl&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;3, 10&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+tapply&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;x, f, mean&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;split&quot;&gt;split&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;split&lt;/code&gt; prende un vettore (o altro tipo di elenco di oggetti) e lo divide in gruppi determinati da un fattore o un elenco di fattori.&lt;/p&gt;
+
+&lt;p&gt;Per esempio partizioniamo in due gruppi, gli elementi di x &amp;gt;1 e quelli &amp;lt;=1&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;gt; split&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;x,x&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&amp;gt;1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$`&lt;/span&gt;FALSE&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -1.13857804  0.21853696 -0.25563963  0.51938904  0.24105612  0.13492624
+ &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;7&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -0.59042828 -0.52559665  0.67772599  0.79394383  0.81569013  0.48512614
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;13&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.34841619  0.60159291  0.45714304  0.40336332  0.71783361  0.86962872
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;19&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;  0.84581567  0.94133809 -0.36174582  0.83549908  0.05453992
+
+&lt;span class=&quot;nv&quot;&gt;$`&lt;/span&gt;TRUE&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; 1.343577 1.742792 1.389213 1.252149 1.650007 1.350450 3.162776&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/linguaggio_r_funzioni_che_implementano_cicli/&quot;&gt;Funzioni che implementano cicli in R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on March 01, 2016.&lt;/p&gt;
+  </content>
+</entry>
 
 
   
@@ -1464,49 +1617,6 @@ Per ogni nodo un puntatore al primo figlio (posto a null se non ci sono figli) e
 Per scandire tutti i figli di un nodo basta scendere sul primo figlio e poi scandire tutti i fratelli successivi saltando di fratello in fratello.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-rappresentazioni-collegate/&quot;&gt;Alberi rappresentazioni collegate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 08, 2014.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[Alberi rappresentazioni indicizzate]]></title>
-  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-rappresentazioni-indicizzate/" />
-  <id>http://caliman.org/articles/alberi-rappresentazioni-indicizzate</id>
-  <published>2014-10-07T00:45:33+02:00</published>
-  <updated>2014-10-07T00:45:33+02:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://caliman.org</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;﻿Rappresentazioni indicizzate
-Basate su array vettore padri e vettori posizionali entrambe richiedono spazio O(n)&lt;/p&gt;
-
-&lt;h1 id=&quot;vettori-padri&quot;&gt;Vettori padri&lt;/h1&gt;
-&lt;p&gt;La più semplice
-Sia T = (N,A) albero con n nodi numerati da 0 a n-1 un vettore padri è un vettore P di dim n le cui celle contengono coppie (info,parent) per ogni indice v appartenente a [0,n-1]
-p[v].info è il contenuto informativo del nodo v
-p[v].parent = u sse vi è un arco (u,v) in A
-Se invece v è la radice p[v].parent=null
-usando il vettore dei padri da ogni nodo è possibile risalire in tempo O(1) al proprio padre mentre trovare un figlio richiede una scansione dell’array in tempo O(n)&lt;/p&gt;
-
-&lt;h1 id=&quot;vettore-posizionale&quot;&gt;Vettore posizionale&lt;/h1&gt;
-&lt;p&gt;Nel caso particolare degli alberi d-ari completi con d&amp;gt;=2 è possibile una rappresentazione indicizzata dove ogni nodo ha una posizione prestabilita.&lt;/p&gt;
-
-&lt;p&gt;Sia T=(N,A) albero d-ario, n nodi numerabili da 1 a n
-p vettore di dimensione n  t.c. p[v] contiene l’informazione associata al nodo v e t.c l’informazione associata all’i-esimo figlio di v è in posizione p[d*v+i] per i in [0,(d-1)]&lt;/p&gt;
-
-&lt;p&gt;Per semplicità la posizione 0 dell’array non è utilizzata lo spazio richiesto per n nodi è quindi n +1&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;da ogni nodo v è possibile risalire in tempo O(1) sia al proprio padre (che ha indice floor ceil v/d se v diversa da radice) che a uno qualunque dei figli&lt;/li&gt;
-  &lt;li&gt;per ogni v nodo, l’operazione padre(v) può quindi essere realizzata in tempo costante mentre l’operazione figli(v) richiede tempo O(grado(v))&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-rappresentazioni-indicizzate/&quot;&gt;Alberi rappresentazioni indicizzate&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 07, 2014.&lt;/p&gt;
   </content>
 </entry>
 

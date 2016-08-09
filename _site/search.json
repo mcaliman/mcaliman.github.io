@@ -2,6 +2,16 @@
 
   
     {
+      "title"			: "Funzioni che implementano cicli in R",
+      "link"			: "http://caliman.org/articles/linguaggio_r_funzioni_che_implementano_cicli/",
+      "excerpt"		: "<h2 id="loop-dalla-riga-di-comando">Loop dalla riga di comando</h2>
+
+"
+    }
+  
+
+  
+    ,{
       "title"			: "Oggetti data, orari e intervalli di tempo in R",
       "link"			: "http://caliman.org/articles/linguaggio_r_date_e_orari/",
       "excerpt"		: "
