@@ -2,6 +2,24 @@
 
   
     {
+      "title"			: "Big Data, Data Science, Database i fondamentali 2",
+      "link"			: "http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_2/",
+      "excerpt"		: "
+"
+    }
+  
+
+  
+    ,{
+      "title"			: "Big Data, Data Science, Database i fondamentali 1",
+      "link"			: "http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_1/",
+      "excerpt"		: "
+"
+    }
+  
+
+  
+    ,{
       "title"			: "Interfacce con il mondo esterno in R",
       "link"			: "http://caliman.org/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/",
       "excerpt"		: "

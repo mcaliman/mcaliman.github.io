@@ -5,15 +5,15 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Interfacce con il mondo esterno in R &#8211; Massimo Caliman's</title>
+<title>Big Data, Data Science, Database i fondamentali 2 &#8211; Massimo Caliman's</title>
 <meta name="description" content="
 ">
-<meta name="keywords" content="datascience, R">
+<meta name="keywords" content="datascience">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Interfacce con il mondo esterno in R">
+<meta name="twitter:title" content="Big Data, Data Science, Database i fondamentali 2">
 <meta name="twitter:description" content="
 ">
 <meta name="twitter:site" content="@mcaliman">
@@ -25,17 +25,17 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="it_IT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Interfacce con il mondo esterno in R">
+<meta property="og:title" content="Big Data, Data Science, Database i fondamentali 2">
 <meta property="og:description" content="
 ">
-<meta property="og:url" content="http://caliman.org/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/">
+<meta property="og:url" content="http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_2/">
 <meta property="og:site_name" content="Massimo Caliman's">
 
 
 
 
 
-<link rel="canonical" href="http://caliman.org/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/">
+<link rel="canonical" href="http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_2/">
 <link href="http://caliman.org/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -134,10 +134,10 @@
     <div class="entry-wrapper">
       <header class="entry-header">
         <ul class="entry-tags">
-          <li><a href="http://caliman.org/tags/#datascience" title="Pages tagged datascience">datascience</a></li><li><a href="http://caliman.org/tags/#R" title="Pages tagged R">R</a></li>
+          <li><a href="http://caliman.org/tags/#datascience" title="Pages tagged datascience">datascience</a></li>
         </ul>
         
-          <h1 class="entry-title">Interfacce con il mondo esterno in R</h1>
+          <h1 class="entry-title">Big Data, Data Science, Database i fondamentali 2</h1>
         
       </header>
       <footer class="entry-meta">
@@ -147,17 +147,17 @@
           <img src="http://caliman.org/images/bio-photo.jpg" class="bio-photo" alt="Massimo Caliman bio photo"></a>
         
         <span class="author vcard">By <span class="fn">Massimo Caliman</span></span>
-        <span class="entry-date date published"><time datetime="2016-04-02T00:45:33+02:00"><i class="fa fa-calendar-o"></i> April 02, 2016</time></span>
+        <span class="entry-date date published"><time datetime="2016-06-02T00:45:33+02:00"><i class="fa fa-calendar-o"></i> June 02, 2016</time></span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         <span class="social-share-twitter">
-  <a href="https://twitter.com/intent/tweet?hashtags=datascience,R&amp;text=Interfacce%20con%20il%20mondo%20esterno%20in%20R&amp;url=http://caliman.org/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+  <a href="https://twitter.com/intent/tweet?hashtags=datascience&amp;text=Big%20Data,%20Data%20Science,%20Database%20i%20fondamentali%202&amp;url=http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_2/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
 </span>
 <span class="social-share-facebook">
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http://caliman.org/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_2/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
 </span>
 <span class="social-share-googleplus">
-  <a href="https://plus.google.com/share?url=http://caliman.org/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+  <a href="https://plus.google.com/share?url=http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_2/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
 </span>
 <!-- /.social-share -->
         
@@ -175,51 +175,13 @@
       </footer>
       <div class="entry-content">
         
-<p>I dati vengono letti tramite interfacce di collegamento . Le connessioni possono essere a file o url per esempio .</p>
+<p>Prima dei DBMS come si faceva? O meglio come si fa ancora in molte sistemi ancora in uso? La parte del re la facevano i sistemi operativi, le applicazioni salvano su file, in un qualche formato, spesso proprietario,e una o più applicazioni dedicate si occupavano di leggere,scrivere,modificare e cancellare i dati. La cosa tutto sommato funzionava bene se tutto risiedeva su una sola macchina e non doveva comunicare con il resto del mondo, cioè quando non vi erano problemi di accesso concorrente ai dati. In generale i problemi erano di ridondanza,inconsistenza,difficoltà di accesso ai dati,accesso concorrente e protezione dei dati.</p>
 
-<ul>
-  <li><code>file</code>, apre una connessione a un file</li>
-  <li><code>gzfile</code>, apre un collegamento ad un file compresso con gzip</li>
-  <li><code>bzfile</code>, apre un collegamento ad un file compresso con bzip2</li>
-  <li><code>url</code>, apre un collegamento a una pagina web</li>
-</ul>
+<p>I sistemi DBMS hanno risolto questi problemi permettendo una rappresentazione dei dati centralizzata e condivisa.</p>
 
-<p>Per connettersi ad un file</p>
+<p>Quando si parla di BigData si parla, anche, di database non relazionali NRDBMS o NoSQL, senza schema, ma esattamente come possiamo definire lo schema o schema logico di una database? Come la descrizione della struttura della base di dati, un astrazione al alto livello detto modello dei dati. Lo schema non ci dice cosa contiene la base di dati ma come è fatta astraendo l’implementazione usando un qualche formalismo ad alto livello, per esempio lo schema di una base di dati di una rubrica telefonica potrebbe essere descritta come: nome (stringa di 30),cognome(stringa di 30),telefono(intero di 20)</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">&gt; str<span class="o">(</span>file<span class="o">)</span>
-<span class="k">function</span> <span class="o">(</span><span class="nv">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>, <span class="nv">open</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>, <span class="nv">blocking</span> <span class="o">=</span> TRUE,
-<span class="nv">encoding</span> <span class="o">=</span> getOption<span class="o">(</span><span class="s2">&quot;encoding&quot;</span><span class="o">))</span></code></pre></div>
-
-<p>Descrizione è il nome del file open è un codice che indica</p>
-
-<ul>
-  <li>“r” sola lettura</li>
-  <li>“w” scrittura (e inizializzazione di un nuovo file)</li>
-  <li>“a” append</li>
-  <li>“rb”, “wb”, “ab” lettura,scrittura, o append in binary mode (Windows)</li>
-</ul>
-
-<p>In generale, i collegamenti sono strumenti potenti che consentono di navigare file o altri oggetti esterni. 
-In pratica, spesso non abbiamo bisogno di trattare con l’interfaccia di collegamento direttamente .</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">con &lt;- file<span class="o">(</span><span class="s2">&quot;foo.txt&quot;</span>, <span class="s2">&quot;r&quot;</span><span class="o">)</span>
-data &lt;- read.csv<span class="o">(</span>con<span class="o">)</span>
-close<span class="o">(</span>con<span class="o">)</span></code></pre></div>
-
-<p>equivale a</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">data &lt;- read.csv<span class="o">(</span><span class="s2">&quot;foo.txt&quot;</span><span class="o">)</span></code></pre></div>
-
-<p>lettura per righe di un file di testo</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">con &lt;- gzfile<span class="o">(</span><span class="s2">&quot;example.gz&quot;</span><span class="o">)</span>
-x &lt;- readLines<span class="o">(</span>con, 10<span class="o">)</span></code></pre></div>
-
-<p><code>writeLines</code> prende un vettore di caratteri e scrive ciascun elemento  una riga alla volta su un file di testo.
-<code>readLines</code> può essere utile per la lettura per linee di pagine web</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">con &lt;- url<span class="o">(</span><span class="s2">&quot;http://google.com&quot;</span>, <span class="s2">&quot;r&quot;</span><span class="o">)</span>
-x &lt;- readLines<span class="o">(</span>con<span class="o">)</span></code></pre></div>
+<p>E quando vogliamo riferirci ai dati e non alla struttura? In tale caso parliamo di istanza della base di dati, cioè insieme dei dati in dato momento, dato che le basi di dati variano nel tempo a seguito di inserimenti,modifiche e cancellazioni.</p>
 
 
         
@@ -252,10 +214,8 @@ x &lt;- readLines<span class="o">(</span>con<span class="o">)</span></code></pre
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://caliman.org/articles/linguaggio_r_funzioni_che_implementano_cicli/" class="btn" title="Funzioni che implementano cicli in R">Previous</a>
+        <a href="http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_1/" class="btn" title="Big Data, Data Science, Database i fondamentali 1">Previous</a>
       
-      
-        <a href="http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_1/" class="btn" title="Big Data, Data Science, Database i fondamentali 1">Next</a>
       
     </nav><!-- /.pagination -->
   </article>

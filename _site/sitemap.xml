@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_2/</loc>
+    <lastmod>2016-06-02T00:45:33+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_1/</loc>
+    <lastmod>2016-05-02T00:45:33+02:00</lastmod>
+  </url>
+  <url>
     <loc>http://caliman.org/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/</loc>
     <lastmod>2016-04-02T00:45:33+02:00</lastmod>
   </url>

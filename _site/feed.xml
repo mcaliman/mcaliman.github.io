@@ -4,13 +4,89 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://caliman.org/feed.xml" />
 <link rel="alternate" type="text/html" href="http://caliman.org" />
-<updated>2016-08-09T17:16:20+02:00</updated>
+<updated>2016-08-10T17:18:51+02:00</updated>
 <id>http://caliman.org/</id>
 <author>
   <name>Massimo Caliman</name>
   <uri>http://caliman.org/</uri>
   <email>mcaliman@gmail.com</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Big Data, Data Science, Database i fondamentali 2]]></title>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_2/" />
+  <id>http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_2</id>
+  <published>2016-06-02T00:45:33+02:00</published>
+  <updated>2016-06-02T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://caliman.org</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <content type="html">
+    
+&lt;p&gt;Prima dei DBMS come si faceva? O meglio come si fa ancora in molte sistemi ancora in uso? La parte del re la facevano i sistemi operativi, le applicazioni salvano su file, in un qualche formato, spesso proprietario,e una o più applicazioni dedicate si occupavano di leggere,scrivere,modificare e cancellare i dati. La cosa tutto sommato funzionava bene se tutto risiedeva su una sola macchina e non doveva comunicare con il resto del mondo, cioè quando non vi erano problemi di accesso concorrente ai dati. In generale i problemi erano di ridondanza,inconsistenza,difficoltà di accesso ai dati,accesso concorrente e protezione dei dati.&lt;/p&gt;
+
+&lt;p&gt;I sistemi DBMS hanno risolto questi problemi permettendo una rappresentazione dei dati centralizzata e condivisa.&lt;/p&gt;
+
+&lt;p&gt;Quando si parla di BigData si parla, anche, di database non relazionali NRDBMS o NoSQL, senza schema, ma esattamente come possiamo definire lo schema o schema logico di una database? Come la descrizione della struttura della base di dati, un astrazione al alto livello detto modello dei dati. Lo schema non ci dice cosa contiene la base di dati ma come è fatta astraendo l’implementazione usando un qualche formalismo ad alto livello, per esempio lo schema di una base di dati di una rubrica telefonica potrebbe essere descritta come: nome (stringa di 30),cognome(stringa di 30),telefono(intero di 20)&lt;/p&gt;
+
+&lt;p&gt;E quando vogliamo riferirci ai dati e non alla struttura? In tale caso parliamo di istanza della base di dati, cioè insieme dei dati in dato momento, dato che le basi di dati variano nel tempo a seguito di inserimenti,modifiche e cancellazioni.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_2/&quot;&gt;Big Data, Data Science, Database i fondamentali 2&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on June 02, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Big Data, Data Science, Database i fondamentali 1]]></title>
+  <link rel="alternate" type="text/html" href="http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_1/" />
+  <id>http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_1</id>
+  <published>2016-05-02T00:45:33+02:00</published>
+  <updated>2016-05-02T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://caliman.org</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <content type="html">
+    
+&lt;p&gt;Quando si parla di Big Data si parla di un evoluzione delle basi di dati, ma in grande o meglio si parla di una raccolta di dati così estesa in termini di volume, velocità e varietà da richiedere tecnologie e metodi analitici specifici per l’estrazione di valore.&lt;/p&gt;
+
+&lt;p&gt;Questa è la definizione che possiamo trovare da una superficiale ricerca in rete. Potremmo avere a che fare con Big Data anche se la caratteristica fosse solo la varietà o la velocità.&lt;/p&gt;
+
+&lt;p&gt;Il Data Scientist, cioè colui che ha una preparazione in Data Science si occupa di analizzare, interpretare dati, e sopratutto deve saperli recuperare e “ripulire” o “preparare” per l’analisi.&lt;/p&gt;
+
+&lt;p&gt;Per muoversi in questo ambito a mio parere è imprescindibile un avere una classica formazione sulle basi di dati, rivediamo qualche concetto di base&lt;/p&gt;
+
+&lt;p&gt;Abbiamo detto che i Big Data sono basi di dati cresciute un po’ troppo, o che comunque hanno almeno una delle tre V viste sopra (volume,velocità,varietà), ma una base di dati a cosa serve? A mettere le informazioni da qualche parte in modo che sia facile e veloce recuperarle in seguito.&lt;/p&gt;
+
+&lt;p&gt;Il motivo di renderle recuperabili in futuro è semplice: le informazioni insieme alle persone,il denaro i materiali e gli immobili costituiscono il patrimonio delle risorse di ogni organizzazione, dove organizzazione è inteso nel senso più ampio possibile.&lt;/p&gt;
+
+&lt;p&gt;Per gestire le informazioni abbiamo bisogno di qualcosa che le contenga e le gestisca permettendoci di accedervi e manipolarle, questo qualcosa è il ben conosciuto sistema informativo i cui compiti sono appunto quelli di raccogliere,conservare,elaborare,trasformare,distribuire le informazioni. Normalmente utilizzano come sinonimi sistema informatico e sistema informativo, il motivo è semplice, oggi i sistemi informativi sono quasi tutti sistemi informatici, realizzati tramite un sistema informatico, la ma definizione che ne abbiamo dato è indipendente dall’automazione. Avete presente il sistema di classificazione e indicizzazione dei libri nelle biblioteche di una volta?Quello è un sistema informativo, non informatico.&lt;/p&gt;
+
+&lt;p&gt;Fino ad ora abbiamo parlato di informazioni, ma cosa sono realmente le informazioni? e i dati? Lasciamo perdere i bit per un momento e affidiamoci ai dizionari o quantomeno a wikipedia.&lt;/p&gt;
+
+&lt;p&gt;Le informazioni per prima cosa devono essere qualcosa di utile e comprensibile, un qualcosa che produce una variazione nel patrimonio cognitivo di un soggetto detto percettore dell’informazione.&lt;/p&gt;
+
+&lt;p&gt;Se chiedo via mail ad un amico che sta in Cina per un soggiorno di studio che tempo fa li e lui mi risponde usando i caratteri cinesi e io non conosco il cinese non ho nessuna variazione nel mio patrimonio cognitivo, utilità, stesa cosa se apro un file jpeg di una foto delle vacanze con un editor esadecimale che di certo non mi permette di vedere l’immagine della piacevole vacanza passata, vedo solo dei dati, che hanno bisogno di un contesto interpretativo.&lt;/p&gt;
+
+&lt;p&gt;Le basi di dati, i database, sono pieni di dati, il loro compito e proprio contenerli e gestirli, pensate ad una colonna che contiene 10,20,34,38 se non conosco il nome della colonne che si chiama Temperatura mi verrà difficile avere il contesto interpretativo per rendere il dato un informazione quindi qualcosa di utile.&lt;/p&gt;
+
+&lt;p&gt;Per inciso una base di dati è una collezione di dati tra loro correlati e per gestirla abbiamo la necessità di un sistema di gestione di base di dati, quello che comunemente conosciamo come Data Base Management System in sigla DBMS o RDBMS quando si vuole sottolineare che il database è relazionale.&lt;/p&gt;
+
+&lt;p&gt;Quando ci si muove nel mondo dei Big Data spesso i database non sono relazionali per i motivi che vedremo.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/bigdata_datascience_database_i_fondamentali_1/&quot;&gt;Big Data, Data Science, Database i fondamentali 1&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 02, 2016.&lt;/p&gt;
+  </content>
+</entry>
 
 
   
@@ -1542,109 +1618,6 @@ tag HTML sono generati in automatico secondo regole precise.&lt;/p&gt;
 
 
     &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-algoritmo-vistita-in-ampiezza-BFS/&quot;&gt;Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Search)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 15, 2014.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[Algoritmo di visita in profondità per un albero (DFS o Depth First Search)]]></title>
-  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-algoritmo-vistita-in-profondita-DFS/" />
-  <id>http://caliman.org/articles/alberi-algoritmo-vistita-in-profondita-DFS</id>
-  <published>2014-10-13T00:45:33+02:00</published>
-  <updated>2014-10-13T00:45:33+02:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://caliman.org</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;﻿”La scienza è ciò che comprendiamo abbastanza bene da spiegarla a un computer. L’arte è tutto il resto”
-&lt;em&gt;(Donald Knuth)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Partendo dall’algoritmo generico mostrato e usando per rappresentare &lt;code&gt;S&lt;/code&gt; una Pila/Stack otteniamo la visita in profondità (o DFS cioè depth first search)&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;proc&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;DFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;Stack&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;←&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;≠&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;then&lt;/span&gt;
-            &lt;span class=&quot;nf&quot;&gt;visit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right_child_of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left_child_of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;fi&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;od&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;endproc&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;in una visita in profondità si prosegue la visita dall’ultimo nodo lasciato in sospeso
-poiché mettiamo in pila prima il figlio destro di ogni nodo e poi quello sinistro tenderemo a seguire tutti i figli sinistri andando in profondità fino a che non si raggiunge la prima foglia sinistra in generale si passerà a visitare ogni sotto-albero destro in un nodo solo quando il sotto-albero sinistro è stato complessivamente visitato&lt;/p&gt;
-
-&lt;p&gt;Invertendo l’ordine in cui aggiungiamo i figli abbiamo la variante simmetrica&lt;/p&gt;
-
-&lt;p&gt;La versione di visita in profondità ricorsiva mostrata sotto è molto più elegante:
-la pila non appare esplicitamente nell’algoritmo in quanto è la pila di record di attivazione  delle chiamate ricorsive per mantenere i nodi aperti.&lt;/p&gt;
-
-&lt;p&gt;Esitono le ovvie varianti se alteriamo l’ordine delle istruzioni di visita e di aggiunta dei figli nella Pila S.
-* visita in preordine = si visita prima la radice poi figlio sinistra e poi destra
-* visita simmetrica   = si effettua prima sinistra,poi radice e poi destra
-* visita in post ordine = prima sinistra,poi destra e infine radice&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//DFS recursive visit&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;proc&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;DFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
-     &lt;span class=&quot;nf&quot;&gt;visit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-     &lt;span class=&quot;n&quot;&gt;DFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left_child_of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-     &lt;span class=&quot;n&quot;&gt;DFS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right_child_of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;endproc&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-algoritmo-vistita-in-profondita-DFS/&quot;&gt;Algoritmo di visita in profondità per un albero (DFS o Depth First Search)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 13, 2014.&lt;/p&gt;
-  </content>
-</entry>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[Algoritmo di visita generica per un albero]]></title>
-  <link rel="alternate" type="text/html" href="http://caliman.org/articles/alberi-algoritmo-vistita-generico/" />
-  <id>http://caliman.org/articles/alberi-algoritmo-vistita-generico</id>
-  <published>2014-10-11T00:45:33+02:00</published>
-  <updated>2014-10-11T00:45:33+02:00</updated>
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://caliman.org</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;Quando qualcuno dice, “Voglio un linguaggio di programmazione nel quale ho bisogno soltanto di dire
-ciò che voglio venga fatto”, dagli un lecca-lecca
-&lt;em&gt;(Alan Perlis)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;﻿Uno dei compiti più comuni da svolgere su un albero è quello di effettuare una sua visita, cioè passare in rassegna ogni suo nodo. Con il termine in linguaggio naturale “passare in rassegna” intendiamo “applicare una qualche funzione” al nodo in esame fosse anche la semplice stampa a video che esso è stato visitato.&lt;/p&gt;
-
-&lt;p&gt;Il procedimento di visita più generico possibile è visibile nell’algoritmo in pseudocodice riportato sotto&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;proc&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;generic_tree_visit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;←&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;≠&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;∅&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;←&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;
-       &lt;span class=&quot;nf&quot;&gt;visit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;←&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;∪&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;children&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;od&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;endproc&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;l’algortimo mantiene istante per istante in &lt;code&gt;S&lt;/code&gt; i nodi che rappresentano i punti di ramificazione rimasti in sospeso e da cui la visita deve proseguire, diremo che questi nodi sono aperti e formano una frangia dell’albero, un nodo diventa chiuso quando è rimosso da &lt;code&gt;S&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Rispetto ai costi in termini di spazio occupato in memoria e tempo per l’esecuzione abbiamo il teorema seguente.&lt;/p&gt;
-
-&lt;p&gt;teorema: l’algoritmo di visita generica applicato alla radice di un albero con n nodi termina in &lt;code&gt;O(n)&lt;/code&gt; iterazioni e lo spazio usato è &lt;code&gt;O(n)&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Ciò è evidente di per se ed è dimostrabile formalmente. La dimostrazione esula gli scopi di questo post che sono solo quelli di porre le basi a quelli successivi che ne approfondiscono gli aspetti teorici e pratici.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://caliman.org/articles/alberi-algoritmo-vistita-generico/&quot;&gt;Algoritmo di visita generica per un albero&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://caliman.org&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 11, 2014.&lt;/p&gt;
   </content>
 </entry>
 
