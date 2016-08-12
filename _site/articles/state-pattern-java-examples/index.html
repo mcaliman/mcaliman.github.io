@@ -5,19 +5,15 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Ubuntu 14.04.02 LTS installare subversion (svn) &#8211; Massimo Caliman's</title>
-<meta name="description" content="Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. (Isaac Asimov, Il vento è cambiato, 1983)
-
-">
-<meta name="keywords" content="linux, ubuntu">
+<title>Il design pattern State &#8211; Massimo Caliman's</title>
+<meta name="description" content="Caratteristiche e codice di esempio ridotto all'essenziale">
+<meta name="keywords" content="Java, Pattern comportamentali, Design pattern State, lose-coupled, Campagna AntiIF">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Ubuntu 14.04.02 LTS installare subversion (svn)">
-<meta name="twitter:description" content="Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. (Isaac Asimov, Il vento è cambiato, 1983)
-
-">
+<meta name="twitter:title" content="Il design pattern State">
+<meta name="twitter:description" content="Caratteristiche e codice di esempio ridotto all'essenziale">
 <meta name="twitter:site" content="@mcaliman">
 <meta name="twitter:creator" content="@mcaliman">
 
@@ -27,18 +23,16 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="it_IT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu 14.04.02 LTS installare subversion (svn)">
-<meta property="og:description" content="Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. (Isaac Asimov, Il vento è cambiato, 1983)
-
-">
-<meta property="og:url" content="http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/">
+<meta property="og:title" content="Il design pattern State">
+<meta property="og:description" content="Caratteristiche e codice di esempio ridotto all'essenziale">
+<meta property="og:url" content="http://caliman.org/articles/state-pattern-java-examples/">
 <meta property="og:site_name" content="Massimo Caliman's">
 
 
 
 
 
-<link rel="canonical" href="http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/">
+<link rel="canonical" href="http://caliman.org/articles/state-pattern-java-examples/">
 <link href="http://caliman.org/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -137,10 +131,10 @@
     <div class="entry-wrapper">
       <header class="entry-header">
         <ul class="entry-tags">
-          <li><a href="http://caliman.org/tags/#linux" title="Pages tagged linux">linux</a></li><li><a href="http://caliman.org/tags/#ubuntu" title="Pages tagged ubuntu">ubuntu</a></li>
+          <li><a href="http://caliman.org/tags/#Java" title="Pages tagged Java">Java</a></li><li><a href="http://caliman.org/tags/#Pattern comportamentali" title="Pages tagged Pattern comportamentali">Pattern comportamentali</a></li><li><a href="http://caliman.org/tags/#Design pattern State" title="Pages tagged Design pattern State">Design pattern State</a></li><li><a href="http://caliman.org/tags/#lose-coupled" title="Pages tagged lose-coupled">lose-coupled</a></li><li><a href="http://caliman.org/tags/#Campagna AntiIF" title="Pages tagged Campagna AntiIF">Campagna AntiIF</a></li>
         </ul>
         
-          <h1 class="entry-title">Ubuntu 14.04.02 LTS installare subversion (svn)</h1>
+          <h1 class="entry-title">Il design pattern State</h1>
         
       </header>
       <footer class="entry-meta">
@@ -150,17 +144,17 @@
           <img src="http://caliman.org/images/bio-photo.jpg" class="bio-photo" alt="Massimo Caliman bio photo"></a>
         
         <span class="author vcard">By <span class="fn">Massimo Caliman</span></span>
-        <span class="entry-date date published"><time datetime="2015-05-16T00:45:33+02:00"><i class="fa fa-calendar-o"></i> May 16, 2015</time></span>
-        
+        <span class="entry-date date published"><time datetime="2016-01-13T00:00:00+01:00"><i class="fa fa-calendar-o"></i> January 13, 2016</time></span>
+        <span class="entry-date date modified"><time datetime="2016-01-30"><i class="fa fa-pencil"></i> January 30, 2016</time></span>
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         <span class="social-share-twitter">
-  <a href="https://twitter.com/intent/tweet?hashtags=linux,ubuntu&amp;text=Ubuntu%2014.04.02%20LTS%20installare%20subversion%20(svn)&amp;url=http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+  <a href="https://twitter.com/intent/tweet?hashtags=Java,Patterncomportamentali,DesignpatternState,lose-coupled,CampagnaAntiIF&amp;text=Il%20design%20pattern%20State&amp;url=http://caliman.org/articles/state-pattern-java-examples/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
 </span>
 <span class="social-share-facebook">
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://caliman.org/articles/state-pattern-java-examples/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
 </span>
 <span class="social-share-googleplus">
-  <a href="https://plus.google.com/share?url=http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+  <a href="https://plus.google.com/share?url=http://caliman.org/articles/state-pattern-java-examples/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
 </span>
 <!-- /.social-share -->
         
@@ -177,26 +171,104 @@
 </div><!-- /.google-ads --><!-- /.google-ads -->
       </footer>
       <div class="entry-content">
-        <p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>
+        <p>Potete trovare un progetto di esempio su github a questo indirizzo:
+<a href="https://github.com/mcaliman/StatePatternJavaExamples"><strong>https://github.com/mcaliman/StatePatternJavaExamples</strong></a></p>
 
-<p>Anche in questo caso apt è più che generoso</p>
+<p>Qualche informazione su questo pattern.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo apt-get install subversion</code></pre></div>
+<p>E’ un design pattern comportamentale (I pattern comportamentali forniscono soluzione alle più comuni 
+tipologie di interazione tra gli oggetti)</p>
 
-<p>Non installiamo con apache perché accederemo a svn tramite ssh in modo molto più sicuro.
-Per prima cosa creiamo la directory che ospiterà il nostro progetto e repo</p>
+<p>E’ usato quando un oggetto deve cambiare il proprio comportamento (a <strong>run-time</strong>) in base al suo stato interno.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir /var/svn/MyApplication</code></pre></div>
+<p>Evita di utilizzare sequenze di blocchi condizionali <strong>if-else</strong> ( <a href="http://antiifcampaign.com/">Campagna AntiIF</a> )</p>
 
-<p>“informiamo” svn che questa directory è un repository</p>
+<p>Fornisce un modo sistematico e <strong>lose-coupled</strong> per raggiungere questo obiettivo.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">svnadmin create /var/svn/MyApplication</code></pre></div>
+<p>Si compone di una interfaccia <code>State</code>, una classe concreta <code>Context</code> e una o più classi concrete che implementano 
+l’interfaccia <code>State</code>.</p>
 
-<p>A questo punto dal nostro IDE preferitò possiamo effettuare un checkout o inizializzare il repo con quando abbiamo in locale, 
-l’url del repo è nel formato seguente</p>
+<ul>
+  <li><code>Context</code> definisce l’interfaccia della classe client e mantiene un riferimento ad un <code>ConcreteState</code>.</li>
+  <li><code>State</code>  definisce l’interfaccia implementata dai <code>ConcreteState</code>.</li>
+  <li>Le classi <code>ConcreteState</code> incapsulano la logica del comportamento associato ad un determinato stato.</li>
+</ul>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">svn+ssh://svnserver/var/svn/MyApplication</code></pre></div>
+<p>Vediamo di comprendere come funziona con un breve esempio su github
+e di cui riporto il codice in questo post.</p>
 
+<p>Per prima cosa definiamo l’interfaccia, è sufficiente che abbia solo un metodo execute.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">State</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">();</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Vogliamo implementare un sistema di gestione dei contenuti con tre stati: <strong>draft</strong>, <strong>published</strong> e <strong>deleted</strong>.</p>
+
+<p>La nostra applicazione di prova potrà avere tre bottoni per eseguire le rispettive azioni.</p>
+
+<p>La soluzione che adotta il design pattern State è quella che implementa tante classi concrete di <code>State</code> 
+quanti sono gli stati previsti.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DarftState</span> <span class="kd">implements</span> <span class="n">State</span> <span class="o">{</span>
+   <span class="cm">/**</span>
+<span class="cm">    * Salva il contenuto in stato bozza e non fa altro. </span>
+<span class="cm">    * Se non esiste il contenuto, lo crea effettuando la creazione del record,</span>
+<span class="cm">    * altrimenti cambia stato al record reimpostandolo a draft e salvando</span>
+<span class="cm">    * le modifiche del testo, metadati ecc.</span>
+<span class="cm">    */</span>
+   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">()</span> <span class="o">{</span>        
+      <span class="c1">//stuff...</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Creiamo la classe <code>Context</code> che deve avere un riferimento ad un oggetto di tipo <code>State</code>. 
+Un oggetto di tipo <code>Context</code> dovrà avere un meccanismo per cambiare l’attributo <code>state</code> e 
+un metodo che propaga ad esso l’azione realizzata dal metodo execute.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Context</span> <span class="o">{</span>
+   <span class="kd">private</span> <span class="n">State</span> <span class="n">state</span><span class="o">;</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setState</span><span class="o">(</span><span class="n">State</span> <span class="n">state</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">state</span> <span class="o">=</span> <span class="n">state</span><span class="o">;</span>
+   <span class="o">}</span>
+   <span class="kd">public</span> <span class="n">State</span> <span class="nf">getState</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">state</span><span class="o">;</span>
+   <span class="o">}</span>
+   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">state</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>La classe <code>Context</code> nel nostro caso potrebbe anche chiamarsi Post e contenere più attributi e metodi, 
+per esempio contenere il riferimento al record o entity del contenuto di cui si vuole gestire il ciclo di vita.
+Per gli altri stati vi rimando al codice su github i cui riferimenti sono in testa a questo post.
+Per finire un esempio di utilizzo che cambia tre volte stato al nostro oggetto.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Context</span> <span class="n">context</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Context</span><span class="o">();</span>
+<span class="n">State</span> <span class="n">darftState</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">DarftState</span><span class="o">();</span>
+<span class="n">State</span> <span class="n">publishState</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">PublishState</span><span class="o">();</span>
+<span class="n">State</span> <span class="n">deletedState</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">DeletedState</span><span class="o">();</span>
+
+<span class="n">context</span><span class="o">.</span><span class="na">setState</span><span class="o">(</span><span class="n">darftState</span><span class="o">);</span>
+<span class="n">context</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span>
+
+<span class="n">context</span><span class="o">.</span><span class="na">setState</span><span class="o">(</span><span class="n">publishState</span><span class="o">);</span>
+<span class="n">context</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span>
+
+<span class="n">context</span><span class="o">.</span><span class="na">setState</span><span class="o">(</span><span class="n">deletedState</span><span class="o">);</span>
+<span class="n">context</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span></code></pre></div>
+
+<p>Se si deve aggiungere un nuovo comportamento o stato dobbiamo progettare una 
+nuova classe che implementi <code>State</code>.</p>
+
+<p>Quali svantaggi può avere l’adozione di questo pattern? 
+Evidentemente aumentano il numero di classi ma questo è preferibile nella maggioranza dei casi
+a una unica classe con lunghe sequenze di istruzioni condizionali <code>if</code> (o <code>switch</code>). 
+Un vantaggio per nulla indifferente: in un team di sviluppatori
+la scrittura dei singoli <code>ConcreteState</code> può essere assegnata e gestita facilmente rispetto all’alternativa di<br />
+mettere le mani in due o più sullo stessa unica classe.</p>
 
         
           <div id="disqus_thread"></div><!-- /#disqus_thread -->
@@ -228,10 +300,10 @@ l’url del repo è nel formato seguente</p>
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-git/" class="btn" title="Ubuntu 14.04.02 LTS installare git">Previous</a>
+        <a href="http://caliman.org/articles/linguaggio_r_introduzione/" class="btn" title="Linguaggio R introduzione">Previous</a>
       
       
-        <a href="http://caliman.org/articles/localtime1/" class="btn" title="La classe java.time.LocalTime">Next</a>
+        <a href="http://caliman.org/articles/linguaggio_r_strutture_di_controllo/" class="btn" title="Le strutture di controllo di R">Next</a>
       
     </nav><!-- /.pagination -->
   </article>

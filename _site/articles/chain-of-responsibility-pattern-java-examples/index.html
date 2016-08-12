@@ -5,19 +5,15 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Ubuntu 14.04.02 LTS installare subversion (svn) &#8211; Massimo Caliman's</title>
-<meta name="description" content="Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. (Isaac Asimov, Il vento è cambiato, 1983)
-
-">
-<meta name="keywords" content="linux, ubuntu">
+<title>Il design pattern Chain Of Responsibility &#8211; Massimo Caliman's</title>
+<meta name="description" content="Codice di esempio minimale sul pattern CoF">
+<meta name="keywords" content="Java, jdk8, Design Pattern, Visitor Pattern">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Ubuntu 14.04.02 LTS installare subversion (svn)">
-<meta name="twitter:description" content="Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. (Isaac Asimov, Il vento è cambiato, 1983)
-
-">
+<meta name="twitter:title" content="Il design pattern Chain Of Responsibility">
+<meta name="twitter:description" content="Codice di esempio minimale sul pattern CoF">
 <meta name="twitter:site" content="@mcaliman">
 <meta name="twitter:creator" content="@mcaliman">
 
@@ -27,18 +23,16 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="it_IT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu 14.04.02 LTS installare subversion (svn)">
-<meta property="og:description" content="Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. (Isaac Asimov, Il vento è cambiato, 1983)
-
-">
-<meta property="og:url" content="http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/">
+<meta property="og:title" content="Il design pattern Chain Of Responsibility">
+<meta property="og:description" content="Codice di esempio minimale sul pattern CoF">
+<meta property="og:url" content="http://caliman.org/articles/chain-of-responsibility-pattern-java-examples/">
 <meta property="og:site_name" content="Massimo Caliman's">
 
 
 
 
 
-<link rel="canonical" href="http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/">
+<link rel="canonical" href="http://caliman.org/articles/chain-of-responsibility-pattern-java-examples/">
 <link href="http://caliman.org/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -137,10 +131,10 @@
     <div class="entry-wrapper">
       <header class="entry-header">
         <ul class="entry-tags">
-          <li><a href="http://caliman.org/tags/#linux" title="Pages tagged linux">linux</a></li><li><a href="http://caliman.org/tags/#ubuntu" title="Pages tagged ubuntu">ubuntu</a></li>
+          <li><a href="http://caliman.org/tags/#Java" title="Pages tagged Java">Java</a></li><li><a href="http://caliman.org/tags/#jdk8" title="Pages tagged jdk8">jdk8</a></li><li><a href="http://caliman.org/tags/#Design Pattern" title="Pages tagged Design Pattern">Design Pattern</a></li><li><a href="http://caliman.org/tags/#Visitor Pattern" title="Pages tagged Visitor Pattern">Visitor Pattern</a></li>
         </ul>
         
-          <h1 class="entry-title">Ubuntu 14.04.02 LTS installare subversion (svn)</h1>
+          <h1 class="entry-title">Il design pattern Chain Of Responsibility</h1>
         
       </header>
       <footer class="entry-meta">
@@ -150,17 +144,17 @@
           <img src="http://caliman.org/images/bio-photo.jpg" class="bio-photo" alt="Massimo Caliman bio photo"></a>
         
         <span class="author vcard">By <span class="fn">Massimo Caliman</span></span>
-        <span class="entry-date date published"><time datetime="2015-05-16T00:45:33+02:00"><i class="fa fa-calendar-o"></i> May 16, 2015</time></span>
-        
+        <span class="entry-date date published"><time datetime="2016-01-03T00:00:00+01:00"><i class="fa fa-calendar-o"></i> January 03, 2016</time></span>
+        <span class="entry-date date modified"><time datetime="2016-01-03"><i class="fa fa-pencil"></i> January 03, 2016</time></span>
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         <span class="social-share-twitter">
-  <a href="https://twitter.com/intent/tweet?hashtags=linux,ubuntu&amp;text=Ubuntu%2014.04.02%20LTS%20installare%20subversion%20(svn)&amp;url=http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+  <a href="https://twitter.com/intent/tweet?hashtags=Java,jdk8,DesignPattern,VisitorPattern&amp;text=Il%20design%20pattern%20Chain%20Of%20Responsibility&amp;url=http://caliman.org/articles/chain-of-responsibility-pattern-java-examples/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
 </span>
 <span class="social-share-facebook">
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://caliman.org/articles/chain-of-responsibility-pattern-java-examples/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
 </span>
 <span class="social-share-googleplus">
-  <a href="https://plus.google.com/share?url=http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-subversion/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+  <a href="https://plus.google.com/share?url=http://caliman.org/articles/chain-of-responsibility-pattern-java-examples/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
 </span>
 <!-- /.social-share -->
         
@@ -177,25 +171,8 @@
 </div><!-- /.google-ads --><!-- /.google-ads -->
       </footer>
       <div class="entry-content">
-        <p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>
-
-<p>Anche in questo caso apt è più che generoso</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo apt-get install subversion</code></pre></div>
-
-<p>Non installiamo con apache perché accederemo a svn tramite ssh in modo molto più sicuro.
-Per prima cosa creiamo la directory che ospiterà il nostro progetto e repo</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir /var/svn/MyApplication</code></pre></div>
-
-<p>“informiamo” svn che questa directory è un repository</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">svnadmin create /var/svn/MyApplication</code></pre></div>
-
-<p>A questo punto dal nostro IDE preferitò possiamo effettuare un checkout o inizializzare il repo con quando abbiamo in locale, 
-l’url del repo è nel formato seguente</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">svn+ssh://svnserver/var/svn/MyApplication</code></pre></div>
+        <p>Potete trovare un progetto di esempio su github a questo indirizzo:
+<a href="https://github.com/mcaliman/ChainOfResponsibilityPatternJavaExamples"><strong>https://github.com/mcaliman/ChainOfResponsibilityPatternJavaExamples</strong></a></p>
 
 
         
@@ -228,10 +205,10 @@ l’url del repo è nel formato seguente</p>
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://caliman.org/articles/ubuntu-14.04.02-LTS-installare-git/" class="btn" title="Ubuntu 14.04.02 LTS installare git">Previous</a>
+        <a href="http://caliman.org/articles/strategy-pattern-java-examples/" class="btn" title="Il design pattern Strategy">Previous</a>
       
       
-        <a href="http://caliman.org/articles/localtime1/" class="btn" title="La classe java.time.LocalTime">Next</a>
+        <a href="http://caliman.org/articles/interpreter-pattern-java-examples/" class="btn" title="Il design pattern Interpreter">Next</a>
       
     </nav><!-- /.pagination -->
   </article>

@@ -69,6 +69,14 @@ In particolare sono oggetti di classe funzione.</p>
 
   
     ,{
+      "title"			: "Il design pattern State",
+      "link"			: "http://caliman.org/articles/state-pattern-java-examples/",
+      "excerpt"		: "Caratteristiche e codice di esempio ridotto all'essenziale"
+    }
+  
+
+  
+    ,{
       "title"			: "Linguaggio R introduzione",
       "link"			: "http://caliman.org/articles/linguaggio_r_introduzione/",
       "excerpt"		: "<p>Ho scoperto il linguaggio di programmazione R quasi per caso e ne sono rimasto affascinato.
@@ -76,6 +84,54 @@ La prima cosa da sapere è che R è più di un linguaggio di programmazione, è 
 Basato sul linguaggio S è utilizzato per la gestione e l’analisi statistica di dati per la produzione di grafici ed è disponibile gratuitamente sotto i vincoli della licenza GPL.</p>
 
 "
+    }
+  
+
+  
+    ,{
+      "title"			: "Il design pattern Visitor",
+      "link"			: "http://caliman.org/articles/visitor-pattern-java-examples/",
+      "excerpt"		: "Codice di esempio minimale sul pattern Interpreter"
+    }
+  
+
+  
+    ,{
+      "title"			: "Il design pattern Singleton",
+      "link"			: "http://caliman.org/articles/singleton-pattern-java-examples/",
+      "excerpt"		: "Alcuni esempi sul pattern Singleton"
+    }
+  
+
+  
+    ,{
+      "title"			: "Il design pattern Interpreter",
+      "link"			: "http://caliman.org/articles/interpreter-pattern-java-examples/",
+      "excerpt"		: "Codice di esempio minimale sul pattern Interpreter"
+    }
+  
+
+  
+    ,{
+      "title"			: "Il design pattern Chain Of Responsibility",
+      "link"			: "http://caliman.org/articles/chain-of-responsibility-pattern-java-examples/",
+      "excerpt"		: "Codice di esempio minimale sul pattern CoF"
+    }
+  
+
+  
+    ,{
+      "title"			: "Il design pattern Strategy",
+      "link"			: "http://caliman.org/articles/strategy-pattern-java-examples/",
+      "excerpt"		: "Codice di esempio minimale sul pattern Strategy"
+    }
+  
+
+  
+    ,{
+      "title"			: "La classe java.time.LocalTime",
+      "link"			: "http://caliman.org/articles/localtime1/",
+      "excerpt"		: "Finalmente qualcosa di nuovo sulle Date in Java(8)"
     }
   
 
