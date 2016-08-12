@@ -1834,6 +1834,14 @@ di programmi scritti in Java.</p>
 
   
     ,{
+      "title"			: "Bookmarks",
+      "link"			: "http://caliman.org/bookmarks/",
+      "excerpt"		: ""
+    }
+  
+
+  
+    ,{
       "title"			: "Category Index",
       "link"			: "http://caliman.org/categories/",
       "excerpt"		: ""
