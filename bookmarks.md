@@ -10,23 +10,30 @@ modified: 2016-08-12
 *(Isaac Asimov, Il vento è cambiato, 1983)*
 
 
-* [http://codingjam.it/](http://codingjam.it/)
-* [http://www.mokabyte.it]http://www.mokabyte.it)
-* [https://dzone.com/](https://dzone.com/) 
+* [codingjam.it](http://codingjam.it/)
+* [mokabyte.it]http://www.mokabyte.it)
+* [dzone.com](https://dzone.com/) 
 
 ## Java 
-* [http://www.javaworld.com](http://www.javaworld.com)
-* [http://www.javalobby.org](http://www.javalobby.org)
+* [javaworld.com](http://www.javaworld.com)
+* [javalobby.org](http://www.javalobby.org)
 
 ## Jug
-* [http://www.jugmilano.it/](http://www.jugmilano.it/)
-* [https://juggenova.wordpress.com/](https://juggenova.wordpress.com/)
-* [http://www.jugsardegna.org/](http://www.jugsardegna.org/)
-* [http://www.jugpadova.it](http://www.jugpadova.it/)
+* [jug milano](http://www.jugmilano.it/)
+* [jug genova](https://juggenova.wordpress.com/)
+* [jug sardegna](http://www.jugsardegna.org/)
+* [jug padova](http://www.jugpadova.it/)
 
 ## R
-* [http://www.r-project.org]([http://www.r-project.org)
+* [www.r-project.org]([http://www.r-project.org)
 
 ## Python
-* [http://www.python.it](http://www.python.it)
+* [python.it - Sito ufficiale della comunità italiana](http://www.python.it)
+
+## Università e ricerca
+
+* [IIT - Istituto Italiano di Tecnologia](http://www.iit.it)
+* [CNR - Consiglio Nazionale delle Ricerche](https://www.cnr.it)
+* [DIBRIS - Dipartimento, Informatica, Bioingegneria, Robotica, Ingegneria dei Sistemi](http://www.dibris.unige.it) 
+* [POLIMI - Politecnico di Milano]( http://www.polimi.it) 
 
