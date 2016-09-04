@@ -25,7 +25,7 @@ modified: 2016-08-12
 * [jug padova](http://www.jugpadova.it/)
 
 ## R
-* [www.r-project.org]([http://www.r-project.org)
+* [www.r-project.org](http://www.r-project.org)
 
 ## Python
 * [python.it - Sito ufficiale della comunità italiana](http://www.python.it)
@@ -35,5 +35,5 @@ modified: 2016-08-12
 * [IIT - Istituto Italiano di Tecnologia](http://www.iit.it)
 * [CNR - Consiglio Nazionale delle Ricerche](https://www.cnr.it)
 * [DIBRIS - Dipartimento, Informatica, Bioingegneria, Robotica, Ingegneria dei Sistemi](http://www.dibris.unige.it) 
-* [POLIMI - Politecnico di Milano]( http://www.polimi.it) 
+* [POLIMI - Politecnico di Milano](http://www.polimi.it) 
 
