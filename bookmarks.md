@@ -11,7 +11,7 @@ modified: 2016-08-12
 
 
 * [codingjam.it](http://codingjam.it/)
-* [mokabyte.it]http://www.mokabyte.it)
+* [mokabyte.it](http://www.mokabyte.it)
 * [dzone.com](https://dzone.com/) 
 
 ## Java 
