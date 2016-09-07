@@ -1,0 +1,413 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>La parola riservata this in Java &#8211; Massimo Caliman's</title>
+<meta name="description" content="E’ possibile riscontrare due situazioni di interesse legate all’uso dei metodi la cui accurata gestione permette di migliorare 
+l’efficienza del codice:
+
+">
+<meta name="keywords" content="Articoli disponibili in lingua italiana, lang_it, Java">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="La parola riservata this in Java">
+<meta name="twitter:description" content="E’ possibile riscontrare due situazioni di interesse legate all’uso dei metodi la cui accurata gestione permette di migliorare 
+l’efficienza del codice:
+
+">
+<meta name="twitter:site" content="@mcaliman">
+<meta name="twitter:creator" content="@mcaliman">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://massimocaliman.it/images/bio-photo.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="it_IT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="La parola riservata this in Java">
+<meta property="og:description" content="E’ possibile riscontrare due situazioni di interesse legate all’uso dei metodi la cui accurata gestione permette di migliorare 
+l’efficienza del codice:
+
+">
+<meta property="og:url" content="http://massimocaliman.it/java/la-parola-riservata-this-in-java/">
+<meta property="og:site_name" content="Massimo Caliman's">
+
+
+
+
+
+<link rel="canonical" href="http://massimocaliman.it/java/la-parola-riservata-this-in-java/">
+<link href="http://massimocaliman.it/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://massimocaliman.it/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://massimocaliman.it/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://massimocaliman.it/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://massimocaliman.it/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://massimocaliman.it/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://massimocaliman.it/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://massimocaliman.it/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://massimocaliman.it/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://massimocaliman.it/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://massimocaliman.it/images/apple-touch-icon-144x144-precomposed.png">
+
+<link rel="stylesheet" href="http://massimocaliman.it/assets/css/divascookies_style_dark_top.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://massimocaliman.it/assets/css/prism.css" />
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/about/" >About</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/articles/" >Articles</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/blog/" >Blog</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/java/" >Java</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/tags/" >Tags</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/categories/" >Categories</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/bookmarks/" >Bookmarks</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://massimocaliman.it/" class="site-logo" rel="home" title="Massimo Caliman's"><img src="http://massimocaliman.it/images/bio-photo.jpg" width="200" height="200" alt="Massimo Caliman's logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://massimocaliman.it/">Massimo Caliman's</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">blog on Computer Science.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="http://massimocaliman.it/tags/#Articoli disponibili in lingua italiana" title="Pages tagged Articoli disponibili in lingua italiana">Articoli disponibili in lingua italiana</a></li><li><a href="http://massimocaliman.it/tags/#lang_it" title="Pages tagged lang_it">lang_it</a></li><li><a href="http://massimocaliman.it/tags/#Java" title="Pages tagged Java">Java</a></li>
+        </ul>
+        
+          <h1 class="entry-title">La parola riservata this in Java</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+        
+          <img src="http://massimocaliman.it/images/bio-photo.jpg" class="bio-photo" alt="Massimo Caliman bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Massimo Caliman</span></span>
+        <span class="entry-date date published"><time datetime="2007-01-05T23:45:33+01:00"><i class="fa fa-calendar-o"></i> January 05, 2007</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=Articolidisponibiliinlinguaitaliana,lang_it,Java&amp;text=La%20parola%20riservata%20this%20in%20Java&amp;url=http://massimocaliman.it/java/la-parola-riservata-this-in-java/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://massimocaliman.it/java/la-parola-riservata-this-in-java/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=http://massimocaliman.it/java/la-parola-riservata-this-in-java/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+        <div class="google-ads" style="margin-top:40px; text-align:center;">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 160x600 ad -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-5121145090824526"
+       data-ad-slot="4055870880"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads --><!-- /.google-ads -->
+      </footer>
+      <div class="entry-content">
+        <p>E’ possibile riscontrare due situazioni di interesse legate all’uso dei metodi la cui accurata gestione permette di migliorare 
+l’efficienza del codice:</p>
+
+<ul>
+  <li>omonimia parametri dei metodi e delle variabili della classe in cui i metodo sono definiti</li>
+  <li>molteplicità dei costruttori della classe</li>
+</ul>
+
+<p>La prima situazione deriva dal fatto che un tipico utilizzo dei metodi consiste nel fornire valori da assegnare alle variabili degli oggetti. 
+In tal caso è evidente che i parametri del metodo e i dati membro della classe possiedono la stessa semantica e pertanto non è ragionevole 
+identificare gli uni e gli altri con nomi diversi.</p>
+
+<p>Il problema che ne segue è quello di poter discriminare fra entità diverse che sono individuate con lo stesso identificatore.</p>
+
+<p>La seconda situazione nasce dalla funzione dei costruttori, il cui scopo è quello di fornire procedure diversificate di 
+inizializzazione degli oggetti che possono dipendere da particolari esigenze applicative.</p>
+
+<p>Tipicamente una classe mette a disposizione un costruttore con valori di default per le variabili degli oggetti e uno o più altri 
+costruttori per inizializzazioni specifiche.</p>
+
+<p>E’ ragionevole aspettarsi che la presenza dei molteplici costruttori, similari nelle loro funzionalità, comporti la duplicazione 
+di parte del codice o tali metodi con conseguente spreco di memoria.</p>
+
+<p>Al fine di fronteggiare le situazioni indicate, il linguaggio di programmazione Java mette a disposizione del programmatore la parola riservata this.</p>
+
+<p>Si tratta di una parola chiave che può essere sfruttata sotto due interpretazioni distinte:</p>
+
+<ul>
+  <li>il riferimento ad un oggetto</li>
+  <li>riferimento ad un altro costruttore</li>
+</ul>
+
+<p>Nella prima accezione, la parola this è sfruttata nella risoluzione di omonimie tra il parametro di un metodo e il nome di una variabile di istanza:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
+   <span class="kt">float</span> <span class="n">car</span><span class="o">;</span>
+   <span class="kt">void</span> <span class="nf">m</span><span class="o">(</span><span class="kt">float</span> <span class="n">var</span><span class="o">){</span>
+       <span class="k">this</span><span class="o">.</span><span class="na">var</span><span class="o">=</span><span class="n">var</span><span class="o">;</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Ci forza il compilatore ad interpretare la specifica this.var come un riferimento alla variabile di istanza var dell’oggetto in cui il metodo m()  è attivato.
+Pertanto, nel comando this.var=var, l’identificatore var a destra dell’operatore di assegnazione si riferisce al parametro del metodo, 
+mentre la specifica this.var collocata a sinistra dello stesso operatore si riferisce all’attributo dell’oggetto.</p>
+
+<p>La seconda accezione della parola this legata alla presenza di più costruttori. Al fine di ridurre il codice prodotto dal compilatore, 
+i costruttori di una classe possono essere ripartiti in un costruttore primario e uno o più altri costruttori secondari. 
+Mentre il costruttore primario è di per sè codificato, i costruttori secondari rimandano a quello primario riportandone i parametri
+di chiamata nella specifica this. La specifica di richiamo deve essere la prima istruzione che appare nel codice dei costruttori secondari.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
+   <span class="kt">float</span> <span class="n">var</span><span class="o">;</span>
+   <span class="kd">public</span> <span class="nf">T</span><span class="o">(</span><span class="kt">float</span> <span class="n">var</span><span class="o">){</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">var</span><span class="o">=</span><span class="n">var</span><span class="o">;</span>
+   <span class="o">}</span>
+   <span class="kd">public</span> <span class="nf">T</span><span class="o">(){</span>
+      <span class="k">this</span><span class="o">(</span><span class="mf">0.03</span><span class="o">);</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'mcaliman'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://massimocaliman.it/articles/linux-il-comando-du/" class="btn" title="Linux: il comando du">Previous</a>
+      
+      
+        <a href="http://massimocaliman.it/java/gli-oggetti-in-java/" class="btn" title="Gli oggetti in Java">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    <div class="google-ads" style="margin:10px 0;">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 320x50 ad -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client="ca-pub-5121145090824526"
+       data-ad-slot="4055870880"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+
+
+<a href="http://massimocaliman.it/privacy" title="Privacy policy">privacy</a> |
+<a href="http://massimocaliman.it/terms"   title="Terms of service">terms</a>   
+
+
+
+
+<br/>
+<span>Questo sito non rappresenta una testata giornalistica, in quanto viene aggiornato senza alcuna periodicità.</span><br/>
+<span>Non può pertanto considerarsi un prodotto editoriale ex L.62 7/3/2001.</span><br/>
+
+<span>&copy; 2016 Massimo Caliman. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/" rel="nofollow">So Simple Theme</a>.</span>
+
+
+<div class="social-icons">
+	<a href="https://twitter.com/mcaliman" title="Massimo Caliman on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/mcaliman" title="Massimo Caliman on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/mcaliman" title="Massimo Caliman on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+
+  <a href="http://massimocaliman.it/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+
+
+
+
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://massimocaliman.it';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://massimocaliman.it/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://massimocaliman.it/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-53230757-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<!-- added by mcaliman BEGIN -->
+<!--
+		<script type="text/javascript" src="http://massimocaliman.it/assets/js/jquery-2.1.1.min.js"></script>
+		-->
+		<script type="text/javascript" src="http://massimocaliman.it/assets/js/jquery.divascookies-0.2.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$.DivasCookies({
+					// text for the Divas Cookies banner
+					bannerText: "Questo sito usa i cookies (anche di terze parti) a fini statistici e per migliorare la tua esperienza di navigazione.Proseguendo con la navigazione accetti l'uso dei cookies.",
+					
+					cookiePolicyLink		: "http://massimocaliman.it/privacy/",
+					// link to the extended cookie policy
+					cookiePolicyLinkText	: "Leggi la mia informativa su cookie e privacy..",				// text for the link to the extended cookie policy
+					thirdPartyPolicyWidget	: "",						// if set to "iubenda" tries to use the Iubenda widget
+					acceptButtonText		: "Ok ho capito!",						// text for the close button
+					acceptButtonSrc			: "",						// source for the close button image
+					openEffect				: "slideDown",				// opening effect for Divas Cookies banner ["fade", "slideUp", "slideDown", "slideLeft", "slideRight"]
+					openEffectDuration		: 600,						// duration of the opening effect (msec)
+					openEffectEasing		: "swing",					// easing for the opening effect
+					closeEffect				: "slideUp",				// closing effect for Divas Cookies banner ["fade", "slideUp", "slideDown", "slideLeft", "slideRight"]
+					closeEffectDuration		: 600,						// duration of the closing effect (msec)
+					closeEffectEasing		: "swing",					// easing for the closing effect
+					debugMode				: false,					// if true, the options are checked and warnings are shown
+					saveUserPreferences		: true						// if true, sets a cookie after the Divas Cookies is closed the first time and never shows it again
+				});
+			});
+		</script>
+		<script type="text/javascript" src="http://massimocaliman.it/assets/js/prism.js"></script>
+
+
+
+<!-- added by mcaliman END -->
+
+
+</body>
+</html>

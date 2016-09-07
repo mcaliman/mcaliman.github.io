@@ -1,0 +1,440 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Classi e metodi in Java &#8211; Massimo Caliman's</title>
+<meta name="description" content="Classi e metodi costituiscono le componenti di base della programmazione ad oggetti alla quale forniscono gli 
+elementi di incapsulamento e di limitazione di accesso ai dati.
+
+">
+<meta name="keywords" content="Articoli disponibili in lingua italiana, lang_it, Java">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Classi e metodi in Java">
+<meta name="twitter:description" content="Classi e metodi costituiscono le componenti di base della programmazione ad oggetti alla quale forniscono gli 
+elementi di incapsulamento e di limitazione di accesso ai dati.
+
+">
+<meta name="twitter:site" content="@mcaliman">
+<meta name="twitter:creator" content="@mcaliman">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://massimocaliman.it/images/bio-photo.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="it_IT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Classi e metodi in Java">
+<meta property="og:description" content="Classi e metodi costituiscono le componenti di base della programmazione ad oggetti alla quale forniscono gli 
+elementi di incapsulamento e di limitazione di accesso ai dati.
+
+">
+<meta property="og:url" content="http://massimocaliman.it/java/classi-e-metodi-in-java/">
+<meta property="og:site_name" content="Massimo Caliman's">
+
+
+
+
+
+<link rel="canonical" href="http://massimocaliman.it/java/classi-e-metodi-in-java/">
+<link href="http://massimocaliman.it/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://massimocaliman.it/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://massimocaliman.it/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://massimocaliman.it/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://massimocaliman.it/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://massimocaliman.it/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://massimocaliman.it/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://massimocaliman.it/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://massimocaliman.it/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://massimocaliman.it/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://massimocaliman.it/images/apple-touch-icon-144x144-precomposed.png">
+
+<link rel="stylesheet" href="http://massimocaliman.it/assets/css/divascookies_style_dark_top.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://massimocaliman.it/assets/css/prism.css" />
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/about/" >About</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/articles/" >Articles</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/blog/" >Blog</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/java/" >Java</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/tags/" >Tags</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/categories/" >Categories</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/bookmarks/" >Bookmarks</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://massimocaliman.it/" class="site-logo" rel="home" title="Massimo Caliman's"><img src="http://massimocaliman.it/images/bio-photo.jpg" width="200" height="200" alt="Massimo Caliman's logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://massimocaliman.it/">Massimo Caliman's</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">blog on Computer Science.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="http://massimocaliman.it/tags/#Articoli disponibili in lingua italiana" title="Pages tagged Articoli disponibili in lingua italiana">Articoli disponibili in lingua italiana</a></li><li><a href="http://massimocaliman.it/tags/#lang_it" title="Pages tagged lang_it">lang_it</a></li><li><a href="http://massimocaliman.it/tags/#Java" title="Pages tagged Java">Java</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Classi e metodi in Java</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+        
+          <img src="http://massimocaliman.it/images/bio-photo.jpg" class="bio-photo" alt="Massimo Caliman bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Massimo Caliman</span></span>
+        <span class="entry-date date published"><time datetime="2004-01-02T23:45:33+01:00"><i class="fa fa-calendar-o"></i> January 02, 2004</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=Articolidisponibiliinlinguaitaliana,lang_it,Java&amp;text=Classi%20e%20metodi%20in%20Java&amp;url=http://massimocaliman.it/java/classi-e-metodi-in-java/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://massimocaliman.it/java/classi-e-metodi-in-java/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=http://massimocaliman.it/java/classi-e-metodi-in-java/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+        <div class="google-ads" style="margin-top:40px; text-align:center;">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 160x600 ad -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-5121145090824526"
+       data-ad-slot="4055870880"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads --><!-- /.google-ads -->
+      </footer>
+      <div class="entry-content">
+        <p>Classi e metodi costituiscono le componenti di base della programmazione ad oggetti alla quale forniscono gli 
+elementi di incapsulamento e di limitazione di accesso ai dati.</p>
+
+<p>Definizione</p>
+
+<p>Una classe è un modello di entità similari nella struttura e che condividono analoghe proprietà e funzionalità.</p>
+
+<p>Definizione</p>
+
+<p>Gli oggetti sono entità modellabili da una classe e che possono essere generate con un opportuno processo detto di 
+istanziazione e le informazione in esse contenute vanno manipolate mediante opportune procedure descritte 
+nelle classi di afferenza.</p>
+
+<p>Diamo una definizione di metodo</p>
+
+<p>Definizione</p>
+
+<p>Un metodo rappresenta la procedura realizzativa di una specifica funzionalità della classe o della sua istanza.</p>
+
+<p>La definizione di una classe non comporta necessariamente l’allocazione degli oggetti in grado di rappresentare 
+le informazioni descritte nell’oggetto.
+Diciamo che piuttosto la definizione di una classe caratterizza mediante le proprie variabili, la struttura delle 
+informazioni e le relazioni intercorrenti tra di esse e mediante i propri metodi, 
+gli operatori predisposti alla manipolazione di tali informazioni.</p>
+
+<p>Definizione delle classi</p>
+
+<p>In Java la realizzata delle classi  demandata al costrutto class. 
+Ogni classe include la definizione di attributi (costanti e variabili) e metodi. 
+Quello che riporto sotto  lo scheletro del codice che si andr a scrivere per definire una classe.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
+<span class="c1">//stuff!</span>
+<span class="c1">//CONSTANT_DECLARATION_BLOCK;</span>
+<span class="c1">//VARIABLE_DECLARATION_BLOCK;</span>
+<span class="c1">//METHOD_DEFINITION_BLOCK;</span>
+<span class="o">}</span></code></pre></div>
+
+<p>dove le dichiarazioni dei blocchi sono solo dei segnaposto per evidenziare la struttura di quello che sar 
+il contenuto tra le parentesi {,}. class  una parola riservata del linguaggio (come new che abbiamo incontrato
+ quando abbiamo parlato degli array) ed  per questo che la enfatizzo come al solito in bold.</p>
+
+<p>Tutte le dichiarazioni nelle classi, costanti variabili e metodi possono essere caratterizzate dal modificatore 
+public e in tale modo rese accessibili all’ esterno della classe, oppure possono essere specificare private 
+nel quale caso la loro visibilit e il loro accesso  limitato dalla classe di definizione.
+Un livello intermedio  protected, il suo scopo pu essere chiarito solo dopo aver acquisito i rudimenti della
+programmazione ad oggetti, in particolare l’ereditariet, per cui per il momento ne accenniamo solo l’esistenza.</p>
+
+<p>Tratteremo in seguito e in dettaglio i modificatori di accesso public, private e protected. Una distinzione va inoltre 
+operata tra le entit che saranno pertinenti alle specifiche istanze di una classe e quelle che costituiscono elementi 
+dalla classe stessa.</p>
+
+<p>Definizione
+di entit di “classe”: tutte le costanti, variabili e metodi che sono comuni a tutti gli oggetti istanziabili dalla classe. 
+Cio le entit di classe sono comuni a tutti gli oggetti che creo a partire da una definizione di classe.</p>
+
+<p>Definizione
+di entit di “istanza: le costanti, variabili e metodi che sono specifiche a ciascun oggetto istanziato dalla classe. 
+Cio ogni oggetto ha la sua entit di istanza. Tutte le entit di pertinenza della classe sono individuate dal modificatore 
+static (altra parola riservata del linguaggio di programmazione). Il modificatore  omesso nelle definizioni degli attributi 
+e dei metodi di istanza per semplicit di esposizione e per concertrarci solo sugli aspetti di struttura fino ad ora esposti.</p>
+
+<p>Per esempio possiamo avere</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
+   <span class="kd">static</span> <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">;</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Che sono di fatto non specificando nessun modificatore di accesso ha una visibilit di default detta di package che discuteremo
+in seguito ma di cui si sconsiglia l’uso in quanto poco chiaro.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
+   <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span><span class="mi">1</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">T</span> <span class="o">{</span>
+   <span class="kd">protected</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span><span class="mi">1</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Solo nella definizione della classe T con modificatore public posso referenziare x c con <strong>T.x</strong> (cioè lo “posso usare”
+al di fuori della classe in cui  defininito,cioè in modo pubblico).</p>
+
+<p>Di fatto ho creato una costante con il valore 1 che posso utilizzare utilizzando <strong>T.x</strong> nel mio codice.</p>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'mcaliman'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://massimocaliman.it/java/introduzione-alla-oop-in-java/" class="btn" title="Introduzione alla OOP in Java">Previous</a>
+      
+      
+        <a href="http://massimocaliman.it/java/approfondiamo-i-metodi-in-java/" class="btn" title="Approfondiamo i metodi in Java">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    <div class="google-ads" style="margin:10px 0;">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 320x50 ad -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client="ca-pub-5121145090824526"
+       data-ad-slot="4055870880"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+
+
+<a href="http://massimocaliman.it/privacy" title="Privacy policy">privacy</a> |
+<a href="http://massimocaliman.it/terms"   title="Terms of service">terms</a>   
+
+
+
+
+<br/>
+<span>Questo sito non rappresenta una testata giornalistica, in quanto viene aggiornato senza alcuna periodicità.</span><br/>
+<span>Non può pertanto considerarsi un prodotto editoriale ex L.62 7/3/2001.</span><br/>
+
+<span>&copy; 2016 Massimo Caliman. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/" rel="nofollow">So Simple Theme</a>.</span>
+
+
+<div class="social-icons">
+	<a href="https://twitter.com/mcaliman" title="Massimo Caliman on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/mcaliman" title="Massimo Caliman on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/mcaliman" title="Massimo Caliman on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+
+  <a href="http://massimocaliman.it/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+
+
+
+
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://massimocaliman.it';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://massimocaliman.it/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://massimocaliman.it/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-53230757-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<!-- added by mcaliman BEGIN -->
+<!--
+		<script type="text/javascript" src="http://massimocaliman.it/assets/js/jquery-2.1.1.min.js"></script>
+		-->
+		<script type="text/javascript" src="http://massimocaliman.it/assets/js/jquery.divascookies-0.2.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$.DivasCookies({
+					// text for the Divas Cookies banner
+					bannerText: "Questo sito usa i cookies (anche di terze parti) a fini statistici e per migliorare la tua esperienza di navigazione.Proseguendo con la navigazione accetti l'uso dei cookies.",
+					
+					cookiePolicyLink		: "http://massimocaliman.it/privacy/",
+					// link to the extended cookie policy
+					cookiePolicyLinkText	: "Leggi la mia informativa su cookie e privacy..",				// text for the link to the extended cookie policy
+					thirdPartyPolicyWidget	: "",						// if set to "iubenda" tries to use the Iubenda widget
+					acceptButtonText		: "Ok ho capito!",						// text for the close button
+					acceptButtonSrc			: "",						// source for the close button image
+					openEffect				: "slideDown",				// opening effect for Divas Cookies banner ["fade", "slideUp", "slideDown", "slideLeft", "slideRight"]
+					openEffectDuration		: 600,						// duration of the opening effect (msec)
+					openEffectEasing		: "swing",					// easing for the opening effect
+					closeEffect				: "slideUp",				// closing effect for Divas Cookies banner ["fade", "slideUp", "slideDown", "slideLeft", "slideRight"]
+					closeEffectDuration		: 600,						// duration of the closing effect (msec)
+					closeEffectEasing		: "swing",					// easing for the closing effect
+					debugMode				: false,					// if true, the options are checked and warnings are shown
+					saveUserPreferences		: true						// if true, sets a cookie after the Divas Cookies is closed the first time and never shows it again
+				});
+			});
+		</script>
+		<script type="text/javascript" src="http://massimocaliman.it/assets/js/prism.js"></script>
+
+
+
+<!-- added by mcaliman END -->
+
+
+</body>
+</html>

@@ -70,7 +70,7 @@ In particolare sono oggetti di classe funzione.</p>
   
     ,{
       "title"			: "Il design pattern State",
-      "link"			: "http://massimocaliman.it/articles/state-pattern-java-examples/",
+      "link"			: "http://massimocaliman.it/java/state-pattern-java-examples/",
       "excerpt"		: "Caratteristiche e codice di esempio ridotto all'essenziale"
     }
   
@@ -90,7 +90,7 @@ Basato sul linguaggio S è utilizzato per la gestione e l’analisi statistica d
   
     ,{
       "title"			: "Il design pattern Visitor",
-      "link"			: "http://massimocaliman.it/articles/visitor-pattern-java-examples/",
+      "link"			: "http://massimocaliman.it/java/visitor-pattern-java-examples/",
       "excerpt"		: "Codice di esempio minimale sul pattern Interpreter"
     }
   
@@ -98,7 +98,7 @@ Basato sul linguaggio S è utilizzato per la gestione e l’analisi statistica d
   
     ,{
       "title"			: "Il design pattern Singleton",
-      "link"			: "http://massimocaliman.it/articles/singleton-pattern-java-examples/",
+      "link"			: "http://massimocaliman.it/java/singleton-pattern-java-examples/",
       "excerpt"		: "Alcuni esempi sul pattern Singleton"
     }
   
@@ -106,7 +106,7 @@ Basato sul linguaggio S è utilizzato per la gestione e l’analisi statistica d
   
     ,{
       "title"			: "Il design pattern Interpreter",
-      "link"			: "http://massimocaliman.it/articles/interpreter-pattern-java-examples/",
+      "link"			: "http://massimocaliman.it/java/interpreter-pattern-java-examples/",
       "excerpt"		: "Codice di esempio minimale sul pattern Interpreter"
     }
   
@@ -114,7 +114,7 @@ Basato sul linguaggio S è utilizzato per la gestione e l’analisi statistica d
   
     ,{
       "title"			: "Il design pattern Chain Of Responsibility",
-      "link"			: "http://massimocaliman.it/articles/chain-of-responsibility-pattern-java-examples/",
+      "link"			: "http://massimocaliman.it/java/chain-of-responsibility-pattern-java-examples/",
       "excerpt"		: "Codice di esempio minimale sul pattern CoF"
     }
   
@@ -122,7 +122,7 @@ Basato sul linguaggio S è utilizzato per la gestione e l’analisi statistica d
   
     ,{
       "title"			: "Il design pattern Strategy",
-      "link"			: "http://massimocaliman.it/articles/strategy-pattern-java-examples/",
+      "link"			: "http://massimocaliman.it/java/strategy-pattern-java-examples/",
       "excerpt"		: "Codice di esempio minimale sul pattern Strategy"
     }
   
@@ -130,7 +130,7 @@ Basato sul linguaggio S è utilizzato per la gestione e l’analisi statistica d
   
     ,{
       "title"			: "La classe java.time.LocalTime",
-      "link"			: "http://massimocaliman.it/articles/localtime1/",
+      "link"			: "http://massimocaliman.it/java/localtime1/",
       "excerpt"		: "Finalmente qualcosa di nuovo sulle Date in Java(8)"
     }
   
@@ -188,7 +188,7 @@ Basato sul linguaggio S è utilizzato per la gestione e l’analisi statistica d
   
     ,{
       "title"			: "Login e pagine sicure con JSF 2",
-      "link"			: "http://massimocaliman.it/articles/JSF22SecureLoginWebapp/",
+      "link"			: "http://massimocaliman.it/java/JSF22SecureLoginWebapp/",
       "excerpt"		: "<p>In questo post vediamo come realizzare un sistema minimo di login con sicurezza di base in una applicazione Java Server Faces 2.2.</p>
 
 "
@@ -198,7 +198,7 @@ Basato sul linguaggio S è utilizzato per la gestione e l’analisi statistica d
   
     ,{
       "title"			: "Creare un custom Converter in JSF 2.2",
-      "link"			: "http://massimocaliman.it/articles/creare-un-custom-converter-in-jsf-2/",
+      "link"			: "http://massimocaliman.it/java/creare-un-custom-converter-in-jsf-2/",
       "excerpt"		: "<p>Un anno speso nell’intelligenza artificiale è abbastanza perchè una persona creda in Dio.
 <em>(Alan Perlis)</em></p>
 
@@ -209,7 +209,7 @@ Basato sul linguaggio S è utilizzato per la gestione e l’analisi statistica d
   
     ,{
       "title"			: "Facili le dropdownbox con le JSF 2.2!",
-      "link"			: "http://massimocaliman.it/articles/facili-le-dropdownbox-con-le-jsf-2/",
+      "link"			: "http://massimocaliman.it/java/facili-le-dropdownbox-con-le-jsf-2/",
       "excerpt"		: "<p>Un anno speso nell’intelligenza artificiale è abbastanza perchè una persona creda in Dio.
 <em>(Alan Perlis)</em></p>
 
@@ -220,7 +220,7 @@ Basato sul linguaggio S è utilizzato per la gestione e l’analisi statistica d
   
     ,{
       "title"			: "JSF 2 Come usare i commenti",
-      "link"			: "http://massimocaliman.it/articles/jsf-2-come-usare-i-commenti/",
+      "link"			: "http://massimocaliman.it/java/jsf-2-come-usare-i-commenti/",
       "excerpt"		: "<p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>
 
 "
@@ -230,7 +230,7 @@ Basato sul linguaggio S è utilizzato per la gestione e l’analisi statistica d
   
     ,{
       "title"			: "Usare i Channel per copiare file in Java",
-      "link"			: "http://massimocaliman.it/articles/usare-i-channel-per-copiare-file-in-java/",
+      "link"			: "http://massimocaliman.it/java/usare-i-channel-per-copiare-file-in-java/",
       "excerpt"		: "<p>Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. <em>(Isaac Asimov, Il vento è cambiato, 1983)</em></p>
 
 "
@@ -240,7 +240,7 @@ Basato sul linguaggio S è utilizzato per la gestione e l’analisi statistica d
   
     ,{
       "title"			: "JSF 2 forzare gli id generati dai tag",
-      "link"			: "http://massimocaliman.it/articles/jsf-2-forzare-gli-id-generati-dai-tag/",
+      "link"			: "http://massimocaliman.it/java/jsf-2-forzare-gli-id-generati-dai-tag/",
       "excerpt"		: "<p>I computer sono come gli Dei del Vecchio Testamento: pieni di regole e nessuna pietà. <em>(Joseph Campbell, Il potere del mito, 1988)</em></p>
 
 "
@@ -418,7 +418,7 @@ p vettore di dimensione n  t.c. p[v] contiene l’informazione associata al nodo
   
     ,{
       "title"			: "Alberi in Java",
-      "link"			: "http://massimocaliman.it/articles/alberi-in-java/",
+      "link"			: "http://massimocaliman.it/java/alberi-in-java/",
       "excerpt"		: "<p>﻿Dopo i post sulle strutture dati elementari passiamo a trattare gli alberi, prima di entrare nel dettaglio di come implementare strutture dati di questo tipo ne approfondiamo l’aspetto teorico.</p>
 
 <p>Per prima cosa ne vediamo la definzione classica</p>
@@ -871,7 +871,7 @@ dati: un array S di dimensione n contenente n coppie (elem,chiave) S(n) = Tetagr
   
     ,{
       "title"			: "Usare HashMap in Java",
-      "link"			: "http://massimocaliman.it/articles/usare-hashmap-in-java/",
+      "link"			: "http://massimocaliman.it/java/usare-hashmap-in-java/",
       "excerpt"		: "<p>﻿Riprendiamo da dove ci eravamo lasciati (vedi post precedente), dopo aver visto un pò di teoria sui dizionari e qualcosa sull’interfaccia <code>Map</code> passiamo a esempi pratici. Parleremo esclusivamente della classe concreta <code>HashMap</code>, la nuova, per così dire, <code>Hashtable</code>.</p>
 
 <p>Prima di iniziare ricordiamo le differenze principali tra le due</p>
@@ -992,7 +992,7 @@ Questo metodo ritorna una versione thread-safe di <code>Map</code></p>
   
     ,{
       "title"			: "Dizionari in Java",
-      "link"			: "http://massimocaliman.it/articles/dizionari-in-java/",
+      "link"			: "http://massimocaliman.it/java/dizionari-in-java/",
       "excerpt"		: "<p>Nelle vecchie release del linguaggio Java il tipo di dato dizionario veniva realizzato a partire dalla classe <code>Dictionary&lt;K,V&gt;</code> del package <code>java.util</code>. 
 La classe <code>Dictionary</code> è il genitore astratto di <code>Hashtable</code>, che associa chiavi a valori. Ogni chiave e ogni valore è un oggetto. In ogni oggetto <code>Dictionary</code>, ogni chiave è associata al più ad un valore. Dato un dizionario e una chiave, si può recuperare l’elemento associato. Qualsiasi oggetto non <code>null</code> può essere utilizzato sia come una chiave che come valore. 
 Di norma, il metodo <code>equals</code> deve essere implemantato da questa classe per decidere se due chiavi sono uguali.
@@ -1005,7 +1005,7 @@ Benchè non ancora deprecata <code>Dictionary</code> può essere considerata obs
   
     ,{
       "title"			: "Concatenare PDF con iText in Java",
-      "link"			: "http://massimocaliman.it/articles/concatenare-pdf-con-itext-in-java/",
+      "link"			: "http://massimocaliman.it/java/concatenare-pdf-con-itext-in-java/",
       "excerpt"		: "<p>iText è sicuramente la libreria più diffusa e completa per l’elaborazione di file pdf, consiglio vivamente di darci un occhiata prima di valutare altri framework o reinventare l’acqua calda.</p>
 
 "
@@ -1015,7 +1015,7 @@ Benchè non ancora deprecata <code>Dictionary</code> può essere considerata obs
   
     ,{
       "title"			: "Scrivere e leggere file in Java 7 con try-with-resources",
-      "link"			: "http://massimocaliman.it/articles/scrivere-e-leggere-file-in-java-7-con-try-with-resources/",
+      "link"			: "http://massimocaliman.it/java/scrivere-e-leggere-file-in-java-7-con-try-with-resources/",
       "excerpt"		: "<p>Leggere e scrivere file in Java 7 sfruttando il nuovo costrutto try-with-resource manleva lo sviluppatore dal compito di chiudere correttamente gli stream, sotto potete trovare due metodi di esempio.</p>
 
 "
@@ -1081,7 +1081,7 @@ Abbiamo la ricorsione quando una funzione (in Java un metodo) richiama se stesso
   
     ,{
       "title"			: "﻿Una Servlet per gestire il download di file in Java",
-      "link"			: "http://massimocaliman.it/articles/una-servlet-per-gestire-il-download-di-file-in-java/",
+      "link"			: "http://massimocaliman.it/java/una-servlet-per-gestire-il-download-di-file-in-java/",
       "excerpt"		: "<p>Vediamo in questo post come scrivere il codice di una Servlet Java che ci permette di effettuare il trasferimento (il download) di un file dalla nostra applicazione server al client (il web browser dei nostri utenti).
 Effettuando il click su un link che punta alla nostra servlet verrà avviato il download, vediamo il codice piuttosto intuitivo nelle linee sottostanti del post.
 Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto (usando una qualche implementazione di <code>InputStream</code> nel nostro caso useremo <code>FileInputStream</code>); di determinare il tipo <code>MIME</code> e riversare il tutto correnttamente sull’oggetto di tipo <code>HttpServletResponse</code> della nostra Servlet.</p>
@@ -1093,7 +1093,7 @@ Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto
   
     ,{
       "title"			: "Inviare mail con allegati in Java",
-      "link"			: "http://massimocaliman.it/articles/inviare-mail-con-allegati-in-java/",
+      "link"			: "http://massimocaliman.it/java/inviare-mail-con-allegati-in-java/",
       "excerpt"		: "<p>Il package javax.mail è molto ricco, quindi in prima istanza può anche disorientare, vedremo nel codice presentato in questo post quanto ripaghi in flessibilità e potenzialità questa complessità. E’ vero, non ho un metodo semplice mail() come in altri linguaggi,  ma ho gli strumenti per crearmi anche un server di posta di tutto rispetto (ma questo lo approfondieremo in un prossimo post, riguardo il semplice metodo mail() possiamo anche crearcelo a partire dalle API come vedremo e sarà fatto su misura per le nostre esigenze)
 Per creare la nostra utility faremo riferimento al pattern commmand.
 Per prima cosa definiamo una classe astratta che conterrà la gestione mailcap sempre utile quando si vuole gestire notifiche via mail da piattaforma Java.</p>
@@ -1105,7 +1105,7 @@ Per prima cosa definiamo una classe astratta che conterrà la gestione mailcap s
   
     ,{
       "title"			: "Il metodo String.format una printf per Java",
-      "link"			: "http://massimocaliman.it/articles/Il-metodo-string-format-una-printf-per-java/",
+      "link"			: "http://massimocaliman.it/java/Il-metodo-string-format-una-printf-per-java/",
       "excerpt"		: "<p>﻿
 Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Java nè tantomeno alla 7, per chi non lo sapesse già la versione 7 del JDK, offre il metodo</p>
 
@@ -1160,7 +1160,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "La gestione delle stringhe in Java",
-      "link"			: "http://massimocaliman.it/articles/la-gestione-delle-stringhe-in-java/",
+      "link"			: "http://massimocaliman.it/java/la-gestione-delle-stringhe-in-java/",
       "excerpt"		: "<p>L’ingegnere quantistico Seth Lloyd è convinto che l’universo sia un gigantesco computer. Speriamo non faccia girare Windows. <em>(Kevin Kelly)</em></p>
 
 "
@@ -1213,7 +1213,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "HOWTO FIX errore 'illegal pattern character g' JAXB in NetBeans .",
-      "link"			: "http://massimocaliman.it/articles/howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/",
+      "link"			: "http://massimocaliman.it/java/howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/",
       "excerpt"		: "<p>Il computer non è una macchina intelligente che aiuta le persone stupide, anzi è una macchina stupida che funziona solo nelle mani delle persone intelligenti.
 <em>(Umberto Eco, Come scrivere una tesi di laurea con il personal computer, 1986 (prefazione))</em></p>
 
@@ -1224,7 +1224,7 @@ Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Ja
   
     ,{
       "title"			: "Come trovare il jar dove è contenuta una determinata classe (deployed in GlassFish).",
-      "link"			: "http://massimocaliman.it/articles/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/",
+      "link"			: "http://massimocaliman.it/java/come-trovare-il-jar-dove-e-contenuta-una-determinata-classe/",
       "excerpt"		: "<p>I Greci dicevano di una persona incolta: “Non sa leggere né nuotare”; oggi bisognerebbe aggiungere: “né usare un elaboratore”.
 <em>(Primo Levi e Tullio Regge, Dialogo, 1984)</em></p>
 
@@ -1306,7 +1306,7 @@ si spiega come debuggare uno script,come usare le tecniche più avanzate e come 
   
     ,{
       "title"			: "Uso di keytool e jarsigner",
-      "link"			: "http://massimocaliman.it/articles/uso-di-keytool-e-jarsigner/",
+      "link"			: "http://massimocaliman.it/java/uso-di-keytool-e-jarsigner/",
       "excerpt"		: "<p>Per estrarre un certificato che già sappiamo essere nel nostro portachiavi</p>
 
 "
@@ -1352,7 +1352,7 @@ Visto che usiamo Java molto meglio mettere un piccolo work-around di appena due 
   
     ,{
       "title"			: "Cose'è JAX-WS",
-      "link"			: "http://massimocaliman.it/articles/cose-e-jax-ws/",
+      "link"			: "http://massimocaliman.it/java/cose-e-jax-ws/",
       "excerpt"		: "<p>JAX-WS sta per Java API for XML Web Services.
 JAX-WS fa parte della piattaforma Java EE di Sun Microsystems (ora Oracle). Come altre API di Java EE usa le annotazioni, introdotto in Java SE 5, per semplificare lo sviluppo e la distribuzione di client di servizi web.
 L’implementazione di riferimento di JAX-WS è sviluppata come open source e fa parte del progetto GlassFish, application server Java EE open source.
@@ -1465,7 +1465,7 @@ Il sito di Microarea S.p.A</p>
   
     ,{
       "title"			: "Gli oggetti in Java",
-      "link"			: "http://massimocaliman.it/articles/gli-oggetti-in-java/",
+      "link"			: "http://massimocaliman.it/java/gli-oggetti-in-java/",
       "excerpt"		: "<p>Da ogni classe  possibile ottenere mediante l’ istanzanziazione una o pi entit, ciascuna delle quali costituisce una 
 copia della struttura dati descritta dalla classe nelle sue componenti dinamiche e di cui condivide i metodi di accesso alle informazioni.</p>
 
@@ -1476,7 +1476,7 @@ copia della struttura dati descritta dalla classe nelle sue componenti dinamiche
   
     ,{
       "title"			: "La parola riservata this in Java",
-      "link"			: "http://massimocaliman.it/articles/la-parola-riservata-this-in-java/",
+      "link"			: "http://massimocaliman.it/java/la-parola-riservata-this-in-java/",
       "excerpt"		: "<p>E’ possibile riscontrare due situazioni di interesse legate all’uso dei metodi la cui accurata gestione permette di migliorare 
 l’efficienza del codice:</p>
 
@@ -1505,7 +1505,7 @@ mcaliman@deimos:~# du -s -h .</p>
   
     ,{
       "title"			: "Il passaggio di parametri in Java",
-      "link"			: "http://massimocaliman.it/articles/il-passaggio-di-parametri-in-java/",
+      "link"			: "http://massimocaliman.it/java/il-passaggio-di-parametri-in-java/",
       "excerpt"		: "<p>Nella forma pi generica un metodo  caratterizzato da uno o pi parametri formali</p>
 
 "
@@ -1515,7 +1515,7 @@ mcaliman@deimos:~# du -s -h .</p>
   
     ,{
       "title"			: "Approfondiamo i metodi in Java",
-      "link"			: "http://massimocaliman.it/articles/approfondiamo-i-metodi-in-java/",
+      "link"			: "http://massimocaliman.it/java/approfondiamo-i-metodi-in-java/",
       "excerpt"		: "<h1 id="definizione-dei-metodi">Definizione dei metodi</h1>
 
 "
@@ -1525,7 +1525,7 @@ mcaliman@deimos:~# du -s -h .</p>
   
     ,{
       "title"			: "Classi e metodi in Java",
-      "link"			: "http://massimocaliman.it/articles/classi-e-metodi-in-java/",
+      "link"			: "http://massimocaliman.it/java/classi-e-metodi-in-java/",
       "excerpt"		: "<p>Classi e metodi costituiscono le componenti di base della programmazione ad oggetti alla quale forniscono gli 
 elementi di incapsulamento e di limitazione di accesso ai dati.</p>
 
@@ -1536,7 +1536,7 @@ elementi di incapsulamento e di limitazione di accesso ai dati.</p>
   
     ,{
       "title"			: "Introduzione alla OOP in Java",
-      "link"			: "http://massimocaliman.it/articles/introduzione-alla-oop-in-java/",
+      "link"			: "http://massimocaliman.it/java/introduzione-alla-oop-in-java/",
       "excerpt"		: "<p>La programmazione nei linguaggi orientati agli oggetti (<strong>Object Oriented Programming</strong> o più semplicemente <strong>OOP</strong>) 
 si basa su tipologie di entità denominate classi ed oggetti. Java è un linguaggio OOP.</p>
 
@@ -1547,7 +1547,7 @@ si basa su tipologie di entità denominate classi ed oggetti. Java è un linguag
   
     ,{
       "title"			: "Le variabili array in Java",
-      "link"			: "http://massimocaliman.it/articles/le-variabili-array-in-java/",
+      "link"			: "http://massimocaliman.it/java/le-variabili-array-in-java/",
       "excerpt"		: "<p>Gli array sono disponibili nella maggior parte dei linguaggi di programmazione perchè realizzano 
 la più semplice organizzazione di strutture dati complesse.</p>
 
@@ -1558,7 +1558,7 @@ la più semplice organizzazione di strutture dati complesse.</p>
   
     ,{
       "title"			: "Le costanti simboliche in Java",
-      "link"			: "http://massimocaliman.it/articles/le-costanti-simboliche-in-java/",
+      "link"			: "http://massimocaliman.it/java/le-costanti-simboliche-in-java/",
       "excerpt"		: "<p>Una variabile che non cambia mai valore è di fatto una costante, si può in java esplicitare un vincolo a tale condizione di immutabilità
 tramite la parola chiave <strong>final</strong>.</p>
 
@@ -1569,7 +1569,7 @@ tramite la parola chiave <strong>final</strong>.</p>
   
     ,{
       "title"			: "Le variabili e i comandi di assegnazione",
-      "link"			: "http://massimocaliman.it/articles/le-variabili-e%20i-comandi-di-assegnazione-in-java/",
+      "link"			: "http://massimocaliman.it/java/le-variabili-e%20i-comandi-di-assegnazione-in-java/",
       "excerpt"		: "<p>Diamo per prima cosa una definizione sufficientemente formale per i nostri scopi di variabile:
 Definizione di variabile
 Una variabile  una coppia composta da un nome, l’identificativo della variabile e un valore.</p>
@@ -1581,7 +1581,7 @@ Una variabile  una coppia composta da un nome, l’identificativo della variabil
   
     ,{
       "title"			: "Le feature del linguaggio Java che devi conoscere",
-      "link"			: "http://massimocaliman.it/articles/le-feature-del-linguaggio-java-che-devi-conoscere/",
+      "link"			: "http://massimocaliman.it/java/le-feature-del-linguaggio-java-che-devi-conoscere/",
       "excerpt"		: "<p>Se vuoi che Java diventi il tuo linguaggio di programmazione principale
 i seguenti aspetti dovranno diventarti familiari, sono aspetti comuni in qualunque linguaggio di programmazione.</p>
 
@@ -1592,7 +1592,7 @@ i seguenti aspetti dovranno diventarti familiari, sono aspetti comuni in qualunq
   
     ,{
       "title"			: "Java e il protocollo UDP",
-      "link"			: "http://massimocaliman.it/articles/mokabyte-udp/",
+      "link"			: "http://massimocaliman.it/java/mokabyte-udp/",
       "excerpt"		: "<p>Introduzione ad uno dei protocolli piu’ utilizzati in internet, lo User Datagram Protocol,
 publicato su <strong>MokaByte Numero 39,Marzo 2000,di Massimo Caliman e Nicola Merello</strong></p>
 
@@ -1799,19 +1799,15 @@ Quindi occhio ai datagrammi.</p>
   
     ,{
       "title"			: "Come cancellare l'history comandi su linux.",
-      "link"			: "http://massimocaliman.it/articles/come-cancellare-history-comandi-linux/",
-      "excerpt"		: "<p>Per cancellare l’history dei comandi su linux potete usate il comando</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">history</span> -c</code></pre></div>
-
-"
+      "link"			: "http://massimocaliman.it/blog/come-cancellare-history-comandi-linux/",
+      "excerpt"		: "false"
     }
   
 
   
     ,{
       "title"			: "Un package per il debugging in Java",
-      "link"			: "http://massimocaliman.it/articles/mokabyte-debug/",
+      "link"			: "http://massimocaliman.it/java/mokabyte-debug/",
       "excerpt"		: "<p>Pubblicato su <strong>MokaByte Numero 36 Dicembre 1999,di Massimo Caliman e Nicola Merello</strong>.
 Questo articolo vuole mostrare come sia possibile creare un sistema di package che faciliti il debugging
 di programmi scritti in Java.</p>
@@ -1858,6 +1854,8 @@ di programmi scritti in Java.</p>
       "link"			: "http://massimocaliman.it/theme-setup/",
       "excerpt"		: "Instructions on how to install and customize the Jekyll theme So Simple."
     }
+  
+
   
 
   

@@ -6,6 +6,12 @@
 - title: Articles
   url: /articles/
 
+- title: Blog
+  url: /blog/
+
+- title: Java
+  url: /java/
+
 - title: Tags
   url: /tags/
 
@@ -15,8 +21,6 @@
 - title: Bookmarks
   url: /bookmarks/
 
-#- title: Blog
-#  url: /blog/
 
 #- title: Contact
 #  url: /contact/

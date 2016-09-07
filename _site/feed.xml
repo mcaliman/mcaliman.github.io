@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://massimocaliman.it/feed.xml" />
 <link rel="alternate" type="text/html" href="http://massimocaliman.it" />
-<updated>2016-09-04T07:47:32+02:00</updated>
+<updated>2016-09-07T20:04:51+02:00</updated>
 <id>http://massimocaliman.it/</id>
 <author>
   <name>Massimo Caliman</name>
@@ -632,8 +632,8 @@ I for sono comunemente utilizzati per l’iterazione sugli elementi di un oggett
 
 <entry>
   <title type="html"><![CDATA[Il design pattern State]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/state-pattern-java-examples/" />
-  <id>http://massimocaliman.it/articles/state-pattern-java-examples</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/state-pattern-java-examples/" />
+  <id>http://massimocaliman.it/java/state-pattern-java-examples</id>
   <updated>2016-01-30T00:00:00-00:00</updated>
   <published>2016-01-13T00:00:00+01:00</published>
   
@@ -742,7 +742,7 @@ Un vantaggio per nulla indifferente: in un team di sviluppatori
 la scrittura dei singoli &lt;code&gt;ConcreteState&lt;/code&gt; può essere assegnata e gestita facilmente rispetto all’alternativa di&lt;br /&gt;
 mettere le mani in due o più sullo stessa unica classe.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/state-pattern-java-examples/&quot;&gt;Il design pattern State&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 13, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/state-pattern-java-examples/&quot;&gt;Il design pattern State&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 13, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -862,8 +862,8 @@ mentre Il file &lt;code&gt;.Rdata&lt;/code&gt; è lo workspace  che contiene tut
 
 <entry>
   <title type="html"><![CDATA[Il design pattern Visitor]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/visitor-pattern-java-examples/" />
-  <id>http://massimocaliman.it/articles/visitor-pattern-java-examples</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/visitor-pattern-java-examples/" />
+  <id>http://massimocaliman.it/java/visitor-pattern-java-examples</id>
   <updated>2016-01-03T00:00:00-00:00</updated>
   <published>2016-01-03T00:00:00+01:00</published>
   
@@ -878,7 +878,7 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 &lt;a href=&quot;https://github.com/mcaliman/VisitorPatternJavaExamples&quot;&gt;&lt;strong&gt;https://github.com/mcaliman/VisitorPatternJavaExamples&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/visitor-pattern-java-examples/&quot;&gt;Il design pattern Visitor&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/visitor-pattern-java-examples/&quot;&gt;Il design pattern Visitor&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -887,8 +887,8 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 
 <entry>
   <title type="html"><![CDATA[Il design pattern Singleton]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/singleton-pattern-java-examples/" />
-  <id>http://massimocaliman.it/articles/singleton-pattern-java-examples</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/singleton-pattern-java-examples/" />
+  <id>http://massimocaliman.it/java/singleton-pattern-java-examples</id>
   <updated>2016-01-03T00:00:00-00:00</updated>
   <published>2016-01-03T00:00:00+01:00</published>
   
@@ -905,7 +905,7 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 &lt;a href=&quot;https://github.com/mcaliman/SingletonPatternJavaExamples&quot;&gt;&lt;strong&gt;https://github.com/mcaliman/SingletonPatternJavaExamples&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/singleton-pattern-java-examples/&quot;&gt;Il design pattern Singleton&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/singleton-pattern-java-examples/&quot;&gt;Il design pattern Singleton&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -914,8 +914,8 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 
 <entry>
   <title type="html"><![CDATA[Il design pattern Interpreter]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/interpreter-pattern-java-examples/" />
-  <id>http://massimocaliman.it/articles/interpreter-pattern-java-examples</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/interpreter-pattern-java-examples/" />
+  <id>http://massimocaliman.it/java/interpreter-pattern-java-examples</id>
   <updated>2016-01-03T00:00:00-00:00</updated>
   <published>2016-01-03T00:00:00+01:00</published>
   
@@ -935,7 +935,7 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 &lt;a href=&quot;https://github.com/mcaliman/InterpreterPatternJavaExamples&quot;&gt;&lt;strong&gt;https://github.com/mcaliman/InterpreterPatternJavaExamples&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/interpreter-pattern-java-examples/&quot;&gt;Il design pattern Interpreter&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/interpreter-pattern-java-examples/&quot;&gt;Il design pattern Interpreter&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -944,8 +944,8 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 
 <entry>
   <title type="html"><![CDATA[Il design pattern Chain Of Responsibility]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/chain-of-responsibility-pattern-java-examples/" />
-  <id>http://massimocaliman.it/articles/chain-of-responsibility-pattern-java-examples</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/chain-of-responsibility-pattern-java-examples/" />
+  <id>http://massimocaliman.it/java/chain-of-responsibility-pattern-java-examples</id>
   <updated>2016-01-03T00:00:00-00:00</updated>
   <published>2016-01-03T00:00:00+01:00</published>
   
@@ -959,7 +959,7 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 &lt;a href=&quot;https://github.com/mcaliman/ChainOfResponsibilityPatternJavaExamples&quot;&gt;&lt;strong&gt;https://github.com/mcaliman/ChainOfResponsibilityPatternJavaExamples&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/chain-of-responsibility-pattern-java-examples/&quot;&gt;Il design pattern Chain Of Responsibility&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/chain-of-responsibility-pattern-java-examples/&quot;&gt;Il design pattern Chain Of Responsibility&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -968,8 +968,8 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 
 <entry>
   <title type="html"><![CDATA[Il design pattern Strategy]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/strategy-pattern-java-examples/" />
-  <id>http://massimocaliman.it/articles/strategy-pattern-java-examples</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/strategy-pattern-java-examples/" />
+  <id>http://massimocaliman.it/java/strategy-pattern-java-examples</id>
   <updated>2016-01-02T00:00:00-00:00</updated>
   <published>2016-01-02T00:00:00+01:00</published>
   
@@ -989,7 +989,7 @@ ruolo è quello di rendere più compatto e leggibile l’algoritmo.
 Sicuramente l’uso delle lambda e degli stream rendono noi sviluppatori più performanti nel processo di codifica
 e questo non è un dato trascurabile.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/strategy-pattern-java-examples/&quot;&gt;Il design pattern Strategy&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 02, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/strategy-pattern-java-examples/&quot;&gt;Il design pattern Strategy&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 02, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -998,8 +998,8 @@ e questo non è un dato trascurabile.&lt;/p&gt;
 
 <entry>
   <title type="html"><![CDATA[La classe java.time.LocalTime]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/localtime1/" />
-  <id>http://massimocaliman.it/articles/localtime1</id>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/localtime1/" />
+  <id>http://massimocaliman.it/java/localtime1</id>
   <updated>2015-11-29T00:00:00-00:00</updated>
   <published>2015-12-16T00:00:00+01:00</published>
   
@@ -1079,7 +1079,7 @@ oggetto LocalTime, e viceversa. Sotto trovate il codice.&lt;/p&gt;
 &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;lTime.toString()&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/localtime1/&quot;&gt;La classe java.time.LocalTime&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on December 16, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/localtime1/&quot;&gt;La classe java.time.LocalTime&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on December 16, 2015.&lt;/p&gt;
   </content>
 </entry>
 

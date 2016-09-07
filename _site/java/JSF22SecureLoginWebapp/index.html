@@ -1,0 +1,642 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Login e pagine sicure con JSF 2 &#8211; Massimo Caliman's</title>
+<meta name="description" content="In questo post vediamo come realizzare un sistema minimo di login con sicurezza di base in una applicazione Java Server Faces 2.2.
+
+">
+<meta name="keywords" content="Articoli disponibili in lingua italiana, lang_it, Java, Java7, JSF 2.2">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Login e pagine sicure con JSF 2">
+<meta name="twitter:description" content="In questo post vediamo come realizzare un sistema minimo di login con sicurezza di base in una applicazione Java Server Faces 2.2.
+
+">
+<meta name="twitter:site" content="@mcaliman">
+<meta name="twitter:creator" content="@mcaliman">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://massimocaliman.it/images/bio-photo.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="it_IT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Login e pagine sicure con JSF 2">
+<meta property="og:description" content="In questo post vediamo come realizzare un sistema minimo di login con sicurezza di base in una applicazione Java Server Faces 2.2.
+
+">
+<meta property="og:url" content="http://massimocaliman.it/java/JSF22SecureLoginWebapp/">
+<meta property="og:site_name" content="Massimo Caliman's">
+
+
+
+
+
+<link rel="canonical" href="http://massimocaliman.it/java/JSF22SecureLoginWebapp/">
+<link href="http://massimocaliman.it/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://massimocaliman.it/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://massimocaliman.it/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://massimocaliman.it/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://massimocaliman.it/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://massimocaliman.it/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://massimocaliman.it/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://massimocaliman.it/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://massimocaliman.it/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://massimocaliman.it/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://massimocaliman.it/images/apple-touch-icon-144x144-precomposed.png">
+
+<link rel="stylesheet" href="http://massimocaliman.it/assets/css/divascookies_style_dark_top.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://massimocaliman.it/assets/css/prism.css" />
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/about/" >About</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/articles/" >Articles</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/blog/" >Blog</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/java/" >Java</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/tags/" >Tags</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/categories/" >Categories</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://massimocaliman.it/bookmarks/" >Bookmarks</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://massimocaliman.it/" class="site-logo" rel="home" title="Massimo Caliman's"><img src="http://massimocaliman.it/images/bio-photo.jpg" width="200" height="200" alt="Massimo Caliman's logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://massimocaliman.it/">Massimo Caliman's</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">blog on Computer Science.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="http://massimocaliman.it/tags/#Articoli disponibili in lingua italiana" title="Pages tagged Articoli disponibili in lingua italiana">Articoli disponibili in lingua italiana</a></li><li><a href="http://massimocaliman.it/tags/#lang_it" title="Pages tagged lang_it">lang_it</a></li><li><a href="http://massimocaliman.it/tags/#Java" title="Pages tagged Java">Java</a></li><li><a href="http://massimocaliman.it/tags/#Java7" title="Pages tagged Java7">Java7</a></li><li><a href="http://massimocaliman.it/tags/#JSF 2.2" title="Pages tagged JSF 2.2">JSF 2.2</a></li>
+        </ul>
+        
+          <h1 class="entry-title">Login e pagine sicure con JSF 2</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+        
+          <img src="http://massimocaliman.it/images/bio-photo.jpg" class="bio-photo" alt="Massimo Caliman bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Massimo Caliman</span></span>
+        <span class="entry-date date published"><time datetime="2015-01-04T23:45:33+01:00"><i class="fa fa-calendar-o"></i> January 04, 2015</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        <span class="social-share-twitter">
+  <a href="https://twitter.com/intent/tweet?hashtags=Articolidisponibiliinlinguaitaliana,lang_it,Java,Java7,JSF2.2&amp;text=Login%20e%20pagine%20sicure%20con%20JSF%202&amp;url=http://massimocaliman.it/java/JSF22SecureLoginWebapp/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+</span>
+<span class="social-share-facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://massimocaliman.it/java/JSF22SecureLoginWebapp/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+</span>
+<span class="social-share-googleplus">
+  <a href="https://plus.google.com/share?url=http://massimocaliman.it/java/JSF22SecureLoginWebapp/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+</span>
+<!-- /.social-share -->
+        
+        <div class="google-ads" style="margin-top:40px; text-align:center;">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 160x600 ad -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:160px;height:600px"
+       data-ad-client="ca-pub-5121145090824526"
+       data-ad-slot="4055870880"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads --><!-- /.google-ads -->
+      </footer>
+      <div class="entry-content">
+        <p>In questo post vediamo come realizzare un sistema minimo di login con sicurezza di base in una applicazione Java Server Faces 2.2.</p>
+
+<p>Per prima cosa aprimo NetBeans 8, quindi creiamo una applicazione di tipo <code>WebApplication</code> e specifichiamo come framework <code>JSF 2.2</code>
+Per creare un progetto di tipo <code>WebApplication</code> selezioniamo dal menu <code>File</code>-&gt;<code>New Project</code>, Poi <code>Java Web</code> -&gt; <code>WebApplication</code>
+ed infine <code>Next &gt;</code></p>
+
+<p>Chiameremo per semplicita la nostra applicazione JSFSecureLoginWebApplication</p>
+
+<p>specifichiamo come sotto i vari passaggi</p>
+
+<p><img src="/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot02.png" alt="" title="JSF22SecureLoginWebappScreenshot02" /></p>
+
+<p>Impostiamo il nome</p>
+
+<p><img src="/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot03.png" alt="" title="JSF22SecureLoginWebappScreenshot03" /></p>
+
+<p>Le impostazioni dell’Application Server</p>
+
+<p><img src="/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot04.png" alt="" title="JSF22SecureLoginWebappScreenshot04" /></p>
+
+<p>Il framework JSF 2.2</p>
+
+<p><img src="/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot05.png" alt="" title="JSF22SecureLoginWebappScreenshot05" /></p>
+
+<p>L’url Pattern e il linguaggio utilizzato per le pagine JSF</p>
+
+<p><img src="/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot06.png" alt="" title="JSF22SecureLoginWebappScreenshot06" /></p>
+
+<p>Per i componenti non selezioniamo nulla
+<img src="/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot07.png" alt="" title="JSF22SecureLoginWebappScreenshot07" /></p>
+
+<p>A questo punto abbiamo bisogno di creare due <code>JavaBean</code> e un <code>Filter</code> che servirà per gestire l’accesso alle pagine che definiremo 
+sicure. Le pagine messe in sicurezza dal <code>Filter</code> si troveranno nel percorso/directory <code>/pages</code>.
+Chiameremo i due bean <code>LoginBean</code> e <code>NavigationBean</code>, la funzione di <code>LoginBean</code> è quella di gestire l’accesso, quella di <code>NavigationBean</code> la navigazione.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">org</span><span class="o">.</span><span class="na">caliman</span><span class="o">.</span><span class="na">jsfsecurewebapp</span><span class="o">.</span><span class="na">login</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.io.Serializable</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.logging.Logger</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.faces.application.FacesMessage</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.faces.bean.ManagedBean</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.faces.bean.ManagedProperty</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.faces.bean.SessionScoped</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.faces.context.FacesContext</span><span class="o">;</span>
+
+<span class="nd">@ManagedBean</span>
+<span class="nd">@SessionScoped</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">LoginBean</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">1L</span><span class="o">;</span>
+    <span class="kd">protected</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">Logger</span> <span class="n">logger</span> <span class="o">=</span> <span class="n">Logger</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">LoginBean</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">username</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">password</span><span class="o">;</span>
+
+    <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">loggedIn</span><span class="o">;</span>
+
+    <span class="nd">@ManagedProperty</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&quot;#{navigationBean}&quot;</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="n">NavigationBean</span> <span class="n">navigationBean</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">validate</span><span class="o">(</span><span class="n">String</span> <span class="n">username</span><span class="o">,</span> <span class="n">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">loggedIn</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">username</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">password</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">username</span><span class="o">.</span><span class="na">trim</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;admin&quot;</span><span class="o">)</span>
+                <span class="o">&amp;&amp;</span> <span class="n">password</span><span class="o">.</span><span class="na">trim</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;secret!&quot;</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">loggedIn</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="c1">//logged ok stuff...</span>
+        <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">loggedIn</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">//TODO</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">doLogin</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">validate</span><span class="o">(</span><span class="n">username</span><span class="o">,</span> <span class="n">password</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">loggedIn</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">navigationBean</span><span class="o">.</span><span class="na">redirectToIndex</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="n">FacesMessage</span> <span class="n">msg</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">FacesMessage</span><span class="o">(</span><span class="s">&quot;Login error: the user name or password for this app is incorrect!&quot;</span><span class="o">,</span> 
+                                            <span class="s">&quot;The user name or password for this app is incorrect!&quot;</span><span class="o">);</span>
+        <span class="n">msg</span><span class="o">.</span><span class="na">setSeverity</span><span class="o">(</span><span class="n">FacesMessage</span><span class="o">.</span><span class="na">SEVERITY_ERROR</span><span class="o">);</span>
+        <span class="n">FacesContext</span><span class="o">.</span><span class="na">getCurrentInstance</span><span class="o">().</span><span class="na">addMessage</span><span class="o">(</span><span class="kc">null</span><span class="o">,</span> <span class="n">msg</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">navigationBean</span><span class="o">.</span><span class="na">toLogin</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">doLogout</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">loggedIn</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="c1">//logout stuff..        </span>
+        <span class="n">FacesContext</span><span class="o">.</span><span class="na">getCurrentInstance</span><span class="o">().</span><span class="na">getExternalContext</span><span class="o">().</span><span class="na">invalidateSession</span><span class="o">();</span>
+        <span class="k">return</span> <span class="n">navigationBean</span><span class="o">.</span><span class="na">toLogin</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getUsername</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">username</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUsername</span><span class="o">(</span><span class="n">String</span> <span class="n">username</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">username</span> <span class="o">=</span> <span class="n">username</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getPassword</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">password</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPassword</span><span class="o">(</span><span class="n">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">password</span> <span class="o">=</span> <span class="n">password</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isLoggedIn</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">loggedIn</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setLoggedIn</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">loggedIn</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">loggedIn</span> <span class="o">=</span> <span class="n">loggedIn</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNavigationBean</span><span class="o">(</span><span class="n">NavigationBean</span> <span class="n">navigationBean</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">navigationBean</span> <span class="o">=</span> <span class="n">navigationBean</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Il codice di <code>NavigationBean</code> è riportato sotto</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">org</span><span class="o">.</span><span class="na">caliman</span><span class="o">.</span><span class="na">jsfsecurewebapp</span><span class="o">.</span><span class="na">login</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.io.Serializable</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.faces.bean.ManagedBean</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.faces.bean.SessionScoped</span><span class="o">;</span>
+
+<span class="nd">@ManagedBean</span>
+<span class="nd">@SessionScoped</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">NavigationBean</span> <span class="kd">implements</span> <span class="n">Serializable</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">2L</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">redirectToLogin</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="s">&quot;/login.xhtml?faces-redirect=true&quot;</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toLogin</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="s">&quot;/login.xhtml&quot;</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">redirectToIndex</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="s">&quot;/pages/index.xhtml?faces-redirect=true&quot;</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toIndex</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="s">&quot;/pages/index.xhtml&quot;</span><span class="o">;</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre></div>
+
+<p>Entrambi i bean sono annotati come <code>@ManagedBean</code> e <code>@SessionScoped</code> in quando devono avere scope di sessione ed essere gestibili nelle nostre pagine con le relative proprietà e metodi (che realizzano le azioni da associare ai pulsanti o link).</p>
+
+<p>Un discorso a parte merita <code>LoginFilter</code>, è un <code>Filter</code> quindi è fondalmentalmente una <code>Servlet</code> e come tale si comporterà permettendoci di verificare il percorso chiamato e discriminare tra le pagine o risorse accessibili in relazione al fatto che si sia accreditati o meno al sistema.</p>
+
+<p>L’accreditamento è ovviamente legato alla correttezza dell’<code>username</code> e <code>password</code> imputati dall’utente. L’esempio è volutamente semplice, non v’è logica di controllo su un database o altra fonte persistente o remota riguardo all’<code>username</code> e la <code>password</code>. Ai fini didattici ci accontentiamo di verificare da codice se l’<code>username</code> e la <code>password</code> corrispondono ad una prefissata nel codice. E’ mia intenzione approfondire questo aspetto in uno dei prossimi post. L’idea mi permettarà di mostrare un semplice sistema di tabelle per gestire con <code>JPA</code> la corrispondenza username/password e gestire un semplice sistema di ruoli.</p>
+
+<p>Veniamo al codice della filter</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">org</span><span class="o">.</span><span class="na">caliman</span><span class="o">.</span><span class="na">jsfsecurewebapp</span><span class="o">.</span><span class="na">login</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.faces.application.ResourceHandler</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.servlet.Filter</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.FilterChain</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.FilterConfig</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.ServletException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.ServletRequest</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.ServletResponse</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletRequest</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletResponse</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpSession</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">LoginFilter</span> <span class="kd">implements</span> <span class="n">Filter</span> <span class="o">{</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">doFilter</span><span class="o">(</span><span class="n">ServletRequest</span> <span class="n">req</span><span class="o">,</span> <span class="n">ServletResponse</span> <span class="n">res</span><span class="o">,</span> <span class="n">FilterChain</span> <span class="n">chain</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="o">,</span> <span class="n">ServletException</span> <span class="o">{</span>
+        <span class="n">HttpServletRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpServletRequest</span><span class="o">)</span> <span class="n">req</span><span class="o">;</span>
+        <span class="n">HttpServletResponse</span> <span class="n">response</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpServletResponse</span><span class="o">)</span> <span class="n">res</span><span class="o">;</span>
+        <span class="n">HttpSession</span> <span class="n">session</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getSession</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+
+        <span class="n">LoginBean</span> <span class="n">auth</span> <span class="o">=</span> <span class="o">(</span><span class="n">LoginBean</span><span class="o">)</span> <span class="o">((</span><span class="n">session</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">?</span> <span class="n">session</span><span class="o">.</span><span class="na">getAttribute</span><span class="o">(</span><span class="s">&quot;loginBean&quot;</span><span class="o">)</span> <span class="o">:</span> <span class="kc">null</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">loginURL</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getContextPath</span><span class="o">()</span> <span class="o">+</span> <span class="s">&quot;/login.xhtml&quot;</span><span class="o">;</span>
+
+        <span class="kt">boolean</span> <span class="n">loggedIn</span> <span class="o">=</span> <span class="n">auth</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">auth</span><span class="o">.</span><span class="na">isLoggedIn</span><span class="o">();</span>
+        <span class="kt">boolean</span> <span class="n">loginRequest</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getRequestURI</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="n">loginURL</span><span class="o">);</span>
+        <span class="kt">boolean</span> <span class="n">resourceRequest</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getRequestURI</span><span class="o">().</span><span class="na">startsWith</span><span class="o">(</span><span class="n">request</span><span class="o">.</span><span class="na">getContextPath</span><span class="o">()</span> <span class="o">+</span> <span class="s">&quot;/&quot;</span> <span class="o">+</span> <span class="n">ResourceHandler</span><span class="o">.</span><span class="na">RESOURCE_IDENTIFIER</span><span class="o">);</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">loggedIn</span> <span class="o">||</span> <span class="n">loginRequest</span> <span class="o">||</span> <span class="n">resourceRequest</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(!</span><span class="n">resourceRequest</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">response</span><span class="o">.</span><span class="na">setHeader</span><span class="o">(</span><span class="s">&quot;Cache-Control&quot;</span><span class="o">,</span> <span class="s">&quot;no-cache, no-store, must-revalidate&quot;</span><span class="o">);</span> <span class="c1">// HTTP 1.1.</span>
+                <span class="n">response</span><span class="o">.</span><span class="na">setHeader</span><span class="o">(</span><span class="s">&quot;Pragma&quot;</span><span class="o">,</span> <span class="s">&quot;no-cache&quot;</span><span class="o">);</span> <span class="c1">// HTTP 1.0.</span>
+                <span class="n">response</span><span class="o">.</span><span class="na">setDateHeader</span><span class="o">(</span><span class="s">&quot;Expires&quot;</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span> <span class="c1">// Proxies.</span>
+            <span class="o">}</span>
+            <span class="n">chain</span><span class="o">.</span><span class="na">doFilter</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="n">response</span><span class="o">.</span><span class="na">sendRedirect</span><span class="o">(</span><span class="n">loginURL</span><span class="o">);</span>
+        <span class="o">}</span>
+
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">(</span><span class="n">FilterConfig</span> <span class="n">config</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">ServletException</span> <span class="o">{</span>
+        <span class="c1">// Nothing to do here!</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">destroy</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Nothing to do here!</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre></div>
+
+<p>A questo punto creiamo la nostra pagina JSF per la login e quella dell’indice della nostra applicazione a cui si potra accedere solo se accreditati</p>
+
+<p>Dal menu di NetBeans creiamo una pagina per la login come sotto, la stessa operazione poi effettueremo per la creazione della pagina <code>index.xhtml</code> che si troverà nel path messo in sicurezza dalla Filter.</p>
+
+<p><img src="/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot10.png" alt="" title="JSF22SecureLoginWebappScreenshot10" /></p>
+
+<p>Il codice per la <code>login.xhtml</code> è riportato sotto, ed è ovviamente ridotto all’osso. Solo ciò che ci servirà, potremo poi utilizzare i template a modelli di portali per realizzare la nostra applicazione completa è ovviamente responsiva.</p>
+
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span>   
+      <span class="na">xmlns:h=</span><span class="s">&quot;http://java.sun.com/jsf/html&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h:head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;title&gt;</span>JSFSecureLoginWebApplication:login<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/h:head&gt;</span>
+    <span class="nt">&lt;h:body&gt;</span>
+        <span class="nt">&lt;h:form</span> <span class="na">id=</span><span class="s">&quot;loginForm&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h1&gt;</span>Access<span class="nt">&lt;/h1&gt;</span>                            
+            Username:<span class="nt">&lt;h:inputText</span>   <span class="na">value=</span><span class="s">&quot;#{loginBean.username}&quot;</span> <span class="na">required=</span><span class="s">&quot;true&quot;</span> <span class="na">id=</span><span class="s">&quot;username&quot;</span><span class="nt">/&gt;&lt;br/&gt;</span>
+            Password:<span class="nt">&lt;h:inputSecret</span>  <span class="na">value=</span><span class="s">&quot;#{loginBean.password}&quot;</span> <span class="na">required=</span><span class="s">&quot;true&quot;</span> <span class="na">id=</span><span class="s">&quot;password&quot;</span><span class="nt">/&gt;&lt;br/&gt;</span>
+            <span class="nt">&lt;h:commandButton</span> <span class="na">value=</span><span class="s">&quot;Login&quot;</span> <span class="na">action=</span><span class="s">&quot;#{loginBean.doLogin}&quot;</span> <span class="na">id=</span><span class="s">&quot;loginButton&quot;</span><span class="nt">/&gt;&lt;br/&gt;</span>                                                
+        <span class="nt">&lt;/h:form&gt;</span>                    
+    <span class="nt">&lt;/h:body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
+
+<p>Ed infine quello per la pagina <code>index.xhtml</code>.</p>
+
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39; ?&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span>
+      <span class="na">xmlns:h=</span><span class="s">&quot;http://xmlns.jcp.org/jsf/html&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h:head&gt;</span>
+        <span class="nt">&lt;title&gt;</span>JSFSecureLoginWebApplication:index<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/h:head&gt;</span>
+    <span class="nt">&lt;h:body&gt;</span>
+        <span class="nt">&lt;h1&gt;</span>Hello JSFSecureLoginWebApplication, username and password are correct.<span class="nt">&lt;/h1&gt;</span>
+        <span class="nt">&lt;h:form&gt;</span>                           
+            <span class="nt">&lt;h:commandLink</span> <span class="na">action=</span><span class="s">&quot;#{loginBean.doLogout}&quot;</span> <span class="na">value=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Logout<span class="nt">&lt;/h:commandLink&gt;</span>                            
+        <span class="nt">&lt;/h:form&gt;</span>
+    <span class="nt">&lt;/h:body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
+
+<p>Il codice della nostra <code>web.xml</code> è quello sotto</p>
+
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;web-app</span> <span class="na">version=</span><span class="s">&quot;3.1&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;</span> 
+         <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> 
+         <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;context-param&gt;</span>
+        <span class="nt">&lt;param-name&gt;</span>javax.faces.PROJECT_STAGE<span class="nt">&lt;/param-name&gt;</span>
+        <span class="nt">&lt;param-value&gt;</span>Development<span class="nt">&lt;/param-value&gt;</span>
+    <span class="nt">&lt;/context-param&gt;</span>
+    <span class="nt">&lt;filter&gt;</span>
+        <span class="nt">&lt;filter-name&gt;</span>LoginFilter<span class="nt">&lt;/filter-name&gt;</span>
+        <span class="nt">&lt;filter-class&gt;</span>org.caliman.jsfsecurewebapp.login.LoginFilter<span class="nt">&lt;/filter-class&gt;</span>
+    <span class="nt">&lt;/filter&gt;</span>
+    <span class="nt">&lt;filter-mapping&gt;</span>
+        <span class="nt">&lt;filter-name&gt;</span>LoginFilter<span class="nt">&lt;/filter-name&gt;</span>
+        <span class="nt">&lt;url-pattern&gt;</span>/pages/*<span class="nt">&lt;/url-pattern&gt;</span>
+    <span class="nt">&lt;/filter-mapping&gt;</span>
+    <span class="nt">&lt;servlet&gt;</span>
+        <span class="nt">&lt;servlet-name&gt;</span>Faces Servlet<span class="nt">&lt;/servlet-name&gt;</span>
+        <span class="nt">&lt;servlet-class&gt;</span>javax.faces.webapp.FacesServlet<span class="nt">&lt;/servlet-class&gt;</span>
+        <span class="nt">&lt;load-on-startup&gt;</span>1<span class="nt">&lt;/load-on-startup&gt;</span>
+    <span class="nt">&lt;/servlet&gt;</span>
+    <span class="nt">&lt;servlet-mapping&gt;</span>
+        <span class="nt">&lt;servlet-name&gt;</span>Faces Servlet<span class="nt">&lt;/servlet-name&gt;</span>
+        <span class="nt">&lt;url-pattern&gt;</span>/faces/*<span class="nt">&lt;/url-pattern&gt;</span>
+        <span class="nt">&lt;url-pattern&gt;</span>*.xhtml<span class="nt">&lt;/url-pattern&gt;</span>
+    <span class="nt">&lt;/servlet-mapping&gt;</span>
+    <span class="nt">&lt;session-config&gt;</span>
+        <span class="nt">&lt;session-timeout&gt;</span>
+            30
+        <span class="nt">&lt;/session-timeout&gt;</span>
+    <span class="nt">&lt;/session-config&gt;</span>
+    <span class="nt">&lt;welcome-file-list&gt;</span>
+        <span class="nt">&lt;welcome-file&gt;</span>pages/index.xhtml<span class="nt">&lt;/welcome-file&gt;</span>
+    <span class="nt">&lt;/welcome-file-list&gt;</span>
+<span class="nt">&lt;/web-app&gt;</span></code></pre></div>
+
+<p>Effettuaiamo il build della nostra applicazione web e poi lanciamola con run dal menu contestuale di progetto.</p>
+
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'mcaliman'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://massimocaliman.it/java/creare-un-custom-converter-in-jsf-2/" class="btn" title="Creare un custom Converter in JSF 2.2">Previous</a>
+      
+      
+        <a href="http://massimocaliman.it/articles/debian-8-abilitare-sudo/" class="btn" title="Abilitare il comando sudo su debian 8">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    <div class="google-ads" style="margin:10px 0;">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 320x50 ad -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client="ca-pub-5121145090824526"
+       data-ad-slot="4055870880"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+
+
+<a href="http://massimocaliman.it/privacy" title="Privacy policy">privacy</a> |
+<a href="http://massimocaliman.it/terms"   title="Terms of service">terms</a>   
+
+
+
+
+<br/>
+<span>Questo sito non rappresenta una testata giornalistica, in quanto viene aggiornato senza alcuna periodicità.</span><br/>
+<span>Non può pertanto considerarsi un prodotto editoriale ex L.62 7/3/2001.</span><br/>
+
+<span>&copy; 2016 Massimo Caliman. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/" rel="nofollow">So Simple Theme</a>.</span>
+
+
+<div class="social-icons">
+	<a href="https://twitter.com/mcaliman" title="Massimo Caliman on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	
+	
+	<a href="https://linkedin.com/in/mcaliman" title="Massimo Caliman on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	
+	
+	
+	<a href="https://github.com/mcaliman" title="Massimo Caliman on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+
+  <a href="http://massimocaliman.it/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+
+
+
+
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://massimocaliman.it';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://massimocaliman.it/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://massimocaliman.it/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-53230757-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<!-- added by mcaliman BEGIN -->
+<!--
+		<script type="text/javascript" src="http://massimocaliman.it/assets/js/jquery-2.1.1.min.js"></script>
+		-->
+		<script type="text/javascript" src="http://massimocaliman.it/assets/js/jquery.divascookies-0.2.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$.DivasCookies({
+					// text for the Divas Cookies banner
+					bannerText: "Questo sito usa i cookies (anche di terze parti) a fini statistici e per migliorare la tua esperienza di navigazione.Proseguendo con la navigazione accetti l'uso dei cookies.",
+					
+					cookiePolicyLink		: "http://massimocaliman.it/privacy/",
+					// link to the extended cookie policy
+					cookiePolicyLinkText	: "Leggi la mia informativa su cookie e privacy..",				// text for the link to the extended cookie policy
+					thirdPartyPolicyWidget	: "",						// if set to "iubenda" tries to use the Iubenda widget
+					acceptButtonText		: "Ok ho capito!",						// text for the close button
+					acceptButtonSrc			: "",						// source for the close button image
+					openEffect				: "slideDown",				// opening effect for Divas Cookies banner ["fade", "slideUp", "slideDown", "slideLeft", "slideRight"]
+					openEffectDuration		: 600,						// duration of the opening effect (msec)
+					openEffectEasing		: "swing",					// easing for the opening effect
+					closeEffect				: "slideUp",				// closing effect for Divas Cookies banner ["fade", "slideUp", "slideDown", "slideLeft", "slideRight"]
+					closeEffectDuration		: 600,						// duration of the closing effect (msec)
+					closeEffectEasing		: "swing",					// easing for the closing effect
+					debugMode				: false,					// if true, the options are checked and warnings are shown
+					saveUserPreferences		: true						// if true, sets a cookie after the Divas Cookies is closed the first time and never shows it again
+				});
+			});
+		</script>
+		<script type="text/javascript" src="http://massimocaliman.it/assets/js/prism.js"></script>
+
+
+
+<!-- added by mcaliman END -->
+
+
+</body>
+</html>

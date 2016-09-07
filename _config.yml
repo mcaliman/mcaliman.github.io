@@ -4,7 +4,8 @@
 # last update       : 2016-06-22
 # to build use      : bundle exec jekyll build
 # to run server use : bundle exec jekyll serve
-#
+# use https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin
+# 
 
 # Site wide configuration
 
@@ -26,8 +27,12 @@ highlighter: pygments
 sass:
   sass_dir: _sass
   style: compressed
-gems:
-  - jekyll-sitemap
+#gems:
+   #- jekyll-sitemap
+   #- jekyll-polyglot
+
+
+gems: [jekyll-sitemap]
 
 kramdown:
   auto_ids: true

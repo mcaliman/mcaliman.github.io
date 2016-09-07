@@ -6,14 +6,18 @@
 - title: Articles
   url: /articles/
 
+- title: Blog
+  url: /blog/
+
 - title: Tags
   url: /tags/
 
 - title: Categories
   url: /categories/
 
-#- title: Blog
-#  url: /blog/
+- title: Bookmarks
+  url: /bookmarks/
+
 
 #- title: Contact
 #  url: /contact/
