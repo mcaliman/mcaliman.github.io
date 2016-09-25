@@ -1,0 +1,25 @@
+--- 
+layout: post
+title: "Millemila if instanceof"
+excerpt: "Siamo tutti sostenitori della Campagna Anti-If con il C..odice degli altri."
+category: blog
+date:   2016-09-16 22:45:33
+modified: 2016-09-16 22:45:33
+tags: [Campagna Anti-IF,Design Pattern]
+comments: true
+share: true
+---
+Non sempre il tempo lo permette, ma si dovrebbero evitare quelle catene infinite di 100 o più if, un caso classico sono quelle situazioni in cui o codice esistente o generato da con file xsd ci costringe per motivi strutturali a lunghe catene di if del tipo mostrato sotto
+
+{% highlight java %}
+if(obj instanceof C1){
+   m((C1)obj);  
+}else if(obj instanceof C2){
+   m((C2)obj);  
+}
+//Omissis..
+}else if(obj instanceof C100){
+   m((C100)obj);  
+}
+{% endhighlight %}
+
