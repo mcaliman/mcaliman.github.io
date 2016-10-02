@@ -4,57 +4,13 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://massimocaliman.it/feed.xml" />
 <link rel="alternate" type="text/html" href="http://massimocaliman.it" />
-<updated>2016-10-02T08:40:53+02:00</updated>
+<updated>2016-10-02T08:42:31+02:00</updated>
 <id>http://massimocaliman.it/</id>
 <author>
   <name>Massimo Caliman</name>
   <uri>http://massimocaliman.it/</uri>
   <email>mcaliman@gmail.com</email>
 </author>
-
-
-  
-
-<entry>
-  <title type="html"><![CDATA[Controllare i droptime file del nic.it con R]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/blog/droptimefile-R/" />
-  <id>http://massimocaliman.it/blog/droptimefile-R</id>
-  <updated>2016-10-02 00:45:33 +0200T00:00:00-00:00</updated>
-  <published>2016-10-02T00:45:33+02:00</published>
-  
-  <author>
-    <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
-    <email>mcaliman@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;Lo script in questione non è nulla di speciale ma mostra la comodità di utilizzare R quando si tratta di manipolare dati e creare script o prototipi. Scarica i due file droptime file dal nic e verifica se al suo interno è presente il dominio che ci interessa.
-Lo script aggiornato è disponibile su github &lt;a href=&quot;https://github.com/mcaliman/R-utilities&quot;&gt;https://github.com/mcaliman/R-utilities&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# droptime_file_observer.R&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# the format of droptime file is yyyymmdd09 and yyyymmdd16 &lt;/span&gt;
-date &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;Sys.Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-filename1 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;paste0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;%Y%m%d&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;09&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-filename2 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;paste0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;%Y%m%d&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;16&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-url1&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;paste0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;http://www.nic.it/droptime/files/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;filename1&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-url2&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;paste0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;http://www.nic.it/droptime/files/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;filename2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-download.file&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;url1&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;filename1&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-download.file&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;url2&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;filename2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-droptime_file1&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;readLines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;filename1&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-droptime_file2&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;readLines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;filename2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-domain_to_find &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;dominiochemiinteressa.it&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;is.element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;domain_to_find&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; droptime_file1&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
-	&lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;present in droptime file!&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;is.element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;domain_to_find&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; droptime_file2&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
-	&lt;span class=&quot;kp&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;present in droptime file!&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/blog/droptimefile-R/&quot;&gt;Controllare i droptime file del nic.it con R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 02, 2016.&lt;/p&gt;
-  </content>
-</entry>
 
 
   
@@ -1281,6 +1237,51 @@ sudo git config --global user.email &lt;span class=&quot;s2&quot;&gt;&amp;quot;m
 
 
     &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/ubuntu-14.04.02-LTS-abilitare-root/&quot;&gt;Ubuntu 14.04.02 LTS abilitare l’utente root&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 14, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Ubuntu 14.04.02 LTS 64bit installare Open SSH]]></title>
+  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/ubuntu-14.04.02-LTS-install-openssh/" />
+  <id>http://massimocaliman.it/articles/ubuntu-14.04.02-LTS-install-openssh</id>
+  <published>2015-05-13T00:45:33+02:00</published>
+  <updated>2015-05-13T00:45:33+02:00</updated>
+  <author>
+    <name>Massimo Caliman</name>
+    <uri>http://massimocaliman.it</uri>
+    <email>mcaliman@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. &lt;em&gt;(Isaac Asimov, Il vento è cambiato, 1983)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;L’installazione delle applicazioni server e client di OpenSSH è semplice. Per installare l’applicazione client OpenSSH sui sistemi Ubuntu, usare questo comando al prompt di un terminale:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install openssh-client&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Per installare l’applicazione server di OpenSSH e i relativi file di supporto, usare questo comando al prompt di un terminale:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install openssh-server&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Se il DHC ci assegna ogni volta un IP diverso o semplicemente non ci è mai passato per la testa di dover sapere questo particolare sul nostro server casalingo dobbiamo per forza recuperarlo, a questo scopo utilizziamo il comando&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ifconfig&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Non è necessario essere root e quindi l’uso di sudo per utilizzarlo
+ricaviamo l’ip: 192.168.1.23&lt;/p&gt;
+
+&lt;p&gt;possiamo quindi provare a collegarci da un altra macchina con &lt;code&gt;ssh &amp;lt;username&amp;gt;@&amp;lt;hostip&amp;gt;&lt;/code&gt;
+nel mio caso&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh mcaliliman@192.168.1.23&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;per uscire il solito comando&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/ubuntu-14.04.02-LTS-install-openssh/&quot;&gt;Ubuntu 14.04.02 LTS 64bit installare Open SSH&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 13, 2015.&lt;/p&gt;
   </content>
 </entry>
 
