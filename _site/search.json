@@ -2,6 +2,22 @@
 
   
     {
+      "title"			: "Controllare i droptime file del nic.it con R",
+      "link"			: "http://massimocaliman.it/blog/droptimefile-R/",
+      "excerpt"		: "Controllare in automatico se il dominio che ci interessa è sarà disponibile giornata."
+    }
+  
+
+  
+    ,{
+      "title"			: "Controllare i droptime file del nic.it con R",
+      "link"			: "http://massimocaliman.it/blog/dropfile-R/",
+      "excerpt"		: "Controllare in automatico se il dominio che ci interessa sarà disponibile giornata."
+    }
+  
+
+  
+    ,{
       "title"			: "Big Data, Data Science, Database i fondamentali 2",
       "link"			: "http://massimocaliman.it/articles/bigdata_datascience_database_i_fondamentali_2/",
       "excerpt"		: "

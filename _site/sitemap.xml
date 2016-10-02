@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://massimocaliman.it/blog/droptimefile-R/</loc>
+    <lastmod>2016-10-02T00:45:33+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://massimocaliman.it/blog/dropfile-R/</loc>
+    <lastmod>2016-10-02T00:45:33+02:00</lastmod>
+  </url>
+  <url>
     <loc>http://massimocaliman.it/articles/bigdata_datascience_database_i_fondamentali_2/</loc>
     <lastmod>2016-06-02T00:45:33+02:00</lastmod>
   </url>

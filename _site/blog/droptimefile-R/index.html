@@ -5,17 +5,15 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Big Data, Data Science, Database i fondamentali 2 &#8211; Massimo Caliman's</title>
-<meta name="description" content="
-">
-<meta name="keywords" content="datascience">
+<title>Controllare i droptime file del nic.it con R &#8211; Massimo Caliman's</title>
+<meta name="description" content="Controllare in automatico se il dominio che ci interessa è sarà disponibile giornata.">
+<meta name="keywords" content="R">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Big Data, Data Science, Database i fondamentali 2">
-<meta name="twitter:description" content="
-">
+<meta name="twitter:title" content="Controllare i droptime file del nic.it con R">
+<meta name="twitter:description" content="Controllare in automatico se il dominio che ci interessa è sarà disponibile giornata.">
 <meta name="twitter:site" content="@mcaliman">
 <meta name="twitter:creator" content="@mcaliman">
 
@@ -25,17 +23,16 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="it_IT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Big Data, Data Science, Database i fondamentali 2">
-<meta property="og:description" content="
-">
-<meta property="og:url" content="http://massimocaliman.it/articles/bigdata_datascience_database_i_fondamentali_2/">
+<meta property="og:title" content="Controllare i droptime file del nic.it con R">
+<meta property="og:description" content="Controllare in automatico se il dominio che ci interessa è sarà disponibile giornata.">
+<meta property="og:url" content="http://massimocaliman.it/blog/droptimefile-R/">
 <meta property="og:site_name" content="Massimo Caliman's">
 
 
 
 
 
-<link rel="canonical" href="http://massimocaliman.it/articles/bigdata_datascience_database_i_fondamentali_2/">
+<link rel="canonical" href="http://massimocaliman.it/blog/droptimefile-R/">
 <link href="http://massimocaliman.it/feed.xml" type="application/atom+xml" rel="alternate" title="Massimo Caliman's Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -149,10 +146,10 @@
     <div class="entry-wrapper">
       <header class="entry-header">
         <ul class="entry-tags">
-          <li><a href="http://massimocaliman.it/tags/#datascience" title="Pages tagged datascience">datascience</a></li>
+          <li><a href="http://massimocaliman.it/tags/#R" title="Pages tagged R">R</a></li>
         </ul>
         
-          <h1 class="entry-title">Big Data, Data Science, Database i fondamentali 2</h1>
+          <h1 class="entry-title">Controllare i droptime file del nic.it con R</h1>
         
       </header>
       <footer class="entry-meta">
@@ -162,17 +159,17 @@
           <img src="http://massimocaliman.it/images/bio-photo.jpg" class="bio-photo" alt="Massimo Caliman bio photo"></a>
         
         <span class="author vcard">By <span class="fn">Massimo Caliman</span></span>
-        <span class="entry-date date published"><time datetime="2016-06-02T00:45:33+02:00"><i class="fa fa-calendar-o"></i> June 02, 2016</time></span>
-        
+        <span class="entry-date date published"><time datetime="2016-10-02T00:45:33+02:00"><i class="fa fa-calendar-o"></i> October 02, 2016</time></span>
+        <span class="entry-date date modified"><time datetime="2016-10-02 00:45:33 +0200"><i class="fa fa-pencil"></i> October 02, 2016</time></span>
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         <span class="social-share-twitter">
-  <a href="https://twitter.com/intent/tweet?hashtags=datascience&amp;text=Big%20Data,%20Data%20Science,%20Database%20i%20fondamentali%202&amp;url=http://massimocaliman.it/articles/bigdata_datascience_database_i_fondamentali_2/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+  <a href="https://twitter.com/intent/tweet?hashtags=R&amp;text=Controllare%20i%20droptime%20file%20del%20nic.it%20con%20R&amp;url=http://massimocaliman.it/blog/droptimefile-R/&amp;via=mcaliman" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
 </span>
 <span class="social-share-facebook">
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http://massimocaliman.it/articles/bigdata_datascience_database_i_fondamentali_2/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://massimocaliman.it/blog/droptimefile-R/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
 </span>
 <span class="social-share-googleplus">
-  <a href="https://plus.google.com/share?url=http://massimocaliman.it/articles/bigdata_datascience_database_i_fondamentali_2/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+  <a href="https://plus.google.com/share?url=http://massimocaliman.it/blog/droptimefile-R/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
 </span>
 <!-- /.social-share -->
         
@@ -189,14 +186,28 @@
 </div><!-- /.google-ads --><!-- /.google-ads -->
       </footer>
       <div class="entry-content">
-        
-<p>Prima dei DBMS come si faceva? O meglio come si fa ancora in molte sistemi ancora in uso? La parte del re la facevano i sistemi operativi, le applicazioni salvano su file, in un qualche formato, spesso proprietario,e una o più applicazioni dedicate si occupavano di leggere,scrivere,modificare e cancellare i dati. La cosa tutto sommato funzionava bene se tutto risiedeva su una sola macchina e non doveva comunicare con il resto del mondo, cioè quando non vi erano problemi di accesso concorrente ai dati. In generale i problemi erano di ridondanza,inconsistenza,difficoltà di accesso ai dati,accesso concorrente e protezione dei dati.</p>
+        <p>Lo script in questione non è nulla di speciale ma mostra la comodità di utilizzare R quando si tratta di manipolare dati e creare script o prototipi. Scarica i due file droptime file dal nic e verifica se al suo interno è presente il dominio che ci interessa.
+Lo script aggiornato è disponibile su github <a href="https://github.com/mcaliman/R-utilities">https://github.com/mcaliman/R-utilities</a></p>
 
-<p>I sistemi DBMS hanno risolto questi problemi permettendo una rappresentazione dei dati centralizzata e condivisa.</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># droptime_file_observer.R</span>
+<span class="c1"># the format of droptime file is yyyymmdd09 and yyyymmdd16 </span>
+date <span class="o">&lt;-</span> <span class="kp">Sys.Date</span><span class="p">()</span>
+filename1 <span class="o">&lt;-</span> <span class="kp">paste0</span><span class="p">(</span><span class="kp">format</span><span class="p">(</span><span class="kp">date</span><span class="p">,</span>format<span class="o">=</span><span class="s">&#39;%Y%m%d&#39;</span><span class="p">),</span><span class="s">&#39;09&#39;</span><span class="p">,</span><span class="s">&#39;.txt&#39;</span><span class="p">)</span>
+filename2 <span class="o">&lt;-</span> <span class="kp">paste0</span><span class="p">(</span><span class="kp">format</span><span class="p">(</span><span class="kp">date</span><span class="p">,</span>format<span class="o">=</span><span class="s">&#39;%Y%m%d&#39;</span><span class="p">),</span><span class="s">&#39;16&#39;</span><span class="p">,</span><span class="s">&#39;.txt&#39;</span><span class="p">)</span>
+url1<span class="o">&lt;-</span><span class="kp">paste0</span><span class="p">(</span><span class="s">&#39;http://www.nic.it/droptime/files/&#39;</span><span class="p">,</span>filename1<span class="p">)</span>
+url2<span class="o">&lt;-</span><span class="kp">paste0</span><span class="p">(</span><span class="s">&#39;http://www.nic.it/droptime/files/&#39;</span><span class="p">,</span>filename2<span class="p">)</span>
+download.file<span class="p">(</span>url1<span class="p">,</span>filename1<span class="p">)</span>
+download.file<span class="p">(</span>url2<span class="p">,</span>filename2<span class="p">)</span>
 
-<p>Quando si parla di BigData si parla, anche, di database non relazionali NRDBMS o NoSQL, senza schema, ma esattamente come possiamo definire lo schema o schema logico di una database? Come la descrizione della struttura della base di dati, un astrazione al alto livello detto modello dei dati. Lo schema non ci dice cosa contiene la base di dati ma come è fatta astraendo l’implementazione usando un qualche formalismo ad alto livello, per esempio lo schema di una base di dati di una rubrica telefonica potrebbe essere descritta come: nome (stringa di 30),cognome(stringa di 30),telefono(intero di 20)</p>
-
-<p>E quando vogliamo riferirci ai dati e non alla struttura? In tale caso parliamo di istanza della base di dati, cioè insieme dei dati in dato momento, dato che le basi di dati variano nel tempo a seguito di inserimenti,modifiche e cancellazioni.</p>
+droptime_file1<span class="o">&lt;-</span><span class="kp">readLines</span><span class="p">(</span>filename1<span class="p">)</span>
+droptime_file2<span class="o">&lt;-</span><span class="kp">readLines</span><span class="p">(</span>filename2<span class="p">)</span>
+domain_to_find <span class="o">&lt;-</span> <span class="s">&#39;dominiochemiinteressa.it&#39;</span>
+<span class="kr">if</span> <span class="p">(</span><span class="kp">is.element</span><span class="p">(</span>domain_to_find<span class="p">,</span> droptime_file1<span class="p">)){</span>
+	<span class="kp">print</span><span class="p">(</span><span class="s">&#39;present in droptime file!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kr">if</span> <span class="p">(</span><span class="kp">is.element</span><span class="p">(</span>domain_to_find<span class="p">,</span> droptime_file2<span class="p">)){</span>
+	<span class="kp">print</span><span class="p">(</span><span class="s">&#39;present in droptime file!&#39;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
 
 
         
@@ -229,10 +240,8 @@
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://massimocaliman.it/articles/bigdata_datascience_database_i_fondamentali_1/" class="btn" title="Big Data, Data Science, Database i fondamentali 1">Previous</a>
+        <a href="http://massimocaliman.it/blog/dropfile-R/" class="btn" title="Controllare i droptime file del nic.it con R">Previous</a>
       
-      
-        <a href="http://massimocaliman.it/blog/dropfile-R/" class="btn" title="Controllare i droptime file del nic.it con R">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
