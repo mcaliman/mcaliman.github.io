@@ -16,10 +16,15 @@ modified: 2016-08-12
 * [Simpleprogrammer.com](https://simpleprogrammer.com)
 * [Manydesigns](http://www.manydesigns.com/)
 * [Anti-IF Campaign](http://antiifcampaign.com/)
+* [Pluralsight, IT and Creative Training](http://www.pluralsight.com/)
 
 ## Java 
 * [javaworld.com](http://www.javaworld.com)
 * [javalobby.org](http://www.javalobby.org)
+
+## Job
+* [javajob.it](http://www.javajob.it/)
+
 
 ## Jug
 * [jug milano](http://www.jugmilano.it/)
@@ -36,6 +41,7 @@ modified: 2016-08-12
 
 ## Python
 * [python.it - Sito ufficiale della comunità italiana](http://www.python.it)
+
 
 ## Università e ricerca
 * [IIT - Istituto Italiano di Tecnologia](http://www.iit.it)
