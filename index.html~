@@ -15,6 +15,13 @@ I am specialized in Java and this is my personal website.
 <h2>Benvenuti</h2>
 Sono Massimo Caliman, software architect e analista programmatore senior specializzato nella piattaforma Java e questo è il mio sito web personale. 
 
+<p>Nota: sto trasferendo i post su Java nel nuovo blog dedicato <a href="http://javamaniax.com">javamaniax.com</a></p>
+
+
+
+
+<h3>Latest Posts</h3>
+
 <ul class="post-list">
 {% for post in site.posts limit:100 %} 
 <li>
