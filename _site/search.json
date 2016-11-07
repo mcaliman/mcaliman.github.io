@@ -2,6 +2,30 @@
 
   
     {
+      "title"			: "﻿Possiamo eseguire del codice prima del metodo main(String[]) ?",
+      "link"			: "http://massimocaliman.it/java/eseguire_codice_prima_del_metodo_main/",
+      "excerpt"		: "﻿"
+    }
+  
+
+  
+    ,{
+      "title"			: "﻿I costruttori sono ereditabili ?",
+      "link"			: "http://massimocaliman.it/java/costruttori_sono_ereditabili_una_sottoclasse_pu%C3%B2_chiamare_costruttore_classe_genitore/",
+      "excerpt"		: "﻿﻿I costruttori sono ereditabili? Una sottoclasse può chiamare il costruttore della classe genitore?"
+    }
+  
+
+  
+    ,{
+      "title"			: "﻿Come puoi limitare l'ereditarietà per una classe?",
+      "link"			: "http://massimocaliman.it/java/come_puoi_limitare_ereditariet%C3%A0_per_una_classe/",
+      "excerpt"		: "﻿"
+    }
+  
+
+  
+    ,{
       "title"			: "Controllare i droptime file del nic.it con R",
       "link"			: "http://massimocaliman.it/blog/dropfile-R/",
       "excerpt"		: "Controllare in automatico se il dominio che ci interessa sarà disponibile giornata."
