@@ -4,6 +4,12 @@ permalink: /about/
 title: About me
 tags: [about]
 modified: 2013-09-13
+
+#image:
+   #feature: desktop1.jpg
+   #credit: WeGraphics
+   #creditlink: http://wegraphics.net/downloads/free-ultimate-blurred- background-pack/
+
 ---
 
 >Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta.

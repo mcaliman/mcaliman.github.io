@@ -76,7 +76,6 @@ call method1
 
 Come puoi vedere il codice in `static { }` è stato eseguito ancor prima del costruttore stesso, quindi quando ancora nessuna istanza della classe esisteva.
 
-
 Ancora una variante del codice appena sopra, le modifiche sono limitate al metodo `main` quindi ti riporto solo quello
 
 {% highlight java %}

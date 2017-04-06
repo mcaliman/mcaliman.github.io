@@ -5,8 +5,6 @@ excerpt: "An archive of blog posts sorted by date."
 search_omit: true
 ---
 
-<p>Nota: sto trasferendo i post su Java nel nuovo blog dedicato <a href="http://javamaniax.com">javamaniax.com</a></p>
-
 <ul class="post-list">
     {% for post in site.categories.blog %}
     <li>
