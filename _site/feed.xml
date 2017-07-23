@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">Massimo Caliman's</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://massimocaliman.it/feed.xml" />
-<link rel="alternate" type="text/html" href="http://massimocaliman.it" />
-<updated>2017-06-19T21:49:16+02:00</updated>
-<id>http://massimocaliman.it/</id>
+<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
+<link rel="alternate" type="text/html" href="http://localhost:4000" />
+<updated>2017-07-23T17:57:31+02:00</updated>
+<id>http://localhost:4000/</id>
 <author>
   <name>Massimo Caliman</name>
-  <uri>http://massimocaliman.it/</uri>
+  <uri>http://localhost:4000/</uri>
   <email>mcaliman@gmail.com</email>
 </author>
 
@@ -17,14 +17,14 @@
 
 <entry>
   <title type="html"><![CDATA[﻿Possiamo eseguire del codice prima del metodo main(String[]) ?]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/eseguire_codice_prima_del_metodo_main/" />
-  <id>http://massimocaliman.it/java/eseguire_codice_prima_del_metodo_main</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/java/eseguire_codice_prima_del_metodo_main/" />
+  <id>http://localhost:4000/java/eseguire_codice_prima_del_metodo_main</id>
   <updated>2016-11-03T00:00:00-00:00</updated>
   <published>2016-11-03T00:00:00+01:00</published>
   
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -102,7 +102,7 @@ Possiamo eseguire del codice prima del metodo &lt;code&gt;main(String[])&lt;/cod
 &lt;p&gt;Anche in questo caso, nonostante siano state create due istanze della classe &lt;code&gt;AClass&lt;/code&gt;, l’esecuzione del blocco &lt;code&gt;static&lt;/code&gt; è limitato ad una sola occorrenza prima all’atto di caricamento della classe.
 E anche per oggi è tutto. Come al solito se hai una domanda in merito a questo post, vuoi un approfondimento o hai un argomento che ti interesserebbe che io trattassi nei prossimi post puoi scrivermi.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/eseguire_codice_prima_del_metodo_main/&quot;&gt;﻿Possiamo eseguire del codice prima del metodo main(String[]) ?&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 03, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/java/eseguire_codice_prima_del_metodo_main/&quot;&gt;﻿Possiamo eseguire del codice prima del metodo main(String[]) ?&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 03, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -111,14 +111,14 @@ E anche per oggi è tutto. Come al solito se hai una domanda in merito a questo 
 
 <entry>
   <title type="html"><![CDATA[﻿I costruttori sono ereditabili ?]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/costruttori_sono_ereditabili_una_sottoclasse_pu%C3%B2_chiamare_costruttore_classe_genitore/" />
-  <id>http://massimocaliman.it/java/costruttori_sono_ereditabili_una_sottoclasse_può_chiamare_costruttore_classe_genitore</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/java/costruttori_sono_ereditabili_una_sottoclasse_pu%C3%B2_chiamare_costruttore_classe_genitore/" />
+  <id>http://localhost:4000/java/costruttori_sono_ereditabili_una_sottoclasse_può_chiamare_costruttore_classe_genitore</id>
   <updated>2016-11-02T00:00:00-00:00</updated>
   <published>2016-11-02T00:00:00+01:00</published>
   
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -267,7 +267,7 @@ In altre parole, non puoi far si che non venga effettuata la chiamata al costrut
 
 &lt;p&gt;E anche per oggi è tutto. Come al solito se hai una domanda in merito a questo post, vuoi un approfondimento o hai un argomento che ti interesserebbe che io trattassi nei prossimi post puoi scrivermi.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/costruttori_sono_ereditabili_una_sottoclasse_pu%C3%B2_chiamare_costruttore_classe_genitore/&quot;&gt;﻿I costruttori sono ereditabili ?&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 02, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/java/costruttori_sono_ereditabili_una_sottoclasse_pu%C3%B2_chiamare_costruttore_classe_genitore/&quot;&gt;﻿I costruttori sono ereditabili ?&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 02, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -276,14 +276,14 @@ In altre parole, non puoi far si che non venga effettuata la chiamata al costrut
 
 <entry>
   <title type="html"><![CDATA[﻿Come puoi limitare l'ereditarietà per una classe?]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/come_puoi_limitare_ereditariet%C3%A0_per_una_classe/" />
-  <id>http://massimocaliman.it/java/come_puoi_limitare_ereditarietà_per_una_classe</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/java/come_puoi_limitare_ereditariet%C3%A0_per_una_classe/" />
+  <id>http://localhost:4000/java/come_puoi_limitare_ereditarietà_per_una_classe</id>
   <updated>2016-11-01T00:00:00-00:00</updated>
   <published>2016-11-01T00:00:00+01:00</published>
   
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -381,7 +381,7 @@ Ecco due interpretazione&lt;/p&gt;
 
 &lt;p&gt;E anche per oggi è tutto. Come al solito se hai una domanda in merito a questo post, vuoi un approfondimento o hai un argomento che ti interesserebbe che io trattassi nei prossimi post puoi scrivermi.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/come_puoi_limitare_ereditariet%C3%A0_per_una_classe/&quot;&gt;﻿Come puoi limitare l&#39;ereditarietà per una classe?&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 01, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/java/come_puoi_limitare_ereditariet%C3%A0_per_una_classe/&quot;&gt;﻿Come puoi limitare l&#39;ereditarietà per una classe?&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on November 01, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -390,14 +390,14 @@ Ecco due interpretazione&lt;/p&gt;
 
 <entry>
   <title type="html"><![CDATA[Controllare i droptime file del nic.it con R]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/blog/dropfile-R/" />
-  <id>http://massimocaliman.it/blog/dropfile-R</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/dropfile-R/" />
+  <id>http://localhost:4000/blog/dropfile-R</id>
   <updated>2016-10-02 00:45:33 +0200T00:00:00-00:00</updated>
   <published>2016-10-02T00:45:33+02:00</published>
   
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -427,7 +427,7 @@ domain_to_find &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span c
 &lt;p&gt;Possiamo personalizzarlo con un invio email al posto della stampa e poi schedulando tutto con cron.&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/blog/dropfile-R/&quot;&gt;Controllare i droptime file del nic.it con R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 02, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/dropfile-R/&quot;&gt;Controllare i droptime file del nic.it con R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on October 02, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -436,13 +436,13 @@ domain_to_find &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span c
 
 <entry>
   <title type="html"><![CDATA[Big Data, Data Science, Database i fondamentali 2]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/bigdata_datascience_database_i_fondamentali_2/" />
-  <id>http://massimocaliman.it/articles/bigdata_datascience_database_i_fondamentali_2</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/bigdata_datascience_database_i_fondamentali_2/" />
+  <id>http://localhost:4000/articles/bigdata_datascience_database_i_fondamentali_2</id>
   <published>2016-06-02T00:45:33+02:00</published>
   <updated>2016-06-02T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -456,7 +456,7 @@ domain_to_find &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span c
 &lt;p&gt;E quando vogliamo riferirci ai dati e non alla struttura? In tale caso parliamo di istanza della base di dati, cioè insieme dei dati in dato momento, dato che le basi di dati variano nel tempo a seguito di inserimenti,modifiche e cancellazioni.&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/bigdata_datascience_database_i_fondamentali_2/&quot;&gt;Big Data, Data Science, Database i fondamentali 2&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on June 02, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/bigdata_datascience_database_i_fondamentali_2/&quot;&gt;Big Data, Data Science, Database i fondamentali 2&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on June 02, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -465,13 +465,13 @@ domain_to_find &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span c
 
 <entry>
   <title type="html"><![CDATA[Big Data, Data Science, Database i fondamentali 1]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/bigdata_datascience_database_i_fondamentali_1/" />
-  <id>http://massimocaliman.it/articles/bigdata_datascience_database_i_fondamentali_1</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/bigdata_datascience_database_i_fondamentali_1/" />
+  <id>http://localhost:4000/articles/bigdata_datascience_database_i_fondamentali_1</id>
   <published>2016-05-02T00:45:33+02:00</published>
   <updated>2016-05-02T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -503,7 +503,7 @@ domain_to_find &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span c
 &lt;p&gt;Quando ci si muove nel mondo dei Big Data spesso i database non sono relazionali per i motivi che vedremo.&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/bigdata_datascience_database_i_fondamentali_1/&quot;&gt;Big Data, Data Science, Database i fondamentali 1&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 02, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/bigdata_datascience_database_i_fondamentali_1/&quot;&gt;Big Data, Data Science, Database i fondamentali 1&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 02, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -512,13 +512,13 @@ domain_to_find &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span c
 
 <entry>
   <title type="html"><![CDATA[Interfacce con il mondo esterno in R]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/" />
-  <id>http://massimocaliman.it/articles/linguaggio_r_ interfacce_con_il_ mondo_esterno</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/" />
+  <id>http://localhost:4000/articles/linguaggio_r_ interfacce_con_il_ mondo_esterno</id>
   <published>2016-04-02T00:45:33+02:00</published>
   <updated>2016-04-02T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -570,7 +570,7 @@ x &amp;lt;- readLines&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;con, 10&lt;sp
 x &amp;lt;- readLines&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/&quot;&gt;Interfacce con il mondo esterno in R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on April 02, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/linguaggio_r_%20interfacce_con_il_%20mondo_esterno/&quot;&gt;Interfacce con il mondo esterno in R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on April 02, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -579,13 +579,13 @@ x &amp;lt;- readLines&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;con&lt;span c
 
 <entry>
   <title type="html"><![CDATA[Funzioni che implementano cicli in R]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/linguaggio_r_funzioni_che_implementano_cicli/" />
-  <id>http://massimocaliman.it/articles/linguaggio_r_funzioni_che_implementano_cicli</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/linguaggio_r_funzioni_che_implementano_cicli/" />
+  <id>http://localhost:4000/articles/linguaggio_r_funzioni_che_implementano_cicli</id>
   <published>2016-03-01T23:45:33+01:00</published>
   <updated>2016-03-01T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -723,7 +723,7 @@ tapply&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;x, f, mean&lt;span class=&qu
 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; 1.343577 1.742792 1.389213 1.252149 1.650007 1.350450 3.162776&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/linguaggio_r_funzioni_che_implementano_cicli/&quot;&gt;Funzioni che implementano cicli in R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on March 01, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/linguaggio_r_funzioni_che_implementano_cicli/&quot;&gt;Funzioni che implementano cicli in R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on March 01, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -732,13 +732,13 @@ tapply&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;x, f, mean&lt;span class=&qu
 
 <entry>
   <title type="html"><![CDATA[Oggetti data, orari e intervalli di tempo in R]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/linguaggio_r_date_e_orari/" />
-  <id>http://massimocaliman.it/articles/linguaggio_r_date_e_orari</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/linguaggio_r_date_e_orari/" />
+  <id>http://localhost:4000/articles/linguaggio_r_date_e_orari</id>
   <published>2016-02-10T23:45:33+01:00</published>
   <updated>2016-02-10T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -830,7 +830,7 @@ y-x
 Time difference of &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; hours&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/linguaggio_r_date_e_orari/&quot;&gt;Oggetti data, orari e intervalli di tempo in R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on February 10, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/linguaggio_r_date_e_orari/&quot;&gt;Oggetti data, orari e intervalli di tempo in R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on February 10, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -839,13 +839,13 @@ Time difference of &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; hours&lt;/code
 
 <entry>
   <title type="html"><![CDATA[le funzioni in R]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/linguaggio_r_funzioni/" />
-  <id>http://massimocaliman.it/articles/linguaggio_r_funzioni</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/linguaggio_r_funzioni/" />
+  <id>http://localhost:4000/articles/linguaggio_r_funzioni</id>
   <published>2016-01-20T23:45:33+01:00</published>
   <updated>2016-01-20T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -913,7 +913,7 @@ f&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;45&lt;span class=&quot;o&quot;&gt
 &lt;p&gt;Esiste poi l’argomento … ma di questo parleremo in un altro post.&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/linguaggio_r_funzioni/&quot;&gt;le funzioni in R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 20, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/linguaggio_r_funzioni/&quot;&gt;le funzioni in R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 20, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -922,13 +922,13 @@ f&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;45&lt;span class=&quot;o&quot;&gt
 
 <entry>
   <title type="html"><![CDATA[Le strutture di controllo di R]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/linguaggio_r_strutture_di_controllo/" />
-  <id>http://massimocaliman.it/articles/linguaggio_r_strutture_di_controllo</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/linguaggio_r_strutture_di_controllo/" />
+  <id>http://localhost:4000/articles/linguaggio_r_strutture_di_controllo</id>
   <published>2016-01-15T23:45:33+01:00</published>
   <updated>2016-01-15T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -1042,7 +1042,7 @@ I for sono comunemente utilizzati per l’iterazione sugli elementi di un oggett
 &lt;p&gt;return segnala che una funzione è terminata è deve tornare un valore&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/linguaggio_r_strutture_di_controllo/&quot;&gt;Le strutture di controllo di R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 15, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/linguaggio_r_strutture_di_controllo/&quot;&gt;Le strutture di controllo di R&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 15, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1051,14 +1051,14 @@ I for sono comunemente utilizzati per l’iterazione sugli elementi di un oggett
 
 <entry>
   <title type="html"><![CDATA[Il design pattern State]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/state-pattern-java-examples/" />
-  <id>http://massimocaliman.it/java/state-pattern-java-examples</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/java/state-pattern-java-examples/" />
+  <id>http://localhost:4000/java/state-pattern-java-examples</id>
   <updated>2016-01-30T00:00:00-00:00</updated>
   <published>2016-01-13T00:00:00+01:00</published>
   
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -1161,7 +1161,7 @@ Un vantaggio per nulla indifferente: in un team di sviluppatori
 la scrittura dei singoli &lt;code&gt;ConcreteState&lt;/code&gt; può essere assegnata e gestita facilmente rispetto all’alternativa di&lt;br /&gt;
 mettere le mani in due o più sullo stessa unica classe.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/state-pattern-java-examples/&quot;&gt;Il design pattern State&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 13, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/java/state-pattern-java-examples/&quot;&gt;Il design pattern State&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 13, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1170,13 +1170,13 @@ mettere le mani in due o più sullo stessa unica classe.&lt;/p&gt;
 
 <entry>
   <title type="html"><![CDATA[Linguaggio R introduzione]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/linguaggio_r_introduzione/" />
-  <id>http://massimocaliman.it/articles/linguaggio_r_introduzione</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/linguaggio_r_introduzione/" />
+  <id>http://localhost:4000/articles/linguaggio_r_introduzione</id>
   <published>2016-01-10T23:45:33+01:00</published>
   <updated>2016-01-10T23:45:33+01:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -1272,7 +1272,7 @@ comunque riportare le risposte di R.
 mentre Il file &lt;code&gt;.Rdata&lt;/code&gt; è lo workspace  che contiene tutti gli oggetti salvati nell’ambiente durante l’attuale sessione, è possibile salvare il workspace utilizzando la funzione &lt;code&gt;save.image()&lt;/code&gt; altri dettagli su come sfruttare in modo utile &lt;code&gt;.Rdata&lt;/code&gt; si possono trovare nella documentazione online di R.&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/linguaggio_r_introduzione/&quot;&gt;Linguaggio R introduzione&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 10, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/linguaggio_r_introduzione/&quot;&gt;Linguaggio R introduzione&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 10, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1281,14 +1281,14 @@ mentre Il file &lt;code&gt;.Rdata&lt;/code&gt; è lo workspace  che contiene tut
 
 <entry>
   <title type="html"><![CDATA[Il design pattern Visitor]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/visitor-pattern-java-examples/" />
-  <id>http://massimocaliman.it/java/visitor-pattern-java-examples</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/java/visitor-pattern-java-examples/" />
+  <id>http://localhost:4000/java/visitor-pattern-java-examples</id>
   <updated>2016-01-03T00:00:00-00:00</updated>
   <published>2016-01-03T00:00:00+01:00</published>
   
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -1297,7 +1297,7 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 &lt;a href=&quot;https://github.com/mcaliman/VisitorPatternJavaExamples&quot;&gt;&lt;strong&gt;https://github.com/mcaliman/VisitorPatternJavaExamples&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/visitor-pattern-java-examples/&quot;&gt;Il design pattern Visitor&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/java/visitor-pattern-java-examples/&quot;&gt;Il design pattern Visitor&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1306,14 +1306,14 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 
 <entry>
   <title type="html"><![CDATA[Il design pattern Singleton]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/singleton-pattern-java-examples/" />
-  <id>http://massimocaliman.it/java/singleton-pattern-java-examples</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/java/singleton-pattern-java-examples/" />
+  <id>http://localhost:4000/java/singleton-pattern-java-examples</id>
   <updated>2016-01-03T00:00:00-00:00</updated>
   <published>2016-01-03T00:00:00+01:00</published>
   
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -1324,7 +1324,7 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 &lt;a href=&quot;https://github.com/mcaliman/SingletonPatternJavaExamples&quot;&gt;&lt;strong&gt;https://github.com/mcaliman/SingletonPatternJavaExamples&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/singleton-pattern-java-examples/&quot;&gt;Il design pattern Singleton&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/java/singleton-pattern-java-examples/&quot;&gt;Il design pattern Singleton&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1333,14 +1333,14 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 
 <entry>
   <title type="html"><![CDATA[Il design pattern Interpreter]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/interpreter-pattern-java-examples/" />
-  <id>http://massimocaliman.it/java/interpreter-pattern-java-examples</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/java/interpreter-pattern-java-examples/" />
+  <id>http://localhost:4000/java/interpreter-pattern-java-examples</id>
   <updated>2016-01-03T00:00:00-00:00</updated>
   <published>2016-01-03T00:00:00+01:00</published>
   
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -1354,7 +1354,7 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 &lt;a href=&quot;https://github.com/mcaliman/InterpreterPatternJavaExamples&quot;&gt;&lt;strong&gt;https://github.com/mcaliman/InterpreterPatternJavaExamples&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/interpreter-pattern-java-examples/&quot;&gt;Il design pattern Interpreter&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/java/interpreter-pattern-java-examples/&quot;&gt;Il design pattern Interpreter&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1363,14 +1363,14 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 
 <entry>
   <title type="html"><![CDATA[Il design pattern Chain Of Responsibility]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/chain-of-responsibility-pattern-java-examples/" />
-  <id>http://massimocaliman.it/java/chain-of-responsibility-pattern-java-examples</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/java/chain-of-responsibility-pattern-java-examples/" />
+  <id>http://localhost:4000/java/chain-of-responsibility-pattern-java-examples</id>
   <updated>2016-01-03T00:00:00-00:00</updated>
   <published>2016-01-03T00:00:00+01:00</published>
   
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -1378,7 +1378,7 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 &lt;a href=&quot;https://github.com/mcaliman/ChainOfResponsibilityPatternJavaExamples&quot;&gt;&lt;strong&gt;https://github.com/mcaliman/ChainOfResponsibilityPatternJavaExamples&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/chain-of-responsibility-pattern-java-examples/&quot;&gt;Il design pattern Chain Of Responsibility&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/java/chain-of-responsibility-pattern-java-examples/&quot;&gt;Il design pattern Chain Of Responsibility&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 03, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1387,14 +1387,14 @@ Potete trovare un progetto di esempio su github a questo indirizzo:
 
 <entry>
   <title type="html"><![CDATA[Il design pattern Strategy]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/strategy-pattern-java-examples/" />
-  <id>http://massimocaliman.it/java/strategy-pattern-java-examples</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/java/strategy-pattern-java-examples/" />
+  <id>http://localhost:4000/java/strategy-pattern-java-examples</id>
   <updated>2016-01-02T00:00:00-00:00</updated>
   <published>2016-01-02T00:00:00+01:00</published>
   
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -1408,7 +1408,7 @@ ruolo è quello di rendere più compatto e leggibile l’algoritmo.
 Sicuramente l’uso delle lambda e degli stream rendono noi sviluppatori più performanti nel processo di codifica
 e questo non è un dato trascurabile.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/strategy-pattern-java-examples/&quot;&gt;Il design pattern Strategy&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 02, 2016.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/java/strategy-pattern-java-examples/&quot;&gt;Il design pattern Strategy&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on January 02, 2016.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1417,14 +1417,14 @@ e questo non è un dato trascurabile.&lt;/p&gt;
 
 <entry>
   <title type="html"><![CDATA[La classe java.time.LocalTime]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/java/localtime1/" />
-  <id>http://massimocaliman.it/java/localtime1</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/java/localtime1/" />
+  <id>http://localhost:4000/java/localtime1</id>
   <updated>2015-11-29T00:00:00-00:00</updated>
   <published>2015-12-16T00:00:00+01:00</published>
   
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -1498,7 +1498,7 @@ oggetto LocalTime, e viceversa. Sotto trovate il codice.&lt;/p&gt;
 &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;lTime.toString()&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/java/localtime1/&quot;&gt;La classe java.time.LocalTime&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on December 16, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/java/localtime1/&quot;&gt;La classe java.time.LocalTime&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on December 16, 2015.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1507,13 +1507,13 @@ oggetto LocalTime, e viceversa. Sotto trovate il codice.&lt;/p&gt;
 
 <entry>
   <title type="html"><![CDATA[Ubuntu 14.04.02 LTS installare subversion (svn)]]></title>
-  <link rel="alternate" type="text/html" href="http://massimocaliman.it/articles/ubuntu-14.04.02-LTS-installare-subversion/" />
-  <id>http://massimocaliman.it/articles/ubuntu-14.04.02-LTS-installare-subversion</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/ubuntu-14.04.02-LTS-installare-subversion/" />
+  <id>http://localhost:4000/articles/ubuntu-14.04.02-LTS-installare-subversion</id>
   <published>2015-05-16T00:45:33+02:00</published>
   <updated>2015-05-16T00:45:33+02:00</updated>
   <author>
     <name>Massimo Caliman</name>
-    <uri>http://massimocaliman.it</uri>
+    <uri>http://localhost:4000</uri>
     <email>mcaliman@gmail.com</email>
   </author>
   <content type="html">
@@ -1538,7 +1538,7 @@ l’url del repo è nel formato seguente&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;svn+ssh://svnserver/var/svn/MyApplication&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://massimocaliman.it/articles/ubuntu-14.04.02-LTS-installare-subversion/&quot;&gt;Ubuntu 14.04.02 LTS installare subversion (svn)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://massimocaliman.it&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 16, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/ubuntu-14.04.02-LTS-installare-subversion/&quot;&gt;Ubuntu 14.04.02 LTS installare subversion (svn)&lt;/a&gt; was originally published by Massimo Caliman at &lt;a href=&quot;http://localhost:4000&quot;&gt;Massimo Caliman's&lt;/a&gt; on May 16, 2015.&lt;/p&gt;
   </content>
 </entry>
 

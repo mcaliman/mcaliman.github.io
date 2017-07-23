@@ -2,7 +2,7 @@
 #
 # alt-gr+ì is ~
 #
-rm *.*~
+rm -r *.*~
 git add --all .
 git commit -m "update"
 git status
