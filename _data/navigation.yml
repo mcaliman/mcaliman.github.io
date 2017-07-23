@@ -9,8 +9,11 @@
 - title: Blog
   url: /blog/
 
-- title: Theme Setup
-  url: /theme-setup/
+- title: Java
+  url: /java/
+
+# - title: Theme Setup
+#   url: /theme-setup/
 
 - title: Search
   url: /search/
