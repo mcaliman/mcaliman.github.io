@@ -1,5 +1,0 @@
-#!/bin/bash
-bundle exec jekyll build
-git add --all .
-git commit -m "update v2"
-git push origin master

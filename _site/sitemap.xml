@@ -393,10 +393,7 @@
     <loc>http://massimocaliman.it/</loc>
   </url>
   <url>
-    <loc>http://massimocaliman.it/theme-setup/</loc>
-  </url>
-  <url>
-    <loc>http://massimocaliman.it/articles/</loc>
+    <loc>http://massimocaliman.it/tags/</loc>
   </url>
   <url>
     <loc>http://massimocaliman.it/blog/</loc>
@@ -405,7 +402,10 @@
     <loc>http://massimocaliman.it/java/</loc>
   </url>
   <url>
-    <loc>http://massimocaliman.it/tags/</loc>
+    <loc>http://massimocaliman.it/articles/</loc>
+  </url>
+  <url>
+    <loc>http://massimocaliman.it/theme-setup/</loc>
   </url>
   <url>
     <loc>http://massimocaliman.it/privacy/</loc>
