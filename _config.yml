@@ -9,10 +9,10 @@
 
 # Site wide configuration
 
-title: Massimo Caliman's 
+title: Massimo Caliman's blog
 #locale: en_US
 locale: it_IT
-description: blog on Computer Science.
+description: Computer Science and Data Science
 #logo: site-logo.png
 logo: bio-photo.jpg
 #logo: site-logo.jpg
