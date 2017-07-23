@@ -13,7 +13,7 @@ search_omit: true
         <article>
             <a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date">
                     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
-                </span>{% if false && post.excerpt %} <span class="excerpt">{{ post.excerpt }}</span>{% endif %}</a>
+                </span>{% if post.excerpt %} <span class="excerpt">{{ post.excerpt }}</span>{% endif %}</a>
         </article>
     </li>
     {% endfor %}
