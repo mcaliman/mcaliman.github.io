@@ -1,26 +1,44 @@
 ---
 layout: page
-title: About the Jekyll Theme
-excerpt: "So Simple is a responsive Jekyll theme for your words and images."
-modified: 2014-08-08T19:44:38.564948-04:00
-image:
-  feature: so-simple-sample-image-4.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+permalink: /about/
+title: About me
+tags: [about]
+modified: 2013-09-13
+
+#image:
+   #feature: desktop1.jpg
+   #credit: WeGraphics
+   #creditlink: http://wegraphics.net/downloads/free-ultimate-blurred- background-pack/
+
 ---
 
-Looking for a simple, responsive, theme for your Jekyll powered blog? Well look no further. Here be **So Simple Theme**, the follow up to [**Minimal Mistakes**](http://mmistakes.github.io/minimal-mistakes) --- by designer slash illustrator [Michael Rose](http://mademistakes.com).
+Hi, I'm Massimo Caliman. 
 
-## So Simple Theme is all about:
+I'm a software architect & developer with a consolidated experience on Java.
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 9+ and all modern browsers.
-* Minimal embellishments and subtle animations.
-* Optional large feature images for posts and pages.
-* [Custom 404 page]({{ site.url }}/404.html) to get you started.
-* [Simple site search](https://github.com/christian-fei/Simple-Jekyll-Search)
-* Support for Disqus Comments
+I'm working as IT specialist since 1995 and since 1998  almost exclusively of Enterprise Java applications. 
 
-<a markdown="0" href="{{ site.url }}/theme-setup" class="btn">Install So Simple Theme</a>
+I'm Java Italian Association member since 1999 and co-founder of Java User Group Genova.
 
-[^1]: Example: *domain.com/category-name/post-title*
+I also have experience in Python and R and others many languages such as C,C++,C#.
+
+My interests include coding, Computer Science (especially algorithms and software design) and Data Science.  
+I made my passion my work.
+
+## How to contact me? 
+Here are a few places to touch base:
+
+* [LinkedIn](https://www.linkedin.com/in/mcaliman)
+* [Twitter](http://twitter.com/mcaliman)
+* [GitHub](https://github.com/mcaliman)
+
+You can reach me by email at [mcaliman@gmail.com](mailto:mcaliman@gmail.com)
+
+
+## How to Support this blog
+
+Found one of my Paper tutorials, articles useful? If you feel inclined, here's how you can thank me.
+
+* Follow me (Twitter,Linkedin,Google Plus..)
+* Google Adsense in the bottom of page!
+* Send a donation. Help me pay for hosting and continue to provide free content (PayPal account: massimo.caliman@gmail.com)
