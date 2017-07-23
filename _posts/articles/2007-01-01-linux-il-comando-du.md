@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "Linux: il comando du"
+excerpt: ""
 category: articles
 date:   2007-01-01 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Linux]
 comments: true
-excerpt: ""
 share: true
 ---
 
