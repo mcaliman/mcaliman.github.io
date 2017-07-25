@@ -7,8 +7,8 @@ description: Computer Science and Data Science
 # logo: site-logo.png
 logo: bio-photo.jpg
 search: true
-# url: http://localhost:4000
-url: http://massimocaliman.it
+url: http://localhost:4000
+# url: http://massimocaliman.it
 
 # Jekyll configuration
 
