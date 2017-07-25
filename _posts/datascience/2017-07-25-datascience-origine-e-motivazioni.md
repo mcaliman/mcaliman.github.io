@@ -1,9 +1,10 @@
---- 
+---
 layout: post
-title: "Data Science origine e motivazioni"
-excerpt: "Tutti siamo avversi all'incertezza."
+title: Data Science origine e motivazioni
+description: "Tutti siamo avversi all'incertezza." 
+excerpt: ""
 category: datascience
-date:   2017-07-25 19:58:33
+date: 2017-07-25 19:58:33
 modified: 2017-07-25 19:58:33
 tags: [Data Science]
 comments: true
@@ -14,9 +15,9 @@ Lo scopo dell'analisi dei dati è quello di ridurre l'incertezza.
 Riducendo l'incertezza gli esseri umani possono prendere decisioni sagge. 
 Nel mondo degli affari (e non solo), le decisioni informate sono basate sull'analisi di opportune attività che sono misurabili. Lo scopo di queste attività è quello di cercare di aumentare i ricavi, massimizzare la redditività e ridurre i rischi 
 
->Tutti siamo avversi all'incertezza.
+Tutti siamo avversi all'incertezza.
 
-Quando dobbiamo prendere una decisione, per quanto riguarda una particolare azione, se abbiamo la possibilità di prenderla con maggiore o minore incertezza,scegliamo di prenderla con minore incertezza.  
+Quando dobbiamo prendere una decisione, per quanto riguarda una particolare azione, se abbiamo la possibilità di prenderla con maggiore o minore incertezza,scegliamo di prenderla con minore incertezza.
 
 Ovviamente nel mondo degli affari come nella vita, quasi tutte le più importanti decisioni devono comunque essere effettuate in condizioni di parziale incertezza. 
 
@@ -28,7 +29,7 @@ In realtà, l'incertezza è essenziale per evitare rischi eccessivi.
 
 Sopravvalutare l'incertezza può portare a ritardi, in alcuni casi alla paralisi, mentre sottovalutare l'incertezza…beh…è decisamente più pericoloso.
 
->l’incertezza va ridotta il più possibile
+l’incertezza va ridotta il più possibile
 
 Come creature razionali dobbiamo sempre chiederci: l’attuale riduzione dell'incertezza è sufficienti per procedere in questo momento con una decisione?  O dobbiamo aspettare e raccogliere più dati? 
 
