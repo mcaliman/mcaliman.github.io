@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Data Science origine e motivazioni
-description: "Tutti siamo avversi all'incertezza." 
+title: "Data Science origine e motivazioni"
 excerpt: ""
 category: datascience
 date: 2017-07-25 19:58:33
