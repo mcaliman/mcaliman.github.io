@@ -6,7 +6,7 @@ excerpt: ""
 category: datascience
 date: 2017-07-25 19:58:33
 modified: 2017-07-25 19:58:33
-tags: [Data Science]
+tags: DataScience
 comments: true
 share: true
 ---
@@ -46,4 +46,3 @@ Il lavoro di questi pionieri è stato il fondamento per lo sviluppo dell'apprend
 Le aziende più sofisticate, come Amazon e Google, stanno facendo machine learning come realizzazione pratica di questi metodi. 
 
 Il loro livello informativo è una delle ragioni per il loro spettacolare successo rispetto ai loro concorrenti che sono meno ben informati. 
-
