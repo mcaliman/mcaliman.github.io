@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Data Science
+title: DataScience
 excerpt: "An archive of Data Science posts sorted by date."
 search_omit: true
 ---
