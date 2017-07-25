@@ -4,6 +4,7 @@ title:  "Data Science origini e motivazioni"
 excerpt: ""
 category: datascience
 date: 2017-07-24 22:45:33
+modified: 2017-07-25 19:45:33
 tags: [datascience]
 comments: true
 share: true
