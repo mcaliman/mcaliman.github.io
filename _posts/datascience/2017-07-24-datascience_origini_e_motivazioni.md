@@ -45,4 +45,3 @@ Il lavoro di questi pionieri è stato il fondamento per lo sviluppo dell'apprend
 Le aziende più sofisticate, come Amazon e Google, stanno facendo machine learning come realizzazione pratica di questi metodi. 
 
 Il loro livello informativo è una delle ragioni per il loro spettacolare successo rispetto ai loro concorrenti che sono meno ben informati. 
-
