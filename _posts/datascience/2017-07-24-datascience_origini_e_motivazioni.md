@@ -3,7 +3,7 @@ layout: post
 title:  "Data Science origini e motivazioni"
 excerpt: ""
 category: datascience
-date:   2017-07-24 22:45:33
+date: 2017-07-24 22:45:33
 tags: [datascience]
 comments: true
 share: true
@@ -24,7 +24,7 @@ Questo è normale, è la natura della vita e della leadership.
 
 Anche se noi tutti vorremmo essere certi, accettando una parziale ignoranza, riconosciamo a noi stessi quanto non sappiamo, questa è una forma di consapevolezza che porta a migliorare il processo decisionale.
 
-In realtà, l'incertezza è essenziale per evitare rischi eccessivi. 
+>In realtà, l'incertezza è essenziale per evitare rischi eccessivi. 
 
 Sopravvalutare l'incertezza può portare a ritardi, in alcuni casi alla paralisi, mentre sottovalutare l'incertezza…beh…è decisamente più pericoloso.
 
