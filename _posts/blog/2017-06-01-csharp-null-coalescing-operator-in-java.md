@@ -10,12 +10,22 @@ comments: true
 share: true
 ---
 In C# the `??` operator is called the `null-coalescing operator`. 
-`string result = leftHand ?? rightHand ;`
+Here's an example of use:
+
+{% highlight csharp %}
+string result = leftHand ?? rightHand ;
+{% endhighlight %}
+
 It returns the left-hand operand if it is not `null`, otherwise it returns the right-hand operand.
-A possible alternative in Java of C# `??` use `?` , the ternary operator, like this
-`String result = leftHand != null ? leftHand : rightHand; `
-Or, by using a method like this
-{% highlight bash %}
+A possible alternative in Java of C# `??` use `?` , the ternary operator, like this:
+
+{% highlight java %}
+String result = leftHand != null ? leftHand : rightHand; 
+{% endhighlight %}
+
+Or, by using a method like this:
+
+{% highlight java %}
 String nullCoalescingOperator(String leftHand, String rightHand) {
     return leftHand != null ? leftHand : rightHand;
 }
