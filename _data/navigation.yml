@@ -6,9 +6,6 @@
 - title: Articles
   url: /articles/
 
-# - title: Blog
-#  url: /blog/
-
 - title: Java
   url: /java/
 
@@ -23,9 +20,6 @@
 
 - title: Categories
   url: /categories/
-
-# - title: Theme Setup
-#   url: /theme-setup/
 
 - title: Search
   url: /search/
