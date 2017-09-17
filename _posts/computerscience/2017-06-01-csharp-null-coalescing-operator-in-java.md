@@ -2,7 +2,7 @@
 layout: post
 title: "C# null-coalescing operator in Java"
 excerpt: ""
-category: blog
+category: computerscience
 date:   2017-06-15 22:45:33
 modified: 2017-06-15 22:45:33
 tags: [C#,Java]

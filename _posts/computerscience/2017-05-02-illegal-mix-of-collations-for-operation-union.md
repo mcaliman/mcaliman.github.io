@@ -2,7 +2,7 @@
 layout: post
 title: "Illegal mix of collations for operation union"
 excerpt: "About MySQL error illegal mix of collations for operation union"
-category: blog
+category: computerscience
 date:   2017-05-02 22:45:33
 modified: 2017-05-03 22:45:33
 tags: [SQL,MySQL]
