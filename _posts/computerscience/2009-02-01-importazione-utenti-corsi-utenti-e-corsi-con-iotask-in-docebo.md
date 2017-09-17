@@ -2,7 +2,7 @@
 layout: post
 title:  "Importazione utenti,corsi,utenti e corsi con I/O Task in Docebo"
 excerpt: ""
-category: articles
+category: computerscience
 date:   2009-01-01 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Docebo]
 comments: true

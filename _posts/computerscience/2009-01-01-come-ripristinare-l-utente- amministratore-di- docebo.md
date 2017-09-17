@@ -2,7 +2,7 @@
 layout: post
 title:  "Come ripristinare l'utente amministratore di Docebo"
 excerpt: ""
-category: articles
+category: computerscience
 date:   2009-01-01 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Docebo,MySQL,MyISAM,InnoDB]
 comments: true
