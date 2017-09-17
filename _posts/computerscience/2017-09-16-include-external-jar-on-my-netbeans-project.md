@@ -3,8 +3,8 @@ layout: post
 title: "How can I include external jar on my Netbeans project"
 excerpt: ""
 category: computerscience
-date:   2017-09-17 22:45:33
-modified: 2017-09-17 22:45:33
+date:   2017-09-16 22:45:33
+modified: 2017-09-16 22:45:33
 tags: [NetBeans,Java]
 comments: true
 share: true
