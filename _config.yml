@@ -9,8 +9,8 @@ logo: bio-photo.jpg
 search: true
 # added 2017-09-17
 future: true
-url: http://localhost:4000
-#url: http://massimocaliman.it
+# url: http://localhost:4000
+url: http://massimocaliman.it
 
 # Jekyll configuration
 permalink:   /:categories/:title/
