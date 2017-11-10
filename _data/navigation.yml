@@ -1,7 +1,5 @@
 # Site navigation links
 
-- title: About
-  url: /about/
 
 - title: Java
   url: /java/
@@ -17,6 +15,12 @@
 
 - title: Categories
   url: /categories/
+
+- title: About
+  url: /about/
+
+- title: Resume
+  url: /resume/
 
 - title: Search
   url: /search/
