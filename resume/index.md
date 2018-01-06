@@ -83,8 +83,8 @@ Grade point 58/60 (A+)
 
 
 # Experience
-
-* 01/2017 – present BDA Euro Brokers s.r.l `Software Development Manager` 
+* 01/2018 - present, working for a company which leads in IT Consultancy Services `Software Architect`
+* 01/2017 – 31/12/2017 BDA Euro Brokers s.r.l `Software Development Manager` 
 * 02/2012 – 05/2017 Sentosa s.r.l. `CTO & Software Architect` 
 * 01/2011 – 01/2012 Arax s.r.l  `Software Architect & Developer `
 * 07/2010 – 09/2010 Stachus s.r.l. `Java Software Developer` 
