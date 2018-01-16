@@ -9,8 +9,9 @@
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	background: #f9fafc;
-	color: #636363;
+	/* background: #f9fafc; */
+	background: #06c;
+	color: #fff;
 	display: none;
 	z-index: 999999;
 }
@@ -34,7 +35,9 @@ span.divascookies-policy-link {
 } 
 
 span.divascookies-policy-link a {
-	white-space: nowrap;	
+	white-space: nowrap;
+	color: #fff;
+	text-decoration: underline;	
 }
 
 span.divascookies-policy-link a:hover {
@@ -54,8 +57,8 @@ span.divascookies-policy-link a:hover {
 .divascookies-accept-button-container > .divascookies-accept-button-text {
 	font-size: 1.3em;
 	cursor: pointer;
-	background: #636363;
-	color: #fff;
+	background: #fff;
+	color: #06c;
 	padding: 7px 10px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -64,5 +67,7 @@ span.divascookies-policy-link a:hover {
 }
 
 .divascookies-accept-button-container > .divascookies-accept-button-text:hover {
-	background: #565656;
+	/* background: #565656; */
+	background : #06c;
+	color : #fff;
 }

@@ -16,7 +16,7 @@
 
     @include media($medium) {
       width: auto;
-      @include rounded(0 0 10px 10px);
+      /* @include rounded(0 0 10px 10px);*/
     }
 
     @include clearfix;
@@ -28,7 +28,7 @@
     list-style: none;
     text-align: center;
     @include font-size(24,no);
-    text-transform: uppercase;
+    text-transform: uppercase; 
     color: $white;
 
     @include media($medium) {

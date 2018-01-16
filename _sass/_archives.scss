@@ -76,8 +76,14 @@
   a {
     padding: 4px 6px;
     margin: 2px;
-    background-color: lighten($black, 90);
-    @include rounded(4px);
+    /* background-color: lighten($black, 90); */
+    background-color: #06c;
+    color:#fff;
+    text-decoration-color: #fff;
+
+    text-transform: uppercase;
+    
+    /* @include rounded(4px);*/
     text-decoration: none;
 
     span {
