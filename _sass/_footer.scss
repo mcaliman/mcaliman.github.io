@@ -31,7 +31,8 @@
     padding: 4px 8px;
 
     &:hover {
-      color: $black;
+      color: black;
+      background-color: $black;
     }
   }
 }
