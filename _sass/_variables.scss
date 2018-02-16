@@ -1,14 +1,17 @@
 // TYPOGRAPHY ================================================
-$base-font                : 'source-sans-pro', sans-serif;
+// $base-font                : 'source-sans-pro', sans-serif;
+$base-font                :  'Titillium Web','HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue','Helvetica','Arial','Lucida Grande',sans-serif;
 $heading-font             : $base-font;
 $caption-font             : $base-font;
 $code-font                : 'source-code-pro', monospace;
-$alt-font                 : 'volkhov', serif;
+// $alt-font                 : 'volkhov', serif;
+$alt-font                 : $base-font;
 
 $doc-font-size            : 16;
 $doc-line-height          : 24;
 
-$border-radius            : 3px;
+//$border-radius            : 3px;
+$border-radius            : 0px;
 
 
 // set-up the body font-size / line-height

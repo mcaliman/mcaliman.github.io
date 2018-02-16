@@ -124,7 +124,8 @@ white-space: nowrap; }
 
 // @include rounded(VALUE);
 @mixin rounded($radius:4px) {
-border-radius : $radius; }
+  /* border-radius : $radius; */
+}
 
 // @include border-radius(VALUE,VALUE,VALUE,VALUE);
 @mixin border-radius($topright: 0, $bottomright: 0, $bottomleft: 0, $topleft: 0) {

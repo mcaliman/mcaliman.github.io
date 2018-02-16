@@ -7,11 +7,15 @@
   @include clearfix;
 
   ul {
+
+    
+
+
     display: inline-block;
     width: 100%;
     vertical-align: top;
     margin: 0 0 50px;
-    padding: 4px 20px;
+    padding: 4px 20px; 
     background-color: $black;
 
     @include media($medium) {
@@ -23,22 +27,45 @@
   }
 
   li {
+
+    
+
     display: block;
     float: left;
+    
+    /* list-style-position:outside;*/
+    /* border: 1px solid $white; */
+    /* border-left: 1px solid $white; */
+
     list-style: none;
     text-align: center;
+    /* @include font-size(24,no); */
     @include font-size(24,no);
-    text-transform: uppercase; 
+    /* text-transform: uppercase; */
     color: $white;
 
     @include media($medium) {
-      @include font-size(14,no);
+      /* @include font-size(14,no); */
+      @include font-size(18,no);
     }
 
     a:hover {
-      @include box-shadow($shadow: inset 0 0 1px $white);
+      /* @include box-shadow($shadow: inset 0 0 1px $white); */
+      /* border-bottom:1px solid white;*/
+      /* border-color: white;*/
+      /* text-decoration: underline; */
+
+      border-bottom: 2px solid currentColor;
+  display: inline-block;
+  line-height: 0.85;
+      
+      /* @include box-shadow($shadow: inset 1px 1px 1px $white);*/
     }
   }
+
+
+
+  
 
   a {
     display: block;
@@ -54,7 +81,8 @@
     @include rounded(4px);
 
     &:hover {
-      background-color: lighten($black, 10);
+      /* background-color: lighten($black, 10);*/
+      /* border-bottom: 1px; */
     }
   }
 }
