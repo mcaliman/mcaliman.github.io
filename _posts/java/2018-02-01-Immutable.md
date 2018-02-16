@@ -71,7 +71,7 @@ Principalmente quelli legati alla concorrenza, infatti è difficile garantire la
     }
 {% endhighlight %}
 
-  # La defensive coping
+# La defensive coping
 
   La maggior parte delle classi sono mutabili, come approcciare il problema? Creando un wrapper attorno alla classe ed utilizzando ad esempio il metodo clone()
   
