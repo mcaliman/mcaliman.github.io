@@ -9,8 +9,8 @@ logo: bio-photo.jpg
 search: true
 # added 2017-09-17
 future: true
-# url: http://localhost:4000
-url: http://massimocaliman.it
+url: http://localhost:4000
+# url: http://massimocaliman.it
 
 # Jekyll configuration
 permalink:   /:categories/:title/
@@ -58,6 +58,6 @@ owner:
     plus: #username
     analytics: UA-53230757-1
     verify:
-    ad-client: ca-pub-5121145090824526
-    ad-slot: 4055870880
+    ad-client: #ca-pub-5121145090824526
+    ad-slot: #4055870880
   bing-verify:
