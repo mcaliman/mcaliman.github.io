@@ -1,63 +1,118 @@
-# Site wide configuration
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-title: Massimo Caliman's blog
-# locale: en_US
-locale: it_IT
-description: Computer Science and Data Science
-# logo: site-logo.png
-logo: bio-photo.jpg
-search: true
-# added 2017-09-17
-future: true
-# url: http://localhost:4000
-url: http://massimocaliman.it
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+theme: jekyll-theme-so-simple
+# remote_theme: mmistakes/so-simple-theme
+# locale: en-US
+locale: it-IT
+title: "Massimo Caliman's blog"
+description: "Computer Science and Data Science"
+baseurl: # the subpath of your site, e.g. "/blog"
+url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+logo: /images/logo.jpg # path of site logo, e.g. "/images/logo.png"
+date_format: "%B %-d, %Y"
+read_time: true # reading time estimates, e.g. true
+words_per_minute: 200 # 200
+mathjax: true # MathJax equations, e.g. true
+google_fonts:
+  - name: "Source Sans Pro"
+    weights: "400,400i,700,700i"
+  - name: "Lora"
+    weights: "400,400i,700,700i"
+google_analytics: UA-53230757-1 # Google Analytics id, e.g. "UA-NNNNNNNN-N"
+disqus:
+  shortname: mcaliman # Disqus shortname, e.g. "my_disqus_shortname"
+twitter:
+  username: mcaliman # site's Twitter username, e.g. "mmistakes"
 
-# Jekyll configuration
-permalink:   /:categories/:title/
-markdown:    kramdown
-highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: compressed
+# Liquid
+liquid:
+  error_mode: strict
+
+# Build settings
+permalink: /:categories/:title/
+markdown: kramdown
+feed:
+  path: atom.xml
+
+# Pagination - https://jekyllrb.com/docs/pagination/
+# paginate: 10
+# paginate_path: /page:num/
+
+
+# Search
+search_full_content: true # false # can have performance implications for large sites
+
+# Taxonomy pages
+# category_archive_path: "/categories/#"
+# tag_archive_path: "/tags/#"
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
 plugins:
+  - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
+  - jekyll-paginate
 
-kramdown:
-  input: GFM
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..2
-  enable_coderay: false
+# Front Matter Defaults
+defaults:
+  # Posts defaults
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      share: true
 
-mathjax: true
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", ".less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
-
-
-# Site owner
-owner:
+# Site Author
+author:
   name: Massimo Caliman
-  avatar: bio-photo.jpg
+  picture: /images/logo.jpg
   email: mcaliman@gmail.com
-  disqus-shortname: mcaliman
   twitter: mcaliman
-  facebook: #username
-  github: mcaliman
-  stackexchange: #http://stackoverflow.com/users/123456/username
-  linkedin: mcaliman
-  instagram: #username
-  flickr: #username
-  tumblr: #username
-  pinterest: #username
-  weibo: #userid
-  google:
-    plus: #username
-    analytics: UA-53230757-1
-    verify:
-    ad-client: #ca-pub-5121145090824526
-    ad-slot: #4055870880
-  bing-verify:
+  links:
+    - title:
+      url:
+      icon:
+
+# Footer Links
+footer_links:
+  - title: Feed
+    url: atom.xml
+    icon: fas fa-rss-square
+  - title: GitHub
+    url: https://github.com/mcaliman
+    icon: fab fa-github
+  - title: Twitter
+    url: https://twitter.com/mcaliman
+    icon: fab fa-twitter
+  - title: Linkedin
+    url: https://www.linkedin.com/in/mcaliman/
+    icon: fab fa-linkedin-in 
+  - title: Mail
+    url: mailto:mcaliman@gmail.com
+    icon: fas fa-at 
+      
