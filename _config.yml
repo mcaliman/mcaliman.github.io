@@ -54,6 +54,12 @@ feed:
 # paginate_path: /page:num/
 pagination:
      enabled: true
+     per_page: 3
+     title: ':title - page :num'
+     limit: 0
+     trail: 
+        before: 2
+        after: 2     
 
 
 # Search
