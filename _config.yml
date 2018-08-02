@@ -52,7 +52,7 @@ feed:
 # Pagination - https://jekyllrb.com/docs/pagination/
 # paginate: 10
 # paginate_path: /page:num/
-page.posts_limit = 100
+
 
 # Search
 search_full_content: true # false # can have performance implications for large sites

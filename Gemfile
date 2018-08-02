@@ -13,6 +13,7 @@ group :jekyll_plugins do
   gem 'jemoji'
   gem 'jekyll-seo-tag'
   gem 'jekyll-paginate-v2'
+  gem "jekyll-paginate"
   gem 'jekyll-typogrify'
   gem 'jekyll-figure', :git => 'https://github.com/mmistakes/jekyll-figure.git'
   gem 'jekyll-algolia'
