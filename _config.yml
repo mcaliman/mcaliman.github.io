@@ -53,6 +53,10 @@ feed:
 # paginate: 10
 # paginate_path: /page:num/
 
+paginate: 10
+paginate_path: /page:num/
+
+
 
 # Search
 search_full_content: true # false # can have performance implications for large sites
