@@ -23,7 +23,7 @@ description: "Computer Science and Data Science"
 baseurl: # the subpath of your site, e.g. "/blog"
 # url: http://massimocaliman.it 
 # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: /images/site-logo.jpg # path of site logo, e.g. "/images/logo.png"
+logo: /images/logo.jpg # path of site logo, e.g. "/images/logo.png"
 date_format: "%B %-d, %Y"
 read_time: true # reading time estimates, e.g. true
 words_per_minute: 200 # 200
