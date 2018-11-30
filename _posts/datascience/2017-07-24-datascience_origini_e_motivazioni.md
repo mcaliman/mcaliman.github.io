@@ -8,6 +8,10 @@ modified: 2017-07-25 19:45:33
 tags: [datascience]
 comments: true
 share: true
+image:
+  path: /images/unsplash/franki-chamaki-682112-unsplash.jpg
+  thumbnail: /images/unsplash/franki-chamaki-682112-unsplash.jpg
+  caption: "[Photo by Franki Chamaki on Unsplash](https://unsplash.com/photos/1K6IQsQbizI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
 ---
 {% highlight bash %}
 {% endhighlight %}

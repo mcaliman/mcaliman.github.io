@@ -5,11 +5,10 @@ title: About me
 tags: [about]
 modified: 2013-09-13
 
-#image:
-   #feature: desktop1.jpg
-   #credit: WeGraphics
-   #creditlink: http://wegraphics.net/downloads/free-ultimate-blurred- background-pack/
-
+image:
+  path: /images/unsplash/chris-ried-512801-unsplash.jpg
+  thumbnail: /images/unsplash/chris-ried-512801-unsplash.jpg
+  caption: "[Photo by Chris Ried on Unsplash](https://unsplash.com/photos/ieic5Tq8YMk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
 ---
 
 Hi, I'm Massimo Caliman. 

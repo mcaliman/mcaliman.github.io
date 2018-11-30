@@ -9,10 +9,12 @@ comments: true
 share: true
 
 image:
-  path: /images/feature-image-filename.jpg
-  thumbnail: /images/thumb-image-filename.jpg
-  caption: "[Michael Rose](https://mademistakes)"
+  path: /images/unsplash/daniele-d-andreti-1131982-unsplash.jpg
+  # thumbnail:/images/unsplash/daniele-d-andreti-1131982-unsplash.jpg
+  caption: "[Photo by Daniele D'Andreti on Unsplash](https://unsplash.com/photos/RpHarahftoM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
 ---
+
+
 {% highlight bash %}
 {% endhighlight %}
 

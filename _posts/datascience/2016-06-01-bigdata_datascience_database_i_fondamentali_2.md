@@ -7,6 +7,12 @@ date:   2016-06-01 22:45:33
 tags: [datascience]
 comments: true
 share: true
+
+image:
+  path: /images/unsplash/daniele-d-andreti-1131967-unsplash.jpg
+  # thumbnail:/images/unsplash/daniele-d-andreti-1131967-unsplash.jpg
+  caption: "[Photo by Daniele D'Andreti on Unsplash](https://unsplash.com/photos/RpHarahftoM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
+
 ---
 {% highlight bash %}
 {% endhighlight %}
