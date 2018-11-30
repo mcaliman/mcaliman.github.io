@@ -7,6 +7,11 @@ date:   2016-05-01 22:45:33
 tags: [datascience]
 comments: true
 share: true
+
+image:
+  path: /images/feature-image-filename.jpg
+  thumbnail: /images/thumb-image-filename.jpg
+  caption: "[Michael Rose](https://mademistakes)"
 ---
 {% highlight bash %}
 {% endhighlight %}
