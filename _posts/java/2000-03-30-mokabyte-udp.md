@@ -7,6 +7,10 @@ category: java
 tags: [Articoli disponibili in lingua italiana,lang_it,Java,UPD,Mokabyte]
 comments: true
 share: true
+image:
+  path: /images/unsplash/sergi-kabrera-705414-unsplash.jpg
+  thumbnail:/images/unsplash/sergi-kabrera-705414-unsplash-thumbnail.jpg
+  caption: "[Photo by Sergi Kabrera on Unsplash](https://unsplash.com/photos/2xU7rYxsTiM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
 ---
 
 Introduzione ad uno dei protocolli piu' utilizzati in internet, lo User Datagram Protocol,

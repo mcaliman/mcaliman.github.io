@@ -8,6 +8,10 @@ date:   1999-12-30 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Java,Debug,Mokabyte]
 comments: true
 share: true
+image:
+  path: /images/unsplash/sergi-kabrera-705414-unsplash.jpg
+  thumbnail:/images/unsplash/sergi-kabrera-705414-unsplash-thumbnail.jpg
+  caption: "[Photo by Sergi Kabrera on Unsplash](https://unsplash.com/photos/2xU7rYxsTiM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
 ---
 
 
