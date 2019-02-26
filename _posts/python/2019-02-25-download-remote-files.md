@@ -5,10 +5,12 @@ excerpt: "Automatizziamo compiti ricorrenti come il download di file remoti in l
 modified: 2019-02-25
 categories: python
 tags: [Python]
-#image:
-#  feature: so-simple-sample-image-1.jpg
-#  credit: WeGraphics
-#  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+image:
+  path: /images/unsplash/andrew-yardley-1258543-unsplash.jpg
+  -- thumbnail: /images/unsplash/andrew-yardley-1258543-unsplash.jpg
+  caption: "[Photo by Andrew Yardley on Unsplash](https://unsplash.com/photos/QB6HWhQuspU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
+
+
 comments: true
 share: true
 search_omit: false
@@ -23,15 +25,18 @@ Attenzione: il codice riportato non scarica ricorsiavamente tutto il contenuto d
 
 Per collegarci in remoto via sftp utilizzeremo la libreria paramiko (paramiko.org), per installarla dobbiamo usare pip, avendo installato sia python2 che python3 nel mio caso utilizzero pip3, che dovremmo avere già installato. Paramiko utilizza anche pycrypto, quindi dovremmo installare anch'essa.
 
-{% highlight python %}
+{% highlight bash %}
 pip3 install pycrypto
 pip3 install paramiko
+{% endhighlight %}
 
+Vediamo ora il codice, è piuttosto semplice ma alcune considerazioni sono d'obbligo. 
+paramiko non ci da modo di scaricare una directory in blocc, quindi è necessario recuperare
+la lista dei file remota e poi iterare su di essa per effettuare il get, controllando che si tratti di un file e non di una directory. 
 
-{% highlight bash %}
+{% highlight python %}
 import paramiko
 import os.path
-{% endhighlight %}
 
 def donwload_remote_files(_host, _host_username, _host_password, _remote_path, _local_path):
     ssh = paramiko.SSHClient()
@@ -60,3 +65,5 @@ local_path = '/home/mcaliman/test/'
 remote_path = '/home/mcaliman/'
 donwload_remote_files(host, host_username, host_password, remote_path, local_path)
 {% endhighlight %}
+
+E' anche per oggi è tutto.
