@@ -4,6 +4,14 @@ layout: page
 
 {{ content }}
 
+<div class="taxonomy-index">
+    {% assign total = 1 %}
+    {% for post in site.posts %}
+      {% assign total = total | plus: 1 %}
+    {% endfor %}
+    <strong>Total number of posts </strong><span class="taxonomy-count">{{ total }}</span>  
+</div>
+
 <ul class="taxonomy-index">
   {% assign categories_max = 0 %}
   {% for category in site.categories %}

@@ -17,8 +17,8 @@ search_omit: false
 updated: true
 ---
 
-Nel precedente post abbiamo visto come scaricare dei generici file da remoto con python. In questo post, consideriamo invece che i file siamo dei file compressi (.gz) contenenti,per esempio, i dump sql di alcuni nostri database, per poterli ripristinare in locale abbiamo anche la necessità di decomprimerli. Il codice prevede alcune limitazioni, come ad esempio che ogni del tipo nomefile.sql.gz contega solo il file nomefile.sql.
-Ci sono varie opzioni per effettuare questa operazione, tra le quali quella di richiamare gzip in una shell, nel codice sotto adottiamo una soluzione 'nativa' tramite la libreria gzip che ci permette di effettuare l'unzip e shutil che ci fornisce il modo di salvare il nosto file decompress.
+Nel precedente post abbiamo visto come scaricare dei generici file da remoto con python. In questo post, consideriamo invece che i file siamo dei file compressi (.gz) contenenti,per esempio, i dump sql di alcuni nostri database, per poterli ripristinare in locale abbiamo anche la necessità di decomprimerli. Il codice prevede alcune limitazioni, come ad esempio che ogni file del tipo nomefile.sql.gz contega solo il file nomefile.sql.
+Ci sono varie opzioni per effettuare questa operazione, tra le quali quella di richiamare gzip in una shell, nel codice sotto adottiamo una soluzione 'nativa' tramite la libreria gzip che ci permette di effettuare l'unzip e shutil che ci fornisce il modo di salvare il nosto file decompresso.
 
 La chiamata unzip(local_file_path, local_file_path.replace('.gz', '')) passera alla funzione unzip il nome del file .gz appena scaricato e il nome da dare al file decompresso (eliminando dal nome del file originale l'estensione gz)
 
