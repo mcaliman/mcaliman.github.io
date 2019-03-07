@@ -2,12 +2,17 @@
 layout: post
 title:  "Strutture indicizzate"
 excerpt: ""
-category: computerscience
+category: "Algorithms and Data Structures"
 date:   2014-09-28 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Java,Strutture indicizzate,Strutture Dati]
+tags: [Java,Strutture indicizzate,Strutture Dati]
+image:
+  path: /images/unsplash/lidya-nada-744078-unsplash.jpg
+  -- thumbnail: /images/unsplash/lidya-nada-744078-unsplash.jpg
+  caption: "[Photo by Lidya Nada on Unsplash](https://unsplash.com/photos/BnzqQwerUOY?utm_source=unsplash&utm_medium=referralutm_content=creditCopyText)"
 comments: true
 share: true
 ---
+
 
 ﻿Le strutture indicizzate sono collezioni di celle numerate che possono contenere elementi di tipo prestabilito. Assumeremo che in un array di dimensione h gli indici possano andare da 0 a h-1 o da 1 a h.
 

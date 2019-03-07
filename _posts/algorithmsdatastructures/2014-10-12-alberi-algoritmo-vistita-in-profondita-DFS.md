@@ -2,9 +2,13 @@
 layout: post
 title:  "Algoritmo di visita in profondità per un albero (DFS o Depth First Search)"
 excerpt: ""
-category: computerscience
+category: "Algorithms and Data Structures"
 date:   2014-10-12 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Java,Algoritmi,Alberi]
+image:
+  path: /images/unsplash/lidya-nada-744078-unsplash.jpg
+  -- thumbnail: /images/unsplash/lidya-nada-744078-unsplash.jpg
+  caption: "[Photo by Lidya Nada on Unsplash](https://unsplash.com/photos/BnzqQwerUOY?utm_source=unsplash&utm_medium=referralutm_content=creditCopyText)"
 comments: true
 share: true
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Download di file remoti con Python #1"
 excerpt: "Automatizziamo compiti ricorrenti come il download di file remoti in locale"
 modified: 2019-02-25
-categories: python
+categories: "Python"
 tags: [Python]
 image:
   path: /images/unsplash/andrew-yardley-1258543-unsplash.jpg
@@ -66,4 +66,4 @@ remote_path = '/home/mcaliman/'
 donwload_remote_files(host, host_username, host_password, remote_path, local_path)
 {% endhighlight %}
 
-E' anche per oggi è tutto.
+E anche per oggi è tutto.

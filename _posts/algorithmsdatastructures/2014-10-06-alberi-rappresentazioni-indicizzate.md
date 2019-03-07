@@ -2,9 +2,13 @@
 layout: post
 title:  "Alberi rappresentazioni indicizzate"
 excerpt: ""
-category: computerscience
+category: "Algorithms and Data Structures"
 date:   2014-10-06 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Java,Alberi,Strutture Dati]
+image:
+  path: /images/unsplash/lidya-nada-744078-unsplash.jpg
+  -- thumbnail: /images/unsplash/lidya-nada-744078-unsplash.jpg
+  caption: "[Photo by Lidya Nada on Unsplash](https://unsplash.com/photos/BnzqQwerUOY?utm_source=unsplash&utm_medium=referralutm_content=creditCopyText)"
 comments: true
 share: true
 ---
