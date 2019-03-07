@@ -44,7 +44,8 @@ liquid:
   error_mode: strict
 
 # Build settings
-permalink: /:categories/:title/
+# permalink: /:categories/:title/
+permalink: /:title/
 markdown: kramdown
 feed:
   path: atom.xml
@@ -109,7 +110,7 @@ author:
       url:
       icon:
 
-copyright: "© Copyright 1999-2018 Massimo Caliman - All Rights Reserved."
+copyright: "© Copyright 1999-2019 Massimo Caliman - All Rights Reserved."
 
 # Footer Links
 footer_links:
