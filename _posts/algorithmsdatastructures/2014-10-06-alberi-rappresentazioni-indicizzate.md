@@ -12,7 +12,7 @@ image:
 comments: true
 share: true
 ---
-﻿Rappresentazioni indicizzate
+Rappresentazioni indicizzate
 Basate su array vettore padri e vettori posizionali entrambe richiedono spazio O(n)
 
 Vettori padri

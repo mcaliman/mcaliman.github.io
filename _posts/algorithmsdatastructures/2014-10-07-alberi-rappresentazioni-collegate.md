@@ -13,7 +13,7 @@ comments: true
 share: true
 ---
 
-Proseguendo nella trattazione degli alberi normalmente si preferiscono le ﻿rappresentazioni basate su strutture collegate 
+Proseguendo nella trattazione degli alberi normalmente si preferiscono le rappresentazioni basate su strutture collegate 
 1. più flessibile di quelle idicizzate
 2. modifiche alla struttura più efficienti
 

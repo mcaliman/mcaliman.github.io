@@ -12,7 +12,7 @@ image:
 comments: true
 share: true
 ---
-﻿
+
 Uno dei tipo base più ricorrente è la Pila o Stack, una specifica in pseudolinguaggio è riportata sotto.
 {% highlight bash %}
 tipo: Pila

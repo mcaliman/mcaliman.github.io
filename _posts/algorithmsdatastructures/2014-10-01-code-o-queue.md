@@ -12,7 +12,8 @@ image:
 comments: true
 share: true
 ---
-﻿Riprendiamo la trattazione delle strutture dati elementari. Nei post precedenti abbiamo visto le strutture indicizzate,quelle collegate e le Pile o Stack,uno altro dei tipo base più ricorrenti è la Coda o Queue, una specifica in pseudolinguaggio è riportata sotto.
+
+Riprendiamo la trattazione delle strutture dati elementari. Nei post precedenti abbiamo visto le strutture indicizzate,quelle collegate e le Pile o Stack,uno altro dei tipo base più ricorrenti è la Coda o Queue, una specifica in pseudolinguaggio è riportata sotto.
 {% highlight bash %}
 tipo Coda
 dati

@@ -13,7 +13,7 @@ comments: true
 share: true
 ---
 
-﻿“PHP is a minor evil perpetrated and created by incompetent amateurs, whereas Perl is a great and insidious evil perpetrated by skilled but perverted professionals.”
+“PHP is a minor evil perpetrated and created by incompetent amateurs, whereas Perl is a great and insidious evil perpetrated by skilled but perverted professionals.”
 *(Jon Ribbens)*
 
 Partiamo dal algoritmo di generico di visita e usando una coda per rappresentare `S` otteniamo visita in ampiezza (Breadth First Search o BFS).

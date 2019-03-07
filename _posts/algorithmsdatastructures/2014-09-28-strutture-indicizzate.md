@@ -13,8 +13,7 @@ comments: true
 share: true
 ---
 
-
-﻿Le strutture indicizzate sono collezioni di celle numerate che possono contenere elementi di tipo prestabilito. Assumeremo che in un array di dimensione h gli indici possano andare da 0 a h-1 o da 1 a h.
+Le strutture indicizzate sono collezioni di celle numerate che possono contenere elementi di tipo prestabilito. Assumeremo che in un array di dimensione h gli indici possano andare da 0 a h-1 o da 1 a h.
 
 Normalmente si definiscono due proprietà, una comunemente detta forte l’altra debole.
 

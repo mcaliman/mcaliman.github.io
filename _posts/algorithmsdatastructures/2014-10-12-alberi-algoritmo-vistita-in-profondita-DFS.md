@@ -13,7 +13,7 @@ comments: true
 share: true
 ---
 
-﻿"La scienza è ciò che comprendiamo abbastanza bene da spiegarla a un computer. L'arte è tutto il resto"
+"La scienza è ciò che comprendiamo abbastanza bene da spiegarla a un computer. L'arte è tutto il resto"
 *(Donald Knuth)*
 
 Partendo dall’algoritmo generico mostrato e usando per rappresentare `S` una Pila/Stack otteniamo la visita in profondità (o DFS cioè depth first search)
