@@ -2,7 +2,7 @@
 layout: post
 title:  "Le strutture di controllo di R"
 excerpt: ""
-category: computerscience
+category: "Computer Science"
 date:   2016-01-15 22:45:33
 tags: [datascience,R]
 comments: true

@@ -2,7 +2,7 @@
 layout: post
 title:  "GlassFish V3: la console amministrazione prendendo troppo tempo per caricare."
 excerpt: ""
-category: computerscience
+category: "Computer Science"
 date:   2014-01-11 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Java, GlassFishV3]
 comments: true

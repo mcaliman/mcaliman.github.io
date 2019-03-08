@@ -2,7 +2,7 @@
 layout: post
 title: "Controllare i droptime file del nic.it con R"
 excerpt: "Controllare in automatico se il dominio che ci interessa sarà disponibile giornata."
-category: computerscience
+category: "Computer Science"
 date:   2016-10-01 22:45:33
 modified: 2016-10-01 22:45:33
 tags: [R]

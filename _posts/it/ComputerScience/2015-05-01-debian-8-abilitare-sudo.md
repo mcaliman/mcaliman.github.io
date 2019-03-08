@@ -2,7 +2,7 @@
 layout: post
 title:  "Abilitare il comando sudo su debian 8"
 excerpt: ""
-category: computerscience
+category: "Computer Science"
 date:   2015-05-01 22:45:33
 tags: [linux,debian,debian 8]
 comments: true

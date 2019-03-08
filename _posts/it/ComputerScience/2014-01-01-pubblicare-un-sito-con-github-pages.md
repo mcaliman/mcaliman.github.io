@@ -2,7 +2,7 @@
 layout: post
 title:  "Pubblicare un sito con GitHub Pages."
 excerpt: ""
-category: computerscience
+category: "Computer Science"
 date:   2014-01-01 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Jekyll,GitHub,GitHubPages]
 comments: true

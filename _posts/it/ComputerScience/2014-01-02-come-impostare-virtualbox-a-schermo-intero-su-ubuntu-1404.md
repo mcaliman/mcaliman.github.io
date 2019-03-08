@@ -2,7 +2,7 @@
 layout: post
 title:  "Come impostare Virtualbox a schermo intero su Ubuntu 14.04"
 excerpt: ""
-category: computerscience
+category: "Computer Science"
 date:   2014-01-02 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,VirtualBox, Ubuntu]
 comments: true

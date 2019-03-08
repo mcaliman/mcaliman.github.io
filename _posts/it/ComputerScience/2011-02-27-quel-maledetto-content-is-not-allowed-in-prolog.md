@@ -2,7 +2,7 @@
 layout: post
 title:  "Quel maledetto Content is not allowed in prolog"
 excerpt: ""
-category: computerscience
+category: "Computer Science"
 date:   2011-02-27 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Java]
 comments: true

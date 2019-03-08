@@ -2,7 +2,7 @@
 layout: post
 title:  "Considerazioni su alcuni Linguaggi di Programmazione Parte 4"
 excerpt: ""
-category: computerscience
+category: "Computer Science"
 date:   2014-07-12 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Linguaggi di programmazione,Python,Java,C++]
 comments: true

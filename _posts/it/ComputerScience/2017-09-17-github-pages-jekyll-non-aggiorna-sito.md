@@ -2,7 +2,7 @@
 layout: post
 title: "Github pages non aggiorna il mio sito con jekyll."
 excerpt: "Gioie e dolori di mantenere il proprio sito con jekyll."
-category: computerscience
+category: "Computer Science"
 date:   2017-09-16 22:45:33
 modified: 2017-09-17 09:00:33
 tags: [Github,jekyll]

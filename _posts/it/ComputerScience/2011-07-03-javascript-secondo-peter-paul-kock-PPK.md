@@ -2,7 +2,7 @@
 layout: post
 title:  "Javascript secondo Peter Paul Kock (PPK)"
 excerpt: ""
-category: computerscience
+category: "Computer Science"
 date:   2011-07-03 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,javascript]
 comments: true
