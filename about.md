@@ -1,5 +1,7 @@
 ---
 layout: page
+lang: en
+ref: about
 permalink: /about/
 title: About me
 tags: [about]
