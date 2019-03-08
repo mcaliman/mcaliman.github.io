@@ -4,7 +4,7 @@ title:  "Secure httpbase tomcat authentication"
 excerpt: ""
 category: ComputerScience
 date:   2014-08-15 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Tomcat]
+tags: [Tomcat]
 comments: true
 share: true
 ---

@@ -4,7 +4,7 @@ title:  "Well Formatted riferito ad un documento XML"
 excerpt: ""
 category: ComputerScience
 date:   2011-03-07 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,XML]
+tags: [XML]
 comments: true
 share: true
 ---

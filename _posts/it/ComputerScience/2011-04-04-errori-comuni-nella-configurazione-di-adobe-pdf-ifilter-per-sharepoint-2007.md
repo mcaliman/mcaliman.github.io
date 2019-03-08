@@ -4,7 +4,7 @@ title:  "Errori comuni nella configurazione di Adobe PDF iFilter per SharePoint 
 excerpt: ""
 category: ComputerScience
 date:   2011-04-04 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,SharePoint2007]
+tags: [SharePoint2007]
 comments: true
 share: true
 ---

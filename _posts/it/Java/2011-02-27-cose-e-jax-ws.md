@@ -4,7 +4,7 @@ title:  "Cose'è JAX-WS"
 excerpt: ""
 category: java
 date:   2011-02-27 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Java]
+tags: [Java]
 comments: true
 share: true
 ---

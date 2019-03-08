@@ -4,7 +4,7 @@ title:  "Inviare mail con allegati in Java"
 excerpt: ""
 category: java
 date:   2014-07-14 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Java, JavaMail]
+tags: [Java, JavaMail]
 comments: true
 share: true
 ---

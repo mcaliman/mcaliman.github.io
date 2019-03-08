@@ -4,7 +4,7 @@ title:  "Le feature del linguaggio Java che devi conoscere"
 excerpt: ""
 category: java
 date:   2003-01-01 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Java]
+tags: [Java]
 comments: true
 share: true
 ---

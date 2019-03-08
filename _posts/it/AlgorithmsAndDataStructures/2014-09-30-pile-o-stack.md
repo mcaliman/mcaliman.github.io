@@ -4,7 +4,7 @@ title:  "Pile o Stack"
 excerpt: ""
 category: AlgorithmsAndDataStructures
 date:   2014-09-30 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Java,Pile o Stack,Strutture Dati]
+tags: [Java,Pile o Stack,Strutture Dati]
 image:
   path: /images/unsplash/lidya-nada-744078-unsplash.jpg
   -- thumbnail: /images/unsplash/lidya-nada-744078-unsplash.jpg

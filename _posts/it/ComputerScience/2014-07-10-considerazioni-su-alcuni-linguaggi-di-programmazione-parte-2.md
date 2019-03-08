@@ -4,7 +4,7 @@ title:  "Considerazioni su alcuni Linguaggi di Programmazione Parte 2"
 excerpt: ""
 category: ComputerScience
 date:   2014-07-10 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Linguaggi di programmazione,Java,C,C++,C#,Ada]
+tags: [Linguaggi di programmazione,Java,C,C++,C#,Ada]
 comments: true
 share: true
 ---

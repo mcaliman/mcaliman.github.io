@@ -4,7 +4,7 @@ title:  "Come velocizzare le operazioni di restore da dump sql di mysql"
 excerpt: ""
 category: Databases
 date:   2011-01-01 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,MySQL]
+tags: [MySQL]
 comments: true
 share: true
 ---

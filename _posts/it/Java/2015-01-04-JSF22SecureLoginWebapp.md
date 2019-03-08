@@ -4,7 +4,7 @@ title:  "Login e pagine sicure con JSF 2"
 excerpt: ""
 category: java
 date:   2015-01-04 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Java,Java7,JSF 2.2]
+tags: [Java,Java7,JSF 2.2]
 comments: true
 share: true
 ---

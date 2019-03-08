@@ -4,7 +4,7 @@ title:  "Strutture collegate"
 excerpt: ""
 category: AlgorithmsAndDataStructures
 date:   2014-09-29 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Java,Strutture collegate,Strutture Dati]
+tags: [Java,Strutture collegate,Strutture Dati]
 image:
   path: /images/unsplash/lidya-nada-744078-unsplash.jpg
   -- thumbnail: /images/unsplash/lidya-nada-744078-unsplash.jpg

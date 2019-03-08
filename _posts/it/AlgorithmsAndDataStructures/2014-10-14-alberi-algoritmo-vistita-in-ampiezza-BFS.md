@@ -4,7 +4,7 @@ title:  "Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Sear
 excerpt: ""
 category: AlgorithmsAndDataStructures
 date:   2014-10-14 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Java,Algoritmi,Alberi]
+tags: [Java,Algoritmi,Alberi]
 image:
   path: /images/unsplash/lidya-nada-744078-unsplash.jpg
   -- thumbnail: /images/unsplash/lidya-nada-744078-unsplash.jpg

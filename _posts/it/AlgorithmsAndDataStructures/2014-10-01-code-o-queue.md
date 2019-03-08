@@ -4,7 +4,7 @@ title:  "Code o Queue"
 excerpt: ""
 category: AlgorithmsAndDataStructures
 date:   2014-10-01 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Java,Code o Queue,Strutture Dati]
+tags: [Java,Code o Queue,Strutture Dati]
 image:
   path: /images/unsplash/lidya-nada-744078-unsplash.jpg
   -- thumbnail: /images/unsplash/lidya-nada-744078-unsplash.jpg

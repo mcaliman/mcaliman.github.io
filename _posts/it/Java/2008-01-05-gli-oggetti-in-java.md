@@ -4,7 +4,7 @@ title:  "Gli oggetti in Java"
 excerpt: ""
 category: java
 date:   2008-01-05 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Java]
+tags: [Java]
 comments: true
 share: true
 ---

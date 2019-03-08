@@ -4,7 +4,7 @@ title:  "Alberi rappresentazioni indicizzate"
 excerpt: ""
 category: AlgorithmsAndDataStructures
 date:   2014-10-06 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Java,Alberi,Strutture Dati]
+tags: [Java,Alberi,Strutture Dati]
 image:
   path: /images/unsplash/lidya-nada-744078-unsplash.jpg
   -- thumbnail: /images/unsplash/lidya-nada-744078-unsplash.jpg

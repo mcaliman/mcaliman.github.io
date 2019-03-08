@@ -4,7 +4,7 @@ title:  "Dizionari in Java"
 excerpt: ""
 category: java
 date:   2014-09-24 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Java,Dizionari,Strutture Dati]
+tags: [Java,Dizionari,Strutture Dati]
 comments: true
 share: true
 ---

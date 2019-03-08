@@ -4,7 +4,7 @@ title:  "Quel maledetto Content is not allowed in prolog"
 excerpt: ""
 category: ComputerScience
 date:   2011-02-27 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,Java]
+tags: [Java]
 comments: true
 share: true
 ---

@@ -4,7 +4,7 @@ title:  "Big Data, Data Science, Database i fondamentali 2"
 excerpt: ""
 category: DataScience
 date:   2016-06-01 22:45:33
-tags: [it]
+tags: [Data Science]
 comments: true
 share: true
 

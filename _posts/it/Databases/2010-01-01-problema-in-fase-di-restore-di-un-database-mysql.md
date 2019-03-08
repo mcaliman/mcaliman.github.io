@@ -4,7 +4,7 @@ title:  "Problema in fase di restore di un database mysql"
 excerpt: ""
 category: Databases
 date:   2010-01-01 22:45:33
-tags: [Articoli disponibili in lingua italiana,lang_it,MySQL]
+tags: [MySQL]
 comments: true
 share: true
 ---
