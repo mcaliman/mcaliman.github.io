@@ -2,7 +2,7 @@
 layout: post
 title:  "Linux: il comando du"
 excerpt: ""
-category: "Computer Science"
+category: OperatingSystemsAndNetworking
 date:   2007-01-01 22:45:33
 tags: [Linux]
 comments: true

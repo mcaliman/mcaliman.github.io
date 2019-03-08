@@ -2,7 +2,7 @@
 layout: post
 title:  "Considerazioni sulla ricorsione"
 excerpt: ""
-category: "Computer Science"
+category: ComputerScience
 date:   2014-08-14 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Java, recorsione]
 comments: true

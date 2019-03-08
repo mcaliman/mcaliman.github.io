@@ -2,7 +2,7 @@
 layout: post
 title:  "Effettuare la login SSH senza digitare la password."
 excerpt: ""
-category: "Computer Science"
+category: OperatingSystemsAndNetworking
 date:   2014-01-12 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,linux, ssh, openssh]
 comments: true

@@ -2,9 +2,9 @@
 layout: post
 title:  "le funzioni in R"
 excerpt: ""
-category: "Computer Science"
+category: R
 date:   2016-01-20 22:45:33
-tags: [datascience,R]
+tags: [R]
 comments: true
 share: true
 ---

@@ -2,9 +2,9 @@
 layout: post
 title:  "Linguaggio R introduzione"
 excerpt: ""
-category: "Computer Science"
+category: R
 date:   2016-01-10 22:45:33
-tags: [datascience,R]
+tags: [R]
 comments: true
 share: true
 ---

@@ -2,7 +2,7 @@
 layout: post
 title:  "Alberi rappresentazioni indicizzate"
 excerpt: ""
-category: "Algorithms and Data Structures"
+category: AlgorithmsAndDataStructures
 date:   2014-10-06 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Java,Alberi,Strutture Dati]
 image:

@@ -2,7 +2,7 @@
 layout: post
 title:  "Considerazioni su alcuni Linguaggi di Programmazione Parte 3"
 excerpt: ""
-category: "Computer Science"
+category: ComputerScience
 date:   2014-07-11 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Linguaggi di programmazione,Java,COBOL,BASIC,PHP]
 comments: true

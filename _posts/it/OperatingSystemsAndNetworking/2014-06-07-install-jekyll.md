@@ -2,7 +2,7 @@
 layout: post
 title:  "Installare Jekyll su ubuntu 14.04."
 excerpt: ""
-category: "Computer Science"
+category: OperatingSystemsAndNetworking
 date:   2014-06-07 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Jekyll]
 comments: true

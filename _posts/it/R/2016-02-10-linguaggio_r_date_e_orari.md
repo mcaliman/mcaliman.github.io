@@ -2,9 +2,9 @@
 layout: post
 title:  "Oggetti data, orari e intervalli di tempo in R"
 excerpt: ""
-category: "Computer Science"
+category: R
 date:   2016-02-10 22:45:33
-tags: [datascience,R]
+tags: [R]
 comments: true
 share: true
 ---

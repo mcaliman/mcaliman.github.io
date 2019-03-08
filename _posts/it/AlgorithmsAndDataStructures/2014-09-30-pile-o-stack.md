@@ -2,7 +2,7 @@
 layout: post
 title:  "Pile o Stack"
 excerpt: ""
-category: "Algorithms and Data Structures"
+category: AlgorithmsAndDataStructures
 date:   2014-09-30 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Java,Pile o Stack,Strutture Dati]
 image:

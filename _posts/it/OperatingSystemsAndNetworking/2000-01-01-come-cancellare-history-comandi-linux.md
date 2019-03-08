@@ -2,7 +2,7 @@
 layout: post
 title: "Come cancellare l'history comandi su linux."
 excerpt: "Prima o poi tutti ripuliscono l'history dei comandi."
-category: "Computer Science"
+category: OperatingSystemsAndNetworking
 date:   2000-01-01 22:45:33
 modified: 2016-01-01 22:45:33
 tags: [linux,bash]

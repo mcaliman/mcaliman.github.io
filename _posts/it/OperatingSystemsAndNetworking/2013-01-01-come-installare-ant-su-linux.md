@@ -2,7 +2,7 @@
 layout: post
 title:  "Come installare Ant su linux"
 excerpt: ""
-category: "Computer Science"
+category: OperatingSystemsAndNetworking
 date:   2013-01-01 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Ant, Java, Linux]
 comments: true

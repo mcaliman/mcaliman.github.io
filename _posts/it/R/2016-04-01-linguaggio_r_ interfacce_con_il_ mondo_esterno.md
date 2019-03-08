@@ -2,9 +2,9 @@
 layout: post
 title:  "Interfacce con il mondo esterno in R"
 excerpt: ""
-category: "Computer Science"
+category: R
 date:   2016-04-01 22:45:33
-tags: [datascience,R]
+tags: [R]
 comments: true
 share: true
 ---

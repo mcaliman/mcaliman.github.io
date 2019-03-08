@@ -2,7 +2,7 @@
 layout: post
 title:  "Strutture indicizzate"
 excerpt: ""
-category: "Algorithms and Data Structures"
+category: AlgorithmsAndDataStructures
 date:   2014-09-28 22:45:33
 tags: [Java,Strutture indicizzate,Strutture Dati]
 image:

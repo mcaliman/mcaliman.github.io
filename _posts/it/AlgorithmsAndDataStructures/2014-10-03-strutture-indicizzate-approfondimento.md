@@ -2,7 +2,7 @@
 layout: post
 title:  "Strutture indicizzate approfondimenti"
 excerpt: ""
-category: "Algorithms and Data Structures"
+category: AlgorithmsAndDataStructures
 date:   2014-10-03 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Java,Strutture indicizzate,Strutture Dati]
 comments: true

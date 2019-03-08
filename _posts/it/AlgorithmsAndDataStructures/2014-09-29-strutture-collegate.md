@@ -2,7 +2,7 @@
 layout: post
 title:  "Strutture collegate"
 excerpt: ""
-category: "Algorithms and Data Structures"
+category: AlgorithmsAndDataStructures
 date:   2014-09-29 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Java,Strutture collegate,Strutture Dati]
 image:

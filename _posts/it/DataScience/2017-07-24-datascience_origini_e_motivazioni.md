@@ -2,10 +2,10 @@
 layout: post
 title:  "Data Science origini e motivazioni"
 excerpt: ""
-category: "Data Science"
+category: DataScience
 date: 2017-07-24 22:45:33
 modified: 2017-07-25 19:45:33
-tags: [DataScience]
+tags: [it]
 comments: true
 share: true
 image:

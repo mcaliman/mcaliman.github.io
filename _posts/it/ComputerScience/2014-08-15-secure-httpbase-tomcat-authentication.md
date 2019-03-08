@@ -2,7 +2,7 @@
 layout: post
 title:  "Secure httpbase tomcat authentication"
 excerpt: ""
-category: "Computer Science"
+category: ComputerScience
 date:   2014-08-15 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Tomcat]
 comments: true

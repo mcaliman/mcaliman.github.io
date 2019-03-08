@@ -2,7 +2,7 @@
 layout: post
 title:  "Code o Queue"
 excerpt: ""
-category: "Algorithms and Data Structures"
+category: AlgorithmsAndDataStructures
 date:   2014-10-01 22:45:33
 tags: [Articoli disponibili in lingua italiana,lang_it,Java,Code o Queue,Strutture Dati]
 image:
