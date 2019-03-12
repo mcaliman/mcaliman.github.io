@@ -1,5 +1,7 @@
 ---
 layout: post
+lang: it
+ref: 
 title:  "Strutture indicizzate"
 excerpt: ""
 category: AlgorithmsAndDataStructures
