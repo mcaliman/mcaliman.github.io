@@ -114,7 +114,7 @@
                                       return false;
                               }
                       }else if(doReturn=='set' && (val=='accepted' || val=='declined')){
-                              {% comment %} Sets value of cookie to 'accepted' or 'declined' {% endcomment %}
+                              {% comment %} /* Sets value of cookie to 'accepted' or 'declined'*/ {% endcomment %}
                               document.cookie = cookieEntry.replace('{value}',val);
                               if(val=='accepted'){
                                       return true;
@@ -122,7 +122,7 @@
                                       return false;
                               }
                       }else{
-                              {% comment %}Sets up enable/accept button if required{% endcomment %}
+                              {% comment %}/*Sets up enable/accept button if required{% endcomment*/ %}
                               var message = options.message.replace('{policy_url}',options.policyURL);
                               
                               if(options.acceptButton){
@@ -130,19 +130,19 @@
                               }else{
                                       var acceptButton = '';
                               }
-                              {% comment %} Sets up disable/decline button if required {% endcomment %}
+                              {% comment %}/* Sets up disable/decline button if required*/ {% endcomment %}
                               if(options.declineButton){
                                       var declineButton = '<a href="" class="cb-disable">'+options.declineText+'</a>';
                               }else{
                                       var declineButton = '';
                               }
-                              {% comment %} Sets up privacy policy button if required {% endcomment %}
+                              {% comment %}/* Sets up privacy policy button if required*/ {% endcomment %}
                               if(options.policyButton){
                                       var policyButton = '<a href="'+options.policyURL+'" class="cb-policy">'+options.policyText+'</a>';
                               }else{
                                       var policyButton = '';
                               }
-                              {% comment %} Whether to add "fixed" class to cookie bar {% endcomment %}
+                              {% comment %}/* Whether to add "fixed" class to cookie bar*/ {% endcomment %}
                               if(options.fixed){
                                       if(options.bottom){
                                               var fixed = ' class="fixed bottom"';
@@ -157,9 +157,7 @@
                               }else{
                                       var zindex = '';
                               }
-                              {% comment %} 
-                              // Displays the cookie bar if arguments met 
-                              {% endcomment %}
+                              {% comment %} /*Displays the cookie bar if arguments met*/ {% endcomment %}
                               if(options.forceShow || cookieValue=='enabled' || cookieValue==''){
                                       if(options.append){
                                               $(options.element).append('<div id="cookie-bar"'+fixed+zindex+'><p>'+message+acceptButton+declineButton+policyButton+'</p></div>');
@@ -224,7 +222,7 @@
                       }
               };
       })(jQuery);
-      <!-- This initiates the cookie bar -->
+      {% comment %}<!-- This initiates the cookie bar -->{% endcomment %}      
       $(document).ready(function(){
           $.cookieBar({
               message: 'This website uses cookies to track usage and preferences',
