@@ -1,3 +1,4 @@
+
 {%- if site.footer_scripts -%}
   {%- for script in site.footer_scripts -%}
     {%- if script contains "://" -%}
@@ -26,17 +27,18 @@
   </script>
 {%- endif %}
 {% if site.mathjax == true %}
-        <!-- MathJax -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+   {% comment %}<!-- MathJax -->{% endcomment %}
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 {% endif %}
 {%- if page.layout == "search" -%}
   {% include lunr-search-scripts.html %}
 {%- endif -%}
 
+{% comment %}
 <!-- jquery.cookiebar.css -->
 <!-- jquery.cookiebar.js -->
-
-    <!-- jquery.cookiebar.js -->
+<!-- jquery.cookiebar.js -->
+{% endcomment %}    
     <script>
       (function($){
               $.cookieBar = function(options,val){
@@ -105,14 +107,14 @@
                               }
                       }
                       if(doReturn=='cookies'){
-                              //Returns true if cookies are enabled, false otherwise
+                              {% comment %} /* Returns true if cookies are enabled, false otherwise*/ {% endcomment %}
                               if(cookieValue=='enabled' || cookieValue=='accepted'){
                                       return true;
                               }else{
                                       return false;
                               }
                       }else if(doReturn=='set' && (val=='accepted' || val=='declined')){
-                              //Sets value of cookie to 'accepted' or 'declined'
+                              {% comment %} Sets value of cookie to 'accepted' or 'declined' {% endcomment %}
                               document.cookie = cookieEntry.replace('{value}',val);
                               if(val=='accepted'){
                                       return true;
@@ -120,7 +122,7 @@
                                       return false;
                               }
                       }else{
-                              //Sets up enable/accept button if required
+                              {% comment %}Sets up enable/accept button if required{% endcomment %}
                               var message = options.message.replace('{policy_url}',options.policyURL);
                               
                               if(options.acceptButton){
@@ -128,19 +130,19 @@
                               }else{
                                       var acceptButton = '';
                               }
-                              //Sets up disable/decline button if required
+                              {% comment %} Sets up disable/decline button if required {% endcomment %}
                               if(options.declineButton){
                                       var declineButton = '<a href="" class="cb-disable">'+options.declineText+'</a>';
                               }else{
                                       var declineButton = '';
                               }
-                              //Sets up privacy policy button if required
+                              {% comment %} Sets up privacy policy button if required {% endcomment %}
                               if(options.policyButton){
                                       var policyButton = '<a href="'+options.policyURL+'" class="cb-policy">'+options.policyText+'</a>';
                               }else{
                                       var policyButton = '';
                               }
-                              //Whether to add "fixed" class to cookie bar
+                              {% comment %} Whether to add "fixed" class to cookie bar {% endcomment %}
                               if(options.fixed){
                                       if(options.bottom){
                                               var fixed = ' class="fixed bottom"';
@@ -155,8 +157,9 @@
                               }else{
                                       var zindex = '';
                               }
-                              
-                              //Displays the cookie bar if arguments met
+                              {% comment %} 
+                              // Displays the cookie bar if arguments met 
+                              {% endcomment %}
                               if(options.forceShow || cookieValue=='enabled' || cookieValue==''){
                                       if(options.append){
                                               $(options.element).append('<div id="cookie-bar"'+fixed+zindex+'><p>'+message+acceptButton+declineButton+policyButton+'</p></div>');
@@ -248,4 +251,6 @@
       #cookie-bar .cb-policy {background:#26a8ed;}
       #cookie-bar .cb-policy:hover {background:#26a8ed;}
       </style>
+      {% comment %}
       <!-- END jquery.cookiebar.js -->
+      {% endcomment %}
