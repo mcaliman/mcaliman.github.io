@@ -1,12 +1,10 @@
 # Sample Authors
 # Remove file or replace with your own
-
-Billy Rick:
-  name: Billy Rick
+Massimo Caliman:
+  name: Massimo Caliman
   picture: /images/bio-photo-2.jpg
-  twitter: "@billyrick"
+  twitter: "@mcaliman"
   links:
     - title: Twitter
-      url: https://twitter.com/billyrick
+      url: https://twitter.com/mcaliman
       icon: fab fa-twitter-square
-
