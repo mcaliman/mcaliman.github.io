@@ -1,5 +1,5 @@
 <footer id="footer" class="site-footer">
-  {% include footer-custom.html %}
+{% include footer-custom.html %}
 
   {%- if site.footer_links -%}
     <div class="social-icons">
@@ -13,7 +13,6 @@
       {%- endfor -%}
     </div>
   {%- endif -%}
-
   <div class="copyright">
     {% if site.copyright %}
       {{ site.copyright | markdownify }}

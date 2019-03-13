@@ -8,14 +8,10 @@
     <script src="{{ script_path }}"></script>
   {%- endfor -%}
 {%- else -%}
-  <!--  
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  -->
   <script src="{{ '/assets/js/jquery-3.2.1.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
 {%- endif -%}
-
 {%- if jekyll.environment == 'production' and site.google_analytics -%}
   <script>
   if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
@@ -29,21 +25,16 @@
   }
   </script>
 {%- endif %}
-
 {% if site.mathjax == true %}
-<!-- MathJax -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <!-- MathJax -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 {% endif %}
-
 {%- if page.layout == "search" -%}
   {% include lunr-search-scripts.html %}
 {%- endif -%}
 
-
-
 <!-- jquery.cookiebar.css -->
 <!-- jquery.cookiebar.js -->
-
 
     <!-- jquery.cookiebar.js -->
     <script>
@@ -258,5 +249,3 @@
       #cookie-bar .cb-policy:hover {background:#26a8ed;}
       </style>
       <!-- END jquery.cookiebar.js -->
-  
-

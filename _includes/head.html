@@ -5,7 +5,7 @@
   {% if site.owner.google.verify -%}<meta name="google-site-verification" content="{{ site.owner.google.verify }}">{%- endif -%}
   {%- if site.owner.bing-verify -%}<meta name="msvalidate.01" content="{{ site.owner.bing-verify }}">{%- endif -%}
   {%- if site.plugins contains 'jekyll-seo-tag' or site.gems contains 'jekyll-seo-tag' %}
-{% include head-seo.html %}
+  {% include head-seo.html %}
   {% else %}
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
@@ -20,12 +20,9 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {% if site.google_fonts -%}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={%- for font in site.google_fonts -%}{{ font.name | replace: ' ', '+' }}{% if font.weights %}:{% endif %}{{ font.weights | remove: ' ' }}{% if forloop.last != true %}|{% endif %}{%- endfor -%}">
-  {% endif %}
+  {% endif -%}
   {%- if site.plugins contains 'jekyll-feed' or site.gems contains 'jekyll-feed' -%}
-    {%- comment -%}
-      Add Atom feed link if jekyll-feed plugin is enabled
-    {%- endcomment -%}
-    {% include head-feed.html %}
+    {%- include head-feed.html -%}
   {%- endif -%}
   {%- if site.head_scripts -%}
     {%- for script in site.head_scripts -%}
@@ -36,6 +33,6 @@
       {%- endif -%}
       <script src="{{ script_path }}"></script>
     {%- endfor -%}
-  {% endif %}
+  {%- endif -%}
   {% include head-custom.html %}
 </head>
