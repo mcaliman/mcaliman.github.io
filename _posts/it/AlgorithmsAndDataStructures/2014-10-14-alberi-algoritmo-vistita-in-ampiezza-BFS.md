@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Algoritmo di visita in ampiezza per un albero (BFS o Breadth First Search)"
 excerpt: ""
 category: AlgorithmsAndDataStructures

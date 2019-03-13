@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Alberi rappresentazioni indicizzate"
 excerpt: ""
 category: AlgorithmsAndDataStructures

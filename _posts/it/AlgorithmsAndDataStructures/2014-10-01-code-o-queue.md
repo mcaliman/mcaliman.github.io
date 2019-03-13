@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Code o Queue"
 excerpt: ""
 category: AlgorithmsAndDataStructures

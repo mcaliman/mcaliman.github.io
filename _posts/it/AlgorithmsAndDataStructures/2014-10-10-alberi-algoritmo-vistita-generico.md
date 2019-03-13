@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Algoritmo di visita generica per un albero"
 excerpt: ""
 category: AlgorithmsAndDataStructures

@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Pile o Stack"
 excerpt: ""
 category: AlgorithmsAndDataStructures

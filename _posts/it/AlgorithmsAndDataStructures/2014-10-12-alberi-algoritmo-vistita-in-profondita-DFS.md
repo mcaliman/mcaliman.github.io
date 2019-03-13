@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Algoritmo di visita in profondità per un albero (DFS o Depth First Search)"
 excerpt: ""
 category: AlgorithmsAndDataStructures

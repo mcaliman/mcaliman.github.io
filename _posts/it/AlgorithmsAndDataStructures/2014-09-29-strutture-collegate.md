@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Strutture collegate"
 excerpt: ""
 category: AlgorithmsAndDataStructures
