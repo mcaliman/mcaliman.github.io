@@ -50,42 +50,41 @@
                               var doReturn = false;
                       }
                       var defaults = {
-                              message: 'We use cookies to track usage and preferences.', //Message displayed on bar
-                              acceptButton: true, //Set to true to show accept/enable button
-                              acceptText: 'I Understand', //Text on accept/enable button
-                              acceptFunction: function(cookieValue){if(cookieValue!='enabled' && cookieValue!='accepted') window.location = window.location.href;}, //Function to run after accept
-                              declineButton: false, //Set to true to show decline/disable button
-                              declineText: 'Disable Cookies', //Text on decline/disable button
-                              declineFunction: function(cookieValue){if(cookieValue=='enabled' || cookieValue=='accepted') window.location = window.location.href;}, //Function to run after decline
-                              policyButton: false, //Set to true to show Privacy Policy button
-                              policyText: 'Privacy Policy', //Text on Privacy Policy button                              
-                              policyURL: '/privacy/', //URL of Privacy Policy
-                              autoEnable: true, //Set to true for cookies to be accepted automatically. Banner still shows
-                              acceptOnContinue: false, //Set to true to accept cookies when visitor moves to another page
-                              acceptOnScroll: false, //Set to true to accept cookies when visitor scrolls X pixels up or down
-                              acceptAnyClick: false, //Set to true to accept cookies when visitor clicks anywhere on the page
-                              expireDays: 365, //Number of days for cookieBar cookie to be stored for
-                              renewOnVisit: false, //Renew the cookie upon revisit to website
-                              forceShow: false, //Force cookieBar to show regardless of user cookie preference
-                              effect: 'slide', //Options: slide, fade, hide
-                              element: 'body', //Element to append/prepend cookieBar to. Remember "." for class or "#" for id.
-                              append: false, //Set to true for cookieBar HTML to be placed at base of website. Actual position may change according to CSS
-                              fixed: false, //Set to true to add the class "fixed" to the cookie bar. Default CSS should fix the position
-                              bottom: false, //Force CSS when fixed, so bar appears at bottom of website
-                              zindex: '', //Can be set in CSS, although some may prefer to set here
-                              domain: String(window.location.hostname), //Location of privacy policy
-                              referrer: String(document.referrer) //Where visitor has come from
+                              message: 'We use cookies to track usage and preferences.', {% comment %}/*Message displayed on bar*/{% endcomment %}
+                              acceptButton: true, {% comment %}/*Set to true to show accept/enable button*/{% endcomment %}
+                              acceptText: 'I Understand', {% comment %}/*Text on accept/enable button*/{% endcomment %}
+                              acceptFunction: function(cookieValue){if(cookieValue!='enabled' && cookieValue!='accepted') window.location = window.location.href;}, {% comment %}/*Function to run after accept*/{% endcomment %}
+                              declineButton: false, {% comment %}/*Set to true to show decline/disable button*/{% endcomment %}
+                              declineText: 'Disable Cookies', {% comment %}/*Text on decline/disable button*/{% endcomment %}
+                              declineFunction: function(cookieValue){if(cookieValue=='enabled' || cookieValue=='accepted') window.location = window.location.href;}, {% comment %}/*Function to run after decline*/{% endcomment %}
+                              policyButton: false, {% comment %}/*Set to true to show Privacy Policy button*/{% endcomment %}
+                              policyText: 'Privacy Policy', {% comment %}/*Text on Privacy Policy button*/{% endcomment %}                              
+                              policyURL: '/privacy/', {% comment %}/*URL of Privacy Policy*/{% endcomment %}
+                              autoEnable: true, {% comment %}/*Set to true for cookies to be accepted automatically. Banner still shows*/{% endcomment %}
+                              acceptOnContinue: false, {% comment %}/*Set to true to accept cookies when visitor moves to another page*/{% endcomment %}
+                              acceptOnScroll: false, {% comment %}/*Set to true to accept cookies when visitor scrolls X pixels up or down*/{% endcomment %}
+                              acceptAnyClick: false, {% comment %}/*Set to true to accept cookies when visitor clicks anywhere on the page*/{% endcomment %}
+                              expireDays: 365, {% comment %}/*Number of days for cookieBar cookie to be stored for*/{% endcomment %}
+                              renewOnVisit: false, {% comment %}/*Renew the cookie upon revisit to website*/{% endcomment %}
+                              forceShow: false, {% comment %}/*Force cookieBar to show regardless of user cookie preference*/{% endcomment %}
+                              effect: 'slide', {% comment %}/*Options: slide, fade, hide*/{% endcomment %}
+                              element: 'body', {% comment %}/*Element to append/prepend cookieBar to. Remember "." for class or "#" for id.*/{% endcomment %}
+                              append: false, {% comment %}/*Set to true for cookieBar HTML to be placed at base of website. Actual position may change according to CSS*/{% endcomment %}
+                              fixed: false, {% comment %}/*Set to true to add the class "fixed" to the cookie bar. Default CSS should fix the position*/{% endcomment %}
+                              bottom: false, {% comment %}/*Force CSS when fixed, so bar appears at bottom of website*/{% endcomment %}
+                              zindex: '', {% comment %}/*Can be set in CSS, although some may prefer to set here*/{% endcomment %}
+                              domain: String(window.location.hostname), {% comment %}/*Location of privacy policy*/{% endcomment %}
+                              referrer: String(document.referrer) {% comment %}/*Where visitor has come from*/{% endcomment %}
                       };
-                      var options = $.extend(defaults,options);
-                      
-                      //Sets expiration date for cookie
+                      var options = $.extend(defaults,options);                                            
+                      {% comment %}/*Sets expiration date for cookie*/{% endcomment %}
                       var expireDate = new Date();
                       expireDate.setTime(expireDate.getTime()+(options.expireDays*86400000));
                       expireDate = expireDate.toGMTString();
                       
                       var cookieEntry = 'cb-enabled={value}; expires='+expireDate+'; path=/';
-                      
-                      //Retrieves current cookie preference
+                                            
+                      {% comment %}/*Retrieves current cookie preference*/{% endcomment %}
                       var i,cookieValue='',aCookie,aCookies=document.cookie.split('; ');
                       for (i=0;i<aCookies.length;i++){
                               aCookie = aCookies[i].split('=');
@@ -93,7 +92,7 @@
                                   cookieValue = aCookie[1];
                               }
                       }
-                      //Sets up default cookie preference if not already set
+                      {% comment %}/*Sets up default cookie preference if not already set*/{% endcomment %}                      
                       if(cookieValue=='' && doReturn!='cookies' && options.autoEnable){
                               cookieValue = 'enabled';
                               document.cookie = cookieEntry.replace('{value}','enabled');
