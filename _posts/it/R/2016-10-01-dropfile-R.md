@@ -1,5 +1,6 @@
 --- 
 layout: post
+lang: it
 title: "Controllare i droptime file del nic.it con R"
 excerpt: "Controllare in automatico se il dominio che ci interessa sarà disponibile giornata."
 category: R

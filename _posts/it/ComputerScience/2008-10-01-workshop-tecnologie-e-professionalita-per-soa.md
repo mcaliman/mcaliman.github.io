@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Workshop Tecnologie e Professionalità per la SOA"
 excerpt: ""
 category: ComputerScience

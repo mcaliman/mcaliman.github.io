@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Estrarre dati dal codice fiscale con Excel"
 excerpt: ""
 category: ComputerScience

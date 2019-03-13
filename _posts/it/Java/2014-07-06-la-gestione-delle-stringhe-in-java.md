@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "La gestione delle stringhe in Java"
 excerpt: ""
 category: java

@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Come installare Ant su linux"
 excerpt: ""
 category: OperatingSystemsAndNetworking

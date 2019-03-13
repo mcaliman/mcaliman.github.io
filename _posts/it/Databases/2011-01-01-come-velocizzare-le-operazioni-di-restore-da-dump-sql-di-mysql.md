@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Come velocizzare le operazioni di restore da dump sql di mysql"
 excerpt: ""
 category: Databases

@@ -1,7 +1,8 @@
 ---
 layout: post
-title: ﻿Possiamo eseguire del codice prima del metodo main(String[]) ?
-excerpt: "﻿"
+lang: it
+title: "Possiamo eseguire del codice prima del metodo main(String[]) ?"
+excerpt: ""
 modified: 2016-11-03
 categories: java
 tags: [Java]

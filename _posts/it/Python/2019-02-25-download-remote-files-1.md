@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title: "Download di file remoti con Python #1"
 excerpt: "Automatizziamo compiti ricorrenti come il download di file remoti in locale"
 modified: 2019-02-25

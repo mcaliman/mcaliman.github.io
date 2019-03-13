@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Problema in fase di restore di un database mysql"
 excerpt: ""
 category: Databases

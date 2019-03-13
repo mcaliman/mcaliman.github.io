@@ -1,5 +1,6 @@
 --- 
 layout: post
+lang: it
 title:  "Le variabili array in Java"
 excerpt: ""
 category: java

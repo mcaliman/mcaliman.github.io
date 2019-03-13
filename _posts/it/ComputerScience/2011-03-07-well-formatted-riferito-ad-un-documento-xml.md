@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Well Formatted riferito ad un documento XML"
 excerpt: ""
 category: ComputerScience

@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Quel maledetto Content is not allowed in prolog"
 excerpt: ""
 category: ComputerScience

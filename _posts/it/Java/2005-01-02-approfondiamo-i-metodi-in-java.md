@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Approfondiamo i metodi in Java"
 excerpt: ""
 category: java

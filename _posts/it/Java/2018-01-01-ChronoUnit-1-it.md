@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title: "La classe java.time.temporal.ChronoUnit"
 excerpt: "Calcolare la differenza tra due date con ChronoUnit"
 modified: 2018-01-01

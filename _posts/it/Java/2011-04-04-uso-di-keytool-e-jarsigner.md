@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Uso di keytool e jarsigner"
 excerpt: ""
 category: java

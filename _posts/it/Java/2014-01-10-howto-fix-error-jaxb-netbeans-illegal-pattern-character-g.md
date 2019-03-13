@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "HOWTO FIX errore 'illegal pattern character g' JAXB in NetBeans ."
 excerpt: ""
 category: java

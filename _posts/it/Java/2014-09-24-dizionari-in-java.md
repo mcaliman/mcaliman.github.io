@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Dizionari in Java"
 excerpt: ""
 category: java

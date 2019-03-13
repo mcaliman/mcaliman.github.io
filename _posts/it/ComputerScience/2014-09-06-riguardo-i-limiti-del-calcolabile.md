@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Riguardo i limiti del calcolabile"
 excerpt: ""
 category: ComputerScience

@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Errori comuni nella configurazione di Adobe PDF iFilter per SharePoint 2007"
 excerpt: ""
 category: ComputerScience

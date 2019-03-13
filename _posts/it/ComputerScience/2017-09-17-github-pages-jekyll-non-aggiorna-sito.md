@@ -1,5 +1,6 @@
 --- 
 layout: post
+lang: it
 title: "Github pages non aggiorna il mio sito con jekyll."
 excerpt: "Gioie e dolori di mantenere il proprio sito con jekyll."
 category: ComputerScience

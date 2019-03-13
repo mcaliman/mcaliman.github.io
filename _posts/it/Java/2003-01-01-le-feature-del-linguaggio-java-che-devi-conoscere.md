@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Le feature del linguaggio Java che devi conoscere"
 excerpt: ""
 category: java

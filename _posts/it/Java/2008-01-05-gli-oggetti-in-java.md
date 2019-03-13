@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Gli oggetti in Java"
 excerpt: ""
 category: java

@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Login e pagine sicure con JSF 2"
 excerpt: ""
 category: java

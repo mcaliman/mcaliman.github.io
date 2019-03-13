@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Javascript secondo Peter Paul Kock (PPK)"
 excerpt: ""
 category: ComputerScience

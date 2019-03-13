@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Abilitare il comando sudo su debian 8"
 excerpt: ""
 category: OperatingSystemsAndNetworking

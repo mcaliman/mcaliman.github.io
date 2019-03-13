@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Usare i Channel per copiare file in Java"
 excerpt: ""
 category: java

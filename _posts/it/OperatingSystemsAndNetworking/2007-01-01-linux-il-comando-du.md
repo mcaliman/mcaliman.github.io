@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Linux: il comando du"
 excerpt: ""
 category: OperatingSystemsAndNetworking

@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title: Il design pattern Strategy
 excerpt: "Codice di esempio minimale sul pattern Strategy"
 modified: 2016-01-02

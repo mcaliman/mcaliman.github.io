@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Creare e configurare un DataSource MySQL in GlassFish Application Server"
 excerpt: ""
 category: ComputerScience

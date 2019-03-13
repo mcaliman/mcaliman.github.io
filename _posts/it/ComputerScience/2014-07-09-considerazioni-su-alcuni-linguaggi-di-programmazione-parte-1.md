@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Considerazioni su alcuni Linguaggi di Programmazione Parte 1"
 excerpt: ""
 category: ComputerScience

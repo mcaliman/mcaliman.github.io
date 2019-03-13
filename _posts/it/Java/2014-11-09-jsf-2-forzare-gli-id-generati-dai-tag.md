@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "JSF 2 forzare gli id generati dai tag"
 excerpt: ""
 category: java

@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Alberi in Java"
 excerpt: ""
 category: java

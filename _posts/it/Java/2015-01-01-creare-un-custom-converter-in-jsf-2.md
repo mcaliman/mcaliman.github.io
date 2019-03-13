@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Creare un custom Converter in JSF 2.2"
 excerpt: ""
 category: java

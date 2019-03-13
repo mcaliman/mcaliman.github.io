@@ -1,7 +1,8 @@
 ---
 layout: post
-title: ﻿I costruttori sono ereditabili ? 
-excerpt: "﻿﻿I costruttori sono ereditabili? Una sottoclasse può chiamare il costruttore della classe genitore?"
+lang: it
+title: "I costruttori sono ereditabili ?" 
+excerpt: "I costruttori sono ereditabili? Una sottoclasse può chiamare il costruttore della classe genitore?"
 modified: 2016-11-02
 categories: java
 tags: [Java]

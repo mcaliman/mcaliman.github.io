@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Usare HashMap in Java"
 excerpt: ""
 category: java

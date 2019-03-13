@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title: Il design pattern Singleton
 excerpt: "Alcuni esempi sul pattern Singleton"
 modified: 2016-01-03

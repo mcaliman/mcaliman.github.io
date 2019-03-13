@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Le strutture di controllo di R"
 excerpt: ""
 category: R

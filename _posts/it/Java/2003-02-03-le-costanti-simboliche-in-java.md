@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Le costanti simboliche in Java"
 excerpt: ""
 category: java

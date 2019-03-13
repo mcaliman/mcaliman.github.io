@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Come ripristinare l'utente amministratore di Docebo"
 excerpt: ""
 category: ComputerScience

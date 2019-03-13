@@ -1,5 +1,6 @@
 --- 
 layout: post
+lang: it
 title: "wsimport e Webservice .Net 2.0"
 excerpt: ""
 category: ComputerScience

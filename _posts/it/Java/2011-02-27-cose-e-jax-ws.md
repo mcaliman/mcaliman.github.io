@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Cose'è JAX-WS"
 excerpt: ""
 category: java

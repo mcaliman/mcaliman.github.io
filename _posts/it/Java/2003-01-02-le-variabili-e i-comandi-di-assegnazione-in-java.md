@@ -1,5 +1,6 @@
 --- 
 layout: post
+lang: it
 title:  "Le variabili e i comandi di assegnazione"
 excerpt: ""
 category: java

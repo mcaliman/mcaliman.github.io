@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Classi e metodi in Java"
 excerpt: ""
 category: java

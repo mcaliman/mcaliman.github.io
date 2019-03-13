@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title: Il design pattern Chain Of Responsibility
 excerpt: "Codice di esempio minimale sul pattern CoF"
 modified: 2016-01-03

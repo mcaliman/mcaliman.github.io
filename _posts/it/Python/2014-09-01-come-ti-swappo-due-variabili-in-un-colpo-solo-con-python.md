@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Come ti swappo due variabili in un colpo solo con Python"
 excerpt: ""
 category: Python

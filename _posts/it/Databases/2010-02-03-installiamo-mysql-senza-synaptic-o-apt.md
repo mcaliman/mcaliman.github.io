@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Installiamo mysql senza synaptic o apt"
 excerpt: ""
 category: Databases

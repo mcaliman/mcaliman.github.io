@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Inviare mail con allegati in Java"
 excerpt: ""
 category: java

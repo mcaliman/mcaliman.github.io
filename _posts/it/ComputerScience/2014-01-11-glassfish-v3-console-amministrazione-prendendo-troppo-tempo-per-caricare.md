@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "GlassFish V3: la console amministrazione prendendo troppo tempo per caricare."
 excerpt: ""
 category: ComputerScience

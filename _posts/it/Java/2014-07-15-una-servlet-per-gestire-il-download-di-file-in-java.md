@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "﻿Una Servlet per gestire il download di file in Java"
+lang: it
+title:  "Una Servlet per gestire il download di file in Java"
 excerpt: ""
 category: java
 date:   2014-07-15 22:45:33

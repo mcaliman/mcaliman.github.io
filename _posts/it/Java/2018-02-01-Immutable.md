@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title: "Classi e oggetti immutabili in Java"
 excerpt: ""
 modified: 2018-02-01

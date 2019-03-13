@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title: Il design pattern Visitor
 excerpt: "Codice di esempio minimale sul pattern Interpreter"
 modified: 2016-01-03

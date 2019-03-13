@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Il metodo String.format una printf per Java"
 excerpt: ""
 category: java

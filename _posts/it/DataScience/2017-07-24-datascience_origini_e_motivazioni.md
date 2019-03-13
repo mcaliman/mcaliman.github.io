@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Data Science origini e motivazioni"
 excerpt: ""
 category: DataScience

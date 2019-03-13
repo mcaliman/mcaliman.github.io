@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Il passaggio di parametri in Java"
 excerpt: ""
 category: java

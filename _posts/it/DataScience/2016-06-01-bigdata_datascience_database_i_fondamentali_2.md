@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Big Data, Data Science, Database i fondamentali 2"
 excerpt: ""
 category: DataScience

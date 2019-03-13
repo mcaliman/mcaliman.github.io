@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Oggetti data, orari e intervalli di tempo in R"
 excerpt: ""
 category: R

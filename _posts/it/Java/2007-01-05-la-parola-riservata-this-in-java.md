@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "La parola riservata this in Java"
 excerpt: ""
 category: java

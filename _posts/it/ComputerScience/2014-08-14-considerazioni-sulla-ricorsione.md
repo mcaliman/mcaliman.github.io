@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Considerazioni sulla ricorsione"
 excerpt: ""
 category: ComputerScience

@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Il cms è morto viva jekyll!"
 excerpt: ""
 category: ComputerScience

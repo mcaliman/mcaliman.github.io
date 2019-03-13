@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: it
 title:  "Pubblicare un sito con GitHub Pages."
 excerpt: ""
 category: ComputerScience
