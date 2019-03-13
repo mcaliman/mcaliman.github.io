@@ -35,219 +35,218 @@
 {%- endif -%}
 
 {% comment %}
-<!-- jquery.cookiebar.css -->
-<!-- jquery.cookiebar.js -->
+
 <!-- jquery.cookiebar.js -->
 {% endcomment %}    
-    <script>
-      (function($){
-              $.cookieBar = function(options,val){
-                      if(options=='cookies'){
-                              var doReturn = 'cookies';
-                      }else if(options=='set'){
-                              var doReturn = 'set';
-                      }else{
-                              var doReturn = false;
-                      }
-                      var defaults = {
-                              message: 'We use cookies to track usage and preferences.', {% comment %}/*Message displayed on bar*/{% endcomment %}
-                              acceptButton: true, {% comment %}/*Set to true to show accept/enable button*/{% endcomment %}
-                              acceptText: 'I Understand', {% comment %}/*Text on accept/enable button*/{% endcomment %}
-                              acceptFunction: function(cookieValue){if(cookieValue!='enabled' && cookieValue!='accepted') window.location = window.location.href;}, {% comment %}/*Function to run after accept*/{% endcomment %}
-                              declineButton: false, {% comment %}/*Set to true to show decline/disable button*/{% endcomment %}
-                              declineText: 'Disable Cookies', {% comment %}/*Text on decline/disable button*/{% endcomment %}
-                              declineFunction: function(cookieValue){if(cookieValue=='enabled' || cookieValue=='accepted') window.location = window.location.href;}, {% comment %}/*Function to run after decline*/{% endcomment %}
-                              policyButton: false, {% comment %}/*Set to true to show Privacy Policy button*/{% endcomment %}
-                              policyText: 'Privacy Policy', {% comment %}/*Text on Privacy Policy button*/{% endcomment %}                              
-                              policyURL: '/privacy/', {% comment %}/*URL of Privacy Policy*/{% endcomment %}
-                              autoEnable: true, {% comment %}/*Set to true for cookies to be accepted automatically. Banner still shows*/{% endcomment %}
-                              acceptOnContinue: false, {% comment %}/*Set to true to accept cookies when visitor moves to another page*/{% endcomment %}
-                              acceptOnScroll: false, {% comment %}/*Set to true to accept cookies when visitor scrolls X pixels up or down*/{% endcomment %}
-                              acceptAnyClick: false, {% comment %}/*Set to true to accept cookies when visitor clicks anywhere on the page*/{% endcomment %}
-                              expireDays: 365, {% comment %}/*Number of days for cookieBar cookie to be stored for*/{% endcomment %}
-                              renewOnVisit: false, {% comment %}/*Renew the cookie upon revisit to website*/{% endcomment %}
-                              forceShow: false, {% comment %}/*Force cookieBar to show regardless of user cookie preference*/{% endcomment %}
-                              effect: 'slide', {% comment %}/*Options: slide, fade, hide*/{% endcomment %}
-                              element: 'body', {% comment %}/*Element to append/prepend cookieBar to. Remember "." for class or "#" for id.*/{% endcomment %}
-                              append: false, {% comment %}/*Set to true for cookieBar HTML to be placed at base of website. Actual position may change according to CSS*/{% endcomment %}
-                              fixed: false, {% comment %}/*Set to true to add the class "fixed" to the cookie bar. Default CSS should fix the position*/{% endcomment %}
-                              bottom: false, {% comment %}/*Force CSS when fixed, so bar appears at bottom of website*/{% endcomment %}
-                              zindex: '', {% comment %}/*Can be set in CSS, although some may prefer to set here*/{% endcomment %}
-                              domain: String(window.location.hostname), {% comment %}/*Location of privacy policy*/{% endcomment %}
-                              referrer: String(document.referrer) {% comment %}/*Where visitor has come from*/{% endcomment %}
-                      };
-                      var options = $.extend(defaults,options);                                            
-                      {% comment %}/*Sets expiration date for cookie*/{% endcomment %}
-                      var expireDate = new Date();
-                      expireDate.setTime(expireDate.getTime()+(options.expireDays*86400000));
-                      expireDate = expireDate.toGMTString();
-                      
-                      var cookieEntry = 'cb-enabled={value}; expires='+expireDate+'; path=/';
-                                            
-                      {% comment %}/*Retrieves current cookie preference*/{% endcomment %}
-                      var i,cookieValue='',aCookie,aCookies=document.cookie.split('; ');
-                      for (i=0;i<aCookies.length;i++){
-                              aCookie = aCookies[i].split('=');
-                              if(aCookie[0]=='cb-enabled'){
-                                  cookieValue = aCookie[1];
-                              }
-                      }
-                      {% comment %}/*Sets up default cookie preference if not already set*/{% endcomment %}                      
-                      if(cookieValue=='' && doReturn!='cookies' && options.autoEnable){
-                              cookieValue = 'enabled';
-                              document.cookie = cookieEntry.replace('{value}','enabled');
-                      }else if((cookieValue=='accepted' || cookieValue=='declined') && doReturn!='cookies' && options.renewOnVisit){
-                              document.cookie = cookieEntry.replace('{value}',cookieValue);
-                      }
-                      if(options.acceptOnContinue){
-                              if(options.referrer.indexOf(options.domain)>=0 && String(window.location.href).indexOf(options.policyURL)==-1 && doReturn!='cookies' && doReturn!='set' && cookieValue!='accepted' && cookieValue!='declined'){
-                                      doReturn = 'set';
-                                      val = 'accepted';
-                              }
-                      }
-                      if(doReturn=='cookies'){
-                              {% comment %} /* Returns true if cookies are enabled, false otherwise*/ {% endcomment %}
-                              if(cookieValue=='enabled' || cookieValue=='accepted'){
-                                      return true;
-                              }else{
-                                      return false;
-                              }
-                      }else if(doReturn=='set' && (val=='accepted' || val=='declined')){
-                              {% comment %} /* Sets value of cookie to 'accepted' or 'declined'*/ {% endcomment %}
-                              document.cookie = cookieEntry.replace('{value}',val);
-                              if(val=='accepted'){
-                                      return true;
-                              }else{
-                                      return false;
-                              }
-                      }else{
-                              {% comment %}/*Sets up enable/accept button if required{% endcomment*/ %}
-                              var message = options.message.replace('{policy_url}',options.policyURL);
-                              
-                              if(options.acceptButton){
-                                      var acceptButton = '<a href="" class="cb-enable">'+options.acceptText+'</a>';
-                              }else{
-                                      var acceptButton = '';
-                              }
-                              {% comment %}/* Sets up disable/decline button if required*/ {% endcomment %}
-                              if(options.declineButton){
-                                      var declineButton = '<a href="" class="cb-disable">'+options.declineText+'</a>';
-                              }else{
-                                      var declineButton = '';
-                              }
-                              {% comment %}/* Sets up privacy policy button if required*/ {% endcomment %}
-                              if(options.policyButton){
-                                      var policyButton = '<a href="'+options.policyURL+'" class="cb-policy">'+options.policyText+'</a>';
-                              }else{
-                                      var policyButton = '';
-                              }
-                              {% comment %}/* Whether to add "fixed" class to cookie bar*/ {% endcomment %}
-                              if(options.fixed){
-                                      if(options.bottom){
-                                              var fixed = ' class="fixed bottom"';
-                                      }else{
-                                              var fixed = ' class="fixed"';
-                                      }
-                              }else{
-                                      var fixed = '';
-                              }
-                              if(options.zindex!=''){
-                                      var zindex = ' style="z-index:'+options.zindex+';"';
-                              }else{
-                                      var zindex = '';
-                              }
-                              {% comment %} /*Displays the cookie bar if arguments met*/ {% endcomment %}
-                              if(options.forceShow || cookieValue=='enabled' || cookieValue==''){
-                                      if(options.append){
-                                              $(options.element).append('<div id="cookie-bar"'+fixed+zindex+'><p>'+message+acceptButton+declineButton+policyButton+'</p></div>');
-                                      }else{
-                                              $(options.element).prepend('<div id="cookie-bar"'+fixed+zindex+'><p>'+message+acceptButton+declineButton+policyButton+'</p></div>');
-                                      }
-                              }
-                              
-                              var removeBar = function(func){
-                                      if(options.acceptOnScroll) $(document).off('scroll');
-                                      if(typeof(func)==='function') func(cookieValue);
-                                      if(options.effect=='slide'){
-                                              $('#cookie-bar').slideUp(300,function(){$('#cookie-bar').remove();});
-                                      }else if(options.effect=='fade'){
-                                              $('#cookie-bar').fadeOut(300,function(){$('#cookie-bar').remove();});
-                                      }else{
-                                              $('#cookie-bar').hide(0,function(){$('#cookie-bar').remove();});
-                                      }
-                                      $(document).unbind('click',anyClick);
-                              };
-                              var cookieAccept = function(){
-                                      document.cookie = cookieEntry.replace('{value}','accepted');
-                                      removeBar(options.acceptFunction);
-                              };
-                              var cookieDecline = function(){
-                                      var deleteDate = new Date();
-                                      deleteDate.setTime(deleteDate.getTime()-(864000000));
-                                      deleteDate = deleteDate.toGMTString();
-                                      aCookies=document.cookie.split('; ');
-                                      for (i=0;i<aCookies.length;i++){
-                                              aCookie = aCookies[i].split('=');
-                                              if(aCookie[0].indexOf('_')>=0){
-                                                      document.cookie = aCookie[0]+'=0; expires='+deleteDate+'; domain='+options.domain.replace('www','')+'; path=/';
-                                              }else{
-                                                      document.cookie = aCookie[0]+'=0; expires='+deleteDate+'; path=/';
-                                              }
-                                      }
-                                      document.cookie = cookieEntry.replace('{value}','declined');
-                                      removeBar(options.declineFunction);
-                              };
-                              var anyClick = function(e){
-                                      if(!$(e.target).hasClass('cb-policy')) cookieAccept();
-                              };
-                              
-                              $('#cookie-bar .cb-enable').click(function(){cookieAccept();return false;});
-                              $('#cookie-bar .cb-disable').click(function(){cookieDecline();return false;});
-                              if(options.acceptOnScroll){
-                                      var scrollStart = $(document).scrollTop(),scrollNew,scrollDiff;
-                                      $(document).on('scroll',function(){
-                                              scrollNew = $(document).scrollTop();
-                                              if(scrollNew>scrollStart){
-                                                      scrollDiff = scrollNew - scrollStart;
-                                              }else{
-                                                      scrollDiff = scrollStart - scrollNew;
-                                              }
-                                              if(scrollDiff>=Math.round(options.acceptOnScroll)) cookieAccept();
-                                      });
-                              }
-                              if(options.acceptAnyClick){
-                                      $(document).bind('click',anyClick);
-                              }
-                      }
-              };
-      })(jQuery);
-      {% comment %}<!-- This initiates the cookie bar -->{% endcomment %}      
-      $(document).ready(function(){
-          $.cookieBar({
-              message: 'This website uses cookies to track usage and preferences',
-              acceptText: 'I Understand',
-              policyButton: true,
-              policyText: 'Privacy Policy',
-              policyURL: '/privacy/',
-              bottom: true,
-              fixed: true,
-              zindex: '999',
-          });
-      });
-      </script>
-      <style>
-      #cookie-bar {background:#090a0b; height:auto; line-height:24px; color:#fff; text-align:center; padding:3px 0;}
-      #cookie-bar.fixed {position:fixed; top:0; left:0; width:100%;}
-      #cookie-bar.fixed.bottom {bottom:0; top:auto;}
-      #cookie-bar p {margin:0; padding:0;}
-      #cookie-bar a {color:#ffffff; display:inline-block; border-radius:3px; text-decoration:none; padding:0 6px; margin-left:8px;}
-      #cookie-bar .cb-enable {background:#26a8ed;}
-      #cookie-bar .cb-enable:hover {background:#26a8ed;}
-      #cookie-bar .cb-disable {background:#26a8ed;}
-      #cookie-bar .cb-disable:hover {background:#26a8ed;}
-      #cookie-bar .cb-policy {background:#26a8ed;}
-      #cookie-bar .cb-policy:hover {background:#26a8ed;}
-      </style>
-      {% comment %}
-      <!-- END jquery.cookiebar.js -->
-      {% endcomment %}
+<script>
+(function($){
+   $.cookieBar = function(options,val){
+      if(options=='cookies') {
+         var doReturn = 'cookies';
+      } else if(options=='set') {
+         var doReturn = 'set';
+      } else {
+         var doReturn = false;
+      }
+      var defaults = {
+                        message: 'We use cookies to track usage and preferences.', {% comment %}/*Message displayed on bar*/{% endcomment %}
+                        acceptButton: true, {% comment %}/*Set to true to show accept/enable button*/{% endcomment %}
+                        acceptText: 'I Understand', {% comment %}/*Text on accept/enable button*/{% endcomment %}
+                        acceptFunction: function(cookieValue){if(cookieValue!='enabled' && cookieValue!='accepted') window.location = window.location.href;}, {% comment %}/*Function to run after accept*/{% endcomment %}
+                        declineButton: false, {% comment %}/*Set to true to show decline/disable button*/{% endcomment %}
+                        declineText: 'Disable Cookies', {% comment %}/*Text on decline/disable button*/{% endcomment %}
+                        declineFunction: function(cookieValue){if(cookieValue=='enabled' || cookieValue=='accepted') window.location = window.location.href;}, {% comment %}/*Function to run after decline*/{% endcomment %}
+                        policyButton: false, {% comment %}/*Set to true to show Privacy Policy button*/{% endcomment %}
+                        policyText: 'Privacy Policy', {% comment %}/*Text on Privacy Policy button*/{% endcomment %}                              
+                        policyURL: '/privacy/', {% comment %}/*URL of Privacy Policy*/{% endcomment %}
+                        autoEnable: true, {% comment %}/*Set to true for cookies to be accepted automatically. Banner still shows*/{% endcomment %}
+                        acceptOnContinue: false, {% comment %}/*Set to true to accept cookies when visitor moves to another page*/{% endcomment %}
+                        acceptOnScroll: false, {% comment %}/*Set to true to accept cookies when visitor scrolls X pixels up or down*/{% endcomment %}
+                        acceptAnyClick: false, {% comment %}/*Set to true to accept cookies when visitor clicks anywhere on the page*/{% endcomment %}
+                        expireDays: 365, {% comment %}/*Number of days for cookieBar cookie to be stored for*/{% endcomment %}
+                        renewOnVisit: false, {% comment %}/*Renew the cookie upon revisit to website*/{% endcomment %}
+                        forceShow: false, {% comment %}/*Force cookieBar to show regardless of user cookie preference*/{% endcomment %}
+                        effect: 'slide', {% comment %}/*Options: slide, fade, hide*/{% endcomment %}
+                        element: 'body', {% comment %}/*Element to append/prepend cookieBar to. Remember "." for class or "#" for id.*/{% endcomment %}
+                        append: false, {% comment %}/*Set to true for cookieBar HTML to be placed at base of website. Actual position may change according to CSS*/{% endcomment %}
+                        fixed: false, {% comment %}/*Set to true to add the class "fixed" to the cookie bar. Default CSS should fix the position*/{% endcomment %}
+                        bottom: false, {% comment %}/*Force CSS when fixed, so bar appears at bottom of website*/{% endcomment %}
+                        zindex: '', {% comment %}/*Can be set in CSS, although some may prefer to set here*/{% endcomment %}
+                        domain: String(window.location.hostname), {% comment %}/*Location of privacy policy*/{% endcomment %}
+                        referrer: String(document.referrer) {% comment %}/*Where visitor has come from*/{% endcomment %}
+                };
+                var options = $.extend(defaults,options);                                            
+                {% comment %}/*Sets expiration date for cookie*/{% endcomment %}
+                var expireDate = new Date();
+                expireDate.setTime(expireDate.getTime()+(options.expireDays*86400000));
+                expireDate = expireDate.toGMTString();
+                
+                var cookieEntry = 'cb-enabled={value}; expires='+expireDate+'; path=/';
+                                        
+                {% comment %}/*Retrieves current cookie preference*/{% endcomment %}
+                var i,cookieValue='',aCookie,aCookies=document.cookie.split('; ');
+                for (i=0;i<aCookies.length;i++){
+                        aCookie = aCookies[i].split('=');
+                        if(aCookie[0]=='cb-enabled'){
+                                cookieValue = aCookie[1];
+                        }
+                }
+                {% comment %}/*Sets up default cookie preference if not already set*/{% endcomment %}                      
+                if(cookieValue=='' && doReturn!='cookies' && options.autoEnable){
+                        cookieValue = 'enabled';
+                        document.cookie = cookieEntry.replace('{value}','enabled');
+                }else if((cookieValue=='accepted' || cookieValue=='declined') && doReturn!='cookies' && options.renewOnVisit){
+                        document.cookie = cookieEntry.replace('{value}',cookieValue);
+                }
+                if(options.acceptOnContinue){
+                        if(options.referrer.indexOf(options.domain)>=0 && String(window.location.href).indexOf(options.policyURL)==-1 && doReturn!='cookies' && doReturn!='set' && cookieValue!='accepted' && cookieValue!='declined'){
+                                doReturn = 'set';
+                                val = 'accepted';
+                        }
+                }
+                if(doReturn=='cookies'){
+                        {% comment %} /* Returns true if cookies are enabled, false otherwise*/ {% endcomment %}
+                        if(cookieValue=='enabled' || cookieValue=='accepted'){
+                                return true;
+                        }else{
+                                return false;
+                        }
+                }else if(doReturn=='set' && (val=='accepted' || val=='declined')){
+                        {% comment %} /* Sets value of cookie to 'accepted' or 'declined'*/ {% endcomment %}
+                        document.cookie = cookieEntry.replace('{value}',val);
+                        if(val=='accepted'){
+                                return true;
+                        }else{
+                                return false;
+                        }
+                }else{
+                        {% comment %}/*Sets up enable/accept button if required{% endcomment*/ %}
+                        var message = options.message.replace('{policy_url}',options.policyURL);
+                        
+                        if(options.acceptButton){
+                                var acceptButton = '<a href="" class="cb-enable">'+options.acceptText+'</a>';
+                        }else{
+                                var acceptButton = '';
+                        }
+                        {% comment %}/* Sets up disable/decline button if required*/ {% endcomment %}
+                        if(options.declineButton){
+                                var declineButton = '<a href="" class="cb-disable">'+options.declineText+'</a>';
+                        }else{
+                                var declineButton = '';
+                        }
+                        {% comment %}/* Sets up privacy policy button if required*/ {% endcomment %}
+                        if(options.policyButton){
+                                var policyButton = '<a href="'+options.policyURL+'" class="cb-policy">'+options.policyText+'</a>';
+                        }else{
+                                var policyButton = '';
+                        }
+                        {% comment %}/* Whether to add "fixed" class to cookie bar*/ {% endcomment %}
+                        if(options.fixed){
+                                if(options.bottom){
+                                        var fixed = ' class="fixed bottom"';
+                                }else{
+                                        var fixed = ' class="fixed"';
+                                }
+                        }else{
+                                var fixed = '';
+                        }
+                        if(options.zindex!=''){
+                                var zindex = ' style="z-index:'+options.zindex+';"';
+                        }else{
+                                var zindex = '';
+                        }
+                        {% comment %} /*Displays the cookie bar if arguments met*/ {% endcomment %}
+                        if(options.forceShow || cookieValue=='enabled' || cookieValue==''){
+                                if(options.append){
+                                        $(options.element).append('<div id="cookie-bar"'+fixed+zindex+'><p>'+message+acceptButton+declineButton+policyButton+'</p></div>');
+                                }else{
+                                        $(options.element).prepend('<div id="cookie-bar"'+fixed+zindex+'><p>'+message+acceptButton+declineButton+policyButton+'</p></div>');
+                                }
+                        }
+                        
+                        var removeBar = function(func){
+                                if(options.acceptOnScroll) $(document).off('scroll');
+                                if(typeof(func)==='function') func(cookieValue);
+                                if(options.effect=='slide'){
+                                        $('#cookie-bar').slideUp(300,function(){$('#cookie-bar').remove();});
+                                }else if(options.effect=='fade'){
+                                        $('#cookie-bar').fadeOut(300,function(){$('#cookie-bar').remove();});
+                                }else{
+                                        $('#cookie-bar').hide(0,function(){$('#cookie-bar').remove();});
+                                }
+                                $(document).unbind('click',anyClick);
+                        };
+                        var cookieAccept = function(){
+                                document.cookie = cookieEntry.replace('{value}','accepted');
+                                removeBar(options.acceptFunction);
+                        };
+                        var cookieDecline = function(){
+                                var deleteDate = new Date();
+                                deleteDate.setTime(deleteDate.getTime()-(864000000));
+                                deleteDate = deleteDate.toGMTString();
+                                aCookies=document.cookie.split('; ');
+                                for (i=0;i<aCookies.length;i++){
+                                        aCookie = aCookies[i].split('=');
+                                        if(aCookie[0].indexOf('_')>=0){
+                                                document.cookie = aCookie[0]+'=0; expires='+deleteDate+'; domain='+options.domain.replace('www','')+'; path=/';
+                                        }else{
+                                                document.cookie = aCookie[0]+'=0; expires='+deleteDate+'; path=/';
+                                        }
+                                }
+                                document.cookie = cookieEntry.replace('{value}','declined');
+                                removeBar(options.declineFunction);
+                        };
+                        var anyClick = function(e){
+                                if(!$(e.target).hasClass('cb-policy')) cookieAccept();
+                        };
+                        
+                        $('#cookie-bar .cb-enable').click(function(){cookieAccept();return false;});
+                        $('#cookie-bar .cb-disable').click(function(){cookieDecline();return false;});
+                        if(options.acceptOnScroll){
+                                var scrollStart = $(document).scrollTop(),scrollNew,scrollDiff;
+                                $(document).on('scroll',function(){
+                                        scrollNew = $(document).scrollTop();
+                                        if(scrollNew>scrollStart){
+                                                scrollDiff = scrollNew - scrollStart;
+                                        }else{
+                                                scrollDiff = scrollStart - scrollNew;
+                                        }
+                                        if(scrollDiff>=Math.round(options.acceptOnScroll)) cookieAccept();
+                                });
+                        }
+                        if(options.acceptAnyClick){
+                                $(document).bind('click',anyClick);
+                        }
+                }
+        };
+})(jQuery);
+{% comment %}<!-- This initiates the cookie bar -->{% endcomment %}      
+$(document).ready(function(){
+        $.cookieBar({
+        message: 'This website uses cookies to track usage and preferences',
+        acceptText: 'I Understand',
+        policyButton: true,
+        policyText: 'Privacy Policy',
+        policyURL: '/privacy/',
+        bottom: true,
+        fixed: true,
+        zindex: '999',
+        });
+});
+</script>
+{% comment %}
+<!-- jquery.cookiebar.css -->
+{% endcomment %}
+<style>
+#cookie-bar {background:#090a0b; height:auto; line-height:24px; color:#fff; text-align:center; padding:3px 0;}
+#cookie-bar.fixed {position:fixed; top:0; left:0; width:100%;}
+#cookie-bar.fixed.bottom {bottom:0; top:auto;}
+#cookie-bar p {margin:0; padding:0;}
+#cookie-bar a {color:#ffffff; display:inline-block; border-radius:3px; text-decoration:none; padding:0 6px; margin-left:8px;}
+#cookie-bar .cb-enable {background:#26a8ed;}
+#cookie-bar .cb-enable:hover {background:#26a8ed;}
+#cookie-bar .cb-disable {background:#26a8ed;}
+#cookie-bar .cb-disable:hover {background:#26a8ed;}
+#cookie-bar .cb-policy {background:#26a8ed;}
+#cookie-bar .cb-policy:hover {background:#26a8ed;}
+</style>
