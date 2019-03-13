@@ -1,5 +1,6 @@
 ---
 layout: page
+lang: it
 permalink: /privacy/
 title: Privacy Policy
 tags: [privacy, privacy policy]

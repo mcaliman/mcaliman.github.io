@@ -1,5 +1,6 @@
 ---
 layout: home
+lang: en
 title: Home
 limit: 300
 show_excerpts: true

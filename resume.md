@@ -1,5 +1,6 @@
 ---
 layout: page
+lang: en
 permalink: /resume/
 title: Resume
 tags: [resume]
