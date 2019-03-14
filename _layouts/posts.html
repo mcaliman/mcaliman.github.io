@@ -1,9 +1,8 @@
 ---
 layout: page
 ---
-
+<!--POSTS_BEGIN -->
 {{ content }}
-
 <ul class="taxonomy-index">
   {% assign postsInYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
   {% for year in postsInYear %}
@@ -14,7 +13,6 @@ layout: page
     </li>
   {% endfor %}
 </ul>
-
 {% assign postsByYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 {% for year in postsByYear %}
   <section id="{{ year.name }}" class="taxonomy-section">
@@ -27,3 +25,4 @@ layout: page
     <a href="#page-title" class="back-to-top">{{ site.data.text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
   </section>
 {% endfor %}
+<!--POSTS_END -->

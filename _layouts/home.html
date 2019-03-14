@@ -1,17 +1,13 @@
 ---
 layout: page
 ---
-
+<!--HOME_BEGIN-->
 {{ content }}
-
 <div class="entries-{{ page.entries_layout | default: 'list' }}">
   {%- if site.plugins contains 'jekyll-paginate-v2' and page.pagination or site.gems contains 'jekyll-paginate-v2' and page.pagination -%}
-    {%- comment -%}
-      Add paginator.posts loop if jekyll-paginate plugin is enabled
-      and page.paginate == true
-    {%- endcomment -%}
     {% include posts-paginated.html %}
   {%- else -%}
     {% include posts-limit.html %}
   {%- endif -%}
 </div>
+<!--HOME_END-->

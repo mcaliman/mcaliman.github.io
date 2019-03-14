@@ -7,7 +7,6 @@
       </span>
     </a>
   {% endif %}
-
   {% if page.next %}
     <a class="page-next" href="{{ page.next.url | relative_url }}">
       <h4 class="page-pagination-label">{{ site.data.text[site.locale].next | default: 'Next' }}</h4>

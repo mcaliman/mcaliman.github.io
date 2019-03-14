@@ -1,5 +1,4 @@
-# Sample site navigation bar links
-
+# Site navigation bar links
 - title: Home
   url: /
 - title: About
@@ -16,6 +15,3 @@
   url: /resume/    
 - title: Privacy Policy
   url: /privacy/  
-  
-# - title: External Page
-#   url: https://the-page.com/you-want-to-link-to.html
