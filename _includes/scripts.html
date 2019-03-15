@@ -33,86 +33,66 @@
   {% include lunr-search-scripts.html %}
 {%- endif -%}
 
-
+{%- comment -%}
 <!-- jquery.cookiebar.js 
-message: Message displayed on bar
-acceptButton: Set to true to show accept/enable button
-
-acceptText: Text on accept/enable button
-acceptFunction: Function to run after accept
-declineButton: Set to true to show decline/disable button
-declineText: Text on decline/disable button
-declineFunction: Function to run after decline
-policyButton: Set to true to show Privacy Policy button
-policyText: Text on Privacy Policy button
-policyURL: URL of Privacy Policy
-autoEnable: Set to true for cookies to be accepted automatically. Banner still shows
-acceptOnContinue: Set to true to accept cookies when visitor moves to another page
-acceptOnScroll: Set to true to accept cookies when visitor scrolls X pixels up or down
-acceptAnyClick: Set to true to accept cookies when visitor clicks anywhere on the page
-expireDays: Number of days for cookieBar cookie to be stored for
-renewOnVisit: Renew the cookie upon revisit to website
-forceShow: Force cookieBar to show regardless of user cookie preference
-effect:  Options: slide, fade, hide
-element:  Element to append/prepend cookieBar to. Remember "." for class or "#" for id.
-append: Set to true for cookieBar HTML to be placed at base of website. Actual position may change according to CSS
-fixed: Set to true to add the class "fixed" to the cookie bar. Default CSS should fix the position
-bottom: Force CSS when fixed, so bar appears at bottom of website
-zindex: Can be set in CSS, although some may prefer to set here
-domain: Location of privacy policy
-referrer: Where visitor has come from
-
+DOCUMENTATION_BEGIN    
+    message:            Message displayed on bar
+    acceptButton:       Set to true to show accept/enable button
+    acceptText:         Text on accept/enable button
+    acceptFunction:     Function to run after accept
+    declineButton:      Set to true to show decline/disable button
+    declineText:        Text on decline/disable button
+    declineFunction:    Function to run after decline
+    policyButton:       Set to true to show Privacy Policy button
+    policyText:         Text on Privacy Policy button
+    policyURL:          URL of Privacy Policy
+    autoEnable:         Set to true for cookies to be accepted automatically. Banner still shows
+    acceptOnContinue:   Set to true to accept cookies when visitor moves to another page
+    acceptOnScroll:     Set to true to accept cookies when visitor scrolls X pixels up or down
+    acceptAnyClick:     Set to true to accept cookies when visitor clicks anywhere on the page
+    expireDays:         Number of days for cookieBar cookie to be stored for
+    renewOnVisit:       Renew the cookie upon revisit to website
+    forceShow:          Force cookieBar to show regardless of user cookie preference
+    effect:             Options: slide, fade, hide
+    element:            Element to append/prepend cookieBar to. Remember "." for class or "#" for id.
+    append:             Set to true for cookieBar HTML to be placed at base of website. Actual position may change according to CSS
+    fixed:              Set to true to add the class "fixed" to the cookie bar. Default CSS should fix the position
+    bottom:             Force CSS when fixed, so bar appears at bottom of website
+    zindex:             Can be set in CSS, although some may prefer to set here
+    domain:             Location of privacy policy
+    referrer:           Where visitor has come from
+DOCUMENTATION_END
 -->
-  
+{%- endcomment -%} 
 <script>
 (function ($) {
     $.cookieBar = function (options, val) {
-        if (options == 'cookies') {
-            var doReturn = 'cookies';
-        } else if (options == 'set') {
-            var doReturn = 'set';
-        } else {
-            var doReturn = false;
-        }
+        if (options == 'cookies') var doReturn = 'cookies';
+        else if (options == 'set') var doReturn = 'set';
+        else var doReturn = false;        
         var defaults = {
             message: 'We use cookies to track usage and preferences.', acceptButton: true, acceptText: 'I Understand',
             acceptFunction: function (cookieValue) { if (cookieValue != 'enabled' && cookieValue != 'accepted') window.location = window.location.href; },
-            declineButton: false,
-            declineText: 'Disable Cookies',
+            declineButton: false, declineText: 'Disable Cookies',
             declineFunction: function (cookieValue) { if (cookieValue == 'enabled' || cookieValue == 'accepted') window.location = window.location.href; },
-            policyButton: false,
-            policyText: 'Privacy Policy',
-            policyURL: '/privacy/',
-            autoEnable: true,
-            acceptOnContinue: false,
-            acceptOnScroll: false,
-            acceptAnyClick: false,
-            expireDays: 365,
-            renewOnVisit: false,
-            forceShow: false,
-            effect: 'slide',
-            element: 'body',
-            append: false,
-            fixed: false,
-            bottom: false,
-            zindex: '',
-            domain: String(window.location.hostname),
-            referrer: String(document.referrer)
+            policyButton: false, policyText: 'Privacy Policy', policyURL: '/privacy/', autoEnable: true,
+            acceptOnContinue: false, acceptOnScroll: false, acceptAnyClick: false,
+            expireDays: 365, renewOnVisit: false, forceShow: false,
+            effect: 'slide', element: 'body',
+            append: false, fixed: false, bottom: false, zindex: '',
+            domain: String(window.location.hostname), referrer: String(document.referrer)
         };
-        var options = $.extend(defaults, options);
-        /*Sets expiration date for cookie*/
-        var expireDate = new Date();
+        var options = $.extend(defaults, options);        
+        var expireDate = new Date(); /*Sets expiration date for cookie*/
         expireDate.setTime(expireDate.getTime() + (options.expireDays * 86400000));
         expireDate = expireDate.toGMTString();
         var cookieEntry = 'cb-enabled={value}; expires=' + expireDate + '; path=/';
-        /*Retrieves current cookie preference*/
-        var i, cookieValue = '', aCookie, aCookies = document.cookie.split('; ');
+        var i, cookieValue = '', aCookie, aCookies = document.cookie.split('; '); /*Retrieves current cookie preference*/
         for (i = 0; i < aCookies.length; i++) {
             aCookie = aCookies[i].split('=');
             if (aCookie[0] == 'cb-enabled') cookieValue = aCookie[1];
-        }
-        /*Sets up default cookie preference if not already set*/
-        if (cookieValue == '' && doReturn != 'cookies' && options.autoEnable) {
+        }        
+        if (cookieValue == '' && doReturn != 'cookies' && options.autoEnable) {/*Sets up default cookie preference if not already set*/
             cookieValue = 'enabled';
             document.cookie = cookieEntry.replace('{value}', 'enabled');
         } else if ((cookieValue == 'accepted' || cookieValue == 'declined') && doReturn != 'cookies' && options.renewOnVisit) {
@@ -124,33 +104,18 @@ referrer: Where visitor has come from
                 val = 'accepted';
             }
         }
-        if (doReturn == 'cookies') {
-            /* Returns true if cookies are enabled, false otherwise*/
+        if (doReturn == 'cookies') {            
             if (cookieValue == 'enabled' || cookieValue == 'accepted') return true; else return false;
         } else if (doReturn == 'set' && (val == 'accepted' || val == 'declined')) {
-            /* Sets value of cookie to 'accepted' or 'declined'*/
             document.cookie = cookieEntry.replace('{value}', val);
             if (val == 'accepted') return true; else return false;
-        } else {
-            /*Sets up enable/accept button if required*/
-            var message = options.message.replace('{policy_url}', options.policyURL);
-            /* if (options.acceptButton) var acceptButton = '<a href="" class="cb-enable">' + options.acceptText + '</a>'; else var acceptButton = '';*/
-            var acceptButton = (options.acceptButton)? '<a href="" class="cb-enable">' + options.acceptText + '</a>' : '';                    
-
-            /* Sets up disable/decline button if required*/
-            /* if (options.declineButton) var declineButton = '<a href="" class="cb-disable">' + options.declineText + '</a>'; else var declineButton = '';*/
-            var declineButton = (options.declineButton)? '<a href="" class="cb-disable">' + options.declineText + '</a>' : '';   
-
-            /* Sets up privacy policy button if required*/
-            /*if (options.policyButton) var policyButton = '<a href="' + options.policyURL + '" class="cb-policy">' + options.policyText + '</a>'; else var policyButton = '';*/
-            var policyButton = (options.policyButton)?  '<a href="' + options.policyURL + '" class="cb-policy">' + options.policyText + '</a>' : '';  
-
-            /* Whether to add "fixed" class to cookie bar*/
-            if (options.fixed) {
-                if (options.bottom) var fixed = ' class="fixed bottom"'; else var fixed = ' class="fixed"';
-            } else {
-                var fixed = '';
-            }
+        } else {            
+            var message       =  options.message.replace('{policy_url}', options.policyURL);/*Sets up enable/accept button if required*/
+            var acceptButton  = (options.acceptButton)? '<a href="" class="cb-enable">' + options.acceptText + '</a>' : '';                                
+            var declineButton = (options.declineButton)? '<a href="" class="cb-disable">' + options.declineText + '</a>' : '';   /* Sets up disable/decline button if required*/            
+            var policyButton  = (options.policyButton)?  '<a href="' + options.policyURL + '" class="cb-policy">' + options.policyText + '</a>' : '';  /* Sets up privacy policy button if required*/                        
+            if (options.fixed) { if (options.bottom) var fixed = ' class="fixed bottom"'; else var fixed = ' class="fixed"';} /* Whether to add "fixed" class to cookie bar*/
+            else { var fixed = ''; }
             if (options.zindex != '') var zindex = ' style="z-index:' + options.zindex + ';"'; else var zindex = '';
             /*Displays the cookie bar if arguments met*/
             if (options.forceShow || cookieValue == 'enabled' || cookieValue == '') {
@@ -176,7 +141,6 @@ referrer: Where visitor has come from
                 aCookies = document.cookie.split('; ');
                 for (i = 0; i < aCookies.length; i++) {
                     aCookie = aCookies[i].split('=');
-                    /*if (aCookie[0].indexOf('_') >= 0) document.cookie = aCookie[0] + '=0; expires=' + deleteDate + '; domain=' + options.domain.replace('www', '') + '; path=/'; else document.cookie = aCookie[0] + '=0; expires=' + deleteDate + '; path=/';*/
                     document.cookie = (aCookie[0].indexOf('_') >= 0) ? (aCookie[0] + '=0; expires=' + deleteDate + '; domain=' + options.domain.replace('www', '') + '; path=/') : (aCookie[0] + '=0; expires=' + deleteDate + '; path=/');
                 }
                 document.cookie = cookieEntry.replace('{value}', 'declined');
@@ -191,7 +155,6 @@ referrer: Where visitor has come from
                 var scrollStart = $(document).scrollTop(), scrollNew, scrollDiff;
                 $(document).on('scroll', function () {
                     scrollNew = $(document).scrollTop();
-                    /* if (scrollNew > scrollStart) scrollDiff = scrollNew - scrollStart; else scrollDiff = scrollStart - scrollNew;*/                    
                     scrollDiff = (scrollNew > scrollStart) ? (scrollNew - scrollStart) :  (scrollStart - scrollNew);
                     if (scrollDiff >= Math.round(options.acceptOnScroll)) cookieAccept();
                 });
@@ -200,19 +163,15 @@ referrer: Where visitor has come from
         }
     };
 })(jQuery);
-
-/* This initiates the cookie bar */
+/*Initiates the cookie bar*/
 $(document).ready(function () {
     $.cookieBar({
         message: 'This website uses cookies to track usage and preferences', acceptText: 'I Understand', policyButton: true,
         policyText: 'Privacy Policy', policyURL: '/privacy/', bottom: true, fixed: true, zindex: '999',
     });
 });
-
 </script>
-
 <!-- jquery.cookiebar.css -->
-
 <style>
 #cookie-bar {background:#090a0b; height:auto; line-height:24px; color:#fff; text-align:center; padding:3px 0;}
 #cookie-bar.fixed {position:fixed; top:0; left:0; width:100%;}
