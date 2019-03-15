@@ -27,14 +27,13 @@
   </script>
 {%- endif %}
 {% if site.mathjax == true %}
-   {% comment %}<!-- MathJax -->{% endcomment %}
    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 {% endif %}
 {%- if page.layout == "search" -%}
   {% include lunr-search-scripts.html %}
 {%- endif -%}
 
-{% comment %}
+
 <!-- jquery.cookiebar.js 
 message: Message displayed on bar
 acceptButton: Set to true to show accept/enable button
@@ -64,7 +63,7 @@ domain: Location of privacy policy
 referrer: Where visitor has come from
 
 -->
-{% endcomment %}    
+  
 <script>
 (function ($) {
     $.cookieBar = function (options, val) {
@@ -133,7 +132,7 @@ referrer: Where visitor has come from
             document.cookie = cookieEntry.replace('{value}', val);
             if (val == 'accepted') return true; else return false;
         } else {
-            /*Sets up enable/accept button if required{% endcomment*/
+            /*Sets up enable/accept button if required*/
             var message = options.message.replace('{policy_url}', options.policyURL);
             /* if (options.acceptButton) var acceptButton = '<a href="" class="cb-enable">' + options.acceptText + '</a>'; else var acceptButton = '';*/
             var acceptButton = (options.acceptButton)? '<a href="" class="cb-enable">' + options.acceptText + '</a>' : '';                    
@@ -211,9 +210,9 @@ $(document).ready(function () {
 });
 
 </script>
-{% comment %}
+
 <!-- jquery.cookiebar.css -->
-{% endcomment %}
+
 <style>
 #cookie-bar {background:#090a0b; height:auto; line-height:24px; color:#fff; text-align:center; padding:3px 0;}
 #cookie-bar.fixed {position:fixed; top:0; left:0; width:100%;}
