@@ -1,3 +1,8 @@
 <div class="notice">
-{% if site.notice %}{{ site.notice }}{% endif %}
+{% if site.notice %}{{ site.notice | markdownify }}{% endif %}
+</div>
+<div class="copyright">
+    {% if site.copyright %}
+    <p>&copy;{{ site.copyright | markdownify }}</p>
+    {% endif %}
 </div>
