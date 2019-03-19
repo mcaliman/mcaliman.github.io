@@ -7,7 +7,7 @@
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
+#
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
@@ -17,6 +17,7 @@
 remote_theme: "mmistakes/so-simple-theme"
 # remote_theme: mmistakes/so-simple-theme
 # locale: en-US
+#
 locale: it-IT
 title: "Massimo Caliman's blog"
 description: "Computer Science and Data Science"
@@ -26,7 +27,7 @@ url: https://massimocaliman.it
 logo: /images/logo.jpg # path of site logo, e.g. "/images/logo.png"
 date_format: "%B %-d, %Y"
 read_time: true # reading time estimates, e.g. true
-words_per_minute: 200 # 200
+words_per_minute: 200 
 mathjax: true # MathJax equations, e.g. true
 google_fonts:
   - name: "Source Sans Pro"
@@ -38,18 +39,15 @@ disqus:
   shortname: # mcaliman # Disqus shortname, e.g. "my_disqus_shortname"
 twitter:
   username: mcaliman # site's Twitter username, e.g. "mmistakes"
-
 # Liquid
 liquid:
   error_mode: strict
-
 # Build settings
 permalink: /:categories/:title/
 # permalink: /:title/
 markdown: kramdown
 feed:
   path: atom.xml
-
 # Pagination - https://jekyllrb.com/docs/pagination/
 # paginate: 10
 # paginate_path: /page:num/
@@ -61,15 +59,12 @@ pagination:
      trail: 
         before: 2
         after: 2     
-
-
 # Search
 search_full_content: true # false # can have performance implications for large sites
-
 # Taxonomy pages
 # category_archive_path: "/categories/#"
 # tag_archive_path: "/tags/#"
-
+#
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -81,14 +76,14 @@ search_full_content: true # false # can have performance implications for large 
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
+#
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
 #  - jekyll-paginate
   - jekyll-paginate-v2
-
+#
 # Front Matter Defaults
 defaults:
   # Posts defaults
@@ -98,7 +93,7 @@ defaults:
     values:
       layout: post
       share: true
-
+#
 # Site Author
 author:
   name: Massimo Caliman
@@ -109,9 +104,8 @@ author:
     - title:
       url:
       icon:
-
+#
 copyright: "© Copyright 1999-2019 Massimo Caliman - All Rights Reserved."
-
 # Footer Links
 footer_links:
   - title: Feed
@@ -128,5 +122,4 @@ footer_links:
     icon: fab fa-linkedin-in 
   - title: Mail
     url: mailto:mcaliman@gmail.com
-    icon: fas fa-at 
-      
+    icon: fas fa-at       

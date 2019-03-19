@@ -5,8 +5,6 @@ permalink: /resume/
 title: Resume
 tags: [resume]
 modified: 2017-11-07
-
-
 image:
   path: /images/unsplash/maximilian-weisbecker-544039-unsplash.jpg
   thumbnail: /images/unsplash/maximilian-weisbecker-544039-unsplash.jpg
