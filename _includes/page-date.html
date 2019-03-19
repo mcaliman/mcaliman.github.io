@@ -2,9 +2,3 @@
   {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
   <a class="u-url" href="{{ entry.url | relative_url }}">{{ page.date | date: date_format }}</a>
 </time>
-{%- if page.modified -%} 
-<time class="page-date dt-published" datetime="{{ page.modified | date_to_xmlschema }}">
-  {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
-  (Modified <a class="u-url" href="{{ entry.url | relative_url }}">{{ page.modified | date: date_format }}</a>)
-</time> 
-{%- endif -%}

@@ -20,6 +20,19 @@ layout: default
       </header>
       <div class="page-content">
         {{ content }}
+
+        {%- if page.modified -%}
+        <div class="page-date">
+          <span class="page-date">Last update: </span><time class="page-date dt-published" datetime="{{ page.modified | date_to_xmlschema }}">
+            {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
+            {{ page.modified | date: date_format }}
+          </time> 
+        </div>
+        
+
+        
+        {%- endif -%}
+
         {% if page.share %}
           {% include social-share.html %}
         {% endif %}

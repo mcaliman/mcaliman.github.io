@@ -102,9 +102,9 @@ author:
   email: mcaliman@gmail.com
   twitter: mcaliman
   links:
-    - title:
-      url:
-      icon:
+    - title: GitHub
+      url: https://github.com/mcaliman
+      icon: fab fa-github
 #
 copyright: "© Copyright 1999-2019 Massimo Caliman - All Rights Reserved."
 # Footer Links
