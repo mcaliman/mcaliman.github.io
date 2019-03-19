@@ -116,7 +116,7 @@ author:
       icon: fas fa-at      
 #
 copyright: "©1999-2019 Massimo Caliman - All Rights Reserved."
-notices: Questo sito non rappresenta una testata giornalistica, in quanto viene aggiornato senza alcuna periodicità.Non può pertanto considerarsi un prodotto editoriale ex L.62 7/3/2001.
+notice: Questo sito non rappresenta una testata giornalistica, in quanto viene aggiornato senza alcuna periodicità.Non può pertanto considerarsi un prodotto editoriale ex L.62 7/3/2001.
 # Footer Links
 footer_links:
   - title: Feed
