@@ -25,7 +25,8 @@ baseurl: # the subpath of your site, e.g. "/blog"
 url: https://massimocaliman.it 
 # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: /images/logo.jpg # path of site logo, e.g. "/images/logo.png"
-date_format: "%B %-d, %Y"
+# date_format: "%B %-d, %Y"
+date_format: "%-d/%-m/%y"
 read_time: true # reading time estimates, e.g. true
 words_per_minute: 200 
 mathjax: true # MathJax equations, e.g. true

@@ -3,7 +3,7 @@ layout: post
 lang: it
 title: "Download di file remoti con Python #2"
 excerpt: "Proseguiamo nell'automatizione e vediamo come decompripre i file .gz"
-modified: 2019-03-05
+modified: 2019-03-19
 categories: "Python"
 tags: [Python]
 image:

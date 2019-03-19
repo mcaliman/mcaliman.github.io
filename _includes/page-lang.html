@@ -1,12 +1,12 @@
   <h3 class="page-taxonomies-title">Languages</h3>
   <ul class="page-taxonomies">
       <li class="page-taxonomy">
-        {%- if page.lang=='it' -%}>
+        {%- if page.lang=='it' -%}
           <span class="p-category">Italian</span>
         {%- else if page.lang='en' -%}
-          <a class="p-category" title="English">English</a>                  
+          <span class="p-category">English</span>                  
         {%- else -%}
-          <a class="p-category" title="{{ page.lang | default: 'Lang undefined' }}">{{ page.lang }}</a>
+          <span class="p-category">Undefined</span>  
         {%- endif -%}
       </li>
   </ul>
