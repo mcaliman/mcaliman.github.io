@@ -105,6 +105,13 @@ author:
     - title: GitHub
       url: https://github.com/mcaliman
       icon: fab fa-github
+    - title: Twitter
+      url: https://twitter.com/mcaliman
+      icon: fab fa-twitter
+    - title: Linkedin
+      url: https://www.linkedin.com/in/mcaliman/
+      icon: fab fa-linkedin-in
+      
 #
 copyright: "© Copyright 1999-2019 Massimo Caliman - All Rights Reserved."
 # Footer Links
