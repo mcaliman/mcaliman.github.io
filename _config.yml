@@ -111,7 +111,9 @@ author:
     - title: Linkedin
       url: https://www.linkedin.com/in/mcaliman/
       icon: fab fa-linkedin-in
-      
+    - title: Mail
+      url: mailto:mcaliman@gmail.com
+      icon: fas fa-at      
 #
 copyright: "© Copyright 1999-2019 Massimo Caliman - All Rights Reserved."
 # Footer Links
