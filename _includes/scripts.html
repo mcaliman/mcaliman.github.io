@@ -1,17 +1,17 @@
-
-{%- if site.footer_scripts -%}
+<!-- SCRIPTS_BEGIN -->
+{% if site.footer_scripts -%}
   {%- for script in site.footer_scripts -%}
     {%- if script contains "://" -%}
       {%- capture script_path %}{{ script }}{% endcapture -%}
     {%- else -%}
       {%- capture script_path %}{{ script | absolute_url }}{% endcapture -%}
     {%- endif -%}
-    <script src="{{ script_path }}"></script>
+<script src="{{ script_path }}"></script>
   {%- endfor -%}
 {%- else -%}
-  <script src="{{ '/assets/js/jquery-3.2.1.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
-  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+<script src="{{ '/assets/js/jquery-3.2.1.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
 {%- endif -%}
 {%- if jekyll.environment == 'production' and site.google_analytics -%}
   <script>
@@ -26,8 +26,8 @@
   }
   </script>
 {%- endif %}
-{% if site.mathjax == true %}
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+{%- if site.mathjax == true %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 {% endif %}
 {%- if page.layout == "search" -%}
   {% include lunr-search-scripts.html %}
@@ -185,3 +185,4 @@ $(document).ready(function () {
 #cookie-bar .cb-policy {background:#26a8ed;}
 #cookie-bar .cb-policy:hover {background:#26a8ed;}
 </style>
+<!-- SCRIPTS_END -->
