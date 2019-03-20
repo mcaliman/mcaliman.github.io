@@ -1,10 +1,9 @@
 ---
 layout: default
 ---
-<!--PAGE_BEGIN -->
 <main id="main" class="main-content" aria-label="Content">
 <article>
-{%- include page-image.html -%}
+{% include page-image.html %}
 <div class="page-wrapper">
   <header class="page-header">
     {%- if page.id -%}
@@ -20,7 +19,7 @@ layout: default
   </header>
 <div class="page-content">
   {{ content }}
-  {%- if page.modified -%}
+  {% if page.modified -%}
   <div class="page-date">
     <span class="page-date">Last update: </span><time class="page-date dt-published" datetime="{{ page.modified | date_to_xmlschema }}">
       {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
@@ -35,4 +34,3 @@ layout: default
 </div>
 </article>
 </main>
-<!--PAGE_END -->
