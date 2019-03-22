@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "GlassFish V3: la console amministrazione prendendo troppo tempo per caricare."
 excerpt: ""
-category: ComputerScience
+category: "Computer Science"
 date:   2014-01-11 22:45:33
 tags: [Java, GlassFishV3]
 comments: true

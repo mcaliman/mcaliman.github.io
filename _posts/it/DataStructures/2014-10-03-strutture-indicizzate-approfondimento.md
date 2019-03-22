@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Strutture indicizzate approfondimenti"
 excerpt: ""
-category: AlgorithmsAndDataStructures
+category: "Data Structures"
 date:   2014-10-03 22:45:33
 tags: [Java,Strutture indicizzate,Strutture Dati]
 comments: true

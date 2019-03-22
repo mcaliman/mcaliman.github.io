@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Algoritmo di visita generica per un albero"
 excerpt: ""
-category: AlgorithmsAndDataStructures
+category: Algorithms
 date:   2014-10-10 22:45:33
 tags: [Java,Algoritmi,Alberi]
 image:

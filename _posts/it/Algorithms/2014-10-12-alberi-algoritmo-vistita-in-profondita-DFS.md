@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Algoritmo di visita in profondità per un albero (DFS o Depth First Search)"
 excerpt: ""
-category: AlgorithmsAndDataStructures
+category: Algorithms
 date:   2014-10-12 22:45:33
 tags: [Java,Algoritmi,Alberi]
 image:

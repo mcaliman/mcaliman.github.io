@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Pile o Stack"
 excerpt: ""
-category: AlgorithmsAndDataStructures
+category: "Data Structures"
 date:   2014-09-30 22:45:33
 tags: [Java,Pile o Stack,Strutture Dati]
 image:

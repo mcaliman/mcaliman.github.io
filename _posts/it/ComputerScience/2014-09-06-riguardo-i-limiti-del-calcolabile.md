@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Riguardo i limiti del calcolabile"
 excerpt: ""
-category: ComputerScience
+category: "Computer Science"
 date:   2014-09-06 22:45:33
 tags: [Python]
 comments: true

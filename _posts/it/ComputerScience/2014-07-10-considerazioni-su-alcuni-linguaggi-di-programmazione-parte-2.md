@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Considerazioni su alcuni Linguaggi di Programmazione Parte 2"
 excerpt: ""
-category: ComputerScience
+category: "Computer Science"
 date:   2014-07-10 22:45:33
 tags: [Linguaggi di programmazione,Java,C,C++,C#,Ada]
 comments: true

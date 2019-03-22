@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Workshop Tecnologie e Professionalità per la SOA"
 excerpt: ""
-category: ComputerScience
+category: "Computer Science"
 date:   2008-10-01 22:45:33
 tags: [SOA]
 comments: true
