@@ -5,7 +5,7 @@ title:  "Riguardo i limiti del calcolabile"
 excerpt: ""
 category: "Computer Science"
 date:   2014-09-06 22:45:33
-tags: [Python]
+tags: [Theoretical Computer Science]
 comments: true
 share: true
 ---
