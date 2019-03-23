@@ -14,11 +14,9 @@ comments: true
 share: true
 ---
 
-Quando qualcuno dice, "Voglio un linguaggio di programmazione nel quale ho bisogno soltanto di dire
-ciò che voglio venga fatto", dagli un lecca-lecca
-*(Alan Perlis)*
+> "Quando qualcuno dice, 'Voglio un linguaggio di programmazione nel quale ho bisogno soltanto di dire ciò che voglio venga fatto', dagli un lecca-lecca" (Alan Perlis)
 
-﻿Uno dei compiti più comuni da svolgere su un albero è quello di effettuare una sua visita, cioè passare in rassegna ogni suo nodo. Con il termine in linguaggio naturale "passare in rassegna” intendiamo “applicare una qualche funzione” al nodo in esame fosse anche la semplice stampa a video che esso è stato visitato.
+Uno dei compiti più comuni da svolgere su un albero è quello di effettuare una sua visita, cioè passare in rassegna ogni suo nodo. Con il termine in linguaggio naturale "passare in rassegna” intendiamo “applicare una qualche funzione” al nodo in esame fosse anche la semplice stampa a video che esso è stato visitato.
 
 Il procedimento di visita più generico possibile è visibile nell'algoritmo in pseudocodice riportato sotto
 
