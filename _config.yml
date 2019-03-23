@@ -21,6 +21,8 @@ remote_theme: "mmistakes/so-simple-theme"
 locale: it-IT
 title: "Massimo Caliman's blog"
 description: "Computer Science and Data Science"
+# Custom variable
+blog_release: 19.0323
 baseurl: # the subpath of your site, e.g. "/blog"
 url: https://massimocaliman.it 
 # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
