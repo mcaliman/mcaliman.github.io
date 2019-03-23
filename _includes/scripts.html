@@ -82,7 +82,7 @@ DOCUMENTATION_END
             domain: String(window.location.hostname), referrer: String(document.referrer)
         };
         var options = $.extend(defaults, options);        
-        var expireDate = new Date(); /*Sets expiration date for cookie*/
+        var expireDate = new Date(); 
         expireDate.setTime(expireDate.getTime() + (options.expireDays * 86400000));
         expireDate = expireDate.toGMTString();
         var cookieEntry = 'cb-enabled={value}; expires=' + expireDate + '; path=/';
@@ -162,7 +162,7 @@ DOCUMENTATION_END
         }
     };
 })(jQuery);
-/*Initiates the cookie bar*/
+
 $(document).ready(function () {
     $.cookieBar({
         message: 'This website uses cookies to track usage and preferences', acceptText: 'I Understand', policyButton: true,
@@ -170,7 +170,7 @@ $(document).ready(function () {
     });
 });
 </script>
-<!-- jquery.cookiebar.css -->
+
 <style>
 #cookie-bar {background:#090a0b; height:auto; line-height:24px; color:#fff; text-align:center; padding:3px 0;}
 #cookie-bar.fixed {position:fixed; top:0; left:0; width:100%;}

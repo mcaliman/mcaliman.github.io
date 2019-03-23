@@ -10,8 +10,7 @@ comments: true
 share: true
 ---
 
-Mentre in fisica devi capire come è fatto il mondo, in informatica sei tu a crearlo. Dentro i confini del computer, sei tu il creatore. Controlli – almeno potenzialmente – tutto ciò che vi succede. Se sei abbastanza bravo, puoi essere un Dio. Su piccola scala.
-*(Linus Torvalds, Rivoluzionario per caso, 2001)*
+>Mentre in fisica devi capire come è fatto il mondo, in informatica sei tu a crearlo.Dentro i confini del computer, sei tu il creatore. Controlli – almeno potenzialmente – tutto ciò che vi succede. Se sei abbastanza bravo, puoi essere un Dio. Su piccola scala.(Linus Torvalds, Rivoluzionario per caso, 2001)
 
 1. Effettuare il download del JDBC driver per MySQL dall'indirizzo
    http://dev.mysql.com/downloads/connector/j/3.1.html
