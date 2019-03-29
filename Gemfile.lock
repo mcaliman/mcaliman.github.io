@@ -178,7 +178,6 @@ DEPENDENCIES
   jekyll
   jekyll-algolia
   jekyll-figure!
-  jekyll-paginate
   jekyll-paginate-v2
   jekyll-seo-tag
   jekyll-sitemap
@@ -189,4 +188,4 @@ DEPENDENCIES
   rake
 
 BUNDLED WITH
-   1.16.3
+   1.17.3
