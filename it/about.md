@@ -12,6 +12,8 @@ image:
   caption: "[Photo by Chris Ried on Unsplash](https://unsplash.com/photos/ieic5Tq8YMk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
 ---
 
+[Also available in English language](/about)
+
 Mi chiamo Massimo Caliman, Software architect e developer con consolidata esperienza in Java.
 Lavoro come specialista IT dal 1995 e dal 1998 quasi esclusivamente in ambito Java Enterprise. 
 Sono stato menbro della Java Italian Association dal 1999 e cofondatore del Java User Group della città di Genova.
