@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Alfabeti, simboli, stringhe e linguaggi."
 excerpt: "Cosa sono gli alfabeti, simboli e stringhe dal punto di vista dell'informatica teorica."
-category: "Computer Science"
+category: "Theoretical Computer Science"
 date:   2018-03-20 22:45:33
 tags: [Theoretical Computer Science]
 comments: true
