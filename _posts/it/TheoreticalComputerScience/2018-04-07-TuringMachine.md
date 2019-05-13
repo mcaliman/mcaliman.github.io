@@ -2,10 +2,11 @@
 layout: post
 lang: it
 title:  "Turing Machine"
-excerpt: "Concetti e informazioni di base sulle TM"
+excerpt: "Concetti e informazioni di base sulle Macchine di Turing, linguaggio accettato, linguaggi ricorsivamente enumerabili e ricorsivi"
 category: "Theoretical Computer Science"
 date:   2018-04-07 22:45:33
-tags: [Turing Machine]
+update: 2019-05-12 22:45:33
+tags: [Turing Machine,Linguaggi ricorsivamente enumerabili,Linguaggi ricorsivi]
 comments: true
 share: true
 ---
@@ -48,5 +49,14 @@ La `relazione di raggiungibilità` &#8866;<sub>M</sub>* tra configurazioni è de
 ossia &rho;&#8866;<sub>M</sub>*q' &hArr; vi è una sequenza &rho;<sub>0</sub>,...,&rho;<sub>n</sub>&ge;0 t.c.
 &rho;<sub>i</sub>&#8866;<sub>M</sub>&rho;<sub>i-1</sub> per i&isin;[1,n-1] , &rho;<sub>0</sub>=&rho;<sub>i</sub>,&rho;<sub>n</sub>=&rho;'
 
+# Linguaggio accettato da una TM
+Dato M=&rang;Q,&Sigma;,&Gamma;,q<sub>0</sub>,B,F&lang; una TM, il linguaggio L(M)&sube;&Sigma;* accettato da M è definito come
+L(M)={u&isin;&Sigma;* | q<sub>0</sub>u&#8866;&alpha;q&beta;,q&isin;F}
+sulle stringhe non accettate la computazione potrebbe non terminare.
+Alternativa senza stati finali è dove la stringa è accettata &hArr; la computazione corrispondente termina.
 
+# Linguaggi ricorsivamente enumerabili (r.e)
+Un linguaggio è r.e. se è accettato da una TM, su qualche stringa potrebbe accadere (se non nel linguaggio) che la TM non termini.
 
+# Linguaggi ricorsivi
+Un linguaggio è ricorsivo se è accettato da una TM che termina su ogni input
