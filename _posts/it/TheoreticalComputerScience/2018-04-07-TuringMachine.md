@@ -5,10 +5,11 @@ title:  "Turing Machine"
 excerpt: "Concetti e informazioni di base sulle Macchine di Turing, linguaggio accettato, linguaggi ricorsivamente enumerabili e ricorsivi"
 category: "Theoretical Computer Science"
 date:   2018-04-07 22:45:33
-update: 2019-05-12 22:45:33
+modified: 2019-05-12 22:45:33
 tags: [Turing Machine,Linguaggi ricorsivamente enumerabili,Linguaggi ricorsivi]
 comments: true
 share: true
+updated: true
 ---
 
 > Kleeneliness is next to Gödeliness 
