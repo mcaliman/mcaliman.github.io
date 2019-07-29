@@ -14,13 +14,13 @@ modified: 2014-12-30
 
 # Privacy
 
-massimocaliman.it si impegna a rispettare la privacy di tutti gli utenti e la riservatezza dei dati personali, dei dati sul traffico e del contenuto delle comunicazioni.
+caliman.dev si impegna a rispettare la privacy di tutti gli utenti e la riservatezza dei dati personali, dei dati sul traffico e del contenuto delle comunicazioni.
 
 Con la presente informativa ai sensi dell’art. 13 D. Lgs. 196/2003 ("codice privacy") intendiamo aiutare gli utenti a comprendere in che modo siano utilizzati e tutelati i dati forniti dagli utenti nell’utilizzo delle comunicazioni internet e del sito web.
 
 ## Trattamento dei dati personali
 
-massimocaliman.it tratta due tipologie di dati personali:
+caliman.dev tratta due tipologie di dati personali:
 
 1. I dati che vengono memorizzati sui sistemi informatici in seguito al loro funzionamento: log e cookies
 2. I dati che gli utenti trasmettono attraverso la compilazione e l'invio di messaggi dal sito: indirizzo e-mail e messaggio
@@ -78,7 +78,7 @@ Alcune operazioni non potrebbero essere compiute senza l’uso dei cookies, che 
 
 I cookie possono rimanere nel sistema anche per lunghi periodi e possono contenere anche un codice identificativo unico. Ciò consente ai siti che li utilizzano di tenere traccia della navigazione dell’utente all’interno del sito stesso, per finalità statistiche o pubblicitarie, per creare cioè un profilo personalizzato dell’utente a partire dalle pagine che lo stesso ha visitato e mostrargli quindi pubblicità mirate (c.d. Behavioural Advertising).
 
-Utilizzando il sito massimocaliman.it e tutti i suoi sottodomini l’utente acconsente all’uso dei cookies.
+Utilizzando il sito caliman.dev e tutti i suoi sottodomini l’utente acconsente all’uso dei cookies.
 
 L’utente può scegliere di non accettare i cookies in qualsiasi momento, modificando le impostazioni del browser (se possibile), non utilizzando più il sito oppure utilizzando le opzioni di rinuncia applicabili. Tenete presente che determinate funzioni sono disponibili solo tramite l’uso dei cookies e, scegliendo di non accettare i cookies, potrebbe non essere più possibile utilizzare tali funzioni.
 
@@ -86,19 +86,19 @@ L’utente può scegliere di non accettare i cookies in qualsiasi momento, modif
 
 ## Dati statistici
 
-massimocaliman.it utilizza partner per i dati statistici, quali Google Analytics, per la raccolta di dati statistici e analitici sull’utilizzo da parte degli utenti del sito web. Ad esempio, questi partner raccolgono e riuniscono i dati sulle visualizzazioni di pagine consultabili sul sito, sui motori di ricerca e sulle parole chiave utilizzate per trovare il sito, sui collegamenti ai quali si accede dal sito ed altri dati analoghi. Tali dati statistici non vengono utilizzati per tracciare la navigazione dell’utente su altri siti web.
+caliman.dev utilizza partner per i dati statistici, quali Google Analytics, per la raccolta di dati statistici e analitici sull’utilizzo da parte degli utenti del sito web. Ad esempio, questi partner raccolgono e riuniscono i dati sulle visualizzazioni di pagine consultabili sul sito, sui motori di ricerca e sulle parole chiave utilizzate per trovare il sito, sui collegamenti ai quali si accede dal sito ed altri dati analoghi. Tali dati statistici non vengono utilizzati per tracciare la navigazione dell’utente su altri siti web.
 
 * [Privacy policy Google Analytics](https://support.google.com/analytics/answer/6004245?hl=it)
 
 ## Contenuti di terze parti
 
-massimocaliman.it ed i suoi sottodomini possono contenere widget incorporati di terze parti come Google Adsense per veicolare pubblicità personalizzata. Visualizzando questi contenuti o usando questi widget, l’utente potrebbe accettare i cookies dei siti web che li contengono. Questi cookie non sono sotto il nostro controllo e, per ottenere ulteriori informazioni, è necessario consultare il sito web della terza parte in questione.
+caliman.dev ed i suoi sottodomini possono contenere widget incorporati di terze parti come Google Adsense per veicolare pubblicità personalizzata. Visualizzando questi contenuti o usando questi widget, l’utente potrebbe accettare i cookies dei siti web che li contengono. Questi cookie non sono sotto il nostro controllo e, per ottenere ulteriori informazioni, è necessario consultare il sito web della terza parte in questione.
 
 * [Privacy policy Google AdSense](http://www.google.com/intl/it_it/policies/technologies/ads/)
 
 ## Scelte dell'utente in relazione ai cookies
 
-massimocaliman.it sconsiglia di limitare o bloccare i cookies, in quanto, in tal modo, la funzionalità del nostro sito web potrebbe non essere ottimale. Tuttavia, se si sceglie di farlo, è necessario tenere presente quanto segue.
+caliman.dev sconsiglia di limitare o bloccare i cookies, in quanto, in tal modo, la funzionalità del nostro sito web potrebbe non essere ottimale. Tuttavia, se si sceglie di farlo, è necessario tenere presente quanto segue.
 
 ## Cookie del browser
 
