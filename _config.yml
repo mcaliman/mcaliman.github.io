@@ -24,8 +24,7 @@ description: "Computer Science and Data Science"
 # Custom variable
 blog_release: 19.0323
 baseurl: # the subpath of your site, e.g. "/blog"
-# url: https://massimocaliman.it 
-url: https://caliman.dev 
+# url: https://caliman.dev 
 # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: /images/logo.jpg # path of site logo, e.g. "/images/logo.png"
 # date_format: "%B %-d, %Y"
