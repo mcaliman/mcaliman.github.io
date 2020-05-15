@@ -24,9 +24,11 @@ description: "Computer Science and Data Science"
 # Custom variable
 blog_release: 19.0323
 baseurl: # the subpath of your site, e.g. "/blog"
-# url: https://caliman.dev 
+# url: https://trueprogramming.com
 # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: /images/logo.jpg # path of site logo, e.g. "/images/logo.png"
+# logo: /images/logo.jpg # path of site logo, e.g. "/images/logo.png"
+# l blu #2d2e83 e il rosso #e30613.
+logo: /images/logo.jpg
 # date_format: "%B %-d, %Y"
 date_format: "%d/%m/%Y"
 read_time: true # reading time estimates, e.g. true
