@@ -19,10 +19,14 @@ remote_theme: "mmistakes/so-simple-theme"
 # locale: en-US
 #
 locale: it-IT
-title: "Massimo Caliman's blog"
-description: "True Programming : Computer Science and Data Science"
+
+#title: "Massimo Caliman's blog"
+title: "True Programming"
+#description: "True Programming : Computer Science and Data Science"
+description: "Massimo Caliman's blog: Computer Science and Data Science"
+
 # Custom variable
-blog_release: 19.0323
+blog_release: 20.0518
 baseurl: # the subpath of your site, e.g. "/blog"
 # url: https://trueprogramming.com
 # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -122,7 +126,11 @@ author:
       icon: fab fa-linkedin-in
     - title: Mail
       url: mailto:mcaliman@gmail.com
-      icon: fas fa-at      
+      icon: fas fa-at
+    - title: Medium
+      url: https://medium.com/@mcaliman
+      icon: fab fa-medium
+            
 #
 # Footer Links
 footer_links:
