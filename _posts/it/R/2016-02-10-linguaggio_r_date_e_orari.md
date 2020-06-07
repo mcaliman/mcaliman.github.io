@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Oggetti data, orari e intervalli di tempo in R"
 excerpt: ""
-category: R
+category: programming
 date:   2016-02-10 22:45:33
 tags: [R]
 comments: true

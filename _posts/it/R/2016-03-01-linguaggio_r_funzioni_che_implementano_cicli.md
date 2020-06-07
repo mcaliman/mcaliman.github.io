@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Funzioni che implementano cicli in R"
 excerpt: ""
-category: R
+category: programming
 date:   2016-03-01 22:45:33
 tags: [R]
 comments: true

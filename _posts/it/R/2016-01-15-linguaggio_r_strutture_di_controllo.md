@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Le strutture di controllo di R"
 excerpt: ""
-category: R
+category: programming
 date:   2016-01-15 22:45:33
 tags: [R]
 comments: true

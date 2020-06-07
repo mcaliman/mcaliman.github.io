@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Linguaggio R introduzione"
 excerpt: ""
-category: R
+category: programming
 date:   2016-01-10 22:45:33
 tags: [R]
 comments: true

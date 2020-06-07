@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "le funzioni in R"
 excerpt: ""
-category: R
+category: programming
 date:   2016-01-20 22:45:33
 tags: [R]
 comments: true
