@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Approfondiamo i metodi in Java"
 excerpt: ""
-category: java
+category: programming
 date:   2005-01-02 22:45:33
 tags: [Java]
 comments: true

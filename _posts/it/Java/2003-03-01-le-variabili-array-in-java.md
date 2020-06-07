@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Le variabili array in Java"
 excerpt: ""
-category: java
+category: programming
 date:   2003-03-01 22:45:33
 tags: [Java]
 comments: true

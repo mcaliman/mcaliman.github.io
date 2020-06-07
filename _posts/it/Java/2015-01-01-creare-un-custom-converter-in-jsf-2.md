@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Creare un custom Converter in JSF 2.2"
 excerpt: ""
-category: java
+category: programming
 date:   2015-01-01 22:45:33
 tags: [Java,JavaServerFaces,JSF2]
 comments: true

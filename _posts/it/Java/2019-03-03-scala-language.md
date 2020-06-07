@@ -4,7 +4,7 @@ lang: it
 title: "Il linguaggio Scala"
 excerpt: ""
 modified: 2019-03-03
-categories: java
+categories: programming
 tags: [Java]
 #image:
 #  feature: so-simple-sample-image-1.jpg

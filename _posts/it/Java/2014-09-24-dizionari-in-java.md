@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Dizionari in Java"
 excerpt: ""
-category: java
+category: programming
 date:   2014-09-24 22:45:33
 tags: [Java,Dizionari,Strutture Dati]
 comments: true

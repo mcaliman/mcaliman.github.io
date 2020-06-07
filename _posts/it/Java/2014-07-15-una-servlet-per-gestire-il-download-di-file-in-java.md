@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Una Servlet per gestire il download di file in Java"
 excerpt: ""
-category: java
+category: programming
 date:   2014-07-15 22:45:33
 tags: [Java, Servlet]
 comments: true

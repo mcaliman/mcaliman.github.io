@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Classi e metodi in Java"
 excerpt: ""
-category: java
+category: programming
 date:   2004-01-02 22:45:33
 tags: [Java]
 comments: true

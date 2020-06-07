@@ -4,7 +4,7 @@ lang: it
 title: Un package per il debugging in Java
 excerpt: ""
 description: "Il debug e le asserzioni,publicato su MokaByte Numero 36,Dicembre 1999,di Massimo Caliman e Nicola Merello"
-category: java
+category: programming
 date:   1999-12-30 22:45:33
 tags: [Java,Debug,Mokabyte]
 comments: true

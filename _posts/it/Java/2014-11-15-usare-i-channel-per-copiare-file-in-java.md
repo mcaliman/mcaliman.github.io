@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Usare i Channel per copiare file in Java"
 excerpt: ""
-category: java
+category: programming
 date:   2014-11-15 22:45:33
 tags: [Java]
 comments: true

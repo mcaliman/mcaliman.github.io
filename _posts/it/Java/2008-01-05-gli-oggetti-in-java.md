@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Gli oggetti in Java"
 excerpt: ""
-category: java
+category: programming
 date:   2008-01-05 22:45:33
 tags: [Java]
 comments: true

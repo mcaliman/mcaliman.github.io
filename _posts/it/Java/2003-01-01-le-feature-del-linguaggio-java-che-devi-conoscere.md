@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Le feature del linguaggio Java che devi conoscere"
 excerpt: ""
-category: java
+category: programming
 date:   2003-01-01 22:45:33
 tags: [Java]
 comments: true

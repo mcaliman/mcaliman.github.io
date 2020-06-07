@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Inviare mail con allegati in Java"
 excerpt: ""
-category: java
+category: programming
 date:   2014-07-14 22:45:33
 tags: [Java, JavaMail]
 comments: true

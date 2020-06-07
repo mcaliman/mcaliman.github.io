@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Il passaggio di parametri in Java"
 excerpt: ""
-category: java
+category: programming
 date:   2006-01-05 22:45:33
 tags: [Java]
 comments: true

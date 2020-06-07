@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "JSF 2 forzare gli id generati dai tag"
 excerpt: ""
-category: java
+category: programming
 date:   2014-11-09 22:45:33
 tags: [Java,JavaServerFaces,JSF2]
 comments: true

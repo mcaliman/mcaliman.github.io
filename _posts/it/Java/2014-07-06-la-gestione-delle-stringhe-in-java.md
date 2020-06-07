@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "La gestione delle stringhe in Java"
 excerpt: ""
-category: java
+category: programming
 date:   2014-07-06 22:45:33
 tags: [Java, String, StringBuffer, StringBuilder]
 comments: true

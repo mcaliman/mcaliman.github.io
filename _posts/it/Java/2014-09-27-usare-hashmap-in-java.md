@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Usare HashMap in Java"
 excerpt: ""
-category: java
+category: programming
 date:   2014-09-27 22:45:33
 tags: [Java,Dizionari,HashMap,Strutture Dati]
 comments: true

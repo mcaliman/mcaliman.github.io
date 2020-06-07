@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Concatenare PDF con iText in Java"
 excerpt: ""
-category: java
+category: programming
 date:   2014-09-18 22:45:33
 tags: [Java,JDK7,iText,PDF]
 comments: true

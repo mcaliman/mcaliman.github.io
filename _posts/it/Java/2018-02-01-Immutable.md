@@ -4,7 +4,7 @@ lang: it
 title: "Classi e oggetti immutabili in Java"
 excerpt: ""
 modified: 2018-02-01
-categories: java
+categories: programming
 tags: [Java]
 #image:
 #  feature: so-simple-sample-image-1.jpg

@@ -4,7 +4,7 @@ lang: it
 title: Il design pattern Visitor
 excerpt: "Codice di esempio minimale sul pattern Interpreter"
 modified: 2016-01-03
-categories: java
+categories: programming
 tags: [Java,Design Pattern,Visitor Pattern]
 #image:
 #  feature: so-simple-sample-image-1.jpg

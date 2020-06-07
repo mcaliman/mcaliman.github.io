@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Scrivere e leggere file in Java 7 con try-with-resources"
 excerpt: ""
-category: java
+category: programming
 date:   2014-09-13 22:45:33
 tags: [Java,JDK7]
 comments: true

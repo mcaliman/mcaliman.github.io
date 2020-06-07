@@ -4,7 +4,7 @@ lang: it
 title: Il design pattern State
 excerpt: "Caratteristiche e codice di esempio ridotto all'essenziale"
 modified: 2016-01-30
-categories: java
+categories: programming
 tags: [Java,Pattern comportamentali,Design pattern State,lose-coupled,Campagna AntiIF]
 #image:
 #  feature: so-simple-sample-image-1.jpg

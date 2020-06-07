@@ -4,7 +4,7 @@ lang: it
 title: "Lavorare sulle Stinghe con gli Stream e le Lambda"
 excerpt: ""
 modified: 2019-01-12
-categories: java
+categories: programming
 tags: [Java]
 #image:
 #  feature: so-simple-sample-image-1.jpg

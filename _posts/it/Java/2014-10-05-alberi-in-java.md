@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Alberi in Java"
 excerpt: ""
-category: java
+category: programming
 date:   2014-10-05 22:45:33
 tags: [Java,Alberi,Strutture Dati]
 comments: true

@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "La parola riservata this in Java"
 excerpt: ""
-category: java
+category: programming
 date:   2007-01-05 22:45:33
 tags: [Java]
 comments: true
