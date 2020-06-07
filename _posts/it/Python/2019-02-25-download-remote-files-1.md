@@ -4,7 +4,7 @@ lang: it
 title: "Download di file remoti con Python #1"
 excerpt: "Automatizziamo compiti ricorrenti come il download di file remoti in locale"
 modified: 2019-02-25
-categories: "Python"
+categories: programming
 tags: [Python]
 image:
   path: /images/unsplash/andrew-yardley-1258543-unsplash.jpg

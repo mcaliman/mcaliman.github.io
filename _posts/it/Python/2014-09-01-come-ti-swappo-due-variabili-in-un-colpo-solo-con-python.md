@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Come ti swappo due variabili in un colpo solo con Python"
 excerpt: ""
-category: Python
+category: programming
 date:   2014-09-01 22:45:33
 tags: [Python]
 comments: true
