@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Big Data, Data Science, Database i fondamentali 1"
 excerpt: ""
-category: "Data Science"
+category: data-science
 date:   2016-05-01 22:45:33
 tags: [Data Science]
 comments: true
