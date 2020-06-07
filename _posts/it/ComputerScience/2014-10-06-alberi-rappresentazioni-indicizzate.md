@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Alberi rappresentazioni indicizzate"
 excerpt: ""
-category: "Computer Science"
+category: computer-science
 date:   2014-10-06 22:45:33
 tags: [Java,Alberi,Strutture Dati]
 image:

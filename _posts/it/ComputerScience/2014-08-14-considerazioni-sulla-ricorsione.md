@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Considerazioni sulla ricorsione"
 excerpt: ""
-category: "Computer Science"
+category: computer-science
 date:   2014-08-14 22:45:33
 tags: [Java, recorsione]
 comments: true

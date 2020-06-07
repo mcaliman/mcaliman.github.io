@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Well Formatted riferito ad un documento XML"
 excerpt: ""
-category: "Computer Science"
+category: computer-science
 date:   2011-03-07 22:45:33
 tags: [XML]
 comments: true

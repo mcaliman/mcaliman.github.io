@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Installare Jekyll su ubuntu 14.04."
 excerpt: ""
-category: "Computer Science"
+category: computer-science
 date:   2014-06-07 22:45:33
 tags: [Jekyll]
 comments: true

@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Il cms è morto viva jekyll!"
 excerpt: ""
-category: "Computer Science"
+category: computer-science
 date:   2014-06-22 22:45:33
 tags: [Jekyll, CMS, Blog]
 comments: true

@@ -3,7 +3,7 @@ layout: post
 lang: it
 title: "wsimport e Webservice .Net 2.0"
 excerpt: ""
-category: "Computer Science"
+category: computer-science
 date:   2015-08-15 22:45:33
 modified: 2017-08-15 22:45:33
 tags: [Webservices,Java,.NET]

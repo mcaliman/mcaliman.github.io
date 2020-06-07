@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Quel maledetto Content is not allowed in prolog"
 excerpt: ""
-category: "Computer Science"
+category: computer-science
 date:   2011-02-27 22:45:33
 tags: [Java]
 comments: true

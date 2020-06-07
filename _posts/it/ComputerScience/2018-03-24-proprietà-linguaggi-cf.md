@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Proprietà dei linguaggi CF"
 excerpt: "Proprietà e considerazioni sui linguaggi context-free"
-category: "Computer Science"
+category: computer-science
 date:   2018-03-24 22:45:33
 tags: [CF,CFG]
 comments: true

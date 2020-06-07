@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Installiamo mysql senza synaptic o apt"
 excerpt: ""
-category: "Computer Science"
+category: computer-science
 date:   2011-02-03 22:45:33
 tags: [MySQL]
 comments: true

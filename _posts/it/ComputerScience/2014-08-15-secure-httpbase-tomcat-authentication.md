@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Secure httpbase tomcat authentication"
 excerpt: ""
-category: "Computer Science"
+category: computer-science
 date:   2014-08-15 22:45:33
 tags: [Tomcat]
 comments: true

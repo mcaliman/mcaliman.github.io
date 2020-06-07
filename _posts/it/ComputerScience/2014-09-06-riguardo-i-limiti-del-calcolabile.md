@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Riguardo i limiti del calcolabile"
 excerpt: ""
-category: "Computer Science"
+category: computer-science
 date:   2014-09-06 22:45:33
 tags: [Theoretical Computer Science]
 comments: true

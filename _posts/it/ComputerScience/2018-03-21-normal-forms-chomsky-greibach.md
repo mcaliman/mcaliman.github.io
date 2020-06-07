@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "CFG in forma normale di Chomsky e Greibach."
 excerpt: "Le grammatiche context-free in forma normale di Chomsky e Greibach, come sono fatte e perchè sono interessanti."
-category: "Computer Science"
+category: computer-science
 date:   2018-03-21 22:45:33
 tags: [Theoretical Computer Science,CFG,Chomsky,Greibach]
 comments: true

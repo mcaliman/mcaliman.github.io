@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Problema in fase di restore di un database mysql"
 excerpt: ""
-category: "Computer Science"
+category: computer-science
 date:   2010-01-01 22:45:33
 tags: [MySQL]
 comments: true

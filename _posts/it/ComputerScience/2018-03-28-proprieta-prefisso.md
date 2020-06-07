@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Proprietà del prefisso"
 excerpt: "PDA e problemi di riconoscimento di linguaggi con caratteristiche particolari."
-category: "Computer Science"
+category: computer-science
 date:   2018-03-28 22:45:33
 tags: [PDA,CF,CFG]
 comments: true

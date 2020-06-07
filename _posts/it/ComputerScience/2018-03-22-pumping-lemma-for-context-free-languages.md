@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Il pumping lemma per i linguaggi CF"
 excerpt: "La versione del pumping lemma per i linguaggi context-free"
-category: "Computer Science"
+category: computer-science
 date:   2018-03-22 22:45:33
 tags: [Theoretical Computer Science,CFG,Pumping Lemma]
 comments: true

@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Code o Queue"
 excerpt: ""
-category: "Computer Science"
+category: computer-science
 date:   2014-10-01 22:45:33
 tags: [Java,Code o Queue,Strutture Dati]
 image:

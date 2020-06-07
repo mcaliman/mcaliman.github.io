@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Turing Machine"
 excerpt: "Concetti e informazioni di base sulle Macchine di Turing, linguaggio accettato, linguaggi ricorsivamente enumerabili e ricorsivi"
-category: "Computer Science"
+category: computer-science
 date:   2018-04-07 22:45:33
 modified: 2019-05-12 22:45:33
 tags: [Turing Machine,Linguaggi ricorsivamente enumerabili,Linguaggi ricorsivi]

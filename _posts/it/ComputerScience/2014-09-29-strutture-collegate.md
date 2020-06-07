@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Strutture collegate"
 excerpt: ""
-category: "Computer Science"
+category: computer-science
 date:   2014-09-29 22:45:33
 tags: [Java,Strutture collegate,Strutture Dati]
 image:

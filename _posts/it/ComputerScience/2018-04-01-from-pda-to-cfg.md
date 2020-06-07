@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Da PDA a CFG"
 excerpt: "Costruzione di una grammatica CF partendo da un automa a pila (PDA)"
-category: "Computer Science"
+category: computer-science
 date:   2018-04-01 22:45:33
 tags: [PDA,CF,CFG]
 comments: true

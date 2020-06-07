@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Come velocizzare le operazioni di restore da dump sql di mysql"
 excerpt: ""
-category: "Computer Science"
+category: computer-science
 date:   2011-01-01 22:45:33
 tags: [MySQL]
 comments: true
