@@ -5,14 +5,15 @@ title:  "Effettuare la login SSH senza digitare la password."
 excerpt: ""
 category: computer-science
 date:   2014-01-12 22:45:33
+update: 2020-06-29 11:00:00
 tags: [linux, ssh, openssh]
 comments: true
 share: true
 ---
 
-Se si vuole usare `Linux` e `OpenSSH` per automatizzare delle attività e si ha la necessità di poter effettuare la login automatica dal un host `A` con utente `a` ad un host `B` con utente `b` senza inserire nessuna password questi sono i passo necessari: 
+Se si vuole usare `Linux` e `OpenSSH` per automatizzare delle attività e si ha la necessità di poter effettuare la login automatica dal un host `A` (phobos ubuntu 18.04) con utente `a` (mcaliman) ad un host `B` (deimos ubuntu 20.04) con utente `b` (mcaliman) senza inserire nessuna password questi sono i passo necessari: 
 
-Per prima cosa effettuare la login in su `A` come utente `a` e genera una coppia di chiavi di autenticazione (non inserire un passphrase)
+Per prima cosa effettuare la login in su `A` (phobos) come utente `a` (mcaliman) e genera una coppia di chiavi di autenticazione (non inserire un passphrase)
 
 {% highlight bash %}
 a@A:~> ssh-keygen -t rsa
