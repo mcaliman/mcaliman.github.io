@@ -2,7 +2,7 @@
 layout: post
 lang: en
 title: "Restore remote database backup to local"
-excerpt: "How do I restore a remote Mysql database to local? with Python"
+excerpt: "How do I restore a remote Mysql database to local? With Python script!"
 date: 2020-12-19
 modified: 2020-12-19
 categories: programming
@@ -13,14 +13,6 @@ search_omit: false
 updated: true
 ---
 
-How do I restore my remote mysql database to local?  
+PySysop [https://github.com/mcaliman/PySysop](https://github.com/mcaliman/PySysop) is a Python system operations collection utilities, restore_remote_database.py is the script for create remote database dump, download and restore to localhost instance.
 
-Does Java have an implementation for complex numbers? No, it doesn’t have a dedicated Class. It’s strange but not all that strange (Complex Number implementation is trivial), the JDK does not have one but here is an implementation I have written: 
-
-[https://github.com/mcaliman/JavaComplexNumber](https://github.com/mcaliman/JavaComplexNumber)
-
-However, there are third-party libraries for working with Complex, for example:
-
-Apache Commons [http://commons.apache.org/proper/commons-math/userguide/complex.html](http://commons.apache.org/proper/commons-math/userguide/complex.html)
-
-My project is work in progress. Stay tuned! Next implementation: Generics, support for BigDecimal. What would you like me to add about?
+My project is work in progress. Stay tuned! Next implementation? What would you like me to add about?
