@@ -143,4 +143,7 @@ footer_links:
     icon: fab fa-linkedin-in 
   - title: Mail
     url: mailto:mcaliman@gmail.com
-    icon: fas fa-at       
+    icon: fas fa-at 
+  - title: Medium
+    url: https://trueprogramming.medium.com
+    icon: fab fa-medium      
