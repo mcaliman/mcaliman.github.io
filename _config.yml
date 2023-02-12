@@ -90,8 +90,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
-#  - jekyll-paginate
-  - jekyll-paginate-v2
+  - jekyll-paginate
+  # - jekyll-paginate-v2
 #
 # Front Matter Defaults
 defaults:
