@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Home
 ---
 {{ content }}
 <div class="entries-{{ page.entries_layout | default: 'list' }}">
@@ -7,6 +8,7 @@ layout: page
   <!-- HOME_23_1 -->
   {%- include posts-paginated.html -%}
 {%- else -%}
+
   <!-- HOME_23_2 -->
   {%- include posts-limit.html -%}
 {%- endif -%}
