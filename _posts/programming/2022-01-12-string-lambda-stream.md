@@ -1,7 +1,7 @@
 ---
 layout: post
 lang: it
-title: "Lavorare sulle Stinghe con gli Stream e le Lambda"
+title: "Working with Strings using Streams and Lambdas."
 excerpt: ""
 modified: 2022-01-12
 categories: programming
