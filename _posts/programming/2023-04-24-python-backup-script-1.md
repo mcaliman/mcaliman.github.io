@@ -1,7 +1,7 @@
 ---
 layout: post
 lang: en
-title: "I am replacing my old bash scripts with Python."
+title: "I am replacing my old bash scripts with Python #1."
 excerpt: ""
 modified: 2023-04-24
 categories: programming
