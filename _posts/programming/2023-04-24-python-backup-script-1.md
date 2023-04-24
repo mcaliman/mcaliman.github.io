@@ -16,12 +16,13 @@ search_omit: false
 updated: true
 ---
 
+Have you also accumulated a large amount of bash scripts over the years to automate operations on your systems?
+
 I am gradually replacing all of my bash scripts used to automate backup and analysis tasks on my home server and home laptop with new ones written in Python. I decided to make this switch because Python offers many more features and libraries compared to other scripting languages. Additionally, it is much easier to read and maintain.
 
 I am very satisfied with the final result. My new Python scripts are much easier to use and maintain compared to my old scripts.
 
-
-here the first script rewritten in python
+here the first simple copy-backup script rewritten in python
 
 {% highlight java %}
 import os
@@ -29,7 +30,7 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 
-now = datetime.now() # current date and time
+now = datetime.now() 
 timestamp = now.strftime('%Y%m%d%H%M%S')
 
 shared_drive = "U:\\Phobos7"
