@@ -7,10 +7,10 @@ title: About me
 tags: [about]
 modified: 2013-09-13
 
-image:
-  path: /images/unsplash/chris-ried-512801-unsplash.jpg
-  thumbnail: /images/unsplash/chris-ried-512801-unsplash.jpg
-  caption: "[Photo by Chris Ried on Unsplash](https://unsplash.com/photos/ieic5Tq8YMk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
+#image:
+#  path: /images/unsplash/chris-ried-512801-unsplash.jpg
+#  thumbnail: /images/unsplash/chris-ried-512801-unsplash.jpg
+#  caption: "[Photo by Chris Ried on Unsplash](https://unsplash.com/photos/ieic5Tq8YMk?utm_source=unsplash&#utm_medium=referral&utm_content=creditCopyText)"
 ---
 
 [Also available in Italian language](/it/about)
