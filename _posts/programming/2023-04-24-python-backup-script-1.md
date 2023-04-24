@@ -2,8 +2,8 @@
 layout: post
 lang: en
 title: "I am replacing my old bash scripts with Python #1."
-excerpt: ""
-modified: 2023-04-24
+excerpt: "Copy a list of directories with their contents to a shared folder."
+modified: 2023-04-25
 categories: programming
 tags: [Python]
 #image:
