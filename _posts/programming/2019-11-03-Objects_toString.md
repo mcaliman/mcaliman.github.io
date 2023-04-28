@@ -12,10 +12,10 @@ tags: [Java]
 #  credit: WeGraphics
 #  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 
-image:
-  path: /images/unsplash/june-gathercole-CDt2jVuSkh4-unsplash.jpg
-  -- thumbnail: /images/unsplash/june-gathercole-CDt2jVuSkh4-unsplash.jpg
-  caption: "[Photo by Andrew Yardley on Unsplash](https://unsplash.com/photos/CDt2jVuSkh4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
+#image:
+#  path: /images/unsplash/june-gathercole-CDt2jVuSkh4-unsplash.jpg
+#  -- thumbnail: /images/unsplash/june-gathercole-CDt2jVuSkh4-unsplash.jpg
+#  caption: "[Photo by Andrew Yardley on Unsplash](https://unsplash.com/photos/CDt2jVuSkh4?utm_source=unsplash&utm_medium=referral&#utm_content=creditCopyText)"
 
 
 comments: true

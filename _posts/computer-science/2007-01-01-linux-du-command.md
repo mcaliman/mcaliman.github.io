@@ -1,22 +1,23 @@
 ---
 layout: post
-lang: it
-title:  "Linux: il comando du"
+lang: en
+title:  "Linux: The du command"
 excerpt: ""
 category: computer-science
 date:   2007-01-01 22:45:33
+modified: 2023-03-19
 tags: [Linux]
 comments: true
 share: true
 ---
 
-il comando `du` mostra lo spazio disco usato.
+The `du` command shows the disk space used.
 
-Uso:
+Use:
 {% highlight bash %}
 du -s -h .
 {% endhighlight %}
-Dove:
+Where:
 
 `-s` indica --summarise display only a total for each argument.
 
@@ -25,7 +26,7 @@ Dove:
 
 `.` indica di applicare alla directory corrente.
 
-Esempio:
+Example:
 {% highlight bash %}
 mcaliman@deimos:~# du -s -h .
 
