@@ -19,12 +19,12 @@ du -s -h .
 {% endhighlight %}
 Where:
 
-`-s` indica --summarise display only a total for each argument.
+`-s` --summarise display only a total for each argument.
 
 
-`-h` indica --human-readable print sizes in human readable format (e.g., 1K 234M 2G).
+`-h`  --human-readable print sizes in human readable format (e.g., 1K 234M 2G).
 
-`.` indica di applicare alla directory corrente.
+`.` Indicates to apply to the current directory.
 
 Example:
 {% highlight bash %}
