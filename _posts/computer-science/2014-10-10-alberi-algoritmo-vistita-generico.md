@@ -6,10 +6,6 @@ excerpt: ""
 category: computer-science
 date:   2014-10-10 22:45:33
 tags: [Java,Algoritmi,Alberi]
-image:
-  path: /images/unsplash/lidya-nada-744078-unsplash.jpg
-  -- thumbnail: /images/unsplash/lidya-nada-744078-unsplash.jpg
-  caption: "[Photo by Lidya Nada on Unsplash](https://unsplash.com/photos/BnzqQwerUOY?utm_source=unsplash&utm_medium=referralutm_content=creditCopyText)"
 comments: true
 share: true
 ---

@@ -7,10 +7,6 @@ category: computer-science
 date:   2014-10-03 22:45:33
 tags: [Java,Strutture indicizzate,Strutture Dati]
 comments: true
-image:
-  path: /images/unsplash/lidya-nada-744078-unsplash.jpg
-  -- thumbnail: /images/unsplash/lidya-nada-744078-unsplash.jpg
-  caption: "[Photo by Lidya Nada on Unsplash](https://unsplash.com/photos/BnzqQwerUOY?utm_source=unsplash&utm_medium=referralutm_content=creditCopyText)"
 share: true
 ---
 
