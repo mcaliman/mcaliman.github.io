@@ -6,10 +6,6 @@ excerpt: "Calcolare la differenza tra due date con ChronoUnit"
 modified: 2018-01-01
 categories: programming
 tags: [Java 8]
-#image:
-#  feature: so-simple-sample-image-1.jpg
-#  credit: WeGraphics
-#  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 comments: true
 share: true
 search_omit: false

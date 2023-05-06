@@ -6,10 +6,6 @@ excerpt: "Copy a list of directories with their contents to a shared folder."
 modified: 2023-04-25
 categories: programming
 tags: [Python]
-#image:
-#  feature: so-simple-sample-image-1.jpg
-#  credit: WeGraphics
-#  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 comments: true
 share: true
 search_omit: false

@@ -6,10 +6,6 @@ excerpt: ""
 modified: 2019-03-03
 categories: programming
 tags: [Java]
-#image:
-#  feature: so-simple-sample-image-1.jpg
-#  credit: WeGraphics
-#  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 comments: true
 share: true
 search_omit: false

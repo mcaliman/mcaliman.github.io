@@ -6,10 +6,6 @@ excerpt: "Python script to zip GlassFish logs and archive them by year and month
 modified: 2023-04-24
 categories: programming
 tags: [Python]
-#image:
-#  feature: so-simple-sample-image-1.jpg
-#  credit: WeGraphics
-#  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 comments: true
 share: true
 search_omit: false

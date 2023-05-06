@@ -4,10 +4,6 @@ lang: it
 permalink: /privacy/
 title: Privacy Policy
 tags: [privacy, privacy policy]
-#image:
-#  path: /images/unsplash/bernard-hermant-590572-unsplash.jpg
-#  -- thumbnail: /images/unsplash/bernard-hermant-590572-unsplash.jpg
-#  caption: "[Photo by Bernard Hermant on Unsplash](https://unsplash.com/photos/IhcSHrZXFs4?utm_source=unsplash&#utm_medium=referral&utm_content=creditCopyText)"
 modified: 2014-12-30
 ---
 

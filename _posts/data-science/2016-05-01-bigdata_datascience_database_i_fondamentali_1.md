@@ -8,11 +8,6 @@ date:   2016-05-01 22:45:33
 tags: [Data Science]
 comments: true
 share: true
-
-image:
-  path: /images/unsplash/daniele-d-andreti-1131982-unsplash.jpg
-  # thumbnail:/images/unsplash/daniele-d-andreti-1131982-unsplash.jpg
-  caption: "[Photo by Daniele D'Andreti on Unsplash](https://unsplash.com/photos/RpHarahftoM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
 ---
 
 

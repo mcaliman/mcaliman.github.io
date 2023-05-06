@@ -5,10 +5,6 @@ permalink: /resume/
 title: Resume
 tags: [resume]
 modified: 2017-11-07
-#image:
-#  path: /images/unsplash/maximilian-weisbecker-544039-unsplash.jpg
-#  thumbnail: /images/unsplash/maximilian-weisbecker-544039-unsplash.jpg
-#  caption: "[Photo by Maximilian Weisbecker on Unsplash](https://unsplash.com/photos/1td5Iq5IvNc?utm_source=unsplash&#utm_medium=referral&utm_content=creditCopyText)"
 ---
 
 # Technical knowledge and skills

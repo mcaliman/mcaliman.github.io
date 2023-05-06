@@ -6,10 +6,6 @@ excerpt: "Codice di esempio minimale sul pattern Strategy"
 modified: 2016-01-02
 categories: programming
 tags: [Java,jdk8,Design Pattern,Strategy Pattern]
-#image:
-#  feature: so-simple-sample-image-1.jpg
-#  credit: WeGraphics
-#  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 comments: true
 share: true
 updated: true

@@ -6,12 +6,6 @@ excerpt: "Automatizziamo compiti ricorrenti come il download di file remoti in l
 modified: 2019-02-25
 categories: programming
 tags: [Python]
-image:
-  path: /images/unsplash/andrew-yardley-1258543-unsplash.jpg
-  -- thumbnail: /images/unsplash/andrew-yardley-1258543-unsplash.jpg
-  caption: "[Photo by Andrew Yardley on Unsplash](https://unsplash.com/photos/QB6HWhQuspU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
-
-
 comments: true
 share: true
 search_omit: false
