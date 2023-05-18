@@ -10,7 +10,7 @@ comments: true
 share: true
 updated: true
 ---
-
+  
 Artificial intelligence is revolutionizing the way we work and interact with the digital world. Many websites offer AI-based tools and services to help people improve their productivity and creativity. Here are some interesting sites worth exploring:
 
 * Resumai [https://www.resumai.com/] is an AI-based resume creation tool that helps users create professional resumes quickly and easily. It uses AI to generate eye-catching layouts and content, helping users highlight their skills and achievements.

@@ -10,7 +10,7 @@ comments: true
 share: true
 updated: true
 ---
-
+   
 When we talk about Big Data, we are talking about an evolution of databases, but in a big way, or rather we are talking about a collection of data so extensive in terms of volume, speed and variety that it requires specific technologies and analytical methods for value extraction.
 
 This is the definition we can find from a superficial web search. We could be dealing with Big Data even if the characteristic were only variety or speed.

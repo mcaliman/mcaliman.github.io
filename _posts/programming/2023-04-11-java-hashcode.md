@@ -10,7 +10,7 @@ comments: true
 share: true
 updated: true
 ---
-
+ 
 The `hashCode` method is a fundamental method of the `Object` class in Java. This method returns an integer value representing the hash code of the object.
 
 The `hashCode` method is mainly used to improve the performance of hash-based data structures, such as `HashMaps`. When you insert an object into a `HashMap`, its hash code is used to determine the location where the object should be stored in the map.

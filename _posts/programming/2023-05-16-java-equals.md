@@ -53,3 +53,4 @@ public class Human {
 In this example, we have overridden the `equals` method in the Human class to compare two Human objects based on their `firstName`, `lastName`, and `passportNumber` attributes.
 Always remember to use the equals method correctly when working with objects in Java!
 
+ 
