@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "Uso di keytool e jarsigner"
 excerpt: ""
-category: programming
+category: "Programming"
 date:   2011-04-24 22:45:33
 tags: [Java]
 comments: true

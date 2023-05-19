@@ -4,7 +4,7 @@ lang: it
 title: "Il linguaggio Scala"
 excerpt: ""
 modified: 2019-03-03
-categories: programming
+categories: "Programming"
 tags: [Java]
 comments: true
 share: true

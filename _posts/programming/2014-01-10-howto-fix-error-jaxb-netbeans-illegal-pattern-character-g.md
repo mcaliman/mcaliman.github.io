@@ -3,7 +3,7 @@ layout: post
 lang: it
 title:  "HOWTO FIX errore 'illegal pattern character g' JAXB in NetBeans ."
 excerpt: ""
-category: programming
+category: "Programming"
 date:   2014-01-10 22:45:33
 tags: [Java, JAXB, NetBeans]
 comments: true
