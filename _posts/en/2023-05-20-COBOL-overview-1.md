@@ -41,4 +41,4 @@ Here are some links to websites that provide information about COBOL:
 - [COBOL Programming - TutorialsPoint](https://www.tutorialspoint.com/cobol/index.htm)
 - [COBOL Resource Hub - Micro Focus](https://www.microfocus.com/en-us/trend/cobol-resource-hub)
 
-
+Even if you don’t like the COBOL language (I don’t like it), don’t underestimate the strategic importance of knowing its basics. You too could work on a project to rewrite a COBOL program in your preferred language.
