@@ -17,14 +17,34 @@ COBOL is a procedural programming language, business-oriented and with strong ty
 
 ```cobol
 IDENTIFICATION DIVISION.
-PROGRAM-ID. HELLO-COBOL.
+PROGRAM-ID. COMPOUND-INTEREST.
 
 ENVIRONMENT DIVISION.
 
 DATA DIVISION.
 
+WORKING-STORAGE SECTION.
+01  INITIAL-AMOUNT PIC 9(5)V99 COMP-3.
+01  INTEREST-RATE PIC 9(3)V9 COMP-3.
+01  YEARS PIC 9(4) COMP-3.
+01  FINAL-AMOUNT PIC 9(7)V99 COMP-3.
+
 PROCEDURE DIVISION.
-    DISPLAY 'Hello, COBOL'
+
+    DISPLAY "Enter the initial amount: "
+    ACCEPT INITIAL-AMOUNT
+    DISPLAY "Enter the interest rate (as a percentage): "
+    ACCEPT INTEREST-RATE
+    DISPLAY "Enter the number of years: "
+    ACCEPT YEARS
+
+    MOVE INITIAL-AMOUNT TO FINAL-AMOUNT
+    PERFORM VARYING YEARS FROM 1 BY 1
+        UNTIL YEARS = 0
+        COMPUTE FINAL-AMOUNT = FINAL-AMOUNT * (1 + INTEREST-RATE / 100)
+
+    DISPLAY "The final amount after " YEARS " years is: " FINAL-AMOUNT
+
     STOP RUN.
 ```
 
