@@ -5,7 +5,7 @@ title:  "Le strutture di controllo di R"
 excerpt: "Gestione del flusso di esecuzione del programma con R"
 category: R
 date:   2016-01-15 22:45:33
-tags: [R]
+tags: [Italian,R]
 comments: true
 share: true
 ---

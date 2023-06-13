@@ -5,7 +5,7 @@ title:  "Enable the sudo command on debian 8"
 excerpt: ""
 category: Linux
 date:   2015-05-01 22:45:33
-tags: [debian]
+tags: [English]
 comments: true
 share: true
 ---

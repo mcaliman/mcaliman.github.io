@@ -5,7 +5,7 @@ title: "Possiamo eseguire del codice prima del metodo main(String[]) ?"
 excerpt: ""
 modified: 2016-11-03
 categories: Java
-tags: [Java]
+tags: [Italian,Java]
 comments: true
 share: true
 search_omit: false

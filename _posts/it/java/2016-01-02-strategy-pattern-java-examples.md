@@ -5,7 +5,7 @@ title: Il design pattern Strategy
 excerpt: "Codice di esempio minimale sul pattern Strategy"
 modified: 2016-01-02
 categories: Java
-tags: [Design Pattern]
+tags: [Italian,Design Pattern]
 comments: true
 share: true
 updated: true

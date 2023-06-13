@@ -5,7 +5,7 @@ title:  "Interfacce con il mondo esterno in R"
 excerpt: ""
 category: R
 date:   2016-04-01 22:45:33
-tags: [R]
+tags: [Italian,R]
 comments: true
 share: true
 ---

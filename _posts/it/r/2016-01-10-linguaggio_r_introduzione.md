@@ -5,7 +5,7 @@ title:  "Linguaggio R introduzione"
 excerpt: ""
 category: R
 date:   2016-01-10 22:45:33
-tags: [R]
+tags: [Italian,R]
 comments: true
 share: true
 ---

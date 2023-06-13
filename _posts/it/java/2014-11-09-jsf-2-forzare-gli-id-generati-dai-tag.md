@@ -5,7 +5,7 @@ title:  "JSF 2 forzare gli id generati dai tag"
 excerpt: ""
 category: Java
 date:   2014-11-09 22:45:33
-tags: [Java Server Faces]
+tags: [Italian,Java Server Faces]
 comments: true
 share: true
 ---

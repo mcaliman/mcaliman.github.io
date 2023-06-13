@@ -5,7 +5,7 @@ title:  "Il cms è morto viva jekyll!"
 excerpt: Jekyll
 category: computer-science
 date:   2014-06-22 22:45:33
-tags: [CMS]
+tags: [Italian,CMS]
 comments: true
 share: true
 ---

@@ -6,7 +6,7 @@ excerpt: "What you need to know"
 category: Java
 date: 2023-01-01 05:11:55
 modified: 2023-01-01 05:11:55
-tags: [Java, Java EE]
+tags: [English,Java, Java EE]
 comments: true
 share: true
 updated: true

@@ -3,9 +3,9 @@ layout: post
 lang: it
 title:  "Pubblicare un sito con GitHub Pages."
 excerpt: ""
-category: GitHub
+category: Jekyll
 date:   2014-01-01 22:45:33
-tags: [CMS]
+tags: [Italian,CMS]
 comments: true
 share: true
 ---

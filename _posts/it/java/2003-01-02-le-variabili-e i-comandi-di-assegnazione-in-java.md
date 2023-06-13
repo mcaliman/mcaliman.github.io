@@ -5,7 +5,7 @@ title:  "Le variabili e i comandi di assegnazione"
 excerpt: ""
 category: Java
 date:   2003-01-02 22:45:33
-tags: [Java]
+tags: [Italian,Java]
 comments: true
 share: true
 ---

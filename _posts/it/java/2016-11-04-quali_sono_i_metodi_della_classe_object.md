@@ -5,7 +5,7 @@ title: "Quali sono i metodi della classe Object?"
 excerpt: 
 modified: 2016-11-04
 categories: Java
-tags: [Java]
+tags: [Italian,Java]
 comments: true
 share: true
 search_omit: false

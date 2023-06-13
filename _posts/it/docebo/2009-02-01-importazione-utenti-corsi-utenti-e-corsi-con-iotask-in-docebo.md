@@ -5,7 +5,7 @@ title:  "Importazione utenti,corsi,utenti e corsi con I/O Task in Docebo"
 excerpt: ""
 category: Docebo
 date:   2009-01-01 22:45:33
-tags: [LMS]
+tags: [Italian,LMS]
 comments: true
 share: true
 ---

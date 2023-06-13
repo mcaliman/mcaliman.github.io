@@ -6,7 +6,7 @@ excerpt: "Controllare in automatico se il dominio che ci interessa sarà disponi
 category: R
 date:   2016-10-01 22:45:33
 modified: 2016-10-01 22:45:33
-tags: [R]
+tags: [Italian,R]
 comments: true
 share: true
 ---

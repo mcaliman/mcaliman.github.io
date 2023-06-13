@@ -5,7 +5,7 @@ title:  "Come trovare il jar dove è contenuta una determinata classe (deployed 
 excerpt: ""
 category: Java
 date:   2014-01-03 22:45:33
-tags: [Java,GlassFish]
+tags: [English,Java,GlassFish]
 comments: true
 share: true
 ---

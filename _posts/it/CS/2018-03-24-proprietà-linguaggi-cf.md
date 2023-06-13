@@ -5,7 +5,7 @@ title:  "Proprietà dei linguaggi CF"
 excerpt: "Proprietà e considerazioni sui linguaggi context-free"
 category: ComputerScience
 date:   2018-03-24 22:45:33
-tags: [Programming languages]
+tags: [Italian,Programming languages]
 comments: true
 share: true
 ---

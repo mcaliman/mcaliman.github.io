@@ -5,7 +5,7 @@ title:  "Installiamo mysql senza synaptic o apt"
 excerpt: ""
 category: MySQL
 date:   2011-02-03 22:45:33
-tags: [MySQL]
+tags: [Italian,MySQL]
 comments: true
 share: true
 ---

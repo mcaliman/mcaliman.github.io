@@ -5,7 +5,7 @@ title:  "Algoritmo di visita in profondità per un albero (DFS o Depth First Sea
 excerpt: ""
 category: Algorithms
 date:   2014-10-12 22:45:33
-tags: [Data Structures,Tree]
+tags: [Italian,Tree]
 comments: true
 share: true
 ---

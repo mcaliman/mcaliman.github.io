@@ -5,7 +5,7 @@ title:  "Workshop Tecnologie e Professionalità per la SOA"
 excerpt: ""
 category: Events
 date:   2008-10-01 22:45:33
-tags: [SOA]
+tags: [Italian,SOA]
 comments: true
 share: true
 ---

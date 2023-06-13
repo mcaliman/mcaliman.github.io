@@ -5,7 +5,7 @@ title:  "Code o Queue"
 excerpt: ""
 category: Java
 date:   2014-10-01 22:45:33
-tags: [Data Structures,Queue]
+tags: [Italian,Data Structures,Queue]
 comments: true
 share: true
 ---

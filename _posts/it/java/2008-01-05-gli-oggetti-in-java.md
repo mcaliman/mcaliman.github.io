@@ -5,7 +5,7 @@ title:  "Gli oggetti in Java"
 excerpt: ""
 category: Java
 date:   2008-01-05 22:45:33
-tags: [Java]
+tags: [Italian,Java]
 comments: true
 share: true
 ---

@@ -5,7 +5,7 @@ title: "COBOL overview part 1"
 excerpt: ""
 category: COBOL
 date: 2023-05-20 05:25:44
-tags: [COBOL]
+tags: [English,COBOL]
 comments: true
 share: true
 updated: true

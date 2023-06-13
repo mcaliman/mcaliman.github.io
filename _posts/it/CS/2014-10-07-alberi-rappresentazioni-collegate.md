@@ -5,7 +5,7 @@ title:  "Alberi rappresentazioni collegate"
 excerpt: ""
 category: ComputerScience
 date:   2014-10-07 22:45:33
-tags: [Data Structures,Tree]
+tags: [Italian,Data Structures,Tree]
 comments: true
 share: true
 ---

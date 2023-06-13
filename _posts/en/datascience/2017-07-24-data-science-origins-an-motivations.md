@@ -6,7 +6,7 @@ excerpt: "All of us are averse to uncertainty"
 category: DataScience
 date: 2017-07-24 22:45:33
 modified: 2017-07-25 19:45:33
-tags: [Data Science]
+tags: [English,Data Science]
 comments: true
 share: true
 updated: true

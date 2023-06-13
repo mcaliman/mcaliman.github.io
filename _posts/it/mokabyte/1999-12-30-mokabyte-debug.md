@@ -6,7 +6,7 @@ excerpt: ""
 description: "Il debug e le asserzioni,publicato su MokaByte Numero 36,Dicembre 1999,di Massimo Caliman e Nicola Merello"
 category: Java
 date:   1999-12-30 22:45:33
-tags: [Mokabyte]
+tags: [Italian,Mokabyte]
 comments: true
 share: true
 ---

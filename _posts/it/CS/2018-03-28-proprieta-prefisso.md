@@ -5,7 +5,7 @@ title:  "Proprietà del prefisso"
 excerpt: "PDA e problemi di riconoscimento di linguaggi con caratteristiche particolari."
 category: ComputerScience
 date:   2018-03-28 22:45:33
-tags: [Programming languages]
+tags: [Italian,Programming languages]
 comments: true
 share: true
 ---

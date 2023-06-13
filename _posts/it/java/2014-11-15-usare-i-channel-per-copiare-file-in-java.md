@@ -5,7 +5,7 @@ title:  "Usare i Channel per copiare file in Java"
 excerpt: ""
 category: Java
 date:   2014-11-15 22:45:33
-tags: [Java]
+tags: [Italian,Java]
 comments: true
 share: true
 ---

@@ -6,7 +6,7 @@ excerpt: "About MySQL error illegal mix of collations for operation union"
 category: MySQL
 date:   2017-05-02 22:45:33
 modified: 2017-05-03 22:45:33
-tags: []
+tags: [English]
 comments: true
 share: true
 ---

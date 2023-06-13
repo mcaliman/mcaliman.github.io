@@ -5,7 +5,7 @@ title:  "Strutture indicizzate approfondimenti"
 excerpt: ""
 category: ComputerScience
 date:   2014-10-03 22:45:33
-tags: [Data Structures]
+tags: [Italian,Data Structures]
 comments: true
 share: true
 ---

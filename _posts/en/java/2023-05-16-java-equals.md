@@ -5,7 +5,7 @@ title: "The equals() method of the Object class in Java"
 excerpt: "Learn how the equals method works and how to use it correctly"
 category: Java
 date: 2023-05-16 05:25:44
-tags: [Java]
+tags: [English,Java]
 comments: true
 share: true
 updated: true
