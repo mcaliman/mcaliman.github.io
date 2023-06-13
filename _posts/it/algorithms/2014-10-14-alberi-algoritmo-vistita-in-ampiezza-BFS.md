@@ -17,7 +17,7 @@ Partiamo dal algoritmo di generico di visita e usando una coda per rappresentare
 
 I nodi vengono visitati per livelli,prima radice,poi figli della radice,poi i figli dei figli.
 
-{% highlight java %}
+```java
 proc BFS(nodo r)
    Queue C
    C.enqueue(r)
@@ -30,4 +30,4 @@ proc BFS(nodo r)
        fi	
    od
 endproc 
-{% endhighlight %}
+```

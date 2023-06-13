@@ -18,12 +18,12 @@ Un esempio classico di ricorsione è la funzione fattoriale: dato un numero n si
 Il fattoriale può essere calcolato ricorsivamente osservando che `!n = n * !(n-1)`.
 Un possibile implementazione in Java è la seguente
 
-{% highlight java %}
+```java
 public static int factorial(int n){
    if(n==0) return 1;
    else return n*factorial(n-1);
 }
-{% endhighlight %}
+```
 
 
 Utilizzando la definizione ricorsiva di un problema ed implementandolo tramite chiamata ricorsiva di un metodo possiamo evitare analisi complesse e l’utilizzo di cicli innestati. In altre parole, non necessariamente rinunciamo all’efficienza e otteniamo codice più leggibile e compatto.
@@ -38,25 +38,25 @@ La più semplice è la lineare, un esempio lo abbiamo appena visto: il calcolo d
 
 In altre parole e più formalmente, quando abbiamo schemi di questo tipo.
 
-{% highlight java %}
+```java
 int m(int i){
    if(g(i) return x;
    return m(f(i) + y;
 }
-{% endhighlight %}
+```
 
 Un ulteriore esempio di ricorsione lineare è rappresentato dalla somma di elementi di una lista
 
-{% highlight java %}
+```java
 int sum(int[] a,n){
    if(n=1) return a[0];
    else sum(a,n-1) + a[n-1]        
 }
-{% endhighlight %}
+```
 
 L’inversione di un array, o meglio dell’ordine dei suoi elementi
 
-{% highlight java %}
+```java
 void reverse(int[] a,i,j){
    if(i<j) {
         swap(a[i],a[j]);
@@ -64,26 +64,26 @@ void reverse(int[] a,i,j){
    }
    return;        
 }
-{% endhighlight %}
+```
 
 Il metodo reverse nella fattispece utilizza la ricorsione lineare e fa uso della ricorsione di coda, cioè la chiamata ricorsiva è l’ultima operazione effettuata dal metodo.
 
 La ricorsione binaria si ha quando si fa uso di due chiamate ricorsive. Un esempio classico è la successione di Fibonacci.
 
-{% highlight java %}
+```java
 f[0] = 0
 f[1] = 1
 f[i] = f[i-1] + f[i-2] (per ogni i>1)
-{% endhighlight %}
+```
 
 Un implementazione di esempio in Java è la seguente
 
-{% highlight java %}
+```java
 int fibonacci(int k){
    if(k<=1) return k;
    else return fibonacci(k-1) + fibonacci(k-2);
 }
-{% endhighlight %}
+```
 
 Infine la ricorsione multipla non è che una generalizzazione della ricorsione binaria, in quando si definisce tale quando si fa uso di più di due chiamate ricorsive.
 

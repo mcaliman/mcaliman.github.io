@@ -14,8 +14,8 @@ share: true
 
 Partendo dall’algoritmo generico mostrato e usando per rappresentare `S` una Pila/Stack otteniamo la visita in profondità (o DFS cioè depth first search)
 
-{% highlight java %}
-proc DFS(node r)
+```java
+procedure DFS(node r)
    Stack S
    S.push(r)
    while not S.isEmpty()  do
@@ -26,8 +26,8 @@ proc DFS(node r)
             S.push(left_child_of(u))
        fi
    od
-endproc 
-{% endhighlight %}
+end 
+```
 
 in una visita in profondità si prosegue la visita dall’ultimo nodo lasciato in sospeso
 poiché mettiamo in pila prima il figlio destro di ogni nodo e poi quello sinistro tenderemo a seguire tutti i figli sinistri andando in profondità fino a che non si raggiunge la prima foglia sinistra in generale si passerà a visitare ogni sotto-albero destro in un nodo solo quando il sotto-albero sinistro è stato complessivamente visitato
@@ -43,12 +43,12 @@ Esitono le ovvie varianti se alteriamo l'ordine delle istruzioni di visita e di 
 * visita simmetrica   = si effettua prima sinistra,poi radice e poi destra
 * visita in post ordine = prima sinistra,poi destra e infine radice
 
-{% highlight java %}
-//DFS recursive visit
-proc DFS(node r)
+```bash
+-- DFS recursive visit
+procedure DFS(node r)
      if r = null then return
      visit(u)
      DFS(left_child_of(r))
      DFS(right_child_of(r))
-endproc
-{% endhighlight %}
+end
+```

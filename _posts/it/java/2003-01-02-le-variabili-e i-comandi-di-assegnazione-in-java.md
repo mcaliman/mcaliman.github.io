@@ -14,9 +14,9 @@ Diamo per prima cosa una definizione sufficientemente formale per i nostri scopi
 Definizione di variabile
 Una variabile  una coppia composta da un nome, l'identificativo della variabile e un valore.
 
-{% highlight java %}
+```java
 T var = value ;
-{% endhighlight %}
+```
 
 Le variabili di un programma memorizzano i dati che sono elaborati durante l'esecuzione.
 Nel corso dell'esecuzione del programma i valori della variabile sono modificati (se no sarebbero delle costanti).
