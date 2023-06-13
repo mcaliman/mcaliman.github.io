@@ -5,7 +5,7 @@ title:  "Classi e metodi in Java"
 excerpt: ""
 category: Java
 date:   2004-01-02 22:45:33
-tags: [Italian,OOP]
+tags: [Italian,Java]
 comments: true
 share: true
 --- 

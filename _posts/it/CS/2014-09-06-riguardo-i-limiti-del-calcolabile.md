@@ -5,7 +5,7 @@ title:  "Riguardo i limiti del calcolabile"
 excerpt: ""
 category: ComputerScience
 date:   2014-09-06 22:45:33
-tags: [Italian,Theoretical Computer Science]
+tags: [Italian,"Computer Science"]
 comments: true
 share: true
 ---

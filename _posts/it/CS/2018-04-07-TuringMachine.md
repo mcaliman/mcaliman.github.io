@@ -6,7 +6,7 @@ excerpt: "Concetti e informazioni di base sulle Macchine di Turing, linguaggio a
 category: ComputerScience
 date:   2018-04-07 22:45:33
 modified: 2019-05-12 22:45:33
-tags: [Italian,Programming languages]
+tags: [Italian,"Programming Languages","Computer Science"]
 comments: true
 share: true
 updated: true

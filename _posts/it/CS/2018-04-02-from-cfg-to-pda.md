@@ -5,7 +5,7 @@ title:  "Da CFG a PDA"
 excerpt: "Costruzione di un automa a pila (PDA) partendo da una grammatica CF"
 category: ComputerScience
 date:   2018-04-02 22:45:33
-tags: [Italian,Programming languages]
+tags: [Italian,"Programming Languages","Computer Science"]
 comments: true
 share: true
 ---

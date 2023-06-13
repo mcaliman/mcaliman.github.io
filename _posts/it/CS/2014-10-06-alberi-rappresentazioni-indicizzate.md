@@ -5,7 +5,7 @@ title:  "Alberi rappresentazioni indicizzate"
 excerpt: ""
 category: ComputerScience
 date:   2014-10-06 22:45:33
-tags: [Italian,Data Structures,Tree]
+tags: [Italian,"Computer Science"]
 comments: true
 share: true
 ---

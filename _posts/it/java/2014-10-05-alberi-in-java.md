@@ -5,7 +5,7 @@ title:  "Alberi in Java"
 excerpt: ""
 category: Java
 date:   2014-10-05 22:45:33
-tags: [Italian,Data Structures,Tree]
+tags: [Italian,"Data Structures"]
 comments: true
 share: true
 ---

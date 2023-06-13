@@ -5,7 +5,7 @@ title:  "Generic visit algorithm for a tree"
 excerpt: ""
 category: Algorithms
 date:   2014-10-10 22:45:33
-tags: [Italian,Data Structures,Tree]
+tags: [Italian,"Data Structures","Algorithms"]
 comments: true
 share: true
 ---

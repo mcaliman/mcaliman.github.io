@@ -5,7 +5,7 @@ title:  "Considerazioni su alcuni Linguaggi di Programmazione Parte 1"
 excerpt: ""
 category: ComputerScience
 date:   2014-07-09 22:45:33
-tags: [Italian,Programming languages]
+tags: [Italian,"Programming Languages","Computer Science"]
 comments: true
 share: true
 ---

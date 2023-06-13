@@ -5,8 +5,8 @@ title: "Install Python 3"
 excerpt: "How to install Python 3 in Linux/Ubuntu"
 date: 2020-06-13
 modified: 2020-06-14
-categories: Python
-tags: [English]
+categories: Linux
+tags: [English,Python]
 comments: true
 share: true
 search_omit: false

@@ -5,7 +5,7 @@ title:  "Strutture collegate"
 excerpt: ""
 category: ComputerScience
 date:   2014-09-29 22:45:33
-tags: [Italian,Data Structures]
+tags: [Italian,"Data Structures","Computer Science"]
 comments: true
 share: true
 ---

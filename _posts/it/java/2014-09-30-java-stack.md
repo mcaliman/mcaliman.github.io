@@ -5,7 +5,7 @@ title:  "Pile o Stack"
 excerpt: ""
 category: Java
 date:   2014-09-30 22:45:33
-tags: [Italian,Data Structures,Stack]
+tags: [Italian,"Data Structures"]
 comments: true
 share: true
 ---

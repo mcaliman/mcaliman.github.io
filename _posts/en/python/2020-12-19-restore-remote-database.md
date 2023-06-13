@@ -6,7 +6,7 @@ excerpt: "How do I restore a remote Mysql database to local? With Python script!
 date: 2020-12-19
 modified: 2020-12-19
 categories: Python
-tags: [English]
+tags: [English,"Python","MySQL"]
 comments: true
 share: true
 search_omit: false

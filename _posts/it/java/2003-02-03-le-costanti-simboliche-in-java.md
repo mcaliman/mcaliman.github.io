@@ -5,7 +5,7 @@ title:  "Le costanti simboliche in Java"
 excerpt: ""
 category: Java
 date:   2003-02-03 22:45:33
-tags: [Italian]
+tags: [Italian,Java]
 comments: true
 share: true
 ---

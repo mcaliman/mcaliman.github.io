@@ -5,7 +5,7 @@ title: "Classi e oggetti immutabili in Java"
 excerpt: ""
 modified: 2021-02-01
 categories: Java
-tags: [Italian,OOP]
+tags: [Italian,Java]
 comments: true
 share: true
 search_omit: false

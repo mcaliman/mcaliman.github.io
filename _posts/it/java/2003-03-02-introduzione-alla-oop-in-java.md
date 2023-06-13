@@ -5,7 +5,7 @@ title:  "Introduzione alla OOP in Java"
 excerpt: ""
 category: Java
 date:   2003-03-02 22:45:33
-tags: [Italian,OOP]
+tags: [Italian,Java]
 comments: true
 share: true
 --- 

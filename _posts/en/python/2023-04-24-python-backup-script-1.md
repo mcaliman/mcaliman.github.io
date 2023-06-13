@@ -5,7 +5,7 @@ title: "I am replacing my old bash scripts with Python #1."
 excerpt: "Copy a list of directories with their contents to a shared folder."
 modified: 2023-04-25
 categories: "Python"
-tags: [English]
+tags: [English,Python]
 comments: true
 share: true
 search_omit: false
