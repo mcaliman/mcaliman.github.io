@@ -5,7 +5,7 @@ title:  "Considerazioni sulla ricorsione"
 excerpt: ""
 category: ComputerScience
 date:   2014-08-14 22:45:33
-tags: [Java, recorsione]
+tags: [Programming languages]
 comments: true
 share: true
 ---

@@ -5,7 +5,7 @@ title:  "Algoritmo di visita generica per un albero"
 excerpt: ""
 category: Algorithms
 date:   2014-10-10 22:45:33
-tags: [Tree]
+tags: [Data Structures,Tree]
 comments: true
 share: true
 ---
