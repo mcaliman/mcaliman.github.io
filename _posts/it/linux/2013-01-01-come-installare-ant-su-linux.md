@@ -1,7 +1,7 @@
 ---
 layout: post
 lang: it
-title:  "Come installare Ant su linux"
+title:  "Come installare Ant su Linux"
 excerpt: ""
 category: Linux
 date:   2013-01-01 22:45:33
@@ -13,7 +13,7 @@ share: true
 Non provare mai a spiegare il computer a un profano. È più facile spiegare il sesso a una vergine.
 *(Robert Anson Heinlein, La Luna è una severa maestra, 1966)*
 
-Vediamo come installare ant, questo è requisito per l'installazione di GlassFish su linux.
+Vediamo come installare ant, questo è requisito per l'installazione di GlassFish su Linux.
 Scarichiamo il tar.gz dal sito e trasferiamolo in `/usr/local`
 scompattiamo il file `apache-ant-1.7.1-bin.tar.gz` con il comando
 

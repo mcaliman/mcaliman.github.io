@@ -33,7 +33,7 @@ ruby -v
 
 Per essere sicuro che tutto funzioni dovresti ottenere la seguente versione di Ruby.
 {% highlight bash %}
-ruby 1.9.3p484 (2013-11-22 revision 43786) [x86_64-linux]
+ruby 1.9.3p484 (2013-11-22 revision 43786) [x86_64-Linux]
 {% endhighlight %}
 
 Un piccolo workaround per fixare la gem CoffeeScript... ci serve il compilatore g++...
