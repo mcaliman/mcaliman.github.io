@@ -5,7 +5,7 @@ title:  "Facili le dropdownbox con le JSF 2.2!"
 excerpt: ""
 category: Java
 date:   2014-12-16 22:45:33
-tags: [Java,JavaServerFaces,JSF2]
+tags: [Java Server Faces]
 comments: true
 share: true
 ---

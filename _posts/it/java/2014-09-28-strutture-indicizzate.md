@@ -5,7 +5,7 @@ title:  "Strutture indicizzate"
 excerpt: ""
 category: Java
 date:   2014-09-28 22:45:33
-tags: [Java,Strutture indicizzate,Strutture Dati]
+tags: [Data Structures]
 comments: true
 share: true
 ---

@@ -5,7 +5,7 @@ title:  "Creare un custom Converter in JSF 2.2"
 excerpt: ""
 category: Java
 date:   2015-01-01 22:45:33
-tags: [Java,JavaServerFaces,JSF2]
+tags: [Java Server Faces]
 comments: true
 share: true
 ---

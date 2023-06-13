@@ -5,7 +5,7 @@ title: Il design pattern Singleton
 excerpt: "Alcuni esempi sul pattern Singleton"
 modified: 2016-01-03
 categories: Java
-tags: [Java,jdk8,Design Pattern,Singleton Pattern]
+tags: [Design Pattern]
 comments: true
 share: true
 updated: true

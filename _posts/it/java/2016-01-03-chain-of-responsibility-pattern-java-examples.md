@@ -5,7 +5,7 @@ title: Il design pattern Chain Of Responsibility
 excerpt: "Codice di esempio minimale sul pattern CoF"
 modified: 2016-01-03
 categories: Java
-tags: [Java,jdk8,Design Pattern,Visitor Pattern]
+tags: [Design Pattern]
 comments: true
 share: true
 updated: true

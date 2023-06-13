@@ -6,7 +6,7 @@ excerpt: "A Complex Number Class For Java"
 date: 2020-10-03
 modified: 2020-10-03
 categories: Java
-tags: [java]
+tags: [Complex Number]
 comments: true
 share: true
 search_omit: false
