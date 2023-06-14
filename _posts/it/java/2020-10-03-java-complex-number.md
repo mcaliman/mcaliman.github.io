@@ -5,7 +5,7 @@ title: "Java Complex Number"
 excerpt: "A Complex Number Class For Java"
 date: 2020-10-03
 modified: 2020-10-03
-categories: Java
+category: Java
 tags: [Italian,Java]
 comments: true
 share: true

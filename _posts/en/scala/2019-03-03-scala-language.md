@@ -4,7 +4,7 @@ lang: en
 title: "The programming language Scala"
 excerpt: ""
 modified: 2019-03-03
-categories: Scala
+category: Scala
 tags: [English,Scala]
 comments: true
 share: true

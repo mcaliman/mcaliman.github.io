@@ -4,7 +4,7 @@ lang: it
 title: Il design pattern State
 excerpt: "Caratteristiche e codice di esempio ridotto all'essenziale"
 modified: 2016-01-30
-categories: Java
+category: Java
 tags: [Italian,Design Pattern]
 comments: true
 share: true

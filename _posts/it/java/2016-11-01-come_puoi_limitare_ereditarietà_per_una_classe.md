@@ -4,7 +4,7 @@ lang: it
 title: Come puoi limitare l'ereditarietà per una classe?
 excerpt: ""
 modified: 2016-11-01
-categories: Java
+category: Java
 tags: [Italian,Java]
 comments: true
 share: true

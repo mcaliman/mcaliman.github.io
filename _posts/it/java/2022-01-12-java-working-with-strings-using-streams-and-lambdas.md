@@ -4,7 +4,7 @@ lang: it
 title: "Working with Strings using Streams and Lambdas."
 excerpt: ""
 modified: 2022-01-12
-categories: Java
+category: Java
 tags: [Italian,Java]
 comments: true
 share: true

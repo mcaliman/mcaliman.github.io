@@ -4,7 +4,7 @@ lang: it
 title: Il design pattern Interpreter
 excerpt: "Codice di esempio minimale sul pattern Interpreter"
 modified: 2016-01-03
-categories: Java
+category: Java
 tags: [Italian,Design Pattern]
 comments: true
 updated: true
