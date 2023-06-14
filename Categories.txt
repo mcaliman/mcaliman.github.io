@@ -2,9 +2,9 @@ Categories
 
 
 Computer Science
-Algorithms 
-Data Structures
-    
+    Algorithms 
+    Data Structures
+Artificial Intelligence
 Data Science
 Data Engineering
 
@@ -16,3 +16,7 @@ ERP
 LMS
 DMS
 Jekyll
+git
+github
+gitlab
+
