@@ -13,7 +13,7 @@ bundle exec jekyll serve
 
 ```
 git add --all .
-git commit -m "update r2019.03"
+git commit -m "update r2023.06"
 git push origin master --force-with-lease
 ```
 
