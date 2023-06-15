@@ -23,7 +23,7 @@ title: "True Programming"
 description: "Massimo Caliman's blog on Computer Programming, Computer Science and Data Science"
 
 # Custom variable
-blog_release: 23.6.15
+blog_release: 23.6.15.1
 baseurl: # the subpath of your site, e.g. "/blog"
 # url: https://trueprogramming.com
 # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
