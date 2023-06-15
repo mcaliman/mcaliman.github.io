@@ -15,12 +15,15 @@
 # in the templates via {{ site.myvariable }}.
 # theme: jekyll-theme-so-simple
 # remote_theme: "mmistakes/so-simple-theme"
-remote_theme: "mmistakes/so-simple-theme@3.2.0"
-#theme: jekyll-theme-so-simple
-# locale: en-US
-locale: it-IT
+#remote_theme: "mmistakes/so-simple-theme@3.2.0"
+theme: jekyll-theme-so-simple
+skin: "/assets/css/skins/default.css" #news
+locale: en-US
+# locale: it-IT
 title: "True Programming"
 description: "Massimo Caliman's blog on Computer Programming, Computer Science and Data Science"
+
+#copyright: 1999-2023 Massimo Caliman - All Rights Reserved, Questo sito non rappresenta una testata giornalistica, in quanto viene aggiornato senza alcuna periodicità.Non può pertanto considerarsi un prodotto editoriale ex L.62 7/3/2001.
 
 # Custom variable
 blog_release: 23.6.15.1

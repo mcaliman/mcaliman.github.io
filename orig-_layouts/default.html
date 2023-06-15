@@ -1,0 +1,34 @@
+---
+layout: compress
+---
+
+
+{%- comment -%}
+Use compress layout for compress all html
+<!--
+So Simple Jekyll Theme 3.1.1
+Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+Free for personal and commercial use under the MIT license
+https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+
+Massimo Caliman's blog powered by jekyll https://jekyllrb.com/
+Last Update: 14/03/2019
+Template version: 2.0
+Theme Based on "So Simple Jekyll Theme 3.1.1" (c) 2013-2018 by Michael Rose - mademistakes.com | @mmistakes
+Free for personal and commercial use under the MIT license
+https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+{%- endcomment -%}
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en-US' }}" class="no-js">
+{% include head.html %}
+<body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} {% if page.entries_layout == 'grid' %}page--wide{% endif %} {{ page.title | slugify }}">
+{% include skip-links.html %}
+{% include navigation.html %}
+{%- include masthead.html %}
+{{ content }}
+{% include footer.html %}
+{% include scripts.html %}
+</body>  
+</html>

@@ -12,7 +12,7 @@
   margin-bottom: 0.25em;
   padding: 0.5em 1em;
   font-family: $sans-serif-font-family;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
@@ -26,34 +26,6 @@
 
   .icon + .hidden {
     margin-left: -0.5em; /* override for hidden text*/
-  }
-
-  /* button colors */
-  $buttoncolors: (primary, $primary-color),  (inverse, #fff),
-     (light-outline, transparent),  (success, $success-color),
-     (warning, $warning-color),  (danger, $danger-color),  (info, $info-color),
-     (facebook, $facebook-color),  (twitter, $twitter-color),
-     (google-plus, $google-plus-color),  (linkedin, $linkedin-color),
-     (reddit, $reddit-color);
-
-  @each $buttoncolor, $color in $buttoncolors {
-    &--#{$buttoncolor} {
-      @include yiq-contrasted($color);
-      @if ($buttoncolor == inverse) {
-        border: 1px solid $border-color;
-      }
-      @if ($buttoncolor == light-outline) {
-        border: 1px solid #fff;
-      }
-
-      &:hover {
-        @include yiq-contrasted(mix(#000, $color, 20%));
-      }
-
-      &:visited {
-        @include yiq-contrasted($color);
-      }
-    }
   }
 
   /* fills width of parent container */
@@ -77,16 +49,16 @@
 
   /* extra large button */
   &--x-large {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   /* large button */
   &--large {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   /* small button */
   &--small {
-    font-size: 0.75em;
+    font-size: 0.75rem;
   }
 }
