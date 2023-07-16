@@ -17,7 +17,7 @@
 # remote_theme: "mmistakes/so-simple-theme"
 remote_theme: "mmistakes/so-simple-theme@3.2.0"
 # theme: jekyll-theme-so-simple
-skin: "/assets/css/skins/default.css" #news
+skin: "/assets/css/skins/light.css" #news
 locale: en-US
 # locale: it-IT
 title: "True Programming"
