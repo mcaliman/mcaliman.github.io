@@ -9,11 +9,13 @@
   {%- endfor -%}
 {%- else -%}
   <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  
   <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
 {%- endif -%}
 
 {%- if site.google_analytics -%}
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KNVE7KY3LB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -22,6 +24,7 @@
   gtag('config', 'G-KNVE7KY3LB');
   gtag('config', 'GA_TRACKING_ID', { 'anonymize_ip': true });
 </script>
+
 {%- endif %}
 
 {% if site.mathjax == true or site.mathjax.enable == true %}
