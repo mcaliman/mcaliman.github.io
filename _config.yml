@@ -44,11 +44,13 @@ mathjax: true # MathJax equations, e.g. true
 #  combo:  # "tex-svg" (default), "tex-mml-chtml", etc.: docs.mathjax.org/en/latest/web/components/combined.html
 #  tags:  # "none", "ams" (default), "all"
 
-google_fonts:
-  - name: "Source Sans Pro"
-    weights: "400,400i,700,700i"
-  - name: "Lora"
-    weights: "400,400i,700,700i"
+# provo a commentare per vedere come rende
+# google_fonts:
+#   - name: "Source Sans Pro"
+#     weights: "400,400i,700,700i"
+#   - name: "Lora"
+#     weights: "400,400i,700,700i"
+
 #google_analytics: G-KNVE7KY3LB 
 google_analytics:
 
