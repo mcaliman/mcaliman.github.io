@@ -37,7 +37,7 @@ logo: /images/logo.jpg
 date_format: "%d/%m/%Y"
 read_time: true # reading time estimates, e.g. true
 words_per_minute: 200 
-mathjax: true # MathJax equations, e.g. true
+mathjax: false # MathJax equations, e.g. true
 
 #mathjax:
 # enable: true # MathJax equations, e.g. true, false (default)
