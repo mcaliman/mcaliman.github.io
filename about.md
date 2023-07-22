@@ -26,10 +26,3 @@ Here are a few places to touch base:
 You can reach me by email at [mcaliman@gmail.com](mailto:mcaliman@gmail.com)
 
 
-## How to Support this blog
-
-Found one of my Paper tutorials, articles useful? If you feel inclined, here's how you can thank me.
-
-* Follow me (Twitter,Linkedin,Google Plus..)
-* Google Adsense in the bottom of page!
-* Send a donation. Help me pay for hosting and continue to provide free content (PayPal account: massimo.caliman@gmail.com)
