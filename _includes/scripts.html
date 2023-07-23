@@ -12,6 +12,7 @@
   <script src="{{ '/assets/js/fontawesome_v5.0.12_js_all.js' | relative_url }}"></script>
 {%- endif -%}
 
+<!--
 {%- if site.google_analytics -%}
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KNVE7KY3LB"></script>
@@ -24,6 +25,7 @@
 </script>
 
 {%- endif %}
+-->
 
 {% if site.mathjax == true or site.mathjax.enable == true %}
 <!-- MathJax -->
@@ -77,6 +79,9 @@
 <script src="{{ '/assets/js/fontawesome_v5.0.12_js_all.js' | relative_url }}"></script>
 
 {%- endif -%}
+
+
+<!--
 {%- if jekyll.environment == 'production' and site.google_analytics -%}
   <script>
   if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
@@ -90,6 +95,7 @@
   }
   </script>
 {%- endif %}
+-->
 {%- if site.mathjax == true %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 {% endif %}
