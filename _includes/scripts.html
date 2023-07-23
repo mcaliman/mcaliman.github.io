@@ -12,20 +12,7 @@
   <script src="{{ '/assets/js/fontawesome_v5.0.12_js_all.js' | relative_url }}"></script>
 {%- endif -%}
 
-<!--
-{%- if site.google_analytics -%}
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNVE7KY3LB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KNVE7KY3LB');
-  gtag('config', 'GA_TRACKING_ID', { 'anonymize_ip': true });
-</script>
-
-{%- endif %}
--->
 
 {% if site.mathjax == true or site.mathjax.enable == true %}
 <!-- MathJax -->
