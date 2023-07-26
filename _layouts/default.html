@@ -9,9 +9,13 @@
   {% include head.html %}
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} {% if page.entries_layout == 'grid' %}page--wide{% endif %} {{ page.title | slugify }}">
+    
     {% include skip-links.html %}
     {% include navigation.html %}
     {% include masthead.html %}
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5121145090824526"
+     crossorigin="anonymous"></script>
 
     {{ content }}
 
