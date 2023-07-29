@@ -17,7 +17,7 @@
 # remote_theme: "mmistakes/so-simple-theme"
 remote_theme: "mmistakes/so-simple-theme@3.2.0"
 # theme: jekyll-theme-so-simple
-skin: "/assets/css/skins/light.css" #news
+skin: "/assets/css/skins/dark.css" #news
 locale: en-US
 # locale: it-IT
 title: "True Programming"
@@ -84,7 +84,7 @@ pagination:
         before: 2
         after: 2     
 # Search
-search_full_content: true # false # can have performance implications for large sites
+search_full_content: false # false # can have performance implications for large sites
 # Taxonomy pages
 # category_archive_path: "/categories/#"
 # tag_archive_path: "/tags/#"
