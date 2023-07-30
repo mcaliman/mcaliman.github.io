@@ -14,6 +14,8 @@ Let's see how to install ant, which is a requirement for installing GlassFish on
 Download the tar.gz file from the website and transfer it to `/usr/local`
 Unzip the file  `apache-ant-1.7.1-bin.tar.gz` with the command:
 
+>"The machine is an extension of the human mind, not an alternative to it." - I, Robot (1950)
+
 ```
 tar xvfz apache-ant-1.7.1-bin.tar.gz
 ```
