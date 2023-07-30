@@ -10,7 +10,6 @@ comments: true
 share: true
 ---
 
->"The machine is an extension of the human mind, not an alternative to it." - I, Robot (1950)
 
 Let's see how to install ant, which is a requirement for installing GlassFish on Linux.
 Download the tar.gz file from the website and transfer it to `/usr/local`
