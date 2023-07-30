@@ -68,6 +68,8 @@ markdown: kramdown
 feed:
   path: atom.xml
 
+future: true
+
 # Comprimi html ed elimina commenti, comment to disable for dev and debug
 # compress_html:
 #  comments: ["<!-- ", " -->"]

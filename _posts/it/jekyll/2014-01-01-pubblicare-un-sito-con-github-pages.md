@@ -10,8 +10,7 @@ comments: true
 share: true
 ---
 
-L'informatica non riguarda i computer più di quanto l'astronomia riguardi i telescopi.
-*(Edsger Dijkstra)*
+
 
 Se vuoi pubblicare il sito all'indirizzo `http://USERNAME.github.com` devi creare una repository (dall'account GitHub) 
 chiamato `USERNAME.github.com`, nel mio caso `mcaliman.github.com`
