@@ -6,7 +6,6 @@ title: Cookie Policy (English)
 modified: 2023-07-24
 ---
 
-## Cookie Policy
 
 This website uses cookies to improve the user experience. By using this website, the user consents to the use of cookies in accordance with this Cookie Policy.
 

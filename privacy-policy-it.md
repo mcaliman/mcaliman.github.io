@@ -2,11 +2,11 @@
 layout: page
 lang: it
 permalink: /privacy-policy-it/
-title: Privacy Policy (Italiano)
+title: Informativa sulla privacy - Privacy Policy (Italiano)
 modified: 2023-07-24
 ---
 
-## Informativa sulla privacy
+
 
 Raccolta e utilizzo dei dati
 
@@ -36,6 +36,6 @@ Potremmo modificare la presente Informativa sulla privacy in qualsiasi momento. 
 
 Contatto
 
-Se hai domande sulla presente Informativa sulla privacy, non esitare a contattarci all'indirizzo e-mail [email protected]
+Se hai domande sulla presente Informativa sulla privacy, non esitare a contattarci all'indirizzo e-mail mcaliman@gmail.com
 
 Latest update: 24 July 2023

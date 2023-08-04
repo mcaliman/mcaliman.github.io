@@ -6,7 +6,6 @@ title: Privacy Policy (English)
 modified: 2023-07-24
 ---
 
-## Privacy Policy
 
 Data Collection and Use
 
