@@ -1,14 +1,14 @@
 ---
 layout: post
 lang: en
-title:  "How to speed up restore operations from mysql dump"
+title:  "MySQL: How to speed up restore operations from mysql dump"
 excerpt: ""
 category: Databases
 date:   2011-01-01 22:45:33
 tags: [English,MySQL]
 comments: true
 share: true
-permalink: /Databases/MySQL/3
+permalink: /databases/mysql/3
 ---
 
 To speed up the operation of restoring a sql dump in mysql, you can proceed as follows

@@ -1,7 +1,7 @@
 --- 
 layout: post
 lang: en
-title: "Illegal mix of collations for operation union"
+title: "MySQL: Illegal mix of collations for operation union"
 excerpt: "About MySQL error illegal mix of collations for operation union"
 category: Databases
 date:   2017-05-02 22:45:33
@@ -9,7 +9,7 @@ modified: 2017-05-03 22:45:33
 tags: [English,MySQL]
 comments: true
 share: true
-permalink: /Databases/MySQL/3
+permalink: /databases/mysql/3
 ---
 Well, you probably have different collations in some mysql views, try to force collation like this 
 {% highlight sql %} 

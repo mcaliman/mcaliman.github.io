@@ -1,14 +1,14 @@
 ---
 layout: post
 lang: en
-title:  "how to install on ubuntu linux mysql without synaptic or apt"
+title:  "MySQL: how to install on ubuntu linux mysql without synaptic or apt"
 excerpt: ""
 category: Databases
 date:   2011-02-03 22:45:33
 tags: [English,MySQL]
 comments: true
 share: true
-permalink: /Databases/MySQL/2
+permalink: /databases/mysql/2
 ---
 We download the tar.gz from the mysql site www.mysql.com
 place it in /usr/local unpack the tar.gz with the command
