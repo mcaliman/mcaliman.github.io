@@ -3,7 +3,7 @@ layout: post
 lang: en
 title: "COBOL overview part 1"
 excerpt: ""
-category: COBOL
+category: "Computer Programming"
 date: 2023-05-20 05:25:44
 tags: [English,COBOL]
 comments: true
