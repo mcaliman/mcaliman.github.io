@@ -1,20 +1,20 @@
 ---
 layout: post
-lang: it
-title:  "Come ripristinare l'utente amministratore di Docebo"
+lang: en
+title:  "How to restore the Docebo administrator user"
 excerpt: ""
-category: Docebo
+category: "LMS (Learning Management System)"
 date:   2009-01-01 22:45:33
-tags: [Italian,"LMS (Learning Management System)"]
+tags: [English,Docebo,"LMS (Learning Management System)"]
 comments: true
 share: true
 ---
 
-In fase di importazione da file **CSV**, **Docebo** talvolta cancella l’utente admin e non è più possibile accedere al pannello di amministrazione.
-Il bug a quanto pare è noto fin dal 2005, ne ho trovato riscontro in rete e su vari forum e gruppi di discussione. 
-Al momento non ho individuato patch ufficiali che risolvano il problema,uno dei consigli che ho spesso trovato è quello di ripristinare un backup del database. Una soluzione indolore è ripristinare l’utente admin con le istruzioni che riporto qui sotto. 
+When importing from CSV files, Docebo sometimes deletes the admin user and it is no longer possible to access the administration panel.
+The bug has been known since 2005, I have found evidence of it on the net and various forums and discussion groups. 
+At the moment I have not found any official patches that solve the problem, one of the tips I have often found is to restore a backup of the database. A painless solution is to restore the admin user with the instructions below.
 
-{% highlight sql %}
+```sql
 insert into core_user (
 idst,
 userid,
@@ -52,15 +52,15 @@ insert into core_group_members (idst,idstMember,filter)
 values ('2',last_insert_id(),'');
 insert into core_group_members (idst,idstMember,filter) 
 values ('3',last_insert_id(),'');
-{% endhighlight %}
+```
 
-L'anomalia si verifica in modo casuale ed è imputabile a mio parere all'uso dell'engine **MyISAM** in luogo di **InnoDB**.
-Le istruzioni vanno eseguire riga per riga nell’ordine dato e solo se l’utente admin è assente dalla tabella core_user e correlate.
-Sotto sono riportate le definizioni delle tabelle interessate
+The anomaly occurs randomly and is attributable in my opinion to the use of the `MyISAM` engine instead of `InnoDB`.
+The instructions must be executed line by line in the given order and only if the admin user is absent from the core_user and related tables.
+Below are the definitions of the affected tables
 
-#tabella core_user
+# core_user
 
-{% highlight sql %}
+```sql
 create table core_user (
 idst int(11) not null default '0',
 userid varchar(255) not null default '',
@@ -80,18 +80,17 @@ checkprivacy varchar(5) default 'no',
 primary key  (idst),
 unique key userid (userid)
 ) ENGINE=MyISAM default CHARSET=utf8
-{% endhighlight %}
+```
 
-#tabella core_group_members 
+#  core_group_members 
 
-{% highlight sql %}
+```sql
 create table core_group_members (
 idst int(11) not null default '0',
 idstMember int(11) not null default '0',
 filter varchar(50) not null default '',
 unique key unique_relation (idst,idstMember)
 ) ENGINE=MyISAM default CHARSET=utf8
-{% endhighlight %}
+```
 
-Sono interessato ad approfondire il comportamento specifico di docebo in questo contesto,non esitate a contattarmi,la versione utilizzata di **Docebo** è la **3.6.0.3**.
-
+I am interested in learning more about the specific behaviour of docebo in this context,please do not hesitate to contact me,the version used of `Docebo` is `3.6.0.3`.
