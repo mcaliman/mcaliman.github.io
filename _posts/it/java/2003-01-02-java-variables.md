@@ -1,6 +1,6 @@
 --- 
 layout: post
-lang: it
+lang: en
 title:  "Le variabili e i comandi di assegnazione"
 excerpt: ""
 category: Java
@@ -25,32 +25,32 @@ Trattiamole bene,diamogli un nome rispettabile in modo che non ci odino e ci fac
 Prima di essere usata una variabile deve essere dichiarata, la dichiarazione di una variabile  necessaria per riservare uno spazio
 di memoria in cui scrivere il suo valore, la dichiarazione definisce il tipo della variabile.
 
-{% highlight java %}
+```java
 T var;
-{% endhighlight %}
+```
 
 dove `T`  il tipo, per esempio **int** , double e altro.
 Si possono avere come tipi, tipi di base che non sono oggetti oppure oggetti ( `T` diventa un nome di classe). 
 Sotto riportiamo alcuni esempi di dichiarazione di variabile:
 
-{% highlight java %}
+```java
 int x ; double y ;
-{% endhighlight %}
+```
 
 Posso anche assegnare un valore alla variabile:
 
-{% highlight java %}
+```java
 int x = 5 ; double y = 60 ;
-{% endhighlight %}
+```
 
 Il tipo dei valori della variabile serve per stabilire quanta memoria riservare alla variabile, nel caso del tipo int sono 4 byte.
 Se dovessimo rappresentare graficamente le dichiarazioni:
 
-{% highlight java %}
+```java
 int x = 0 ; 
 int y = 2 ; 
 int z ; 
-{% endhighlight %}
+```
 
 x 0 y 2 z -
 
@@ -63,9 +63,9 @@ Definizione di comando di assegnazione
 Un comando di assegnazione  un'istruzione avente lo scopo di modificare il valore di una variabile.
 Si aggiunga anche di assegnare un valore ad una variabile che era solo stata dichiarata e che quindi aveva valore indefinito.
 
-{% highlight java %}
+```java
 var = expr;
-{% endhighlight %}
+```
 
 Dove var  il nome della variabile e expr una espressione il cui tipo  compatibile con il tipo di var.
 Il comando ha l'effetto di sostituire il valore della variabile il cui nome compare a sinistra (left-value) del segno di uguaglianza 
@@ -73,17 +73,17 @@ con il valore che compare a destra.
 Per espressioni si intende un'entit sintattica composta da nomi di variabili, costanti e segni di operazioni 
 per stabilire l'ordine di valutazione degli operandi.
 
-{% highlight java %}
+```java
 x = 12;
-{% endhighlight %}
+```
 
 assegna alla variabile x il valore 12;
 
-{% highlight java %}
+```java
 y = (x+1)/2;
-{% endhighlight %}
+```
 
- un esempio di espressione.
+un esempio di espressione.
 
 Abbiamo parlato fino ad ora dei tipi di variabile senza darne una definizione formale, corriamo subito ai ripari:
 
@@ -121,9 +121,9 @@ Aggiungiamo anche per completezza anche i simboli:
 
 Come gi accennato nel caso di una assegnazione del tipo 
 
-{% highlight java %}
+```java
 T var = expr 
-{% endhighlight %}
+```
 
 abbiamo detto che expr deve avere tipo compatibile con T (non necessariamente lo stesso)  utile a questo punto dare 
 la definizione di promozione e casting per tipi che definiscono i casi in cui il tipo di var e expr possono non coincidere 
@@ -134,11 +134,11 @@ Qualora tanto il tipo della variabile quanto il tipo dell' espressione rappresen
 del tipo di var prima dell' assegnazione avviene una conversione automatica detta promozione.
 Per esempio:
 
-{% highlight java %}
+```java
 int i ; 
 byte j ; 
 i = j ;
-{% endhighlight %}
+```
 
 Diamo ora invece una definizione di casting:
 
@@ -149,10 +149,9 @@ conversione esplicita detta casting cio : TypeOf(expr) --> TypeOf(var). Questo s
 
 Per esempio:
 
-{% highlight java %}
+```java
 int i; 
 byte j; 
 j = (byte) i;
-{% endhighlight %}
-
- corretto solo se i  minore o uguale del valore massimo disponibile per byte.
+```
+corretto solo se `i`  minore o uguasle del valore massimo disponibile per byte.
