@@ -13,14 +13,14 @@ Ogni documento XML su cui lavoriamo dovrebbe essere formattato correttamente, sa
 Un caso classico è il messaggio "Content is not allowed in prolog" (`SAXParseException`)
 Editiamo a mano il file con un editor (esadecimale) e togliamo in testa "ef bb bf".
 Visto che usiamo Java molto meglio mettere un piccolo work-around di appena due righe di codice :
-{% highlight java %}
+```java
 Matcher matcher = (Pattern.compile("^([\\W]+)<")).matcher( xmlString.trim() );
 xmlString = matcher.replaceFirst("<");
-{% endhighlight %}
+```
 
 Questo prima di passare il tutto al nostro oggetto `SAXBuilder`
 
-{% highlight java %}
+```java
 SAXBuilder builder = new SAXBuilder();
 Document document = builder.build(new StringReader(xmlString));
-{% endhighlight %}
+```

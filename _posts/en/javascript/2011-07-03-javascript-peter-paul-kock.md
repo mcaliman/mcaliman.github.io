@@ -9,7 +9,10 @@ tags: [Javascript,English]
 comments: true
 share: true
 ---
-  
+
+> “If you have a procedure with ten parameters, you probably missed some.”
+>
+> – Alan Perlis  
 
 
 If you happen to have to work in javascript, even if only to copy and paste simple scripts into your site, give yourself a gift,

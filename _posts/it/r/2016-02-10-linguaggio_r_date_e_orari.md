@@ -10,8 +10,7 @@ comments: true
 share: true
 ---
 
-{% highlight bash %}
-{% endhighlight %}
+
 
 ## La classe Date
 R ha una speciale rappresentazione di oggetti date e ora,le date sono rappresentate tramite la classe `Date`,orari e intervalli di tempo con le classi `POSIXct` o `POSIXlt`. 
@@ -20,13 +19,13 @@ Le date vengono memorizzate internamente come il numero di giorni dal 1/1/1970 m
 ## Classi per orari e intervalli di tempo
 Le date sono rappresentate dalla classe `Date` e possono essere sottoposte a coercizione (conosciuto con il nome di cast in altri linguaggi) da una stringa di caratteri nel seguente modo
 
-{% highlight bash %}
+```r
 x <- as.Date("1970-01-01")
 x
 [1] "1970-01-01"
 > class(x)
 [1] "Date"
-{% endhighlight %}
+```
 
 
 Orari e intervalli di tempo sono rappresentate utilizzando le classi
@@ -44,21 +43,21 @@ Ci sono un certo numero di funzioni generiche per gli oggetti di tipo date e ora
 
 gli orari possono essere ottenuti da una stringa di caratteri utilizzando le funzioni `as.POSIXlt` o `as.POSIXct`.
 
-{% highlight bash %}
+```
 t1 <- Sys.time()
 posix1<- as.POSIXlt(t1)
 posix1$sec #prende la parte secondi, posso farlo perchè l'ho costruito come POSIXlt 
-{% endhighlight %}
+```
 
 oppure posso utilizzare il format `POSIXct`.
 
 nel caso in cui le date siano scritte in un formato diverso si può usare la funzione `strptime` 
 
-{% highlight bash %}
+```r
 datestring <- c("January 10, 2012 10:40", "December 9, 2011 9:10")
 x <- strptime(datestring, "%B %d, %Y %H:%M")
 #restituisce "2012-01-10 10:40:00 EST" "2011-12-09 09:10:00 EST" ed è interessante notare che l'ho applicato ad una lista
-{% endhighlight %}
+```
 
 
 

@@ -14,7 +14,7 @@ share: true
 Lo script in questione non è nulla di speciale ma mostra la comodità di utilizzare R quando si tratta di manipolare dati e creare script o prototipi. Scarica i due file droptime file dal nic e verifica se al suo interno è presente il dominio che ci interessa.
 Lo script aggiornato è disponibile su github [https://github.com/mcaliman/R-utilities](https://github.com/mcaliman/R-utilities)
 
-{% highlight R %}
+```r
 # droptime_file_observer.R
 # the format of droptime file is yyyymmdd09 and yyyymmdd16 
 date <- Sys.Date()
@@ -34,7 +34,7 @@ if (is.element(domain_to_find, droptime_file1)){
 if (is.element(domain_to_find, droptime_file2)){
 	print('present in droptime file!');
 }
-{% endhighlight %}
+```
 
 Possiamo personalizzarlo con un invio email al posto della stampa e poi schedulando tutto con cron.
 

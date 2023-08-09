@@ -1,3 +1,49 @@
+“Talk is cheap, show me the code.”
+– Linus Torvalds
+
+“If a machine is expected to be infallible, it cannot also be intelligent.”
+– Alan Turing
+
+“Code never lies, comments sometimes do.”
+– Ron Jeffries
+
+“If debugging is the process of removing software bugs, then programming must be the process of putting them in.”
+– Edsger Dijkstra
+
+“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
+– Martin Fowler
+
+“Good code is its own best documentation.”
+– Steve McConnell
+
+> “Measuring programming progress by lines of code is like measuring aircraft building 
+progress by weight.”
+>
+> – Bill Gates
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 "The computer is a tool, like a hammer or a saw. It can be used for good or evil. It depends on the user." - Isaac Asimov, I, Robot (1950)
 
 "Computers are not sentient beings. They do not have the same emotions and needs as humans. It is important to remember this when interacting with computers." - Isaac Asimov, The Foundation Trilogy (1951-1953)

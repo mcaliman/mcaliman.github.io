@@ -10,8 +10,8 @@ comments: true
 share: true
 ---
 
-Chiedersi se un computer possa pensare non è più interessante del chiedersi se un sottomarino possa nuotare.
-*(Edsger Dijkstra, The threats to computing science, 1984)*
+> Chiedersi se un computer possa pensare non è più interessante del chiedersi se un sottomarino possa nuotare.
+> *(Edsger Dijkstra, The threats to computing science, 1984)*
 
 La console di amministrazione di GlassFish V3 prendendo troppo tempo per caricare?
 

@@ -12,12 +12,12 @@ share: true
 
 Per estrarre un certificato che già sappiamo essere nel nostro portachiavi
 
-{% highlight bash %} 
+```bash
 keytool -export -alias mycompanyalias -file mycompany.crt
-{% endhighlight %}
+```
 
 per firmare un nostro `jar` con il certificato sopra
 
-{% highlight bash %} 
+```bash
 jarsigner mycompany.jar mycompanyalias
-{% endhighlight %}
+```

@@ -10,6 +10,9 @@ comments: true
 share: true
 ---
 
+> “Software is like sex: it’s better when it’s free.”
+>
+> – Linus Torvalds
 
 Let's see how to install ant, which is a requirement for installing GlassFish on Linux.
 Download the tar.gz file from the website and transfer it to `/usr/local`

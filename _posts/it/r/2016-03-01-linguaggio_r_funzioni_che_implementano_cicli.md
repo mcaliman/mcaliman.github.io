@@ -23,7 +23,7 @@ Il loop reale è fatto internamente in codice C (quindi attenzione sul lato dati
 `lapply` restituisce sempre un elenco, indipendentemente dalla classe di ingresso .
 
 
-{% highlight bash %}
+```r
 f <- function(x) {x=x+1}
 l <- 1:4
 y <- lapply(x,f)
@@ -40,7 +40,7 @@ y
 [[4]]
 [1] 5
 
-{% endhighlight %}
+```
 
 
 ## sapply
@@ -49,11 +49,11 @@ Se il risultato è una lista in cui ogni elemento è di lunghezza 1, viene resti
 Se il risultato è una lista in cui ogni elemento è un vettore della stessa lunghezza ( > 1 ) , viene restituita una matrice.
 Se `sapply` non riesce a semplificare viene ritornata  una lista.
 
-{% highlight bash %}
+```r
 > z<-sapply(x,f)
 > z
 [1] 2 3 4 5
-{% endhighlight %}
+```
 
 Comodo non trovate?
 
@@ -62,15 +62,15 @@ Comodo non trovate?
 E' utilizzato più spesso per applicare una funzione alle righe o colonne di una matrice
 Non è più veloce che scrivere un ciclo for, ma funziona in una sola riga.
 
-{% highlight bash %}
+```r
 > str(apply)
 function (X, MARGIN, FUN, ...) 
-{% endhighlight %}
+```
 
 MARGIN è un vettore intero che indica quali margini debbano essere "mantenuti"
 L'esempio sotto spero possa chiarire meglio (rnorm ci serve solo per popolare una matrice con una distribuzione normale)
 
-{% highlight bash %}
+```r
 x <- matrix(rnorm(200), 20, 10)
 > x <- matrix(rnorm(200), 20, 10)
 > x
@@ -120,23 +120,23 @@ x <- matrix(rnorm(200), 20, 10)
  [1] -0.19912313 -0.24928564  0.16022123 -0.19981773 -0.14843056 -0.02009729
  [7] -0.23467453  0.13209995  0.07565145  0.13402934
 
-{% endhighlight %}
+```
 
-##mapply
+## mapply
 `mapply` è un versione multivariate di apply che applica una funzione in parallelo su una serie di argomenti .
 Un esempio è riportato sotto, l1 contiene gli stessi elementi di l2
 rep è una funzione che "replica" l'elemento passato un numero di volte richiesto e lo ritorna come elenco, p.e.
 
-{% highlight bash %}
+```r
 > rep(1,5)
 [1] 1 1 1 1 1
-{% endhighlight %}
+```
 
-{% highlight bash %}
+```r
 l1<-list(rep(1, 4), rep(2, 3), rep(3, 2), rep(4, 1))
 
 l2<-mapply(rep, 1:4, 4:1)
-{% endhighlight %}
+```
 
 
 ## tapply

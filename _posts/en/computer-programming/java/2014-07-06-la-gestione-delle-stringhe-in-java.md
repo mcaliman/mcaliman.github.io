@@ -10,7 +10,9 @@ comments: true
 share: true
 ---
 
-L'ingegnere quantistico Seth Lloyd è convinto che l’universo sia un gigantesco computer. Speriamo non faccia girare Windows. *(Kevin Kelly)*
+> L'ingegnere quantistico Seth Lloyd è convinto che l’universo sia un gigantesco computer.     Speriamo non faccia girare Windows. 
+>
+> *(Kevin Kelly)*
 
 Le stringhe sono il primo oggetto che normalmente si impara a gestire con un linguaggio di programmazione, in Java per l’oggetto principe in questo caso è String o più propriamente del pachage `java.lang`, a seguire le forme più evolute come `StringBuffer` e `StringBuilder`.
 

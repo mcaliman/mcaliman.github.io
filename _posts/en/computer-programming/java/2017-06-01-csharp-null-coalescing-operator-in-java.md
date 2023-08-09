@@ -10,6 +10,10 @@ tags: [English,C#,Java]
 comments: true
 share: true
 ---
+
+> “An algorithm must be seen to be believed.”
+> – Donald Knuth
+
 In C# the `??` operator is called the `null-coalescing operator`. 
 Here's an example of use:
 

@@ -10,8 +10,9 @@ comments: true
 share: true
 ---
 
-Il computer non è una macchina intelligente che aiuta le persone stupide, anzi è una macchina stupida che funziona solo nelle mani delle persone intelligenti.
-*(Umberto Eco, Come scrivere una tesi di laurea con il personal computer, 1986 (prefazione))*
+> Il computer non è una macchina intelligente che aiuta le persone stupide, anzi è una macchina stupida che funziona solo nelle mani delle persone intelligenti.
+>
+> *(Umberto Eco, Come scrivere una tesi di laurea con il personal computer, 1986 (prefazione))*
 
 Presente nella versione 6.9 ma anche nella version 7.4.
 

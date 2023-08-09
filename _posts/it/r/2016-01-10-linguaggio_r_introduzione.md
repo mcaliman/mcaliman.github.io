@@ -10,6 +10,11 @@ comments: true
 share: true
 ---
 
+> “When debugging, novices insert corrective code; experts remove defective code.”
+> 
+> – Richard E. Pattis
+
+
 Ho scoperto il linguaggio di programmazione R quasi per caso e ne sono rimasto affascinato.
 La prima cosa da sapere è che R è più di un linguaggio di programmazione, è anche un ambiente di sviluppo completo. 
 Basato sul linguaggio S è utilizzato per la gestione e l'analisi statistica di dati per la produzione di grafici ed è disponibile gratuitamente sotto i vincoli della licenza GPL. 
@@ -22,16 +27,16 @@ di comando dell'ambiente, caratterizzata dal prompt `>`
 la linea di comando viene eseguita premendo il tasto `Invio`. 
 Nel suo utilizzo più semplice, può essere utilizzato come calcolatrice (una calcolatrice cresciuta un pò troppo)
 
-{% highlight bash %}
+```r
 > 2+2*2
 [1] 6
 > 
-{% endhighlight %}
+```
 
 
 Per costruire un oggetto viene utilizzato il comando `<-`  o  `=` (od anche `->` si avete letto bene, quindi potete fare `x<-a+1` ma anche `a+1->x` ). 
 
-{% highlight bash %}
+```r
 > x<-1+7
 > 1+7->x
 > x
@@ -39,7 +44,7 @@ Per costruire un oggetto viene utilizzato il comando `<-`  o  `=` (od anche `->`
 
 > x # stampa x
 [1] 8
-{% endhighlight %}
+```
 
 
 Il carattere `#` è il simbolo di commento e tutto ciò che segue viene
@@ -51,27 +56,17 @@ Una nota importante: R è case sensitive quindi l’oggetto `X` non è l’ogget
 
 Se proviamo a richiamare un oggetto non ancora creato abbiamo la segnalazione 
 
-{% highlight bash %}
+```r
 > y
 Error: Object "y" not found
-{% endhighlight %}
-
-oppure in italiano 
-
-{% highlight bash %}
-> y
-Errore: oggetto "y" non trovato
-> 
-{% endhighlight %}
-
-Se abbiamo la versione è localizzata in italiano
+```
 
 Come in ogni altro linguaggio di programmazione esiste una lista di parole riservate che non possono essere utilizzate dall'utente a proprio piacimento, ma ovviamente solo per lo scopo per le quali sono state definite.
 
-{% highlight bash %}
+```r
 FALSE, TRUE, Inf, NA, NaN, NULL, 
 break, else, for, function, if,in, next, repeat, while
-{% endhighlight %}
+```
 
 Dotato di una grande quantità di funzioni che assolvono ai più comuni
 calcoli matematici e statistici R è dotato di un manuale di aiuto in linea per ognuna di esse. 
@@ -82,18 +77,17 @@ per esempio `help(mean)` richiama l’help della funzione per il calcolo della m
 Forse una delle più semplici funzioni è `rm()` che serve a cancellare gli oggetti (o meglio rimuovere dalla memoria rm sta per remove);
 nel suo utilizzo più elementare:
 
-{% highlight bash %}
+```r
 > x<-2+2
 > x
 [1] 4
-{% endhighlight %}
+```
 
-{% highlight bash %}
+```r
 > rm(x)
 > x
 Errore: oggetto "x" non trovato
-{% endhighlight %}
-
+```
 
 Vediamo qualche comando che ci verrà spesso utile.
 
@@ -105,12 +99,12 @@ Vediamo qualche comando che ci verrà spesso utile.
 
 Un ultima cosa in questo primo assagggio introduttivo del linguaggio R: Come si creare una funzione (che poi è il costrutto principale in un linguaggio funzionale)? In modo molto semplice:
 
-{% highlight bash %}
+```r
 f <- function() {
    x<-rnorm(10)
    mean(x)
 }
-{% endhighlight %}
+```
 
 La funzione denominata f che ho appena definito la posso chiamare con il suo nome seguito dalle parentesi f() il valore ritornato è l’ultimo computato, posso salvare la definizione di funzione con estensione .R e ricaricarla con `source("f.R")`
 e dopo con `ls()` avere la lista delle funzioni contenute.

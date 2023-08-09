@@ -9,8 +9,7 @@ tags: [Italian,R]
 comments: true
 share: true
 ---
-{% highlight bash %}
-{% endhighlight %}
+
 
 I dati vengono letti tramite interfacce di collegamento . Le connessioni possono essere a file o url per esempio .
 
@@ -21,11 +20,11 @@ I dati vengono letti tramite interfacce di collegamento . Le connessioni possono
 
 Per connettersi ad un file
 
-{% highlight bash %}
+```r
 > str(file)
 function (description = "", open = "", blocking = TRUE,
 encoding = getOption("encoding"))
-{% endhighlight %}
+```
 
 Descrizione è il nome del file open è un codice che indica
 
@@ -38,31 +37,31 @@ Descrizione è il nome del file open è un codice che indica
 In generale, i collegamenti sono strumenti potenti che consentono di navigare file o altri oggetti esterni. 
 In pratica, spesso non abbiamo bisogno di trattare con l'interfaccia di collegamento direttamente .
 
-{% highlight bash %}
+```r
 con <- file("foo.txt", "r")
 data <- read.csv(con)
 close(con)
-{% endhighlight %}
+```
 
 equivale a
 
-{% highlight bash %}
+```r
 data <- read.csv("foo.txt")
-{% endhighlight %}
+```
 
 lettura per righe di un file di testo
 
-{% highlight bash %}
+```r
 con <- gzfile("example.gz")
 x <- readLines(con, 10)
-{% endhighlight %}
+```
 
 `writeLines` prende un vettore di caratteri e scrive ciascun elemento  una riga alla volta su un file di testo.
 `readLines` può essere utile per la lettura per linee di pagine web
 
-{% highlight bash %}
+```r
 con <- url("http://google.com", "r")
 x <- readLines(con)
-{% endhighlight %}
+```
 
 

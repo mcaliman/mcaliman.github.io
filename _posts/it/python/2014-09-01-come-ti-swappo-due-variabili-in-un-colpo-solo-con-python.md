@@ -11,17 +11,21 @@ share: true
 ---
 
 Vi è mai capitato di scrivere qualcosa del genere ?
-{% highlight java %}
+```java
 swap(x,y) 
-{% endhighlight %}
+```
+
 ma giusto perché se siete maniacali della leggibilità del codice e vi scrivete ogni volta un metodo swap del caso... e non amate annegare in 100+ righe di codice qualcosa come questo
-{% highlight java %}
+
+```java
 temp = x ;
 x= y;
 y= temp;
-{% endhighlight %}
+``` 
 con Pyhton basta fare 
-{% highlight python %}
+
+```python
 x,y = y,x, 
-{% endhighlight %}
+``` 
+
 magico no? Il bello delle tuple.

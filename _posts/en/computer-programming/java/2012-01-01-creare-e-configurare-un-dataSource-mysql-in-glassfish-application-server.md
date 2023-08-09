@@ -42,10 +42,10 @@ f. `User`
 18. Cliccare su `OK`. Avete terminato.
 Per ottenere una connessione usando un DataSource portete utilizzare il seguente codice di esempio.
 
-{% highlight java %}
+```java
 Context ctx = new InitialContext();
 DataSource ds = (DataSource) ctx.lookup("jdbc/mysqltest");
 Connection con = ds.getConnection();
-{% endhighlight %}
+```
 
 
