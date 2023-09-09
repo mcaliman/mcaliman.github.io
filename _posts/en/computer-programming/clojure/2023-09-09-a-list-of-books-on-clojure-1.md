@@ -2,7 +2,7 @@
 layout: post
 lang: en
 title: "A list of books on Clojure"
-excerpt: "Some information about the Clojure programming language"
+excerpt: "A list of Clojure books that I think are great"
 modified: 2023-09-09
 category: "Clojure"
 tags: [English,Clojure]
@@ -15,11 +15,9 @@ updated: true
 > Simplicity is hard work. But, there's a huge payoff. The person who has a genuinely simpler system - a system made out of genuinely simple parts, is going to be able to affect the greatest change with the least work. He's going to kick your ass. He's gonna spend more time simplifying things up front and in the long haul he's gonna wipe the plate with you because he'll have that ability to change things when you're struggling to push elephants around.
 -- **Rich Hickey**, Creator of the Clojure programming language.
 
-Some people say, "There are no books on Clojure," or "I'd like to learn Clojure seriously, but there are few resources." Here is a list of Clojure books that I think are great.
-
 I've heard a lot of people say that there are no good books on Clojure, or that the resources available are too limited. I'm here to tell you that this is not true! There are a number of excellent Clojure books available, covering a wide range of topics.
 
-Here is a list of my top 8 picks for Clojure books:
+Here is a list of Clojure books that I think are great.
 
 1. [Clojure Data Structures and Algorithms Cookbook](https://www.packtpub.com/product/clojure-data-structures-and-algorithms-cookbook/9781783553957)
    25 recipes to deeply understand and implement advanced algorithms in Clojure,
