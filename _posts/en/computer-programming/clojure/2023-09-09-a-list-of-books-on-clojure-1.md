@@ -19,41 +19,53 @@ I've heard a lot of people say that there are no good books on Clojure, or that 
 
 Here is a list of Clojure books that I think are great.
 
-1. [Clojure Data Structures and Algorithms Cookbook](https://www.packtpub.com/product/clojure-data-structures-and-algorithms-cookbook/9781783553957)
+# Clojure Data Structures and Algorithms Cookbook
+
    25 recipes to deeply understand and implement advanced algorithms in Clojure,
    Author: Rafik Naccache,
    Publisher: Packt Publishing,
    Copyright © 2015,
-2. [Clojure for Data Science](https://www.packtpub.com/product/clojure-for-data-science/9781783557324)
+
+#  Clojure for Data Science
+   
    Statistics, big data, and machine learning for Clojure programmers,
    Author: Henry Garner,
    Publisher: Packt Publishing,
    Copyright © 2015
-3. [Clojure for Java Developers](https://www.packtpub.com/product/clojure-for-java-developers/9781784398259)
+
+# Clojure for Java Developers
+
    Transition smoothly from Java to the most widely used functional JVM-based language – Clojure,
    Author: Eduardo Díaz,
    Publisher: Packt Publishing,
    Copyright © 2016
-4. [Clojure for Machine Learning](https://www.packtpub.com/product/clojure-for-machine-learning/9781784397991)
+
+# Clojure for Machine Learning
+
    Successfully leverage advanced machine learning techniques using the Clojure ecosystem,
    Author: Akhil Wali,
    Publisher: Packt Publishing,
    Copyright © 2014
-5. [Clojure Data Analysis Cookbook](https://www.packtpub.com/product/clojure-data-analysis-cookbook/9781783985407)
+
+# Clojure Data Analysis Cookbook
+
    Over 110 recipes to help you dive into the world of practical data analysis using Clojure,
    Author: Eric Rochester,
    Publisher: Packt Publishing,
    Copyright © 2013
-6. [Practical Clojure](https://www.apress.com/gp/book/9781430240577)
+# Practical Clojure
+
    Luke VanderHart and
    Stuart Sierra,
    Publisher: Apress,
    Copyright © 2010,
-7. [Quick Clojure: Effective Functional Programming](https://www.apress.com/gp/book/9781484235465)
+# Quick Clojure: Effective Functional Programming
+
    Mark McDonnell,
    Publisher: Apress,
    Copyright © 2017,
-8. [The Joy of Clojure](https://www.manning.com/books/the-joy-of-clojure)
+# The Joy of Clojure
+
    MICHAEL FOGUS,
    CHRIS HOUSER,
    Publisher: Manning Publications Co.
