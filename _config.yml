@@ -21,7 +21,7 @@ skin: "/assets/css/skins/default.css" #news
 locale: en-US
 # locale: it-IT
 title: "True Programming"
-description: "Massimo Caliman's blog on Computer Programming, Computer Science and Data Science"
+description: "Massimo Caliman's blog on Computer Science and Data Science"
 
 #copyright: 1999-2023 Massimo Caliman - All Rights Reserved, Questo sito non rappresenta una testata giornalistica, in quanto viene aggiornato senza alcuna periodicità.Non può pertanto considerarsi un prodotto editoriale ex L.62 7/3/2001.
 
