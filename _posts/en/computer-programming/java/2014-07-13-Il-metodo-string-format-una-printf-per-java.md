@@ -9,7 +9,7 @@ tags: [English,Java, String]
 comments: true
 share: true
 ---
-﻿
+
 Alla data in cui scrivo, molti non sono ancora passati nè alla versione 8 di Java nè tantomeno alla 7, per chi non lo sapesse già la versione 7 del JDK, offre il metodo 
 
 {% highlight java %}

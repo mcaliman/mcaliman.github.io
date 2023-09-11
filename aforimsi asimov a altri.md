@@ -10,16 +10,9 @@
 “If debugging is the process of removing software bugs, then programming must be the process of putting them in.”
 – Edsger Dijkstra
 
-“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
-– Martin Fowler
 
-“Good code is its own best documentation.”
-– Steve McConnell
 
-> “Measuring programming progress by lines of code is like measuring aircraft building 
-progress by weight.”
->
-> – Bill Gates
+
 
 
 

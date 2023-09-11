@@ -11,6 +11,8 @@ comments: true
 share: true
 ---
 
+
+
 An inference engine is a component of an expert system that uses the knowledge base to make decisions. The inference engine uses a logical process to apply the rules to the knowledge base and generate a response.
 
 The logical process used by the inference engine varies depending on the expert system. However, the common logical process used by all inference engines includes the following steps:
