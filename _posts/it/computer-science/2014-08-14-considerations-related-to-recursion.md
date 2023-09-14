@@ -10,6 +10,7 @@ comments: true
 share: true
 ---
 
+
 Nei linguaggi di programmazione la ripetizione di comandi o statement viene realizzata tramite cicli, realizzati normalmente con costrutti del tipo `for`,`foreach` e `white`. Per particolari problemi la ricorsione rappresenta una valida arlternativa, più elegante, naturale  e semplice da realizzare.
 Abbiamo la ricorsione quando una funzione (in Java un metodo) richiama se stesso.
 

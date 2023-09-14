@@ -10,9 +10,6 @@ comments: true
 share: true
 ---
 
-Ogni buon lavoro software nasce da un problema personale di uno sviluppatore. 
-*(Eric Steven Raymond)*
-
 Java è rappresentativo di ciò che chiamereri linguaggi di categoria industriale/enterprise. Questa tipo di linguaggi di programmazione sono l’ottimale per applicazioni con più persone che lavorano al progetto. In questo tipo di progetti essere formale e attento può avere un impatto notevole..
  
 Oltre a Java in questa categoria includo C++,C,C# e Ada. Ada è usato soprattuto in ambito militare.

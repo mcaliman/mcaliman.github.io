@@ -12,7 +12,7 @@ share: true
 
 > Kleeneliness is next to Gödeliness 
 
-
+   
 Assumiamo che valga la seguente affermazione
 
 * Una CFG può essere ridotta in forma normale di Greibach.

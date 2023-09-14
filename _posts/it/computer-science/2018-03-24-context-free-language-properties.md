@@ -9,7 +9,7 @@ tags: [Italian,"Programming Languages","Computer Science"]
 comments: true
 share: true
 ---
-
+   
 > Kleeneliness is next to Gödeliness 
 
 I linguaggi di programmazione che utilizziamo in realtà non sono CF, strano a dirsi,dato che descriviamo la loro sintassi tramite delle CFG, e ciò è e resta vero, non sono CF in quanto non è sufficiente una CFG per descriverli, dobbiamo specificare anche dei vincoli contestuali, e ciò è quanto facciamo quando specifichiamo dei vincoli su come deve essere la dichiarazione di una funziona prima di poterne effettuare la chiamata (per semplificare, notevolmente, numero, tipo e ordine dei parametri), precedenza degli operatori, regole che descrivono come deve essere costruito il nome di una variabile, e così via.

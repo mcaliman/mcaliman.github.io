@@ -10,7 +10,7 @@ comments: true
 share: true
 ---
 
-> Kleeneliness is next to Gödeliness 
+> Kleeneliness is next to Gödeliness  
 
 Cosa si intende con il termine alfabeto in informatica teorica? 
 Semplicemente un insieme di oggetti che chiamiamo simboli. L'insieme deve essere finito e non vuoto.

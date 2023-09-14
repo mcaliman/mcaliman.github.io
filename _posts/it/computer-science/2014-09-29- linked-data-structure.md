@@ -9,7 +9,7 @@ tags: [Italian,"Data Structures","Computer Science"]
 comments: true
 share: true
 ---
-
+  
 I costituenti di base di una struttura collegata sono i record che come le celle degli array sono numerati e contengono ciascuno una collezione di oggetti. I numeri associati ai record sono i loro indirizzi in memoria (quindi globali nell’ambito del programma e non locali come nel caso degli array)
 Gli indirizzi in memoria non sono necessariamente consecutivi e sono costruiti in maniera dinamica.
 

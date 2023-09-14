@@ -10,9 +10,6 @@ comments: true
 share: true
 ---
 
-È meglio usare programmi di alta qualità senza costi di licenza, che costosi programmi proprietari di scarso valore. 
-*(Walter Bender, direttore del Media Lab del MIT)*
-
 #Perchè imparare Python? 
 E’ ottimo per implementare o semplicemente descrivere algoritmi, in diversi corsi universitari è stato scelto per la sua pulizia,se ci pensate bene trasformare lo pseudocodice che normalmente viene utilizzato in codice Python è piuttosto immediato.
 Python è inoltre molto utilizzato in ambito scientifico , vi consiglio in merito alcuni libri: 

@@ -11,7 +11,7 @@ comments: true
 share: true
 updated: true
 ---
-
+  
 > Kleeneliness is next to Gödeliness 
 
 # Macchine di Turing deterministiche (DTM)

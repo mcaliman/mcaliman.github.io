@@ -12,6 +12,7 @@ share: true
 Rappresentazioni indicizzate
 Basate su array vettore padri e vettori posizionali entrambe richiedono spazio O(n)
 
+
 Vettori padri
 =============
 La più semplice

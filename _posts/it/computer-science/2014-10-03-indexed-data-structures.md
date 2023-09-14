@@ -10,6 +10,7 @@ comments: true
 share: true
 ---
 
+
 Riprendiamo il post sulle strutture indicizzate per un approfondimento.
 Abbiamo visto che il **Java Collection Framework** ci fornisce già praticamente qualunque struttura di cui possiamo aver bisogno per il nostro lavoro. Avete mai avuto la curiosità di vedere come vengono implementate queste strutture? Il codice sorgente è pubblico, lo potete scaricare insieme al JDK ad ogni release, noterete che spesso e volentieri non vi è nulla di fantascientifico nell’implementazione di strutture come `ArratList`, per esempio la specifica di implementazione vista in pseudocodice nel post sulle strutture indicizzate precedente a questo nella sostanza non vi differisce molto. Quello che fa la differenza sono le ottimizzazioni.
 

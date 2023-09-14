@@ -9,7 +9,7 @@ tags: [Italian,"Programming Languages","Computer Science"]
 comments: true
 share: true
 ---
-
+   
 > Kleeneliness is next to Gödeliness 
 
 Un linguaggio L [^footnote1] `non` può essere riconosciuto deterministicamente per pila vuota [^footnote2] se esistono due stringhe distinte di L tali che una è prefisso dell'altra. 

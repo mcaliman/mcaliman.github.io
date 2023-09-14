@@ -12,7 +12,7 @@ share: true
 
 > Kleeneliness is next to Gödeliness 
 
-
+   
 # Chomsky
 Tutte le produzioni sono della forma A::= BC oppure A::= &sigma;
 (&sigma; &isin; T e A,B,C &isin;N).

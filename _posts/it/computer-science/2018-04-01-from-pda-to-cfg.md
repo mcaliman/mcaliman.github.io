@@ -9,7 +9,7 @@ tags: [Italian,"Programming Languages","Computer Science"]
 comments: true
 share: true
 ---
-
+   
 > Kleeneliness is next to Gödeliness 
 
 Partiremo dall'assunto che valgano le seguenti due affermazioni.

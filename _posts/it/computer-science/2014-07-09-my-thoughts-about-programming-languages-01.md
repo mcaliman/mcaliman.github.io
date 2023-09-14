@@ -10,9 +10,6 @@ comments: true
 share: true
 ---
 
-Mai fidarsi di un computer che non è possibile gettare dalla finestra. 
-*(Steve Wozniak)*
-
 Python è un linguaggio piacevole per iniziare la programmazione per diverse ragioni.
 La sintassi è essenziale,chiara,non presenta orpelli sintattici, Java invece ha molto zucchero sintattico. 
 

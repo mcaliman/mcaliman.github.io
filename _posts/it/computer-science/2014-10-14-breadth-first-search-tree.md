@@ -9,7 +9,7 @@ tags: [Italian,"Data Structures","Algorithms"]
 comments: true
 share: true
 ---
-
+  
 > "PHP is a minor evil perpetrated and created by incompetent amateurs, whereas Perl is a great and insidious evil perpetrated by skilled but perverted professionals."
 (Jon Ribbens)
 
