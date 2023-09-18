@@ -1,27 +1,25 @@
 ---
 layout: post
-lang: it
-title:  "Funzioni che implementano cicli in R"
+lang: en
+title:  "Functions that implement cycles in R"
 excerpt: ""
 category: R
 date:   2016-03-01 22:45:33
-tags: [Italian,R]
+tags: [English,R]
 comments: true
 share: true
 ---
 
+## Command-Line Loops
 
-## Loop dalla riga di comando
+The `for`, `while` and loop constructs in general are useful when programming, but are not particularly easy when working interactively from the command line. There are some functions that implement loops to make life easier. These are the `*apply` functions (`lapply`,`sapply`,`apply`,`tapply`,`mapply`)
 
-I costrutti  `for`, `while` i loop in generale sono è utili in fase di programmazione, ma non sono particolarmente facili quando si lavora in modo interattivo da riga di comando. Ci sono alcune funzioni che implementano loop per rendere la vita più facile. Sono le funzioni `*apply` (`lapply`,`sapply`,`apply`,`tapply`,`mapply`)
-
-Una funzione ausiliaria utile in combinazione con le funzioni `*apply` è `split`.
+A useful auxiliary function in combination with the `*apply` functions is `split`.
 
 ## lapply
-`lapply` accetta tre argomenti: (1) una lista X; (2) una funzione FUN; (3) altri argomenti attraverso il suo ... argomento . Se X non è un elenco , sarà costretto ad un elenco utilizzando `as.list`
-Il loop reale è fatto internamente in codice C (quindi attenzione sul lato dati ottenuti dal profiling).
-`lapply` restituisce sempre un elenco, indipendentemente dalla classe di ingresso .
-
+`lapply` accepts three arguments: (1) an X list; (2) a FUN function; (3) other arguments via its ... argument . If X is not a list, it will be forced to a list using `as.list`.
+The actual loop is done internally in C code (so pay attention to the data side of profiling).
+`lapply` always returns a list, regardless of the input class .
 
 ```r
 f <- function(x) {x=x+1}
@@ -44,10 +42,10 @@ y
 
 
 ## sapply
-`sapply` tenta di semplificare il risultato di `lappy` se possibile.
-Se il risultato è una lista in cui ogni elemento è di lunghezza 1, viene restituito un vettore
-Se il risultato è una lista in cui ogni elemento è un vettore della stessa lunghezza ( > 1 ) , viene restituita una matrice.
-Se `sapply` non riesce a semplificare viene ritornata  una lista.
+`sapply` attempts to simplify the result of `lappy` if possible.
+If the result is a list where each element is of length 1, a vector is returned
+If the result is a list where each element is a vector of the same length ( > 1 ) , an array is returned.
+If `sapply` fails to simplify, a list is returned.
 
 ```r
 > z<-sapply(x,f)
@@ -55,20 +53,19 @@ Se `sapply` non riesce a semplificare viene ritornata  una lista.
 [1] 2 3 4 5
 ```
 
-Comodo non trovate?
+Convenient, isn't it?
 
 ## apply
-`apply` viene utilizzato per la valutazione di una funzione ( spesso di natura anonima ) sulle colonne o righe di un array.
-E' utilizzato più spesso per applicare una funzione alle righe o colonne di una matrice
-Non è più veloce che scrivere un ciclo for, ma funziona in una sola riga.
+`apply` is used for evaluating a function (often anonymous in nature) to the columns or rows of an array.
+It is most often used to apply a function to the rows or columns of an array
+It is not faster than writing a for loop, but it works in a single line.
 
 ```r
 > str(apply)
 function (X, MARGIN, FUN, ...) 
 ```
-
-MARGIN è un vettore intero che indica quali margini debbano essere "mantenuti"
-L'esempio sotto spero possa chiarire meglio (rnorm ci serve solo per popolare una matrice con una distribuzione normale)
+MARGIN is an integer vector indicating which margins are to be "maintained".
+The example below will hopefully make this clearer (rnorm is only needed to populate an array with a normal distribution)
 
 ```r
 x <- matrix(rnorm(200), 20, 10)
@@ -121,11 +118,10 @@ x <- matrix(rnorm(200), 20, 10)
  [7] -0.23467453  0.13209995  0.07565145  0.13402934
 
 ```
-
 ## mapply
-`mapply` è un versione multivariate di apply che applica una funzione in parallelo su una serie di argomenti .
-Un esempio è riportato sotto, l1 contiene gli stessi elementi di l2
-rep è una funzione che "replica" l'elemento passato un numero di volte richiesto e lo ritorna come elenco, p.e.
+mapply` is a multivariate version of apply which applies a function in parallel over a series of arguments .
+An example is below, l1 contains the same elements as l2
+rep is a function that "replicates" the passed element a required number of times and returns it as a list, e.g.
 
 ```r
 > rep(1,5)
@@ -140,19 +136,19 @@ l2<-mapply(rep, 1:4, 4:1)
 
 
 ## tapply
-`tapply` viene utilizzato per applicare una funzione su sottoinsiemi di un vettore
-{% highlight bash %}
+`tapply` is used to apply a function to subsets of a vector
+
+```r
 x <- c(rnorm(10), runif(10), rnorm(10, 1))
 f <- gl(3, 10)
 tapply(x, f, mean)
-{% endhighlight %}
-
+```
 ## split
-`split` prende un vettore (o altro tipo di elenco di oggetti) e lo divide in gruppi determinati da un fattore o un elenco di fattori.
+`split` takes a vector (or other type of list of objects) and divides it into groups determined by a factor or list of factors.
 
-Per esempio partizioniamo in due gruppi, gli elementi di x >1 e quelli <=1
+For example, we split the elements of x >1 and those <=1 into two groups
 
-{% highlight bash %}
+```r
 > split(x,x[]>1)
 $`FALSE`
  [1] -1.13857804  0.21853696 -0.25563963  0.51938904  0.24105612  0.13492624
@@ -163,7 +159,7 @@ $`FALSE`
 $`TRUE`
 [1] 1.343577 1.742792 1.389213 1.252149 1.650007 1.350450 3.162776
 
-{% endhighlight %}
+```
 
 
 

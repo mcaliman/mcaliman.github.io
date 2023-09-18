@@ -1,18 +1,17 @@
 --- 
 layout: post
-lang: it
-title: "Controllare i droptime file del nic.it con R"
-excerpt: "Controllare in automatico se il dominio che ci interessa sarà disponibile giornata."
+lang: en
+title: "Checking nic.it droptime files with R"
+excerpt: ""
 category: R
 date:   2016-10-01 22:45:33
 modified: 2016-10-01 22:45:33
-tags: [Italian,R]
+tags: [English,R]
 comments: true
 share: true
 ---
-
-Lo script in questione non è nulla di speciale ma mostra la comodità di utilizzare R quando si tratta di manipolare dati e creare script o prototipi. Scarica i due file droptime file dal nic e verifica se al suo interno è presente il dominio che ci interessa.
-Lo script aggiornato è disponibile su github [https://github.com/mcaliman/R-utilities](https://github.com/mcaliman/R-utilities)
+The script in question is nothing special but shows the convenience of using R when it comes to manipulating data and creating scripts or prototypes. Download the two droptime files from the nic and check whether it contains the domain we are interested in.
+The updated script is available on github [https://github.com/mcaliman/R-utilities](https://github.com/mcaliman/R-utilities)
 
 ```r
 # droptime_file_observer.R
@@ -35,6 +34,4 @@ if (is.element(domain_to_find, droptime_file2)){
 	print('present in droptime file!');
 }
 ```
-
-Possiamo personalizzarlo con un invio email al posto della stampa e poi schedulando tutto con cron.
-
+We can customise it by emailing instead of printing and then scheduling everything with cron.
