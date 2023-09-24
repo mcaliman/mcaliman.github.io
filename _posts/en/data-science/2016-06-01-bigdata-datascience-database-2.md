@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Big Data, Data Science, Databases the fundamentals #2"
 excerpt: "Before DBMSs, how was it done?..."
-category: "Data Science"
+category: "Datascience"
 date:   2016-06-01 22:45:33
 tags: [English,"Data Science","Big Data","Database"]
 comments: true

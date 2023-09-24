@@ -1,22 +1,22 @@
 Categories
+----
 
+Category Archive
 
-Computer Science
-    Algorithms 
-    Data Structures
-Artificial Intelligence
-Data Science
-Data Engineering
-
-MySQL
 Java
+Computer Science
+Linux
 R
 Python
-ERP
-LMS
-DMS
+Datascience
+Databases
 Jekyll
-git
-github
-gitlab
-
+Clojure
+LMS
+XML
+COBOL
+Events
+Excel
+Javascript
+Scala
+SharePoint

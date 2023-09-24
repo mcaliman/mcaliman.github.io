@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Importing users and courses with I/O Task in Docebo"
 excerpt: ""
-category: "LMS (Learning Management System)"
+category: LMS
 date:   2009-01-01 22:45:33
 tags: [English,Docebo,"LMS (Learning Management System)"]
 comments: true
