@@ -10,7 +10,7 @@ comments: true
 share: true
 ---
 
-#Perchè imparare Python? 
+# Perchè imparare Python? 
 E’ ottimo per implementare o semplicemente descrivere algoritmi, in diversi corsi universitari è stato scelto per la sua pulizia,se ci pensate bene trasformare lo pseudocodice che normalmente viene utilizzato in codice Python è piuttosto immediato.
 Python è inoltre molto utilizzato in ambito scientifico , vi consiglio in merito alcuni libri: 
 
@@ -20,7 +20,7 @@ Python è inoltre molto utilizzato in ambito scientifico , vi consiglio in merit
 #Perchè imparare il linguaggio Java? 
 Perchè diffuso,pulito è completamente OOP nonstante Edsger Dijkstra pensasse "Object-oriented programming is an exceptionally bad idea which could only have originated in California." 
 
-#Perchè imparare il C++? 
+# Perchè imparare il C++? 
 Il C++ è il principe dei linguaggi, lo puoi usare per realizzare ogni cosa. I Sistemi Operativi i  compilatori,interpreti e Virtual Machine che utilizziamo per far girare il nostro codice è scritto in C o C++.
 lo puoi usare per realizzare ogni cosa. I Sistemi Operativi i  compilatori,interpreti e Virtual Machine che utilizziamo per far girare il nostro codice è scritto in C o C++.
 
