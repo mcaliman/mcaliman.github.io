@@ -40,14 +40,14 @@ Definizione delle classi
 In Java la realizzata delle classi  demandata al costrutto class. 
 Ogni classe include la definizione di attributi (costanti e variabili) e metodi. 
 Quello che riporto sotto  lo scheletro del codice che si andr a scrivere per definire una classe.
-{% highlight java %}
+```java
 class T {
 //stuff!
 //CONSTANT_DECLARATION_BLOCK;
 //VARIABLE_DECLARATION_BLOCK;
 //METHOD_DEFINITION_BLOCK;
 }
-{% endhighlight %}
+```
 
 dove le dichiarazioni dei blocchi sono solo dei segnaposto per evidenziare la struttura di quello che sar 
 il contenuto tra le parentesi {,}. class  una parola riservata del linguaggio (come new che abbiamo incontrato
@@ -74,14 +74,15 @@ static (altra parola riservata del linguaggio di programmazione). Il modificator
 e dei metodi di istanza per semplicit di esposizione e per concertrarci solo sugli aspetti di struttura fino ad ora esposti.
 
 Per esempio possiamo avere
-{% highlight java %}
+```java
 class T {
    static int x = 10 ;
 }
-{% endhighlight %}
+```
+
 Che sono di fatto non specificando nessun modificatore di accesso ha una visibilit di default detta di package che discuteremo
 in seguito ma di cui si sconsiglia l'uso in quanto poco chiaro.
-{% highlight java %}
+```java
 class T {
    private static int x =1;
 }
@@ -93,7 +94,7 @@ class T {
 class T {
    protected static int x =1
 } 
-{% endhighlight %}
+```
 Solo nella definizione della classe T con modificatore public posso referenziare x c con **T.x** (cioè lo "posso usare"
 al di fuori della classe in cui  defininito,cioè in modo pubblico). 
 

@@ -40,7 +40,7 @@ non pu essere esportata nell'ambiente chiamante. Questo significa che ogni volta
 per esempio un intero int a di valore 10 ,e poi nel corso della computazione interna al metodo ne cambiate 
 il valore in 11,al rientro della chiamata il suo valore torner ad essere 10.
 
-{% highlight java %}
+```java
 //dichiarazione e implementazione del metodo m1 che useremo per l'esempio.
 private void m1(int value){
    value=11;
@@ -50,7 +50,7 @@ private void m1(int value){
 int a = 10;
 m1(a);
 System.out.println("a ora vale ancora 10 : a="+a);
-{% endhighlight %}
+```
 
 Quindi non posso usare (in java), un metodo per cambiare il valore di una variabile passata come parametro? 
 in realt non proprio cos,vedremo che con gli oggetti e gli array questo  possibile (e viene fatto usualmente).

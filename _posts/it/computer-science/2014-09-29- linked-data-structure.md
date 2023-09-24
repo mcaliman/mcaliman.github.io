@@ -31,7 +31,7 @@ next e prev puntatori al successivo e al precedente record della collezione. Man
 
 operazioni
 
-{% highlight bash %}
+```bash
 insert(elem e,chiave k) T(n)=O(1)
 1.viene creato un record p con elemento e, chiave k
 2.if list=null then
@@ -44,31 +44,31 @@ else
    list.next.prev<-p
    p.prev<-list
    list.next<-p
-{% endhighlight %}
+```
 
 trattandosi di una struttura collegata doppiamente linkata (doubly linked list) in fase di implementazione si debbono tenere presenti alcuni casi limite come ad esempio cancellazione dell’unico elemento presente in lista ecc.
 
-{% highlight bash %}
+```bash
 delete(chiave k) T(n)=O(n)
 1.si trova il record p con chiave k come nella search
 2.si effettua
   p.prev.next<-p.next (il next del precedente di p punta al successore di p)
   p.next.prev<-p.prev (il prev del successore di p punta a prececessore di p)
 3.si distrugge il record p
-{% endhighlight %}
+```
 
-{% highlight bash %}
+```bash
 search(chiave k) -> elem T(n)=O(n)
 if list = null then return null
 else 
 si scandisce la struttura saltando di record in record con p<-p.next fino a quando non diventa p=list 
 verificando se qualche p ha chiave k in caso positivo si restituisce l’elemento trovato altrimenti `null`
-{% endhighlight %}
+```
 
 Per realizzare un implementazione in Java a partire dalla specifica vista sopra come prima cosa abbiamo bisogno realizzare una classe per modellare i record, ma per farlo dobbiamo anche modellare il contenuto informativo con una classe Info o Tuple, semplifichiamo in questa prima fase di analisi e supponiamo che sia la chiave (intera) che il valore (stringa) siano attributi della classe record stessa. 
 
 In altre parole evitiamo di gestire qualcosa del genere
-{% highlight java %}
+```java
 public class Tuple<K,V> {
     public K key;
     public V value;
@@ -81,24 +81,24 @@ public class Tuple<K,V> {
         value = v;
     }
 }
-{% endhighlight %}
+```
 
 Veniamo alla nostra classe `Record`
-{% highlight java %}
+```java
 public class Record {
     public Integer key;
     public String value;
     public Record prev;
     public Record next;
 }
-{% endhighlight %}
+```
 
 Avremmo potuto adottare già una versione generica come ad esempio
-{% highlight java %}
+```java
 public class RecordGen<K,V> {
     public K key;
     public V value;
     public Record next;
     public Record prev;
 }
-{% endhighlight %}
+```

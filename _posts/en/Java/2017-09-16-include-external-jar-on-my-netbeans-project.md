@@ -20,7 +20,7 @@ progress by weight.”
 
 An example of build.xml file
 
-{% highlight xml %} 
+```XML
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- You may freely edit this file. See commented blocks below for -->
 <!-- some examples of how to customize the build. -->
@@ -130,4 +130,4 @@ An example of build.xml file
 
     -->
 </project>
-{% endhighlight %}
+```

@@ -16,7 +16,7 @@ Per impostare l'autenticazione base in una applicazione java in tomcat possiamo 
 In tomcat-users.xml setting , dove configureremo gli utenti.
 
 
-{% highlight xml %}
+```XML
 <!--?xml version='1.0' encoding='utf-8'?-->
 <tomcat-users>
 <role rolename="tomcat">
@@ -30,11 +30,11 @@ In tomcat-users.xml setting , dove configureremo gli utenti.
 </role>
 </role>
 </tomcat-users>
-{% endhighlight %}
+```
 
 
 Mentre nel file web.xml della nostra applicazione aggiungiamo le righe come sotto.
-{% highlight xml %}
+```XML
 <!--?xml version="1.0" encoding="ISO-8859-1"?-->  
 <web-app>    
 <!-- Define a Security Constraint on this Application -->
@@ -66,4 +66,4 @@ The role that is required to log in to the Manager Application
 
 
 </web-app>
-{% endhighlight %}
+```

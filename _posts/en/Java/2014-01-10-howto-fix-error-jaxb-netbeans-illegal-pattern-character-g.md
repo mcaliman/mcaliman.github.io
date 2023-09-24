@@ -16,7 +16,7 @@ share: true
 
 Presente nella versione 6.9 ma anche nella version 7.4.
 
-{% highlight java %}
+```java
 \nbproject\xml_binding_build.xml:17: 
 java.lang.IllegalArgumentException: Illegal pattern character 'g'
     at java.text.SimpleDateFormat.compile(SimpleDateFormat.java:768)
@@ -31,13 +31,13 @@ java.lang.IllegalArgumentException: Illegal pattern character 'g'
     at com.sun.istack.tools.ProtectedTask.execute(ProtectedTask.java:103)
     at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
     at sun.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
-{% endhighlight %}
+```
 
 Si risolve aggiungendo.  
 
-{% highlight bash %}
+```bash 
 "-J-Duser.language=en"  
-{% endhighlight %}
+```
 
 al proprietà `netbeans_default_options` nel file `netbeans.conf`
 

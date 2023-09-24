@@ -17,7 +17,7 @@ Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto
 
 Nel nostro esempio il nome del file comprensivo di path è passato come parametro, rendendo la Servlet generica, utilizzabile per effettuare il download di qualsiasi file
 
-{% highlight java %}
+```java
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -76,9 +76,9 @@ public class DownloadFileServlet extends HttpServlet {
     }
 
 }
-{% endhighlight %}
+```
 
 Non dobbiamo aggiungere nulla alla nostra webapplication tramite il descrittore di deployment web.xml dato che abbiamo utilizzato la modalità tramite annotazioni. Per l’invocazione 
-{% highlight bash %}
+```bash 
 http://localhost:8080/MyWebApplication/DownloadFileServlet?file=/path/file.ext
-{% endhighlight %}
+```

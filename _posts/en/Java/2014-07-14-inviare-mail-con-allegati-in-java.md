@@ -14,7 +14,7 @@ Il package javax.mail è molto ricco, quindi in prima istanza può anche disorie
 Per creare la nostra utility faremo riferimento al pattern commmand.
 Per prima cosa definiamo una classe astratta che conterrà la gestione mailcap sempre utile quando si vuole gestire notifiche via mail da piattaforma Java.
 
-{% highlight java %}
+```java
 import javax.activation.CommandMap;
 import javax.activation.MailcapCommandMap;
 
@@ -30,11 +30,11 @@ public class AbstractMailCommand {
       CommandMap.setDefaultCommandMap(mc);
    }
 }
-{% endhighlight %}
+```
 
 Segue a questo punto il codice della classe principale, la classe presenta metodi specifici per gestire anche l’invio di mail con autenticazione smtp.
 
-{% highlight java %}
+```java
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -186,10 +186,10 @@ public class MailCommand extends AbstractMailCommand {
       }
    }
 }
-{% endhighlight %}
+```
 Avrete notato la presenza di una classe `MailCommandAuthenticator` che serve proprio per la gestione dell’autenticazione al nostro server di posta.
 
-{% highlight java %}
+```java
 import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication;
 
@@ -208,11 +208,11 @@ public class MailCommandAuthenticator extends Authenticator {
       return new PasswordAuthentication(this.user, this.password);
    }
 }
-{% endhighlight %}
+```
 
 E’ ora non ci resta che mostrare un esempio di utilizzo, ma prima aiutiamoci con una classe che realizza il pattern `Singleton` 
 
-{% highlight java %}
+```java
 public class MailCommandInstantiator {
 
    private static MailCommand instance;
@@ -227,12 +227,12 @@ public class MailCommandInstantiator {
       return instance;
    }
 }
-{% endhighlight %}
+```
 
 
 Ed ora il codice di chiamata, si tratta di uno degli esempi possibili atto ad illustrare la flessibilità del mini framework che abbiamo realizzato e che voi personalizzerete secondo le vostre esigenze.
 
-{% highlight java %}
+```java
 MailCommand mailCommand = MailCommandInstantiator.getInstance();
 try {
      mailCommand.init();
@@ -249,6 +249,6 @@ try {
 } catch (MessagingException ex) {
      //error management
 }
-{% endhighlight %}
+```
 
 Ovviamente posso aggiungere più allegati come è possibile o non aggiungerne affatto e quindi inviare solo tipiche mail di testo.

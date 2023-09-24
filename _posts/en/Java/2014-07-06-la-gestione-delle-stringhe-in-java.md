@@ -21,12 +21,12 @@ Immutabile nel senso di memoria. Esso crea nuovi oggetti ogni volta che si crean
 
 Prendiamo ad esempio il seguente frammento di codice
 
-{% highlight java %}
+```java
 String a = new String("hello boys!");
 System.out.println(a);
 a = "hi guys!";
 System.out.println(a);
-{% endhighlight %}
+```
 
 con l’assegnazione `a = “hi guys!”` ho creato un nuovo oggetto di tipo `String`, non ho modificato lo stesso creato con `new String(“hello boys”);` anche se non ho utilizzato il costruttore con parametro.
 
@@ -36,84 +36,84 @@ Le stringhe sono oggetti di uso comune quindi i progettisti iniziali hanno pensa
 
 Torniamo alla nostra stringa semplicemente denominata `a`, l’espressione 
 
-{% highlight java %}
+```java
 a = "hi" + " guys!";
-{% endhighlight %}
+```
 
 effettua la concatenazione delle stringhe `hi` e `guys!` tramite l’operatore `+`, operatore che normalmente utilizziamo per la somma di due numeri, siamo di fronte all’overloading di un operatore, come in C++.
 
 L’overloading dell operatore `+` ci permette di evitare la forma pura ad oggetti
 
-{% highlight java %}
+```java
 a = "hi".concat(" guys!");
-{% endhighlight %}
+```
 
 meno pratica, più formale certamente nonché object oriented.
 Le due forme 
 
-{% highlight java %}
+```java
 String b = "bye";
-{% endhighlight %}
+```
 
 e
 
-{% highlight java %}
+```java
 String c = new String("bye");
-{% endhighlight %}
+```
 
 sono equivalenti, l’assegnazione diretta surroga la chiamata esplicita del costruttore `String(String)` che costruisce un nuovo oggetto di tipo `String` a partire da una stringa esistente passata come parametro.
 
 Gli oggetti di tipo `String` non sono array di caratteri quindi non possiamo applicarvi gli operatori classici degli array come ad esempio `[]` quindi non possiamo fare cose del tipo `string[index]` dove string è un oggetto instanziato dalla classe `String` e index è un intero maggiore o uguale a 0 che che indica la posizione del carattere a cui vogliamo accedere. 
 Per essere ancora più chiari, dato l’ oggetto c di tipo `String` del frammento di codice riportato sopra non possiamo scrivere c[0] per accedere al primo elemento che ha valore b, Il compilatore ci segnalerà un errore
 
-{% highlight java %}
+```java
 Exception in thread "main" java.lang.RuntimeException: Uncompilable source code - array required, but java.lang.String found
-{% endhighlight %}
+```
 
 Non possiamo quindi neppure fare qualcosa come
 
-{% highlight java %}
+```java
 c[0] = 'c';
-{% endhighlight %}
+```
 
 per sovrascrivere il valore del carattere `b` con il carattere `c`.
 
 Per accedere all’elemento di indice 0 dobbiamo necessariamente utilizzare il metodo `charAt()`
 
-{% highlight java %}
+```java
 c.charAt(0);
-{% endhighlight %}
+```
 
 che ritornerà il carattere `b` a video, per esempio attraverso l’uso del metodo `System.out.println()` per stampare sulla console.
 
-{% highlight java %}
+```java
 System.out.println(c.charAt(0));
-{% endhighlight %}
+```
 
 La classe `String` rende disponibile molti metodi tra cui quelli di uso più comune permettono restituire la lunghezza della stringa
 
-{% highlight java %}
+```java
 int lenofc = c.length();
-{% endhighlight %}
+```
 
 nel nostro caso lenofc conterrà il valore intero 3 dato che `“bye”.length()` è 3 e quindi il predicato  `“bye”.length()==3` ha valore `true`
 
 Per controllare l’uguaglianza di due stringhe si può invece utilizzare il metodo `equals()` o `equalsIgnoreCase()` nel caso si desideri un controllo case insensitivi.
 Le espressioni sotto ritornano entrambe il valore `true` per le variabili booleane b1 e b2
 
-{% highlight java %}
+```java
 System.out.println(c.charAt(0));
 boolean b1 = c.equals("bye");
 System.out.println(b1);
 boolean b2 = c.equalsIgnoreCase("Bye");
 System.out.println(b2);
-{% endhighlight %}
+```
 
 Volendo maggiore flessibilità in un operazione di confronto di stringhe possiamo utilizzare il metodo `compareTo()`  nella forma
 
-{% highlight java %}
+```java
 int comp = a.compareTo(b): 
-{% endhighlight %}
+```
 
 1. comp == 0 se a è uguale b 
 2. comp<0 se a<b, 
@@ -126,26 +126,26 @@ attenzione `a.equals(b)` è ovviamente diverso da `a == b`
 
 Altri metodi di comune utilizzo sono `substring()`, `replace()`, naturalmente anche questi metodi non modificano l’oggetto su cui sono chiamati ma ne creano e ritornano uno nuovo.
 
-{% highlight java %}
+```java
 a.substring(10,18):// restituisce la sottostringa che va da 10  a 17 (18-1) 
 a.replace(‘E’,’X’):// restituisce una stringa con tutte le ‘E’  sostituite con ‘X’
-{% endhighlight %}
+```
 
 dato il frammento di codice 
 
-{% highlight java %}
+```java
 String targa = "ab123cd";
 System.out.println(targa.substring(0,2));
 System.out.println(targa.substring(2,5));
 System.out.println(targa.substring(5,7));
-{% endhighlight %}
+```
 
 avremo stampate nella console le 3 componenti “ab”,“123” e “cd”
 verificando che la prima e l’ultima sono costituite esclusivamente da lettere e la seconda solo da numeri abbiamo di fatto realizzato un controllo semplificato del formato di una targa europea.
 
 per essere più completi il codice potrebbe essere il seguente
 
-{% highlight java %}
+```java
 boolean valid = Character.isLetter(targa.charAt(0)) && 
 Character.isLetter(targa.charAt(1)) &&
 Character.isDigit(targa.charAt(2)) &&
@@ -153,7 +153,7 @@ Character.isDigit(targa.charAt(3)) &&
 Character.isDigit(targa.charAt(4)) && 
 Character.isLetter(targa.charAt(5)) ;
 Character.isLetter(targa.charAt(6)) ;
-{% endhighlight %}
+```
 
 Character è una classe che ci permette di effettuare semplici controlli ma non solo, vi rimando alla documentazione ufficiale per i dettagli.
 
@@ -161,45 +161,45 @@ Per controlli e validazioni sulle stringhe i semplici i metodi fino ad ora espos
 
 Per controllare la validità rispetto al formato di una targa europea possiamo utilizzare
 
-{% highlight java %}
+```java
 boolean isValid = targa.matches("^[a-zA-Z]{2}[0-9]{3,4}[a-zA-Z]{2}$");
-{% endhighlight %}
+```
 
 Per la validazione formale di un indirizzo email possiamo utilizzare per esempio l’espressione regolare
 
-{% highlight java %}
+```java
 ^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$
-{% endhighlight %}
+```
 
 Per la validazione di importi in dollari del tipo $1,234,567.89 | 1234567.89 | $9.99
 
-{% highlight java %}
+```java
 ^(\$|)([1-9]\d{0,2}(\,\d{3})*|([1-9]\d*))(\.\d{2})?$
-{% endhighlight %}
+```
 
 Per quelli in valuta euro nella forma -123123,12 € | 12312432134 | -12.234.123,23
 
-{% highlight java %}
+```java
 ^\s*-?((\d{1,3}(\.(\d){3})*)|\d*)(,\d{1,2})?\s?(\u20AC)?\s*$
-{% endhighlight %}
+```
 
 Data e ora in formato europeo come 29/02/2008 15:30
 
-{% highlight java %}
+```java
 (((((0[1-9]|[12][0-9]|3[01])/(0[13578]|1[02]))|((0[1-9]|[12][0-9]|30)/(0[469]|11))|((0[1-9]|[1][0-9]|2[0-8]))/02)/([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3}) ((([0-1][0-9])|([2][0-3]))[:][0-5][0-9]$))|(29/02/(([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00)) ((([0-1][0-9])|([2][0-3]))[:][0-5][0-9]$)))
-{% endhighlight %}
+```
 
 Solo date nella della forma 29/02/2008
 
-{% highlight java %}
+```java
 ^(?:(?:0?[1-9])|(?:[12]\d)|3[01])/(?:(?:0?[1-9])|(?:1[012]))/(?:(?:19|20))\d{2}$
-{% endhighlight %}
+```
 
 Per la validazione di formato (non del codice di controllo) di un codice fiscale italiano
 
-{% highlight java %}
+```java
 ^[A-Za-z]{6}[0-9]{2}[A-Za-z]{1}[0-9]{2}[A-Za-z]{1}[0-9]{3}[A-Za-z]{1}$
-{% endhighlight %}
+```
 
 A questo punto abbiamo visto già molto materiale che ci permette di utilizzare con le stringhe per elaborazioni e controlli che si presentano all’ordine del giorno nella carriera di uno sviluppatore.
 
@@ -213,12 +213,12 @@ I metodi di utilizzo più comuni per entrambe le classi sono rispettivamente `ap
 Un utilizzo comune degli oggetti di tipo `StringBuilder` e `StringBuffer` è la costruzione di stringhe dinamicamente in base a condizioni presenti nel nostro codice.
 
 Sotto un esempio piuttosto semplice di utilizzo elementare per i tre metodi 
-{% highlight java %}
+```java
 StringBuilder buffer = new StringBuilder();
 buffer.append("01234567900");
 buffer.insert(8, '8');//inserisce 8 alla giusta posizione
 buffer.delete(10, 12);//cancella le due ultime cifre
 System.out.println(buffer.toString());//Stampa 0123456789
-{% endhighlight %}
+```
 
 Lungi dall’essere una trattazione esaustiva dell’argomento e delle classi `String`,`StringBuffer` e `StringBuilder` quanto presentato copre la maggior parte dei casi d’uso, unica raccomandazione valida sempre e di esaminare la documentazione ufficiale sempre prima di reinventare la ruota. 

@@ -22,20 +22,20 @@ L'intestazione dei metodi può connotarsi in modo diversificato a seconda che un
 Nel primo caso assume la forma sotto indicata in cui l'espressione restituita dal comando return deve essere di tipo compatibile
 con il tipo specificato nell'intestazione
 
-{% highlight java %}
+```java
 T m (parametri_formali ) {
    statements;
    return expression ;
 }
-{% endhighlight %}
+```
 
 Nel caso il metodo non ritorni nessun valore si usa la parola chiave void
 
-{% highlight java %}
+```java
 void m (parametri_formali){
    statements;
 }
-{% endhighlight %}
+```
 
 I parametri nell'impostazione costituiscono i parametri_formali .
 
@@ -51,13 +51,13 @@ m(p1,p2, pn)
 p1,p2,,pn cio i parametri attuali sono forniti da una opportuna lista di variabili o di espressioni che 
 devono ovviamente coincidere in numero e tipo con i parametri formali
 
-{% highlight java %}
+```java
 class T{
    public int s (int x,int y){
      return x+y;
    }
 }
-{% endhighlight %}
+```
 
 #Metodi statici e metodi dinamici
 
