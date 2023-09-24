@@ -16,17 +16,17 @@ tag HTML sono generati in automatico secondo regole precise.
 
 ad esempio
 
-{% highlight xml %}
+```xml
 <h:form id="form1">
    <t:inputHidden id="field1"/>
 </h:form>
-{% endhighlight %}
+```
 
 da luogo a questo codice HTML
 
-{% highlight html %}
+```html
 <input type="hidden" name="form:field1"/>
-{% endhighlight %}
+```
 
 Ovviamente non siamo costretti a valorizzare l’attributo `id`, il rendering delle Java Server Faces si occupano di generarne in automatico di appropriati ed univoci.
 
@@ -34,17 +34,17 @@ Quando vogliamo però referenziare un dato componente tramite il suo `id`, sia c
 
 In casi come questo possiamo dichiarare gli `id` e a livello di `form` specificare l’attributo `prependId="false"`. Applicato al codice visto sopra abbiamo
 
-{% highlight xml %}
+```xml
 <h:form id="form1" prependId="false">
    <t:inputHidden id="field1"/>
 </h:form>
-{% endhighlight %}
+```
 
 che darà luogo a 
 
-{% highlight html %}
+```html
 <input type="hidden" name="field1"/>
-{% endhighlight %}
+```
 
 
 Verrebbe la tentazione di utilizzarlo sempre, anche se non è necessario per interazioni con js o css. L’attributo si dovrà usare con attenzione, si può ottenere un errore di `id` duplicato se si utilizza troppo spesso. In altre parole se non strettamente necessario, lasciamo che sia JSF a occuparsi di questi dettagli e a generare `id` univoci per i nostri tag.

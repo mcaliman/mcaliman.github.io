@@ -19,7 +19,7 @@ Lo faremo senza l’illusione di realizzare qualcosa di migliore dell’implemen
 Le operazioni di insert e delete comprendono la fase di riallocazione dell’array, come effettuare nella realtà queste operazioni?
 
 Una prima versione, un pò pedante potrebbe essere la seguente. Assumiamo per semplicità di esposizione che l’array sia di semplici `int` e non si debba gestire una tupla (elemento,chiave).
-{% highlight java %}
+```java
 public class Realloc {
 
     int n ;
@@ -72,12 +72,13 @@ public class Realloc {
         r.print();
     }
 }
-{% endhighlight %}
+```
 
 L’effetto è quello voluto, usando un array di appoggio `t`, il metodo `main()` mostra alcune chiamate di test.
 
-Possiamo utilizzare qualcosa di già pronto come `System.arraycopy()` per arrivare ad una release più compatta. Per semplicità riporto solo i metodi coinvolti nel refactoring 
-{% highlight java %}
+Possiamo utilizzare qualcosa di già pronto come `System.arraycopy()` per arrivare ad una release più compatta. Per semplicità riporto solo i metodi coinvolti nel refactoring
+
+```java
 public void realloc(){
    int[] t = new int[n];
    System.arraycopy(S, 0, t, 0, n);
@@ -93,7 +94,7 @@ public void dealloc(){
    S = new int[n];
    System.arraycopy(t, 0, S, 0, t.length-1);
 }
-{% endhighlight %}
+```
 
 A guardar bene il resto dello pseudocodice rimanente è piuttosto esplicito, a basso livello per così dire, e la sua implementazione non dovrebbe rappresentare uno sforzo particolare.
 

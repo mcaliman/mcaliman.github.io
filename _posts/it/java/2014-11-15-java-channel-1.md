@@ -14,7 +14,7 @@ Parte della disumanità del computer sta nel fatto che, una volta programmato e 
 
 Effettuare una copia di file con Java poteva essere ritenuto pedante fino a qualche anno fa. A volte ci dimentichiamo dell’esistenza del nuovo package nio. Qualcuno potrebbe obbiettare che oggi con Java7 (ed ovviamente 8) è possibile usare la classe `Files` che espone il metodo copy ancora più semplice. Per chi non potesse utilizzarlo una soluzione performante e semplice è riportata sotto. Provate ad effettuare qualche test per verirficare le performance con i metodi classici basati su Stream e potrete apprezzare i vantaggi dei channel sopratutto se lavorate con file di dimensioni non trascurabili.
 
-{% highlight java %}
+```java
 private static void copy(File source, File destination) {
     FileChannel input = null;
     FileChannel output = null;
@@ -28,4 +28,4 @@ private static void copy(File source, File destination) {
         logger.log(Level.SEVERE, "", e);
     }
 }
-{% endhighlight %}    
+```   

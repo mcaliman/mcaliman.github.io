@@ -36,7 +36,7 @@ i nodi con lo stesso padre vengono detti fratelli
 alberi con foglie tutte sullo stesso livello vengono detti alberi completi
 
 Un specifica base del tipo di dati Albero deve comprendere necessariamente operazioni come quelle riportate sotto
-{% highlight bash %}
+```
 tipo
    Albero
 dati
@@ -51,11 +51,11 @@ operazioni
    aggiungiSottoalbero(Albero a,nodo u) (inserisce nell’albero il sottoalbero a in modo che la radice di a diventi figlia di u)
    rimuoviSottoalbero(nodo v)->Albero (stacca e restituisce l’intero sottoalbero radicato in v,
    l’operazione cancella dall’albero il nodo v e tutti i suoi discendenti)
-{% endhighlight %}
+```
 
 A questo punto passare dalla specifica in pseudocodice ad una in linguaggio Java è immediato. 
 
-{% highlight java %}
+```java
 interface NodoInf {
       //stuff
 }
@@ -69,7 +69,7 @@ interface AlberoInf {
    void aggiungiSottoalbero(Albero a,Nodo u) ;
    Albero rimuoviSottoalbero(Nodo v);
 }
-{% endhighlight %}
+```
 
 Una struttura di questo tipo che non si porti dietro un certo contenuto informativo è di per se poco utile, Nodo dovrebbe infatti contenere come proprietà per esempio una chiave, un etichettà. Pensiamo ad esempio ad una struttura ad albero per rappresentare l’albero genealogico di una famigla.
 
