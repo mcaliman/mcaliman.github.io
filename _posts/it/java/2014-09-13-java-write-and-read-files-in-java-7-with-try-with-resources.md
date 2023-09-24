@@ -14,7 +14,7 @@ Leggere e scrivere file in Java 7 sfruttando il nuovo costrutto try-with-resourc
 
 
 Per scrivere un file
-{% highlight java %}
+```java
 protected boolean write(String name, String text) {
         boolean completed;
         try (Writer writer = 
@@ -29,13 +29,13 @@ new OutputStreamWriter(new FileOutputStream(name), "utf-8")))
         }
         return completed;
     }
-{% endhighlight %}
+```
 
 
 e per leggerne il contenuto
 
 
-{% highlight java %}
+```java
 public String read(String name) {
         String text = null;
         try (BufferedReader buffer = new BufferedReader(new FileReader(name))) {
@@ -53,7 +53,7 @@ public String read(String name) {
         }
         return text;
     }
-{% endhighlight %}
+```
 
 
 Quando il blocco try termina lo Stream verrà chiuso automaticamente. Questo è possibile perché le classi utilizzate nel blocco try-with-resources implementano l'interfaccia Java java.lang.AutoCloseable . 
@@ -65,16 +65,16 @@ Tutte le classi che implementano questa interfaccia possono essere utilizzati al
 L’interfaccia AutoClosable ha un solo metodo close() 
 
 
-{% highlight java %}
+```java
 public interface AutoClosable {
 
    public void close() throws Exception;
 }
-{% endhighlight %}
+```
 
 
 Implementare AutoClosable su un nostro oggetto non richiede molto sforzo come si può vedere da codice di esempio che riporto qui sotto.
-{% highlight java %}
+```java
 public class AutoClosableExampleObject implements AutoCloseable {
 
    @Override
@@ -82,7 +82,7 @@ public class AutoClosableExampleObject implements AutoCloseable {
       //do stuff and close
    }
 }
-{% endhighlight %}
+```
 
 
 Se non vogliamo catturare l’eccezzione basta omettere la parte catch del blocco ed essa si propagherà come se fosse non gestita (proprio così un try senza catch e senza finally). Ad essere sinceri il codice sopra avrebbe potuto beneficiare di altre novità della versione 7 come ad esempio i catch con gestione multipla di eccezioni ma di questo ed altro si parlerà in un prossimo post.

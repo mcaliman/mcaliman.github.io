@@ -15,7 +15,7 @@ iText è sicuramente la libreria più diffusa e completa per l’elaborazione di
 
 Ma veniamo al sodo,vi riporto sotto il codice di una classe che permette di fondere una serie di PDF insieme, di fatto si tratta di concatenare una serie di file e crearne uno risultante dal processo.
 
-{% highlight java %}
+```java
 public class ConcatDocumentCommand {
 
 
@@ -66,7 +66,7 @@ public class ConcatDocumentCommand {
         c.execute();
     }
 }
-{% endhighlight %}
+```
 
 La versione utilizzata del linguaggio Java è la 7, non stupitevi quindi del
 multiple catch ne della diamond notation. Peccato che nella versione che utilizzo per questo esempio gli oggetti iText non permettano anche l’uso del `try` with resources.
@@ -74,12 +74,12 @@ multiple catch ne della diamond notation. Peccato che nella versione che utilizz
 
 Il codice è piuttosto eloquente è si commenta da solo, il vero lavoro lo fa l’oggetto `PdfCopy` nel blocco
 
-{% highlight java %}
+```java
 reader = new PdfReader(file);
 pagesNumber = reader.getNumberOfPages();
 for (int page = 0; page < pagesNumber;) {
      copy.addPage(copy.getImportedPage(reader, ++page));
 }
-{% endhighlight %}
+```
 
 infatti dal `reader` vengono estratte le pagine del documento, una per una e poi aggiunte all’oggetto `copy`.
