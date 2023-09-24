@@ -54,7 +54,7 @@ sono definiti static in maniera tale che le chiamate siano eseguite tramite la c
 questa.Vediamo un esempio per chiarire meglio il concetto. Definiamo due package, uno lo chiamiamo debugger e
 l'altro nodebugger. Gia' dai due nomi si dovrebbe capire quali siano le loro intenzioni:
 
-{% highlight java %}
+```java
 //LISTATO 1: 
 package debugger; 
 public class Debug { 
@@ -69,7 +69,7 @@ public class Debug {
       /*do nothing*/ 
    } 
 }
-{% endhighlight %}
+```
 
 Come si puo' vedere dal listato 1 nel package `debugger` e' definita una classe `Debug` analoga a quella del
 package `nodebugger` ma l'implementazione e' diversa, anzi nel package `nodebugger` il membro `print(String msg)` e'
@@ -88,7 +88,7 @@ implementata nella classe `debugger.Debug` ci sia una definizione (ma non l'impl
 `nodebugger.Debug` in modo da poter interscambiare tali classi. Ci sono pero' alcune eccezioni, infatti davanti a
 un membro statico del tipo:
 
-{% highlight java %}
+```java
 //LISTATO 3: 
 package debugger; 
 public class Debug { 
@@ -97,11 +97,11 @@ public class Debug {
       return rt.freeMemory(); 
    } 
 }
-{% endhighlight %}
+```
 
 che viene utilizzato nel nostro codice sorgente in questo modo:
 
-{% highlight java %}
+```java
 //LISTATO 4: 
 package myprogram; 
 import debugger.debug.Debug; 
@@ -111,7 +111,7 @@ public class MyClass {
       //do 
    } 
 }
-{% endhighlight %}
+```
 
 viene spontaneo chiedersi cosa succederebbe se si scambiasse la classe del package `debugger` con quella del
 `nodebugger` che magari non implementa tale funzione, ma restituisce un valore di default pari a zero o ancora
@@ -134,23 +134,23 @@ Per perfezionare ancora meglio quanto detto sopra, ma soprattutto per capitalizz
 andremo a scrivere si potrebbero definire altre due raccomandazioni: Prima di utilizzare le classi di debug,
 definire un'ulteriore classe di supporto che semplicemente eredita dalla classe `Debug` originale:
 
-{% highlight java %}
+```java
 //LISTATO 5: 
 package myprogram.debug; 
 public class MyDebug extends debugger.debug.Debug {
 /**/
 }
-{% endhighlight %}
+```
 
 Analogamente fare la stessa cosa per la classe `Debug` del package `nodebug`:
 
-{% highlight java %}
+```java
 //LISTATO 6: 
 package myprogram.nodebug; 
 public class MyDebug extends debugger.nodebug.Debug { 
 /**/
 }
-{% endhighlight %}
+```
 
 Questo ci permettera' di disabilitare tutti i debug della nostra applicazione semplicemente cambiando la
 classe genitore della `myprogram.debug.MyDebug` con la classe `debugger.nodebug.Debug`.Stessa cosa vale per la
@@ -160,7 +160,7 @@ Utilizzare, poi, all'interno delle proprie classi sempre una estensione delle `M
 piu' livelli di debug indipendenti (o quasi) l'uno dall'altro. In questo modo si potranno attivare dei livelli
 piuttosto che altri ed avere un output di debug piu' chiaro da capire. Per esempio:
 
-{% highlight java %}
+```java
 //LISTATO 7: 
 package myprogram.main; 
 //Definisco dei livelli di debug class DebugLevel1 extends
@@ -178,7 +178,7 @@ MyClass() {}
       DebugLevel2.prt("Precondizione della funzione membro myMember2(): "+data); 
    } 
 }
-{% endhighlight %}
+```
 
 #Finalmente il package debugger
 Mantenendo le linee di progetto fin qui definite si puo' passare all'implementazione dei vari package che
@@ -232,7 +232,7 @@ sono stati mantenuti uguali anche nella relativa classe 'fake'.
 #L'utilizzo
 Vediamo un esempio di utilizzo del package debugger:
 
-{% highlight java %}
+```java
 //LISTATO 8: 
 package myprogram.nodebug; 
 public class MyDebug extends debugger.nodebug.Debug { 
@@ -276,10 +276,10 @@ MyClass() {}
       DebugLevel2.prt("Apertura del database"); 
    } 
 }
-{% endhighlight %}
+```
 
 
-#Conclusione
+# Conclusione
 Come si puo' notare con questo sistema siamo riusciti ad ottenere un debugger che risponde alle
 caratteristiche che ci eravamo prefissati ed ha un utilizzo abbastanza semplice ma soprattutto immediato.
 Sicuramente le migliorie che si possono fare sono moltissime, soprattutto la personalizzazione e adattamento

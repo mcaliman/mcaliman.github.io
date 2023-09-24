@@ -21,7 +21,7 @@ Tutte le dichiarazioni all'interno di questo blocco `static` saranno eseguite un
 
 Compila e ed esegui il seguente codice.
 
-{% highlight java %}
+```java
 public class AClass {
     public AClass() {
         System.out.println("call costuctor AClass()");
@@ -34,18 +34,18 @@ public class AClass {
         instance.method1();
     }
 }
-{% endhighlight %}
+```
 
 otterrai il seguente output
 
-{% highlight java %}
+```java
 call costuctor AClass()
 call method1
-{% endhighlight %}
+```
 
 modifica ora il codice nel modo seguente
 
-{% highlight java %}
+```java
 public class AClass {
     static {
         System.out.println("call static block");
@@ -61,21 +61,21 @@ public class AClass {
         instance.method1();
     }
 }
-{% endhighlight %}
+```
 
 otterrai il seguente output
 
-{% highlight java %}
+```java
 call static block
 call costuctor AClass()
 call method1
-{% endhighlight %}
+```
 
 Come puoi vedere il codice in `static { }` è stato eseguito ancor prima del costruttore stesso, quindi quando ancora nessuna istanza della classe esisteva.
 
 Ancora una variante del codice appena sopra, le modifiche sono limitate al metodo `main` quindi ti riporto solo quello
 
-{% highlight java %}
+```java
     public static void main(String[] args) {
         AClass instance = new AClass();
         instance.method1();
@@ -83,17 +83,17 @@ Ancora una variante del codice appena sopra, le modifiche sono limitate al metod
         AClass instanceBis = new AClass();
         instanceBis.method1();
     }
-{% endhighlight %}
+```
 
 e l’output prodotto
 
-{% highlight java %}
+```java
 call static block
 call costuctor AClass()
 call method1
 call costuctor AClass()
 call method1
-{% endhighlight %}
+```
 
 Anche in questo caso, nonostante siano state create due istanze della classe `AClass`, l’esecuzione del blocco `static` è limitato ad una sola occorrenza prima all’atto di caricamento della classe.
 E anche per oggi è tutto. Come al solito se hai una domanda in merito a questo post, vuoi un approfondimento o hai un argomento che ti interesserebbe che io trattassi nei prossimi post puoi scrivermi.

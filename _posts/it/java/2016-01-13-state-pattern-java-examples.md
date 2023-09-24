@@ -38,11 +38,11 @@ e di cui riporto il codice in questo post.
 
 Per prima cosa definiamo l'interfaccia, è sufficiente che abbia solo un metodo execute. 
 
-{% highlight java %}
+```java
 public interface State {
    public void execute();
 }
-{% endhighlight %}
+```
 
 Vogliamo implementare un sistema di gestione dei contenuti con tre stati: **draft**, **published** e **deleted**. 
 
@@ -51,7 +51,7 @@ La nostra applicazione di prova potrà avere tre bottoni per eseguire le rispett
 La soluzione che adotta il design pattern State è quella che implementa tante classi concrete di `State` 
 quanti sono gli stati previsti.
 
-{% highlight java %}
+```java
 public class DarftState implements State {
    /**
     * Salva il contenuto in stato bozza e non fa altro. 
@@ -64,13 +64,13 @@ public class DarftState implements State {
       //stuff...
    }
 }
-{% endhighlight %}
+```
 
 Creiamo la classe `Context` che deve avere un riferimento ad un oggetto di tipo `State`. 
 Un oggetto di tipo `Context` dovrà avere un meccanismo per cambiare l'attributo `state` e 
 un metodo che propaga ad esso l'azione realizzata dal metodo execute.
 
-{% highlight java %}
+```java
 public class Context {
    private State state;
    public void setState(State state) {
@@ -84,14 +84,14 @@ public class Context {
       this.state.execute();
    }
 }
-{% endhighlight %}
+```
 
 La classe `Context` nel nostro caso potrebbe anche chiamarsi Post e contenere più attributi e metodi, 
 per esempio contenere il riferimento al record o entity del contenuto di cui si vuole gestire il ciclo di vita.
 Per gli altri stati vi rimando al codice su github i cui riferimenti sono in testa a questo post.
 Per finire un esempio di utilizzo che cambia tre volte stato al nostro oggetto.
 
-{% highlight java %}
+```java
 Context context = new Context();
 State darftState = new DarftState();
 State publishState = new PublishState();
@@ -105,7 +105,7 @@ context.execute();
 
 context.setState(deletedState);
 context.execute();
-{% endhighlight %}
+```
 
 Se si deve aggiungere un nuovo comportamento o stato dobbiamo progettare una 
 nuova classe che implementi `State`.

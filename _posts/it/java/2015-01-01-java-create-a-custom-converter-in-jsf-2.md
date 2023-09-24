@@ -19,7 +19,7 @@ Vero e Falso, Attivo o Disattivato e così via. Per farlo abbiamo bisogno di cre
 Il codice di esempio visibile sotto realizza un semplice `Converter` per renderizzare i valori booleani con le stringhe Yes,No.
 
 
-{% highlight java %}
+```java
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
@@ -56,23 +56,23 @@ public class BooleanToYesNoConverter implements Converter {
     }
 }
 
-{% endhighlight %}
+```
 
 Il codice nel file xhtml per la nostra Java Server Faces e semplicemente quello sotto
 
-{% highlight xml %}
+```xml
 <h:form>
    <h:outputText value="#{true}" title="" converter="booleanToYesNoConverter"/>
 </h:form>
-{% endhighlight %}
+```
 
 Se poi non ho bisogno del livello di controllo fine di un converter posso risolvere con un operatore ternario e l'uso di EL.
 
-{% highlight xml %}
+```xml
 <h:form>
    <h:outputText value="#{false ? 'Yes' : 'No'}" />
 </h:form>
-{% endhighlight %}
+```
 
 L'uso di questa forma si presenta ottimale nel caso l'esigenza di conversione sia localizzata in una sola pagina o per poche occorrenze.
 La forma con il converter ci permette di accentrare il modello di decodifica in un solo punto, e se volessimo sostiture Yes,No con la rappresentazione Abilitato,Disabilitato sarebbe sufficiente operare la modifica nel codice del nostro `BooleanToYesNoConverter`.

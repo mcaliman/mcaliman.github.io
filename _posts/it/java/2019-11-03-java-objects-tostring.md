@@ -14,17 +14,17 @@ search_omit: false
 updated: true
 ---
 Se nel tuo codice hai "roba" del genere 
-{% highlight java %}
+```java
 string = string == null ? "" : string;
-{% endhighlight %}
+```
 oppure
-{% highlight java %}
+```java
 if(string==null) string="";
-{% endhighlight %}
+```
 oppure, più intelligentemente, hai creato una metodo del tipo
-{% highlight java %}
+```java
 String ifNullThenEmpty(String string) { return string == null ? "" : string;}
-{% endhighlight %}
+```
 e magari ancor più smart hai infilato tutto in una classe Utilities come metodo statico...
 
 ...Non preoccuparti, l'ho fatto anche io, non è un reato, Alan Turing non verrà a tirarti i piedi mentre dormi, ne la mattina seguente troverai James Gosling che dorme sul pianerottolo per poterti insultare prima che tu varchi la soglia di casa.

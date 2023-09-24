@@ -20,22 +20,22 @@ Settare `facelets.SKIP_COMMENTS`
 
 Nel file `web.xml` della nostra applicazione settiamo il parametro `facelets.SKIP_COMMENTS` a `true`.
 
-{% highlight xml %}
+```xml
 <context-param>
    <param-name>facelets.SKIP_COMMENTS</param-name>
    <param-value>true</param-value>
 </context-param>
-{% endhighlight %}
+```
 
 Attenzione però, nessun commento html verrà renderizzato, e a volte vogliamo avere un maggior controllo su quali commenti esporre o meno (qualcuno potrebbe esserci utile)
 Usare il tag `ui:remove`
 Il tag `ui:remove` è quello che fa per me, lo uso spesso e mi da tutta la flessibilità e sicurezza che richiedono le applicazioni enterprise. L’utilizzo è banale e sotto potete vederne un esempio
 
-{% highlight xml %}
+```xml
 <ui:remove>
   <!-- Anche questo commento non verrà renderizzato -->
   <h:commandButton type="button" value="#{msg.buttonLabel}" />
 </ui:remove>
-{% endhighlight %}
+```
 
 Ciò che è delimitato dal tag verrà trattato alla stregua di un commento da un compilatore.

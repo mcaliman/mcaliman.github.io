@@ -16,7 +16,7 @@ Un anno speso nell'intelligenza artificiale è abbastanza perchè una persona cr
 Realizzare mappature dirette tra una `Map` e una dropdown box con le Java Server Faces 2.3 è immediato e facile. 
 Dato un Session Bean di esempio riportato sotto
 
-{% highlight java %}
+```java
 import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -49,21 +49,20 @@ public class ThatBean implements Serializable {
         this.thatId = thatId;
     }
 }
-{% endhighlight %}
-
+```
 Il codice nel file jsf xhtml si riduce a ben poche righe
 
-{% highlight xml %}
+```xml
 <h:selectOneMenu  value="#{thatBean .thatId}">
     <f:selectItems value="#{thatBean.thatMap}" />
 </h:selectOneMenu>
-{% endhighlight %}
+```
 
 la mappatura è automatica con key e value (occhio è invertito) del tag option del tag select. 
 L'automatismo però ci può condizionare un bel pò modo di popolare la nostra `Map`.
 Per un controllo più fine possiamo utilizzare la seguente forma
 
-{% highlight xml %}
+```xml
 <h:selectOneMenu  value="#{thatBean.thatId}">
    <f:selectItems 
       value="#{thatBean.thatMap.entrySet()}" 
@@ -71,20 +70,20 @@ Per un controllo più fine possiamo utilizzare la seguente forma
       itemValue="#{entry.key}" 
       itemLabel="#{entry.value}" />
 </h:selectOneMenu>
-{% endhighlight %}
+```
 
 Nei casi più semplici, se non abbiamo necessità di una `Map` e posso mettere i valori hard coded
 
-{% highlight xml %}
+```xml
 <h:selectOneMenu  value="#{thatBean.thatId}">
    <f:selectItem itemValue="Key1" itemLabel="Label1” />
    <f:selectItem itemValue="Key2" itemLabel="Label2" />
 </h:selectOneMenu>
-{% endhighlight %}
+```
 
 Ecco il testo completo della pagina di esempio.
 
-{% highlight html %}
+```html
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -116,7 +115,7 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
 	   </h:form>
    </h:body>
 </html>
-{% endhighlight %}
+```
 
 Una precisazione, le annotazioni `@SessionScoped` e `@Named` sostituiscono i vecchi e deprecati `@ManagedBean` e `@SessionScoped`
 che ovviamente possiamo continuare ad utilizzare per il momento.

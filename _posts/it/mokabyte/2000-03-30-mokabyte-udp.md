@@ -52,7 +52,7 @@ datagramma IP I protocollo UDP non e' affidabile: invia i datagrammi ma non gara
 destinazione sono quindi gli applicativi che lo utilizzano che devono preoccuparsi dell'affidabilita' del
 servizio. La testata UDP e' relativamente semplice.
          
-{% highlight java %}
+```java
 0       7 8     15 16    23 24      31 
 +--------+--------+--------+--------+ 
 | Source | Destination              | 
@@ -65,7 +65,7 @@ servizio. La testata UDP e' relativamente semplice.
 | data octets ... 
 +---------------- ...
 
-{% endhighlight %}
+```
 
 
 #User Datagram Header Format
@@ -105,33 +105,33 @@ di cominciare a massacrare le nostre tastiere). Supponiamo di avere una personal
 questi dispositivi ambientali, dobbiamo aprire un socket sulla stessa porta sulla quale il dispositivo e' in
 ascolto :
 
-{% highlight java %}
+```java
 private DatagramSocket serverSocket ; 
 private int serverPort ; serverSocket = new DatagramSocket(serverPort) ;
-{% endhighlight %}
+```
 
 Ora che abbiamo il nostro oggetto socket per l'UDP (notare che si utilizza per questa ragione un
 DatagramSocket) Settiamo il timeout a 5 secondi, da notare che il timeout di default varia da browser a browser
 se si decide di usare delle Applet, invece con le applicazioni ,che consiglio, le cose sono piu' facili.
 
-{% highlight java %}
+```java
 serverSocket.setSoTimeout(5000) ;
-{% endhighlight %}
+```
 
 Adesso supponiamo di voler spedire un segnale al nostro dispositivo (ad esempio il classico segnale di
 inizializzazione) per fare questo dobbiamo costruire un oggetto di tipo DatagramPacket. A tale scopo usiamo il
 costruttore di cui useremo la seguente versione (vedremo poi nell'approfondimento perche')
 
-{% highlight java %}
+```java
 DatagramPacket(byte[] buf, int length, InetAddress address, int port) 
 DatagramPacket packet = new DatagramPacket(data,data.length,address, serverPort);
-{% endhighlight %}
+```
 
 Quindi inviamolo al nostro dispositivo
 
-{% highlight java %}
+```java
 serverSocket.send(packet);
-{% endhighlight %}
+```
 
 A questo punto, direi che la prossima cosa da fare e' aspettare il segnale di ritorno dal nostro
 dispositivo, che dovrebbe essere un echo nel migliore dei casi, un messaggio di errore o altro, dipende dal
@@ -141,27 +141,27 @@ Creiamo il DatagramPacket vuoto che conterra' il pacchetto ritornato, ricordando
 non e' sicuro, e quindi spetta a noi (qualora sia possibile, e non sempre lo e') gestire a livello software un
 eventuale sistema di controllo degli errori.
 
-{% highlight java %}
+```java
 DatagramPacket packet = new DatagramPacket(new byte[512],512);
-{% endhighlight %}
+```
 
 Per metterci in ascolto sul socket utilizziamo il metodo receice, che e' bloccante, cio' blocca il flusso
 del programma finche' non riceve un pacchetto o scade il timeout, sollevando un eccezione.
 
-{% highlight java %}
+```java
 try { 
    serverSocket.receive(packet); 
 }catch(java.io.InterruptedIOException e){
     // gestiamo il timeout 
 }
-{% endhighlight %}
+```
 
 Infine e' sempre buona norma rimettere le cose al loro posto prima di chiudere l'applicazione, che tradotto
 significa che dobbiamo chiudere il socket con il metodo close.
 
-{% highlight java %}
+```java
 serverSocket.close() ;
-{% endhighlight %}
+```
 
 Abbiamo visto come sia relativamente facile lavorare con UDP e Java, ben inteso l'argomento e' ben piu'
 esteso, ma al contrario del piu' diffuso e sicuro TCP/IP, bisogna tagliare le soluzioni su misura, di caso in
@@ -179,61 +179,60 @@ Dopo gli stralci di codice visti sopra, cerchiamo un approccio piu' ragionato e 
 dato da Java per implementare UDP. Cominciamo con la classe `DatagramPacket` : `DatagramPacket` ha due costruttori:
 uno si usa per ricevere dati dalla rete, l'altro per inviarli, sotto sono riportate le loro segnature.
 
-{% highlight java %}
+```java
 public DatagramPacket(byte[] buff, int len)
-{% endhighlight %}
+```
 
 in questo caso i dati si troveranno in buff
 
 
-{% highlight java %}
+```java
 public DatagramPacket(byte[] buff, int len, InetAddress addr, int port)
-{% endhighlight %}
+```
 
 in quest' altro si crea un datagramma per inviare il pacchetto di byte buff all' host di indirizzo addr e
 alla porta port Per operare su un oggetto di DatagramPacket si sono poi i seguenti metodi :
 
-{% highlight java %}
+```java
 public synchronized InetAddress getAddress() 
 public synchronized int getPort() 
 public synchronized byte[] getData() public synchronized int getLength()
-{% endhighlight %}
+```
 
 La classe DatagramSocket invece serve per inviare o ricevere un datagramma, anche qui troviamo diversi
 costruttori :
 
-{% highlight java %}
+```java
 public DatagramSocket() throws SocketException
-{% endhighlight %}
+```
 legato ad una porta anonima, in quanto la porta di destinazione e' parte del DatagramPacket.
 
-{% highlight java %}
+```java
 public DatagramSocket(int port) throws SocketException 
 public DatagramSocket(int port, InetAddres addr) throws SocketException
-{% endhighlight %}
+```
 
 vi sono poi i metodi :
 
-{% highlight java %}
+```java
 public void send(DatagramPacket o) throws IOException 
 public void receive(DatagramPacket p) throws IOException 
 public int getLocalPort() 
 public void close()
-{% endhighlight %}
+```
 
 che ovviamente libera la porta occupata da quel socket Infine le opzioni per settare il timeout
 
-{% highlight java %}
+```java
 public synchronized void setSoTimeout(int timeout) throws SocketException
-{% endhighlight %}
-
+```
 e per conoscerne il valore
 
-{% highlight java %}
+```java
 public synchronized int getSoTimeout() throws IOException
-{% endhighlight %}
+```
 
-#Conclusione
+# Conclusione
 
 Abbiamo visto come sia facile e produttivo realizzare applicazioni che implementano il protocollo UDP con
 Java, ne abbiamo individuato i punti di forza e le debolezza. Probabilmente chi ha a che fare come gli autori

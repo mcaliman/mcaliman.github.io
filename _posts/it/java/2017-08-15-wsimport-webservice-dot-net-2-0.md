@@ -58,7 +58,7 @@ wsimport -b  http://www.w3.org/2001/XMLSchema.xsd  -b  E:/tmp/customization.xjb 
 
 Il contenuto del file customization.xjb è riportato sotto
 
-{% highlight xml %} 
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <bindings xmlns="http://java.sun.com/xml/ns/jaxb"
           xmlns:xsd="http://www.w3.org/2001/XMLSchema"
@@ -93,5 +93,5 @@ Il contenuto del file customization.xjb è riportato sotto
     <class name="attributeType"/>
   </bindings>
 </bindings>
-{% endhighlight %}
+```
 Se vi ho risparmiato qualche ora a googlare/imprecare in klingon/annegare nel caffè fatemelo sapere. 

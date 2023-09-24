@@ -48,7 +48,7 @@ A questo punto abbiamo bisogno di creare due `JavaBean` e un `Filter` che servir
 sicure. Le pagine messe in sicurezza dal `Filter` si troveranno nel percorso/directory `/pages`.
 Chiameremo i due bean `LoginBean` e `NavigationBean`, la funzione di `LoginBean` è quella di gestire l'accesso, quella di `NavigationBean` la navigazione.
 
-{% highlight java %}
+```java
 package org.caliman.jsfsecurewebapp.login;
 
 import java.io.Serializable;
@@ -127,12 +127,12 @@ public class LoginBean implements Serializable {
     }
 }
 
-{% endhighlight %}
+```
 
 
 Il codice di `NavigationBean` è riportato sotto
 
-{% highlight java %}
+```java
 package org.caliman.jsfsecurewebapp.login;
 
 import java.io.Serializable;
@@ -164,7 +164,7 @@ public class NavigationBean implements Serializable {
 
 }
 
-{% endhighlight %}
+```
 
 Entrambi i bean sono annotati come `@ManagedBean` e `@SessionScoped` in quando devono avere scope di sessione ed essere gestibili nelle nostre pagine con le relative proprietà e metodi (che realizzano le azioni da associare ai pulsanti o link).
 
@@ -174,7 +174,7 @@ L'accreditamento è ovviamente legato alla correttezza dell'`username` e `passwo
 
 Veniamo al codice della filter
 
-{% highlight java %}
+```java
 package org.caliman.jsfsecurewebapp.login;
 
 import java.io.IOException;
@@ -229,7 +229,7 @@ public class LoginFilter implements Filter {
     }
 
 }
-{% endhighlight %}
+```
 
 A questo punto creiamo la nostra pagina JSF per la login e quella dell'indice della nostra applicazione a cui si potra accedere solo se accreditati
 
@@ -239,7 +239,7 @@ Dal menu di NetBeans creiamo una pagina per la login come sotto, la stessa opera
 
 Il codice per la `login.xhtml` è riportato sotto, ed è ovviamente ridotto all'osso. Solo ciò che ci servirà, potremo poi utilizzare i template a modelli di portali per realizzare la nostra applicazione completa è ovviamente responsiva.
 
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"   
@@ -257,11 +257,11 @@ Il codice per la `login.xhtml` è riportato sotto, ed è ovviamente ridotto all'
         </h:form>                    
     </h:body>
 </html>
-{% endhighlight %}
+```
 
 Ed infine quello per la pagina `index.xhtml`.
 
-{% highlight xml %}
+```xml
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -276,10 +276,10 @@ Ed infine quello per la pagina `index.xhtml`.
         </h:form>
     </h:body>
 </html>
-{% endhighlight %}
+```
 
 Il codice della nostra `web.xml` è quello sotto
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -315,7 +315,7 @@ Il codice della nostra `web.xml` è quello sotto
         <welcome-file>pages/index.xhtml</welcome-file>
     </welcome-file-list>
 </web-app>
-{% endhighlight %}
+```
 
 
 Effettuaiamo il build della nostra applicazione web e poi lanciamola con run dal menu contestuale di progetto.

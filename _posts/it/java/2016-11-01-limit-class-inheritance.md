@@ -27,44 +27,44 @@ La numero 1. pochi la danno. Eppure probabilmente anche tu usi questa soluzione 
 Numero 2:Rendendo tutti i costruttori `private`
 La numero 2. riguarda il fatto che se tutti i costruttori sono `private` il gioco dell’ereditarietà non funziona, provate a compilare queste due classi
 
-{% highlight java %}
+```java
 public class AClass {
    private AClass(){
    }
 }
 public class BClass extends AClass {
 }
-{% endhighlight %}
+```
 
 e otterrai questo errore di compilazione
 
-{% highlight java %}
+```java
 AClass() has private access in AClass
 public class BClass extends AClass {
-{% endhighlight %}
+```
 
 Numero 3:Rendendo la classe `final`
 La numero 3. è usando la parola chiave `final`, prova a compilare le due classi viste sopra così modificate
 
-{% highlight java %}
+```java
 public final class AClass {
    public AClass(){
    }
 }
 public class BClass extends AClass {
 }
-{% endhighlight %}
+```
 
 otterrai
 
-{% highlight java %}
+```java
 error: cannot inherit from final AClass
-{% endhighlight %}
+```
 
 Numero 4:Rendendo tutti i metodi `final`
 La quarta ed ultima è rendendo tutti i metodi `final`, osserva la seguente ridefinizione delle classi viste sopra e prova ad effettuare una compilazione.
 
-{% highlight java %}
+```java
 public class AClass {
     public AClass() {
     }
@@ -79,15 +79,15 @@ public class BClass extends AClass {
     public void method() {
     }
 }
-{% endhighlight %}
+```
 
 Otterrai l’errore
 
-{% highlight java %}
+```java
 method() in BClass cannot override method() in AClass
     public void method() {
   overridden method is final
-{% endhighlight %}
+```
 
 Fai attenzione, la domanda è “Come posso limitare” non “Come posso impedire (del tutto)” l’ereditarietà. La soluzione con il modificare `final` davanti a `class` blocca completamente ogni possibilità di ereditare dalla classe.
 
@@ -95,7 +95,7 @@ Fai attenzione, la domanda è “Come posso limitare” non “Come posso impedi
 Addendum Numero 1
 Ecco due interpretazione 
 
-{% highlight java %}
+```
 public class BClass /*extends AClass*/ {
     public BClass() {
         super();
@@ -104,16 +104,16 @@ public class BClass /*extends AClass*/ {
     public void method() {
     }
 }
-{% endhighlight %}
+```
 e 
-{% highlight java %}
+```java
 public abstract class AClass {
     public AClass() {
     }
     /*public final void method() {
     }*/
 }
-{% endhighlight %}
+```
 
 Un pochino borderline lo ammetto, ma scommettiamo che è la più usata?
 

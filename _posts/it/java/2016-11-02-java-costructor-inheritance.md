@@ -19,7 +19,7 @@ Una sottoclasse può chiamare il costruttore della classe genitore?
 Non possiamo ereditare un costruttore. Quello che possiamo fare è creare un'istanza di una sottoclasse utilizzando un costruttore della superclasse.
 Prova a compilare ed eseguire questo codice
 
-{% highlight java %}
+```java
 public class SuperClass {
     public SuperClass() {
         System.out.println("SuperClass()");
@@ -41,22 +41,22 @@ public class SubClass extends SuperClass {
         instance.method1();
     }
 }
-{% endhighlight %}
+```
 
 Otterrai il seguente output 
 
-{% highlight java %}
+```java
 SuperClass()
 SubClass()
 SuperClass.method1()
-{% endhighlight %}
+```
 
 Il costruttore della superclasse è stato implicitamente chiamato prima di quello della sottoclasse. Il costruttore non è però ereditato, è stato solo chiamato, se fosse ereditato potrei modificarne il comportamente effettuandone l’override e questo distruggerebbe la capacità di incapsulamento del linguaggio.
 In altre parole, non puoi far si che non venga effettuata la chiamata al costruttore padre.
 
 Modifica il codice così
 
-{% highlight java %}
+```java
 
 public class SubClass extends SuperClass {
     public SubClass() {
@@ -76,22 +76,22 @@ public class SubClass extends SuperClass {
         instance2.method1();
     }
 }
-{% endhighlight %}
+```
 
 otterrai l’output
 
-{% highlight java %}
+```java
 SuperClass()
 SubClass()
 SuperClass.method1()
 SuperClass()
 SubClass(boolean)
 SuperClass.method1()
-{% endhighlight %}
+```
 
 Il codice che hai appena visto è equivalente a questo
 
-{% highlight java %}
+```java
 public class SubClass extends SuperClass {
     public SubClass() {
         super();
@@ -112,7 +112,7 @@ public class SubClass extends SuperClass {
         instance2.method1();
     }
 }
-{% endhighlight %}
+```
 
 che produce lo stesso output. Non importa inserire o meno la chiamata `super()` che richiama il costruttore della superclasse, `super()` verrà chiamato comunque.
 
@@ -120,7 +120,7 @@ L’esistenza di `super()` è giustificata dal fatto che la tua superclasse potr
 
 Modifica il codice in questo modo
 
-{% highlight java %}
+```java
 public class SuperClass {
     public SuperClass() {
         System.out.println("SuperClass()");
@@ -155,18 +155,17 @@ public class SubClass extends SuperClass {
         instance2.method1();
     }
 }
-{% endhighlight %}
-
+```
 se esegui il metodo `main` di `SubClass` otterrai questo output
 
-{% highlight java %}
+```java
 SuperClass()
 SubClass()
 SuperClass.method1()
 SuperClass(boolean)
 SubClass(boolean)
 SuperClass.method1()
-{% endhighlight %}
+```
 
 `super()` mi permette di pilotare quale costruttore della superclasse chiamare a tempo di esecuzione.
 

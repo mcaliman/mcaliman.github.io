@@ -14,8 +14,7 @@ updated: true
 
 Gli oggetti immutabili sono istanze il cui stato non cambia dopo che sono state inizializzate. Per esempio `String` è una classe immutabile e una volta istanziata con il suo valore non cambia più.
 
-
-{% highlight java %}
+```java
 public final class Immutable {
     private final int value;
     public Immutable(int value) {
@@ -25,7 +24,7 @@ public final class Immutable {
         return value;
     }
 }
-{% endhighlight %}
+```
 
 Quali sono i vantaggi dell'immutabilità ?
 Principalmente quelli legati alla concorrenza, infatti è difficile garantire la correttezza in oggetti che possono mutare, più thread possono tentare di modificare lo stato dello stesso oggetto, portando alcuni thread a vedere stati differenti a seconda dell’istante in cui vi accedono, sia in lettura che scrittura ovviamente.
@@ -40,7 +39,7 @@ Principalmente quelli legati alla concorrenza, infatti è difficile garantire la
 * Non prevedere metodi che cambino lo stato dell’oggetto
 
 
-{% highlight java %}
+```java
     public class Mutable {
     
         private int value;
@@ -66,13 +65,13 @@ Principalmente quelli legati alla concorrenza, infatti è difficile garantire la
             this.mutable = new Mutable(mutable.getValue());
         }
     }
-{% endhighlight %}
+```
 
 # La defensive coping
 
   La maggior parte delle classi sono mutabili, come approcciare il problema? Creando un wrapper attorno alla classe ed utilizzando ad esempio il metodo clone()
   
-{% highlight java %}
+```java
       public class Wrapper {
     
         private final Mutable mutable;
@@ -86,7 +85,7 @@ Principalmente quelli legati alla concorrenza, infatti è difficile garantire la
             return mutable.clone();
         }
     }
-{% endhighlight %}
+```
 
 Ovviamente il tipo originale dell’oggetto `Mutable` è diverso da `Wrapper`, di conseguenza non è possibile semplicemente sostituire l’uno con l’altro all’interno di codice esistente senza dover effettuare modifiche.
 
@@ -96,7 +95,7 @@ Una classe immutabile genera oggetti immutabili per definizione (per il suo desi
 
 Un esempio di oggetto immutabile
 
-{% highlight java %}
+```java
     public final class Immutable2 {
     
         private final String text;
@@ -109,11 +108,11 @@ Un esempio di oggetto immutabile
             return this.text;
         }
     }
-{% endhighlight %}
+```
 
 oppure anche
 
-{% highlight java %}    
+```java 
     public final class Immutable3 {
     
         private final String text;
@@ -130,7 +129,7 @@ oppure anche
             return new Immutable3(text);
         }
     }
-{% endhighlight %}
+```
     
 
 la ricetta standard per un ogggetto immutabile è in breve così 
