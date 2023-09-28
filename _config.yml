@@ -61,7 +61,7 @@ liquid:
   error_mode: strict
 # Build settings
 
-# permalink: /:slugified_categories/:title/
+# permalink: /:slugified_categories/:title/ # non funziona su github pages
 permalink: /:categories/:title/
 # permalink: /:title/
 markdown: kramdown
