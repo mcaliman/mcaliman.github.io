@@ -61,8 +61,8 @@ liquid:
   error_mode: strict
 # Build settings
 
-permalink: /:slugified_categories/:title/
-# permalink: /:categories/:title/
+# permalink: /:slugified_categories/:title/
+permalink: /:categories/:title/
 # permalink: /:title/
 markdown: kramdown
 feed:
