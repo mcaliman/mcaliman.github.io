@@ -5,6 +5,7 @@ title: "COBOL overview part 1"
 excerpt: ""
 category: "COBOL"
 date: 2023-05-20 05:25:44
+revised: true
 tags: [English,COBOL]
 comments: true
 share: true
@@ -20,7 +21,7 @@ COBOL (an acronym for COmmon Business-Oriented Language) is a programming langua
 
 COBOL is a procedural programming language, business-oriented and with strong typing. Its syntax is verbose and descriptive, trying to approach natural language. A COBOL program is divided into four divisions: identification, environment, data and procedure.
 
-```cobol
+```COBOL
 IDENTIFICATION DIVISION.
 PROGRAM-ID. COMPOUND-INTEREST.
 

@@ -6,7 +6,6 @@ excerpt: "Different ways of implementing a Logo Language style turtle in Java."
 modified: 2020-05-24
 category: Java
 tags: [English,Java]
-# permalink: /java/java-fluent-api-examples-1/
 comments: true
 share: true
 search_omit: false
