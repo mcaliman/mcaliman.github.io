@@ -62,8 +62,8 @@ liquid:
 # Build settings
 
 permalink: /:slugified_categories/:title/
-#permalink: /:categories/:title/
-#permalink: /:title/
+# permalink: /:categories/:title/
+# permalink: /:title/
 markdown: kramdown
 feed:
   path: atom.xml
