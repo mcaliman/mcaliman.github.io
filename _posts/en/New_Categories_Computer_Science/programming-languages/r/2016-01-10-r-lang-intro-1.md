@@ -3,9 +3,10 @@ layout: post
 lang: en
 title:  "R language introduction"
 excerpt: ""
-category: R
-date:   2016-01-10 22:45:33
+category: programming-languages
 tags: [English,R]
+date:   2016-01-10 22:45:33
+
 comments: true
 share: true
 ---

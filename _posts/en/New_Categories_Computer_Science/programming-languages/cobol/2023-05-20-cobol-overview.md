@@ -1,18 +1,18 @@
 ---
 layout: post
 lang: en
-title: "COBOL overview part 1"
+title: "Cobol overview"
 excerpt: ""
-category: "COBOL"
 date: 2023-05-20 05:25:44
 revised: true
-tags: [English,COBOL]
+category: programming-languages
+tags: [English,Cobol]
 comments: true
 share: true
 updated: true
 ---
 
-> “Computers are good at following instructions, but not at reading your mind.”
+> Computers are good at following instructions, but not at reading your mind.
 >
 > – Donald Knuth
 

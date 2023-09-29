@@ -3,9 +3,9 @@ layout: post
 lang: en
 title:  "Date, time and interval objects in R"
 excerpt: ""
-category: R
-date:   2016-02-10 22:45:33
+category: programming-languages
 tags: [English,R]
+date:   2016-02-10 22:45:33
 comments: true
 share: true
 ---

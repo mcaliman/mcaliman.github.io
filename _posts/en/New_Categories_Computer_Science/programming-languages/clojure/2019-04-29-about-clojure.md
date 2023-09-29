@@ -1,12 +1,11 @@
 ---
 layout: post
 lang: en
-title: "Clojure #1"
+title: "About Clojure"
 excerpt: "Some information about the Clojure programming language"
 modified: 2019-04-29
 revised: true
 category: programming-languages
-# categories: "Computer Science"
 tags: [English,Clojure]
 comments: true
 share: true
