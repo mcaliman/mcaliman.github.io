@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Explore the World of Artificial Intelligence"
 excerpt: "Five Websites to Boost Your Productivity and Creativity"
-category: Datascience
+category: data-science
 date: 2023-05-15 05:45:33
 tags: [English,Artificial Intelligence]
 comments: true

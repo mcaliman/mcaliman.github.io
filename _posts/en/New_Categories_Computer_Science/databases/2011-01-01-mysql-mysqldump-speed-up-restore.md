@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "MySQL: How to speed up restore operations from mysql dump"
 excerpt: ""
-category: Databases
+category: databases
 date:   2011-01-01 22:45:33
 tags: [English,MySQL]
 comments: true
