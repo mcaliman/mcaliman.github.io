@@ -3,7 +3,7 @@ layout: post
 lang: en
 title: "Understanding Domain Specific Languages"
 excerpt: ""
-category: "Computer Science"
+category: information-systems
 date:   2023-08-05 22:45:33
 modified: 2023-08-08 22:45:33
 tags: [English, "DSL (Domain Specific Languages)"]

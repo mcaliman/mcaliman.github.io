@@ -3,7 +3,7 @@ layout: post
 lang: en
 title: "What is an inference engine?"
 excerpt: ""
-category: "Computer Science"
+category: information-systems
 date:   2023-08-11 22:45:33
 modified: 2023-08-11 22:45:33
 tags: [English,"Expert Systems","Inference Engines"]
