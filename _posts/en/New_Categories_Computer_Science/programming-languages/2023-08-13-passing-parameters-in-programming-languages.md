@@ -3,7 +3,7 @@ layout: post
 lang: en
 title: "Passing Parameters to Methods/Functions/Procedure in Programming Languages"
 excerpt: ""
-category: "Computer Science"
+category: programming-languages
 date:   2023-08-13 22:45:33
 modified: 2023-08-13 22:45:33
 tags: [English]

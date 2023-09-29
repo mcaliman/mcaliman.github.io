@@ -3,9 +3,9 @@ layout: post
 lang: en
 title:  "About the limits of the calculable"
 excerpt: ""
-category: "Computer Science"
+category: theoretical-computer-science
 date:   2014-09-06 22:45:33
-tags: [Italian,"Computer Science"]
+tags: [English,"Computer Science"]
 comments: true
 share: true
 ---

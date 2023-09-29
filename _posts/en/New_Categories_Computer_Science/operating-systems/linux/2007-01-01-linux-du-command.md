@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "The du Linux command"
 excerpt: "How to shows the disk space used"
-category: "Computer Science"
+category: operating-systems
 date:   2007-01-01 22:45:33
 modified: 2023-03-19
 tags: [English,"Linux"]

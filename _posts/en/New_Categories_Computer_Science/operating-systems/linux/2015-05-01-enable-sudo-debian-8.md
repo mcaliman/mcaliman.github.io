@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Enable the sudo command on debian 8"
 excerpt: ""
-category: "Computer Science"
+category: operating-systems
 date:   2015-05-01 22:45:33
 tags: [English,"Linux"]
 comments: true
