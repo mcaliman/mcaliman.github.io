@@ -3,9 +3,9 @@ layout: post
 lang: en
 title:  "How to swap two variables at once with Python"
 excerpt: ""
-category: Python
-date:   2014-09-01 22:45:33
+category: programming-languages
 tags: [English,Python]
+date:   2014-09-01 22:45:33
 comments: true
 share: true
 ---
