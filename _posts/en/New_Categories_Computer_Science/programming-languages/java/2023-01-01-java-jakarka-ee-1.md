@@ -3,7 +3,8 @@ layout: post
 lang: en
 title: "The transition from Java EE to Jakarta EE"
 excerpt: "What you need to know"
-category: Java
+category: programming-languages
+tags: [English,Java]
 date: 2023-01-01 05:11:55
 modified: 2023-01-01 05:11:55
 tags: [English,Java, Java EE]

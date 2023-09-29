@@ -3,9 +3,9 @@ layout: post
 lang: en
 title:  "What is JAX-WS"
 excerpt: ""
-category: Java
+category: programming-languages
+tags: [English,Java]
 date:   2011-02-27 22:45:33
-tags: [English]
 comments: true
 share: true
 ---

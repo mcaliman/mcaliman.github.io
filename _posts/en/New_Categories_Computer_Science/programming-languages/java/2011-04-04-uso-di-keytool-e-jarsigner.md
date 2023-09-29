@@ -3,9 +3,9 @@ layout: post
 lang: it
 title:  "Uso di keytool e jarsigner"
 excerpt: ""
-category: Java
+category: programming-languages
+tags: [English,Java]
 date:   2011-04-24 22:45:33
-tags: [English]
 comments: true
 share: true
 ---

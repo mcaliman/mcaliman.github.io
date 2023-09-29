@@ -3,9 +3,9 @@ layout: post
 lang: it
 title:  "La gestione delle stringhe in Java"
 excerpt: ""
-category: Java
+category: programming-languages
+tags: [English,Java]
 date:   2014-07-06 22:45:33
-tags: [English,Java, String, StringBuffer, StringBuilder]
 comments: true
 share: true
 ---

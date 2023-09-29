@@ -3,9 +3,9 @@ layout: post
 lang: it
 title:  "Secure httpbase tomcat authentication"
 excerpt: ""
-category: Java
+category: programming-languages
+tags: [English,Java]
 date:   2014-08-15 22:45:33
-tags: [English,Tomcat]
 comments: true
 share: true
 ---
