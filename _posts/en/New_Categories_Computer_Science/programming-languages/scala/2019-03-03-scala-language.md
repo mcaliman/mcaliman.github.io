@@ -3,9 +3,9 @@ layout: post
 lang: en
 title: "The programming language Scala"
 excerpt: ""
-modified: 2019-03-03
-programming-languages
+category: programming-languages
 tags: [English,Scala]
+modified: 2019-03-03
 comments: true
 share: true
 search_omit: false
