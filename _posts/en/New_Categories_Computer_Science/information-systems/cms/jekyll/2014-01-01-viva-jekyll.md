@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "The CMS is dead, long live the Jekyll."
 excerpt: Jekyll
-category: "Jekyll"
+category: information-systems
 date:   2014-06-22 22:45:33
 tags: [CMS,Jekyll,English]
 comments: true
