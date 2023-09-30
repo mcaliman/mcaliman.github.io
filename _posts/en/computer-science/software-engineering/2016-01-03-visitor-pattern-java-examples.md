@@ -1,18 +1,16 @@
 ---
 layout: post
-lang: it
-title: Il design pattern Visitor
-excerpt: "Codice di esempio minimale sul pattern Interpreter"
+lang: en
+title: "Design Pattern Visitor"
+excerpt: ""
 modified: 2016-01-03
 category: software-engineering
-tags: [Italian,Design Pattern]
+tags: [English,Design Pattern]
 comments: true
 share: true
 search_omit: false
 updated: true
 ---
 
-
-Potete trovare un progetto di esempio su github a questo indirizzo:
+You can find an example project on github at this address:
 [**https://github.com/mcaliman/JavaPatternsCollection**](https://github.com/mcaliman/JavaPatternsCollection)
-
