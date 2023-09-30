@@ -18,5 +18,5 @@ Il suo valore didattico resta comunque notevole, apprendere come si realizza un 
 (per quanto piccolo e limitato) aggiungere al proprio bagaglio informatico conoscenze importanti, 
 che non a caso vengono sempre trattati in un corso universitario (sia di informatica che di ingegneria informatica).
 Potete trovare un progetto di esempio su github a questo indirizzo:
-[**https://github.com/mcaliman/InterpreterPatternJavaExamples**](https://github.com/mcaliman/InterpreterPatternJavaExamples)
+[**https://github.com/mcaliman/JavaPatternsCollection**](https://github.com/mcaliman/JavaPatternsCollection)
 
