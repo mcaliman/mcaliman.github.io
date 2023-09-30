@@ -13,7 +13,9 @@ updated: true
 
 Il pattern Strategy è uno dei pattern che uso più frequentemente. 
 Potete trovare un progetto di esempio su github a questo indirizzo:
-[**https://github.com/mcaliman/StrategyPatternJavaExamples**](https://github.com/mcaliman/StrategyPatternJavaExamples)
+
+[**https://github.com/mcaliman/JavaPatternsCollection**](https://github.com/mcaliman/JavaPatternsCollection)
+
 Per illustrare il funzionamento del pattern, ho realizzatre tre sort che utilizzano il metodo classico di ordinamento
 di una `List`. Questo avviene tramite comparatore, il quale utilizza sia le lambda che gli stream.
 Lambda e stream non rendono più performante il processo di ordinamento (anche se non lo escludono), il loro
