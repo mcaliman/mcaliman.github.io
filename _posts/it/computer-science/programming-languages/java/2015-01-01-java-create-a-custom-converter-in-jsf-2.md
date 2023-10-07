@@ -10,8 +10,7 @@ comments: true
 share: true
 ---
 
-Un anno speso nell'intelligenza artificiale è abbastanza perchè una persona creda in Dio.
-*(Alan Perlis)*
+
 
 Se la proprietà del bean che vogliamo visualizzare è di tipo boolean quello che otterremo nella pagina sono le stringhe `true` e `false`, per 
 sostituire la rappresentazione con qualcosa di più orientato all'utente abbiamo bisogno di renderizzare i valori true e false con Yes o No, 

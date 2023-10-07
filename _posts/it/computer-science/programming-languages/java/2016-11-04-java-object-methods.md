@@ -12,7 +12,7 @@ search_omit: false
 updated: true
 ---
 
-﻿Quali sono i metodi della classe Object?
+Quali sono i metodi della classe Object?
 
 
 Una delle domande che ti possono capitare ad un colloquio o ad una certificazione o un semplice test riguardo il linguaggio Java è la seguente:

@@ -9,7 +9,7 @@ tags: [Italian,Java Server Faces]
 comments: true
 share: true
 ---
-I computer sono come gli Dei del Vecchio Testamento: pieni di regole e nessuna pietà. *(Joseph Campbell, Il potere del mito, 1988)*
+
 
 Quando usiamo tag come `inputHidden` o `form`, cioè componenti standard HTML delle JSF, gli attributi `id` del corrispondente 
 tag HTML sono generati in automatico secondo regole precise.

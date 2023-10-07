@@ -9,7 +9,7 @@ tags: [Italian,"Data Structures"]
 comments: true
 share: true
 ---
-﻿Dopo i post sulle strutture dati elementari passiamo a trattare gli alberi, prima di entrare nel dettaglio di come implementare strutture dati di questo tipo ne approfondiamo l’aspetto teorico.
+Dopo i post sulle strutture dati elementari passiamo a trattare gli alberi, prima di entrare nel dettaglio di come implementare strutture dati di questo tipo ne approfondiamo l’aspetto teorico.
 
 Per prima cosa ne vediamo la definzione classica
 

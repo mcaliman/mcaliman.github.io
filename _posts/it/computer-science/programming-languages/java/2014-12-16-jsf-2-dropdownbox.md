@@ -10,8 +10,7 @@ comments: true
 share: true
 ---
 
-Un anno speso nell'intelligenza artificiale è abbastanza perchè una persona creda in Dio.
-*(Alan Perlis)*
+
 
 Realizzare mappature dirette tra una `Map` e una dropdown box con le Java Server Faces 2.3 è immediato e facile. 
 Dato un Session Bean di esempio riportato sotto

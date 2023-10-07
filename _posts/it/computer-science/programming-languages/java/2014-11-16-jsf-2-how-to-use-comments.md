@@ -10,7 +10,7 @@ comments: false
 share: true
 ---
 
-Parte della disumanità del computer sta nel fatto che, una volta programmato e messo in funzione, si comporta in maniera perfettamente onesta. *(Isaac Asimov, Il vento è cambiato, 1983)*
+
 
 Premesso che è sempre possibile usare i tag classici di commento `<!--` e `-- >` in html ma questi di default vengono renderizzati, e nel caso il codice commentato sia una funzionalità nascosta per la release rilasciata, non ancora ufficiale, o una parte di EL o tag JSF questo potrebbe risultare imbarazzante se non rappresentare un buco alla sicurezza.
 

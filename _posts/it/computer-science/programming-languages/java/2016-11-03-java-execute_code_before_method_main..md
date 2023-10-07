@@ -12,7 +12,7 @@ search_omit: false
 updated: true
 ---
 
-﻿Una delle domande che ti possono capitare ad un colloquio o ad una certificazione o un semplice test riguardo il linguaggio Java è la seguente:
+Una delle domande che ti possono capitare ad un colloquio o ad una certificazione o un semplice test riguardo il linguaggio Java è la seguente:
 Possiamo eseguire del codice prima del metodo `main(String[])` ?
 
 La risposta è sì. Se utilizziamo un blocco statico di codice nella classe. Il codice contenuto in nel blocco `static` viene eseguito prima della creazione dell’oggetto stesso. 

@@ -10,7 +10,7 @@ comments: true
 share: true
 ---
 
-﻿Riprendiamo da dove ci eravamo lasciati (vedi post precedente), dopo aver visto un pò di teoria sui dizionari e qualcosa sull’interfaccia `Map` passiamo a esempi pratici. Parleremo esclusivamente della classe concreta `HashMap`, la nuova, per così dire, `Hashtable`.
+Riprendiamo da dove ci eravamo lasciati (vedi post precedente), dopo aver visto un pò di teoria sui dizionari e qualcosa sull’interfaccia `Map` passiamo a esempi pratici. Parleremo esclusivamente della classe concreta `HashMap`, la nuova, per così dire, `Hashtable`.
 
 
 Prima di iniziare ricordiamo le differenze principali tra le due
