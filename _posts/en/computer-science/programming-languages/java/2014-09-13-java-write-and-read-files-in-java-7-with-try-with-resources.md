@@ -1,19 +1,19 @@
 ---
 layout: post
-lang: it
-title:  "Scrivere e leggere file in Java 7 con try-with-resources"
+lang: en
+title:  "Writing and reading files in Java 7 with try-with-resources"
 excerpt: ""
 category: programming-languages
 date:   2014-09-13 22:45:33
-tags: [Italian,Java,"Java 7"]
+tags: [English,Java,"Java 7"]
 comments: true
 share: true
 ---
 
-Leggere e scrivere file in Java 7 sfruttando il nuovo costrutto try-with-resource manleva lo sviluppatore dal compito di chiudere correttamente gli stream, sotto potete trovare due metodi di esempio.
+Reading and writing files in Java 7 using the new try-with-resource construct relieves the developer of the task of correctly closing streams, below you can find two example methods.
 
 
-Per scrivere un file
+To write a file
 ```java
 protected boolean write(String name, String text) {
         boolean completed;
@@ -32,7 +32,7 @@ new OutputStreamWriter(new FileOutputStream(name), "utf-8")))
 ```
 
 
-e per leggerne il contenuto
+and to read its contents
 
 
 ```java
@@ -56,13 +56,12 @@ public String read(String name) {
 ```
 
 
-Quando il blocco try termina lo Stream verrà chiuso automaticamente. Questo è possibile perché le classi utilizzate nel blocco try-with-resources implementano l'interfaccia Java java.lang.AutoCloseable . 
+When the try block ends the stream will be closed automatically. This is possible because the classes used in the try-with-resources block implement the Java interface `java.lang.AutoCloseable` .
+
+All classes that implement this interface can be used within try-with-resources.
 
 
-Tutte le classi che implementano questa interfaccia possono essere utilizzati all'interno del try-with-resources.
-
-
-L’interfaccia AutoClosable ha un solo metodo close() 
+The `AutoClosable` interface has only one method `close()`.
 
 
 ```java
@@ -72,8 +71,8 @@ public interface AutoClosable {
 }
 ```
 
+Implementing `AutoClosable` on one of our objects does not require much effort as can be seen from the example code below.
 
-Implementare AutoClosable su un nostro oggetto non richiede molto sforzo come si può vedere da codice di esempio che riporto qui sotto.
 ```java
 public class AutoClosableExampleObject implements AutoCloseable {
 
@@ -84,5 +83,4 @@ public class AutoClosableExampleObject implements AutoCloseable {
 }
 ```
 
-
-Se non vogliamo catturare l’eccezzione basta omettere la parte catch del blocco ed essa si propagherà come se fosse non gestita (proprio così un try senza catch e senza finally). Ad essere sinceri il codice sopra avrebbe potuto beneficiare di altre novità della versione 7 come ad esempio i catch con gestione multipla di eccezioni ma di questo ed altro si parlerà in un prossimo post.
+If we don't want to catch the exception, just omit the `catch` part of the block, and it will propagate as if it were unhandled (just so a `try` without `catch` and without `finally)`. To be honest, the code above could have benefited from other new features in version 7, such as `catch` with multiple exception handling, but more on that in a future post.
