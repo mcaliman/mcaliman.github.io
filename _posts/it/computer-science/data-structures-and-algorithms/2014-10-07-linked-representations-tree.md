@@ -5,7 +5,7 @@ title:  "Alberi rappresentazioni collegate"
 excerpt: ""
 category: data-structures-and-algorithms
 date:   2014-10-07 22:45:33
-tags: [Italian,"Programming Languages","Computer Science"]
+tags: [Italian,"Computer Science"]
 comments: true
 share: true
 ---
