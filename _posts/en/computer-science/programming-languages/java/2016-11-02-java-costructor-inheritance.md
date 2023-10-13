@@ -1,23 +1,22 @@
 ---
 layout: post
-lang: it
-title: "I costruttori sono ereditabili ?" 
-excerpt: "I costruttori sono ereditabili? Una sottoclasse può chiamare il costruttore della classe genitore?"
+lang: en
+title: "Are constructors inheritable?" 
+excerpt: "Are constructors inheritable? Can a subclass call the constructor of the parent class?"
 modified: 2016-11-02
 category: programming-languages
-tags: [Italian,Java]
+tags: [English,Java]
 comments: true
 share: true
 search_omit: false
 updated: true
 ---
+One of the questions that may occur to you at an interview or certification or a simple test concerning the Java language is the following:
+Are constructors inheritable? 
+Can a subclass call the constructor of the parent class?
 
-Una delle domande che ti possono capitare ad un colloquio o ad una certificazione o un semplice test riguardo il linguaggio Java è la seguente:
-I costruttori sono ereditabili? 
-Una sottoclasse può chiamare il costruttore della classe genitore?
-
-Non possiamo ereditare un costruttore. Quello che possiamo fare è creare un'istanza di una sottoclasse utilizzando un costruttore della superclasse.
-Prova a compilare ed eseguire questo codice
+We cannot inherit a constructor. What we can do is create an instance of a subclass using a constructor of the superclass.
+Try compiling and executing this code
 
 ```java
 public class SuperClass {
@@ -42,8 +41,7 @@ public class SubClass extends SuperClass {
     }
 }
 ```
-
-Otterrai il seguente output 
+You will get the following output 
 
 ```java
 SuperClass()
@@ -51,9 +49,8 @@ SubClass()
 SuperClass.method1()
 ```
 
-Il costruttore della superclasse è stato implicitamente chiamato prima di quello della sottoclasse. Il costruttore non è però ereditato, è stato solo chiamato, se fosse ereditato potrei modificarne il comportamente effettuandone l’override e questo distruggerebbe la capacità di incapsulamento del linguaggio.
-In altre parole, non puoi far si che non venga effettuata la chiamata al costruttore padre.
-
+The constructor of the superclass was implicitly called before that of the subclass. However, the constructor is not inherited, it has only been called; if it were inherited, I could change its behaviour by overriding it, and this would destroy the encapsulation capability of the language.
+In other words, you cannot make the call to the parent constructor not be made.
 Modifica il codice così
 
 ```java
@@ -78,7 +75,7 @@ public class SubClass extends SuperClass {
 }
 ```
 
-otterrai l’output
+You will get the following output 
 
 ```java
 SuperClass()
@@ -89,7 +86,7 @@ SubClass(boolean)
 SuperClass.method1()
 ```
 
-Il codice che hai appena visto è equivalente a questo
+The code you have just seen is equivalent to this
 
 ```java
 public class SubClass extends SuperClass {
@@ -113,12 +110,11 @@ public class SubClass extends SuperClass {
     }
 }
 ```
+which produces the same output. It doesn't matter whether or not you insert the `super()` call which calls the superclass constructor, `super()` will be called anyway.
 
-che produce lo stesso output. Non importa inserire o meno la chiamata `super()` che richiama il costruttore della superclasse, `super()` verrà chiamato comunque.
+The existence of `super()` is justified by the fact that your superclass may have multiple constructors, and using `super()` is the only way to enforce which of them will be called.
 
-L’esistenza di `super()` è giustificata dal fatto che la tua superclasse potrebbe avere più costruttori e usare `super()` è l’unico modo per poter imporre quale di essi sarà chiamato.
-
-Modifica il codice in questo modo
+Modify the code like this
 
 ```java
 public class SuperClass {
@@ -156,7 +152,7 @@ public class SubClass extends SuperClass {
     }
 }
 ```
-se esegui il metodo `main` di `SubClass` otterrai questo output
+if you run the `main` method of `SubClass` you will get this output
 
 ```java
 SuperClass()
@@ -167,6 +163,6 @@ SubClass(boolean)
 SuperClass.method1()
 ```
 
-`super()` mi permette di pilotare quale costruttore della superclasse chiamare a tempo di esecuzione.
+`super()` allows me to control which superclass constructor to call at runtime.
 
-E anche per oggi è tutto. Come al solito se hai una domanda in merito a questo post, vuoi un approfondimento o hai un argomento che ti interesserebbe che io trattassi nei prossimi post puoi scrivermi.
+And that's it for today, too. As usual if you have a question about this post, want a more in-depth discussion, or have a topic you'd like me to cover in future posts you can write to me.
