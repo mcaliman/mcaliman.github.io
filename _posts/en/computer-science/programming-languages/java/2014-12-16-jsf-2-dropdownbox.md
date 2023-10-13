@@ -1,19 +1,19 @@
 ---
 layout: post
-lang: it
-title:  "Facili le dropdownbox con le JSF 2.2!"
+lang: en
+title:  "Dropdownboxes are easy with JSF 2.2!"
 excerpt: ""
 category: programming-languages
 date:   2014-12-16 22:45:33
-tags: [Italian,Java Server Faces]
+tags: [English,Java Server Faces]
 comments: true
 share: true
 ---
 
 
 
-Realizzare mappature dirette tra una `Map` e una dropdown box con le Java Server Faces 2.3 è immediato e facile. 
-Dato un Session Bean di esempio riportato sotto
+Making direct mappings between a `Map` and a dropdown box with Java Server Faces 2.3 is immediate and easy.
+Given a sample Session Bean below
 
 ```java
 import java.io.Serializable;
@@ -49,7 +49,7 @@ public class ThatBean implements Serializable {
     }
 }
 ```
-Il codice nel file jsf xhtml si riduce a ben poche righe
+The code in the jsf xhtml file is reduced to just a few lines
 
 ```xml
 <h:selectOneMenu  value="#{thatBean .thatId}">
@@ -57,9 +57,9 @@ Il codice nel file jsf xhtml si riduce a ben poche righe
 </h:selectOneMenu>
 ```
 
-la mappatura è automatica con key e value (occhio è invertito) del tag option del tag select. 
-L'automatismo però ci può condizionare un bel pò modo di popolare la nostra `Map`.
-Per un controllo più fine possiamo utilizzare la seguente forma
+the mapping is automatic with key and value (eye is inverted) of the option tag of the select tag.
+However, the automation can influence quite a bit the way we populate our `Map`.
+For finer control we can use the following form
 
 ```xml
 <h:selectOneMenu  value="#{thatBean.thatId}">
@@ -71,7 +71,7 @@ Per un controllo più fine possiamo utilizzare la seguente forma
 </h:selectOneMenu>
 ```
 
-Nei casi più semplici, se non abbiamo necessità di una `Map` e posso mettere i valori hard coded
+In the simplest cases, if we don't need a `Map` and I can hard code the values
 
 ```xml
 <h:selectOneMenu  value="#{thatBean.thatId}">
@@ -80,7 +80,7 @@ Nei casi più semplici, se non abbiamo necessità di una `Map` e posso mettere i
 </h:selectOneMenu>
 ```
 
-Ecco il testo completo della pagina di esempio.
+Here is the full text of the example page.
 
 ```html
 <?xml version='1.0' encoding='UTF-8' ?>
@@ -115,6 +115,5 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
    </h:body>
 </html>
 ```
-
-Una precisazione, le annotazioni `@SessionScoped` e `@Named` sostituiscono i vecchi e deprecati `@ManagedBean` e `@SessionScoped`
-che ovviamente possiamo continuare ad utilizzare per il momento.
+One clarification, the `@SessionScoped` and `@Named` annotations replace the old and deprecated `@ManagedBean` and `@SessionScoped`
+which we can obviously continue to use for the moment.
