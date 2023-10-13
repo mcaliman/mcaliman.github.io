@@ -1,11 +1,11 @@
 ---
 layout: post
-lang: it
-title:  "Creare un custom Converter in JSF 2.2"
+lang: en
+title:  "Creating a Custom Converter in JSF 2.2"
 excerpt: ""
 category: programming-languages
 date:   2015-01-01 22:45:33
-tags: [Italian,Java Server Faces]
+tags: [English,Java Server Faces]
 comments: true
 share: true
 ---
