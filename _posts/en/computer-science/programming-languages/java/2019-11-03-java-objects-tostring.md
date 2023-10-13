@@ -1,37 +1,37 @@
 ---
 layout: post
-lang: it
-title: "API fantastiche e dove trovarle: il metodo Objects.toString()"
-excerpt: "Meno codice per gestire le stringhe null. Convertire una stringa se null in stringa vuota."
+lang: en
+title: "Cool APIs and where to find them: the Objects.toString() method"
+excerpt: "Less code to handle null strings. Convert a string if null to an empty string."
 modified: 2019-11-03
 category: programming-languages
-tags: [Italian]
+tags: [English,Java]
 comments: true
 share: true
 search_omit: false
 updated: true
 ---
-Se nel tuo codice hai "roba" del genere 
+If you have 'stuff' like this in your code 
 ```java
-string = string == null ? "" : string;
+string == null ? "" : string;
 ```
-oppure
+or
 ```java
-if(string==null) string="";
+if(string== null) string= ```;
 ```
-oppure, più intelligentemente, hai creato una metodo del tipo
+or, more intelligently, you created a method like
 ```java
 String ifNullThenEmpty(String string) { return string == null ? "" : string;}
 ```
-e magari ancor più smart hai infilato tutto in una classe Utilities come metodo statico...
+and maybe even smarter you stuck it all in a Utilities class as a static method...
 
-...Non preoccuparti, l'ho fatto anche io, non è un reato, Alan Turing non verrà a tirarti i piedi mentre dormi, ne la mattina seguente troverai James Gosling che dorme sul pianerottolo per poterti insultare prima che tu varchi la soglia di casa.
+...Don't worry, I've done it too, it's not a crime, Alan Turing won't come and pull your feet while you sleep, nor will you find James Gosling sleeping on the landing the next morning so he can insult you before you cross the threshold.
 
-Però! Se usi una versione di Java dalla 7 in poi, non ne hai bisogno, anche se semplice, perché reinventare la ruota? Oracle lo ha già preparato per te? Usalo (punto). 
+If you use a version of Java from Java 7 onwards, you don't need it, even if it's simple, why reinvent the wheel? Has Oracle already prepared it for you? Use it (full stop). 
 
-La classe `Objects` contiene un metodo `String toString(Object o, String nullDefault)`
-che puoi usare come `Objects.toString(string,"")` se poi fai ne fai l'import statico puoi direttamente scrivere `toString(string,"")`.
+The `Objects` class contains a method `String toString(Object o, String nullDefault)`
+which you can use as `Objects.toString(string,"")` if you statically import it, you can directly write `toString(string,"")`.
 
-Semplice, pulito e non lo devi testare, lo ha già fatto qualcuno per te.
+Simple, clean, and you don't have to test it; someone has already done it for you.
 
-Se non lo hai già fatto, prenditi il tempo di dare un occhiata agli altri metodi che offre questa classe.
+If you haven't already, take the time to look at the other methods this class offers.
