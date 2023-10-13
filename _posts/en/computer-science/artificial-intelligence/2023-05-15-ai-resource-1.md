@@ -7,7 +7,7 @@ category: artificial-intelligence
 seo_tags:
   - category: ai
 date: 2023-05-15 05:45:33
-tags: [English,Artificial Intelligence]
+tags: [Artificial Intelligence]
 comments: true
 share: true
 updated: true
