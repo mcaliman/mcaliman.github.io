@@ -1,19 +1,17 @@
 ---
 layout: post
-lang: it
-title:  "Concatenare PDF con iText in Java"
+lang: en
+title:  "Concatenating PDFs with iText in Java"
 excerpt: ""
 category: programming-languages
 date:   2014-09-18 22:45:33
-tags: [Italian,Java,"Java 7"]
+tags: [English,Java,"Java 7"]
 comments: true
 share: true
 ---
+iText is definitely the most popular and complete library for processing PDF files, I highly recommend taking a look at it before evaluating other frameworks or reinventing hot water.
 
-
-iText è sicuramente la libreria più diffusa e completa per l’elaborazione di file pdf, consiglio vivamente di darci un occhiata prima di valutare altri framework o reinventare l’acqua calda.
-
-Ma veniamo al sodo,vi riporto sotto il codice di una classe che permette di fondere una serie di PDF insieme, di fatto si tratta di concatenare una serie di file e crearne uno risultante dal processo.
+But let's get down to brass tacks, below is the code for a class that allows you to merge a series of PDFs together, effectively concatenating a series of files and creating one resulting from the process.
 
 ```java
 public class ConcatDocumentCommand {
@@ -67,12 +65,11 @@ public class ConcatDocumentCommand {
     }
 }
 ```
+The version of the Java language used is 7, so don't be surprised by the
+multiple catch nor the diamond notation. Too bad that in the version I use for this example the iText objects do not also allow the use of `try` with resources.
 
-La versione utilizzata del linguaggio Java è la 7, non stupitevi quindi del
-multiple catch ne della diamond notation. Peccato che nella versione che utilizzo per questo esempio gli oggetti iText non permettano anche l’uso del `try` with resources.
 
-
-Il codice è piuttosto eloquente è si commenta da solo, il vero lavoro lo fa l’oggetto `PdfCopy` nel blocco
+The code is pretty self-explanatory; the real work is done by the `PdfCopy` object in the
 
 ```java
 reader = new PdfReader(file);
@@ -82,4 +79,4 @@ for (int page = 0; page < pagesNumber;) {
 }
 ```
 
-infatti dal `reader` vengono estratte le pagine del documento, una per una e poi aggiunte all’oggetto `copy`.
+in fact the `reader` extracts the pages of the document, one by one, and then adds them to the `copy` object.
