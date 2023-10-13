@@ -157,35 +157,33 @@ Let's see the new version of the m method that is right for us.
 T m(T p){
    p = new T(); 
    return p;
-   //attenzione non ho fregato mr.handle,ma ho ottenuto l'effetto pratico che mi interessava
-      //se cos vi piace...
+   
 }
 ```
-
-e la nuova modalità di utilizzo
-
+and the new way of use
 ```java
 T p = new T();
 p = m(p);
 ```
 
-decliniamo nuovamente l'esempio sulle stringhe
+
 
 ```java
-//nuova versione del nostro metodo "m"
+
 String m(String p){
-   p = new String("maledetto mr.handle!");
+   p = new String("damn mr.handle!");
    return p;
 }
 
-//nuova chiamata del nostro metodo
-String p = new String("non si frega mr.handle!");
+
+String p = new String("You can't fool Mr. Handle!");
 System.out.println(p);
-//qui stampo "non si frega mr.handle!"
+//print You can't fool Mr. Handle!
 p = m(p);
 System.out.println(p);
-//qui stampo "maledetto mr.handle!"
+//print damn mr.handle!
 ```
 
-Scrivere un metodo in questi modi per modificare il valore di una stringa non è molto sensato ne pulito se vogliamo, ma 
-ci ha fatto capire qualcosa di più su alcuni concetti fondamentali.
+Writing a method in these ways to modify the value of a string is not very sensible or clean if we want, but
+it made us understand something more about some fundamental concepts.
+
