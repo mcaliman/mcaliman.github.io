@@ -109,6 +109,7 @@ plugins:
   - jekyll-feed
   # - jekyll-paginate
   - jekyll-paginate-v2
+  - jekyll-category-pages
 #
 # Front Matter Defaults
 defaults:
