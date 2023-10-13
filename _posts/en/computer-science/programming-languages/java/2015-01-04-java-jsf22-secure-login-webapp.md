@@ -1,53 +1,47 @@
 ---
 layout: post
-lang: it
-title:  "Login e pagine sicure con JSF 2"
+lang: en
+title:  "Secure logins and pages with JSF 2"
 excerpt: ""
 category: programming-languages
 date:   2015-01-04 22:45:33
-tags: [Italian,Java Server Faces]
+tags: [English,Java Server Faces]
 comments: true
 share: true
 ---
+In this post we see how to implement a minimal login system with basic security in a Java Server Faces 2.2 application.
 
+First we open NetBeans 8, then create an application of type `WebApplication` and specify `JSF 2.2` as the framework.
+To create a project of type `WebApplication` we select from the menu `File`->`New Project`, then `Java Web` -> `WebApplication`
+and finally `Next >`.
 
-In questo post vediamo come realizzare un sistema minimo di login con sicurezza di base in una applicazione Java Server Faces 2.2.
+We will call our application JSFSecureLoginWebApplication for simplicity's sake
 
-Per prima cosa aprimo NetBeans 8, quindi creiamo una applicazione di tipo `WebApplication` e specifichiamo come framework `JSF 2.2`
-Per creare un progetto di tipo `WebApplication` selezioniamo dal menu `File`->`New Project`, Poi `Java Web` -> `WebApplication`
-ed infine `Next >`
-
-Chiameremo per semplicita la nostra applicazione JSFSecureLoginWebApplication
-
-specifichiamo come sotto i vari passaggi
-
+we specify the various steps as below
 
 ![](/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot02.png "JSF22SecureLoginWebappScreenshot02")
 
-Impostiamo il nome
+set the name
 
 ![](/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot03.png "JSF22SecureLoginWebappScreenshot03")
 
-Le impostazioni dell'Application Server
+Application Server Settings
 
 ![](/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot04.png "JSF22SecureLoginWebappScreenshot04")
 
-Il framework JSF 2.2
+the framework JSF 2.2
 
 ![](/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot05.png "JSF22SecureLoginWebappScreenshot05")
 
-L'url Pattern e il linguaggio utilizzato per le pagine JSF 
+The url Pattern and the language used for JSF pages
 
 ![](/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot06.png "JSF22SecureLoginWebappScreenshot06")
-
-Per i componenti non selezioniamo nulla
+We do not select anything for components
 ![](/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot07.png "JSF22SecureLoginWebappScreenshot07")
 
-
-A questo punto abbiamo bisogno di creare due `JavaBean` e un `Filter` che servirà per gestire l'accesso alle pagine che definiremo 
-sicure. Le pagine messe in sicurezza dal `Filter` si troveranno nel percorso/directory `/pages`.
-Chiameremo i due bean `LoginBean` e `NavigationBean`, la funzione di `LoginBean` è quella di gestire l'accesso, quella di `NavigationBean` la navigazione.
-
+At this point we need to create two `JavaBean` and a `Filter` which will be used to manage access to pages we define as 
+secure. The pages secured by the `Filter` will be in the path/directory `/pages`.
+We will call the two beans `LoginBean` and `NavigationBean`, the function of the `LoginBean` is to manage access, the function of the `NavigationBean` is navigation.
 ```java
 package org.caliman.jsfsecurewebapp.login;
 
@@ -130,7 +124,7 @@ public class LoginBean implements Serializable {
 ```
 
 
-Il codice di `NavigationBean` è riportato sotto
+The code of `NavigationBean` is shown below
 
 ```java
 package org.caliman.jsfsecurewebapp.login;
@@ -165,15 +159,13 @@ public class NavigationBean implements Serializable {
 }
 
 ```
+Both beans are annotated as `@ManagedBean` and `@SessionScoped` in that they must have session scope and be manageable in our pages with their properties and methods (which carry out the actions to associate with the buttons or links).
 
-Entrambi i bean sono annotati come `@ManagedBean` e `@SessionScoped` in quando devono avere scope di sessione ed essere gestibili nelle nostre pagine con le relative proprietà e metodi (che realizzano le azioni da associare ai pulsanti o link).
+A separate discussion deserves `LoginFilter`, it's a `Filter` so it's basically a `Servlet`, and as such it will behave in a way that allows us to check the path called and discriminate between accessible pages or resources in relation to whether or not one is accredited to the system. 
 
-Un discorso a parte merita `LoginFilter`, è un `Filter` quindi è fondalmentalmente una `Servlet` e come tale si comporterà permettendoci di verificare il percorso chiamato e discriminare tra le pagine o risorse accessibili in relazione al fatto che si sia accreditati o meno al sistema. 
+Accreditation is obviously linked to the correctness of the `username` and `password` given by the user. The example is deliberately simple, there is no logic of checking a database or other persistent or remote source for the `username` and `password`. For teaching purposes, we are content to check from code whether the `username` and `password` match one prefixed in the code. It is my intention to elaborate on this in a future post. The idea will allow me to show a simple table system to handle the username/password match with `JPA` and manage a simple role system. 
 
-L'accreditamento è ovviamente legato alla correttezza dell'`username` e `password` imputati dall'utente. L'esempio è volutamente semplice, non v'è logica di controllo su un database o altra fonte persistente o remota riguardo all'`username` e la `password`. Ai fini didattici ci accontentiamo di verificare da codice se l'`username` e la `password` corrispondono ad una prefissata nel codice. E' mia intenzione approfondire questo aspetto in uno dei prossimi post. L'idea mi permettarà di mostrare un semplice sistema di tabelle per gestire con `JPA` la corrispondenza username/password e gestire un semplice sistema di ruoli. 
-
-Veniamo al codice della filter
-
+Let's come to the filter code
 ```java
 package org.caliman.jsfsecurewebapp.login;
 
@@ -230,14 +222,13 @@ public class LoginFilter implements Filter {
 
 }
 ```
+At this point we create our JSF login page and our application index page, which can only be accessed if accredited
 
-A questo punto creiamo la nostra pagina JSF per la login e quella dell'indice della nostra applicazione a cui si potra accedere solo se accreditati
-
-Dal menu di NetBeans creiamo una pagina per la login come sotto, la stessa operazione poi effettueremo per la creazione della pagina `index.xhtml` che si troverà nel path messo in sicurezza dalla Filter. 
+From the NetBeans menu we create a page for the login as below, the same operation we will then do for the creation of the `index.xhtml` page which will be in the path secured by Filter.
 
 ![](/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot10.png "JSF22SecureLoginWebappScreenshot10")
 
-Il codice per la `login.xhtml` è riportato sotto, ed è ovviamente ridotto all'osso. Solo ciò che ci servirà, potremo poi utilizzare i template a modelli di portali per realizzare la nostra applicazione completa è ovviamente responsiva.
+The code for the `login.xhtml` is below, and is obviously reduced to the bone. Only what we need, we can then use the template portals to realise our complete application is obviously responsive.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -259,7 +250,7 @@ Il codice per la `login.xhtml` è riportato sotto, ed è ovviamente ridotto all'
 </html>
 ```
 
-Ed infine quello per la pagina `index.xhtml`.
+And finally the one for the `index.xhtml` page.
 
 ```xml
 <?xml version='1.0' encoding='UTF-8' ?>
@@ -278,7 +269,8 @@ Ed infine quello per la pagina `index.xhtml`.
 </html>
 ```
 
-Il codice della nostra `web.xml` è quello sotto
+The code of our `web.xml` is as follows
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
@@ -316,9 +308,7 @@ Il codice della nostra `web.xml` è quello sotto
     </welcome-file-list>
 </web-app>
 ```
-
-
-Effettuaiamo il build della nostra applicazione web e poi lanciamola con run dal menu contestuale di progetto.
+We build our web application and then launch it with run from the project context menu.
 
 
 
