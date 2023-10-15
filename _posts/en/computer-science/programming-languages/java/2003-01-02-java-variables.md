@@ -5,7 +5,7 @@ title:  "Variables and assignment commands"
 excerpt: ""
 category: programming-languages
 date:   2003-01-02 22:45:33
-tags: [English,Java]
+tags: [Java]
 comments: true
 share: true
 ---
@@ -108,48 +108,47 @@ The following table gives for each type of value the operations that can be appl
 
 The 4 arithmetic operations are represented by the symbols + , - , * , /.
 
-Per i tipi di dato byte, short, int, long il simbolo / rappresenta il quoto dell' operazione
+For byte, short, int, long data types, the symbol / represents the quote of the operation.
 
-Per inserire un apice o un doppio apice dentro una stringa si scrive \' e \" rispettivamente
+To insert a superscript or double superscript inside a string you write \' and \" respectively
 
-Aggiungiamo anche per completezza anche i simboli:
-  && and logico o congiunzione 
-  || or logico o disgiunzione 
-  !  not o negazione
+We also add the symbols for completeness:
+  && and logical or conjunction 
+  || or logical or disjunction 
+  ! not or negation
 
-Come gi accennato nel caso di una assegnazione del tipo 
+As already mentioned in the case of an assignment of the type
 
 ```java
 T var = expr 
 ```
 
-abbiamo detto che expr deve avere tipo compatibile con T (non necessariamente lo stesso)  utile a questo punto dare 
-la definizione di promozione e casting per tipi che definiscono i casi in cui il tipo di var e expr possono non coincidere 
-ma essere comunque corretti e applicabili.
+we said that expr must have compatible type with T (not necessarily the same) useful at this point to give 
+the definition of promotion and casting for types that define cases where the type of var and expr may not coincide 
+but still be correct and applicable.
 
-Definizione
-Qualora tanto il tipo della variabile quanto il tipo dell' espressione rappresentino dati numerici e il tipo di expr  sottoinsieme 
-del tipo di var prima dell' assegnazione avviene una conversione automatica detta promozione.
-Per esempio:
+Definition
+If both the variable type and the expression type represent numeric data and the expr type is a subset 
+of the var type before assignment, an automatic conversion called promotion takes place.
+For example:
 
 ```java
 int i ; 
 byte j ; 
 i = j ;
 ```
+Let us now instead give a definition of casting:
 
-Diamo ora invece una definizione di casting:
+Definition
 
-Definizione
+If the type of var and type of expr have common values (typically TypeOf(expr) subset TypeOf(var)) we can think of the 
+explicit conversion called casting i.e.: TypeOf(expr) --> TypeOf(var). This is if the numeric values are correct and compatible.
 
-Se il tipo di var e tipo di expr prevedono valori comuni ( tipicamente TypeOf (expr ) sottoinsieme TypeOf (var)) si pu pensare la 
-conversione esplicita detta casting cio : TypeOf(expr) --> TypeOf(var). Questo se i valori numerici sono corretti e compatibili.
-
-Per esempio:
+For example:
 
 ```java
 int i; 
 byte j; 
 j = (byte) i;
 ```
-corretto solo se `i`  minore o uguasle del valore massimo disponibile per byte.
+correct only if it is less than or equal to the maximum value available per byte.

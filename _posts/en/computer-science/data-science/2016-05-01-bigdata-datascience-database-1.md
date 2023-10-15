@@ -5,7 +5,7 @@ title:  "Big Data, Data Science, Databases the fundamentals #1"
 excerpt: "When we talk about Big Data, we are talking about an evolution of databases.."
 category: data-science
 date:   2016-05-01 22:45:33
-tags: [English,"Data Science","Big Data","Database"]
+tags: ["Data Science","Big Data","Database"]
 comments: true
 share: true
 updated: true

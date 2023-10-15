@@ -6,7 +6,7 @@ excerpt: ""
 date: 2023-05-20 05:25:44
 revised: true
 category: programming-languages
-tags: [English,Cobol]
+tags: [Cobol]
 comments: true
 share: true
 updated: true

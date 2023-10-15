@@ -6,7 +6,7 @@ excerpt: "Joys and sorrows of maintaining your own site with Jekyll."
 category: information-systems
 date:   2017-09-16 22:45:33
 modified: 2017-09-17 09:00:33
-tags: [CMS,English]
+tags: [CMS]
 comments: true
 share: true
 ---

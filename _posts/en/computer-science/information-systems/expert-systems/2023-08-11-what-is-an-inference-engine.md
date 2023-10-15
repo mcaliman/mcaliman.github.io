@@ -6,7 +6,7 @@ excerpt: ""
 category: information-systems
 date:   2023-08-11 22:45:33
 modified: 2023-08-11 22:45:33
-tags: [English,"Expert Systems","Inference Engines"]
+tags: ["Expert Systems","Inference Engines"]
 comments: true
 share: true
 ---

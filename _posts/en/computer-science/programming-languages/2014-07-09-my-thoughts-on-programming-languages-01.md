@@ -5,7 +5,7 @@ title:  "My thoughts on programming languages Part 1"
 excerpt: "Personal reflections on programming languages"
 category: programming-languages
 date:   2014-07-09 22:45:33
-tags: [English,"Programming Languages","Computer Science"]
+tags: ["Programming Languages","Computer Science"]
 comments: true
 share: true
 ---

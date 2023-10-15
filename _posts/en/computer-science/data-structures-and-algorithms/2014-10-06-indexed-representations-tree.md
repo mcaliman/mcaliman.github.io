@@ -5,7 +5,7 @@ title:  "Trees indexed representations"
 excerpt: ""
 category: data-structures-and-algorithms
 date:   2014-10-06 22:45:33
-tags: [English,"Computer Science"]
+tags: ["Computer Science"]
 comments: true
 share: true
 ---

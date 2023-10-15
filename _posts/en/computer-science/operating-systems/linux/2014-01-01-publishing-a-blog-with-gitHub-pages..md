@@ -5,7 +5,7 @@ title:  "Publishing a website with GitHub Pages."
 excerpt: ""
 category: operating-systems
 date:   2014-01-01 22:45:33
-tags: [CMS,English]
+tags: [CMS]
 comments: true
 share: true
 ---

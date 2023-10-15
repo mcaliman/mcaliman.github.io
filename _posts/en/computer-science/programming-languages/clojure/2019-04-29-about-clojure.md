@@ -6,7 +6,7 @@ excerpt: "Some information about the Clojure programming language"
 modified: 2019-04-29
 revised: true
 category: programming-languages
-tags: [English,Clojure]
+tags: [Clojure]
 comments: true
 share: true
 search_omit: false

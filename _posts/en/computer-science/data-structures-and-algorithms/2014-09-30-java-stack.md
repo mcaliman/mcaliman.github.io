@@ -5,7 +5,7 @@ title:  "Stack"
 excerpt: ""
 category: programming-languages
 date:   2014-09-30 22:45:33
-tags: [English,"Data Structures"]
+tags: ["Data Structures"]
 comments: true
 share: true
 ---

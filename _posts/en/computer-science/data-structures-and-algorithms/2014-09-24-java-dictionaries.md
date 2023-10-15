@@ -5,7 +5,7 @@ title:  "Java Dictionaries"
 excerpt: "The Java implementation of Dictionaries"
 category: programming-languages
 date:   2014-09-24 22:45:33
-tags: [English,Java,"Data Structures","Computer Science"]
+tags: [Java,"Data Structures","Computer Science"]
 comments: true
 share: true
 ---

@@ -5,7 +5,7 @@ title:  "Classes and methods in Java"
 excerpt: "Defining classes in Java: access modifiers, class and instance entities"
 category: programming-languages
 date:   2004-01-02 22:45:33
-tags: [English,Java]
+tags: [Java]
 comments: true
 share: true
 --- 

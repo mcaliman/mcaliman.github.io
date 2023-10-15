@@ -5,7 +5,7 @@ title:  "DFS o Depth First Search"
 excerpt: ""
 category: data-structures-and-algorithms
 date:   2014-10-12 22:45:33
-tags: [English,"Data Structures","Algorithms"]
+tags: ["Data Structures","Algorithms"]
 comments: true
 share: true
 ---

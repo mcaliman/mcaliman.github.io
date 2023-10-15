@@ -5,7 +5,7 @@ title:  "Linked List"
 excerpt: ""
 category: data-structures-and-algorithms
 date:   2014-09-29 22:45:33
-tags: [English,"Data Structures","Computer Science","Java"]
+tags: ["Data Structures","Computer Science","Java"]
 comments: true
 share: true
 ---

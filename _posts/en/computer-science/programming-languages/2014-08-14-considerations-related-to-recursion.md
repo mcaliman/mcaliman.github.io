@@ -5,7 +5,7 @@ title:  "Considerations on recursion"
 excerpt: ""
 category: programming-languages
 date:   2014-08-14 22:45:33
-tags: [English]
+tags: ["Recursion"]
 comments: true
 share: true
 ---
