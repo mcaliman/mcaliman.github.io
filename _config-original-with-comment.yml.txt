@@ -1,3 +1,10 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
@@ -7,23 +14,26 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 # theme: jekyll-theme-so-simple
+# remote_theme: "mmistakes/so-simple-theme"
 remote_theme: "mmistakes/so-simple-theme@3.2.0"
-skin: "/assets/css/skins/default.css" 
+# theme: jekyll-theme-so-simple
+skin: "/assets/css/skins/default.css" #news
 locale: en-US
+# locale: it-IT
 title: "True Programming"
-description: "Massimo Caliman's blog on Computer Science"
+description: "Massimo Caliman's blog on Computer Science and Data Science"
 
 #copyright: 1999-2023 Massimo Caliman - All Rights Reserved, Questo sito non rappresenta una testata giornalistica, in quanto viene aggiornato senza alcuna periodicità.Non può pertanto considerarsi un prodotto editoriale ex L.62 7/3/2001.
 
 # Custom variable
-# blog_release: 23.6.15.1
+blog_release: 23.6.15.1
 baseurl: # the subpath of your site, e.g. "/blog"
 # url: https://trueprogramming.com
 # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 # logo: /images/logo.jpg # path of site logo, e.g. "/images/logo.png"
 # l blu #2d2e83 e il rosso #e30613.
 logo: /images/logo.jpg
-
+# date_format: "%B %-d, %Y"
 date_format: "%d/%m/%Y"
 read_time: true # reading time estimates, e.g. true
 words_per_minute: 200 
