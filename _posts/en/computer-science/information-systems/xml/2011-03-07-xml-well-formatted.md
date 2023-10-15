@@ -4,7 +4,7 @@ lang: en
 title:  "Well Formatted referred to an XML document"
 excerpt: ""
 category: information-systems
-tags: [English,XML]
+tags: [XML]
 date:   2011-03-07 22:45:33
 comments: true
 share: true

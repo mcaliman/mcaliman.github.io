@@ -5,7 +5,7 @@ title:  "Indexed structures"
 excerpt: ""
 category: programming-languages
 date:   2014-09-28 22:45:33
-tags: [English,"Data Structures"]
+tags: ["Data Structures"]
 comments: true
 share: true
 ---

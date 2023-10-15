@@ -5,7 +5,7 @@ title:  "Tree in Java"
 excerpt: ""
 category: data-structures-and-algorithms
 date:   2014-10-05 22:45:33
-tags: [English,"Data Structures"]
+tags: ["Data Structures"]
 comments: true
 share: true
 ---

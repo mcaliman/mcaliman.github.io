@@ -5,7 +5,7 @@ title:  "How to install Ant on Linux"
 excerpt: ""
 category: operating-systems
 date:   2013-01-01 22:45:33
-tags: [Ant, Java, Linux, English]
+tags: [Ant, Java, Linux]
 comments: true
 share: true
 ---

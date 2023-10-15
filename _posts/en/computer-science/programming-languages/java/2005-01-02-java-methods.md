@@ -5,7 +5,7 @@ title:  "Let's delve into methods in Java"
 excerpt: ""
 category: programming-languages
 date:   2005-01-02 22:45:33
-tags: [English,Java]
+tags: [Java]
 comments: true
 share: true
 ---

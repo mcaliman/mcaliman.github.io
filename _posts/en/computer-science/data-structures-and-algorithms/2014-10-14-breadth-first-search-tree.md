@@ -5,7 +5,7 @@ title:  "BFS Breadth First Search"
 excerpt: ""
 category: data-structures-and-algorithms
 date:   2014-10-14 22:45:33
-tags: [English,"Algorithms"]
+tags: ["Algorithms"]
 comments: true
 share: true
 ---

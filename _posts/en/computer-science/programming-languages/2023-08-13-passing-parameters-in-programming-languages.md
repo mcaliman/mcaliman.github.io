@@ -6,7 +6,7 @@ excerpt: ""
 category: programming-languages
 date:   2023-08-13 22:45:33
 modified: 2023-08-13 22:45:33
-tags: [English]
+tags: ["Pass by value","Pass by reference"]
 comments: true
 share: true
 ---

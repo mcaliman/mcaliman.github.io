@@ -5,7 +5,7 @@ title:  "Queue"
 excerpt: ""
 category: programming-languages
 date:   2014-10-01 22:45:33
-tags: [English,"Data Structures"]
+tags: ["Data Structures"]
 comments: true
 share: true
 ---
