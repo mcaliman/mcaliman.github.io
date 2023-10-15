@@ -4,7 +4,7 @@ lang: it
 title:  "Il metodo String.format una printf per Java"
 excerpt: ""
 category: programming-languages
-tags: [English,Java]
+tags: [Java]
 date:   2014-07-13 22:45:33
 comments: true
 share: true

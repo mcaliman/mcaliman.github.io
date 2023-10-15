@@ -5,7 +5,7 @@ title:  "Writing and reading files in Java 7 with try-with-resources"
 excerpt: ""
 category: programming-languages
 date:   2014-09-13 22:45:33
-tags: [English,Java,"Java 7"]
+tags: [Java,"Java 7"]
 comments: true
 share: true
 ---

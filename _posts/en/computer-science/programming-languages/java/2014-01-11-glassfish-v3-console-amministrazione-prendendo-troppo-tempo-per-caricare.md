@@ -4,7 +4,7 @@ lang: it
 title:  "GlassFish V3: la console amministrazione prendendo troppo tempo per caricare."
 excerpt: ""
 category: programming-languages
-tags: [English,Java]
+tags: [Java]
 date:   2014-01-11 22:45:33
 comments: true
 share: true

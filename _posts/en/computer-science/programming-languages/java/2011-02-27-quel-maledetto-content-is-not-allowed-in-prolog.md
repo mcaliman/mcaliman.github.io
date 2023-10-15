@@ -4,7 +4,7 @@ lang: it
 title:  "Quel maledetto Content is not allowed in prolog"
 excerpt: ""
 category: programming-languages
-tags: [English,Java]
+tags: [Java]
 date:   2011-02-27 22:45:33
 comments: true
 share: true

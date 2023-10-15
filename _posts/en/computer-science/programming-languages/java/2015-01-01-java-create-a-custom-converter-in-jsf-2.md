@@ -5,17 +5,17 @@ title:  "Creating a Custom Converter in JSF 2.2"
 excerpt: ""
 category: programming-languages
 date:   2015-01-01 22:45:33
-tags: [English,Java Server Faces]
+tags: [Java Server Faces]
 comments: true
 share: true
 ---
 
 
 
-Se la proprietà del bean che vogliamo visualizzare è di tipo boolean quello che otterremo nella pagina sono le stringhe `true` e `false`, per 
-sostituire la rappresentazione con qualcosa di più orientato all'utente abbiamo bisogno di renderizzare i valori true e false con Yes o No, 
-Vero e Falso, Attivo o Disattivato e così via. Per farlo abbiamo bisogno di creare un `Converter` e associarlo al nostro elemento `outputText`.
-Il codice di esempio visibile sotto realizza un semplice `Converter` per renderizzare i valori booleani con le stringhe Yes,No.
+If the property of the bean we want to display is of type boolean what we will get in the page are the strings `true` and `false`, to 
+replace the representation with something more user-oriented we need to render the values true and false with Yes or No, 
+True and False, Active or Disabled, and so on. To do this we need to create a `Converter` and associate it with our `outputText` element.
+The example code below creates a simple `Converter` to render Boolean values with the strings Yes,No.
 
 
 ```java
@@ -57,7 +57,7 @@ public class BooleanToYesNoConverter implements Converter {
 
 ```
 
-Il codice nel file xhtml per la nostra Java Server Faces e semplicemente quello sotto
+The code in the xhtml file for our Java Server Faces is simply the one below
 
 ```xml
 <h:form>
@@ -65,16 +65,14 @@ Il codice nel file xhtml per la nostra Java Server Faces e semplicemente quello 
 </h:form>
 ```
 
-Se poi non ho bisogno del livello di controllo fine di un converter posso risolvere con un operatore ternario e l'uso di EL.
+If I do not need the fine control level of a converter, I can solve this with a ternary operator and the use of EL.
 
 ```xml
 <h:form>
    <h:outputText value="#{false ? 'Yes' : 'No'}" />
 </h:form>
 ```
-
-L'uso di questa forma si presenta ottimale nel caso l'esigenza di conversione sia localizzata in una sola pagina o per poche occorrenze.
-La forma con il converter ci permette di accentrare il modello di decodifica in un solo punto, e se volessimo sostiture Yes,No con la rappresentazione Abilitato,Disabilitato sarebbe sufficiente operare la modifica nel codice del nostro `BooleanToYesNoConverter`.
-
+The use of this form is optimal if the need for conversion is localised to a single page or a few occurrences.
+The form with the converter allows us to centralise the decoding model in one place, and if we wanted to replace Yes,No with the Enabled,Disabled representation we would simply make the change in our `BooleanToYesNoConverter` code.
 
 

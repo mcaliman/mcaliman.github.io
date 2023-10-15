@@ -5,7 +5,7 @@ title:  "MySQL: How to speed up restore operations from mysql dump"
 excerpt: ""
 category: databases
 date:   2011-01-01 22:45:33
-tags: [English,MySQL]
+tags: [MySQL]
 comments: true
 share: true
 ---
