@@ -1,6 +1,6 @@
 ---
 layout: post
-lang: it
+lang: en
 title:  "Secure httpbase tomcat authentication"
 excerpt: ""
 category: programming-languages
@@ -10,10 +10,10 @@ comments: true
 share: true
 ---
 
-Per impostare l'autenticazione base in una applicazione java in tomcat possiamo intervenire solo in due file
+To set up basic authentication in a java application in tomcat, we can only intervene in two files
 
 
-In tomcat-users.xml setting , dove configureremo gli utenti.
+In tomcat-users.xml setting, where we will configure the users.
 
 
 ```XML
@@ -33,7 +33,8 @@ In tomcat-users.xml setting , dove configureremo gli utenti.
 ```
 
 
-Mentre nel file web.xml della nostra applicazione aggiungiamo le righe come sotto.
+While in the web.xml file of our application, we add the lines as below.
+
 ```XML
 <!--?xml version="1.0" encoding="ISO-8859-1"?-->  
 <web-app>    

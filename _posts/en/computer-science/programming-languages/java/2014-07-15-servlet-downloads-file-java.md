@@ -1,7 +1,7 @@
 ---
 layout: post
 lang: it
-title:  "Una Servlet per gestire il download di file in Java"
+title:  "A Servlet to manage file downloads in Java"
 excerpt: ""
 category: programming-languages
 tags: [Java]
@@ -9,13 +9,12 @@ date:   2014-07-15 22:45:33
 comments: true
 share: true
 ---
+Let's see in this post how to write the code for a Java Servlet that allows us to transfer (download) a file from our server application to the client (our users' web browser).
+Clicking on a link pointing to our servlet will initiate the download, we see the rather intuitive code in the lines below the post.
+To implement this, we essentially need to read the requested file (using some implementation of `InputStream`, in our case `FileInputStream`); determine the `MIME` type; and dump it correctly to the `HttpServletResponse` object in our servlet.
 
-Vediamo in questo post come scrivere il codice di una Servlet Java che ci permette di effettuare il trasferimento (il download) di un file dalla nostra applicazione server al client (il web browser dei nostri utenti).
-Effettuando il click su un link che punta alla nostra servlet verrà avviato il download, vediamo il codice piuttosto intuitivo nelle linee sottostanti del post.
-Per la realizzazione abbiamo bisogno essenzialmente di leggere il file richiesto (usando una qualche implementazione di `InputStream` nel nostro caso useremo `FileInputStream`); di determinare il tipo `MIME` e riversare il tutto correnttamente sull’oggetto di tipo `HttpServletResponse` della nostra Servlet.
 
-
-Nel nostro esempio il nome del file comprensivo di path è passato come parametro, rendendo la Servlet generica, utilizzabile per effettuare il download di qualsiasi file
+In our example, the filename including the path is passed as a parameter, making the Servlet generic, usable for downloading any file
 
 ```java
 import java.io.File;
@@ -46,7 +45,7 @@ public class DownloadFileServlet extends HttpServlet {
             }
             response.setContentType(mimeType);
             response.setContentLength((int) file.length());
-            // forziamo il download del file
+           
             String headerKey = "Content-Disposition";
             String headerValue = String.format("attachment; filename=\"%s\"", file.getName());
             response.setHeader(headerKey, headerValue);
@@ -59,7 +58,7 @@ public class DownloadFileServlet extends HttpServlet {
             inputStream.close();
             outputStream.close();
         } catch (Exception e) {
-            //gestiamo eventuali errori come file non esistente
+           //log
         }
     }
 
@@ -78,7 +77,8 @@ public class DownloadFileServlet extends HttpServlet {
 }
 ```
 
-Non dobbiamo aggiungere nulla alla nostra webapplication tramite il descrittore di deployment web.xml dato che abbiamo utilizzato la modalità tramite annotazioni. Per l’invocazione 
+We do not need to add anything to our webapplication via the web.xml deployment descriptor since we have used the annotation mode. For the invocation
+
 ```bash 
 http://localhost:8080/MyWebApplication/DownloadFileServlet?file=/path/file.ext
 ```

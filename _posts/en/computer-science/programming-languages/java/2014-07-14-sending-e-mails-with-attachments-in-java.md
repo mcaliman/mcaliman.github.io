@@ -1,7 +1,7 @@
 ---
 layout: post
-lang: it
-title:  "Inviare mail con allegati in Java"
+lang: en
+title:  "Sending e-mails with attachments in Java"
 excerpt: ""
 category: programming-languages
 tags: [Java]
@@ -10,9 +10,9 @@ comments: true
 share: true
 ---
 
-Il package javax.mail è molto ricco, quindi in prima istanza può anche disorientare, vedremo nel codice presentato in questo post quanto ripaghi in flessibilità e potenzialità questa complessità. E’ vero, non ho un metodo semplice mail() come in altri linguaggi,  ma ho gli strumenti per crearmi anche un server di posta di tutto rispetto (ma questo lo approfondieremo in un prossimo post, riguardo il semplice metodo mail() possiamo anche crearcelo a partire dalle API come vedremo e sarà fatto su misura per le nostre esigenze)
-Per creare la nostra utility faremo riferimento al pattern commmand.
-Per prima cosa definiamo una classe astratta che conterrà la gestione mailcap sempre utile quando si vuole gestire notifiche via mail da piattaforma Java.
+The javax.mail package is very rich, so at first it can be a bit confusing; we'll see in the code presented in this post how much this complexity pays off in flexibility and potential. True, I don't have a simple mail() method as in other languages, but I do have the tools to create a respectable mail server as well (but we'll go into this in a later post, regarding the simple mail() method we can also create it from the API as we'll see and it will be tailored to our needs)
+To create our utility we will refer to the commmand pattern.
+First we define an abstract class that will contain the mailcap management, which is always useful when we want to manage email notifications from the Java platform.
 
 ```java
 import javax.activation.CommandMap;
@@ -32,7 +32,7 @@ public class AbstractMailCommand {
 }
 ```
 
-Segue a questo punto il codice della classe principale, la classe presenta metodi specifici per gestire anche l’invio di mail con autenticazione smtp.
+Here follows the code of the main class, the class has specific methods for handling also the sending of mails with smtp authentication.
 
 ```java
 import java.io.File;
@@ -187,7 +187,9 @@ public class MailCommand extends AbstractMailCommand {
    }
 }
 ```
-Avrete notato la presenza di una classe `MailCommandAuthenticator` che serve proprio per la gestione dell’autenticazione al nostro server di posta.
+
+You may have noticed the presence of a `MailCommandAuthenticator` class which is used precisely for handling authentication to our mail server.
+
 
 ```java
 import javax.mail.Authenticator;
@@ -210,7 +212,7 @@ public class MailCommandAuthenticator extends Authenticator {
 }
 ```
 
-E’ ora non ci resta che mostrare un esempio di utilizzo, ma prima aiutiamoci con una classe che realizza il pattern `Singleton` 
+All that remains now is to show an example of use, but first let us help ourselves with a class that realises the `Singleton` pattern
 
 ```java
 public class MailCommandInstantiator {
@@ -230,7 +232,8 @@ public class MailCommandInstantiator {
 ```
 
 
-Ed ora il codice di chiamata, si tratta di uno degli esempi possibili atto ad illustrare la flessibilità del mini framework che abbiamo realizzato e che voi personalizzerete secondo le vostre esigenze.
+And now the call code, this is one of the possible examples illustrating the flexibility of the mini framework we have created and which you will customise according to your needs.
+
 
 ```java
 MailCommand mailCommand = MailCommandInstantiator.getInstance();
@@ -251,4 +254,4 @@ try {
 }
 ```
 
-Ovviamente posso aggiungere più allegati come è possibile o non aggiungerne affatto e quindi inviare solo tipiche mail di testo.
+Obviously, I can add as many attachments as is possible or add none at all and then only send typical text mails.

@@ -13,7 +13,7 @@ share: true
 updated: true
 ---
   
-> “If you think your users are idiots, only idiots will use it.”
+> If you think your users are idiots, only idiots will use it.
 >
 > – Linus Torvalds
 

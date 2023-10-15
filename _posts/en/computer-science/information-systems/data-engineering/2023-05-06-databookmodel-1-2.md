@@ -12,7 +12,7 @@ share: true
 updated: true
 ---
 
-> “When debugging, novices insert corrective code; experts remove defective code.”
+> When debugging, novices insert corrective code; experts remove defective code.
 > 
 > – Richard E. Pattis
 

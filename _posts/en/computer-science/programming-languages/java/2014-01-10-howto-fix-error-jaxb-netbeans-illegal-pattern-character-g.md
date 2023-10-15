@@ -1,7 +1,7 @@
 ---
 layout: post
-lang: it
-title:  "HOWTO FIX errore 'illegal pattern character g' JAXB in NetBeans ."
+lang: en
+title:  "HOWTO FIX error 'illegal pattern character g' JAXB in NetBeans ."
 excerpt: ""
 category: programming-languages
 tags: [Java]
@@ -10,11 +10,9 @@ comments: true
 share: true
 ---
 
-> Il computer non è una macchina intelligente che aiuta le persone stupide, anzi è una macchina stupida che funziona solo nelle mani delle persone intelligenti.
->
-> *(Umberto Eco, Come scrivere una tesi di laurea con il personal computer, 1986 (prefazione))*
 
-Presente nella versione 6.9 ma anche nella version 7.4.
+
+Present in version 6.9 but also in version 7.4.
 
 ```java
 \nbproject\xml_binding_build.xml:17: 
@@ -33,12 +31,12 @@ java.lang.IllegalArgumentException: Illegal pattern character 'g'
     at sun.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
 ```
 
-Si risolve aggiungendo.  
+It is fixed by adding
 
 ```bash 
 "-J-Duser.language=en"  
 ```
 
-al proprietà `netbeans_default_options` nel file `netbeans.conf`
+to the `netbeans_default_options` property in the `netbeans.conf` file
 
 

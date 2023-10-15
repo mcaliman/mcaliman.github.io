@@ -28,7 +28,7 @@ a = "hi guys!";
 System.out.println(a);
 ```
 
-con l’assegnazione `a = “hi guys!”` ho creato un nuovo oggetto di tipo `String`, non ho modificato lo stesso creato con `new String(“hello boys”);` anche se non ho utilizzato il costruttore con parametro.
+con l’assegnazione `a = "hi guys!"` ho creato un nuovo oggetto di tipo `String`, non ho modificato lo stesso creato con `new String(“hello boys”);` anche se non ho utilizzato il costruttore con parametro.
 
 In Java le stringhe sono quindi costanti, locazioni di memoria che contengono caratteri (come nel linguaggio C), immutabile è sinonimo di immodificabile.
 
@@ -96,7 +96,7 @@ La classe `String` rende disponibile molti metodi tra cui quelli di uso più com
 int lenofc = c.length();
 ```
 
-nel nostro caso lenofc conterrà il valore intero 3 dato che `“bye”.length()` è 3 e quindi il predicato  `“bye”.length()==3` ha valore `true`
+nel nostro caso lenofc conterrà il valore intero 3 dato che `"bye".length()` è 3 e quindi il predicato  `"bye".length()==3` ha valore `true`
 
 Per controllare l’uguaglianza di due stringhe si può invece utilizzare il metodo `equals()` o `equalsIgnoreCase()` nel caso si desideri un controllo case insensitivi.
 Le espressioni sotto ritornano entrambe il valore `true` per le variabili booleane b1 e b2

@@ -1,7 +1,7 @@
 ---
 layout: post
-lang: it
-title:  "Uso di keytool e jarsigner"
+lang: en
+title:  "Use of keytool and jarsigner"
 excerpt: ""
 category: programming-languages
 tags: [Java]
@@ -10,13 +10,13 @@ comments: true
 share: true
 ---
 
-Per estrarre un certificato che già sappiamo essere nel nostro portachiavi
+To extract a certificate that we already know is on our keyring
 
 ```bash
 keytool -export -alias mycompanyalias -file mycompany.crt
 ```
 
-per firmare un nostro `jar` con il certificato sopra
+to sign our `jar` with the above certificate
 
 ```bash
 jarsigner mycompany.jar mycompanyalias
