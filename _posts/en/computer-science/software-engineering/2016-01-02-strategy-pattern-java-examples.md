@@ -5,7 +5,7 @@ title: "The Design Pattern Strategy"
 excerpt: "Minimal example code on the Strategy pattern"
 modified: 2016-01-02
 category: software-engineering
-tags: [English, Java, "Design Pattern"]
+tags: [Java, "Design Pattern"]
 comments: true
 share: true
 updated: true

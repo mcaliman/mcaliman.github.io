@@ -5,7 +5,7 @@ title:  "Objects in Java"
 excerpt: ""
 category: programming-languagesa
 date:   2008-01-05 22:45:33
-tags: [English,Java]
+tags: [Java]
 comments: true
 share: true
 ---

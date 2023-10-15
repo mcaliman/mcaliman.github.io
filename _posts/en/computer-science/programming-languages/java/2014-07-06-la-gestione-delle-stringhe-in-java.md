@@ -4,7 +4,7 @@ lang: it
 title:  "La gestione delle stringhe in Java"
 excerpt: ""
 category: programming-languages
-tags: [English,Java]
+tags: [Java]
 date:   2014-07-06 22:45:33
 comments: true
 share: true

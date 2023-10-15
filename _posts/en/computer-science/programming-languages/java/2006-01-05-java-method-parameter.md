@@ -5,7 +5,7 @@ title:  "Passing parameters in Java"
 excerpt: ""
 category: programming-languages
 date:   2006-01-05 22:45:33
-tags: [English,Java]
+tags: [Java]
 comments: true
 share: true
 ---

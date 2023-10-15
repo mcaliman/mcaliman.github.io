@@ -4,7 +4,7 @@ lang: en
 title:  "R language introduction"
 excerpt: ""
 category: programming-languages
-tags: [English,R]
+tags: [R]
 date:   2016-01-10 22:45:33
 
 comments: true

@@ -5,7 +5,7 @@ title: "Design Patterns Interpreter"
 excerpt: "Minimal example Java code on Interpreter pattern"
 modified: 2016-01-03
 category: software-engineering
-tags: [English,"Java","Design Pattern","Design Patterns Interpreter"]
+tags: ["Java","Design Pattern","Design Patterns Interpreter"]
 comments: true
 updated: true
 share: true

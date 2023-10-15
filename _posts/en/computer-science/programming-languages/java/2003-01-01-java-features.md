@@ -4,7 +4,7 @@ lang: en
 title:  "The essential features of the Java language that you must know"
 excerpt: ""
 category: programming-languages
-tags: [English,Java]
+tags: [Java]
 date:   2003-01-01 22:45:33
 comments: true
 share: true

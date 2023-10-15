@@ -5,7 +5,7 @@ title:  "About the limits of the calculable"
 excerpt: ""
 category: theoretical-computer-science
 date:   2014-09-06 22:45:33
-tags: [English,"Computer Science"]
+tags: ["Computer Science"]
 comments: true
 share: true
 ---

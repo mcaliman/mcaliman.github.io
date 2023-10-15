@@ -5,7 +5,7 @@ title:  "Context-free languages properties"
 excerpt: "Context-free language properties and considerations"
 category: theoretical-computer-science
 date:   2018-03-24 22:45:33
-tags: [English,"Context-Free Grammar"]
+tags: ["Context-Free Grammar"]
 comments: true
 share: true
 ---

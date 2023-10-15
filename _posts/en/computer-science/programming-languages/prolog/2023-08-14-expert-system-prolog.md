@@ -6,7 +6,7 @@ excerpt: ""
 category: programming-languages
 date:   2023-08-14 22:45:33
 modified: 2023-08-14 22:45:33
-tags: [English,"Expert Systems","Prolog"]
+tags: ["Expert Systems","Prolog"]
 comments: true
 share: true
 ---

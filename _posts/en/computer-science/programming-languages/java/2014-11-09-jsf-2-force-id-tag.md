@@ -5,7 +5,7 @@ title:  "JSF 2 forcing tag-generated ids"
 excerpt: ""
 category: programming-languages
 date:   2014-11-09 22:45:33
-tags: [English,Java Server Faces]
+tags: [Java Server Faces]
 comments: true
 share: true
 ---

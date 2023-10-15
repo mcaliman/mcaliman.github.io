@@ -5,7 +5,7 @@ title: "What are the methods of the Object class?"
 excerpt: 
 modified: 2016-11-04
 category: programming-languages
-tags: [English,Java]
+tags: [Java]
 comments: true
 share: true
 search_omit: false

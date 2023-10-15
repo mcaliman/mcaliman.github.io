@@ -5,7 +5,7 @@ title:  "How to install Jekyll on ubuntu 14.04."
 excerpt: ""
 category: operating-systems
 date:   2014-06-07 22:45:33
-tags: [Jekyll,English]
+tags: [Jekyll]
 comments: true
 share: true
 ---

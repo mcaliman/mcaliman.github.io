@@ -5,7 +5,7 @@ title:  "Alphabets, Symbols, Strings and Languages"
 excerpt: "What are alphabets, symbols and strings from the point of view of theoretical computer science"
 category: theoretical-computer-science
 date:   2018-03-20 22:45:33
-tags: [English,"Programming Languages","Computer Science"]
+tags: ["Programming Languages","Computer Science"]
 comments: true
 share: true
 ---

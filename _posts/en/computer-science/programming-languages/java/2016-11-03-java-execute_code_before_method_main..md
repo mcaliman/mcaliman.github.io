@@ -5,7 +5,7 @@ title: "Can we execute code before the main(String[]) method ?"
 excerpt: ""
 modified: 2016-11-03
 category: programming-languages
-tags: [English,Java]
+tags: [Java]
 comments: true
 share: true
 search_omit: false

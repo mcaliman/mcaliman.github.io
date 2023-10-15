@@ -5,7 +5,7 @@ title:  "Using Channels to Copy Files in Java"
 excerpt: ""
 category: programming-languages
 date:   2014-11-15 22:45:33
-tags: [English,Java]
+tags: [Java]
 comments: true
 share: true
 ---

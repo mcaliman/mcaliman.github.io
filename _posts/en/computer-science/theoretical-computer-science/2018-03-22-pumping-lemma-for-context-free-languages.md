@@ -5,7 +5,7 @@ title:  "Pumping lemma for Context Free languages"
 excerpt: "The pumping lemma version for context-free languages"
 category: theoretical-computer-science
 date:   2018-03-22 22:45:33
-tags: [English,"Context-Free Grammar","Pumping Lemma"]
+tags: ["Context-Free Grammar","Pumping Lemma"]
 comments: true
 share: true
 ---

@@ -4,7 +4,7 @@ lang: en
 title: "I am replacing my old bash scripts with Python #1."
 excerpt: "Copy a list of directories with their contents to a shared folder."
 category: programming-languages
-tags: [English,Python]
+tags: [Python]
 modified: 2023-04-25
 comments: true
 share: true

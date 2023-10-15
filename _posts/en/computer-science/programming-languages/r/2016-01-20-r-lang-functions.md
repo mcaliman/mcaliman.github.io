@@ -4,7 +4,7 @@ lang: en
 title:  "Functions in R"
 excerpt: ""
 category: programming-languages
-tags: [English,R]
+tags: [R]
 date:   2016-01-20 22:45:33
 comments: true
 share: true

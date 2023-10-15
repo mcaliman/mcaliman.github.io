@@ -5,7 +5,7 @@ title: "Design Patterns State"
 excerpt: "Features and sample Java code reduced to the essentials"
 modified: 2016-01-30
 category: software-engineering
-tags: [English,"Java","Design Pattern","Design Patterns State"]
+tags: ["Java","Design Pattern","Design Patterns State"]
 comments: true
 share: true
 search_omit: false

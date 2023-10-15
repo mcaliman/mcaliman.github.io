@@ -5,7 +5,7 @@ title: "Design Pattern Visitor"
 excerpt: ""
 modified: 2016-01-03
 category: software-engineering
-tags: [English,Design Pattern]
+tags: [Design Pattern]
 comments: true
 share: true
 search_omit: false

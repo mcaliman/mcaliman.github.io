@@ -5,7 +5,7 @@ title:  "Prefix Property"
 excerpt: "Pushdown Automata (PDA) and language recognition problems with special features"
 category: theoretical-computer-science
 date:   2018-03-28 22:45:33
-tags: [English,"Finite Automata","Finite-State Machine"]
+tags: ["Finite Automata","Finite-State Machine"]
 comments: true
 share: true
 ---

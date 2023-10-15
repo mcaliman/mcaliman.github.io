@@ -5,7 +5,7 @@ title: "Fluent-API Tutorial"
 excerpt: "Different ways of implementing a Logo Language style turtle in Java."
 modified: 2020-05-24
 category: programming-languages
-tags: [English,Java]
+tags: [Java]
 comments: true
 share: true
 search_omit: false
