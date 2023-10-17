@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "BFS Breadth First Search"
 excerpt: ""
-category: data-structures-and-algorithms
+category: "Data Structures And Algorithms"
 date:   2014-10-14 22:45:33
 tags: ["Algorithms"]
 comments: true

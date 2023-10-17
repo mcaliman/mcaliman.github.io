@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Trees indexed representations"
 excerpt: ""
-category: data-structures-and-algorithms
+category: "Data Structures And Algorithms"
 date:   2014-10-06 22:45:33
 tags: ["Computer Science"]
 comments: true

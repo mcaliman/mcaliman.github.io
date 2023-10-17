@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Generic visit algorithm for a tree"
 excerpt: ""
-category: data-structures-and-algorithms
+category: "Data Structures And Algorithms"
 date:   2014-10-10 22:45:33
 tags: ["Data Structures","Algorithms"]
 comments: true
