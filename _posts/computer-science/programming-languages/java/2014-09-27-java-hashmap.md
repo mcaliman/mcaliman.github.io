@@ -8,6 +8,7 @@ date:   2014-09-27 22:45:33
 tags: ["Data Structures","Computer Science"]
 comments: true
 share: true
+revision: 0
 ---
 Picking up where we left off (see previous post), after seeing a bit of theory about dictionaries and something about the `Map` interface, let's move on to practical examples. We'll talk exclusively about the concrete class `HashMap`, the new, so to speak, `Hashtable`.
 

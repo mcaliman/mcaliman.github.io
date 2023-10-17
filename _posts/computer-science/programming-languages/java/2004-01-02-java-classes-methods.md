@@ -8,6 +8,7 @@ date:   2004-01-02 22:45:33
 tags: [Java]
 comments: true
 share: true
+revision: 0
 --- 
 Classes and methods are the fundamental elements of object-oriented programming. They enable data to be encapsulated and access to data to be restricted.
 

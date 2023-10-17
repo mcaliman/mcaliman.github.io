@@ -10,6 +10,7 @@ comments: true
 share: true
 search_omit: false
 updated: true
+revision: 0
 ---
 
 In Java calculating the difference in years, months, and days requires a few lines of code, with Java 8 it is possible to do this without external libraries and with just one instruction.

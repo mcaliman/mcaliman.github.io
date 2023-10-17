@@ -9,6 +9,7 @@ tags: ["Data Science","Big Data","Database"]
 comments: true
 share: true
 updated: true
+revision: 0
 ---
    
 When we talk about Big Data, we are talking about an evolution of databases, but in a big way, or rather we are talking about a collection of data so extensive in terms of volume, speed and variety that it requires specific technologies and analytical methods for value extraction.

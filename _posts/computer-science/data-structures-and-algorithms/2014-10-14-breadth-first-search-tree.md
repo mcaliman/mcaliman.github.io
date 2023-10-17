@@ -8,6 +8,7 @@ date:   2014-10-14 22:45:33
 tags: ["Algorithms"]
 comments: true
 share: true
+revision: 0
 ---
   
 > "PHP is a minor evil perpetrated and created by incompetent amateurs, whereas Perl is a great and insidious evil perpetrated by skilled but perverted professionals."

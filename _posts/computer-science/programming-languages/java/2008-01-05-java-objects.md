@@ -8,6 +8,7 @@ date:   2008-01-05 22:45:33
 tags: [Java]
 comments: true
 share: true
+revision: 0
 ---
 
 From each class it is possible to obtain one or more entities through the instance, each of which constitutes one

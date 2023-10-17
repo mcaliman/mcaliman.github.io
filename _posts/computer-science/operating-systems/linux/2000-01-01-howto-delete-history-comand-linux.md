@@ -9,6 +9,7 @@ modified: 2016-01-01 22:45:33
 tags: ["Linux"]
 comments: true
 share: true
+revision: 0
 ---
 
 Deleting the command history on Linux is quite simple just give the command.

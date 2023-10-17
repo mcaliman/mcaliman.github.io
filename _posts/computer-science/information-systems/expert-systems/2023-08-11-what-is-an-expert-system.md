@@ -9,6 +9,7 @@ modified: 2023-08-11 22:45:33
 tags: ["Expert Systems"]
 comments: true
 share: true
+revision: 0
 ---
 
 An expert system is software that attempts to recreate the decision-making process of a human expert in a particular domain. Expert systems are often used in fields such as medicine, finance, and engineering, where rapid and complex decision-making is required.

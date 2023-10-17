@@ -11,6 +11,7 @@ comments: true
 share: true
 search_omit: false
 updated: true
+revision: 0
 ---
 
 PySysop [https://github.com/mcaliman/PySysop](https://github.com/mcaliman/PySysop) is a Python system operations collection utilities, restore_remote_database.py is the script for create remote database dump, download and restore to localhost instance.

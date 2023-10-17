@@ -8,6 +8,7 @@ date:   2011-07-03 22:45:33
 tags: [Javascript]
 comments: true
 share: true
+revision: 0
 ---
 
 > “If you have a procedure with ten parameters, you probably missed some.”

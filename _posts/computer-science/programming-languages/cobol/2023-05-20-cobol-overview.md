@@ -10,6 +10,7 @@ tags: [Cobol]
 comments: true
 share: true
 updated: true
+revision: 0
 ---
 
 > Computers are good at following instructions, but not at reading your mind.

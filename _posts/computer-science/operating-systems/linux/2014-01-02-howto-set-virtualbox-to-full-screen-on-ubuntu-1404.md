@@ -8,6 +8,7 @@ date:   2014-01-02 22:45:33
 tags: [VirtualBox, Ubuntu]
 comments: true
 share: true
+revision: 0
 ---
 
 

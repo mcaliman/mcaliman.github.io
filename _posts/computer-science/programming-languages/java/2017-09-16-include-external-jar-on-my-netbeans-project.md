@@ -9,6 +9,7 @@ date:   2017-09-16 22:45:33
 modified: 2017-09-16 22:45:33
 comments: true
 share: true
+revision: 0
 ---
 
 > “Measuring programming progress by lines of code is like measuring aircraft building 

@@ -8,6 +8,7 @@ tags: [Java]
 date:   2011-04-24 22:45:33
 comments: true
 share: true
+revision: 0
 ---
 
 To extract a certificate that we already know is on our keyring

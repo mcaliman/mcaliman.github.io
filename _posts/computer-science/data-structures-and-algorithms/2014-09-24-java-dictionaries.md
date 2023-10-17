@@ -8,6 +8,7 @@ date:   2014-09-24 22:45:33
 tags: [Java,"Data Structures","Computer Science"]
 comments: true
 share: true
+revision: 0
 ---
 
 In older releases of the Java language, the dictionary data type was realised from the `Dictionary<K,V>` class of the `java.util` package. 

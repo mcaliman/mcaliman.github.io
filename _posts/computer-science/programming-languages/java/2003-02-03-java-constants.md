@@ -8,6 +8,7 @@ tags: [Java]
 date:   2003-02-03 22:45:33
 comments: true
 share: true
+revision: 0
 ---
 
 A variable that never changes value is a constant. In Java, you can explicitly declare a variable as a constant by using the `final` keyword. 

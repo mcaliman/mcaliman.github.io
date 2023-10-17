@@ -8,6 +8,7 @@ date:   2014-11-09 22:45:33
 tags: [Java Server Faces]
 comments: true
 share: true
+revision: 0
 ---
 
 When using tags like `inputHidden` or `form`, i.e. standard HTML components of the JSF, the `id` attributes of the corresponding 

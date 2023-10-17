@@ -9,6 +9,7 @@ modified: 2017-05-03 22:45:33
 tags: [MySQL]
 comments: true
 share: true
+revision: 0
 ---
 Well, you probably have different collations in some mysql views, try to force collation like this 
 ```sql  

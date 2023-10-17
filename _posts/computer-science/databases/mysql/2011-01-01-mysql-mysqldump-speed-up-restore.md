@@ -8,6 +8,7 @@ date:   2011-01-01 22:45:33
 tags: [MySQL]
 comments: true
 share: true
+revision: 0
 ---
 
 To speed up the operation of restoring a sql dump in mysql, you can proceed as follows

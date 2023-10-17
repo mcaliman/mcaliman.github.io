@@ -8,6 +8,7 @@ date:   2005-01-02 22:45:33
 tags: [Java]
 comments: true
 share: true
+revision: 0
 ---
 
 # Let's delve into methods in Java

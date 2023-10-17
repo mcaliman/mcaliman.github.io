@@ -8,6 +8,7 @@ tags: [R]
 date:   2016-01-20 22:45:33
 comments: true
 share: true
+revision: 0
 ---
 
 > Computer Science is no more about computers than astronomy is about telescopes.

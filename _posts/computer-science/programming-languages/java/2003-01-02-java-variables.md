@@ -8,6 +8,7 @@ date:   2003-01-02 22:45:33
 tags: [Java]
 comments: true
 share: true
+revision: 0
 ---
 
 Let us first give a sufficiently formal definition for our purposes of a variable:

@@ -9,6 +9,7 @@ modified: 2023-08-08 22:45:33
 tags: ["DSL (Domain Specific Languages)"]
 comments: true
 share: true
+revision: 0
 ---
 
 > Simplicity is the ultimate sophistication.  

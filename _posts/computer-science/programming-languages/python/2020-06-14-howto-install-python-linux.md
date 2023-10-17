@@ -11,6 +11,7 @@ comments: true
 share: true
 search_omit: false
 updated: true
+revision: 0
 ---
 
 Open terminal via Ctrl+Alt+T. When it opens, run command:

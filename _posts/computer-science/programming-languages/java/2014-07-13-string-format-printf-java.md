@@ -8,6 +8,7 @@ tags: [Java]
 date:   2014-07-13 22:45:33
 comments: true
 share: true
+revision: 0
 ---
 At the time of writing, many have not yet upgraded to either Java version 8 or 7. For those who do not know, JDK version 7 already offers the
 

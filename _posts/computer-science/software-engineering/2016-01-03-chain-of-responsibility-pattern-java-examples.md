@@ -9,6 +9,7 @@ tags: [Java, "Design Pattern"]
 comments: true
 share: true
 updated: true
+revision: 0
 ---
 
 

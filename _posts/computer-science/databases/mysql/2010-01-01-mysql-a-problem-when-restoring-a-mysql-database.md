@@ -8,6 +8,7 @@ date:   2010-01-01 22:45:33
 tags: [MySQL]
 comments: true
 share: true
+revision: 0
 ---
 
 If you encounter problems when restoring from a mysql dump, try setting these variables before running the `source` command

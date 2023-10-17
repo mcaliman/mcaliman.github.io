@@ -8,6 +8,7 @@ date:   2009-01-01 22:45:33
 tags: [Docebo,"LMS (Learning Management System)"]
 comments: true
 share: true
+revision: 0
 ---
 
 Those who need to import users, courses, and user-course associations in an automatic and scheduled manner will necessarily have had to deal with I/O Tasks.

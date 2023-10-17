@@ -8,6 +8,7 @@ date:   2014-07-09 22:45:33
 tags: ["Programming Languages","Computer Science"]
 comments: true
 share: true
+revision: 0
 ---
 
 Python is a pleasant language to start programming in for several reasons.

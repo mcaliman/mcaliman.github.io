@@ -8,6 +8,7 @@ tags: [Java]
 date:   2014-01-03 22:45:33
 comments: true
 share: true
+revision: 0
 ---
 
 > The Greeks used to say of an uncultured person: 'He can neither read nor swim'; today we should add: 'nor use a computer'.

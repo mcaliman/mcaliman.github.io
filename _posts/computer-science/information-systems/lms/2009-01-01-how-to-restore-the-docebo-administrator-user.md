@@ -8,6 +8,7 @@ date:   2009-01-01 22:45:33
 tags: [Docebo,"LMS (Learning Management System)"]
 comments: true
 share: true
+revision: 0
 ---
 
 When importing from CSV files, Docebo sometimes deletes the admin user and it is no longer possible to access the administration panel.

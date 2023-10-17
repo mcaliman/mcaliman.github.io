@@ -8,6 +8,7 @@ tags: [R]
 date:   2016-04-01 22:45:33
 comments: true
 share: true
+revision: 0
 ---
 
 Data are read via connection interfaces . Connections can be to files or urls for example .

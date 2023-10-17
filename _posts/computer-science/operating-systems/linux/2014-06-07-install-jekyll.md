@@ -8,6 +8,7 @@ date:   2014-06-07 22:45:33
 tags: [Jekyll]
 comments: true
 share: true
+revision: 0
 ---
 
 What we need

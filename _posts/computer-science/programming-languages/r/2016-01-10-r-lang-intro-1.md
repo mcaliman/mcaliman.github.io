@@ -9,6 +9,7 @@ date:   2016-01-10 22:45:33
 
 comments: true
 share: true
+revision: 0
 ---
 
 > “When debugging, novices insert corrective code; experts remove defective code.”

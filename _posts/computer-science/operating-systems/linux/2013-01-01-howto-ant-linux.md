@@ -8,6 +8,7 @@ date:   2013-01-01 22:45:33
 tags: [Ant, Java, Linux]
 comments: true
 share: true
+revision: 0
 ---
 
 > “Software is like sex: it’s better when it’s free.”

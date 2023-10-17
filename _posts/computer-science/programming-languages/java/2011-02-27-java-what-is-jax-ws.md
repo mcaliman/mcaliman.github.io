@@ -8,6 +8,7 @@ tags: [Java]
 date:   2011-02-27 22:45:33
 comments: true
 share: true
+revision: 0
 ---
 
 AX-WS stands for Java API for XML Web Services.

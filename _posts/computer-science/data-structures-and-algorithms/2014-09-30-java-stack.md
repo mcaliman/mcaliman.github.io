@@ -8,6 +8,7 @@ date:   2014-09-30 22:45:33
 tags: ["Data Structures"]
 comments: true
 share: true
+revision: 0
 ---
 
 One of the most recurring basic types is the Stack; a pseudolanguage specification is given below.

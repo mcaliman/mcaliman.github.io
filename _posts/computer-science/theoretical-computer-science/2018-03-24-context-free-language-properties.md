@@ -8,6 +8,7 @@ date:   2018-03-24 22:45:33
 tags: ["Context-Free Grammar"]
 comments: true
 share: true
+revision: 0
 ---
    
 > Kleeneliness is next to Gödeliness 
