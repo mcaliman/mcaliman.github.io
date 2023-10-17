@@ -11,6 +11,7 @@ tags: [Artificial Intelligence]
 comments: true
 share: true
 updated: true
+revision: 0
 ---
   
 > If you think your users are idiots, only idiots will use it.
