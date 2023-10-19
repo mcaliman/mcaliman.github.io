@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Common errors when configuring Adobe PDF iFilter for SharePoint 2007"
 excerpt: ""
-category: information-systems
+category: "Information Systems"
 date:   2011-04-04 22:45:33
 tags: [SharePoint]
 comments: true
