@@ -4,7 +4,7 @@ lang: en
 title: "The Singleton design pattern"
 excerpt: "Some examples of the Singleton pattern"
 modified: 2016-01-03
-category: software-engineering
+category: "Software Engineering"
 tags: [Design Pattern]
 comments: true
 share: true

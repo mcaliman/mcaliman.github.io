@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "About the limits of the calculable"
 excerpt: ""
-category: theoretical-computer-science
+category: "Theoretical Computer Science"
 date:   2014-09-06 22:45:33
 tags: ["Computer Science"]
 comments: true

@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "From Pushdown Automata (PDA) to Context-Free Grammar (CFG)"
 excerpt: "Construction of a Context-Free Grammar from a Pushdown Automata"
-category: theoretical-computer-science
+category: "Theoretical Computer Science"
 date:   2018-04-01 22:45:33
 tags: ["Pushdown Automata","Context-Free Grammar"]
 comments: true

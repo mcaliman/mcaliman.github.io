@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Turing Machine"
 excerpt: "Basic concepts and information on Turing Machines, accepted language, recursively enumerable and recursiv"
-category: theoretical-computer-science
+category: "Theoretical Computer Science"
 date:   2018-04-07 22:45:33
 modified: 2019-05-12 22:45:33
 tags: ["Turing Machine"]
