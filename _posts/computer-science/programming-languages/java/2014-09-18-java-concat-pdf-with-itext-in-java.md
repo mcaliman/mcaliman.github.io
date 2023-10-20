@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Concatenating PDFs with iText in Java"
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"
 date:   2014-09-18 22:45:33
 tags: [Java,"Java 7"]
 comments: true

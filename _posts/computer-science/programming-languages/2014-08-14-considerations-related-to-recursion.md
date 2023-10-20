@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Considerations on recursion"
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"
 date:   2014-08-14 22:45:33
 tags: ["Recursion"]
 comments: true

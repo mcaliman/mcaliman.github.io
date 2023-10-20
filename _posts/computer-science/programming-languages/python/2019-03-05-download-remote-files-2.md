@@ -3,7 +3,7 @@ layout: post
 lang: en
 title: "Downloading remote files with Python #2"
 excerpt: "Let's continue with the automation and see how to unzip the .gz files"
-category: programming-languages
+category: "Programming Languages"
 tags: [Python]
 modified: 2019-03-19
 comments: true

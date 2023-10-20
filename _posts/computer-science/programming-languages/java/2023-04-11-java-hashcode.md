@@ -3,7 +3,7 @@ layout: post
 lang: en
 title: "The hashCode method of the Object class in Java"
 excerpt: "Learn how the hashCode method works and how to use it correctly"
-category: programming-languages
+category: "Programming Languages"
 tags: [Java]
 date: 2023-04-11 11:25:44
 comments: true

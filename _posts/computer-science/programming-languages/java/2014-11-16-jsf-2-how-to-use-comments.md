@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "JSF 2 How to use comments"
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"
 date:   2014-11-16 22:45:33
 tags: [Java Server Faces]
 comments: false

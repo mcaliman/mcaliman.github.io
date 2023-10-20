@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Functions that implement cycles in R"
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"
 tags: [R]
 date:   2016-03-01 22:45:33
 comments: true

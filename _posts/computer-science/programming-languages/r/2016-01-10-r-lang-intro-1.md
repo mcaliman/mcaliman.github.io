@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "R language introduction"
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"
 tags: [R]
 date:   2016-01-10 22:45:33
 

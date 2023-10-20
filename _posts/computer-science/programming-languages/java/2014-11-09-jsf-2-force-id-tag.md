@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "JSF 2 forcing tag-generated ids"
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"
 date:   2014-11-09 22:45:33
 tags: [Java Server Faces]
 comments: true

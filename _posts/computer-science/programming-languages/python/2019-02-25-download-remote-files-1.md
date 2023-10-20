@@ -3,7 +3,7 @@ layout: post
 lang: en
 title: "Downloading remote files with Python #1"
 excerpt: "Automating recurring tasks such as downloading remote files locally"
-category: programming-languages
+category: "Programming Languages"
 tags: [Python]
 modified: 2019-02-25
 comments: true

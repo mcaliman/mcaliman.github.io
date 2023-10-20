@@ -3,7 +3,7 @@ layout: post
 lang: en
 title: "Using Prolog to Build Expert Systems"
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"
 date:   2023-08-14 22:45:33
 modified: 2023-08-14 22:45:33
 tags: ["Expert Systems","Prolog"]
