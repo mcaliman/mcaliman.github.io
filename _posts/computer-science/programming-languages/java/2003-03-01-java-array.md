@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Array variables in Java"
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"
 date:   2003-03-01 22:45:33
 tags: [Java]
 comments: true

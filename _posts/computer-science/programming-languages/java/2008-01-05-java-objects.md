@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Objects in Java"
 excerpt: ""
-category: programming-languagesa
+category: "Programming Languages"
 date:   2008-01-05 22:45:33
 tags: [Java]
 comments: true

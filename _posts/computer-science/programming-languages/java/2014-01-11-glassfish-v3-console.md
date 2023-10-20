@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "GlassFish V3: console administration taking too long to load."
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"s
 tags: [Java]
 date:   2014-01-11 22:45:33
 comments: true

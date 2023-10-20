@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Variables and assignment commands"
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"
 date:   2003-01-02 22:45:33
 tags: [Java]
 comments: true

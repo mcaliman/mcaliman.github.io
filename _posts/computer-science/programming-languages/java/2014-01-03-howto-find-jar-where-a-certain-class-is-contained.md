@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "How to find jar file where a certain class is contained (deployed in GlassFish)."
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"
 tags: [Java]
 date:   2014-01-03 22:45:33
 comments: true

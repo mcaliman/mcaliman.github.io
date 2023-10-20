@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "The Content is not allowed in prolog error"
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"
 tags: [Java]
 date:   2011-02-27 22:45:33
 comments: true

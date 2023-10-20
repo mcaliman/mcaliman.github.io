@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Classes and methods in Java"
 excerpt: "Defining classes in Java: access modifiers, class and instance entities"
-category: programming-languages
+category: "Programming Languages"
 date:   2004-01-02 22:45:33
 tags: [Java]
 comments: true

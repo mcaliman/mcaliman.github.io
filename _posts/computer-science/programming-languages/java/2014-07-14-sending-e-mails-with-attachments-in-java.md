@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Sending e-mails with attachments in Java"
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"
 tags: [Java]
 date:   2014-07-14 22:45:33
 comments: true

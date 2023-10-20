@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Passing parameters in Java"
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"
 date:   2006-01-05 22:45:33
 tags: [Java]
 comments: true
