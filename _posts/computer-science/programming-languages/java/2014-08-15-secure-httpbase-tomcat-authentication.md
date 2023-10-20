@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Secure httpbase tomcat authentication"
 excerpt: ""
-category: programming-languages
+category: "Programming Languages"
 tags: [Java]
 date:   2014-08-15 22:45:33
 comments: true
