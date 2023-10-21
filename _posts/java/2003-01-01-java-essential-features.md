@@ -1,8 +1,8 @@
 ---
 layout: post
 lang: en
-title:  "The essential features of the Java language that you must know"
-excerpt: ""
+title:  "Java Essential Features"
+excerpt: "The essential features of the Java language that you must know"
 category: "Java"
 tags: ["Programming Languages","Java"]
 date:   2003-01-01 22:45:33
