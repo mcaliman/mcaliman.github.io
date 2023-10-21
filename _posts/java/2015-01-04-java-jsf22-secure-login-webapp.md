@@ -3,9 +3,9 @@ layout: post
 lang: en
 title:  "Secure logins and pages with JSF 2"
 excerpt: ""
-category: "Programming Languages"
+category: "Java"
 date:   2015-01-04 22:45:33
-tags: [Java Server Faces]
+tags: ["Programming Languages","Java"]
 comments: true
 share: true
 revision: 0

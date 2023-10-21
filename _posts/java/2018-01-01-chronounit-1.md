@@ -4,8 +4,8 @@ lang: en
 title: "The java.time.temporal.ChronoUnit class"
 excerpt: "Calculating the difference between two dates with ChronoUnit"
 modified: 2018-01-01
-category: "Programming Languages"
-tags: [Java 8]
+category: "Java"
+tags: ["Programming Languages","Java"]
 comments: true
 share: true
 search_omit: false

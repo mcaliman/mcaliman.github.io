@@ -3,8 +3,8 @@ layout: post
 lang: en
 title:  "The String.format a printf method for Java"
 excerpt: ""
-category: "Programming Languages"
-tags: [Java]
+category: "Java"
+tags: ["Programming Languages","Java"]
 date:   2014-07-13 22:45:33
 comments: true
 share: true

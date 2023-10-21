@@ -3,9 +3,9 @@ layout: post
 lang: en
 title:  "Using HashMap in Java"
 excerpt: ""
-category: "Programming Languages"
+category: "Java"
 date:   2014-09-27 22:45:33
-tags: ["Data Structures","Computer Science"]
+tags: ["Programming Languages","Java"]
 comments: true
 share: true
 revision: 0

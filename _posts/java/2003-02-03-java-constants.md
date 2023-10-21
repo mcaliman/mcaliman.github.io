@@ -3,8 +3,8 @@ layout: post
 lang: en
 title:  "Symbolic constants in Java"
 excerpt: ""
-category: "Programming Languages"
-tags: [Java]
+category: "Java"
+tags: ["Programming Languages","Java"]
 date:   2003-02-03 22:45:33
 comments: true
 share: true

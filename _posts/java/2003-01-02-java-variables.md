@@ -3,9 +3,9 @@ layout: post
 lang: en
 title:  "Variables and assignment commands"
 excerpt: ""
-category: "Programming Languages"
+category: "Java"
 date:   2003-01-02 22:45:33
-tags: [Java]
+tags: ["Programming Languages","Java"]
 comments: true
 share: true
 revision: 0

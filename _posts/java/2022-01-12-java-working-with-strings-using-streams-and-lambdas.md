@@ -4,8 +4,8 @@ lang: en
 title: "Working with Strings using Streams and Lambdas."
 excerpt: ""
 modified: 2022-01-12
-category: "Programming Languages"
-tags: [Java]
+category: "Java"
+tags: ["Programming Languages","Java"]
 comments: true
 share: true
 search_omit: false

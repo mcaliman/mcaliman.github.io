@@ -4,8 +4,8 @@ lang: en
 title: How can you limit inheritance for a class?
 excerpt: ""
 modified: 2016-11-01
-category: "Programming Languages"
-tags: [Java]
+category: "Java"
+tags: ["Programming Languages","Java"]
 comments: true
 share: true
 search_omit: false

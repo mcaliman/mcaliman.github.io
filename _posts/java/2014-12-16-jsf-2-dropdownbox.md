@@ -3,9 +3,9 @@ layout: post
 lang: en
 title:  "Dropdownboxes are easy with JSF 2.2!"
 excerpt: ""
-category: "Programming Languages"
+category: "Java"
 date:   2014-12-16 22:45:33
-tags: [Java Server Faces]
+tags: ["Programming Languages","Java"]
 comments: true
 share: true
 revision: 0

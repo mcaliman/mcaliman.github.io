@@ -3,8 +3,8 @@ layout: post
 lang: en
 title:  "The essential features of the Java language that you must know"
 excerpt: ""
-category: "Programming Languages"
-tags: ["Programming Languages",Java]
+category: "Java"
+tags: ["Programming Languages","Java"]
 date:   2003-01-01 22:45:33
 comments: true
 share: true

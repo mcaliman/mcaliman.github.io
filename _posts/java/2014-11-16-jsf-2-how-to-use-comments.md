@@ -3,9 +3,9 @@ layout: post
 lang: en
 title:  "JSF 2 How to use comments"
 excerpt: ""
-category: "Programming Languages"
+category: "Java"
 date:   2014-11-16 22:45:33
-tags: [Java Server Faces]
+tags: ["Programming Languages","Java"]
 comments: false
 share: true
 revision: 0

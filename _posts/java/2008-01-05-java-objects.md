@@ -3,9 +3,9 @@ layout: post
 lang: en
 title:  "Objects in Java"
 excerpt: ""
-category: "Programming Languages"
+category: "Java"
 date:   2008-01-05 22:45:33
-tags: [Java]
+tags: ["Programming Languages","Java"]
 comments: true
 share: true
 revision: 0

@@ -3,8 +3,8 @@ layout: post
 lang: en
 title:  "A Servlet to manage file downloads in Java"
 excerpt: ""
-category: "Programming Languages"
-tags: [Java]
+category: "Java"
+tags: ["Programming Languages","Java"]
 date:   2014-07-15 22:45:33
 comments: true
 share: true
