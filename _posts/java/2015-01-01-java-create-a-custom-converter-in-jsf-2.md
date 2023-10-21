@@ -5,7 +5,7 @@ title:  "Creating a Custom Converter in JSF 2.2"
 excerpt: ""
 category: "Java"
 date:   2015-01-01 22:45:33
-tags: ["Programming Languages","Java"]
+tags: ["Programming Languages","Java","JavaServer Faces"]
 comments: true
 share: true
 revision: 0

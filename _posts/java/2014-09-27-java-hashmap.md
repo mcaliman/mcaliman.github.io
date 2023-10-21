@@ -5,7 +5,7 @@ title:  "Using HashMap in Java"
 excerpt: ""
 category: "Java"
 date:   2014-09-27 22:45:33
-tags: ["Programming Languages","Java"]
+tags: ["Programming Languages","Java","HashMap"]
 comments: true
 share: true
 revision: 0
