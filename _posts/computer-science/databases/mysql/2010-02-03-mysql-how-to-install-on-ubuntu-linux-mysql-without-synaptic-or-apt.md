@@ -8,17 +8,16 @@ date:   2011-02-03 22:45:33
 tags: [MySQL]
 comments: true
 share: true
-revision: 0
+revision: 1
 ---
-We download the tar.gz from the mysql site www.mysql.com
-place it in /usr/local unpack the tar.gz with the command
+We download the `tar.gz` from the mysql site www.mysql.com
+place it in `/usr/local` unpack the `tar.gz` with the command
 
 ```bash
 tar -xzf mysql-5.1.31-linux-i686-glibc23.tar.gz
 ```
 
-(we have assumed from a real case that the version is 5.1.31, in which case the file name is
-mysql-5.1.31-linux-i686-glibc23.tar.gz) we create the mysql symlink
+(we have assumed from a real case that the version is 5.1.31, in which case the file name is `mysql-5.1.31-linux-i686-glibc23.tar.gz`) we create the mysql symlink
 
 ```bash
 ln -s mysql-5.1.31-linux-i686-glibc23 mysql
@@ -49,9 +48,7 @@ start the mysql daemon in the background with the command
 ./bin/mysqld_safe --user=mysql &
 ```
 
-we configure the environment variables
-in `/root/.bashrc``` (or in your home)
-add the lines
+we configure the environment variables in `/root/.bashrc` (or in your home) add the lines
 
 ```bash
 MYSQL=/usr/local/mysql
@@ -60,9 +57,7 @@ PATH=$MYSQL/bin:.:$PATH
 export PATH
 ```
 
-we also add the lines in 
-`/etc/init.d/bootmisc.sh`
-to handle the automatic start-up of the mysql service
+we also add the lines in `/etc/init.d/bootmisc.sh` to handle the automatic start-up of the mysql service
 
 ```bash
 MYSQL=/usr/local/mysql

@@ -8,12 +8,12 @@ date:   2014-09-23 22:45:33
 tags: ["Machine Learning"]
 comments: true
 share: true
-revision: 0
+revision: 1
 ---
 
 
 
-Machine learning is a branch of artificial intelligence that deals with the development of algorithms that can learn from data without being explicitly programmed. In other words, machine learning allows computers to learn from information without being provided with precise instructions.
+Machine learning is a branch of artificial intelligence that deals with developing algorithms that can learn from data without being explicitly programmed. In other words, machine learning allows computers to learn from information without being provided with precise instructions.
 
 Machine learning is a powerful technology that can be used to solve a wide range of problems, including:
 
@@ -23,7 +23,7 @@ Machine learning is a powerful technology that can be used to solve a wide range
 * Information retrieval
 * System control
 
-There are different types of machine learning algorithms, each with its own characteristics and strengths. The most common types of machine learning algorithms include:
+There are different types of machine learning algorithms, each with its characteristics and strengths. The most common types of machine learning algorithms include:
 
 * Supervised learning, in which the algorithm is trained on a dataset of input and output examples.
 * Unsupervised learning, in which the algorithm is trained on a dataset of input examples without output.
@@ -42,9 +42,9 @@ Some examples of machine learning applications
 
 Here are some examples of machine learning applications:
 
-* Facial recognition, used to unlock mobile phones, access computer systems, and identify people in images.
-* Speech recognition, used to control electronic devices, translate languages, and answer questions.
-* Image classification, used to organize images into categories, such as landscapes, animals, or people.
+* Facial recognition, is used to unlock mobile phones, access computer systems, and identify people in images.
+* Speech recognition, used to control electronic devices, translate languages and answer questions.
+* Image classification, is used to organize images into categories, such as landscapes, animals, or people.
 * Sales forecasting, used by businesses to forecast demand for products and services.
 * Drone control, used to fly drones safely and efficiently.
 
