@@ -3,8 +3,8 @@ layout: post
 lang: en
 title: "Install Python 3"
 excerpt: "How to install Python 3 in Linux/Ubuntu"
-category: "Programming Languages"
-tags: [Python,Linux,Ubuntu]
+category: "Python"
+tags: ["Programming Languages","Python"]
 date: 2020-06-13
 modified: 2020-06-14
 comments: true

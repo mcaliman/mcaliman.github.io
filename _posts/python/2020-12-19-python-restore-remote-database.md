@@ -3,8 +3,8 @@ layout: post
 lang: en
 title: "Restore remote database backup to local"
 excerpt: "How do I restore a remote Mysql database to local? With Python script!"
-category: "Programming Languages"
-tags: [Python,MySQL]
+category: "Python"
+tags: ["Programming Languages","Python"]
 date: 2020-12-19
 modified: 2020-12-19
 comments: true
