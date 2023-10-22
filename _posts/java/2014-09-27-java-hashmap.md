@@ -6,6 +6,7 @@ excerpt: ""
 category: "Java"
 date:   2014-09-27 22:45:33
 tags: ["Programming Languages","Java","HashMap"]
+permalink: /java/hashmap/
 comments: true
 share: true
 revision: 0
