@@ -17,7 +17,7 @@ description: "Massimo Caliman's blog on Computer Science"
 
 # Custom variable
 # blog_release: 23.6.15.1
-baseurl: # the subpath of your site, e.g. "/blog"
+baseurl: # /computer-science # the subpath of your site, e.g. "/blog"
 # url: https://trueprogramming.com
 # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 # logo: /images/logo.jpg # path of site logo, e.g. "/images/logo.png"
