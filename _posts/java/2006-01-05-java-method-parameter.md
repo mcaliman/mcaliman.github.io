@@ -6,6 +6,7 @@ excerpt: ""
 category: "Java"
 date:   2006-01-05 22:45:33
 tags: ["Programming Languages","Java"]
+permalink: /java/parameters/
 comments: true
 share: true
 revision: 0

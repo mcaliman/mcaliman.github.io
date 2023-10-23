@@ -7,6 +7,7 @@ the simplest organisation of complex data structures"
 category: "Java"
 date:   2003-03-01 22:45:33
 tags: ["Programming Languages","Java"]
+permalink: /java/array/
 comments: true
 share: true
 revision: 0

@@ -6,6 +6,7 @@ excerpt: "Defining classes in Java: access modifiers, class and instance entitie
 category: "Java"
 date:   2004-01-02 22:45:33
 tags: ["Programming Languages","Java"]
+permalink: /java/classes/
 comments: true
 share: true
 revision: 0

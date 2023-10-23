@@ -5,6 +5,7 @@ title:  "GlassFish V3: console administration taking too long to load."
 excerpt: ""
 category: "Java"
 tags: ["Programming Languages","Java",""GlassFish"]
+permalink: /java/glassfish/v3/
 date:   2014-01-11 22:45:33
 comments: true
 share: true

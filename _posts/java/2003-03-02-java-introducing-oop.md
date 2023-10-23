@@ -5,6 +5,7 @@ title:  "Introducing OOP in Java"
 excerpt: ""
 category: "Java"
 tags: ["Programming Languages","Java"]
+permalink: /java/oop/introducing/
 date:   2003-03-02 22:45:33
 comments: true
 share: true

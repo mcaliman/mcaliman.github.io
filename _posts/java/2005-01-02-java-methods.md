@@ -6,6 +6,8 @@ excerpt: ""
 category: "Java"
 date:   2005-01-02 22:45:33
 tags: ["Programming Languages","Java"]
+permalink: /java/methods/
+
 comments: true
 share: true
 revision: 0

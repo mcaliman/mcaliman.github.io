@@ -5,6 +5,7 @@ title:  "How to find jar file where a certain class is contained (deployed in Gl
 excerpt: ""
 category: "Java"
 tags: ["Programming Languages","Java","Jar","GlassFish"]
+permalink: /java/glassfish/jar/
 date:   2014-01-03 22:45:33
 comments: true
 share: true
