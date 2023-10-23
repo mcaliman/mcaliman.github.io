@@ -5,6 +5,7 @@ title:  "Use of keytool and jarsigner"
 excerpt: ""
 category: "Java"
 tags: ["Programming Languages","Java","JDK","jarsigner","keytool"]
+permalink: /java/jdk/jarsigner/keytool/
 date:   2011-04-24 22:45:33
 comments: true
 share: true
