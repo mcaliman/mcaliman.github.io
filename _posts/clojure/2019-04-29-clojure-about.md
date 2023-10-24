@@ -5,8 +5,9 @@ title: "About Clojure"
 excerpt: "Some information about the Clojure programming language"
 modified: 2019-04-29
 revised: true
-category: "Programming Languages"
+category: "Clojure"
 tags: [Clojure]
+permalink: /clojure/about/
 comments: true
 share: true
 search_omit: false
