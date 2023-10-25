@@ -5,8 +5,9 @@ title: "Cobol overview"
 excerpt: ""
 date: 2023-05-20 05:25:44
 revised: true
-category: "Programming Languages"
-tags: [Cobol]
+category: "Cobol" 
+tags: ["Cobol","Programming Languages"]
+permalink: /cobol/overview/
 comments: true
 share: true
 updated: true

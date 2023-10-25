@@ -3,9 +3,9 @@ layout: post
 lang: en
 title:  "Javascript according to Peter Paul Kock (PPK)"
 excerpt: ""
-category: "Programming Languages"
+category: "JavaScript"
 date:   2011-07-03 22:45:33
-tags: [Javascript]
+tags: [JavaScript]
 comments: true
 share: true
 revision: 0

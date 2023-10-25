@@ -3,8 +3,8 @@ layout: post
 lang: en
 title:  "The control structures of R"
 excerpt: "Managing the programme execution flow with R"
-category: "Programming Languages"
-tags: [R]
+category: "R" 
+tags: ["R","Programming Languages"]
 date:   2016-01-15 22:45:33
 comments: true
 share: true
