@@ -8,7 +8,7 @@ tags: [about]
 modified: 2013-09-13
 ---
 
-Hi, I'm Massimo Caliman. 
+Hello, I'm Massimo Caliman. 
 I'm a software architect & developer with a consolidated experience on Java.
 I'm working as IT specialist since 1995 and since 1998  almost exclusively of Enterprise Java applications. 
 I'm Java Italian Association member since 1999 and co-founder of Java User Group Genova.
