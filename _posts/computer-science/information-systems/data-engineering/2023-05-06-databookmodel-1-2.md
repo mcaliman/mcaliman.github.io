@@ -13,10 +13,6 @@ updated: true
 revision: 0
 ---
 
-> When debugging, novices insert corrective code; experts remove defective code.
-> 
-> – Richard E. Pattis
-
 I want to tell you about these two books I recently purchased on Amazon. There were few hard copies available at the time of purchase and the shipping time was not very fast, but it was worth it. There is however a digital version for those who prefer it. The cost may seem high compared to other texts on management architectures but it is worth every penny paid. I will probably also buy Volume 3 and review it soon.
 
 "The Data Model Resource Book: A Library of Universal Data Models for All Enterprises" by Len Silverstone is a highly regarded work in the field of data modelling. His revised edition, published by Wiley, offers a simple and inexpensive way to design databases for key business functions. Industry experts have praised the book for its set of standardised data models for specific functions shared by most companies, such as human resources management, accounting and project management. These models are easily replicated by developers seeking to make corporate database development more efficient and cost-effective.
@@ -38,8 +34,8 @@ The second volume, titled "The Data Model Resource Book, Volume 2: A Library of 
 Below is the complete list for Volume 2
 
 1. Manufactoring
-2. Telecomunications
-3. Healt Care
+2. Telecommunications
+3. Health Care
 4. Insurance
 5. Financial Services
 6. Personal Services
