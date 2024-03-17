@@ -8,6 +8,7 @@ tags: ["Java User Group","JVM User Group"]
 modified: 2023-11-05
 ---
 
+* [JVM User Group "JUG Genova"](https://www.juggenova.it/)
 * [JVM User Group "JUG Milano"](https://www.jugmilano.it/)
 * [Java User Group "JUG Torino"](https://jugtorino.org/)
 
