@@ -8,7 +8,7 @@ date:   2017-05-02 22:45:33
 modified: 2017-05-03 22:45:33
 tags: [MySQL]
 comments: true
-share: true
+share:  false
 revision: 0
 ---
 Well, you probably have different collations in some mysql views, try to force collation like this 

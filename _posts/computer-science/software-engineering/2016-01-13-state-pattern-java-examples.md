@@ -7,7 +7,7 @@ modified: 2016-01-30
 category: "Software Engineering"
 tags: ["Java","Design Pattern","Design Patterns State"]
 comments: true
-share: true
+share:  false
 search_omit: false
 updated: true
 revision: 0

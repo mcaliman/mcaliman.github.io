@@ -8,7 +8,7 @@ tags: ["R","Programming Languages"]
 date:   2016-01-10 22:45:33
 
 comments: true
-share: true
+share:  false
 revision: 0
 ---
 

@@ -7,5 +7,5 @@ show_excerpts: true
 entries_layout: list
 pagination: 
   enabled: true
-  per_page: 5
+  per_page: 50
 ---

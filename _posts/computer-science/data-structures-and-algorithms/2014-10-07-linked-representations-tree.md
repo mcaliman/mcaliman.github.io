@@ -7,7 +7,7 @@ category: "Data Structures And Algorithms"
 date:   2014-10-07 22:45:33
 tags: ["Computer Science"]
 comments: true
-share: true
+share:  false
 revision: 0
 ---
 Continuing with the discussion of trees, representations based on linked structures are normally preferred 

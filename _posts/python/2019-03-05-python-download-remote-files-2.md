@@ -8,7 +8,7 @@ tags: ["Programming Languages","Python"]
 permalink: /python/download-remote-files/2/
 modified: 2019-03-19
 comments: true
-share: true
+share:  false
 search_omit: false
 updated: true
 revision: 0

@@ -8,7 +8,7 @@ tags: ["Programming Languages","Java","JAX-WS"]
 permalink: /java/jax-ws/
 date:   2011-02-27 22:45:33
 comments: true
-share: true
+share:  false
 revision: 0
 ---
 

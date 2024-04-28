@@ -7,7 +7,7 @@ category: "Databases"
 date:   2011-02-03 22:45:33
 tags: [MySQL]
 comments: true
-share: true
+share:  false
 revision: 1
 ---
 We download the `tar.gz` from the mysql site www.mysql.com
