@@ -1,3 +1,5 @@
+# Sample site navigation bar links
+
 - title: Home
   url: /
 - title: About
@@ -12,11 +14,11 @@
   url: /search/
 - title: JUG
   url: /jug/  
-#- title: Privacy Policy (En)
-#  url: /privacy-policy-en/
-#- title: Privacy Policy (It)
-#  url: /privacy-policy-it/  
-#- title: Cookie Policy (En)
-#  url: /cookie-policy-en/
-#- title: Cookie Policy (It)
-#  url: /cookie-policy-it/  
+- title: Privacy Policy (En)
+  url: /privacy-policy-en/
+- title: Privacy Policy (It)
+  url: /privacy-policy-it/  
+- title: Cookie Policy (En)
+  url: /cookie-policy-en/
+- title: Cookie Policy (It)
+  url: /cookie-policy-it/  

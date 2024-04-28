@@ -9,7 +9,7 @@ tags: ["Programming Languages","Java"]
 permalink: /java/methods/
 
 comments: true
-share: true
+share:  false
 revision: 0
 ---
 

@@ -9,7 +9,7 @@ category: "Cobol"
 tags: ["Cobol","Programming Languages"]
 permalink: /cobol/overview/
 comments: true
-share: true
+share:  false
 updated: true
 revision: 0
 ---

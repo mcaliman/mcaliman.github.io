@@ -7,7 +7,7 @@ category: "Data Structures And Algorithms"
 date:   2014-09-28 22:45:33
 tags: ["Data Structures"]
 comments: true
-share: true
+share:  false
 revision: 0
 ---
 Indexed structures are collections of numbered cells that may contain elements of a predetermined type. We will assume that in an array of size h the indices can range from 0 to h-1 or 1 to h.

@@ -7,7 +7,7 @@ category: "Python"
 tags: ["Programming Languages","Python"]
 modified: 2023-04-25
 comments: true
-share: true
+share:  false
 search_omit: false
 updated: true
 revision: 0

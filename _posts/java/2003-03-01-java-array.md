@@ -9,7 +9,7 @@ date:   2003-03-01 22:45:33
 tags: ["Programming Languages","Java"]
 permalink: /java/array/
 comments: true
-share: true
+share:  false
 revision: 0
 ---
 

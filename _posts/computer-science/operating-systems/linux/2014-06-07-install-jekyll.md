@@ -7,7 +7,7 @@ category: "Operating Systems"
 date:   2014-06-07 22:45:33
 tags: [Jekyll]
 comments: true
-share: true
+share:  false
 revision: 0
 ---
 
