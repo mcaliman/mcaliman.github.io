@@ -40,6 +40,37 @@
             ga('send', 'pageview');*/
             console.log("LOAD GA 2");
         });
+        function updateCookiesEuState() {
+          var hasConsent = cookiesBanner.hasConsent()
+          var state = '❔ Nor accepted nor rejected';
+
+          if (hasConsent === true) {
+            state = '✅ Accepted';
+          } else if (hasConsent === false) {
+            state = '❌ Rejected';
+          }
+
+          document.getElementById('cookies-eu-state').innerText = state;
+        }
+        updateCookiesEuState();
+        setInterval(updateCookiesEuState, 100);
+
+        // Prefer use addEventListener
+        // For demo purpose I will use the CookiesEuBanner internal method
+        cookiesBanner.addClickListener(document.getElementById('custom-accept'), function () {
+          cookiesBanner.setConsent(true);
+          cookiesBanner.removeBanner();
+          updateCookiesEuState();
+        });
+        cookiesBanner.addClickListener(document.getElementById('custom-reject'), function () {
+          cookiesBanner.setConsent(false);
+          cookiesBanner.removeBanner();
+          updateCookiesEuState();
+        });
+        cookiesBanner.addClickListener(document.getElementById('custom-reset'), function () {
+          cookiesBanner.deleteCookie(cookiesBanner.cookieName);
+          window.location.reload();
+        });
     </script>
 
   </body>
