@@ -11,7 +11,8 @@ share: true
 revision: 0
 ---
    
-> Kleeneliness is next to Gödeliness 
+> Kleeneliness is next to Gödeliness
+ 
 A language L [^footnote1] `not` can be deterministically recognised by empty stack [^footnote2] if there exist two distinct strings of L such that one is prefixed by the other. 
 
 In more formal terms if &exist; u,v &isin; L : u is prefixed by v where the concept, of prefix can be further formalised as v = ux where x is a string of the alphabet to which both strings u and v belong.
