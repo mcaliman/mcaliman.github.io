@@ -7,7 +7,7 @@ modified: 2016-11-03
 category: "Java"
 tags: ["Programming Languages","Java"]
 comments: true
-share:  false
+share: true
 search_omit: false
 updated: true
 revision: 0

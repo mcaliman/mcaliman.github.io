@@ -8,7 +8,7 @@ date:   2023-08-11 22:45:33
 modified: 2023-08-11 22:45:33
 tags: ["Expert Systems","Inference Engines"]
 comments: true
-share:  false
+share: true
 revision: 0
 ---
 

@@ -9,7 +9,7 @@ seo_tags:
 date: 2023-05-15 05:45:33
 tags: [Artificial Intelligence]
 comments: true
-share:  false
+share: true
 updated: true
 revision: 0
 ---

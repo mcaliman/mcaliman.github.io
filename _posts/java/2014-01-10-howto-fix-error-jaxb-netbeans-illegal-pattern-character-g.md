@@ -7,7 +7,7 @@ category: "Java"
 tags: ["Programming Languages","Java","JAXB"]
 date:   2014-01-10 22:45:33
 comments: true
-share:  false
+share: true
 revision: 0
 ---
 

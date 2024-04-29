@@ -8,7 +8,7 @@ date:   2014-01-12 22:45:33
 update: 2020-06-29 11:00:00
 tags: [Linux, ssh, openssh]
 comments: true
-share:  false
+share: true
 revision: 0
 ---
 

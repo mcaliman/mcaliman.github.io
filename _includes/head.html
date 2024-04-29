@@ -1,4 +1,20 @@
 <head>
+{%- if site.google_analytics -%}
+<!-- Google tag (gtag.js) NEW -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNVE7KY3LB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KNVE7KY3LB');
+  gtag('config', 'GA_TRACKING_ID', { 'anonymize_ip': true });
+</script>
+{%- endif %}
+
+{% comment %}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5121145090824526" crossorigin="anonymous"></script> 
+{% endcomment %} 
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,9 +40,19 @@
   </script>
 
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  <link rel="stylesheet" href="{{ '/assets/css/cookies-eu-banner.default.css' | relative_url }}">
+  
+
   <link rel="stylesheet" href="{{ site.skin | default: '/assets/css/skins/default.css' | relative_url }}">
   {% if site.google_fonts %}
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={%- for font in site.google_fonts -%}{{ font.name | replace: ' ', '+' }}{% if font.weights %}:{% endif %}{{ font.weights | remove: ' ' }}{% if forloop.last != true %}|{% endif %}{%- endfor -%}">
+  {%- comment -%}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={%- for font in site.google_fonts -%}{{ font.name | replace: ' ', '+' }}{% if font.weights %}:{% endif %}{{ font.weights | remove: ' ' }}{% if forloop.last != true %}|{% endif %}{%- endfor -%}">
+  {%- endcomment -%}
+ 
+  <link rel="stylesheet" href="{{'/assets/css/google-fonts.css' | relative_url}}">
+ 
+
   {% endif %}
 
   {%- if site.plugins contains 'jekyll-feed' or site.gems contains 'jekyll-feed' -%}

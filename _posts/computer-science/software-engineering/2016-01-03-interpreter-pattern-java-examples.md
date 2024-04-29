@@ -8,7 +8,7 @@ category: "Software Engineering"
 tags: ["Java","Design Pattern","Design Patterns Interpreter"]
 comments: true
 updated: true
-share:  false
+share: true
 revision: 0
 ---
 The pattern interpreter is little used nowadays, there have been more powerful and ready-to-use tools for years 

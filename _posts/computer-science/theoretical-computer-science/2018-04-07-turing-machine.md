@@ -8,7 +8,7 @@ date:   2018-04-07 22:45:33
 modified: 2019-05-12 22:45:33
 tags: ["Turing Machine"]
 comments: true
-share:  false
+share: true
 updated: true
 revision: 0
 ---
