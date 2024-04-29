@@ -7,7 +7,7 @@ category: "Theoretical Computer Science"
 date:   2018-03-22 22:45:33
 tags: ["Context-Free Grammar","Pumping Lemma"]
 comments: true
-share: true
+share: false
 revision: 0
 ---
 

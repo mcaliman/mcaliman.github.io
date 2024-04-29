@@ -48,17 +48,6 @@ layout: page
 
 
 <ul class="taxonomy-index">
-
-  {% assign total = 1 %}
-  {% for post in site.posts %}
-    {% assign total = total | plus: 1 %}
-  {% endfor %}
-  <li>
-      <a href="#">
-        <strong>Total number of posts</strong> <span class="taxonomy-count">{{ total }}</span>
-      </a>
-  </li> 
-
   {% for category_names in category_names_array %}
     {% assign category_names_list = category_names | split: "," %}
     {% assign category_count = category_counts[forloop.index0] %}

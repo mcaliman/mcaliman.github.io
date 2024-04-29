@@ -8,7 +8,7 @@ tags: ["Programming Languages","Java"]
 permalink: /java/essential-features/
 date:   2003-01-01 22:45:33
 comments: true
-share: true
+share: false
 revision: 0
 ---
 

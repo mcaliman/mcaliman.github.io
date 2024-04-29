@@ -7,7 +7,7 @@ category: "Theoretical Computer Science"
 date:   2018-03-21 22:45:33
 tags: ["Context-Free Grammar"]
 comments: true
-share: true
+share: false
 revision: 0
 ---
 

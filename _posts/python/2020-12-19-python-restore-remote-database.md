@@ -9,7 +9,7 @@ permalink: /python/restore-remote-database-backup/
 date: 2020-12-19
 modified: 2020-12-19
 comments: true
-share: true
+share: false
 search_omit: false
 updated: true
 revision: 0

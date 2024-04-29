@@ -8,7 +8,7 @@ date:   2008-01-05 22:45:33
 tags: ["Programming Languages","Java"]
 permalink: /java/objects/
 comments: true
-share: true
+share: false
 revision: 0
 ---
 

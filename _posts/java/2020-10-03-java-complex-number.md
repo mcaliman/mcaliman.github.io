@@ -8,7 +8,7 @@ modified: 2020-10-03
 category: "Java"
 tags: ["Programming Languages","Java"]
 comments: true
-share: true
+share: false
 search_omit: false
 updated: true
 revision: 0

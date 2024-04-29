@@ -7,7 +7,7 @@ modified: 2016-01-03
 category: "Software Engineering"
 tags: [Java, "Design Pattern"]
 comments: true
-share: true
+share: false
 updated: true
 revision: 0
 ---

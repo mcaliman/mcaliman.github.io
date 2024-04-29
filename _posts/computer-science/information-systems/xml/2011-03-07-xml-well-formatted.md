@@ -7,7 +7,7 @@ category: "Information Systems"
 tags: [XML]
 date:   2011-03-07 22:45:33
 comments: true
-share: true
+share: false
 revision: 0
 ---
 

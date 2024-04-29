@@ -7,7 +7,7 @@ category: "Operating Systems"
 date:   2015-05-01 22:45:33
 tags: ["Linux"]
 comments: true
-share: true
+share: false
 revision: 0
 ---
 
