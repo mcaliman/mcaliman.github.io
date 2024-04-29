@@ -7,7 +7,7 @@ category: "Databases"
 date:   2011-01-01 22:45:33
 tags: [MySQL]
 comments: true
-share:  false
+share: true
 revision: 0
 ---
 

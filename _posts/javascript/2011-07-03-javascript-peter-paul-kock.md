@@ -7,7 +7,7 @@ category: "JavaScript"
 date:   2011-07-03 22:45:33
 tags: [JavaScript]
 comments: true
-share:  false
+share: true
 revision: 0
 ---
 

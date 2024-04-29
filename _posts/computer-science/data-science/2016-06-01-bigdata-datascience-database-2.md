@@ -7,7 +7,7 @@ category: "Data Science"
 date:   2016-06-01 22:45:33
 tags: ["Data Science","Big Data","Database"]
 comments: true
-share:  false
+share: true
 updated: true
 revision: 0
 ---

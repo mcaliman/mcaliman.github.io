@@ -8,7 +8,7 @@ date:   2023-08-13 22:45:33
 modified: 2023-08-13 22:45:33
 tags: ["Pass by value","Pass by reference"]
 comments: true
-share:  false
+share: true
 revision: 0
 ---
 

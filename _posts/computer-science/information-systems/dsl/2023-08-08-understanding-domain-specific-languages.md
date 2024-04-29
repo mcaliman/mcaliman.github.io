@@ -8,7 +8,7 @@ date:   2023-08-05 22:45:33
 modified: 2023-08-08 22:45:33
 tags: ["DSL (Domain Specific Languages)"]
 comments: true
-share:  false
+share: true
 revision: 0
 ---
 

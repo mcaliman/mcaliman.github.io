@@ -1,67 +1,86 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
+#
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-theme: jekyll-theme-so-simple
-# remote_theme: mmistakes/so-simple-theme
-skin: "/assets/css/skins/default.css"
+# theme: jekyll-theme-so-simple
+remote_theme: "mmistakes/so-simple-theme@3.2.0"
+skin: "/assets/css/skins/default.css" 
 locale: en-US
 title: "True Programming"
 description: "Massimo Caliman's blog on Computer Science"
-copyright:  © 1998 2024 Massimo Caliman. Powered by Jekyll & So Simple.
-baseurl: # the subpath of your site, e.g. "/blog"
-url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: /images/logo.jpg # path of site logo, e.g. "/images/logo.png"
-date_format: "%d/%m/%Y" # "%B %-d, %Y"
-read_time: true # reading time estimates, e.g. true
-words_per_minute: # 200
-mathjax:
-  enable: # MathJax equations, e.g. true, false (default)
-  combo:  # "tex-svg" (default), "tex-mml-chtml", etc.: docs.mathjax.org/en/latest/web/components/combined.html
-  tags:  # "none", "ams" (default), "all"
-google_fonts:
-  - name: "Source Sans Pro"
-    weights: "400,400i,700,700i"
-  - name: "Lora"
-    weights: "400,400i,700,700i"
-google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
-disqus:
-  shortname: # Disqus shortname, e.g. "my_disqus_shortname"
-twitter:
-  username: # site's Twitter username, e.g. "mmistakes"
 
+#copyright: 1999-2023 Massimo Caliman - All Rights Reserved, Questo sito non rappresenta una testata giornalistica, in quanto viene aggiornato senza alcuna periodicità.Non può pertanto considerarsi un prodotto editoriale ex L.62 7/3/2001.
+
+# Custom variable
+# blog_release: 23.6.15.1
+baseurl: # /computer-science # the subpath of your site, e.g. "/blog"
+# url: https://trueprogramming.com
+# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+# logo: /images/logo.jpg # path of site logo, e.g. "/images/logo.png"
+# l blu #2d2e83 e il rosso #e30613.
+logo: /images/logo.jpg
+
+date_format: "%d/%m/%Y"
+read_time: true # reading time estimates, e.g. true
+words_per_minute: 200 
+mathjax: false # MathJax equations, e.g. true
+
+#mathjax:
+# enable: true # MathJax equations, e.g. true, false (default)
+#  combo:  # "tex-svg" (default), "tex-mml-chtml", etc.: docs.mathjax.org/en/latest/web/components/combined.html
+#  tags:  # "none", "ams" (default), "all"
+
+google_fonts:
+   - name: "Source Sans Pro"
+     weights: "400,400i,700,700i"
+   - name: "Lora"
+     weights: "400,400i,700,700i"
+
+google_analytics: G-KNVE7KY3LB 
+
+disqus:
+  shortname: # mcaliman # Disqus shortname, e.g. "my_disqus_shortname"
+twitter:
+  username: mcaliman # site's Twitter username, e.g. "mmistakes"
 # Liquid
 liquid:
   error_mode: strict
-
 # Build settings
-permalink: /:title/ # permalink: /:categories/:title/
+
+# permalink: /:slugified_categories/:title/ # non funziona su github pages
+# permalink: /:categories/:title/
+permalink: /:title/
 markdown: kramdown
 feed:
   path: atom.xml
 
+future: true
+
+# Comprimi html ed elimina commenti, comment to disable for dev and debug
+# compress_html:
+#  comments: ["<!-- ", " -->"]
+
 # Pagination - https://jekyllrb.com/docs/pagination/
 # paginate: 10
 # paginate_path: /page:num/
-
+pagination:
+     enabled: true
+     per_page: 3
+     title: ':title - page :num'
+     limit: 0
+     trail: 
+        before: 2
+        after: 2     
 # Search
-search_full_content: false # can have performance implications for large sites
-
+search_full_content: true # false # can have performance implications for large sites
 # Taxonomy pages
 # category_archive_path: "/categories/#"
 # tag_archive_path: "/tags/#"
-
+#
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -73,13 +92,15 @@ search_full_content: false # can have performance implications for large sites
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
+#
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-paginate
-
+  # - jekyll-paginate
+  - jekyll-paginate-v2
+  - jekyll-category-pages
+#
 # Front Matter Defaults
 defaults:
   # Posts defaults
@@ -88,10 +109,10 @@ defaults:
       type: posts
     values:
       layout: post
-      share:  false
-
+      share: true
+#
 # Site Author
-author: 
+author:
   name: Massimo Caliman
   picture: /images/mcaliman.jpg
   email: mcaliman@gmail.com
@@ -112,7 +133,8 @@ author:
     - title: Medium
       url: https://trueprogramming.medium.com
       icon: fab fa-medium
-
+            
+#
 # Footer Links
 footer_links:
   - title: Feed
@@ -132,4 +154,4 @@ footer_links:
     icon: fas fa-at 
   - title: Medium
     url: https://trueprogramming.medium.com
-    icon: fab fa-medium     
+    icon: fab fa-medium      

@@ -7,7 +7,7 @@ category: "Information Systems"
 date:   2011-04-04 22:45:33
 tags: [SharePoint]
 comments: true
-share:  false
+share: true
 revision: 0
 ---
 A common mistake you can run into when installing iFilter for SharePoint 2007 is forgetting to replace the value of the key

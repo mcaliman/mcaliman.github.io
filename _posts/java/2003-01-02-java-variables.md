@@ -8,7 +8,7 @@ date:   2003-01-02 22:45:33
 tags: ["Programming Languages","Java"]
 permalink: /java/variables/
 comments: true
-share:  false
+share: true
 revision: 0
 ---
 

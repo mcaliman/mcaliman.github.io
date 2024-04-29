@@ -9,7 +9,7 @@ category: "Clojure"
 tags: [Clojure]
 permalink: /clojure/books/
 comments: false
-share:  false
+share: true
 search_omit: false
 updated: true
 revision: 0

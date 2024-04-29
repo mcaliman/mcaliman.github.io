@@ -8,7 +8,7 @@ tags: ["Programming Languages","Java"]
 permalink: /java/constants/
 date:   2003-02-03 22:45:33
 comments: true
-share:  false
+share: true
 revision: 0
 ---
 

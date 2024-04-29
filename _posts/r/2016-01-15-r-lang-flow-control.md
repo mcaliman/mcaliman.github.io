@@ -7,7 +7,7 @@ category: "R"
 tags: ["R","Programming Languages"]
 date:   2016-01-15 22:45:33
 comments: true
-share:  false
+share: true
 revision: 0
 ---
 
