@@ -13,18 +13,21 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-# theme: jekyll-theme-so-simple
+# 
 remote_theme: mmistakes/so-simple-theme
 skin: "/assets/css/skins/default.css"
 locale: en-US
 title: "True Programming"
 description: "Massimo Caliman's Blog On Computer Science."
+
+copyright: © 1999 2024 Massimo Caliman - All Rights Reserved - Powered by Jekyll & So Simple.
+
 baseurl: # the subpath of your site, e.g. "/blog"
 url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: /images/logo.jpg # path of site logo, e.g. "/images/logo.png"
+logo: /images/logo.jpg 
 date_format: "%d/%m/%Y" #"%B %-d, %Y"
-read_time: true # reading time estimates, e.g. true
-words_per_minute: 200 # 200
+read_time: true 
+words_per_minute: 200 
 mathjax:
   enable: # MathJax equations, e.g. true, false (default)
   combo:  # "tex-svg" (default), "tex-mml-chtml", etc.: docs.mathjax.org/en/latest/web/components/combined.html
