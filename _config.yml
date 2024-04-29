@@ -79,7 +79,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-paginate
+ # - jekyll-paginate
 
 # Front Matter Defaults
 defaults:
