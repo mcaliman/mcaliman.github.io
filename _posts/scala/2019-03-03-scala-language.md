@@ -8,7 +8,7 @@ tags: ["Scala","Programming Languages"]
 permalink: /scala/overview/
 modified: 2019-03-03
 comments: true
-share: true
+share: false
 search_omit: false
 updated: true
 revision: 0

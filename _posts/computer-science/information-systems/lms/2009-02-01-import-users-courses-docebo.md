@@ -7,7 +7,7 @@ category: "Information Systems"
 date:   2009-01-01 22:45:33
 tags: [Docebo,"LMS (Learning Management System)"]
 comments: true
-share: true
+share: false
 revision: 0
 ---
 

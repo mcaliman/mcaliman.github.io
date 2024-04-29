@@ -8,7 +8,7 @@ tags: ["Programming Languages","Python"]
 date: 2020-06-13
 modified: 2020-06-14
 comments: true
-share: true
+share: false
 search_omit: false
 updated: true
 revision: 0

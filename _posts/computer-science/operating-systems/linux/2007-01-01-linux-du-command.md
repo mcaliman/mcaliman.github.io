@@ -8,7 +8,7 @@ date:   2007-01-01 22:45:33
 modified: 2023-03-19
 tags: ["Linux"]
 comments: true
-share: true
+share: false
 revision: 0
 ---
 

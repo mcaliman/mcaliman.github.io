@@ -8,7 +8,7 @@ tags: ["Programming Languages","Java",""GlassFish"]
 permalink: /java/glassfish/v3/
 date: 2014-02-11 22:45:33
 comments: true
-share: true
+share: false
 revision: 0
 ---
 
