@@ -9,7 +9,6 @@ permalink: /java/jdk/jarsigner/keytool/
 date:   2011-04-24 22:45:33
 comments: true
 share: false
-revision: 0
 ---
 
 To extract a certificate that we already know is on our keyring

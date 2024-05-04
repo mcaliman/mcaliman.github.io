@@ -9,7 +9,6 @@ date:   2017-06-15 22:45:33
 modified: 2017-06-15 22:45:33
 comments: true
 share: false
-revision: 0
 ---
 
 > “An algorithm must be seen to be believed.”

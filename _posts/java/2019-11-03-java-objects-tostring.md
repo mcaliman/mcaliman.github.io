@@ -9,9 +9,8 @@ tags: ["Programming Languages","Java"]
 comments: true
 share: false
 search_omit: false
-updated: true
-revision: 0
 ---
+
 If you have 'stuff' like this in your code 
 ```java
 string == null ? "" : string;

@@ -8,8 +8,6 @@ tags: ["Programming Languages","Java"]
 permalink: /java/essential-features/
 date:   2003-01-01 22:45:33
 comments: true
-share: false
-revision: 0
 ---
 
 If you want Java to become your main programming language, you should familiarize yourself with the following essential aspects, which are common to all object oriented programming languages:

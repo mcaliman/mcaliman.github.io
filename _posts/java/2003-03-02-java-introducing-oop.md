@@ -9,7 +9,6 @@ permalink: /java/oop/introducing/
 date:   2003-03-02 22:45:33
 comments: true
 share: false
-revision: 0
 --- 
 
 > Any fool can write code that a computer can understand. Good programmers write code that humans can understand.

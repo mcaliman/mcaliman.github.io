@@ -8,10 +8,7 @@ date:   2014-11-16 22:45:33
 tags: ["Programming Languages","Java","JavaServer Faces"]
 comments: false
 share: false
-revision: 0
 ---
-
-
 
 Granted, it is always possible to use the classic comment tags `<!--` and `-- >` in html but these are rendered by default, and in case the commented code is a hidden feature for the released, not yet official, release or a part of EL or JSF tags this could be awkward if not a security hole.
 

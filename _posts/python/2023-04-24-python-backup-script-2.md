@@ -9,8 +9,6 @@ modified: 2023-04-24
 comments: true
 share: false
 search_omit: false
-updated: true
-revision: 0
 ---
 
 Like me, have you also accumulated many bash scripts over the years to automate operations on your systems?

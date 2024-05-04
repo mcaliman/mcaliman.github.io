@@ -9,8 +9,6 @@ tags: ["Programming Languages","Java"]
 comments: true
 share: false
 search_omit: false
-updated: true
-revision: 0
 ---
 
 Lambdas and steams are not exotic objects to be used in complex algorithms within the reach only of researchers locked away in the labs of a multinational corporation.

@@ -8,7 +8,6 @@ date:   2015-01-04 22:45:33
 tags: ["Programming Languages","Java","JavaServer Faces"]
 comments: true
 share: false
-revision: 0
 ---
 In this post we see how to implement a minimal login system with basic security in a Java Server Faces 2.2 application.
 

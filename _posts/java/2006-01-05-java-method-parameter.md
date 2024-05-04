@@ -9,7 +9,6 @@ tags: ["Programming Languages","Java"]
 permalink: /java/parameters/
 comments: true
 share: false
-revision: 0
 ---
 
 In the most general form, a method is characterized by one or more formal parameters.

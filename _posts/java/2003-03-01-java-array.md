@@ -10,7 +10,6 @@ tags: ["Programming Languages","Java"]
 permalink: /java/array/
 comments: true
 share: false
-revision: 0
 ---
 
 
