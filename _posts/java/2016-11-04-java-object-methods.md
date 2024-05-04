@@ -9,12 +9,7 @@ tags: ["Programming Languages","Java"]
 comments: true
 share: false
 search_omit: false
-updated: true
-revision: 0
 ---
-
-
-
 
 One of the questions you may be asked at an interview or certification or a simple test concerning the Java language is the following:
 What are the methods of the `Object` class?

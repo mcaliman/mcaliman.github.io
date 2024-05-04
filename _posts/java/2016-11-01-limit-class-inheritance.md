@@ -8,9 +8,6 @@ category: "Java"
 tags: ["Programming Languages","Java"]
 comments: true
 share: false
-search_omit: false
-updated: true
-revision: 0
 ---
 One of the questions you might get at an interview or a certification or a simple test concerning the Java language is the following:
 How can you limit inheritance for a class?

@@ -9,7 +9,6 @@ permalink: /python/tuple/swap-variables/
 date:   2014-09-01 22:45:33
 comments: true
 share: false
-revision: 0
 ---
 
 Has it ever occurred to you to write something like this?

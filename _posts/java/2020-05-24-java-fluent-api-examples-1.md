@@ -9,8 +9,6 @@ tags: ["Programming Languages","Java"]
 comments: true
 share: false
 search_omit: false
-updated: true
-revision: 0
 ---
 
 

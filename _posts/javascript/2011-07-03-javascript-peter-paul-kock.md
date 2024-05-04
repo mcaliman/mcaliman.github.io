@@ -11,7 +11,7 @@ share: false
 revision: 0
 ---
 
-> “If you have a procedure with ten parameters, you probably missed some.”
+> "If you have a procedure with ten parameters, you probably missed some."
 >
 > – Alan Perlis  
 
