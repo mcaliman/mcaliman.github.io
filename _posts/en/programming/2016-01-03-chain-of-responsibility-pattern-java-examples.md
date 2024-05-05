@@ -4,7 +4,7 @@ lang: en
 title: "The Chain Of Responsibilityeton design pattern"
 excerpt: "Minimal CoF pattern example code"
 modified: 2016-01-03
-category: "Software Engineering"
+category: Programming
 tags: [Java, "Design Pattern"]
 comments: true
 share: false

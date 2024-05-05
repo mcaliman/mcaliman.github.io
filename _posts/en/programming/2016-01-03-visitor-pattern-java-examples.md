@@ -4,7 +4,7 @@ lang: en
 title: "Design Pattern Visitor"
 excerpt: ""
 modified: 2016-01-03
-category: "Software Engineering"
+category: Programming
 tags: [Design Pattern]
 comments: true
 share: false
