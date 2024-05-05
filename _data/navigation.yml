@@ -15,11 +15,11 @@
   url: /search/
 - title: JUG
   url: /jug/  
-- title: Privacy Policy (En)
+- title: Privacy Policy
   url: /privacy-policy-en/
-- title: Privacy Policy (It)
-  url: /privacy-policy-it/  
-- title: Cookie Policy (En)
+#- title: Privacy Policy (It)
+#  url: /privacy-policy-it/  
+- title: Cookie Policy
   url: /cookie-policy-en/
-- title: Cookie Policy (It)
-  url: /cookie-policy-it/  
+#- title: Cookie Policy (It)
+#  url: /cookie-policy-it/  
