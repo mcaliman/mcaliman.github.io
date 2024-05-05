@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "MySQL: A problem when restoring a MySQL database..."
 excerpt: ""
-category: Databases
+category: MySQL
 date:   2010-01-01 22:45:33
 tags: [MySQL]
 comments: true

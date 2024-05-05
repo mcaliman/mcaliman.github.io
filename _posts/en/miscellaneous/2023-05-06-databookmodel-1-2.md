@@ -3,7 +3,7 @@ layout: post
 lang: en
 title: "The Data Model Resource Book Vol 1 & 2"
 excerpt: "About the series book..."
-category: Databases
+category: Miscellaneous
 date: 2023-05-06 05:11:55
 modified: 2023-05-13 05:11:55
 tags: ["Data Engineering"]

@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Big Data, Data Science, Databases the fundamentals #1"
 excerpt: "When we talk about Big Data, we are talking about an evolution of databases.."
-category: Databases
+category: Miscellaneous
 date:   2016-05-01 22:45:33
 tags: ["Data Science","Big Data","Database"]
 comments: false
