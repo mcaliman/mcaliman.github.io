@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Tree in Java"
 excerpt: ""
-category: "Data Structures And Algorithms"
+category: Programming
 date:   2014-10-05 22:45:33
 tags: ["Data Structures"]
 comments: true

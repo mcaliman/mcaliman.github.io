@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Tree Linked List"
 excerpt: ""
-category: "Data Structures And Algorithms"
+category: Programming
 date:   2014-10-07 22:45:33
 tags: ["Computer Science"]
 comments: true

@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Stack"
 excerpt: ""
-category: "Data Structures And Algorithms"
+category: Programming
 date:   2014-09-30 22:45:33
 tags: ["Data Structures"]
 comments: true

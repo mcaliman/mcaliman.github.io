@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Java Dictionaries"
 excerpt: "The Java implementation of Dictionaries"
-category: "Data Structures And Algorithms"
+category: Programming
 date:   2014-09-24 22:45:33
 tags: [Java,"Data Structures","Computer Science"]
 comments: true

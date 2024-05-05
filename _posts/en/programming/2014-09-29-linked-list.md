@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Linked List"
 excerpt: ""
-category: "Data Structures And Algorithms"
+category: Programming
 date:   2014-09-29 22:45:33
 tags: ["Data Structures","Computer Science","Java"]
 comments: true
