@@ -6,7 +6,7 @@ excerpt: "Python script to zip GlassFish logs and archive them by year and month
 category: "Python"
 tags: ["Programming Languages","Python"]
 modified: 2023-04-24
-comments: true
+comments: false
 share: false
 search_omit: false
 ---

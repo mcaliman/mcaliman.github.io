@@ -6,9 +6,8 @@ excerpt: ""
 category: "R" 
 tags: ["R","Programming Languages"]
 date:   2016-01-20 22:45:33
-comments: true
+comments: false
 share: false
-revision: 0
 ---
 
 > Computer Science is no more about computers than astronomy is about telescopes.

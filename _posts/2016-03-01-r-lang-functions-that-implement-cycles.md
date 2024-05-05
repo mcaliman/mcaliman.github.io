@@ -6,9 +6,8 @@ excerpt: ""
 category: "R" 
 tags: ["R","Programming Languages"]
 date:   2016-03-01 22:45:33
-comments: true
+comments: false
 share: false
-revision: 0
 ---
 
 ## Command-Line Loops

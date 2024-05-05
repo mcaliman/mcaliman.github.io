@@ -8,7 +8,7 @@ revised: true
 category: "Cobol" 
 tags: ["Cobol","Programming Languages"]
 permalink: /cobol/overview/
-comments: true
+comments: false
 share: false
 ---
 

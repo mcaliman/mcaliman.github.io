@@ -8,7 +8,7 @@ tags: ["Programming Languages","Python"]
 permalink: /python/restore-remote-database-backup/
 date: 2020-12-19
 modified: 2020-12-19
-comments: true
+comments: false
 share: false
 search_omit: false
 ---

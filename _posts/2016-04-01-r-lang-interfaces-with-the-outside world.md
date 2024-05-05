@@ -6,9 +6,8 @@ excerpt: ""
 category: "R" 
 tags: ["R","Programming Languages"]
 date:   2016-04-01 22:45:33
-comments: true
+comments: false
 share: false
-revision: 0
 ---
 
 Data are read via connection interfaces . Connections can be to files or urls for example .
