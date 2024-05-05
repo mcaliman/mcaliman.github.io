@@ -3,12 +3,12 @@ layout: post
 lang: en
 title:  "Monads: A First Definition"
 excerpt: ""
-category: "Theoretical Computer Science"
-date:   2024-04-27 06:42:33
-tags: ["Computer Science"]
-comments: true
+category: Computer Science
+date: 2024-04-27 06:42:33
+modified: 2024-05-05 06:42:33
+tags: Functional Programming
+comments: false
 ---
-
 
 In the world of functional programming, monads can be defined as **algebraic structures that encapsulate values and computations, providing a coherent interface for the management of computational contexts**. 
 
