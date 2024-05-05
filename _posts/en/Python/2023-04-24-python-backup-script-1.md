@@ -8,7 +8,6 @@ tags: ["Programming Languages","Python"]
 modified: 2023-04-25
 comments: false
 share: false
-search_omit: false
 ---
 
 Like me, have you also accumulated many bash scripts over the years to automate operations on your systems?

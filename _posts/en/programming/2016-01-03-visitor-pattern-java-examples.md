@@ -8,9 +8,6 @@ category: Programming
 tags: [Design Pattern]
 comments: true
 share: false
-search_omit: false
-updated: true
-revision: 0
 ---
 
 You can find an example project on github at this address:

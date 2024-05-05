@@ -9,8 +9,8 @@ permalink: /python/download-remote-files/2/
 modified: 2019-03-19
 comments: false
 share: false
-search_omit: false
 ---
+
 In the previous post, we saw how to download generic files remotely with python. In this post, let's consider instead that the files are compressed files (.gz) containing, for example, the sql dumps of some of our databases, in order to restore them locally we also need to decompress them. The code has some limitations, such as that each file of type filename.sql.gz only contains the file filename.sql.
 There are various options to perform this operation, including calling gzip in a shell, in the code below we adopt a 'native' solution using the gzip library which allows us to unzip and shutil which provides a way to save our unzipped file.
 

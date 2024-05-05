@@ -9,7 +9,6 @@ date: 2020-06-13
 modified: 2020-06-14
 comments: false
 share: false
-search_omit: false
 ---
 
 Open terminal via Ctrl+Alt+T. When it opens, run command:

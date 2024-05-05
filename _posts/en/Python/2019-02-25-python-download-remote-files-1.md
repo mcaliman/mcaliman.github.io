@@ -9,8 +9,8 @@ permalink: /python/download-remote-files/1/
 modified: 2019-02-25
 comments: false
 share: false
-search_omit: false
 ---
+
 There are recurring operations that we continue to perform even on a daily basis just because we are too lazy to automate them or because between a thousand work commitments we repeat to ourselves the matra 'it only takes me five minutes'. But it is precisely because we are 'lazy' that we should try to avoid these operations, which, besides being boring, can take up to 25 minutes of work in a working week, minutes that could be used, for example, to catch up on a much more important task, or to carry out the refactoring that we continue to postpone.
 
 The code shown below allows us, for example, to download all the logs of our application server, in order to analyse them, or to download the dumps of our production databases in order to restore them (again automatically) on our development system.

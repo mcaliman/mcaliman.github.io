@@ -9,7 +9,6 @@ permalink: /scala/overview/
 modified: 2019-03-03
 comments: false
 share: false
-search_omit: false
 ---
 
 

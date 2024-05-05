@@ -8,7 +8,6 @@ category: "Java"
 tags: ["Programming Languages","Java"]
 comments: true
 share: false
-search_omit: false
 ---
 
 If you have 'stuff' like this in your code 

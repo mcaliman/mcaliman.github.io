@@ -9,7 +9,6 @@ category: "Java"
 tags: ["Programming Languages","Java"]
 comments: true
 share: false
-search_omit: false
 ---
 
 Does Java have an implementation for complex numbers? No, it doesn’t have a dedicated Class. It’s strange but not all that strange (Complex Number implementation is trivial), the JDK does not have one but here is an implementation I have written: 
