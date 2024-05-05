@@ -6,10 +6,8 @@ excerpt: ""
 category: "R" 
 tags: ["R","Programming Languages"]
 date:   2016-01-10 22:45:33
-
-comments: true
+comments: false
 share: false
-revision: 0
 ---
 
 > “When debugging, novices insert corrective code; experts remove defective code.”

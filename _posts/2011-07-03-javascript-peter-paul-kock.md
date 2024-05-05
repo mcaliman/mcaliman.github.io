@@ -3,12 +3,10 @@ layout: post
 lang: en
 title:  "Javascript according to Peter Paul Kock (PPK)"
 excerpt: ""
-category: "JavaScript"
-date:   2011-07-03 22:45:33
-tags: [JavaScript]
-comments: true
-share: false
-revision: 0
+category: javascript
+date: 2011-07-03 22:45:33
+tags: 
+comments: false
 ---
 
 > "If you have a procedure with ten parameters, you probably missed some."

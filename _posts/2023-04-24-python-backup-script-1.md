@@ -6,7 +6,7 @@ excerpt: "Copy a list of directories with their contents to a shared folder."
 category: "Python"
 tags: ["Programming Languages","Python"]
 modified: 2023-04-25
-comments: true
+comments: false
 share: false
 search_omit: false
 ---

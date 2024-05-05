@@ -6,9 +6,8 @@ excerpt: "Managing the programme execution flow with R"
 category: "R" 
 tags: ["R","Programming Languages"]
 date:   2016-01-15 22:45:33
-comments: true
+comments: false
 share: false
-revision: 0
 ---
 
 Control structures in R allow the flow of program execution to be controlled according to runtime conditions in a manner not unlike any other imperative language (such as C, Java, Python), let's take a quick look at the reserved words dedicated to control structures

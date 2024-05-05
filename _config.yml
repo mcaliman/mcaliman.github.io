@@ -18,9 +18,9 @@ remote_theme: mmistakes/so-simple-theme
 skin: "/assets/css/skins/default.css"
 locale: en-US
 title: "True Programming"
-description: "Massimo Caliman's Blog On Computer Science."
+description: "Massimo Caliman's Blog On Computer Science"
 
-copyright: © 1999 2024 Massimo Caliman - All Rights Reserved - Powered by Jekyll & So Simple.
+copyright: © 1999, 2024 Massimo Caliman - All Rights Reserved - Powered by Jekyll & So Simple.
 
 baseurl: # the subpath of your site, e.g. "/blog"
 url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -48,7 +48,8 @@ liquid:
   error_mode: strict
 
 # Build settings
-permalink: /:title/ # /:categories/:title/
+#permalink: /:title/ # /:categories/:title/
+permalink: /:categories/:title/
 markdown: kramdown
 feed:
   path: atom.xml
