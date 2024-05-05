@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "My thoughts on programming languages Part 2"
 excerpt: "Personal reflections on programming languages"
-category: "Programming Languages"
+category: Programming
 date:   2014-07-10 22:45:33
 tags: ["Programming Languages","Computer Science"]
 comments: true
