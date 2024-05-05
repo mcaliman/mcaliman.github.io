@@ -3,7 +3,7 @@ layout: post
 lang: en
 title: "The programming language Scala"
 excerpt: ""
-category: "Scala" 
+category: Programming 
 tags: ["Scala","Programming Languages"]
 permalink: /scala/overview/
 modified: 2019-03-03

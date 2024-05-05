@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Date, time and interval objects in R"
 excerpt: ""
-category: "R" 
+category: Programming 
 tags: ["R","Programming Languages"]
 date:   2016-02-10 22:45:33
 comments: false

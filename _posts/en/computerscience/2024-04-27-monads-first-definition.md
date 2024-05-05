@@ -6,7 +6,7 @@ excerpt: ""
 category: Computer Science
 date: 2024-04-27 06:42:33
 modified: 2024-05-05 06:42:33
-tags: Functional Programming
+tags: "Functional Programming","Monads"
 comments: false
 ---
 
