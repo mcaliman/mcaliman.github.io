@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Computer Architecture: what is it?"
 excerpt: "Computer architecture is a branch of computer science that studies the design and implementation of information processing systems"
-category: "Computer Science"
+category: Programming
 date:   2014-09-23 22:45:33
 tags: ["Computer Science","Computer Architecture","Computer Architecture Definition","Computer Architecture Topics","Computer Architecture Textbooks","Andrew Stuart Tanenbaum"]
 comments: true

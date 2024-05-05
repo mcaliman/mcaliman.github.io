@@ -3,7 +3,7 @@ layout: post
 lang: en
 title: "What is an expert system?"
 excerpt: ""
-category: "Computer Science"
+category: Programming
 date:   2023-08-11 22:45:33
 modified: 2023-08-11 22:45:33
 tags: ["Expert Systems"]

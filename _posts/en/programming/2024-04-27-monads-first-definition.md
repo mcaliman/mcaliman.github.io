@@ -3,7 +3,7 @@ layout: post
 lang: en
 title:  "Monads: A First Definition"
 excerpt: ""
-category: Computer Science
+category: Programming
 date: 2024-04-27 06:42:33
 modified: 2024-05-05 06:42:33
 tags: "Functional Programming","Monads"
