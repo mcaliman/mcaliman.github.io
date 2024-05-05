@@ -5,13 +5,11 @@ title:  "Explore the World of Artificial Intelligence"
 excerpt: "Five Websites to Boost Your Productivity and Creativity"
 category: Artificial Intelligence
 seo_tags:
-  - category: ai
 date: 2023-05-15 05:45:33
-tags: [Artificial Intelligence]
+tags:
 comments: true
 share: false
 updated: true
-revision: 0
 ---
   
 > If you think your users are idiots, only idiots will use it.
