@@ -3,7 +3,7 @@ layout: post
 lang: en
 title: "How to delete the command history on Linux."
 excerpt: ""
-category: "Operating Systems"
+category: Unix
 date:   2000-01-01 22:45:33
 modified: 2016-01-01 22:45:33
 tags: ["Linux"]
