@@ -67,7 +67,7 @@ checking if any p has key k if so we return the element found otherwise `null
 To realise an implementation in Java from the specification seen above we first need to create a class to model the records, but to do this we also need to model the information content with an Info or Tuple class, let us simplify at this early stage and assume that both the key (integer) and the value (string) are attributes of the record class itself. 
 
 In other words, we avoid handling something like this
-``java
+```java
 public class Tuple<K,V> {
     public K key;
     public V value;
