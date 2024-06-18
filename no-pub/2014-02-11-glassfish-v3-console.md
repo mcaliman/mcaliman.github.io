@@ -9,7 +9,7 @@ permalink: /java/glassfish/v3/
 date: 2014-02-11 22:45:33
 comments: true
 share: false
-revision: 0
+published: false
 ---
 
 Is the GlassFish V3 administration console taking too long to load?

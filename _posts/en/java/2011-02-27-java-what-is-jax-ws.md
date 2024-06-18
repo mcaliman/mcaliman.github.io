@@ -9,6 +9,7 @@ permalink: /java/jax-ws/
 date:   2011-02-27 22:45:33
 comments: true
 share: false
+published: true
 ---
 
 JAX-WS stands for Java API for XML Web Services.

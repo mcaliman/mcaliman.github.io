@@ -6,6 +6,7 @@ permalink: /about/
 title: About me
 tags: [about]
 modified: 2013-09-13
+published: true
 ---
 
 Hello, I'm Massimo Caliman. 

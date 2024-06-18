@@ -9,6 +9,7 @@ tags: ["Programming Languages","Java"]
 permalink: /java/objects/
 comments: true
 share: false
+published: true
 ---
 
 From each class it is possible to obtain one or more entities through the instance, each of which constitutes one

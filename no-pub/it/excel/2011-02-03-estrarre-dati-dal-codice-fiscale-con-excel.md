@@ -8,6 +8,7 @@ date:   2011-02-03 22:45:33
 tags: [Italian,Italian Fiscal Code, Codice Fiscale]
 comments: true
 share: false
+published: false
 ---
 
 Assumiamo che il nostro codice fiscale sia contenuto nella cella A1.

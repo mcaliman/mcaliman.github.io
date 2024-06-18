@@ -9,6 +9,7 @@ tags: ["Programming Languages","Java"]
 permalink: /java/variables/
 comments: true
 share: false
+published: true
 ---
 
 Let us first give a sufficiently formal definition for our purposes of a variable:

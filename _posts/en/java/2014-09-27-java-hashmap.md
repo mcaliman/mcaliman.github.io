@@ -9,6 +9,7 @@ tags: ["Programming Languages","Java","HashMap"]
 permalink: /java/hashmap/
 comments: true
 share: false
+published: true
 ---
 Picking up where we left off (see previous post), after seeing a bit of theory about dictionaries and something about the `Map` interface, let's move on to practical examples. We'll talk exclusively about the concrete class `HashMap`, the new, so to speak, `Hashtable`.
 

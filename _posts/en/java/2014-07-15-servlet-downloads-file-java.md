@@ -8,6 +8,7 @@ tags: ["Programming Languages","Java","Java Servlet API"]
 date:   2014-07-15 22:45:33
 comments: true
 share: false
+published: true
 ---
 Let's see in this post how to write the code for a Java Servlet that allows us to transfer (download) a file from our server application to the client (our users' web browser).
 Clicking on a link pointing to our servlet will initiate the download, we see the rather intuitive code in the lines below the post.

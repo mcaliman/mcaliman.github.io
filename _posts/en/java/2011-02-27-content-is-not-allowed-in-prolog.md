@@ -8,6 +8,7 @@ tags: ["Programming Languages","Java","XML","SAXParseException"]
 date:   2011-02-27 22:45:33
 comments: true
 share: false
+published: true
 ---
 Every XML document we work on should be formatted correctly, saved with the right encoding, etc.
 A classic case is the message "Content is not allowed in prolog" (`SAXParseException`).
