@@ -8,6 +8,7 @@ tags: [Java]
 date:   2012-01-01 22:45:33
 comments: true
 share: false
+published: false
 ---
 
 >Mentre in fisica devi capire come è fatto il mondo, in informatica sei tu a crearlo.Dentro i confini del computer, sei tu il creatore. Controlli – almeno potenzialmente – tutto ciò che vi succede. Se sei abbastanza bravo, puoi essere un Dio. Su piccola scala.(Linus Torvalds, Rivoluzionario per caso, 2001)

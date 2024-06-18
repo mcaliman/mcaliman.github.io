@@ -6,6 +6,7 @@ permalink: /jug/
 title: Java User Group List
 tags: ["Java User Group","JVM User Group"]
 modified: 2023-11-05
+published: true
 ---
 
 * [JVM User Group "JUG Genova"](https://www.juggenova.it/)

@@ -9,6 +9,7 @@ tags: ["Programming Languages","Java"]
 permalink: /java/methods/
 comments: true
 share: false
+published: true
 ---
 
 # Let's delve into methods in Java

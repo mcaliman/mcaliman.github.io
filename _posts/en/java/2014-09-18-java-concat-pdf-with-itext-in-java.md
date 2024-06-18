@@ -8,6 +8,7 @@ date:   2014-09-18 22:45:33
 tags: ["Programming Languages","Java","PDF","iText"]
 comments: true
 share: false
+published: true
 ---
 iText is definitely the most popular and complete library for processing PDF files, I highly recommend taking a look at it before evaluating other frameworks or reinventing hot water.
 

@@ -8,6 +8,7 @@ tags: ["Programming Languages","Java","JavaMail API"]
 date:   2014-07-14 22:45:33
 comments: true
 share: false
+published: true
 ---
 
 The javax.mail package is very rich, so at first it can be a bit confusing; we'll see in the code presented in this post how much this complexity pays off in flexibility and potential. True, I don't have a simple mail() method as in other languages, but I do have the tools to create a respectable mail server as well (but we'll go into this in a later post, regarding the simple mail() method we can also create it from the API as we'll see and it will be tailored to our needs)

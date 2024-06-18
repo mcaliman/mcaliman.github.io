@@ -1,5 +1,3 @@
-# Welcome to Jekyll!
-#
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
 # yourself editing this file very often, consider using Jekyll's data files
@@ -7,7 +5,7 @@
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
+#
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
@@ -19,11 +17,9 @@ skin: "/assets/css/skins/default.css"
 locale: en-US
 title: "True Programming"
 description: "Massimo Caliman's Blog On Computer Science"
-
 copyright: © 1999, 2024 Massimo Caliman - All Rights Reserved - Powered by Jekyll & So Simple.
-
 baseurl: # the subpath of your site, e.g. "/blog"
-url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url:     # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: /images/logo.jpg 
 date_format: "%d/%m/%Y" #"%B %-d, %Y"
 read_time: true 
@@ -31,25 +27,26 @@ words_per_minute: 200
 mathjax:
   enable: # MathJax equations, e.g. true, false (default)
   combo:  # "tex-svg" (default), "tex-mml-chtml", etc.: docs.mathjax.org/en/latest/web/components/combined.html
-  tags:  # "none", "ams" (default), "all"
+  tags:   # "none", "ams" (default), "all"
 google_fonts:
   - name: "Source Sans Pro"
     weights: "400,400i,700,700i"
   - name: "Lora"
     weights: "400,400i,700,700i"
-google_analytics: # G-KNVE7KY3LB  # Google Analytics id, e.g. "UA-NNNNNNNN-N"
+# G-KNVE7KY3LB  # Google Analytics id, e.g. "UA-NNNNNNNN-N"
+google_analytics: 
+# Disqus shortname, e.g. "my_disqus_shortname"
 disqus:
-  shortname: # Disqus shortname, e.g. "my_disqus_shortname"
+  shortname: 
+# site's Twitter username, e.g. "mmistakes"
 twitter:
-  username: mcaliman # site's Twitter username, e.g. "mmistakes"
-
-# Liquid
+  username: mcaliman 
 liquid:
   error_mode: strict
 
 # Build settings
-#permalink: /:title/ # /:categories/:title/
-permalink: /:categories/:title/
+permalink: /:title/
+#permalink: /:categories/:title/
 markdown: kramdown
 feed:
   path: atom.xml
@@ -85,9 +82,9 @@ plugins:
   - jekyll-feed
  # - jekyll-paginate
 
-# Front Matter Defaults
+# front matter defaults
 defaults:
-  # Posts defaults
+  # posts defaults
   - scope:
       path: "_posts"
       type: posts
@@ -95,7 +92,6 @@ defaults:
       layout: post
       share: false
 
-# Site Author
 author:
   name: Massimo Caliman
   picture: /images/mcaliman.jpg
@@ -118,7 +114,6 @@ author:
       url: https://mcaliman.medium.com
       icon: fab fa-medium
 
-# Footer Links
 footer_links:
   - title: Feed
     url: atom.xml
