@@ -20,13 +20,15 @@ published: false
 * mcaliman@gmail.com
 
 
-# Background
+## Background
 
 Software Developer and Business Analyst since 1997. 
 Solid experiences as a CTO, developer and analyst for insurance companies, insurance brokers,finance companies and private companies.
 More than 20 years of enterprise experiences in development of ERP, CMS, LMS projects.
 
 Java User Group User CoFounder based in Genova.
+
+## Skills
 
 Programming Languages:I have extensive experience in Java, SQL, Unix shell scripting,
 I also have experience in Javascript,Python and R and others many languages such as C,C++,C#,
@@ -40,7 +42,7 @@ Databases (RDBMS): IBM DB2 UDB/400, Oracle Database 8i, Microsoft SQL Server 7/2
 
 Java technologies,fameworks and libraries: Servlets, JSP, JSF, EJB, JMS, JPA, JDBC,JAXB,JAX-WS, JavaMail API, Jakarta Struts,Apache POI, iText, Hibernate, Eclipse TopLink. JUnit.
 
-Techniques: UML, Unified Process.
+Techniques/methodologies: UML, Unified Process, XP, DDD, Agile.
 
 Other slightly dated technologies and languages that I have worked on during my career: XHTML, Apache Torque, Apache Turbine, Apache Jetspeed, Apache Lucene, Microsoft Visual Basic 6.0, UCSD Pascal, Borland Turbo Pascal, Microsoft Active Server Pages.
 
@@ -48,22 +50,16 @@ Operative systems: Linux (Ubuntu),Unix (Solaris),OS/400.
 
 Microprocessors and microcontrollers: Zilog Z80,micro ST6, SPARC processors.
 
+## Work Experience
 
- 
+### Chief Technology Officer & Software Architect - Methis Lab S.p.A   Jan 2018 - Present 
 
+### Software Development Manager - BDA Euro Brokers s.r.l  June 2017 - Dec 2017 
 
-# Work Experience
-
-**Chief Technology Officer & Software Architect** - Methis Lab S.p.A  
-Jan 2018 - Present 
-
-**Software Development Manager** - BDA Euro Brokers s.r.l  
-June 2017 - Dec 2017  
 Software Development Manager for an Insurance Broker, designing, projecting and implementing B2B Portals dedicated to Insurance market.
 Principal technologies used: Java 8 Enterprise Edition, Java Server Faces 2.0, EJB, Oracle MySQL, Oracle Glassfish 4.1.
 
-**Chief Technical Officer & Software Architect** - Sentosa s.r.l.   
-Feb 2012 - May 2017 
+### Chief Technical Officer & Software Architect - Sentosa s.r.l. Feb 2012 - May 2017 
 Chief Technology Officer & Software Architect for a Company which leads in IT and Financials Consultancy Services, mainly experienced on Employee Loan Programs (“Cessione del quinto”) and Java Enterprise (Insurance and others) Application Development
 Principal technologies used: Java Enterprise Edition, Java Server Faces, EJB, Oracle MySQL, Oracle Glassfish 4.1.
 
@@ -122,7 +118,7 @@ May 1995 - May 1996
 Civil service at Social Service Office, Municipality of Mignanego. Not Only did I take care of Social and Minors Problems, but I solved administrative and operating matters, improving and adapting IT services to Administration needs.
 Principal technologies used: Microsoft Office Automation
 
-# Education
+## Education
 
 Istituto tecnico Don Bosco di Genova
 Diploma di Perito Industriale Capotecnico per l’Elettronica, Graduated High School of Electronic Engineering and Computer Science.  
@@ -130,7 +126,7 @@ Diploma di Perito Industriale Capotecnico per l’Elettronica, Graduated High Sc
 Votazione: 58/60 (A+)  
 
 
-# Talk
+## Talk
 
 **A Comprehensive Review of E-R Models Across Industries: Unveiling the Value of Len Silverston's "The Data Model Resource Book" Volumes 1, 2, and 3**   
 Jan 2024 - Jan 2024  
@@ -160,7 +156,7 @@ May 2003 - May 2003
 
 
 
-# Certification/Courses
+## Certification/Courses
 
 **AI Prompt EngineeringAI Prompt Engineering** - Udemy   
 Data di rilascio: May 2024
@@ -245,43 +241,8 @@ Associato a Istituto tecnico Don Bosco di Genova
 Associato a Istituto tecnico Don Bosco di Genova   
 
 
-# SKILLS
-Java,Tomcat,MySQL,Linux, JEE, DDD, Web Services, Apache, UML, C#, Ubuntu
 
-Websphere,
-Spring,
-Python,
-C++ 
-Visual Basic
-
-ERP
-
-Software Project Management
-
-DB2
-
-IBM iSeries
-
-SharePoint
-
-Big data
-
-General Insurance
-
-Automation
-
-Access Control
-
-Automotive
-
-R
-
-Alfresco
-
-Software Architecture
-
-
-# Articoli/pubblicazioni
+## Articles
 
 **Java e il protocollo UDP**  
 CoAuthor of "Java e il protocollo UDP" Mar 2000 
@@ -292,10 +253,10 @@ published by Mokabyte (www.mokabyte.it) Java Advanced category.
 CoAuthor of "Un package per il debugging in Java" Dec 1999  
 published by Mokabyte (www.mokabyte.it) Java Advanced category .  
 
-# Languages
+## Languages
 English and Italian 
 
-# Organization
+## Organization
 
 **Google Developers Group (GDG) Genova**   
 Member · May 2013 - Present  
@@ -306,5 +267,5 @@ Member · Jan 2012 - Present
 **Java User Group Genova**
 CoFounder · Jan 2005 - Present  
 
-# References
+## References
 Available on Linkedin
