@@ -9,7 +9,7 @@ tags: [Design Pattern]
 comments: true
 share: false
 updated: true
-revision: 0
+published: true
 ---
 
 The Singleton is probably the simplest pattern, some languages like Scala provide 

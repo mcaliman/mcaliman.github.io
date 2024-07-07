@@ -8,7 +8,7 @@ date:   2014-09-23 22:45:33
 tags: ["Machine Learning"]
 comments: true
 share: false
-revision: 1
+published: true
 ---
 
 

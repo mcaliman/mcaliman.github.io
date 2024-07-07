@@ -9,6 +9,7 @@ modified: 2017-08-15 22:45:33
 tags: ["Programming Languages","Java","JDK","wsimport"]
 comments: true
 share: false
+published: true
 ---
 
 Update 2017: With NetBeans 8.2 the problem below seems to be handled completely transparently by the class generation procedure from the wsdl (wizard of NB8.2).

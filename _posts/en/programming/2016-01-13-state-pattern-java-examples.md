@@ -8,6 +8,7 @@ category: Programming
 tags: ["Java","Design Pattern","Design Patterns State"]
 comments: true
 share: false
+published: true
 ---
 
 You can find an example project on github at this address:

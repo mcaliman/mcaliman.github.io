@@ -8,7 +8,7 @@ date:   2014-01-01 22:45:33
 tags: [CMS]
 comments: true
 share: false
-revision: 0
+published: true
 ---
 
 If you want to publish the site at `http://USERNAME.github.com`, you need to create a repository (from your GitHub account) 

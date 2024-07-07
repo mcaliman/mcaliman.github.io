@@ -8,6 +8,7 @@ tags: ["Programming Languages","Java"]
 date: 2023-02-07 05:11:55
 comments: true
 share: false
+published: true
 ---
  
 The `toString` method is a fundamental method of the `Object` class in Java. This method returns a textual representation of the object.

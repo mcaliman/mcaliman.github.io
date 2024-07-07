@@ -7,7 +7,7 @@ modified: 2016-01-03
 category: Programming
 tags: [Design Pattern]
 comments: true
-share: false
+published: true
 ---
 
 You can find an example project on github at this address:

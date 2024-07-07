@@ -9,6 +9,7 @@ date:   2016-10-01 22:45:33
 modified: 2016-10-01 22:45:33
 comments: false
 share: false
+published: true
 ---
 
 The script in question is nothing special but shows the convenience of using R when it comes to manipulating data and creating scripts or prototypes. Download the two droptime files from the nic and check whether it contains the domain we are interested in.

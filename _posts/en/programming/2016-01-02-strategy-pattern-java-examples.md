@@ -9,7 +9,7 @@ tags: [Java, "Design Pattern"]
 comments: true
 share: false
 updated: true
-revision: 0
+published: true
 ---
 
 The Strategy pattern is one of the patterns I use most frequently. 

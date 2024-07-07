@@ -8,6 +8,7 @@ category: "Java"
 tags: ["Programming Languages","Java"]
 comments: true
 share: false
+published: true
 ---
 
 Immutable objects are instances whose state does not change after they have been initialised. For example `String` is an immutable class, and once instantiated with its value it no longer changes.

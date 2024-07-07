@@ -8,7 +8,7 @@ seo_tags:
 date: 2023-05-15 05:45:33
 tags:
 comments: true
-share: false
+published: true
 ---
   
 > If you think your users are idiots, only idiots will use it.

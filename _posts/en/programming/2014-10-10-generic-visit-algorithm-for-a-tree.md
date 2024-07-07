@@ -8,7 +8,7 @@ date:   2014-10-10 22:45:33
 tags: ["Data Structures","Algorithms"]
 comments: true
 share: false
-revision: 0
+published: true
 ---
 
 One of the most common tasks to be performed on a tree is to perform a visit to it, i.e. to review each of its nodes. By the natural language term 'reviewing' we mean 'applying some function' to the node under examination, even if it is simply printing on the screen that it has been visited.

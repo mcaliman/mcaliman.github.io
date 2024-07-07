@@ -8,7 +8,7 @@ date:   2014-09-29 22:45:33
 tags: ["Data Structures","Computer Science","Java"]
 comments: true
 share: false
-revision: 0
+published: true
 ---
   
 The basic constituents of a linked structure are the records, which like array cells are numbered and each contains a collection of objects. The numbers associated with the records are their in-memory addresses (thus global within the programme and not local as in the case of arrays).

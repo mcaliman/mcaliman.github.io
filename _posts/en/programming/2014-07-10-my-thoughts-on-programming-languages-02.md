@@ -8,7 +8,7 @@ date:   2014-07-10 22:45:33
 tags: ["Programming Languages","Computer Science"]
 comments: true
 share: false
-revision: 0
+published: true
 ---
 
 Java is representative of what I would call industrial/enterprise category languages. These types of programming languages are optimal for applications with several people working on the project. In this type of project, being formal and careful can have a considerable impact.

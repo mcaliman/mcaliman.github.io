@@ -8,7 +8,7 @@ date:   2014-10-07 22:45:33
 tags: ["Computer Science"]
 comments: true
 share: false
-revision: 0
+published: true
 ---
 Continuing with the discussion of trees, representations based on linked structures are normally preferred 
 

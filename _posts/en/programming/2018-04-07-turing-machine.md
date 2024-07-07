@@ -10,7 +10,7 @@ tags: ["Turing Machine"]
 comments: true
 share: false
 updated: true
-revision: 0
+published: true
 ---
   
 > Kleeneliness is next to Gödeliness 

@@ -7,7 +7,7 @@ category: Miscellaneous
 date:   2016-05-01 22:45:33
 tags: ["Data Science","Big Data","Database"]
 comments: false
-share: false
+published: true
 ---
    
 When we talk about Big Data, we are talking about an evolution of databases, but in a big way, or rather we are talking about a collection of data so extensive in terms of volume, speed and variety that it requires specific technologies and analytical methods for value extraction.

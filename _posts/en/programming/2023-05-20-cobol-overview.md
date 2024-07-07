@@ -10,6 +10,7 @@ tags: ["Cobol","Programming Languages"]
 permalink: /cobol/overview/
 comments: false
 share: false
+published: true
 ---
 
 > Computers are good at following instructions, but not at reading your mind.

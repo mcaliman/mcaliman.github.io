@@ -8,7 +8,7 @@ date:   2014-10-06 22:45:33
 tags: ["Computer Science"]
 comments: true
 share: false
-revision: 0
+published: true
 ---
 
 Indexed representations based on parent vector arrays and positional vectors both require `O(n)` space.
