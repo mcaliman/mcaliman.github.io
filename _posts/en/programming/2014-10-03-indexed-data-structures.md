@@ -8,7 +8,7 @@ date:   2014-10-03 22:45:33
 tags: ["Data Structures","Computer Science","Java"]
 comments: true
 share: false
-revision: 0
+published: true
 ---
 
 Let's pick up the post on indexed structures for a closer look.

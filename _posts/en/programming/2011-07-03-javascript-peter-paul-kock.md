@@ -7,6 +7,7 @@ category: Programming
 date: 2011-07-03 22:45:33
 tags: javascript
 comments: false
+published: true
 ---
 
 > "If you have a procedure with ten parameters, you probably missed some."

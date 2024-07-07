@@ -9,6 +9,7 @@ modified: 2017-07-25 19:45:33
 tags: ["Data Science"]
 comments: false
 share: false
+published: true
 ---
   
 The purpose of data analysis is to reduce uncertainty. 

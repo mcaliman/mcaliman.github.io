@@ -8,7 +8,7 @@ date:   2014-07-12 22:45:33
 tags: ["Programming Languages","Computer Science"]
 comments: true
 share: false
-revision: 0
+published: true
 ---
 
 # Why learn Python? 

@@ -8,7 +8,7 @@ date:   2015-05-01 22:45:33
 tags: ["Linux"]
 comments: true
 share: false
-revision: 0
+published: true
 ---
 
 > Part of the inhumanity of the computer is that, once it is competently programmed and working smoothly, it is completely honest. 

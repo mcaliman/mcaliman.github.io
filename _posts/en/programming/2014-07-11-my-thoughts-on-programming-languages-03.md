@@ -8,7 +8,7 @@ date:   2014-07-11 22:45:33
 tags: ["Programming Languages","Computer Science"]
 comments: true
 share: false
-revision: 0
+published: true
 ---
 
 In various online articles I have seen Java compared to 21st century COBOL, parallel PHP to 21st century VisualBasic, the opinion may fit in some contexts, Java has become the most widely used development language in the last 13 years, the pool of applications developed in this language will reach the critical mass of those developed in COBOL in the last 30 years, PHP is simple and the reason for the analogy with Visual Basic is obvious.

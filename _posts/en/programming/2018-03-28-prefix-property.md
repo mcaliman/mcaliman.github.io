@@ -8,7 +8,7 @@ date:   2018-03-28 22:45:33
 tags: ["Finite Automata","Finite-State Machine"]
 comments: true
 share: false
-revision: 0
+published: true
 ---
    
 > Kleeneliness is next to Gödeliness

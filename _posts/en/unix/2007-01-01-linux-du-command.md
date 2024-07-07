@@ -9,7 +9,7 @@ modified: 2023-03-19
 tags: ["Linux"]
 comments: true
 share: false
-revision: 0
+published: true
 ---
 
 The `du` command shows the disk space used.

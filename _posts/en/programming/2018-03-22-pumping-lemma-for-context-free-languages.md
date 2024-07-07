@@ -8,7 +8,7 @@ date:   2018-03-22 22:45:33
 tags: ["Context-Free Grammar","Pumping Lemma"]
 comments: true
 share: false
-revision: 0
+published: true
 ---
 
 > Kleeneliness is next to Gödeliness 

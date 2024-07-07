@@ -8,7 +8,7 @@ date:   2014-09-06 22:45:33
 tags: ["Computer Science"]
 comments: true
 share: false
-revision: 0
+published: true
 ---
 The following argument, due to L.J. Stockmeyer, is purely physical but
 clearly shows what is meant by the limits of the calculable:

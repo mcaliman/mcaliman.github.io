@@ -8,7 +8,7 @@ date:   2014-09-23 22:45:33
 tags: ["Computer Science","Computer Architecture","Computer Architecture Definition","Computer Architecture Topics","Computer Architecture Textbooks","Andrew Stuart Tanenbaum"]
 comments: true
 share: false
-revision: 0
+published: true
 ---
 
 Computer architecture is a branch of computer science that studies the design and implementation of information processing systems. It deals with how the physical components of a computer, such as the processor, memory, and input/output devices, interact with each other to execute programs.
