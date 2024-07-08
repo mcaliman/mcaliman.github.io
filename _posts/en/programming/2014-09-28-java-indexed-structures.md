@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Indexed structures"
 excerpt: ""
 category: Programming

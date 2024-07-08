@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Concatenating PDFs with iText in Java"
 excerpt: ""
 category: "Java"

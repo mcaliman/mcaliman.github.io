@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "Design Patterns State"
 excerpt: "Features and sample Java code reduced to the essentials"
 modified: 2016-01-30

@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Tree in Java"
 excerpt: ""
 category: Programming

@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "Working with Strings using Streams and Lambdas."
 excerpt: ""
 modified: 2022-01-12

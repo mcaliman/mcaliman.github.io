@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "Monads: A First Definition"
 excerpt: 
 category: Programming

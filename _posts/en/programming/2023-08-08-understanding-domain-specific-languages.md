@@ -1,6 +1,5 @@
 --- 
 layout: post
-lang: en
 title: "Understanding Domain Specific Languages"
 excerpt: ""
 category: Programming

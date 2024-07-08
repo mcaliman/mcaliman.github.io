@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "Can we execute code before the main(String[]) method ?"
 excerpt: ""
 modified: 2016-11-03

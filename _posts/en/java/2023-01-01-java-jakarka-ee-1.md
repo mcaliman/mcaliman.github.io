@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "The transition from Java EE to Jakarta EE"
 excerpt: "What you need to know"
 category: "Java"

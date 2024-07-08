@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "Fluent-API Tutorial"
 excerpt: "Different ways of implementing a Logo Language style turtle in Java."
 modified: 2020-05-24

@@ -1,6 +1,5 @@
 --- 
 layout: post
-lang: en
 title: "How to delete the command history on Linux."
 excerpt: ""
 category: Unix

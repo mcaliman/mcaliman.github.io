@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Trees indexed representations"
 excerpt: ""
 category: Programming

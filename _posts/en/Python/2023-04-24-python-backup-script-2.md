@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "I am replacing my old bash scripts with Python #2."
 excerpt: "Python script to zip GlassFish logs and archive them by year and month. The script deletes the files after zipping them."
 category: Python

@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "JSF 2 How to use comments"
 excerpt: ""
 category: "Java"

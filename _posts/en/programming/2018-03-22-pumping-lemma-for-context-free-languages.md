@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Pumping lemma for Context Free languages"
 excerpt: "The pumping lemma version for context-free languages"
 category: Programming

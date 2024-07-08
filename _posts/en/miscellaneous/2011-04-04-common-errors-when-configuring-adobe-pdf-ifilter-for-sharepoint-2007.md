@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Common errors when configuring Adobe PDF iFilter for SharePoint 2007"
 excerpt: ""
 category: Miscellaneous

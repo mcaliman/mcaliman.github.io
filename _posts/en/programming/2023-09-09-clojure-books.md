@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "A list of books on Clojure"
 excerpt: "A list of Clojure books that I think are great"
 modified: 2023-09-09

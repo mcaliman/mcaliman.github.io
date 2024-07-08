@@ -1,6 +1,5 @@
 --- 
 layout: post
-lang: en
 title: "C# null-coalescing operator in Java"
 excerpt: ""
 category: "Java"

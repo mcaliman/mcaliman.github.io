@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "Design Patterns Interpreter"
 excerpt: "Minimal example Java code on Interpreter pattern"
 modified: 2016-01-03

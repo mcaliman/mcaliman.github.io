@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "The Data Model Resource Book Vol 1 & 2"
 excerpt: "About the series book..."
 category: Miscellaneous

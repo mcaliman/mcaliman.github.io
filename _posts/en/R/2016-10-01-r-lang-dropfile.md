@@ -1,6 +1,5 @@
 --- 
 layout: post
-lang: en
 title: "Checking nic.it droptime files with R"
 excerpt: ""
 category: R 

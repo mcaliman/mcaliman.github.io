@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Prefix Property"
 excerpt: "Pushdown Automata (PDA) and language recognition problems with special features"
 category: Programming

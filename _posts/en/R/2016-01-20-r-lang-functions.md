@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Functions in R"
 excerpt: ""
 category: R 

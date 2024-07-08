@@ -1,9 +1,8 @@
 ---
 layout: post
-lang: en
-title:  "The CMS is dead, long live the Jekyll."
-excerpt: Jekyll
-category: Miscellaneous
+title:  The CMS is dead, long live the Jekyll
+excerpt: The title is provocative and borderline captious...
+category: Jekyll
 date:   2014-06-22 22:45:33
 comments: true
 share: false

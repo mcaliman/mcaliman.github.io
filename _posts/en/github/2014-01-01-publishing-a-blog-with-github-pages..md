@@ -1,9 +1,8 @@
 ---
 layout: post
-lang: en
 title:  "Publishing a website with GitHub Pages."
 excerpt: ""
-category: Unix
+category: github
 date:   2014-01-01 22:45:33
 comments: true
 share: false

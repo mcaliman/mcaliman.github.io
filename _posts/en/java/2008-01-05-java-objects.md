@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Objects in Java"
 excerpt: ""
 category: "Java"

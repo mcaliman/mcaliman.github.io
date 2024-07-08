@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Using Channels to Copy Files in Java"
 excerpt: ""
 category: "Java"

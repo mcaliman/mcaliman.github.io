@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Introduction to Machine Learning"
 excerpt: "Machine learning is a powerful technology that allows computers to learn from data without being explicitly programmed. It is used in a wide range of applications, including image recognition, text classification, and event prediction"
 category: Programming

@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Date, time and interval objects in R"
 excerpt: ""
 category: R 

@@ -1,6 +1,6 @@
 ---
 layout: post
-lang: en
+# lang: en
 title:  "Passing parameters in Java"
 excerpt: ""
 category: "Java"

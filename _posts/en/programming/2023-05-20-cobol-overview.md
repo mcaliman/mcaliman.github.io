@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "Cobol overview"
 excerpt: ""
 date: 2023-05-20 05:25:44

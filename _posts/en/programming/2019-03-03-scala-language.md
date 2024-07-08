@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "The programming language Scala"
 excerpt: ""
 category: Programming 

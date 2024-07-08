@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "My thoughts on programming languages Part 3"
 excerpt: "Personal reflections on programming languages"
 category: Programming

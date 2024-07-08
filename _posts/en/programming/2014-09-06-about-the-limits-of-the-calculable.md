@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "About the limits of the calculable"
 excerpt: ""
 category: Programming

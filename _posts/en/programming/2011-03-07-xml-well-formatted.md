@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Well Formatted referred to an XML document"
 excerpt: ""
 category: Programming

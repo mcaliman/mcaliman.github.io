@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Use of keytool and jarsigner"
 excerpt: ""
 category: "Java"

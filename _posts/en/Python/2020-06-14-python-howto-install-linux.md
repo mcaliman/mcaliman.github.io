@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "Install Python 3"
 excerpt: "How to install Python 3 in Linux/Ubuntu"
 category: Python

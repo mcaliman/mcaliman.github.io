@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "How to set Virtualbox to full screen on Ubuntu 14.04"
 excerpt: ""
 category: Unix

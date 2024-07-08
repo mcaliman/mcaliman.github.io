@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "How to install Jekyll on ubuntu 14.04."
 excerpt: ""
 category: Unix

@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Java Constants"
 excerpt: "Symbolic constants in Java"
 category: "Java"

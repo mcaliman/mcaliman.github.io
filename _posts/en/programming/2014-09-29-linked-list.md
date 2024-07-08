@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Linked List"
 excerpt: ""
 category: Programming

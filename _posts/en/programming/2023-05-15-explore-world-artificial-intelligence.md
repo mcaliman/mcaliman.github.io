@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Explore the World of Artificial Intelligence"
 excerpt: "Five Websites to Boost Your Productivity and Creativity"
 category: Programming

@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Sending e-mails with attachments in Java"
 excerpt: ""
 category: "Java"
