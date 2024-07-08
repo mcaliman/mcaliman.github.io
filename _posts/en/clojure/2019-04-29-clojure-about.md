@@ -4,7 +4,8 @@ title: "About Clojure"
 excerpt: "Some information about the Clojure programming language"
 modified: 2019-04-29
 revised: true
-category: Programming
+category: Clojure
+tags: [Functional Programming]
 permalink: /clojure/about/
 comments: false
 published: true
