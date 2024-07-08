@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Javascript according to Peter Paul Kock (PPK)"
+title:  "javascript according to Peter Paul Kock (PPK)"
 excerpt: ""
-category: Programming
+category: javascript
+tags: [Books]
 date: 2011-07-03 22:45:33
 comments: false
 published: true

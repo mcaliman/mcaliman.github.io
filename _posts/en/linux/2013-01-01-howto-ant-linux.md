@@ -2,7 +2,7 @@
 layout: post
 title:  "How to install Ant on Linux"
 excerpt: ""
-category: Unix
+category: Linux
 date:   2013-01-01 22:45:33
 comments: true
 share: false

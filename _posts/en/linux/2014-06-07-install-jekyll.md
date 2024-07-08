@@ -2,7 +2,7 @@
 layout: post
 title:  "How to install Jekyll on ubuntu 14.04."
 excerpt: ""
-category: Unix
+category: Linux
 date:   2014-06-07 22:45:33
 comments: true
 share: false
