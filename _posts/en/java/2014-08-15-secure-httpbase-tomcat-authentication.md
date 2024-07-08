@@ -4,7 +4,6 @@ lang: en
 title:  "Secure httpbase tomcat authentication"
 excerpt: ""
 category: "Java"
-tags: ["Programming Languages","Java","Tomcat"]
 date:   2014-08-15 22:45:33
 comments: true
 share: false

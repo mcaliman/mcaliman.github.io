@@ -4,7 +4,6 @@ lang: en
 title: "Checking nic.it droptime files with R"
 excerpt: ""
 category: R 
-tags: ["R","Programming Languages"]
 date:   2016-10-01 22:45:33
 modified: 2016-10-01 22:45:33
 comments: false

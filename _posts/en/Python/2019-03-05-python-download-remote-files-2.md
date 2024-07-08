@@ -4,7 +4,6 @@ lang: en
 title: "Downloading remote files with Python #2"
 excerpt: "Let's continue with the automation and see how to unzip the .gz files"
 category: Python
-tags: ["Programming Languages","Python"]
 permalink: /python/download-remote-files/2/
 modified: 2019-03-19
 comments: false

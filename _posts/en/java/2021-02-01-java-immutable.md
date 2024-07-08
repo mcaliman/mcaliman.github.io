@@ -5,7 +5,6 @@ title: "Immutable classes and objects in Java"
 excerpt: ""
 modified: 2021-02-01
 category: "Java"
-tags: ["Programming Languages","Java"]
 comments: true
 share: false
 published: true

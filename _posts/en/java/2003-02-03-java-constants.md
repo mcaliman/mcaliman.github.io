@@ -4,7 +4,6 @@ lang: en
 title:  "Java Constants"
 excerpt: "Symbolic constants in Java"
 category: "Java"
-tags: ["Programming Languages","Java"]
 permalink: /java/constants/
 date:   2003-02-03 22:45:33
 comments: true

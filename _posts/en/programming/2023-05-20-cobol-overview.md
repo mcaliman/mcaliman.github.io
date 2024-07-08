@@ -6,7 +6,6 @@ excerpt: ""
 date: 2023-05-20 05:25:44
 revised: true
 category: Programming 
-tags: ["Cobol","Programming Languages"]
 permalink: /cobol/overview/
 comments: false
 share: false

@@ -4,7 +4,6 @@ lang: en
 title:  "How to swap two variables at once with Python"
 excerpt: ""
 category: Python
-tags: ["Programming Languages","Python"]
 permalink: /python/tuple/swap-variables/
 date:   2014-09-01 22:45:33
 comments: false

@@ -4,7 +4,6 @@ lang: en
 title:  "The Content is not allowed in prolog error"
 excerpt: "Every XML document we work on should be formatted correctly, saved with the right encoding, etc"
 category: "Java"
-tags: ["Programming Languages","Java","XML","SAXParseException"]
 date:   2011-02-27 22:45:33
 comments: true
 share: false

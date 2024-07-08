@@ -5,7 +5,6 @@ title: "Monads: A First Definition"
 excerpt: 
 category: Programming
 date: 2024-04-27 06:42:33
-tags: "Functional Programming"
 comments: false
 published: true
 ---

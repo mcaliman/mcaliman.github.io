@@ -5,7 +5,6 @@ title:  "The CMS is dead, long live the Jekyll."
 excerpt: Jekyll
 category: Miscellaneous
 date:   2014-06-22 22:45:33
-tags: [CMS,Jekyll]
 comments: true
 share: false
 published: true

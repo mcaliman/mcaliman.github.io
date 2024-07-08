@@ -5,7 +5,6 @@ title:  "Publishing a website with GitHub Pages."
 excerpt: ""
 category: Unix
 date:   2014-01-01 22:45:33
-tags: [CMS]
 comments: true
 share: false
 published: true

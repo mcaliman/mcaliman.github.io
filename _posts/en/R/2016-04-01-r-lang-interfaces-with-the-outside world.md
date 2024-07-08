@@ -4,7 +4,6 @@ lang: en
 title:  "Interfaces with the external world in R"
 excerpt: ""
 category: R 
-tags: ["R","Programming Languages"]
 date:   2016-04-01 22:45:33
 comments: false
 share: false

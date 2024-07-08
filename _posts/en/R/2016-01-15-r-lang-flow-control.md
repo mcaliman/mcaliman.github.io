@@ -4,7 +4,6 @@ lang: en
 title:  "The control structures of R"
 excerpt: "Managing the programme execution flow with R"
 category: R 
-tags: ["R","Programming Languages"]
 date:   2016-01-15 22:45:33
 comments: false
 published: true

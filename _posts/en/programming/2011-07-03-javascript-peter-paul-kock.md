@@ -5,7 +5,6 @@ title:  "Javascript according to Peter Paul Kock (PPK)"
 excerpt: ""
 category: Programming
 date: 2011-07-03 22:45:33
-tags: javascript
 comments: false
 published: true
 ---

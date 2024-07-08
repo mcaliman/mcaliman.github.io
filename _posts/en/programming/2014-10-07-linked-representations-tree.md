@@ -5,7 +5,6 @@ title:  "Tree Linked List"
 excerpt: ""
 category: Programming
 date:   2014-10-07 22:45:33
-tags: ["Computer Science"]
 comments: true
 share: false
 published: true

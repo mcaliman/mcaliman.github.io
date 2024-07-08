@@ -5,7 +5,6 @@ title:  "Considerations on recursion"
 excerpt: ""
 category: Programming
 date:   2014-08-14 22:45:33
-tags: ["Recursion"]
 comments: true
 share: false
 published: true
