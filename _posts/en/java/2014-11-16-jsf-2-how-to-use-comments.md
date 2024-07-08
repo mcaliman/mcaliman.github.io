@@ -5,7 +5,6 @@ title:  "JSF 2 How to use comments"
 excerpt: ""
 category: "Java"
 date:   2014-11-16 22:45:33
-tags: ["Programming Languages","Java","JavaServer Faces"]
 comments: false
 share: false
 published: true

@@ -6,7 +6,6 @@ excerpt: ""
 category: Programming
 date:   2023-08-11 22:45:33
 modified: 2023-08-11 22:45:33
-tags: ["Expert Systems"]
 comments: true
 share: false
 published: true

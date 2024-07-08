@@ -5,7 +5,6 @@ title:  "DFS o Depth First Search"
 excerpt: ""
 category: Programming
 date:   2014-10-12 22:45:33
-tags: ["Data Structures","Algorithms"]
 comments: true
 share: false
 published: true

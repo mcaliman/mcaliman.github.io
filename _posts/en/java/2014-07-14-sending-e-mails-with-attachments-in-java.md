@@ -4,7 +4,6 @@ lang: en
 title:  "Sending e-mails with attachments in Java"
 excerpt: ""
 category: "Java"
-tags: ["Programming Languages","Java","JavaMail API"]
 date:   2014-07-14 22:45:33
 comments: true
 share: false

@@ -5,7 +5,6 @@ title:  "Big Data, Data Science, Databases the fundamentals #2"
 excerpt: "Before DBMSs, how was it done?..."
 category: Miscellaneous
 date:   2016-06-01 22:45:33
-tags: ["Data Science","Big Data","Database"]
 comments: false
 share: false
 published: true

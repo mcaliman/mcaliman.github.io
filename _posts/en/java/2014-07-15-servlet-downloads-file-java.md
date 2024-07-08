@@ -4,7 +4,6 @@ lang: en
 title:  "A Servlet to manage file downloads in Java"
 excerpt: ""
 category: "Java"
-tags: ["Programming Languages","Java","Java Servlet API"]
 date:   2014-07-15 22:45:33
 comments: true
 share: false

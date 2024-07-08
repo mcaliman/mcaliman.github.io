@@ -5,7 +5,6 @@ title:  "How to restore the Docebo administrator user"
 excerpt: ""
 category: Miscellaneous
 date:   2009-01-01 22:45:33
-tags: [Docebo,"LMS (Learning Management System)"]
 comments: true
 share: false
 published: true

@@ -6,7 +6,6 @@ excerpt: "Arrays are available in most programming languages because they realis
 the simplest organisation of complex data structures"
 category: "Java"
 date:   2003-03-01 22:45:33
-tags: ["Programming Languages","Java"]
 permalink: /java/array/
 comments: true
 share: false

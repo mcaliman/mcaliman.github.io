@@ -5,7 +5,6 @@ title: "The Singleton design pattern"
 excerpt: "Some examples of the Singleton pattern"
 modified: 2016-01-03
 category: Programming
-tags: [Design Pattern]
 comments: true
 share: false
 updated: true

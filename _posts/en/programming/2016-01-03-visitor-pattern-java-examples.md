@@ -5,7 +5,6 @@ title: "Design Pattern Visitor"
 excerpt: ""
 modified: 2016-01-03
 category: Programming
-tags: [Design Pattern]
 comments: true
 published: true
 ---

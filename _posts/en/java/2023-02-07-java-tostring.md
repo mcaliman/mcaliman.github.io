@@ -4,7 +4,6 @@ lang: en
 title: "The toString method of the Object class in Java"
 excerpt: "Learn how the toString method works and how to use it correctly"
 category: "Java"
-tags: ["Programming Languages","Java"]
 date: 2023-02-07 05:11:55
 comments: true
 share: false

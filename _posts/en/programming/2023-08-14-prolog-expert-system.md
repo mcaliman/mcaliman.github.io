@@ -6,7 +6,6 @@ excerpt: ""
 category: Programming
 date:   2023-08-14 22:45:33
 modified: 2023-08-14 22:45:33
-tags: ["Programming Languages","Expert Systems","Prolog"]
 comments: true
 published: true
 ---

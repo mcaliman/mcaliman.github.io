@@ -6,7 +6,6 @@ excerpt: ""
 category: "Java"
 date:   2015-08-15 22:45:33
 modified: 2017-08-15 22:45:33
-tags: ["Programming Languages","Java","JDK","wsimport"]
 comments: true
 share: false
 published: true
