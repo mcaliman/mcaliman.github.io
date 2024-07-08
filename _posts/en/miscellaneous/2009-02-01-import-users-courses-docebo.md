@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Importing users and courses with I/O Task in Docebo"
 excerpt: ""
 category: Miscellaneous

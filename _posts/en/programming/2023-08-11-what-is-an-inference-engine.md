@@ -1,6 +1,5 @@
 --- 
 layout: post
-lang: en
 title: "What is an inference engine?"
 excerpt: ""
 category: Programming

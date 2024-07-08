@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Secure logins and pages with JSF 2"
 excerpt: ""
 category: "Java"

@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "The hashCode method of the Object class in Java"
 excerpt: "Learn how the hashCode method works and how to use it correctly"
 category: "Java"

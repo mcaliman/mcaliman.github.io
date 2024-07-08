@@ -1,6 +1,5 @@
 --- 
 layout: post
-lang: en
 title:  "Java Variables And Assignment"
 excerpt: "Variables and assignment commands"
 category: "Java"

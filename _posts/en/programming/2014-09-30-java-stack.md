@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Stack"
 excerpt: ""
 category: Programming

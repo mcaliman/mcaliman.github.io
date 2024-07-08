@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Dropdownboxes are easy with JSF 2.2!"
 excerpt: ""
 category: "Java"

@@ -1,6 +1,5 @@
 --- 
 layout: post
-lang: en
 title:  "Java Array"
 excerpt: "Arrays are available in most programming languages because they realise 
 the simplest organisation of complex data structures"

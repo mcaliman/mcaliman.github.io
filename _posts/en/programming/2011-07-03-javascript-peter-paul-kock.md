@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Javascript according to Peter Paul Kock (PPK)"
 excerpt: ""
 category: Programming

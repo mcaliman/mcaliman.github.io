@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "MySQL: How to speed up restore operations from mysql dump"
 excerpt: ""
 category: MySQL

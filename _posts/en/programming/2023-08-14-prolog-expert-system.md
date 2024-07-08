@@ -1,6 +1,5 @@
 --- 
 layout: post
-lang: en
 title: "Using Prolog to Build Expert Systems"
 excerpt: ""
 category: Programming

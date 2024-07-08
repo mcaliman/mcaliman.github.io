@@ -1,6 +1,5 @@
 --- 
 layout: post
-lang: en
 title: "Passing Parameters to Methods/Functions/Procedure in Programming Languages"
 excerpt: ""
 category: Programming

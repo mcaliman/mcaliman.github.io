@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "Cool APIs and where to find them: the Objects.toString() method"
 excerpt: "Less code to handle null strings. Convert a string if null to an empty string."
 modified: 2019-11-03

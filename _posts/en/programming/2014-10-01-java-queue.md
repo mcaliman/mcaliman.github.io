@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Queue"
 excerpt: ""
 category: Programming

@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "CFG in Chomsky and Greibach's normal form"
 excerpt: "Chomsky and Greibach's context-free grammar in normal form, how they are made and why they are interesting"
 category: Programming

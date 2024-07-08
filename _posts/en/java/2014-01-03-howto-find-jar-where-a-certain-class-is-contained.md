@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "How to find jar file where a certain class is contained (deployed in GlassFish)."
 excerpt: ""
 category: "Java"

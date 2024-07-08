@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "BFS Breadth First Search"
 excerpt: ""
 category: Programming

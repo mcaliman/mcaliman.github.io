@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Data Science Origins And Motivations"
 excerpt: "All of us are averse to uncertainty"
 category: Miscellaneous

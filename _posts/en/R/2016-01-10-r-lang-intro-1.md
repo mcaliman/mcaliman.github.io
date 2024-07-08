@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "R language introduction"
 excerpt: ""
 category: R 

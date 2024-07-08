@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Enable the sudo command on debian 8"
 excerpt: ""
 category: Unix

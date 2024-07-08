@@ -1,6 +1,5 @@
 --- 
 layout: post
-lang: en
 title: "wsimport and Webservice .Net 2.0"
 excerpt: ""
 category: "Java"

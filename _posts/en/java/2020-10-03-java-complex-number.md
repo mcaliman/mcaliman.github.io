@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "Java Complex Number"
 excerpt: "A Complex Number Class For Java"
 date: 2020-10-03

@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Secure httpbase tomcat authentication"
 excerpt: ""
 category: "Java"

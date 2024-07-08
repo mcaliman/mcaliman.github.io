@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "SSH Log in without typing in the password."
 excerpt: ""
 category: Unix

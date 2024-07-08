@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "How to install Ant on Linux"
 excerpt: ""
 category: Unix

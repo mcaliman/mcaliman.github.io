@@ -1,6 +1,5 @@
 --- 
 layout: post
-lang: en
 title: "MySQL: Illegal mix of collations for operation union"
 excerpt: "About MySQL error illegal mix of collations for operation union"
 category: MySQL

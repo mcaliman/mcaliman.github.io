@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "DFS o Depth First Search"
 excerpt: ""
 category: Programming

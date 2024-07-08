@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "The du Linux command"
 excerpt: "How to shows the disk space used"
 category: Unix

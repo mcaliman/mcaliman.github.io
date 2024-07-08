@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Context-free languages properties"
 excerpt: "Context-free language properties and considerations"
 category: Programming

@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "Downloading remote files with Python #1"
 excerpt: "Automating recurring tasks such as downloading remote files locally"
 category: Python

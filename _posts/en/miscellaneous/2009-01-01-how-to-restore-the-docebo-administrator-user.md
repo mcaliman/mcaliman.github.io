@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "How to restore the Docebo administrator user"
 excerpt: ""
 category: Miscellaneous

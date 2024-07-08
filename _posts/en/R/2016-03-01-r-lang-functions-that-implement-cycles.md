@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Functions that implement cycles in R"
 excerpt: ""
 category: R 

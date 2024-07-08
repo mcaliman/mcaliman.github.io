@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Tree Linked List"
 excerpt: ""
 category: Programming

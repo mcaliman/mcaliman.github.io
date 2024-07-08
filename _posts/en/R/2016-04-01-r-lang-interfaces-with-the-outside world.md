@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Interfaces with the external world in R"
 excerpt: ""
 category: R 

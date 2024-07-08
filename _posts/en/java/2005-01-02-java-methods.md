@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Let's delve into methods in Java"
 excerpt: ""
 category: "Java"

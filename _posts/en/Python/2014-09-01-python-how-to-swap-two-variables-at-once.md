@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "How to swap two variables at once with Python"
 excerpt: ""
 category: Python

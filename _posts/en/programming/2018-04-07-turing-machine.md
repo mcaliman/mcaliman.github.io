@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Turing Machine"
 excerpt: "Basic concepts and information on Turing Machines, accepted language, recursively enumerable and recursiv"
 category: Programming

@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Structures indexed in depth"
 excerpt: ""
 category: Programming

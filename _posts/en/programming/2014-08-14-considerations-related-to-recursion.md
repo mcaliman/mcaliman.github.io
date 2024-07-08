@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Considerations on recursion"
 excerpt: ""
 category: Programming

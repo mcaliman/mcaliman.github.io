@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Alphabets, Symbols, Strings and Languages"
 excerpt: "What are alphabets, symbols and strings from the point of view of theoretical computer science"
 category: Programming

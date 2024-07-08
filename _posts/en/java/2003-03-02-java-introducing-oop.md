@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Introducing OOP in Java"
 excerpt: ""
 category: "Java"

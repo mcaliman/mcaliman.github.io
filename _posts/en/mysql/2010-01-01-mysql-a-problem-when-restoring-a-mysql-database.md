@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "MySQL: A problem when restoring a MySQL database..."
 excerpt: ""
 category: MySQL

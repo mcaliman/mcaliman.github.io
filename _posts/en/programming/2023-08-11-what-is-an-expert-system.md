@@ -1,6 +1,5 @@
 --- 
 layout: post
-lang: en
 title: "What is an expert system?"
 excerpt: ""
 category: Programming

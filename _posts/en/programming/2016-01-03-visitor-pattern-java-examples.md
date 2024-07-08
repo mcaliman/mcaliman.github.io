@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "Design Pattern Visitor"
 excerpt: ""
 modified: 2016-01-03

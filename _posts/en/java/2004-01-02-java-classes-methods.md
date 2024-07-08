@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Classes and methods in Java"
 excerpt: "Defining classes in Java: access modifiers, class and instance entities"
 category: "Java"

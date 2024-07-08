@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "A Servlet to manage file downloads in Java"
 excerpt: ""
 category: "Java"

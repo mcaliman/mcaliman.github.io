@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Generic visit algorithm for a tree"
 excerpt: ""
 category: Programming

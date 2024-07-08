@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Java Dictionaries"
 excerpt: "The Java implementation of Dictionaries"
 category: Programming

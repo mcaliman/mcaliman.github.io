@@ -1,9 +1,8 @@
 --- 
 layout: post
-lang: en
-title: "Github pages does not update my site with jekyll."
-excerpt: "Joys and sorrows of maintaining your own site with Jekyll."
-category: Miscellaneous
+title: Github pages does not update my site with jekyll.
+excerpt: Joys and sorrows of maintaining your own site with Jekyll.
+category: Jekyll
 date:   2017-09-16 22:45:33
 modified: 2017-09-17 09:00:33
 comments: true
@@ -11,7 +10,7 @@ share: false
 published: true
 ---
 
-> “If you have a procedure with ten parameters, you probably missed some.”
+> If you have a procedure with ten parameters, you probably missed some.
 >
 > – Alan Perlis
 

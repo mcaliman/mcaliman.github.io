@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "What is JAX-WS"
 excerpt: "Java API for XML Web Services"
 category: "Java"

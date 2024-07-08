@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "The control structures of R"
 excerpt: "Managing the programme execution flow with R"
 category: R 

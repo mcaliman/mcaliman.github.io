@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title: "Immutable classes and objects in Java"
 excerpt: ""
 modified: 2021-02-01

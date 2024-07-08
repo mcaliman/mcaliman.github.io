@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Writing and reading files in Java 7 with try-with-resources"
 excerpt: ""
 category: "Java"

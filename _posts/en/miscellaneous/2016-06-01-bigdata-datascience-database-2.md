@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "Big Data, Data Science, Databases the fundamentals #2"
 excerpt: "Before DBMSs, how was it done?..."
 category: Miscellaneous

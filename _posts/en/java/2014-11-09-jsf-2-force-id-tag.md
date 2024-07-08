@@ -1,6 +1,5 @@
 ---
 layout: post
-lang: en
 title:  "JSF 2 forcing tag-generated ids"
 excerpt: ""
 category: "Java"
