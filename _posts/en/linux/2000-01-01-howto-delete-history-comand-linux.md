@@ -5,7 +5,6 @@ excerpt: ""
 category: Linux
 comments: true
 share: false
-date: 2000-01-01
 modified: 2024-07-11
 published: true
 ---
