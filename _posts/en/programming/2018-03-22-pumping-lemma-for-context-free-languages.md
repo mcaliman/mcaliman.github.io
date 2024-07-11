@@ -3,9 +3,10 @@ layout: post
 title:  "Pumping lemma for Context Free languages"
 excerpt: "The pumping lemma version for context-free languages"
 category: Programming
-date:   2018-03-22 22:45:33
+date:   2018-03-22
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

@@ -3,9 +3,10 @@ layout: post
 title:  "Writing and reading files in Java 7 with try-with-resources"
 excerpt: ""
 category: "Java"
-date:   2014-09-13 22:45:33
+date:   2014-09-13
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

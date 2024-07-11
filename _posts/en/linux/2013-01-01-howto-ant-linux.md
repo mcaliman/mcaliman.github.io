@@ -3,9 +3,10 @@ layout: post
 title:  "How to install Ant on Linux"
 excerpt: ""
 category: Linux
-date:   2013-01-01 22:45:33
 comments: true
 share: false
+date: 2013-01-01
+modified: 2024-07-11
 published: true
 ---
 

@@ -2,10 +2,10 @@
 layout: post
 title: "What are the methods of the Object class?"
 excerpt: 
-modified: 2016-11-04
 category: "Java"
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

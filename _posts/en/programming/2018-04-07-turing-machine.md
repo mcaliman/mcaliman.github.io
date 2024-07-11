@@ -3,11 +3,10 @@ layout: post
 title:  "Turing Machine"
 excerpt: "Basic concepts and information on Turing Machines, accepted language, recursively enumerable and recursiv"
 category: Programming
-date:   2018-04-07 22:45:33
-modified: 2019-05-12 22:45:33
+date:   2018-04-07
 comments: true
 share: false
-updated: true
+modified: 2024-07-11
 published: true
 ---
   

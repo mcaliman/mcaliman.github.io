@@ -3,10 +3,10 @@ layout: post
 title: "wsimport and Webservice .Net 2.0"
 excerpt: ""
 category: "Java"
-date:   2015-08-15 22:45:33
-modified: 2017-08-15 22:45:33
+date:   2015-08-15
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

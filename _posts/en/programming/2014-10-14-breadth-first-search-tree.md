@@ -3,9 +3,10 @@ layout: post
 title:  "BFS Breadth First Search"
 excerpt: ""
 category: Programming
-date:   2014-10-14 22:45:33
+date:   2014-10-14
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
   

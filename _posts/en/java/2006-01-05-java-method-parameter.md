@@ -4,10 +4,11 @@ layout: post
 title:  "Passing parameters in Java"
 excerpt: ""
 category: "Java"
-date:   2006-01-05 22:45:33
+date:   2006-01-05
 permalink: /java/parameters/
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

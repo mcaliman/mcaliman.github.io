@@ -2,12 +2,13 @@
 layout: post
 title: "Cobol overview"
 excerpt: ""
-date: 2023-05-20 05:25:44
+date: 2023-05-20
 revised: true
 category: Programming 
 permalink: /cobol/overview/
 comments: false
 share: false
+modified: 2024-07-11
 published: true
 ---
 

@@ -4,9 +4,10 @@ title:  "How to find jar file where a certain class is contained (deployed in Gl
 excerpt: ""
 category: "Java"
 permalink: /java/glassfish/jar/
-date:   2014-01-03 22:45:33
+date:   2014-01-03
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

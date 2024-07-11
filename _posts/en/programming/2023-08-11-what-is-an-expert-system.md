@@ -3,10 +3,10 @@ layout: post
 title: "What is an expert system?"
 excerpt: ""
 category: Programming
-date:   2023-08-11 22:45:33
-modified: 2023-08-11 22:45:33
+date:   2023-08-11
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

@@ -3,9 +3,10 @@ layout: post
 title: "The hashCode method of the Object class in Java"
 excerpt: "Learn how the hashCode method works and how to use it correctly"
 category: "Java"
-date: 2023-04-11 11:25:44
+date: 2023-04-11
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
  

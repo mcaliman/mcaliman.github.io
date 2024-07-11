@@ -3,8 +3,9 @@ layout: post
 title:  "Date, time and interval objects in R"
 excerpt: ""
 category: R 
-date:   2016-02-10 22:45:33
+date:   2016-02-10
 comments: false
+modified: 2024-07-11
 published: true
 ---
 

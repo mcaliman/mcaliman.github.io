@@ -3,9 +3,10 @@ layout: post
 title:  "HOWTO FIX error 'illegal pattern character g' JAXB in NetBeans ."
 excerpt: "Java Architecture for XML Binding"
 category: "Java"
-date:   2014-01-10 22:45:33
+date:   2014-01-10
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

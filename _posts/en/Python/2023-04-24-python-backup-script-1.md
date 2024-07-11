@@ -3,9 +3,9 @@ layout: post
 title: "I am replacing my old bash scripts with Python #1."
 excerpt: "Copy a list of directories with their contents to a shared folder."
 category: Python
-modified: 2023-04-25
 comments: false
 share: false
+modified: 2024-07-11
 published: true
 ---
 

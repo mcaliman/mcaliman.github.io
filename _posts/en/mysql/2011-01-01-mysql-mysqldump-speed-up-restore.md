@@ -3,9 +3,10 @@ layout: post
 title:  "MySQL: How to speed up restore operations from mysql dump"
 excerpt: ""
 category: MySQL
-date:   2011-01-01 22:45:33
+date:   2011-01-01
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

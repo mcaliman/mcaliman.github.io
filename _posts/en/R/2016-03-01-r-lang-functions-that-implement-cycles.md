@@ -3,8 +3,9 @@ layout: post
 title:  "Functions that implement cycles in R"
 excerpt: ""
 category: R 
-date:   2016-03-01 22:45:33
+date:   2016-03-01
 comments: false
+modified: 2024-07-11
 published: true
 ---
 

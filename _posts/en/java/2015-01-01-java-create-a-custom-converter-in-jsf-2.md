@@ -3,9 +3,10 @@ layout: post
 title:  "Creating a Custom Converter in JSF 2.2"
 excerpt: ""
 category: "Java"
-date:   2015-01-01 22:45:33
+date:   2015-01-01
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

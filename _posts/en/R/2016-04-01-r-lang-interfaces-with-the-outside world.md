@@ -3,9 +3,10 @@ layout: post
 title:  "Interfaces with the external world in R"
 excerpt: ""
 category: R 
-date:   2016-04-01 22:45:33
+date:   2016-04-01
 comments: false
 share: false
+modified: 2024-07-11
 published: true
 ---
 

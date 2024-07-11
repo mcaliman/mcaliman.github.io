@@ -2,10 +2,10 @@
 layout: post
 title: "Working with Strings using Streams and Lambdas."
 excerpt: ""
-modified: 2022-01-12
 category: "Java"
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

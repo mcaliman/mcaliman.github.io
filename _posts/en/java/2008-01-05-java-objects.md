@@ -3,10 +3,11 @@ layout: post
 title:  "Objects in Java"
 excerpt: ""
 category: "Java"
-date:   2008-01-05 22:45:33
+date:   2008-01-05
 permalink: /java/objects/
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

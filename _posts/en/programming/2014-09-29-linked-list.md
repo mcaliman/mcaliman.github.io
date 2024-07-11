@@ -3,9 +3,10 @@ layout: post
 title:  "Linked List"
 excerpt: ""
 category: Programming
-date:   2014-09-29 22:45:33
+date:   2014-09-29
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
   

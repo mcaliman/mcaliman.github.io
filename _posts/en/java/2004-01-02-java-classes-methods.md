@@ -3,10 +3,11 @@ layout: post
 title:  "Classes and methods in Java"
 excerpt: "Defining classes in Java: access modifiers, class and instance entities"
 category: "Java"
-date:   2004-01-02 22:45:33
+date:   2004-01-02
 permalink: /java/classes/
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 --- 
 Classes and methods are the fundamental elements of object-oriented programming. They enable data to be encapsulated and access to data to be restricted.

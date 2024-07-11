@@ -3,9 +3,10 @@ layout: post
 title:  "MySQL: A problem when restoring a MySQL database..."
 excerpt: ""
 category: MySQL
-date:   2010-01-01 22:45:33
+date:   2010-01-01
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

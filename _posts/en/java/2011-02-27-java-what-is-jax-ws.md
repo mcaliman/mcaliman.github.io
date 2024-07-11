@@ -4,9 +4,10 @@ title:  "What is JAX-WS"
 excerpt: "Java API for XML Web Services"
 category: "Java"
 permalink: /java/jax-ws/
-date:   2011-02-27 22:45:33
+date:   2011-02-27
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

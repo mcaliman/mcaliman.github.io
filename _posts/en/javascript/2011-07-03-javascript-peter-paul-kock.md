@@ -4,8 +4,9 @@ title:  "javascript according to Peter Paul Kock (PPK)"
 excerpt: ""
 category: javascript
 tags: [Books]
-date: 2011-07-03 22:45:33
 comments: false
+date: 2011-07-03
+modified: 2024-07-11
 published: true
 ---
 

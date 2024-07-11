@@ -3,9 +3,10 @@ layout: post
 title:  "Common errors when configuring Adobe PDF iFilter for SharePoint 2007"
 excerpt: ""
 category: Miscellaneous
-date:   2011-04-04 22:45:33
 comments: true
 share: false
+date: 2011-04-04
+modified: 2024-07-11
 published: true
 ---
 A common mistake you can run into when installing iFilter for SharePoint 2007 is forgetting to replace the value of the key

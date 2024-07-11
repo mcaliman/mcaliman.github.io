@@ -3,9 +3,10 @@ layout: post
 title:  "About the limits of the calculable"
 excerpt: ""
 category: Programming
-date:   2014-09-06 22:45:33
+date:   2014-09-06
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 The following argument, due to L.J. Stockmeyer, is purely physical but

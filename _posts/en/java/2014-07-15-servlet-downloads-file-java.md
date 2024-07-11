@@ -3,9 +3,10 @@ layout: post
 title:  "A Servlet to manage file downloads in Java"
 excerpt: ""
 category: "Java"
-date:   2014-07-15 22:45:33
+date:   2014-07-15
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 Let's see in this post how to write the code for a Java Servlet that allows us to transfer (download) a file from our server application to the client (our users' web browser).

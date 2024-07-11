@@ -3,8 +3,9 @@ layout: post
 title:  "Functions in R"
 excerpt: ""
 category: R 
-date:   2016-01-20 22:45:33
+date:   2016-01-20
 comments: false
+modified: 2024-07-11
 published: true
 ---
 

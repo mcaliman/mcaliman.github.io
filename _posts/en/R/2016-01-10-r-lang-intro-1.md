@@ -3,8 +3,9 @@ layout: post
 title:  "R language introduction"
 excerpt: ""
 category: R 
-date:   2016-01-10 22:45:33
+date:   2016-01-10
 comments: false
+modified: 2024-07-11
 published: true
 ---
 

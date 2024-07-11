@@ -3,9 +3,10 @@ layout: post
 title:  "From Pushdown Automata (PDA) to Context-Free Grammar (CFG)"
 excerpt: "Construction of a Context-Free Grammar from a Pushdown Automata"
 category: Programming
-date:   2018-04-01 22:45:33
+date:   2018-04-01
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
    
