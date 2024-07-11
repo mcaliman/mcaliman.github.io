@@ -3,9 +3,9 @@ layout: post
 title:  "Common errors when configuring Adobe PDF iFilter for SharePoint 2007"
 excerpt: ""
 category: Miscellaneous
-date:   2011-04-04
 comments: true
 share: false
+date: 2011-04-04
 modified: 2024-07-11
 published: true
 ---

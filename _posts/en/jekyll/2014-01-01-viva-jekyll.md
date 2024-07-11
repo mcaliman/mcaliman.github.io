@@ -3,9 +3,9 @@ layout: post
 title:  The CMS is dead, long live the Jekyll
 excerpt: The title is provocative and borderline captious...
 category: Jekyll
-date:   2014-06-22
 comments: true
 share: false
+date: 2014-06-22
 modified: 2024-07-11
 published: true
 ---

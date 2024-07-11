@@ -3,9 +3,9 @@ layout: post
 title:  "Enable the sudo command on debian 8"
 excerpt: ""
 category: Linux
-date:   2015-05-01
 comments: true
 share: false
+date: 2015-05-01
 modified: 2024-07-11
 published: true
 ---
