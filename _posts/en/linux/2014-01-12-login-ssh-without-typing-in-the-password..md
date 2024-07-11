@@ -3,7 +3,7 @@ layout: post
 title:  "SSH Log in without typing in the password."
 excerpt: ""
 category: Linux
-date:   2014-01-12 22:45:33
+date:   2014-01-12
 comments: true
 share: false
 modified: 2024-07-11

@@ -3,7 +3,7 @@ layout: post
 title:  "CFG in Chomsky and Greibach's normal form"
 excerpt: "Chomsky and Greibach's context-free grammar in normal form, how they are made and why they are interesting"
 category: Programming
-date:   2018-03-21 22:45:33
+date:   2018-03-21
 comments: true
 share: false
 modified: 2024-07-11

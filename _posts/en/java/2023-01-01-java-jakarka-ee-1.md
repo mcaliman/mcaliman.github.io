@@ -4,7 +4,7 @@ title: "The transition from Java EE to Jakarta EE"
 excerpt: "What you need to know"
 category: "Java"
 tags: ["Programming Languages","Java","Java EE","Jakarta EE"]
-date: 2023-01-01 05:11:55
+date: 2023-01-01
 comments: true
 share: false
 modified: 2024-07-11

@@ -4,7 +4,7 @@ title:  "Java Essential Features"
 excerpt: "The essential features of the Java language that you must know"
 category: "Java"
 permalink: /java/essential-features/
-date:   2003-01-01 22:45:33
+date:   2003-01-01
 comments: true
 modified: 2024-07-11
 published: true

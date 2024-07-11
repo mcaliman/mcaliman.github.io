@@ -3,7 +3,7 @@ layout: post
 title:  "How to restore the Docebo administrator user"
 excerpt: ""
 category: Miscellaneous
-date:   2009-01-01 22:45:33
+date:   2009-01-01
 comments: true
 share: false
 modified: 2024-07-11

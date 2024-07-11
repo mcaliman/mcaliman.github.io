@@ -4,7 +4,7 @@ title:  "The String.format a printf method for Java"
 excerpt: ""
 category: "Java"
 permalink: /java/string/format/
-date:   2014-07-13 22:45:33
+date:   2014-07-13
 comments: true
 share: false
 modified: 2024-07-11

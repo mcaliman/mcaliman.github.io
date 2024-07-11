@@ -3,7 +3,7 @@ layout: post
 title: "How to delete the command history on Linux."
 excerpt: ""
 category: Linux
-date:   2000-01-01 22:45:33
+date:   2000-01-01
 comments: true
 share: false
 modified: 2024-07-11

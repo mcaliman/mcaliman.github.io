@@ -3,7 +3,7 @@ layout: post
 title: "Understanding Domain Specific Languages"
 excerpt: ""
 category: Programming
-date:   2023-08-05 22:45:33
+date:   2023-08-05
 comments: true
 share: false
 modified: 2024-07-11

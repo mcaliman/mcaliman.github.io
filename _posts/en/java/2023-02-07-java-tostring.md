@@ -3,7 +3,7 @@ layout: post
 title: "The toString method of the Object class in Java"
 excerpt: "Learn how the toString method works and how to use it correctly"
 category: "Java"
-date: 2023-02-07 05:11:55
+date: 2023-02-07
 comments: true
 share: false
 modified: 2024-07-11

@@ -4,7 +4,7 @@ title:  "Introducing OOP in Java"
 excerpt: ""
 category: "Java"
 permalink: /java/oop/introducing/
-date:   2003-03-02 22:45:33
+date:   2003-03-02
 comments: true
 share: false
 modified: 2024-07-11

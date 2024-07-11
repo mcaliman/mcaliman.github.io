@@ -3,7 +3,7 @@ layout: post
 title:  "JSF 2 forcing tag-generated ids"
 excerpt: ""
 category: "Java"
-date:   2014-11-09 22:45:33
+date:   2014-11-09
 comments: true
 share: false
 modified: 2024-07-11

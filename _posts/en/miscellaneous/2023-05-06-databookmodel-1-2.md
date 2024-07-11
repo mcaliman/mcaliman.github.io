@@ -3,7 +3,7 @@ layout: post
 title: "The Data Model Resource Book Vol 1 & 2"
 excerpt: "About the series book..."
 category: Miscellaneous
-date: 2023-05-06 05:11:55
+date: 2023-05-06
 comments: true
 share: false
 updated: true

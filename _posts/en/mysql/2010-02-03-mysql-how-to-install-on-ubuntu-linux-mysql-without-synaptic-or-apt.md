@@ -3,7 +3,7 @@ layout: post
 title:  "MySQL: how to install on ubuntu linux mysql without synaptic or apt"
 excerpt: ""
 category: MySQL
-date:   2011-02-03 22:45:33
+date:   2011-02-03
 comments: true
 share: false
 modified: 2024-07-11

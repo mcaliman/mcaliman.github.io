@@ -3,7 +3,7 @@ layout: post
 title:  "JSF 2 How to use comments"
 excerpt: ""
 category: "Java"
-date:   2014-11-16 22:45:33
+date:   2014-11-16
 comments: false
 share: false
 modified: 2024-07-11

@@ -4,7 +4,7 @@ title:  "Java Array"
 excerpt: "Arrays are available in most programming languages because they realise 
 the simplest organisation of complex data structures"
 category: "Java"
-date:   2003-03-01 22:45:33
+date:   2003-03-01
 permalink: /java/array/
 comments: true
 share: false

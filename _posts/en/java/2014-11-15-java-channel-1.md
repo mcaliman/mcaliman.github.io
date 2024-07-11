@@ -3,7 +3,7 @@ layout: post
 title:  "Using Channels to Copy Files in Java"
 excerpt: ""
 category: "Java"
-date:   2014-11-15 22:45:33
+date:   2014-11-15
 comments: true
 share: false
 modified: 2024-07-11

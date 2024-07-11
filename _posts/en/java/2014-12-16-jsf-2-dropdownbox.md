@@ -3,7 +3,7 @@ layout: post
 title:  "Dropdownboxes are easy with JSF 2.2!"
 excerpt: ""
 category: "Java"
-date:   2014-12-16 22:45:33
+date:   2014-12-16
 comments: true
 share: false
 modified: 2024-07-11

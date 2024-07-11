@@ -3,7 +3,7 @@ layout: post
 title:  "Big Data, Data Science, Databases the fundamentals #2"
 excerpt: "Before DBMSs, how was it done?..."
 category: Miscellaneous
-date:   2016-06-01 22:45:33
+date:   2016-06-01
 comments: false
 share: false
 modified: 2024-07-11

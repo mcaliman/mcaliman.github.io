@@ -3,7 +3,7 @@ layout: post
 title:  "Context-free languages properties"
 excerpt: "Context-free language properties and considerations"
 category: Programming
-date:   2018-03-24 22:45:33
+date:   2018-03-24
 comments: true
 share: false
 modified: 2024-07-11

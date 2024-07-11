@@ -3,7 +3,7 @@ layout: post
 title:  "Prefix Property"
 excerpt: "Pushdown Automata (PDA) and language recognition problems with special features"
 category: Programming
-date:   2018-03-28 22:45:33
+date:   2018-03-28
 comments: true
 share: false
 modified: 2024-07-11

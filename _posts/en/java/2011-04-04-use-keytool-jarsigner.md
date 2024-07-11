@@ -4,7 +4,7 @@ title:  "Use of keytool and jarsigner"
 excerpt: ""
 category: "Java"
 permalink: /java/jdk/jarsigner/keytool/
-date:   2011-04-24 22:45:33
+date:   2011-04-24
 comments: true
 share: false
 modified: 2024-07-11

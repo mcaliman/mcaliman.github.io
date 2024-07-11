@@ -3,7 +3,7 @@ layout: post
 title: "What is an inference engine?"
 excerpt: ""
 category: Programming
-date:   2023-08-11 22:45:33
+date:   2023-08-11
 comments: true
 share: false
 modified: 2024-07-11

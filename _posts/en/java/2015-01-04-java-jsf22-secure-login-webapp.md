@@ -3,7 +3,7 @@ layout: post
 title:  "Secure logins and pages with JSF 2"
 excerpt: ""
 category: "Java"
-date:   2015-01-04 22:45:33
+date:   2015-01-04
 comments: true
 share: false
 modified: 2024-07-11

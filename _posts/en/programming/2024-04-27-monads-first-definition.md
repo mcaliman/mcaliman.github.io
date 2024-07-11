@@ -3,7 +3,7 @@ layout: post
 title: "Monads: A First Definition"
 excerpt: 
 category: Programming
-date: 2024-04-27 06:42:33
+date: 2024-04-27
 comments: false
 modified: 2024-07-11
 published: true

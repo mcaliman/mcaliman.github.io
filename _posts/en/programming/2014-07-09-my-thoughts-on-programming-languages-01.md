@@ -3,7 +3,7 @@ layout: post
 title:  "My thoughts on programming languages Part 1"
 excerpt: "Personal reflections on programming languages"
 category: Programming
-date:   2014-07-09 22:45:33
+date:   2014-07-09
 comments: true
 share: false
 modified: 2024-07-11

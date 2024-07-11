@@ -3,7 +3,7 @@ layout: post
 title: "Checking nic.it droptime files with R"
 excerpt: ""
 category: R 
-date:   2016-10-01 22:45:33
+date:   2016-10-01
 comments: false
 share: false
 modified: 2024-07-11

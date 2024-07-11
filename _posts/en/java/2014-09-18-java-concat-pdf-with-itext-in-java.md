@@ -3,7 +3,7 @@ layout: post
 title:  "Concatenating PDFs with iText in Java"
 excerpt: ""
 category: "Java"
-date:   2014-09-18 22:45:33
+date:   2014-09-18
 comments: true
 share: false
 modified: 2024-07-11

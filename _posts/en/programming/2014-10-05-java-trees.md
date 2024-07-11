@@ -3,7 +3,7 @@ layout: post
 title:  "Tree in Java"
 excerpt: ""
 category: Programming
-date:   2014-10-05 22:45:33
+date:   2014-10-05
 comments: true
 share: false
 modified: 2024-07-11

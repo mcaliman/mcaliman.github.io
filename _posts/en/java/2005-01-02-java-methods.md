@@ -3,7 +3,7 @@ layout: post
 title:  "Let's delve into methods in Java"
 excerpt: ""
 category: "Java"
-date:   2005-01-02 22:45:33
+date:   2005-01-02
 permalink: /java/methods/
 comments: true
 share: false

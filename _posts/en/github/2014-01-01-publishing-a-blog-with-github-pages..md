@@ -4,7 +4,7 @@ title:  "Publishing a website with GitHub Pages."
 excerpt: ""
 category: github
 tags: [github pages]
-date:   2014-01-01 22:45:33
+date:   2014-01-01
 comments: true
 share: false
 modified: 2024-07-11
