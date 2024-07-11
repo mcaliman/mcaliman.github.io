@@ -6,6 +6,7 @@ category: "Java"
 date:   2011-02-27 22:45:33
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 Every XML document we work on should be formatted correctly, saved with the right encoding, etc.

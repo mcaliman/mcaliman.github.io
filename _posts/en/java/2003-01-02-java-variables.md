@@ -7,6 +7,7 @@ date:   2003-01-02 22:45:33
 permalink: /java/variables/
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

@@ -4,9 +4,9 @@ title: "What is an inference engine?"
 excerpt: ""
 category: Programming
 date:   2023-08-11 22:45:33
-modified: 2023-08-11 22:45:33
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

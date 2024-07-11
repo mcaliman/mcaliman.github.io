@@ -3,10 +3,10 @@ layout: post
 title: "Java Complex Number"
 excerpt: "A Complex Number Class For Java"
 date: 2020-10-03
-modified: 2020-10-03
 category: "Java"
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

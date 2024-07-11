@@ -4,8 +4,8 @@ title: "Using Prolog to Build Expert Systems"
 excerpt: ""
 category: Programming
 date:   2023-08-14 22:45:33
-modified: 2023-08-14 22:45:33
 comments: true
+modified: 2024-07-11
 published: true
 ---
 

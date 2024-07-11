@@ -2,11 +2,10 @@
 layout: post
 title: "Design Patterns Interpreter"
 excerpt: "Minimal example Java code on Interpreter pattern"
-modified: 2016-01-03
 category: Programming
 comments: true
-updated: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 The pattern interpreter is little used nowadays, there have been more powerful and ready-to-use tools for years 

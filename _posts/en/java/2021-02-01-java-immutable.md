@@ -2,10 +2,10 @@
 layout: post
 title: "Immutable classes and objects in Java"
 excerpt: ""
-modified: 2021-02-01
 category: "Java"
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

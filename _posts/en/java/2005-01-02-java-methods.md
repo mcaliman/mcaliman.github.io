@@ -7,6 +7,7 @@ date:   2005-01-02 22:45:33
 permalink: /java/methods/
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

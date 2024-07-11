@@ -2,9 +2,9 @@
 layout: post
 title: "Design Pattern Visitor"
 excerpt: ""
-modified: 2016-01-03
 category: Programming
 comments: true
+modified: 2024-07-11
 published: true
 ---
 

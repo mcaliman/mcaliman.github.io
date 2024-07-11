@@ -2,12 +2,11 @@
 layout: post
 title: "About Clojure"
 excerpt: "Some information about the Clojure programming language"
-modified: 2019-04-29
-revised: true
 category: Clojure
 tags: [Functional Programming]
 permalink: /clojure/about/
 comments: false
+modified: 2024-07-11
 published: true
 ---
 

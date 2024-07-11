@@ -2,10 +2,10 @@
 layout: post
 title: "Design Patterns State"
 excerpt: "Features and sample Java code reduced to the essentials"
-modified: 2016-01-30
 category: Programming
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

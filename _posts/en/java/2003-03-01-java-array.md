@@ -8,6 +8,7 @@ date:   2003-03-01 22:45:33
 permalink: /java/array/
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

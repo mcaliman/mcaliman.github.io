@@ -2,10 +2,10 @@
 layout: post
 title: "The java.time.temporal.ChronoUnit class"
 excerpt: "Calculating the difference between two dates with ChronoUnit"
-modified: 2018-01-01
 category: "Java"
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

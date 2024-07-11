@@ -4,9 +4,9 @@ title:  "SSH Log in without typing in the password."
 excerpt: ""
 category: Linux
 date:   2014-01-12 22:45:33
-update: 2020-06-29 11:00:00
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

@@ -4,8 +4,8 @@ title: "The programming language Scala"
 excerpt: ""
 category: Programming 
 permalink: /scala/overview/
-modified: 2019-03-03
 comments: false
+modified: 2024-07-11
 published: true
 ---
 

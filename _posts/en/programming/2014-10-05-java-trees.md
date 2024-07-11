@@ -6,6 +6,7 @@ category: Programming
 date:   2014-10-05 22:45:33
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 After the posts on elementary data structures, we move on to deal with trees. Before going into the details of how to implement data structures of this type, let us delve into the theoretical aspect.

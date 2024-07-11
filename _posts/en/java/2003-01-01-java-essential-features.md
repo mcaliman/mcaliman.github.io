@@ -6,6 +6,7 @@ category: "Java"
 permalink: /java/essential-features/
 date:   2003-01-01 22:45:33
 comments: true
+modified: 2024-07-11
 published: true
 ---
 

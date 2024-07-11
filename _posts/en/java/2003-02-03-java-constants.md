@@ -7,6 +7,7 @@ permalink: /java/constants/
 date:   2003-02-03 22:45:33
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 

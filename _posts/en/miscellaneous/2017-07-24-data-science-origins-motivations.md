@@ -4,9 +4,9 @@ title:  "Data Science Origins And Motivations"
 excerpt: "All of us are averse to uncertainty"
 category: Miscellaneous
 date: 2017-07-24 22:45:33
-modified: 2017-07-25 19:45:33
 comments: false
 share: false
+modified: 2024-07-11
 published: true
 ---
   

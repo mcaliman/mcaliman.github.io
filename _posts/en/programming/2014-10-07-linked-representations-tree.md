@@ -6,6 +6,7 @@ category: Programming
 date:   2014-10-07 22:45:33
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 Continuing with the discussion of trees, representations based on linked structures are normally preferred 

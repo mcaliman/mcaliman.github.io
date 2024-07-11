@@ -6,6 +6,7 @@ category: MySQL
 date:   2011-02-03 22:45:33
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 We download the `tar.gz` from the mysql site www.mysql.com

@@ -2,10 +2,10 @@
 layout: post
 title: "Can we execute code before the main(String[]) method ?"
 excerpt: ""
-modified: 2016-11-03
 category: "Java"
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 One of the questions you might get at an interview or certification or a simple test concerning the Java language is the following:

@@ -6,6 +6,7 @@ category: "Java"
 date:   2015-01-04 22:45:33
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 In this post we see how to implement a minimal login system with basic security in a Java Server Faces 2.2 application.

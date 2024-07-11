@@ -4,9 +4,9 @@ title: "Downloading remote files with Python #1"
 excerpt: "Automating recurring tasks such as downloading remote files locally"
 category: Python
 permalink: /python/download-remote-files/1/
-modified: 2019-02-25
 comments: false
 share: false
+modified: 2024-07-11
 published: true
 ---
 

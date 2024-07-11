@@ -6,6 +6,7 @@ category: Programming
 date:   2014-10-01 22:45:33
 comments: true
 share: false
+modified: 2024-07-11
 published: true
 ---
 Let us return to the discussion of elementary data structures. In previous posts we have looked at indexed structures, linked structures and Stacks or Stacks, another of the most common basic types is the Queue or Queue, a pseudolanguage specification of which is given below.
