@@ -5,7 +5,7 @@ ref: resume
 permalink: /resume/
 title:  Resume
 tags: [resume]
-date: 2024-05-17
+date: 2024-07-15
 modified: 2024-05-18
 published: false
 ---

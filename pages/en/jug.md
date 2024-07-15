@@ -5,6 +5,7 @@ ref: jug
 permalink: /jug/
 title: Java User Group List
 tags: ["Java User Group","JVM User Group"]
+date: 2024-07-15
 modified: 2023-11-05
 published: true
 ---

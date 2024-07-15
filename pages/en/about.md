@@ -5,6 +5,7 @@ ref: about
 permalink: /about/
 title: About me
 tags: [about]
+date: 2024-07-15
 modified: 2013-09-13
 published: true
 ---
