@@ -16,7 +16,7 @@ A Software Architect is a professional who designs and develops the architecture
 # What does a Software Architect do?
 
 * System-level design:
-The Software Architect focuses on the high-level design of the system, including coding standards, development environments and automation mechanisms. 
+The Software Architect focuses on the system's high-level design, including coding standards, development environments, and automation mechanisms. 
 * Definition of technical specifications:
 Establishes the technical specifications, interfaces, communication between components and database management rules. 
 * Ensuring quality and efficiency:
@@ -32,10 +32,10 @@ Must have a solid understanding of software development technologies and methodo
 
 # What are his or her responsibilities?
 * Provide a functional and efficient solution:
-The Software Architect must be able to provide a software solution that meets business needs, is efficient and easily scalable. 
+The Software Architect must be able to provide a software solution that meets business needs, is efficient and is easily scalable. 
 * Ensure software quality:
 He/she ensures that the software is well designed, tested and documented, minimising the risk of errors and improving maintainability. 
 * Support in the development phase:
-Helps the development team implement the software architecture, providing guidance and solving any problems. 
+Helps the development team implement the software architecture, providing guidance and solving problems. 
 * Risk management:
 Identifies and manages risks associated with software development, ensuring that they are addressed in a timely and effective manner. 
