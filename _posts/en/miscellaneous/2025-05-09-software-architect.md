@@ -17,13 +17,10 @@ A Software Architect is a professional who designs and develops the architecture
 
 * System-level design:
 The Software Architect focuses on the high-level design of the system, including coding standards, development environments and automation mechanisms. 
-
 * Definition of technical specifications:
 Establishes the technical specifications, interfaces, communication between components and database management rules. 
-
 * Ensuring quality and efficiency:
 It ensures that the software is designed to guarantee quality, efficiency, scalability and maintainability. 
-
 * Collaboration with the team:
 Collaborates with developers, designers and other team members to define and implement the software architecture. 
 * Requirements study and analysis:
