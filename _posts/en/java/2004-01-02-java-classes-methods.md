@@ -30,7 +30,7 @@ The definition of a class does not necessarily involve the creation of objects. 
 
 In Java, classes are defined using the class construct. Each class includes the definition of attributes (constants and variables) and methods.
 
-The skeleton of a code to define a class is as follows:
+The skeleton of code to define a class is as follows:
 ```java
 class T {
 // ...
@@ -47,8 +47,8 @@ An intermediate level is `protected`, the purpose of which will be clarified lat
 The access modifiers `public`, `private` and `protected` define the visibility of a declaration within a class.
 
 `public`: the declaration is accessible from any class.
-private`: the declaration is accessible only from the class in which it is defined.
-protected`: the declaration is accessible from classes derived from the class in which it is defined.
+`private`: the declaration is accessible only from the class in which it is defined.
+`protected`: the declaration is accessible from classes derived from the class in which it is defined.
 
 # Class and instance entities
 

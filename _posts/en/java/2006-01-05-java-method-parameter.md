@@ -24,7 +24,7 @@ For example, the following line defines four formal parameters:
 int a, double b, long c, String d
 ```
 
-These parameters define the identifiers of the entities on which the method is called to operate. In order for the method to perform its computation, it is necessary that, at the time of its activation, the formal parameters are associated with the actual parameters to which the computation must be actually applied.
+These parameters define the identifiers of the entities on which the method is called to operate. In order for the method to perform its computation, it is necessary that, at the time of its activation, the formal parameters are associated with the actual parameters to which the computation must be applied.
 
 These values constitute the actual parameters of the method.
 
@@ -55,6 +55,6 @@ System.out.println("a still has the value 10: a=" + a);
 
 In this case, the formal parameter of a method identifies the address of allocation of the corresponding actual parameter, which must be a variable. The method is therefore called to operate directly on the variable allocated in the context of the caller, therefore any modification made by the method to the formal parameter is exported, impacting the corresponding actual parameter.
 
-Formally, Java applies pass-by-value to all methods, but if the parameter is an array or an object, the result is similar to that obtained with pass-by-reference, in fact in this case the copied parameter is the address of the array or object in question. Therefore, the modifications made to an array or object by a method are reflected in the context of the caller. It is not possible, however, to export an object or array of new creation from a method except with the return command.
+Formally, Java applies pass-by-value to all methods, but if the parameter is an array or an object, the result is similar to that obtained with pass-by-reference, in fact in this case the copied parameter is the address of the array or object in question. Therefore, the modifications made to an array or object by a method are reflected in the context of the caller. It is not possible, however, to export a newly created object or array from a method except with the return command.
 
 

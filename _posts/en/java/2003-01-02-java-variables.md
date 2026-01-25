@@ -13,7 +13,7 @@ published: true
 
 Let us first give a sufficiently formal definition for our purposes of a variable:
 Definition of variable
-A variable a pair consisting of a name, the variable identifier and a value.
+A variable is a pair consisting of a name, the variable identifier and a value.
 
 ```java
 T var = value ;
@@ -22,9 +22,8 @@ T var = value ;
 Variables in a programme store data that are processed during execution.
 During the execution of the programme the variable values are modified (otherwise they would be constants).
 Variables are born, live and die; it is our job to take care of them, their life, their visibility (scope).
-Let us treat them well,give them a respectable name so that they do not hate us and make us spend sleepless nights.
-Before a variable can be used, it must be declared; the declaration of a variable is necessary to reserve a memory space in which to write its value.
-of memory in which to write its value, the declaration defines the type of the variable.
+Let us treat them well, give them a respectable name so that they do not hate us and make us spend sleepless nights.
+Before a variable can be used, it must be declared; the declaration of a variable is necessary to reserve a memory space in which to write its value. The declaration defines the type of the variable.
 
 ```java
 T var;
@@ -45,7 +44,7 @@ int x = 5 ; double y = 60 ;
 ```
 
 The type of the variable values is used to determine how much memory to reserve for the variable, in the case of the int type it is 4 bytes.
-If we were to represent the declarations graphicall
+If we were to represent the declarations graphically
 
 ```java
 int x = 0 ; 
@@ -67,7 +66,7 @@ It also assigns a value to a variable that had only been declared and therefore 
 var = expr;
 ```
 
-Where var the name of the variable and expr an expression whose type is compatible with the type of var.
+Where var is the name of the variable and expr an expression whose type is compatible with the type of var.
 The command has the effect of replacing the value of the variable whose name appears to the left (left-value) of the equals sign 
 with the value appearing on the right.
 Expressions are syntactic entities composed of variable names, constants and operation signs 
@@ -124,9 +123,7 @@ As already mentioned in the case of an assignment of the type
 T var = expr 
 ```
 
-we said that expr must have compatible type with T (not necessarily the same) useful at this point to give 
-the definition of promotion and casting for types that define cases where the type of var and expr may not coincide 
-but still be correct and applicable.
+we said that expr must have compatible type with T (not necessarily the same). It is useful at this point to give the definition of promotion and casting for types that define cases where the type of var and expr may not coincide but still be correct and applicable.
 
 Definition
 If both the variable type and the expression type represent numeric data and the expr type is a subset 

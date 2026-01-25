@@ -12,7 +12,7 @@ published: true
 
 
 
-Present in version 6.9 but also in version 7.4.
+This error is present in version 6.9 but also in version 7.4.
 
 ```java
 \nbproject\xml_binding_build.xml:17: 

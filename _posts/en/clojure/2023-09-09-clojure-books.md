@@ -30,13 +30,13 @@ Here is a list of Clojure books that I think are great.
    * Copyright © 2015
 
 # Clojure for Java Developers
-   * Transition smoothly from Java to the most widely used functional JVM-based language – Clojure,
-   * Author: Eduardo Díaz,
-   * Publisher: Packt Publishing,
+   * Transition smoothly from Java to the most widely used functional JVM-based language – Clojure
+   * Author: Eduardo Díaz
+   * Publisher: Packt Publishing
    * Copyright © 2016
 
 # Clojure for Machine Learning
-   * Successfully leverage advanced machine learning techniques using the Clojure ecosystem,
+   * Successfully leverage advanced machine learning techniques using the Clojure ecosystem
    * Author: Akhil Wali
    * Publisher: Packt Publishing
    * Copyright © 2014
@@ -53,12 +53,12 @@ Here is a list of Clojure books that I think are great.
    * Copyright © 2010
 
 # Quick Clojure: Effective Functional Programming
-   Mark McDonnell,
-   Publisher: Apress,
+   Mark McDonnell
+   Publisher: Apress
    Copyright © 2017
 
 # The Joy of Clojure
-   MICHAEL FOGUS,
-   CHRIS HOUSER,
+   MICHAEL FOGUS
+   CHRIS HOUSER
    Publisher: Manning Publications Co.
    Copyright © 2011

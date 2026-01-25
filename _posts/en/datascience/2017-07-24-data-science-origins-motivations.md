@@ -28,7 +28,7 @@ Although we would all like to be certain, by accepting partial ignorance, we ack
 
 Overestimating uncertainty can lead to delays, in some cases to paralysis, while underestimating uncertainty... well... it is far more dangerous.
 
-uncertainty must be reduced as much as possible
+Uncertainty must be reduced as much as possible
 
 As rational creatures, we must always ask ourselves: is the current reduction of uncertainty sufficient to proceed with a decision right now?  Or should we wait and collect more data? 
 
@@ -40,7 +40,7 @@ These methods of data analysis were largely developed by physicists, based on Cl
 
 The basic ideas can be traced back to the pioneering work of E.T. Jaynes, Phil Gregory, David Mackay and Devinderjit Sivia. 
 
-The work of these pioneers was the foundation for the development of machine learning (Machine Learning) and artificial intelligence (AI). 
+The work of these pioneers was the foundation for the development of machine learning and artificial intelligence (AI). 
 
 More sophisticated companies, such as Amazon and Google, are doing machine learning as a practical realisation of these methods. 
 
