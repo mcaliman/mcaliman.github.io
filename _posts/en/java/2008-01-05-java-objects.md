@@ -15,7 +15,7 @@ From each class it is possible to obtain one or more entities through the instan
 copy of the data structure described by the class in its dynamic components and of which it shares the information access methods.
 
 Definition
-An object creates a class instance whose data structure it reflects and shares methods.
+An object is a class instance whose data structure it reflects and shares methods.
 
 The instantiation of multiple objects of the same class therefore involves the duplication of the same data structure, even though they represent differentiated information.
 To this end, each object must include a copy of the attributes defined in its relevant class as instance attributes;
@@ -68,7 +68,7 @@ T obj = new T();
 
 declared and instantiated et voil!
 
-#Messages, messages and more messages.
+# Messages, messages and more messages.
 
 Classes and objects constitute an execution environment for the computational processes described by their methods.
 The main problem of OOP lies in the need to trigger in these entities the computations that are required by the application.
@@ -96,10 +96,7 @@ from the computation of the method. It seems superfluous to point out that the e
 different classes are put in a position to interact with each other. It allows the relevant classes to present themselves as interacting models,
 whose overall architecture can contribute to the definition of models characterized by a greater level of complexity.
 
-The transfer of information between objects achieved in Java by exchanging messages.
-Do I call methods (possibly passing them other objects as formal parameters) on objects (possibly returning values ​​that are other objects)?
-exchange messages between objects..
-
+The transfer of information between objects is achieved in Java by exchanging messages.
 These include the activation, in the recipient object, of the method specified by the message and the possible export to the sender object
 of the results of carrying out these methods. As we have seen, the passing of parameters is always foreseen by the Java programming language
 by value and this means that the values ​​of the formal parameters at the time of activation of a method are lost when the method completes the
@@ -113,8 +110,7 @@ via an address identifier called handle (or reference) that is associated with t
 When an object is passed as a parameter to a method, only the value of its handle is copied into the formal parameter and so on
 allows the method to modify the contents of the object itself, making those changes permanent, regardless of whether at that point
  the value of the formal parameter is destroyed.
-It is clear how wrong it is to create a new object instance within the method and assign it to the formal parameter: the handle would in fact
-removed when returning control to the calling module, this requires the return command.
+It is clear how wrong it is to create a new object instance within the method and assign it to the formal parameter: the handle would in fact be removed when returning control to the calling module, this requires the return command.
 
 Translated into code
 
@@ -148,8 +144,7 @@ System.out.println(p);
 m(p);
 System.out.println(p);
 ```
-on our console we would see "don't care mr.handle!" printed twice. Now let's see how we could solve it
-the problem with using the return command. First we should have changed the signature of our m() method so that
+on our console we would see "don't care mr.handle!" printed twice. Now let's see how we could solve the problem with using the return command. First we should have changed the signature of our m() method so that
 could return a value of the type compatible with the formal parameter. So we would no longer have void as the return type but T.
 
 Let's see the new version of the m method that is right for us.

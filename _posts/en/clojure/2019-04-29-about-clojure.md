@@ -15,13 +15,13 @@ published: true
 
 The Clojure language, conceived and developed by [Rich Hickey](https://www.linkedin.com/in/richhickey/it), is a dialect of the programming language [Lisp](https://it.wikipedia.org/wiki/Lisp).
 
-The relationship with the Java platform is very close, Clojure can be compiled into Java bytecode and then run on the JVM. Clojure code can access Java code and libraries. 
+The relationship with the Java platform is very close; Clojure can be compiled into Java bytecode and then run on the JVM. Clojure code can access Java code and libraries. 
 
 In Clojure, code is data itself, allowing interactive development and macros.
 
-Lisp, the language from which Clojure is derived, is a functional language, Clojure also supports the functional paradigm. The development of applications based on parallel computing and multithreading is greatly facilitated, compared to Java.  
+Lisp, the language from which Clojure is derived, is a functional language; Clojure also supports the functional paradigm. The development of applications based on parallel computing and multithreading is greatly facilitated, compared to Java.  
 
-Clojure is an open project, [Eclipse Public License 1.0](https://www.eclipse.org/legal/epl-v10.html) and is hosted on GitHub at [github.com/Clojure/clojure](github.com/clojure/clojure)
+Clojure is an open project, licensed under the [Eclipse Public License 1.0](https://www.eclipse.org/legal/epl-v10.html) and is hosted on GitHub at [github.com/Clojure/clojure](github.com/clojure/clojure)
 
 To make life easier for us with Clojure, we install Leiningen. 
 [Leiningen](https://leiningen.org/) is an essential tool that creates, builds and automates Clojure projects.

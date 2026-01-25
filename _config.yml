@@ -126,3 +126,29 @@ footer_links:
   - title: Medium
     url: https://mcaliman.medium.com
     icon: fab fa-medium      
+
+linkedin:
+  firstName: 
+  lastName:
+  maidenName:
+  address:
+  birthDate:
+  headline:
+  summary:
+  industry:
+  zipCode:
+  geoLocation:
+  twitterHandles:
+  websites:
+  instantMessengers:
+  experience:
+  education:
+  certifications:
+  projects:
+  skills:
+  publications:
+  courses:
+  languages:
+  organizations:
+
+

@@ -24,8 +24,6 @@ Definition
 An array is a data structure that allows sequences of data of the same type to be represented. 
 The elements that make up an array can be found by specifying their position.
 
-Translated with www.DeepL.com/Translator (free version)
-
 ```java
 T[] var = new T[n];
 ```
@@ -84,7 +82,7 @@ T x = var[i] ;
 ```
 
 in this way x has the i-th value of the array var , obviously i must have a value 
-between 0 and var.lenght0-1 representing the length of the array var.
+between 0 and var.length - 1 representing the length of the array var.
 
 # Multidimensional arrays
 
@@ -95,7 +93,7 @@ element identified not by a single index but by a larger number of indexes.
 for instance
 
 ```java
-T[][] var = new var [n][m];
+T[][] var = new T[n][m];
 ```
 
 

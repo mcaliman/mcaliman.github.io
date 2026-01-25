@@ -18,11 +18,11 @@ In Java, the definition of a method is composed of two parts:
 * **The definition**, which defines its interface.
 * **The block**, formed by the commands that implement its behavior.
 
-It is not allowed to declare methods within other methods (to the version)
+It is not allowed to declare methods within other methods.
 
 **Method definition**
 
-The setting of a method can be of two types, depending on whether or not the method can return a value:
+The signature of a method can be of two types, depending on whether or not the method can return a value:
 
 * **Methods with return:** the setting must specify the type of value returned.
 * **Methods without return:** the setting must use the keyword `void`.
@@ -35,7 +35,7 @@ A method is activated by making its call. The call must provide the values to be
 
 **Static methods and dynamic methods**
 
-A static method is executable from the class in which it is defined. A dynamic method is executable by objects that are instantiable from its definition class.
+A static method is executable from the class in which it is defined. An instance method is executable by objects that are instantiable from its definition class.
 
 **Constructor methods**
 
@@ -79,4 +79,4 @@ public class Main {
 
 * A method with return must always return a value. If it is not necessary to return any value, you can use the keyword `void`.
 * A static method can be called without creating an object of the class in which it is defined.
-* A dynamic method can only be called after creating an object of the class in which it is defined.
+* An instance method can only be called after creating an object of the class in which it is defined.

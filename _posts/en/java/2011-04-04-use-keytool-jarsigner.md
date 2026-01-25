@@ -17,7 +17,7 @@ To extract a certificate that we already know is on our keyring
 keytool -export -alias mycompanyalias -file mycompany.crt
 ```
 
-to sign our `jar` with the above certificate
+To sign our `jar` with the above certificate
 
 ```bash
 jarsigner mycompany.jar mycompanyalias
