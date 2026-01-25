@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The String.format a printf method for Java"
+title:  "String.format: A printf method for Java"
 excerpt: ""
 category: "Java"
 permalink: /java/string/format/
@@ -18,7 +18,7 @@ String.format(String format, Object... args)
 A fairly complete implementation of the good old `printf`, it doesn't print itself, but allows us to apply formatting to the string we're going to print via the classic static `print()` and `println()` methods of `System.out`.
  
 This alone would be enough to get rid of some of the laziness and possible constraints and upgrade to at least Java version 7.
-Let's look at the signatures above, we have the format parameters and the variable list of args arguments representing the variables we'll pass in succession to be formatted. Regarding the format method from the official Oracle documentation we have the following description
+Let's look at the signatures above; we have the format parameters and the variable list of args arguments representing the variables we'll pass in succession to be formatted. Regarding the format method from the official Oracle documentation we have the following description
 
 ```java
 %[argument_index$][flags][width][.precision]conversion
@@ -27,10 +27,10 @@ where the optional argument `argument_index` is an integer indicating the positi
 The first argument is referenced with `1$`, the second with `2$`, and so on, pretty easy and intuitive even if you have no experience in C or C++.
 
 Optional `flags` is also the character set that modifies the output format, the valid flags depend on the value for the `conversion` argument.
-width` optional non-negative integer indicates the minimum number of characters to write to the otput.
+`width` optional non-negative integer indicates the minimum number of characters to write to the output.
 `precision` non-negative integer is used to limit the number of characters, and the specific behaviour is based on the conversion value.
 As visible `conversion` is the only mandatory argument and indicates the formatting depends on the data type.
-The mechanism is the same as that used in the C language an example may however clarify things better, the instruction
+The mechanism is the same as that used in the C language; however, an example may clarify things better. The instruction
 
 ```java
 String.format ( "%,6.2f", 352.100)

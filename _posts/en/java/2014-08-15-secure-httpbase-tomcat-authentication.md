@@ -17,18 +17,13 @@ In tomcat-users.xml setting, where we will configure the users.
 
 
 ```XML
-<!--?xml version='1.0' encoding='utf-8'?-->
+<?xml version='1.0' encoding='utf-8'?>
 <tomcat-users>
-<role rolename="tomcat">
-<role rolename="role1">
-<user password="tomcat" roles="tomcat" username="tomcat">
-<user password="tomcat" roles="role1" username="role1">
-<user password="tomcat" roles="tomcat,role1" username="both">
-</user>
-</user>
-</user>
-</role>
-</role>
+    <role rolename="tomcat" />
+    <role rolename="role1" />
+    <user password="tomcat" roles="tomcat" username="tomcat" />
+    <user password="tomcat" roles="role1" username="role1" />
+    <user password="tomcat" roles="tomcat,role1" username="both" />
 </tomcat-users>
 ```
 
@@ -36,7 +31,7 @@ In tomcat-users.xml setting, where we will configure the users.
 While in the web.xml file of our application, we add the lines as below.
 
 ```XML
-<!--?xml version="1.0" encoding="ISO-8859-1"?-->  
+<?xml version="1.0" encoding="ISO-8859-1"?>  
 <web-app>    
 <!-- Define a Security Constraint on this Application -->
 <security-constraint>

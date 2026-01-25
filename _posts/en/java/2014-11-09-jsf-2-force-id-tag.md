@@ -23,7 +23,7 @@ e.g.
 
 gives rise to this HTML code
 
-``html
+```html
 <input type="hidden" name="form:field1"/>
 ```
 
@@ -33,15 +33,15 @@ However, when we want to reference a given component by its `id`, whether in CSS
 
 In cases like this we can declare the `id` and at the `form` level specify the `prependId="false"` attribute. Applied to the code seen above we have
 
-``xml
-<h:form id="form1" prependId="false">.
+```xml
+<h:form id="form1" prependId="false">
    <t:inputHidden id="field1"/>
 </h:form>
 ```
 
 which will result in 
 
-``html
+```html
 <input type="hidden" name="field1"/>
 ```
 

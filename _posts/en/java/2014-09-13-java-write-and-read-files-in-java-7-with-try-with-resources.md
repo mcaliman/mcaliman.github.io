@@ -10,7 +10,7 @@ modified: 2024-07-11
 published: true
 ---
 
-Reading and writing files in Java 7 using the new try-with-resource construct relieves the developer of the task of correctly closing streams, below you can find two example methods.
+Reading and writing files in Java 7 using the new try-with-resources construct relieves the developer of the task of correctly closing streams, below you can find two example methods.
 
 
 To write a file
@@ -83,4 +83,4 @@ public class AutoClosableExampleObject implements AutoCloseable {
 }
 ```
 
-If we don't want to catch the exception, just omit the `catch` part of the block, and it will propagate as if it were unhandled (just so a `try` without `catch` and without `finally)`. To be honest, the code above could have benefited from other new features in version 7, such as `catch` with multiple exception handling, but more on that in a future post.
+If we don't want to catch the exception, just omit the `catch` part of the block, and it will propagate as if it were unhandled (just so a `try` without `catch` and without `finally`). To be honest, the code above could have benefited from other new features in version 7, such as `catch` with multiple exception handling, but more on that in a future post.

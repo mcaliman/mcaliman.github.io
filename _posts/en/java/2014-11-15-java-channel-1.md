@@ -10,7 +10,7 @@ modified: 2024-07-11
 published: true
 ---
 
-Making a copy of files with Java might have been considered pedantic until a few years ago. We sometimes forget the existence of the new nio package. Some might object that today with Java7 (and of course 8) it is possible to use the `Files` class, which exposes the even simpler copy method. For those who can't use it, a performant and simple solution is given below. Try a few tests to see how it performs with the classic stream-based methods, and you will appreciate the advantages of channels, especially if you are working with large files.
+Making a copy of files with Java might have been considered cumbersome until a few years ago. We sometimes forget the existence of the new nio package. Some might object that today with Java7 (and of course 8) it is possible to use the `Files` class, which exposes the even simpler copy method. For those who can't use it, a performant and simple solution is given below. Try a few tests to see how it performs with the classic stream-based methods, and you will appreciate the advantages of channels, especially if you are working with large files.
 
 ```java
 private static void copy(File source, File destination) {

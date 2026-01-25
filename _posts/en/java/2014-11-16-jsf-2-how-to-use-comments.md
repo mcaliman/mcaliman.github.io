@@ -10,7 +10,7 @@ modified: 2024-07-11
 published: true
 ---
 
-Granted, it is always possible to use the classic comment tags `<!--` and `-- >` in html but these are rendered by default, and in case the commented code is a hidden feature for the released, not yet official, release or a part of EL or JSF tags this could be awkward if not a security hole.
+Granted, it is always possible to use the classic comment tags `<!--` and `-->` in html but these are rendered by default, and in case the commented code is a hidden feature for the released, not yet official, release or a part of EL or JSF tags this could be awkward if not a security hole.
 
 Essentially there are two methods, let's look at them.
 
@@ -19,8 +19,8 @@ Set `facelets.SKIP_COMMENTS`.
 In our application's `web.xml` file, we set the `facelets.SKIP_COMMENTS` parameter to `true`.
 
 ``xml
-<context-param>.
-   <param-name>facelets.SKIP_COMMENTS</param-name>.
+<context-param>
+   <param-name>facelets.SKIP_COMMENTS</param-name>
    <param-value>true</param-value>
 </context-param>
 ```
