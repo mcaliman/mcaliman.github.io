@@ -23,17 +23,17 @@ If you think about it, these are no small differences, but as we shall see, ther
 
 Let's create and add objects to the map. We use Generics and diamond inference 
 Although obsolete, we can use `Hashtable` with generics and pass it to a `HashMap`
-remember that `Hashtable` is `syncronized`, `HashMap` is not.
+remember that `Hashtable` is `synchronized`, `HashMap` is not.
 
 ```java
 Hashtable<Integer, String> t = new Hashtable<>();
-HashMap<Integer, String> map = new HashMap(t);
+HashMap<Integer, String> map = new HashMap<>(t);
 ```
 
 we can initialise by setting the load factor (percentage of size) and initial capacity.
 ```java
 HashMap<Integer, String> map1 = new HashMap(10);//initialiCapacity = 10
-HashMap<Integer, String> map2 = new HashMap(10, 5);//initialiCapacity = 10 e load factor=5%
+HashMap<Integer, String> map2 = new HashMap(10, 5);//initialCapacity = 10 and load factor=5%
 ```
 
 We add three string elements with respective integer keys to the map
@@ -44,7 +44,7 @@ map.put(2, "Bravo");
 map.put(3, "Charlie");
 ```
 
-we retrieve the value from `HashMap` given the key
+We retrieve the value from `HashMap` given the key
 
 ```java
 Integer key = 1;
@@ -53,7 +53,7 @@ System.out.println("Key: " + key + " value: " + value);
 ```
 
 
-Iterating on the `HashMap      
+Iterating on the `HashMap`
 
 ```java
 Iterator<Integer> keySetIterator = map.keySet().iterator();
@@ -74,8 +74,8 @@ System.out.println("Size of Map: " + map.size());
 check whether it contains a given value or key
 
 ```java
-System.out.println("Does HashMap contains 1 as key: " + map.containsKey(1));
-System.out.println("Does HashMap contains Bravo as value: " +map.containsValue("Bravo"));
+System.out.println("Does HashMap contain 1 as key: " + map.containsKey(1));
+System.out.println("Does HashMap contain Bravo as value: " +map.containsValue("Bravo"));
 ```
 
 check if it contains elements or is empty

@@ -9,7 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 ---
-iText is definitely the most popular and complete library for processing PDF files, I highly recommend taking a look at it before evaluating other frameworks or reinventing hot water.
+iText is definitely the most popular and complete library for processing PDF files, I highly recommend taking a look at it before evaluating other frameworks or reinventing the wheel.
 
 But let's get down to brass tacks, below is the code for a class that allows you to merge a series of PDFs together, effectively concatenating a series of files and creating one resulting from the process.
 
@@ -79,4 +79,4 @@ for (int page = 0; page < pagesNumber;) {
 }
 ```
 
-in fact the `reader` extracts the pages of the document, one by one, and then adds them to the `copy` object.
+In fact the `reader` extracts the pages of the document, one by one, and then adds them to the `copy` object.

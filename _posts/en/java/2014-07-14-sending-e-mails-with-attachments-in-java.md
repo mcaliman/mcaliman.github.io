@@ -11,7 +11,7 @@ published: true
 ---
 
 The javax.mail package is very rich, so at first it can be a bit confusing; we'll see in the code presented in this post how much this complexity pays off in flexibility and potential. True, I don't have a simple mail() method as in other languages, but I do have the tools to create a respectable mail server as well (but we'll go into this in a later post, regarding the simple mail() method we can also create it from the API as we'll see and it will be tailored to our needs)
-To create our utility we will refer to the commmand pattern.
+To create our utility we will refer to the command pattern.
 First we define an abstract class that will contain the mailcap management, which is always useful when we want to manage email notifications from the Java platform.
 
 ```java
@@ -95,7 +95,7 @@ public class MailCommand extends AbstractMailCommand {
    }
 
    public void init() throws MessagingException {
-      initialize(); //potevo usare il metodo con “base” se non mi interessa l’invio autenticato
+      initialize(); //we could use the "base" initialization if we don't care about authenticated sending
    }
 
    private void initialize() throws MessagingException {
@@ -221,7 +221,7 @@ public class MailCommandInstantiator {
 
    public static MailCommand getInstance() {
       if (instance == null) {
-         String smtp = "smtp..myserver.ext";
+         String smtp = "smtp.myserver.ext";
          String user = "auth@myserver.ext";
          String password = "Secret";
          instance = new MailCommand(smtp, user, password);
