@@ -20,7 +20,7 @@ Compile and run the following code.
 ```java
 public class AClass {
     public AClass() {
-        System.out.println("call costuctor AClass()");
+        System.out.println("call constructor AClass()");
     }
     public void method1() {
         System.out.println("call method1");

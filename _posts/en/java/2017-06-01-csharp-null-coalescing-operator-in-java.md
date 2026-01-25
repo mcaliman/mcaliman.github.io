@@ -21,7 +21,7 @@ string result = leftHand ?? rightHand ;
 ```
 
 It returns the left-hand operand if it is not `null`, otherwise it returns the right-hand operand.
-A possible alternative in Java of C# `??` use `?` , the ternary operator, like this:
+A possible alternative in Java to C#'s `??` is using `?`, the ternary operator, like this:
 
 ```java
 String result = leftHand != null ? leftHand : rightHand; 

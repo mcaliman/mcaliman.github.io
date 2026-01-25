@@ -29,7 +29,7 @@ public class TClass extends Object {
 
 
     public TClass() {
-        System.out.println("call costructor TClass()!");
+        System.out.println("call constructor TClass()!");
     }
 
 

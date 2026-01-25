@@ -18,4 +18,4 @@ However, there are third-party libraries for working with Complex, for example:
 
 Apache Commons [http://commons.apache.org/proper/commons-math/userguide/complex.html](http://commons.apache.org/proper/commons-math/userguide/complex.html)
 
-My project is work in progress. Stay tuned! Next implementation: Generics, support for BigDecimal. What would you like me to add about?
+My project is work in progress. Stay tuned! Next implementation: Generics, support for BigDecimal. What would you like me to add?

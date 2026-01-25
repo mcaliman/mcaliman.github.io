@@ -94,7 +94,7 @@ public class LoginBean implements Serializable {
     }
     public String doLogout() {
         loggedIn = false;
-        //logout stuff..        
+        //logout stuff...        
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
         return navigationBean.toLogin();
     }

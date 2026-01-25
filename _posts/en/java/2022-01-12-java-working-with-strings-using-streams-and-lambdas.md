@@ -9,12 +9,12 @@ modified: 2024-07-11
 published: true
 ---
 
-Lambdas and steams are not exotic objects to be used in complex algorithms within the reach only of researchers locked away in the labs of a multinational corporation.
+Lambdas and streams are not exotic objects to be used in complex algorithms within the reach only of researchers locked away in the labs of a multinational corporation.
 Even in the life of the everyday developer, they can make life easier, remember less code and more elegance equals fewer bugs and headaches.
 Let us look at a few simple cases involving strings.
 
 ```java
-String string = ``abc'';
+String string = "abc";
 boolean containsAtLeastOneC = string.chars().anyMatch(c -> c == 'b');
 System.out.println(containsAtLeastOneC);//print true
 

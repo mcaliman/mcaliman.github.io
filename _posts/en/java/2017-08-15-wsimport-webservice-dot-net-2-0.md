@@ -47,14 +47,14 @@ preceded by the warning
 
 When NetBeans calls wsimport in the form
 
- wsimport -d E:\NetBeansProjects\JavaApplication18\build\generated\jax-wsCache\WebService -extension -Xnocompile -Xendorsed -keep -s E:\NetBeansProjects\JavaApplication18\build\generated\jax-wsCache\WebService -encoding UTF-8 -catalog E:\NetBeansProjects\JavaApplication18\catalog. xml -verbose E:\NetBeansProjects\JavaApplication18\xml-resources\web-service-references\WebService\wsdl\xx.yy.zz\WebService.asmx.wsdl -wsdllocation http://xx.yy.zz/webservice.asmx?WSDL
+ wsimport -d E:\NetBeansProjects\JavaApplication18\build\generated\jax-wsCache\WebService -extension -Xnocompile -Xendorsed -keep -s E:\NetBeansProjects\JavaApplication18\build\generated\jax-wsCache\WebService -encoding UTF-8 -catalog E:\NetBeansProjects\JavaApplication18\catalog.xml -verbose E:\NetBeansProjects\JavaApplication18\xml-resources\web-service-references\WebService\wsdl\xx.yy.zz\WebService.asmx.wsdl -wsdllocation http://xx.yy.zz/webservice.asmx?WSDL
 WSDL parsing...
 
 One solution is to tell wsimport how to treat that definition and reference s:schema
 
 wsimport -b http://www.w3.org/2001/XMLSchema.xsd -b E:/tmp/customization.xjb E:/tmp/webservice.wsdl
 
-The contents of the customisation.xjb file are shown below
+The contents of the customization.xjb file are shown below
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <bindings xmlns="http://java.sun.com/xml/ns/jaxb"

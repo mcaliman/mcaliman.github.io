@@ -16,7 +16,7 @@ string == null ? "" : string;
 ```
 or
 ```java
-if(string== null) string= ```;
+if(string== null) string= "";
 ```
 or, more intelligently, you created a method like
 ```java
@@ -29,7 +29,7 @@ and maybe even smarter you stuck it all in a Utilities class as a static method.
 If you use a version of Java from Java 7 onwards, you don't need it, even if it's simple, why reinvent the wheel? Has Oracle already prepared it for you? Use it (full stop). 
 
 The `Objects` class contains a method `String toString(Object o, String nullDefault)`
-which you can use as `Objects.toString(string,"")` if you statically import it, you can directly write `toString(string,"")`.
+which you can use as `Objects.toString(string,"")` if you statically import it; you can directly write `toString(string,"")`.
 
 Simple, clean, and you don't have to test it; someone has already done it for you.
 
