@@ -28,7 +28,7 @@ Mainly those related to concurrency, in fact it is difficult to guarantee correc
 # Some simple strategies for creating immutable objects
 
 * No setters and getters
-* All end fields and private
+* All final fields and private
 * Do not allow subclasses to override methods (class final)
 * If instance fields include references to mutable objects do not allow those objects to be mutated
 * Do not share references to mutable objects !
@@ -63,7 +63,7 @@ Mainly those related to concurrency, in fact it is difficult to guarantee correc
     }
 ```
 
-# Defensive coping
+# Defensive copying
 
   Most classes are mutable, so how do we approach the problem? By creating a wrapper around the class and using e.g. the clone() method
   

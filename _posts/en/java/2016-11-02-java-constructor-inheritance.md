@@ -48,7 +48,7 @@ SuperClass.method1()
 
 The constructor of the superclass was implicitly called before that of the subclass. However, the constructor is not inherited, it has only been called; if it were inherited, I could change its behaviour by overriding it, and this would destroy the encapsulation capability of the language.
 In other words, you cannot make the call to the parent constructor not be made.
-Modifica il codice così
+Modify the code like this
 
 ```java
 

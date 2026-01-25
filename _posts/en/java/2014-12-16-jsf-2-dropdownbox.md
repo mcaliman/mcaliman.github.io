@@ -52,12 +52,12 @@ public class ThatBean implements Serializable {
 The code in the jsf xhtml file is reduced to just a few lines
 
 ```xml
-<h:selectOneMenu  value="#{thatBean .thatId}">
+<h:selectOneMenu  value="#{thatBean.thatId}">
     <f:selectItems value="#{thatBean.thatMap}" />
 </h:selectOneMenu>
 ```
 
-the mapping is automatic with key and value (eye is inverted) of the option tag of the select tag.
+the mapping is automatic with key and value of the option tag of the select tag.
 However, the automation can influence quite a bit the way we populate our `Map`.
 For finer control we can use the following form
 
@@ -75,7 +75,7 @@ In the simplest cases, if we don't need a `Map` and I can hard code the values
 
 ```xml
 <h:selectOneMenu  value="#{thatBean.thatId}">
-   <f:selectItem itemValue="Key1" itemLabel="Label1” />
+   <f:selectItem itemValue="Key1" itemLabel="Label1" />
    <f:selectItem itemValue="Key2" itemLabel="Label2" />
 </h:selectOneMenu>
 ```

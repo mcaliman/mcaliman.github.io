@@ -17,10 +17,10 @@ The commonly accepted answers for this question are
 3. Rendering the class `final`
 4. Rendering all methods `final`
 
-Number 1:Commenting with `//` or `/* */`
+Number 1: Commenting with `//` or `/* */`
 Number 1. Few people give it. Yet you probably also use this solution often. It just doesn't seem like an answer to an interview. Wrong. If it makes you more comfortable you can give it as the last answer, for me that's a bonus. Think about it, spoiler: you'll find more at the end of the post.
 
-Number 2:Making all builders `private`
+Number 2: Making all builders `private`
 Number 2. is about the fact that if all constructors are `private` the inheritance game doesn't work, try compiling these two classes
 
 ```java
@@ -39,7 +39,7 @@ AClass() has private access in AClass
 public class BClass extends AClass {
 ```
 
-Number 3:Making the class `final`
+Number 3: Making the class `final`
 Number 3. is using the `final` keyword, try compiling the two classes seen above modified as follows
 
 ```java
@@ -84,7 +84,7 @@ method() in BClass cannot override method() in AClass
     public void method() {
   overridden method is final
 ```
-Be careful, the question is "How can I limit" not "How can I prevent (completely)" inheritance. The solution with editing `final` in front of `class` completely blocks any possibility of inheriting from the class.
+Be careful, the question is "How can I limit" not "How can I prevent (completely)" inheritance. The solution of adding `final` in front of `class` completely blocks any possibility of inheriting from the class.
 
 
 Addendum Number 1
