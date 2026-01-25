@@ -8,7 +8,7 @@ tags: [Java]
 date:   2014-07-06 22:45:33
 comments: true
 share: false
-published: false
+published: true
 ---
 
 > L'ingegnere quantistico Seth Lloyd è convinto che l’universo sia un gigantesco computer.     Speriamo non faccia girare Windows. 
