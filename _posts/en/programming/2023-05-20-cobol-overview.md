@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Cobol overview"
 excerpt: ""
@@ -10,6 +10,7 @@ comments: false
 share: false
 modified: 2024-07-11
 published: true
+tags: [programming, theory]
 ---
 
 > Computers are good at following instructions, but not at reading your mind.

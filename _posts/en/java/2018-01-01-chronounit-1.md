@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "The java.time.temporal.ChronoUnit class"
 excerpt: "Calculating the difference between two dates with ChronoUnit"
@@ -7,6 +7,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, oop]
 ---
 
 In Java calculating the difference in years, months, and days requires a few lines of code; with Java 8 it is possible to do this without external libraries and with just one instruction.

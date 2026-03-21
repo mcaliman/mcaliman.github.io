@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Date, time and interval objects in R"
 excerpt: ""
@@ -7,6 +7,7 @@ date:   2016-02-10
 comments: false
 modified: 2024-07-11
 published: true
+tags: [r, data-analysis]
 ---
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Context-free languages properties"
 excerpt: "Context-free language properties and considerations"
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [computer-science, theory]
 ---
    
 > Kleeneliness is next to Gödeliness 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "String.format: A printf method for Java"
 excerpt: ""
@@ -9,6 +9,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, oop]
 ---
 At the time of writing, many have not yet upgraded to either Java version 8 or 7. For those who do not know, JDK version 7 already offers the
 

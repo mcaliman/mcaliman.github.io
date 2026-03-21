@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Functions that implement cycles in R"
 excerpt: ""
@@ -7,6 +7,7 @@ date:   2016-03-01
 comments: false
 modified: 2024-07-11
 published: true
+tags: [r, data-analysis]
 ---
 
 ## Command-Line Loops

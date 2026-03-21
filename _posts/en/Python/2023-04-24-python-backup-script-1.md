@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "I am replacing my old bash scripts with Python #1."
 excerpt: "Copy a list of directories with their contents to a shared folder."
@@ -7,6 +7,7 @@ comments: false
 share: false
 modified: 2024-07-11
 published: true
+tags: [python, scripting]
 ---
 
 Like me, have you also accumulated many bash scripts over the years to automate operations on your systems?

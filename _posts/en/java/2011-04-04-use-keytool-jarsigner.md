@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Use of keytool and jarsigner"
 excerpt: ""
@@ -9,6 +9,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, tutorial]
 ---
 
 To extract a certificate that we already know is on our keyring

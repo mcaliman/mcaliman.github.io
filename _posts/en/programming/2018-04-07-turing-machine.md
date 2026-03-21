@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Turing Machine"
 excerpt: "Basic concepts and information on Turing Machines, accepted language, recursively enumerable and recursiv"
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [computer-science, theory]
 ---
   
 > Kleeneliness is next to Gödeliness 

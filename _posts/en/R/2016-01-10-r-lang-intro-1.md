@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "R language introduction"
 excerpt: ""
@@ -7,6 +7,7 @@ date:   2016-01-10
 comments: false
 modified: 2024-07-11
 published: true
+tags: [r, data-analysis]
 ---
 
 > “When debugging, novices insert corrective code; experts remove defective code.”

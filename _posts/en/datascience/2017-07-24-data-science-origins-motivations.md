@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Data Science Origins And Motivations"
 excerpt: "All of us are averse to uncertainty"
@@ -8,6 +8,7 @@ share: false
 date: 2017-07-24
 modified: 2024-07-11
 published: true
+tags: [data-science, analytics]
 ---
   
 The purpose of data analysis is to reduce uncertainty. 

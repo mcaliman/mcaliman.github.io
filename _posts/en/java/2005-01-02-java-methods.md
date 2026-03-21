@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Let's delve into methods in Java"
 excerpt: ""
@@ -9,6 +9,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, oop]
 ---
 
 # Let's delve into methods in Java

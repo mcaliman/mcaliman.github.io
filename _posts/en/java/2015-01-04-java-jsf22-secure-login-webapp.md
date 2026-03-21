@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Secure logins and pages with JSF 2"
 excerpt: ""
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, jsf]
 ---
 In this post we see how to implement a minimal login system with basic security in a Java Server Faces 2.2 application.
 

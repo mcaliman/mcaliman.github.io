@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "The Chain Of Responsibilityeton design pattern"
 excerpt: "Minimal CoF pattern example code"
@@ -7,6 +7,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [design-patterns, architecture]
 ---
 
 

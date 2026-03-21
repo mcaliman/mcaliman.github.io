@@ -1,0 +1,914 @@
+﻿[
+    {
+        "Title":  "About Clojure",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\clojure\\2019-04-29-about-clojure.md",
+        "Folder":  "clojure",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "A list of books on Clojure",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\clojure\\2023-09-09-clojure-books.md",
+        "Folder":  "clojure",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Data Science Origins And Motivations",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\datascience\\2017-07-24-data-science-origins-motivations.md",
+        "Folder":  "datascience",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Git Tag",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\git\\2024-05-12-git-tag.md",
+        "Folder":  "git",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Publishing a website with GitHub Pages.",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\github\\2014-01-01-publishing-a-blog-with-github-pages.md",
+        "Folder":  "github",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Java Essential Features",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2003-01-01-java-essential-features.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Java Variables And Assignment",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2003-01-02-java-variables.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Java Constants",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2003-02-03-java-constants.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Java Array",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2003-03-01-java-array.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Introducing OOP in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2003-03-02-java-introducing-oop.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Classes and methods in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2004-01-02-java-classes-methods.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Let\u0027s delve into methods in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2005-01-02-java-methods.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Passing parameters in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2006-01-05-java-method-parameter.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The this keyword in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2007-01-05-java-this.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Objects in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2008-01-05-java-objects.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The Content is not allowed in prolog error",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2011-02-27-content-is-not-allowed-in-prolog.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "What is JAX-WS",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2011-02-27-java-what-is-jax-ws.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Use of keytool and jarsigner",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2011-04-04-use-keytool-jarsigner.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "How to find jar file where a certain class is contained (deployed in GlassFish).",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2014-01-03-howto-find-jar-where-a-certain-class-is-contained.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "HOWTO FIX error \u0027illegal pattern character g\u0027 JAXB in NetBeans .",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2014-01-10-howto-fix-error-jaxb-netbeans-illegal-pattern-character-g.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "String.format: A printf method for Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2014-07-13-string-format-printf-java.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Sending e-mails with attachments in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2014-07-14-sending-e-mails-with-attachments-in-java.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "A Servlet to manage file downloads in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2014-07-15-servlet-downloads-file-java.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Secure httpbase tomcat authentication",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2014-08-15-secure-httpbase-tomcat-authentication.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Writing and reading files in Java 7 with try-with-resources",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2014-09-13-java-write-and-read-files-in-java-7-with-try-with-resources.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Concatenating PDFs with iText in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2014-09-18-java-concat-pdf-with-itext-in-java.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Using HashMap in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2014-09-27-java-hashmap.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "JSF 2 forcing tag-generated ids",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2014-11-09-jsf-2-force-id-tag.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Using Channels to Copy Files in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2014-11-15-java-channel-1.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "JSF 2 How to use comments",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2014-11-16-jsf-2-how-to-use-comments.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Dropdownboxes are easy with JSF 2.2!",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2014-12-16-jsf-2-dropdownbox.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Creating a Custom Converter in JSF 2.2",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2015-01-01-java-create-a-custom-converter-in-jsf-2.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Secure logins and pages with JSF 2",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2015-01-04-java-jsf22-secure-login-webapp.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The java.time.LocalTime class",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2015-12-16-localtime-1.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "How can you limit inheritance for a class?",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2016-11-01-limit-class-inheritance.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Are constructors inheritable?",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2016-11-02-java-constructor-inheritance.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Can we execute code before the main(String[]) method ?",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2016-11-03-java-execute_code_before_method_main.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "What are the methods of the Object class?",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2016-11-04-java-object-methods.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "C# null-coalescing operator in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2017-06-01-csharp-null-coalescing-operator-in-java.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "wsimport and Webservice .Net 2.0",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2017-08-15-wsimport-webservice-dot-net-2-0.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "How can I include external jar in my Netbeans project",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2017-09-16-include-external-jar-on-my-netbeans-project.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The java.time.temporal.ChronoUnit class",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2018-01-01-chronounit-1.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Why Java is still on top",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2019-05-12-java-top.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Cool APIs and where to find them: the Objects.toString() method",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2019-11-03-java-objects-tostring.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Fluent-API Tutorial",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2020-05-24-java-fluent-api-examples-1.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Java Complex Number",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2020-10-03-java-complex-number.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Immutable classes and objects in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2021-02-01-java-immutable.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Working with Strings using Streams and Lambdas.",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2022-01-12-java-working-with-strings-using-streams-and-lambdas.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The transition from Java EE to Jakarta EE",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2023-01-01-java-jakarta-ee-1.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The toString method of the Object class in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2023-02-07-java-tostring.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The hashCode method of the Object class in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2023-04-11-java-hashcode.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The equals() method of the Object class in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2023-05-16-java-equals.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Developing Secure Java EE Applications 1",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2025-09-07-developing-secure-java-ee-applications-1-introduction-en.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Sviluppo di applicazioni Java EE sicure 1",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2025-09-07-developing-secure-java-ee-applications-1-introduction-it.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Developing Secure Java EE Applications 2",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2025-09-07-developing-secure-java-ee-applications-2-understanding-common-threats-en.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Sviluppo di applicazioni Java EE sicure 2",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\java\\2025-09-07-developing-secure-java-ee-applications-2-understanding-common-threats-it.md",
+        "Folder":  "java",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "javascript according to Peter Paul Kock (PPK)",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\javascript\\2011-07-03-javascript-peter-paul-kock.md",
+        "Folder":  "javascript",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The CMS is dead, long live the Jekyll",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\jekyll\\2014-01-01-viva-jekyll.md",
+        "Folder":  "jekyll",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Github pages does not update my site with jekyll.",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\jekyll\\2017-09-17-github-pages-does-not-update-my-site-with-jekyll.md",
+        "Folder":  "jekyll",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "How to delete the command history on Linux",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\linux\\2000-01-02-howto-delete-history-comand-linux.md",
+        "Folder":  "linux",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The du Linux command",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\linux\\2007-01-01-linux-du-command.md",
+        "Folder":  "linux",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "How to install Ant on Linux",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\linux\\2013-01-01-howto-ant-linux.md",
+        "Folder":  "linux",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "How to set Virtualbox to full screen on Ubuntu 14.04",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\linux\\2014-01-02-howto-set-virtualbox-to-full-screen-on-ubuntu-1404.md",
+        "Folder":  "linux",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "SSH Log in without typing in the password.",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\linux\\2014-01-12-login-ssh-without-typing-in-the-password..md",
+        "Folder":  "linux",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "How to install Jekyll on ubuntu 14.04.",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\linux\\2014-06-07-install-jekyll.md",
+        "Folder":  "linux",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Enable the sudo command on debian 8",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\linux\\2015-05-01-enable-sudo-debian-8.md",
+        "Folder":  "linux",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Ubuntu 14.04.02 LTS 64bit: how to install Open SSH",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\linux\\2015-05-12-ubuntu-14.04.02-LTS-install-openssh.md",
+        "Folder":  "linux",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "How enable root user on Ubuntu 14.04.02 LTS",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\linux\\2015-05-13-ubuntu-14.04.02-LTS-howto-enable-root.md",
+        "Folder":  "linux",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Ubuntu 14.04.02 LTS How to install git",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\linux\\2015-05-14-ubuntu-14.04.02-LTS-install-git.md",
+        "Folder":  "linux",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "How to install subversion (svn) on Ubuntu 14.04.02 LTS",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\linux\\2015-05-15-ubuntu-14.04.02-LTS-install-subversion.md",
+        "Folder":  "linux",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "How to detect the machine architecture",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\linux\\2020-06-13-32or64bit-arch.md",
+        "Folder":  "linux",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "How to restore the Docebo administrator user",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\miscellaneous\\2009-01-01-how-to-restore-the-docebo-administrator-user.md",
+        "Folder":  "miscellaneous",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Importing users and courses with I/O Task in Docebo",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\miscellaneous\\2009-02-01-import-users-courses-docebo.md",
+        "Folder":  "miscellaneous",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Common errors when configuring Adobe PDF iFilter for SharePoint 2007",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\miscellaneous\\2011-04-04-common-errors-when-configuring-adobe-pdf-ifilter-for-sharepoint-2007.md",
+        "Folder":  "miscellaneous",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Big Data, Data Science, Databases the fundamentals #1",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\miscellaneous\\2016-05-01-bigdata-datascience-database-1.md",
+        "Folder":  "miscellaneous",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Big Data, Data Science, Databases the fundamentals #2",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\miscellaneous\\2016-06-01-bigdata-datascience-database-2.md",
+        "Folder":  "miscellaneous",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The Data Model Resource Book Vol 1 \u0026 2",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\miscellaneous\\2023-05-06-databookmodel-1-2.md",
+        "Folder":  "miscellaneous",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Software Architect",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\miscellaneous\\2025-05-09-software-architect.md",
+        "Folder":  "miscellaneous",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "MySQL: A problem when restoring a MySQL database...",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\mysql\\2010-01-01-mysql-a-problem-when-restoring-a-mysql-database.md",
+        "Folder":  "mysql",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "MySQL: how to install on ubuntu linux mysql without synaptic or apt",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\mysql\\2010-02-03-mysql-how-to-install-on-ubuntu-linux-mysql-without-synaptic-or-apt.md",
+        "Folder":  "mysql",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "MySQL: How to speed up restore operations from mysql dump",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\mysql\\2011-01-01-mysql-mysqldump-speed-up-restore.md",
+        "Folder":  "mysql",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "MySQL: Illegal mix of collations for operation union",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\mysql\\2017-05-02-mysql-illegal-mix-of-collations-for-operation-union.md",
+        "Folder":  "mysql",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Well Formatted referred to an XML document",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2011-03-07-xml-well-formatted.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "BPEL (Business Process Execution Language)",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2012-01-01-bpel.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "My thoughts on programming languages Part 1",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-07-09-my-thoughts-on-programming-languages-01.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "My thoughts on programming languages Part 2",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-07-10-my-thoughts-on-programming-languages-02.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "My thoughts on programming languages Part 3",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-07-11-my-thoughts-on-programming-languages-03.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "My thoughts on programming languages Part 4",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-07-12-my-thoughts-on-programming-languages-04.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Considerations on recursion",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-08-14-considerations-related-to-recursion.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "About the limits of the calculable",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-09-06-about-the-limits-of-the-calculable.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Java Dictionaries",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-09-24-java-dictionaries.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Indexed structures",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-09-28-java-indexed-structures.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Linked List",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-09-29-linked-list.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Stack",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-09-30-java-stack.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Queue",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-10-01-java-queue.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Structures indexed in depth",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-10-03-indexed-data-structures.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Tree in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-10-05-java-trees.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Trees indexed representations",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-10-06-indexed-representations-tree.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Tree Linked List",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-10-07-linked-representations-tree.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Generic visit algorithm for a tree",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-10-10-generic-visit-algorithm-for-a-tree.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "DFS o Depth First Search",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-10-12-depth-first-search-tree.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "BFS Breadth First Search",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2014-10-14-breadth-first-search-tree.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The Design Pattern Strategy",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2016-01-02-strategy-pattern-java-examples.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The Chain Of Responsibilityeton design pattern",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2016-01-03-chain-of-responsibility-pattern-java-examples.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Design Patterns Interpreter",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2016-01-03-interpreter-pattern-java-examples.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The Singleton design pattern",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2016-01-03-singleton-pattern-java-examples.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Design Pattern Visitor",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2016-01-03-visitor-pattern-java-examples.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Design Patterns State",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2016-01-13-state-pattern-java-examples.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Alphabets, Symbols, Strings and Languages",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2018-03-20-alphabets-symbols-strings-languages.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "CFG in Chomsky and Greibach\u0027s normal form",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2018-03-21-normal-forms-chomsky-greibach.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Pumping lemma for Context Free languages",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2018-03-22-pumping-lemma-for-context-free-languages.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Context-free languages properties",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2018-03-24-context-free-language-properties.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Prefix Property",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2018-03-28-prefix-property.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "From Pushdown Automata (PDA) to Context-Free Grammar (CFG)",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2018-04-01-from-pda-to-cfg.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "From Context-Free Grammar (CFG) to Pushdown Automata (PDA)",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2018-04-02-from-cfg-to-pda.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Turing Machine",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2018-04-07-turing-machine.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The programming language Scala",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2019-03-03-scala-language.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Explore the World of Artificial Intelligence",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2023-05-15-explore-world-artificial-intelligence.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Cobol overview",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2023-05-20-cobol-overview.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Understanding Domain Specific Languages",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2023-08-08-understanding-domain-specific-languages.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "What is an expert system?",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2023-08-11-what-is-an-expert-system.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "What is an inference engine?",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2023-08-11-what-is-an-inference-engine.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Passing Parameters to Methods/Functions/Procedure in Programming Languages",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2023-08-13-passing-parameters-in-programming-languages.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Using Prolog to Build Expert Systems",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2023-08-14-prolog-expert-system.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Introduction to Machine Learning",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2023-09-23-introduction-machine-learning.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Computer Architecture: what is it?",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2023-10-14-computer-architecture-what-is-it.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Monads: A First Definition",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\programming\\2024-04-27-monads-first-definition.md",
+        "Folder":  "programming",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "How to swap two variables at once with Python",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\python\\2014-09-01-python-how-to-swap-two-variables-at-once.md",
+        "Folder":  "python",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Downloading remote files with Python #1",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\python\\2019-02-25-python-download-remote-files-1.md",
+        "Folder":  "python",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Downloading remote files with Python #2",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\python\\2019-03-05-python-download-remote-files-2.md",
+        "Folder":  "python",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Install Python 3",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\python\\2020-06-14-python-howto-install-linux.md",
+        "Folder":  "python",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Restore remote database backup to local",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\python\\2020-12-19-python-restore-remote-database.md",
+        "Folder":  "python",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "I am replacing my old bash scripts with Python #1.",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\python\\2023-04-24-python-backup-script-1.md",
+        "Folder":  "python",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "I am replacing my old bash scripts with Python #2.",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\python\\2023-04-24-python-backup-script-2.md",
+        "Folder":  "python",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "R language introduction",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\r\\2016-01-10-r-lang-intro-1.md",
+        "Folder":  "r",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The control structures of R",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\r\\2016-01-15-r-lang-flow-control.md",
+        "Folder":  "r",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Functions in R",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\r\\2016-01-20-r-lang-functions.md",
+        "Folder":  "r",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Date, time and interval objects in R",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\r\\2016-02-10-r-lang-date-and-time.md",
+        "Folder":  "r",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Functions that implement cycles in R",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\r\\2016-03-01-r-lang-functions-that-implement-cycles.md",
+        "Folder":  "r",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Interfaces with the external world in R",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\r\\2016-04-01-r-lang-interfaces-with-the-outside world.md",
+        "Folder":  "r",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Checking nic.it droptime files with R",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\r\\2016-10-01-r-lang-dropfile.md",
+        "Folder":  "r",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "The R Language",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\en\\r\\2023-01-01-r-lang-1.md",
+        "Folder":  "r",
+        "Parent":  "en"
+    },
+    {
+        "Title":  "Caratteristiche Essenziali di Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\it\\java\\2003-01-01-java-essential-features.md",
+        "Folder":  "java",
+        "Parent":  "it"
+    },
+    {
+        "Title":  "Variabili Java e Assegnazione",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\it\\java\\2003-01-02-java-variables.md",
+        "Folder":  "java",
+        "Parent":  "it"
+    },
+    {
+        "Title":  "Costanti in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\it\\java\\2003-02-03-java-constants.md",
+        "Folder":  "java",
+        "Parent":  "it"
+    },
+    {
+        "Title":  "Gli Array in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\it\\java\\2003-03-01-java-array.md",
+        "Folder":  "java",
+        "Parent":  "it"
+    },
+    {
+        "Title":  "Introduzione all\u0027OOP in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\it\\java\\2003-03-02-java-introducing-oop.md",
+        "Folder":  "java",
+        "Parent":  "it"
+    },
+    {
+        "Title":  "Operatore null-coalescing del C# in Java",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\it\\java\\2017-06-01-csharp-null-coalescing-operator-in-java.md",
+        "Folder":  "java",
+        "Parent":  "it"
+    },
+    {
+        "Title":  "wsimport e Webservice .Net 2.0",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\it\\java\\2017-08-15-wsimport-webservice-dot-net-2-0.md",
+        "Folder":  "java",
+        "Parent":  "it"
+    },
+    {
+        "Title":  "Come includere jar esterni nel mio progetto Netbeans",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\it\\java\\2017-09-16-include-external-jar-on-my-netbeans-project.md",
+        "Folder":  "java",
+        "Parent":  "it"
+    },
+    {
+        "Title":  "La classe java.time.temporal.ChronoUnit",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\it\\java\\2018-01-01-chronounit-1.md",
+        "Folder":  "java",
+        "Parent":  "it"
+    },
+    {
+        "Title":  "PerchÃ© Java Ã¨ ancora al top",
+        "Path":  "C:\\Users\\mcaliman\\github\\mcaliman.github.io\\_posts\\it\\java\\2019-05-12-java-top.md",
+        "Folder":  "java",
+        "Parent":  "it"
+    }
+]

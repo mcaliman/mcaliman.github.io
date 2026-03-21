@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Design Patterns State"
 excerpt: "Features and sample Java code reduced to the essentials"
@@ -7,6 +7,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [design-patterns, architecture]
 ---
 
 You can find an example project on github at this address:

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Trees indexed representations"
 excerpt: ""
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [data-structures, algorithms]
 ---
 
 Indexed representations based on parent vector arrays and positional vectors both require `O(n)` space.

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "JSF 2 forcing tag-generated ids"
 excerpt: ""
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, jsf]
 ---
 
 When using tags like `inputHidden` or `form`, i.e. standard HTML components of the JSF, the `id` attributes of the corresponding 

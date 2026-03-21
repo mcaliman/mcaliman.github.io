@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Creating a Custom Converter in JSF 2.2"
 excerpt: ""
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, jsf]
 ---
 
 

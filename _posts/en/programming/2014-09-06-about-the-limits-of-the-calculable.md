@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "About the limits of the calculable"
 excerpt: ""
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [programming, theory]
 ---
 The following argument, due to L.J. Stockmeyer, is purely physical but
 clearly shows what is meant by the limits of the calculable:

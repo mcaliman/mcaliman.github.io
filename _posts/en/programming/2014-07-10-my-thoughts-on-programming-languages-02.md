@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "My thoughts on programming languages Part 2"
 excerpt: "Personal reflections on programming languages"
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [computer-science, theory]
 ---
 
 Java is representative of what I would call industrial/enterprise category languages. These types of programming languages are optimal for applications with several people working on the project. In this type of project, being formal and careful can have a considerable impact.

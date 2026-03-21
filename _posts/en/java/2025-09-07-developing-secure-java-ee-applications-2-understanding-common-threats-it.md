@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Sviluppo di applicazioni Java EE sicure 2"
 excerpt: "Dalle minacce alle migliori pratiche Parte 2"
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2025-09-07
 published: true
+tags: [java, security]
 ---
 
 

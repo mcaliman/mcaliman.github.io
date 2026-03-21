@@ -1,4 +1,4 @@
---- 
+﻿--- 
 layout: post
 title: "Come includere jar esterni nel mio progetto Netbeans"
 excerpt: ""
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, tutorial]
 ---
 
 > “Misurare il progresso della programmazione in linee di codice è come misurare il progresso della costruzione di un aereo in base al peso.”

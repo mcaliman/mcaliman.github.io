@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Introduction to Machine Learning"
 excerpt: "Machine learning is a powerful technology that allows computers to learn from data without being explicitly programmed. It is used in a wide range of applications, including image recognition, text classification, and event prediction"
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [ai, machine-learning]
 ---
 
 
