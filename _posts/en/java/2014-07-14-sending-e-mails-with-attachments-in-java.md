@@ -191,7 +191,6 @@ public class MailCommand extends AbstractMailCommand {
 
 You may have noticed the presence of a `MailCommandAuthenticator` class which is used precisely for handling authentication to our mail server.
 
-
 ```java
 import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication;
@@ -232,9 +231,7 @@ public class MailCommandInstantiator {
 }
 ```
 
-
 And now the call code, this is one of the possible examples illustrating the flexibility of the mini framework we have created and which you will customise according to your needs.
-
 
 ```java
 MailCommand mailCommand = MailCommandInstantiator.getInstance();

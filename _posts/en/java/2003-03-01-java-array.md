@@ -13,7 +13,6 @@ published: true
 tags: [java, tutorial, en]
 ---
 
-
 Arrays are available in most programming languages because they realise 
 the simplest organisation of complex data structures.
 
@@ -96,7 +95,6 @@ for instance
 ```java
 T[][] var = new T[n][m];
 ```
-
 
 the considerations made above for one-dimensional types apply, 
 to initialise the position value or coordinate i,j I can write

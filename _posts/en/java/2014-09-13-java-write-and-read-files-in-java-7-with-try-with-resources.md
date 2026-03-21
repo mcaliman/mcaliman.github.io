@@ -13,7 +13,6 @@ tags: [java, tutorial, en]
 
 Reading and writing files in Java 7 using the new try-with-resources construct relieves the developer of the task of correctly closing streams, below you can find two example methods.
 
-
 To write a file
 ```java
 protected boolean write(String name, String text) {
@@ -32,9 +31,7 @@ new OutputStreamWriter(new FileOutputStream(name), "utf-8")))
     }
 ```
 
-
 and to read its contents
-
 
 ```java
 public String read(String name) {
@@ -56,14 +53,11 @@ public String read(String name) {
     }
 ```
 
-
 When the try block ends the stream will be closed automatically. This is possible because the classes used in the try-with-resources block implement the Java interface `java.lang.AutoCloseable` .
 
 All classes that implement this interface can be used within try-with-resources.
 
-
 The `AutoClosable` interface has only one method `close()`.
-
 
 ```java
 public interface AutoClosable {

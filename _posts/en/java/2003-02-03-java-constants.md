@@ -20,7 +20,6 @@ For example:
 final int M = 3;
 ```
 
-
 The word `final` indicates that the variable M of type `int` cannot change its value to `3`. 
 In this case `M` is said to be a constant and not a variable.
 

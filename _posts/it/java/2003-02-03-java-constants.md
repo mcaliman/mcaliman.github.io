@@ -20,7 +20,6 @@ Ad esempio:
 final int M = 3;
 ```
 
-
 La parola `final` indica che la variabile M di tipo `int` non può cambiare il suo valore da `3`. 
 In questo caso `M` viene definita una costante e non una variabile.
 

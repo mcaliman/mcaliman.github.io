@@ -25,5 +25,3 @@ Because it's widespread, clean and completely OOP despite Edsger Dijkstra's thou
 C++ is the prince of languages, you can use it to make anything. The Operating Systems, compilers, interpreters and Virtual Machines we use to run our code are written in C or C++.
 you can use it to accomplish anything. Operating Systems the compilers, interpreters and Virtual Machines we use to run our code are written in C or C++.
 
-
-

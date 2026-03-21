@@ -54,7 +54,6 @@ The access modifiers `public`, `private` and `protected` define the visibility o
 
 Class entities are those that are common to all objects instantiated by the class. Instance entities are those that are specific to each object instantiated by the class.
 
-
 Examples
 
 ```java

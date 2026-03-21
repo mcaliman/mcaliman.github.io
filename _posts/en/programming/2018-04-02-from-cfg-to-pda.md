@@ -30,5 +30,4 @@ In practice, once we have transformed our grammar G into Greibach normal form an
 
 It follows that &forall;u&isin;&Sigma; * , S->* u sse <q,u,S> ->* <q, &epsilon;, &epsilon;> [^footnote1]
 
-
 [^footnote1]: It can be proved by induction.

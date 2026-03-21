@@ -17,24 +17,19 @@ But let's get down to brass tacks, below is the code for a class that allows you
 ```java
 public class ConcatDocumentCommand {
 
-
     private final static Logger logger = Logger.getLogger(ConcatDocumentCommand.class.getName());
-
 
     private final List<String> list;
     private final String outputFilename;
-
 
     public ConcatDocumentCommand(String outputFilename) {
         this.outputFilename = outputFilename;
         this.list = new ArrayList<>();
     }
 
-
     public void add(String file) {
         this.list.add(file);
     }
-
 
     public void execute() {
         try {
@@ -57,7 +52,6 @@ public class ConcatDocumentCommand {
         }
     }
 
-
     public static void main(String[] args) {
         ConcatDocumentCommand c = new ConcatDocumentCommand("/test/test1_concat_test2.pdf");
         c.add("/tmp/test1.pdf");
@@ -68,7 +62,6 @@ public class ConcatDocumentCommand {
 ```
 The version of the Java language used is 7, so don't be surprised by the
 multiple catch nor the diamond notation. Too bad that in the version I use for this example the iText objects do not also allow the use of `try` with resources.
-
 
 The code is pretty self-explanatory; the real work is done by the `PdfCopy` object in the
 

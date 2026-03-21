@@ -11,7 +11,6 @@ published: true
 tags: [java, security, en]
 ---
 
-
 ### 2. Comprendere le minacce comuni
 * Difetti di iniezione (SQL, NoSQL, iniezione di comandi)
 * Autenticazione e gestione delle sessioni non funzionanti
@@ -22,7 +21,6 @@ tags: [java, security, en]
 * Cross-Site Request Forgery (CSRF)
 * Utilizzo di componenti con vulnerabilità note
 * Brevi esempi pratici
-
 
 ### 2.1 Difetti di iniezione (SQL, NoSQL, iniezione di comandi)
 * Un difetto di iniezione è una vulnerabilità che consente a un aggressore di trasmettere codice dannoso tramite un'applicazione
@@ -46,7 +44,6 @@ HttpServletRequest.changeSessionId() (Servlet 3.1+)]
 * API di sicurezza Jakarta (JSR 375+)
 * Utilizzo dell'API standard
 
-
 ### 2.3 Cross-Site Scripting (XSS) ecc…
 * XSS riflesso, memorizzato e basato su DOM. Come influiscono sulle applicazioni web EE
 * Gli attacchi Cross-Site Scripting (XSS) sfruttano le vulnerabilità delle applicazioni web iniettando
@@ -59,7 +56,6 @@ viene poi riflesso sul browser della vittima.
  che viene poi consegnato a utenti ignari.
     * L'XSS basato su DOM sfrutta le debolezze del codice lato client, consentendo a un aggressore di
 manipolare il Document Object Model (DOM) e iniettare script dannosi.
-
 
 ### 2.4 Sensitive Data Exposure
 * Come i dati sensibili possono essere esposti (mancanza di crittografia, registrazione eccessiva)
@@ -167,7 +163,6 @@ Object obj = ois.readObject(); // Now safer, but STILL requires caution
 System.out.println("Deserialized object: " + obj);
 }
 ```
-
 
 ### 2.8 Falsificazione delle richieste cross-site (CSRF)
 * Come sfruttare la fiducia riposta dall'utente nel proprio browser.

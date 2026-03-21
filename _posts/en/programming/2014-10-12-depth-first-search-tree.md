@@ -11,8 +11,6 @@ published: true
 tags: [data-structures, algorithms, en]
 ---
 
-
-
 Starting from the generic algorithm shown and using a Stack/Stack to represent `S`, we obtain the depth first search (or DFS)
 
 ```
@@ -32,7 +30,6 @@ end
 
 in a visit in depth we continue the visit from the last node left over
 since we stack first the right-hand child of each node and then the left-hand child we tend to follow all the left-hand children going deep until the first left-hand leaf is reached in general we will only visit each right-hand subtree in a node when the left-hand subtree has been visited altogether
-
 
 By reversing the order in which we add the children we have the symmetrical variant
 

@@ -18,13 +18,11 @@ I am very satisfied with the final result. My new Python scripts are much easier
 
 Python script to zip GlassFish logs and archive them by year and month. The script deletes the files after zipping them.
 
-
 ```python
 
 import os
 import zipfile
 from datetime import datetime
-
 
 def archive_glassfish_logs(log_path):
     zip_files = {}
@@ -45,10 +43,8 @@ def archive_glassfish_logs(log_path):
                 log_zip.write(os.path.join(log_path, file), file)
                 os.remove(os.path.join(log_path, file))
 
-
 # Usage example
 archive_glassfish_logs("./logs") # GlassFish 4.1.2 log directory
 
 ```
-
 

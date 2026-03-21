@@ -75,7 +75,6 @@ public class Main {
     }
 }
 
-
 **Notes**
 
 * A method with return must always return a value. If it is not necessary to return any value, you can use the keyword `void`.

@@ -11,8 +11,6 @@ published: true
 tags: [java, tutorial, en]
 ---
 
-
-
 This error is present in version 6.9 but also in version 7.4.
 
 ```java
@@ -39,5 +37,4 @@ It is fixed by adding
 ```
 
 to the `netbeans_default_options` property in the `netbeans.conf` file
-
 

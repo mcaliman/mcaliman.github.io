@@ -14,7 +14,6 @@ tags: [r, data-analysis, en]
 > 
 > – Richard E. Pattis
 
-
 I discovered the R programming language almost by chance and was fascinated by it.
 The first thing to know is that R is more than a programming language, it is also a complete development environment. 
 Based on the S language, it is used for the management and statistical analysis of data for the production of graphs and is available free of charge under the constraints of the GPL licence. 
@@ -33,7 +32,6 @@ At its simplest, it can be used as a calculator (a calculator that has grown a l
 > 
 ```
 
-
 To construct an object the command `<-` or `=` is used (or even `->` yes you read that right, so you can do `x<-a+1` but also `a+1->x` ).
 
 ```r
@@ -45,7 +43,6 @@ To construct an object the command `<-` or `=` is used (or even `->` yes you rea
 > x # print x
 [1] 8
 ```
-
 
 The `#` character is the comment symbol and everything that follows is
 ignored by the environment (see the instructions just above).

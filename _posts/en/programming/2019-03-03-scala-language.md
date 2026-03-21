@@ -10,7 +10,6 @@ published: true
 tags: [computer-science, theory, en]
 ---
 
-
 [Scala](https://www.scala-lang.org/) is a programming language that has both object-oriented and functional characteristics. Scala is statically typed, with an advanced type system that is more powerful than that of other languages such as Java and C#. 
 Its name is derived from scalable language: scalable in the sense that the language's core constructs are so modular that new functionality can be added via libraries rather than by modifying the language itself.
 Scala is suitable for building large modular systems as well as for scripting tasks. 

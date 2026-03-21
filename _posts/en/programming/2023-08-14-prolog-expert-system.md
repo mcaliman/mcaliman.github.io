@@ -48,7 +48,6 @@ true.
 
 ?- is_father(john, peter).
 
-
 true.
 
 ?- is_mother(mary, peter).
@@ -57,5 +56,4 @@ true.
 ```
 
 If you are interested in writing a small Prolog engine or expert system, there are many resources available online. You can find tutorials, example code, and libraries that can help you get started.
-
 

@@ -24,6 +24,3 @@ git remote add origin git@github.com:${GITHUB_ACCOUNT}/${GITHUB_ACCOUNT}.github.
 git push origin master
 ```
 
-
-
-

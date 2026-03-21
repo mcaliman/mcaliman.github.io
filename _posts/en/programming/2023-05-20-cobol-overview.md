@@ -17,7 +17,6 @@ tags: [programming, theory, en]
 >
 > – Donald Knuth
 
-
 COBOL (an acronym for COmmon Business-Oriented Language) is a programming language developed in 1959 by a working group composed of elements of the US industry and some US government agencies to create a programming language suitable for processing commercial data. Grace Murray Hopper played a primary role in the development and design of the language.
 
 COBOL is a procedural programming language, business-oriented and with strong typing. Its syntax is verbose and descriptive, trying to approach natural language. A COBOL program is divided into four divisions: identification, environment, data and procedure.
@@ -54,7 +53,6 @@ PROCEDURE DIVISION.
 
     STOP RUN.
 ```
-
 
 COBOL has undergone continuous evolution: in 1968, 1974 and 1985 the American National Standards Institute (ANSI) defined the Cobol68, Cobol74 and Cobol85 standards, also adopted by the International Organization for Standardization (ISO). With ISO/IEC 1989-2002, started in 1989 and completed in 2002, we have reached the definitive international standard.
 

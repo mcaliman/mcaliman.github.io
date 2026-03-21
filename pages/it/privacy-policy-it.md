@@ -8,8 +8,6 @@ published: true
 tags: [it]
 ---
 
-
-
 Raccolta e utilizzo dei dati
 
 Quando visiti il nostro sito web, raccogliamo automaticamente alcune informazioni sul tuo dispositivo, come il tuo indirizzo IP, il tipo di browser e il sistema operativo che utilizzi. Utilizziamo anche i cookie per raccogliere informazioni su come navighi nel nostro sito web. I cookie sono piccoli file di testo che vengono memorizzati sul tuo dispositivo e ci aiutano a ricordare le tue preferenze e a migliorare la tua esperienza di navigazione.

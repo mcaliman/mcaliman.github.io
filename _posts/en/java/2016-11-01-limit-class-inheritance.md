@@ -87,7 +87,6 @@ method() in BClass cannot override method() in AClass
 ```
 Be careful, the question is "How can I limit" not "How can I prevent (completely)" inheritance. The solution of adding `final` in front of `class` completely blocks any possibility of inheriting from the class.
 
-
 Addendum Number 1
 Here are two interpretations
 

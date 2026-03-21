@@ -58,4 +58,3 @@ In this case, the formal parameter of a method identifies the address of allocat
 
 Formally, Java applies pass-by-value to all methods, but if the parameter is an array or an object, the result is similar to that obtained with pass-by-reference, in fact in this case the copied parameter is the address of the array or object in question. Therefore, the modifications made to an array or object by a method are reflected in the context of the caller. It is not possible, however, to export a newly created object or array from a method except with the return command.
 
-

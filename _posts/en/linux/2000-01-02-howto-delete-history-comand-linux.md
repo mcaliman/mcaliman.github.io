@@ -18,4 +18,3 @@ history -c
 ```
 the command launched without any parameters instead shows you the entire history.
 
-

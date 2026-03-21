@@ -14,7 +14,6 @@ tags: [javascript, web, en]
 >
 > – Alan Perlis  
 
-
 If you happen to have to work in javascript, even if only to copy and paste simple scripts into your site, give yourself a gift,
 buy and read "Java Script according to Peter-Paul Kock" (Pearson Education) translation of PPK ON JAVASCRIPT.
 One of the few books on javascript that is not a reference or a mere collection of trivial scripts.

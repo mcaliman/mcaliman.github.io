@@ -31,7 +31,6 @@ public class Realloc {
         S = new int[n];
     }
 
-
     public void print(){
         for (int i = 0; i < S.length; i++) {
             System.out.println("S["+i+"]="+S[i]);

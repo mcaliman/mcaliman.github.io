@@ -18,10 +18,7 @@ Artificial intelligence is revolutionizing the way we work and interact with the
 
 * Resumai [https://www.resumai.com/] is an AI-based resume creation tool that helps users create professional resumes quickly and easily. It uses AI to generate eye-catching layouts and content, helping users highlight their skills and achievements.
 
-
 * Compose.ai [https://www.compose.ai/] is an AI-assisted writing tool that helps users write faster and more effectively. It uses AI to suggest words and phrases as you write, helping you complete your thoughts and improve your writing.
-
-
 
 * Cogram [https://www.cogram.com/] is an AI-based collaboration tool that helps teams work together more efficiently. It uses AI to suggest actions and decisions, helping teams solve problems and make decisions more quickly and effectively.
 

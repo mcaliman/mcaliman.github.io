@@ -13,9 +13,7 @@ tags: [java, security, en]
 
 To set up basic authentication in a java application in tomcat, we can only intervene in two files
 
-
 In tomcat-users.xml setting, where we will configure the users.
-
 
 ```XML
 <?xml version='1.0' encoding='utf-8'?>
@@ -27,7 +25,6 @@ In tomcat-users.xml setting, where we will configure the users.
     <user password="tomcat" roles="tomcat,role1" username="both" />
 </tomcat-users>
 ```
-
 
 While in the web.xml file of our application, we add the lines as below.
 
@@ -45,13 +42,11 @@ While in the web.xml file of our application, we add the lines as below.
 </auth-constraint>
 </security-constraint>
 
-
 <!-- Define the Login Configuration for this Application -->
 <login-config>
 <auth-method>BASIC</auth-method>
 <realm-name>Application</realm-name>
 </login-config>
-
 
 <!-- Security roles referenced by this web application -->
 <security-role>
@@ -60,7 +55,6 @@ The role that is required to log in to the Manager Application
 </description>
 <role-name>tomcat</role-name>
 </security-role>
-
 
 </web-app>
 ```

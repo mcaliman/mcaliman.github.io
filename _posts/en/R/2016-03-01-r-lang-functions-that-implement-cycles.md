@@ -40,7 +40,6 @@ y
 
 ```
 
-
 ## sapply
 `sapply` attempts to simplify the result of `lappy` if possible.
 If the result is a list where each element is of length 1, a vector is returned
@@ -134,7 +133,6 @@ l1<-list(rep(1, 4), rep(2, 3), rep(3, 2), rep(4, 1))
 l2<-mapply(rep, 1:4, 4:1)
 ```
 
-
 ## tapply
 `tapply` is used to apply a function to subsets of a vector
 
@@ -160,7 +158,4 @@ $`TRUE`
 [1] 1.343577 1.742792 1.389213 1.252149 1.650007 1.350450 3.162776
 
 ```
-
-
-
 

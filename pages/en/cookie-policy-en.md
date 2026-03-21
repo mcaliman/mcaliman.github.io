@@ -9,7 +9,6 @@ published: true
 tags: [en]
 ---
 
-
 This website uses cookies to improve the user experience. By using this website, the user consents to the use of cookies in accordance with this Cookie Policy.
 
 What are cookies?

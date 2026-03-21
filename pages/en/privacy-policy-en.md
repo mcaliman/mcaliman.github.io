@@ -9,7 +9,6 @@ published: true
 tags: [en]
 ---
 
-
 Data Collection and Use
 
 When you visit our website, we automatically collect some information about your device, such as your IP address, browser type, and operating system. We also use cookies to collect information about how you navigate our website. Cookies are small text files that are stored on your device and help us remember your preferences and improve your browsing experience.

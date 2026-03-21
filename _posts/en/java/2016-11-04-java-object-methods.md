@@ -13,7 +13,6 @@ tags: [java, oop, en]
 One of the questions you may be asked at an interview or certification or a simple test concerning the Java language is the following:
 What are the methods of the `Object` class?
 
-
 `clone()` - This method helps us create and return a copy of the object on which the method is called.
 equals()` - Helps us make a comparison 
 `finalize()` - Called by the garbage collector on an object when it is being finalised
@@ -22,17 +21,14 @@ hashCode()` - Returns the hash code value for the object.
 `toString()` - returns a string representation of the object.
 `notify()`, `notifyAll()`, and `wait()` - Helps synchronize the activities of independently running threads in the program 
 
-
 If you look at this code
 
 ```java
 public class TClass extends Object {
 
-
     public TClass() {
         System.out.println("call constructor TClass()!");
     }
-
 
     public static void main(String[] args) {
         TClass instance = new TClass();
@@ -40,9 +36,7 @@ public class TClass extends Object {
 }
 ```
 
-
 You'll notice that the class extends `Object`; there is no need to make this relationship explicit since all objects are derived from `Object`. Our object class `TClass` inherits the default implementation of the methods listed above. In most cases the default implementation is insufficient if not completely useless; in some cases the implementation is not present.
-
 
 This is the code for the `Object` class, for brevity I've removed most of the javadoc
 
@@ -53,15 +47,12 @@ This is the code for the `Object` class, for brevity I've removed most of the ja
  */
 package java.lang;
 
-
 public class Object {
-
 
     private static native void registerNatives();
     static {
         registerNatives();
     }
-
 
     public final native Class<?> getClass();
     public native int hashCode();
@@ -84,18 +75,15 @@ public class Object {
                                 "nanosecond timeout value out of range");
         }
 
-
         if (nanos > 0) {
             timeout++;
         }
-
 
         wait(timeout);
     }
     public final void wait() throws InterruptedException {
         wait(0);
     }
-
 
     protected void finalize() throws Throwable { }
 }
@@ -114,7 +102,6 @@ By contrast `hashCode`, also `native`, provides an implementation but you can ov
 public native int hashCode();
 ```
 
-
 The `equals()` method
 
 ```java 
@@ -124,7 +111,6 @@ public boolean equals(Object obj) {
 ```
 
 provides a very simple default implementation, it checks if the object is the same or not (not if its properties have the same values, which is much more useful, but that's normal, it's up to us to implement such behaviour, it's not necessarily the case that two objects are the same only if they have the same attributes).
-
 
 As for `clone()` instead 
 
@@ -150,9 +136,7 @@ The `toString()` method is one of my favourites, if handled properly it makes de
 
 It is evident that its default implementation is trivial.
 
-
 The `notify()`, `notifyAll()`, `wait()` methods in their different overloaded versions deserve a separate treatment.
-
 
 The `finalize()` method has an empty implementation
 

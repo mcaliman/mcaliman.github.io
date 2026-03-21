@@ -11,7 +11,6 @@ published: true
 tags: [java, security, en]
 ---
 
-
 ### 2. Understanding Common Threats
 * Injection Flaws (SQL, NoSQL, Command Injection)
 * Broken Authentication and Session Management
@@ -22,7 +21,6 @@ tags: [java, security, en]
 * Cross-Site Request Forgery (CSRF)
 * Using Components with Known Vulnerabilities
 * Brief Practical Examples
-
 
 ### 2.1 Injection Flaws (SQL, NoSQL, Command Injection)
 * An injection flaw is a vulnerability which allows an attacker to relay malicious code through an
@@ -167,7 +165,6 @@ Object obj = ois.readObject(); // Now safer, but STILL requires caution
 System.out.println("Deserialized object: " + obj);
 }
 ```
-
 
 ### 2.8 Cross-Site Request Forgery (CSRF)
 * How to exploit the user's browser's trust.

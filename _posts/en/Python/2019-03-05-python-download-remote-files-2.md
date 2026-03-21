@@ -48,7 +48,6 @@ def donwload_remote_files(_host, _host_username, _host_password, _remote_path, _
     sftp.close()
     ssh.close()
 
-
 host = 'domain.ext'
 host_username = 'user'
 host_password = 'passw'

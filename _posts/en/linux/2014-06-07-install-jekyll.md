@@ -45,7 +45,6 @@ sudo apt-get install g++
 sudo gem install therubyracer --nols-rdoc --no-ri
 ```
 
-
 We finally install jekyll.
 
 ```
@@ -69,5 +68,4 @@ You can find Jekyll on GitHub at [Jekyll's GitHub repo][jekyll-gh].
 
 [jekyll-gh]: https://github.com/jekyll/jekyll
 [jekyll]:    http://jekyllrb.com
-
 
