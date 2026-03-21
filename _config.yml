@@ -9,7 +9,7 @@ skin: "/assets/css/skins/default.css"
 locale: en-US
 title: "True Programming"
 description: "Massimo Caliman's Blog On Computer Science"
-copyright: © 1999, 2024 Massimo Caliman - All Rights Reserved - Powered by Jekyll & So Simple.
+copyright: "Massimo Caliman - All Rights Reserved - Powered by <a href='https://jekyllrb.com' rel='nofollow'>Jekyll</a> & <a href='https://github.com/mmistakes/so-simple-theme' rel='nofollow'>So Simple</a>."
 baseurl: # the subpath of your site, e.g. "/blog"
 url:     # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: /images/logo.jpg 
