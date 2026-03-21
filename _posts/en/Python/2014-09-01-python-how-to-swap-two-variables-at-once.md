@@ -9,7 +9,7 @@ comments: false
 share: false
 modified: 2024-07-11
 published: true
-tags: [python, scripting]
+tags: [python, scripting, en]
 ---
 
 Has it ever occurred to you to write something like this?

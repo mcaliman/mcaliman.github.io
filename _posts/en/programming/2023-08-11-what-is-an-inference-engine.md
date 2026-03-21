@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [ai, machine-learning]
+tags: [ai, machine-learning, en]
 ---
 
 An inference engine is a component of an expert system that uses the knowledge base to make decisions. The inference engine uses a logical process to apply the rules to the knowledge base and generate a response.

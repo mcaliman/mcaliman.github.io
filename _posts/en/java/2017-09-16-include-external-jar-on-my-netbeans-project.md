@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial]
+tags: [java, tutorial, en]
 ---
 
 > “Measuring programming progress by lines of code is like measuring aircraft building 

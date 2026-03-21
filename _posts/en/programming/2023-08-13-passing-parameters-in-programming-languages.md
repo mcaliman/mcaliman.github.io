@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [computer-science, theory]
+tags: [computer-science, theory, en]
 ---
 
 In a programming language, parameters are variables that are used to pass information into or out of a method (or a function or procedure). There are 2 main ways to pass parameters: **by value** and **by reference**.

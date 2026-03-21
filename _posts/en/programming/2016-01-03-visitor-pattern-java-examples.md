@@ -6,7 +6,7 @@ category: Programming
 comments: true
 modified: 2024-07-11
 published: true
-tags: [design-patterns, architecture]
+tags: [design-patterns, architecture, en]
 ---
 
 You can find an example project on github at this address:

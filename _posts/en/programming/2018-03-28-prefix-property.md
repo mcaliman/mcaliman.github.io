@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [programming, theory]
+tags: [programming, theory, en]
 ---
    
 > Kleeneliness is next to Gödeliness

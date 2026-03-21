@@ -7,7 +7,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, oop]
+tags: [java, oop, en]
 ---
 One of the questions you might get at an interview or a certification or a simple test concerning the Java language is the following:
 How can you limit inheritance for a class?

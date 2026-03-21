@@ -7,7 +7,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, oop]
+tags: [java, oop, en]
 ---
 
 One of the questions you may be asked at an interview or certification or a simple test concerning the Java language is the following:

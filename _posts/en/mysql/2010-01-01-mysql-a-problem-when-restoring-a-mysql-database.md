@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [mysql, database]
+tags: [mysql, database, en]
 ---
 
 If you encounter problems when restoring from a mysql dump, try setting these variables before running the `source` command

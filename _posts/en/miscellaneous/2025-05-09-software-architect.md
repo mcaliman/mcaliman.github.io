@@ -9,7 +9,7 @@ comments: false
 share: false
 modified: 2025-05-09
 published: true
-tags: [misc, architecture]
+tags: [misc, architecture, en]
 ---
 
 > **The Architect:** Hello, Neo.

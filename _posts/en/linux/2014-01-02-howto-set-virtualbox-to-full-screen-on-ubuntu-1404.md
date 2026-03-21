@@ -8,7 +8,7 @@ share: false
 date: 2014-01-02
 modified: 2024-07-11
 published: true
-tags: [linux, ubuntu]
+tags: [linux, ubuntu, en]
 ---
 
 

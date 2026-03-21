@@ -7,7 +7,7 @@ permalink: /scala/overview/
 comments: false
 modified: 2024-07-11
 published: true
-tags: [computer-science, theory]
+tags: [computer-science, theory, en]
 ---
 
 

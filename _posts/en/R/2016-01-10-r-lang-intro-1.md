@@ -7,7 +7,7 @@ date:   2016-01-10
 comments: false
 modified: 2024-07-11
 published: true
-tags: [r, data-analysis]
+tags: [r, data-analysis, en]
 ---
 
 > “When debugging, novices insert corrective code; experts remove defective code.”

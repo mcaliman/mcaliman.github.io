@@ -9,7 +9,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial]
+tags: [java, tutorial, en]
 ---
 
 Let us first give a sufficiently formal definition for our purposes of a variable:

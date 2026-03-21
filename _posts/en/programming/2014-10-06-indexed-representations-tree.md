@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [data-structures, algorithms]
+tags: [data-structures, algorithms, en]
 ---
 
 Indexed representations based on parent vector arrays and positional vectors both require `O(n)` space.

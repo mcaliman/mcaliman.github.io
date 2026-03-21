@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial]
+tags: [java, tutorial, it]
 ---
 
 > “Un algoritmo deve essere visto per essere creduto.”

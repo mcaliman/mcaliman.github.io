@@ -7,7 +7,7 @@ date:   2016-01-15
 comments: false
 modified: 2024-07-11
 published: true
-tags: [r, data-analysis]
+tags: [r, data-analysis, en]
 ---
 
 Control structures in R allow the flow of program execution to be controlled according to runtime conditions in a manner not unlike any other imperative language (such as C, Java, Python), let's take a quick look at the reserved words dedicated to control structures

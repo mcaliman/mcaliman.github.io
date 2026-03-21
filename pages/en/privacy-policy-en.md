@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 lang: en
 permalink: /privacy-policy-en/
@@ -6,6 +6,7 @@ title: Privacy Policy (English)
 date: 2024-07-15
 modified: 2023-07-24
 published: true
+tags: [en]
 ---
 
 

@@ -1,10 +1,10 @@
----
+﻿---
 layout: page
 lang: en
 ref: about
 permalink: /about/
 title: About me
-tags: [about]
+tags: [abouten]
 date: 2024-07-15
 modified: 2013-09-13
 published: true

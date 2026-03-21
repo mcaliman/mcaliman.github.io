@@ -8,7 +8,7 @@ comments: false
 share: false
 modified: 2024-07-11
 published: true
-tags: [r, data-analysis]
+tags: [r, data-analysis, en]
 ---
 
 The script in question is nothing special but shows the convenience of using R when it comes to manipulating data and creating scripts or prototypes. Download the two droptime files from the nic and check whether it contains the domain we are interested in.

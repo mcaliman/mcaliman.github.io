@@ -1,10 +1,10 @@
----
+﻿---
 layout: page
 lang: en
 ref: jug
 permalink: /jug/
 title: Java User Group List
-tags: ["Java User Group","JVM User Group"]
+tags: ["Java User Group", "JVM User Group", en]
 date: 2024-07-15
 modified: 2023-11-05
 published: true

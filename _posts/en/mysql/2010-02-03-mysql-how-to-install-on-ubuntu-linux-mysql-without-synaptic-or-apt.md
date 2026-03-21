@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [mysql, database]
+tags: [mysql, database, en]
 ---
 We download the `tar.gz` from the mysql site www.mysql.com
 place it in `/usr/local` unpack the `tar.gz` with the command

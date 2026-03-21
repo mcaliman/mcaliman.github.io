@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, jsf]
+tags: [java, jsf, en]
 ---
 
 When using tags like `inputHidden` or `form`, i.e. standard HTML components of the JSF, the `id` attributes of the corresponding 

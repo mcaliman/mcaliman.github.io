@@ -7,7 +7,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial]
+tags: [java, tutorial, en]
 ---
 
 Lambdas and streams are not exotic objects to be used in complex algorithms within the reach only of researchers locked away in the labs of a multinational corporation.

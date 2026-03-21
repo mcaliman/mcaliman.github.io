@@ -9,7 +9,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial]
+tags: [java, tutorial, en]
 ---
 
 JAX-WS stands for Java API for XML Web Services.

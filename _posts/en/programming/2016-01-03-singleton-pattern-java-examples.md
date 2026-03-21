@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [design-patterns, architecture]
+tags: [design-patterns, architecture, en]
 ---
 
 The Singleton is probably the simplest pattern, some languages like Scala provide 

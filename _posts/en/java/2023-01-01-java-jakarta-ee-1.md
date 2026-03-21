@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, jakarta-ee]
+tags: [java, jakarta-ee, en]
 ---
 
 

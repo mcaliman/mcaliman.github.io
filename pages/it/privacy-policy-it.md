@@ -1,10 +1,11 @@
----
+﻿---
 layout: page
 lang: it
 permalink: /privacy-policy-it/
 title: Informativa sulla privacy - Privacy Policy (Italiano)
 modified: 2023-07-24
 published: true
+tags: [it]
 ---
 
 

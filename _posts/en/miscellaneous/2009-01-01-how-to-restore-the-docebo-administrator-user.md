@@ -8,7 +8,7 @@ share: false
 date: 2009-01-01
 modified: 2024-07-11
 published: true
-tags: [docebo, lms]
+tags: [docebo, lms, en]
 ---
 
 When importing from CSV files, Docebo sometimes deletes the admin user and it is no longer possible to access the administration panel.

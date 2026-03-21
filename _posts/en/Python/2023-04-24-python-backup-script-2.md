@@ -7,7 +7,7 @@ comments: false
 share: false
 modified: 2024-07-11
 published: true
-tags: [python, scripting]
+tags: [python, scripting, en]
 ---
 
 Like me, have you also accumulated many bash scripts over the years to automate operations on your systems?

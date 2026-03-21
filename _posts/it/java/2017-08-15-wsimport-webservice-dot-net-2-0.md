@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial]
+tags: [java, tutorial, it]
 ---
 
 Aggiornamento 2017: Con NetBeans 8.2 il problema di seguito sembra essere gestito in modo completamente trasparente dalla procedura di generazione delle classi dal wsdl (wizard di NB8.2).

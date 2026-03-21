@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial]
+tags: [java, tutorial, it]
 ---
 
 > “Misurare il progresso della programmazione in linee di codice è come misurare il progresso della costruzione di un aereo in base al peso.”

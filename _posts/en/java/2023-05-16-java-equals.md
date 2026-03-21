@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, oop]
+tags: [java, oop, en]
 ---
 The equals method is a fundamental method of the Object class in Java. This method allows you to compare two objects to determine if they are equal.
 To use the equals method correctly, it is important to follow some rules. First, the equals method must be appropriately overridden in subclasses. Additionally, the `equals` method must be reflexive, symmetric, transitive and consistent.

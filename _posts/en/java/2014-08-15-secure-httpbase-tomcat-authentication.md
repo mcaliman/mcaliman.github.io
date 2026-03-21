@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, security]
+tags: [java, security, en]
 ---
 
 To set up basic authentication in a java application in tomcat, we can only intervene in two files
