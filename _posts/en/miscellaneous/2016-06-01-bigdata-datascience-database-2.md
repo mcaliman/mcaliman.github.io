@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Big Data, Data Science, Databases the fundamentals #2"
 excerpt: "Before DBMSs, how was it done?..."
@@ -8,6 +8,7 @@ comments: false
 share: false
 modified: 2024-07-11
 published: true
+tags: [data, database]
 ---
   
 Before DBMSs, how was it done? Or rather how is it still done in many systems still in use? The part of the king was played by operating systems, applications saved to files, in some format, often proprietary, and one or more dedicated applications took care of reading, writing, modifying and deleting the data. This all worked well if everything resided on one machine and did not have to communicate with the rest of the world, i.e. when there were no problems of competing access to data. In general, the problems were redundancy, inconsistency, difficulty in accessing data, concurrent access and data protection.

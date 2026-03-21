@@ -1,4 +1,4 @@
---- 
+﻿--- 
 layout: post
 title:  "Java Array"
 excerpt: "Arrays are available in most programming languages because they realise 
@@ -10,6 +10,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, tutorial]
 ---
 
 

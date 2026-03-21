@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Java Dictionaries"
 excerpt: "The Java implementation of Dictionaries"
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [programming, theory]
 ---
 
 In older releases of the Java language, the dictionary data type was realised from the `Dictionary<K,V>` class of the `java.util` package. 

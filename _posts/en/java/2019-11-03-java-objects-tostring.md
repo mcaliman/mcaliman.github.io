@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Cool APIs and where to find them: the Objects.toString() method"
 excerpt: "Less code to handle null strings. Convert a string if null to an empty string."
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, oop]
 ---
 
 If you have 'stuff' like this in your code 

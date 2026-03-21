@@ -1,4 +1,4 @@
---- 
+﻿--- 
 layout: post
 title: "What is an expert system?"
 excerpt: ""
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [ai, machine-learning]
 ---
 
 An expert system is software that attempts to recreate the decision-making process of a human expert in a particular domain. Expert systems are often used in fields such as medicine, finance, and engineering, where rapid and complex decision-making is required.

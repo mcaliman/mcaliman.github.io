@@ -1,14 +1,14 @@
----
+﻿---
 layout: post
 title:  "Publishing a website with GitHub Pages."
 excerpt: ""
 category: github
-tags: [github pages]
 comments: true
 share: false
 date: 2014-01-01
 modified: 2024-07-11
 published: true
+tags: [github, pages]
 ---
 
 If you want to publish the site at `http://USERNAME.github.com`, you need to create a repository (from your GitHub account) 

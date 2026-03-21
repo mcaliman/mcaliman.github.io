@@ -1,4 +1,4 @@
---- 
+﻿--- 
 layout: post
 title: "MySQL: Illegal mix of collations for operation union"
 excerpt: "About MySQL error illegal mix of collations for operation union"
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [mysql, database]
 ---
 Well, you probably have different collations in some mysql views, try to force collation like this 
 ```sql  

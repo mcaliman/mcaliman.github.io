@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "The hashCode method of the Object class in Java"
 excerpt: "Learn how the hashCode method works and how to use it correctly"
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, oop]
 ---
  
 The `hashCode` method is a fundamental method of the `Object` class in Java. This method returns an integer value representing the hash code of the object.

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "MySQL: A problem when restoring a MySQL database..."
 excerpt: ""
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [mysql, database]
 ---
 
 If you encounter problems when restoring from a mysql dump, try setting these variables before running the `source` command

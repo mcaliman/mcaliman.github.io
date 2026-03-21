@@ -1,13 +1,13 @@
----
+﻿---
 layout: post
 title: "About Clojure"
 excerpt: "Some information about the Clojure programming language"
 category: Clojure
-tags: [Functional Programming]
 permalink: /clojure/about/
 comments: false
 modified: 2024-07-11
 published: true
+tags: [clojure, programming]
 ---
 
 > Simplicity is hard work. But, there's a huge payoff. The person who has a genuinely simpler system - a system made out of genuinely simple parts, is going to be able to affect the greatest change with the least work. He's going to kick your ass. He's gonna spend more time simplifying things up front and in the long haul he's gonna wipe the plate with you because he'll have that ability to change things when you're struggling to push elephants around.

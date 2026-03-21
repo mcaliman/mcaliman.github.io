@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Concatenating PDFs with iText in Java"
 excerpt: ""
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, tutorial]
 ---
 iText is definitely the most popular and complete library for processing PDF files, I highly recommend taking a look at it before evaluating other frameworks or reinventing the wheel.
 

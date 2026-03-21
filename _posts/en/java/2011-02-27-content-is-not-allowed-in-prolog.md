@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "The Content is not allowed in prolog error"
 excerpt: "Every XML document we work on should be formatted correctly, saved with the right encoding, etc"
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, tutorial]
 ---
 Every XML document we work on should be formatted correctly, saved with the right encoding, etc.
 A classic case is the message "Content is not allowed in prolog" (`SAXParseException`).

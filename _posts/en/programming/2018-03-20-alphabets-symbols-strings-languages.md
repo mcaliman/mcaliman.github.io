@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Alphabets, Symbols, Strings and Languages"
 excerpt: "What are alphabets, symbols and strings from the point of view of theoretical computer science"
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [computer-science, theory]
 ---
 
 > Kleeneliness is next to Gödeliness  

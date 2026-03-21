@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Well Formatted referred to an XML document"
 excerpt: ""
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [programming, theory]
 ---
 
 Well formatted means in a literal sense 'well formatted', an XML document that follows the elementary syntax of an XML document.

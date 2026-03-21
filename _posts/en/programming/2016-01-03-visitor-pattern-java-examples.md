@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Design Pattern Visitor"
 excerpt: ""
@@ -6,6 +6,7 @@ category: Programming
 comments: true
 modified: 2024-07-11
 published: true
+tags: [design-patterns, architecture]
 ---
 
 You can find an example project on github at this address:

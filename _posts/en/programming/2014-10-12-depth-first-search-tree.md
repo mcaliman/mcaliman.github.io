@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "DFS o Depth First Search"
 excerpt: ""
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [data-structures, algorithms]
 ---
 
 

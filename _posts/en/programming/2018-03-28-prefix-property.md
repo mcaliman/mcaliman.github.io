@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Prefix Property"
 excerpt: "Pushdown Automata (PDA) and language recognition problems with special features"
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [programming, theory]
 ---
    
 > Kleeneliness is next to Gödeliness

@@ -1,13 +1,13 @@
----
+﻿---
 layout: post
 title:  "javascript according to Peter Paul Kock (PPK)"
 excerpt: ""
 category: javascript
-tags: [Books]
 comments: false
 date: 2011-07-03
 modified: 2024-07-11
 published: true
+tags: [javascript, web]
 ---
 
 > "If you have a procedure with ten parameters, you probably missed some."

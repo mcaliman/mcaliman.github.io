@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Interfaces with the external world in R"
 excerpt: ""
@@ -8,6 +8,7 @@ comments: false
 share: false
 modified: 2024-07-11
 published: true
+tags: [r, data-analysis]
 ---
 
 Data are read via connection interfaces . Connections can be to files or urls for example .

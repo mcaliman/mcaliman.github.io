@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Developing Secure Java EE Applications 2"
 excerpt: "Understanding Common Threats Part 2"
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2025-09-07
 published: true
+tags: [java, security]
 ---
 
 

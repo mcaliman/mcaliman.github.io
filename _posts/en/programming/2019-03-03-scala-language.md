@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "The programming language Scala"
 excerpt: ""
@@ -7,6 +7,7 @@ permalink: /scala/overview/
 comments: false
 modified: 2024-07-11
 published: true
+tags: [computer-science, theory]
 ---
 
 

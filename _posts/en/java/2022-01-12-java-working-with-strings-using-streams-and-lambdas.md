@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Working with Strings using Streams and Lambdas."
 excerpt: ""
@@ -7,6 +7,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, tutorial]
 ---
 
 Lambdas and streams are not exotic objects to be used in complex algorithms within the reach only of researchers locked away in the labs of a multinational corporation.

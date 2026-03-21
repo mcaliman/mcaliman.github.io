@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "How to swap two variables at once with Python"
 excerpt: ""
@@ -9,6 +9,7 @@ comments: false
 share: false
 modified: 2024-07-11
 published: true
+tags: [python, scripting]
 ---
 
 Has it ever occurred to you to write something like this?

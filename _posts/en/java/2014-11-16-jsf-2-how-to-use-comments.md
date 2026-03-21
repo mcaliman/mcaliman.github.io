@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "JSF 2 How to use comments"
 excerpt: ""
@@ -8,6 +8,7 @@ comments: false
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, jsf]
 ---
 
 Granted, it is always possible to use the classic comment tags `<!--` and `-->` in html but these are rendered by default, and in case the commented code is a hidden feature for the released, not yet official, release or a part of EL or JSF tags this could be awkward if not a security hole.

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Enable the sudo command on debian 8"
 excerpt: ""
@@ -8,6 +8,7 @@ share: false
 date: 2015-05-01
 modified: 2024-07-11
 published: true
+tags: [linux, debian]
 ---
 
 > Part of the inhumanity of the computer is that, once it is competently programmed and working smoothly, it is completely honest. 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Objects in Java"
 excerpt: ""
@@ -9,6 +9,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [java, oop]
 ---
 
 From each class it is possible to obtain one or more entities through the instance, each of which constitutes one

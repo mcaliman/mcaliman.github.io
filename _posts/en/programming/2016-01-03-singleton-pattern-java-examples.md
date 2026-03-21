@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "The Singleton design pattern"
 excerpt: "Some examples of the Singleton pattern"
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [design-patterns, architecture]
 ---
 
 The Singleton is probably the simplest pattern, some languages like Scala provide 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Considerations on recursion"
 excerpt: ""
@@ -8,6 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+tags: [programming, theory]
 ---
 
 
