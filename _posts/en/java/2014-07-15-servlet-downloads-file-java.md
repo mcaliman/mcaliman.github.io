@@ -14,7 +14,6 @@ Let's see in this post how to write the code for a Java Servlet that allows us t
 Clicking on a link pointing to our servlet will initiate the download; we see the rather intuitive code in the lines below the post.
 To implement this, we essentially need to read the requested file (using some implementation of `InputStream`, in our case `FileInputStream`); determine the `MIME` type; and dump it correctly to the `HttpServletResponse` object in our servlet.
 
-
 In our example, the filename including the path is passed as a parameter, making the Servlet generic and usable for downloading any file
 
 ```java

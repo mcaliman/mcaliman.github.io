@@ -20,7 +20,6 @@ All productions are of the form A::= BC or A::= &sigma;
 
 Knowing them is important for various reasons, for instance they are used in the proof of correctness of lemma pumping for CF languages.
 
-
 # Greibach
 All productions are of the form A::= &sigma;B1...Bn 
 (&sigma;&isin;T and A,B1,...,Bn &isin;N, n&ge;0).

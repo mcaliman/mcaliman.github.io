@@ -10,7 +10,6 @@ modified: 2024-05-18
 published: false
 ---
 
-
 # Massimo Caliman - Software Architect 
 
 * Genova, Liguria, Italia 
@@ -18,7 +17,6 @@ published: false
 * [https://trueprogramming.com/](https://trueprogramming.com/)
 * [https://juggenova.it/](https://juggenova.it/)
 * mcaliman@gmail.com
-
 
 # Background
 
@@ -48,9 +46,7 @@ Operative systems: Linux (Ubuntu),Unix (Solaris),OS/400.
 
 Microprocessors and microcontrollers: Zilog Z80,micro ST6, SPARC processors.
 
-
  
-
 
 # Work Experience
 
@@ -92,7 +88,6 @@ Oct 2005 - Feb 2006
 Senior Java Developer, CMS and ERP development.
 Principal technologies used: Java SE,Java EE, JSP, Servlet, Tomcat, MySQL.
 
-
 **Team Leader & Senior Java Developer** - Text-e S.r.l  
 Apr 2003 - Jul 2005  
 Team Leader & Senior Java Developer for Text-e S.r.l.
@@ -103,7 +98,6 @@ Principal technologies used: Java SE,Java EE, JSP, Servlet, Tomcat, MySQL, MS SQ
 Apr 2001 - Apr 2003  
 Project Manager & Senior Java Developer for Datasys Informatia S.p.A., an IBM e-Business Partner, leading B2B and B2C Projects, Java developed, using JSP and Servlet Technologies on IBM Websphere, on IBM Lotus Domino, and on Legacies.
 Principal technologies used: Java, AS/400 Toolbox for Java, JSP, Servlet, IBM WebSphere Application Server (WAS), IBM DB2 UDB, IBM DB2/400, Lotus Domino, Visual Basic 6, ASP.
-
 
 **Java Developer** - Studio Balbi S.u.r.l (Zucchetti PAC s.r.l)  
 Feb 1999 - Apr 2001   
@@ -129,13 +123,11 @@ Diploma di Perito Industriale Capotecnico per l’Elettronica, Graduated High Sc
 1988 - 1991  
 Votazione: 58/60 (A+)  
 
-
 # Talk
 
 **A Comprehensive Review of E-R Models Across Industries: Unveiling the Value of Len Silverston's "The Data Model Resource Book" Volumes 1, 2, and 3**   
 Jan 2024 - Jan 2024  
 My talk at the Java User Group Genoa on January 26, 2024    
-
 
 **Converting Excel Applications to Pseudocode and Clojure: Reverse Engineering, Manual Techniques, Automation**
 Jan 2024 - Jan 2024
@@ -157,8 +149,6 @@ My talk Presentd about Java PDF generation with iText at Department of Computer 
 **Java Base – package I/O e NET**   
 May 2003 - May 2003  
 "Java Base - package I/O e NET" My talk Presentd at Webbit Conference in Padova (Italy), organized by the Java Italian Association. 
-
-
 
 # Certification/Courses
 
@@ -230,7 +220,6 @@ UC San Diego
 Data di rilascio: Jan 2016
 ID credenziale 3AJE4934J3WE 
 
-
 **QlikView - Level Analyzer/Professional,Level Developer**   
 maggio 2009    
 Associato a Eterbit S.r.l    
@@ -243,7 +232,6 @@ Associato a Istituto tecnico Don Bosco di Genova
 
 **Programmazione per Calcolatori Elettronici (Computer Programming) - Basic Level** - 1986/1987  
 Associato a Istituto tecnico Don Bosco di Genova   
-
 
 # SKILLS
 Java,Tomcat,MySQL,Linux, JEE, DDD, Web Services, Apache, UML, C#, Ubuntu
@@ -280,13 +268,11 @@ Alfresco
 
 Software Architecture
 
-
 # Articoli/pubblicazioni
 
 **Java e il protocollo UDP**  
 CoAuthor of "Java e il protocollo UDP" Mar 2000 
 published by Mokabyte (www.mokabyte.it) Java Advanced category.   
-
 
 **Un package per il debugging in Java**  
 CoAuthor of "Un package per il debugging in Java" Dec 1999  

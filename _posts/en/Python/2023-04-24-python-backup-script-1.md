@@ -18,7 +18,6 @@ I am very satisfied with the final result. My new Python scripts are much easier
 
 Here is the first simple copy-backup script rewritten in Python
 
-
 ```python
 #
 # simple, trivial, but sufficient for my needs for important and frequently used files
@@ -49,5 +48,4 @@ for folder in folders_to_copy:
     shutil.copytree(source_folder, destination_folder, dirs_exist_ok=True)
 print("End! Bye Bye.")
 ```
-
 

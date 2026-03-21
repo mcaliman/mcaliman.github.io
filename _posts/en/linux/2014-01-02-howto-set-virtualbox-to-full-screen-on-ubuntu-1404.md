@@ -11,7 +11,6 @@ published: true
 tags: [linux, ubuntu, en]
 ---
 
-
 If you have installed VirtualBox on Ubuntu 14.04 but the window is small (the resolution is 800x600) working becomes hard. 
 The solution is to install VirtualBox Guest Addition, I suggest you forget installing from the cd image and proceed with `apt-get`
 

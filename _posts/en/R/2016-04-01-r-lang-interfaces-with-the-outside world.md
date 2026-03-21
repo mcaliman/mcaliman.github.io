@@ -33,7 +33,6 @@ description is the name of the file open is a code indicating
 * "a" append
 * "rb", "wb", "ab" read,write, or append in binary mode (Windows)
 
-
 In general, shortcuts are powerful tools for navigating files or other external objects. 
 In practice, we often do not need to deal with the link interface directly .
 
@@ -63,5 +62,4 @@ x <- readLines(con, 10)
 con <- url("http://google.com", "r")
 x <- readLines(con)
 ```
-
 

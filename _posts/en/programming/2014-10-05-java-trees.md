@@ -29,7 +29,6 @@ Nodes with the same father are called siblings, trees with leaves all on the sam
 
 A basic specification of the `Tree` data type must necessarily include operations such as those below.
 
-
 * DATA-TYPE 
    * `Tree`
  
@@ -51,7 +50,6 @@ A basic specification of the `Tree` data type must necessarily include operation
       * inserts the subtree `t` into the tree so that the root of `t` becomes a child of `u`
    * removeSubtree(Node v) -> `Tree` 
       * detaches and returns the entire subtree rooted in `v`, the operation deletes the `v` node and all its descendants from the tree
-
 
 A questo punto passare dalla specifica in pseudocodice ad una in linguaggio Java è immediato. 
 

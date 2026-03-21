@@ -64,7 +64,6 @@ abstract int size()
 ```
 returns the number of distinct elements contained in the dictionary (i.e. the number of keys).
 
-
 These are the classic methods of a generic data structure of the dictionary type, let's delve into the theoretical aspect by brushing up on some notions:
 
 A dictionary is a collection of elements to which keys taken from a totally ordered universe are associated. The notion of a datatype is used to describe the operations of interest on a collection, in other words it specifies what an operation must do, not how the operation can be carried out, this corresponds to the concept of interface in the Java language.
@@ -167,5 +166,4 @@ returns a `Collection` with the values contained in the map.
 
 The set of methods is quite generous, if you want to compare it to the typical abstract specification common to every map.
 The most common type of `Map` implementation is `HashMap`.
-
 

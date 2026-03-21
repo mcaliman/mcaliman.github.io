@@ -80,5 +80,3 @@ f(45)
 ```
 Then there is the topic ... but we will talk about that in another post.
 
-
-

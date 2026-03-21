@@ -11,8 +11,6 @@ published: true
 tags: [java, jsf, en]
 ---
 
-
-
 Making direct mappings between a `Map` and a dropdown box with Java Server Faces 2.3 is immediate and easy.
 Given a sample Session Bean below
 

@@ -16,8 +16,6 @@ progress by weight.”
 >
 > – Bill Gates
 
-
-
 An example of build.xml file
 
 ```XML
@@ -101,7 +99,6 @@ An example of build.xml file
 
     For list of available properties check the imported 
     nbproject/build-impl.xml file. 
-
 
     Another way to customize the build is by overriding existing main targets.
     The targets of interest are: 

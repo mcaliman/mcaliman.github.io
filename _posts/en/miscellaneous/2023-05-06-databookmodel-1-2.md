@@ -28,7 +28,6 @@ Volume 1 presents templates for general problems such as orders and invoices. Be
 8. Human Resources
 9. Data Warehouse
 
-
 The second volume, titled "The Data Model Resource Book, Volume 2: A Library of Universal Data Models by Industry Types", goes into detail about models for insurance, financial, professional services and manufacturing companies.
 Below is the complete list for Volume 2
 

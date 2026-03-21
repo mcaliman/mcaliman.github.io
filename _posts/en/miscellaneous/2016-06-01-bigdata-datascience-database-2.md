@@ -19,5 +19,3 @@ When we talk about BigData we also talk about non-relational NRDBMS or NoSQL dat
 
 And when we want to refer to the data and not the structure? In that case, we speak of the database instance, i.e. a set of data at a given time, since databases change over time as a result of insertions, modifications and deletions.
 
-
-

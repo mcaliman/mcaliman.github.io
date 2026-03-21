@@ -13,7 +13,6 @@ published: true
 tags: [java, tutorial, it]
 ---
 
-
 Gli array sono disponibili nella maggior parte dei linguaggi di programmazione perché realizzano 
 la più semplice organizzazione di strutture dati complesse.
 
@@ -96,7 +95,6 @@ per esempio
 ```java
 T[][] var = new T[n][m];
 ```
-
 
 le considerazioni fatte sopra per i tipi monodimensionali sono valide, 
 per inizializzare il valore della posizione o coordinate i,j posso scrivere

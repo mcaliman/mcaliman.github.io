@@ -35,7 +35,6 @@ Mainly those related to concurrency, in fact it is difficult to guarantee correc
 * Do not share references to mutable objects !
 * Do not provide methods that change the state of the object
 
-
 ```java
     public class Mutable {
     

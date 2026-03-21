@@ -124,7 +124,6 @@ public class LoginBean implements Serializable {
 
 ```
 
-
 The code of `NavigationBean` is shown below
 
 ```java
@@ -310,6 +309,4 @@ The code of our `web.xml` is as follows
 </web-app>
 ```
 We build our web application and then launch it with run from the project context menu.
-
-
 

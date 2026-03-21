@@ -40,7 +40,6 @@ Tipo di errore 2
 
 Un altro problema si manifesta con l'errore
 
-
 [ERROR] undefined element declaration 's:schema'
 
 preceduto dal warning

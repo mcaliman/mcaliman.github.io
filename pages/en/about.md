@@ -27,8 +27,6 @@ Here are a few places to touch base:
 
 You can reach me by email at [mcaliman@gmail.com](mailto:mcaliman@gmail.com)
 
-
-
 # Technical knowledge and skills
 
 * I have extensive experience in `Java` `SQL` `Unix shell scripting`
@@ -64,7 +62,6 @@ You can reach me by email at [mcaliman@gmail.com](mailto:mcaliman@gmail.com)
 * ECM
 `IBM WebSphere Portal`   
 
-
 * Others
 `ERP`, `Software Project Management`,  
 `General Insurance`, 
@@ -91,13 +88,11 @@ You can reach me by email at [mcaliman@gmail.com](mailto:mcaliman@gmail.com)
 * English
 * Italian (Mother tongue)
 
-
 # Education
 * 1988 – 1991 Istituto tecnico Don Bosco di Genova (Technical Institute) 
 "Diploma di Perito Industriale Capotecnico per l'Elettronica"
 (Graduated High School of Electronic Engineering and Computer Science)
 Grade point 58/60 (A+)
-
 
 # Experience
 * 01/2018 - present, working for a company which leads in IT Consultancy Services `Software Architect`
@@ -131,7 +126,6 @@ Grade point 58/60 (A+)
 * 03/2016 R Programming,MARCH 2016,Coursera Course Certificates, Lic. ABDF8QZGRQWE
 * 01/2016 Python Progr.: A Concise Introduction, Coursera Course Certificates, Lic. HYMKLALFGZML
 
-
 # Seminars Presented
 * MAY 2003 
  "Java Base - package I/O e NET" at Webbit Conference Padova (Italy), organized by the
@@ -145,7 +139,6 @@ https://www.disi.unige.it/eventsandseminars/expand-seminar?id_seminar=192
 * OCTOBER 2013
 About Google App Engine organized by the Google Developer Group Genova
 [https://www.slideshare.net/MassimoCaliman/google-app-engineoverviewseminario-definitiva](https://www.slideshare.net/MassimoCaliman/google-app-engineoverviewseminario-definitiva)
-
 
 # Projects
 
@@ -166,7 +159,6 @@ http://www.mokabyte.it/mokaold/1999/12/debugjava.htm
 CoAuthor of "Java e il protocollo UDP" (MARCH 2000) 
 published by Mokabyte (www.mokabyte.it) ****Java Advanced category.
 http://www.mokabyte.it/mokaold/2000/03/udp.htm
-
 
 # Organizations
 

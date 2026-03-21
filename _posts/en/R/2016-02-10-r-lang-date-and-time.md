@@ -10,7 +10,6 @@ published: true
 tags: [r, data-analysis, en]
 ---
 
-
 ## The Date Class
 R has a special representation of date and time objects, dates are represented by the `Date` class, times and intervals by the `POSIXct` or `POSIXlt` classes. 
 Dates are stored internally as the number of days since 1/1/1970 while times and intervals are stored internally as the number of seconds elapsed since 1/1/1970
@@ -48,8 +47,6 @@ posix1$sec # takes the seconds part, I can do this because I built it as POSIXlt
 
 or I can use the `POSIXct` format.
 
-
-
 if dates are written in a different format, the `strptime` function can be used 
 
 ```r
@@ -57,7 +54,6 @@ datestring <- c("January 10, 2012 10:40", "December 9, 2011 9:10")
 x <- strptime(datestring, "%B %d, %Y %H:%M")
 #returns "2012-01-10 10:40:00 EST" "2011-12-09 09:10:00 EST" and interestingly I applied it to a list
 ```
-
 
 ## Operations on Date and POSIX* type objects
 

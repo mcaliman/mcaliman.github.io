@@ -39,7 +39,6 @@ Error type 2
 
 Another problem manifests itself with the error
 
-
 [ERROR] undefined element declaration 's:schema'
 
 preceded by the warning

@@ -46,5 +46,4 @@ which will result in
 <input type="hidden" name="field1"/>
 ```
 
-
 It would be tempting to use it all the time, even if it is not necessary for interactions with js or css. The attribute should be used with care, you may get a duplicate `id` error if you use it too often. In other words, if not strictly necessary, let JSF take care of these details and generate unique `ids` for our tags.

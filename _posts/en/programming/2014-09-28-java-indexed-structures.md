@@ -34,7 +34,6 @@ insert(elem e,key k) T(n) = O(n)
 
 In practice, knowing that it is sorted, we simply reallocate the array by one cell, moving the contents of cells i to n to the new positions i+1 to n+1.
 
-
 Having identified the position to be occupied by the pair (e,k) to be inserted, I move the cells from i+1 so as to free cell i and maintain the sorting.
 
 delete(key k) T(n)=O(n)

@@ -13,12 +13,10 @@ tags: [java, tutorial, en]
 ---
 Picking up where we left off (see previous post), after seeing a bit of theory about dictionaries and something about the `Map` interface, let's move on to practical examples. We'll talk exclusively about the concrete class `HashMap`, the new, so to speak, `Hashtable`.
 
-
 Before we begin, let's recall the main differences between the two
 
 1. in `HashMap` you can insert `null` values, in `HashTable` you can't
 2. `HashTable` is synchronised, `HashMap` is not.
-
 
 If you think about it, these are no small differences, but as we shall see, there is no reason not to use `HashMap` instead of `HashTable` all the time. 
 
@@ -52,7 +50,6 @@ Integer key = 1;
 String value = map.get(key);
 System.out.println("Key: " + key + " value: " + value);
 ```
-
 
 Iterating on the `HashMap`
 
@@ -106,7 +103,6 @@ it is only for lists like `ArrayList`,`LinkedList` etc.
 System.out.println("Unsorted HashMap: " + map);
 TreeMap sortedHashMap = new TreeMap(map);
 System.out.println("Sorted HashMap: " + sortedHashMap);
-
 
 sortedHashMap = new TreeMap(new Comparator<Integer>() {
             @Override

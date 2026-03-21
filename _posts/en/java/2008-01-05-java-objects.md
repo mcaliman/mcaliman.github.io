@@ -163,15 +163,12 @@ T p = new T();
 p = m(p);
 ```
 
-
-
 ```java
 
 String m(String p){
    p = new String("damn mr.handle!");
    return p;
 }
-
 
 String p = new String("You can't fool Mr. Handle!");
 System.out.println(p);
