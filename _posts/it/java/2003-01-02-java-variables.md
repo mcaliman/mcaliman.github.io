@@ -1,4 +1,4 @@
-﻿--- 
+--- 
 layout: post
 title:  "Variabili Java e Assegnazione"
 excerpt: "Variabili e comandi di assegnazione"
@@ -98,14 +98,14 @@ Come accennato in precedenza, i tipi di dati in java appartengono a 2 categorie 
 La seguente tabella riporta per ogni tipo di valore le operazioni che possono essere applicate.
 
 * boolean : false e true 
-* byte : interi [-27,27-1] ( decimale, ottale , esadecimale) operazioni : + , - , *, / , %. 
-* short : interi [-215, 215-1] ( decimale, ottale , esadecimale) operazioni: + , - , * , / , %. 
-* int numeri naturali [-231,231-1] ( decimale, ottale , esadecimale) operazioni: + , - , * , / , %. 
-* long numeri naturali [-263,263-1] ( decimale, ottale , esadecimale) operazioni: + , - , * , / , %. 
-* float numeri reali in formato IEEE754 a 32 bit notazione a virgola fissa e mobile: + , - , * , /. 
-* double numeri reali in formato IEEE754 a 64 bit notazione a virgola fissa e mobile: +, -, *, /. 
-* char caratteri, simboli della notazione Unicode tra apici singoli nessuna operazione. 
-* String : Sequenza di caratteri, simboli della notazione Unicode tra doppie virgolette nessuna operazione + (concatenazione)
+* byte : interi [-2⁷, 2⁷-1] (decimale, ottale, esadecimale) operazioni: +, -, *, /, %. 
+* short : interi [-2¹⁵, 2¹⁵-1] (decimale, ottale, esadecimale) operazioni: +, -, *, /, %. 
+* int : interi con segno [-2³¹, 2³¹-1] (decimale, ottale, esadecimale) operazioni: +, -, *, /, %. 
+* long : interi con segno [-2⁶³, 2⁶³-1] (decimale, ottale, esadecimale) operazioni: +, -, *, /, %. 
+* float : numeri reali in formato IEEE754 a 32 bit, notazione a virgola fissa e mobile: +, -, *, /. 
+* double : numeri reali in formato IEEE754 a 64 bit, notazione a virgola fissa e mobile: +, -, *, /. 
+* char : caratteri, simboli della notazione Unicode tra apici singoli, nessuna operazione. 
+* String : sequenza di caratteri, simboli della notazione Unicode tra doppie virgolette, nessuna operazione, + (concatenazione).
 
 Le 4 operazioni aritmetiche sono rappresentate dai simboli + , - , * , /.
 

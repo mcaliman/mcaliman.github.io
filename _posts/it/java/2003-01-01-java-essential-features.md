@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Caratteristiche Essenziali di Java"
 excerpt: "Le caratteristiche essenziali del linguaggio Java che devi conoscere"
@@ -21,7 +21,7 @@ attributi: nome, tipo, valore, indirizzo, dimensione, durata, visibilità o scop
 I tipi primitivi hanno un comportamento diverso rispetto ai tipi di riferimento.
 
 # Passaggio di Parametri
-In Java c'è solo un meccanismo per passare i parametri, il passaggio per valore; vedrai che nonostante questa apparente limitazione, i tipi di riferimento ti permetteranno di fatto di passare per riferimento.
+In Java c'è solo un meccanismo di passaggio dei parametri, il passaggio per valore; vedrai che nonostante questa apparente limitazione, i tipi di riferimento ti permetteranno di fatto di passare per riferimento.
 
 # Classi e Oggetti
 In Java una classe incapsula un insieme di valori o attributi e un insieme di
