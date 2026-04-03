@@ -1,4 +1,4 @@
-﻿--- 
+--- 
 layout: post
 title:  "Gli Array in Java"
 excerpt: "Gli array sono disponibili nella maggior parte dei linguaggi di programmazione perché realizzano 
@@ -21,17 +21,17 @@ la più semplice organizzazione di strutture dati complesse.
 Iniziamo con alcune definizioni un po' più formali ma che saranno utili per fissare i concetti essenziali.
 
 Definizione 
-Un array è una struttura dati che permette di rappresentare sequenze di dati dello stesso tipo. 
-Gli elementi che compongono un array possono essere trovati specificando la loro posizione.
+Un array è una struttura dati che permette di rappresentare sequenze di elementi dello stesso tipo. 
+Gli elementi che compongono un array possono essere individuati specificando la loro posizione.
 
 ```java
 T[] var = new T[n];
 ```
 
-definisce un array di nome `var` e di tipo `T` di `n` elementi, gli elementi dell'array sono
+Definisce un array di nome `var` di tipo `T` composto da `n` elementi. Gli elementi dell'array sono:
 
 ```java
-var[0], var[1], ... , var[n-1]
+var[0], var[1], ..., var[n-1]
 ```
 
 `n` è chiamato anche dimensione o lunghezza dell'array;

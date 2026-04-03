@@ -1,4 +1,4 @@
-﻿--- 
+--- 
 layout: post
 title: "wsimport e Webservice .Net 2.0"
 excerpt: ""
@@ -13,22 +13,22 @@ tags: [java, tutorial, it]
 
 Aggiornamento 2017: Con NetBeans 8.2 il problema di seguito sembra essere gestito in modo completamente trasparente dalla procedura di generazione delle classi dal wsdl (wizard di NB8.2).
 
-Amo i webservice.
-Occupandomi di integrazione di applicazioni, applicazioni B2B e, più in generale, di architetture SOA, mi capita spesso di dover creare sistemi le cui funzionalità sono il risultato dell'interazione di vari web service, alcuni sviluppati da me altri da terze parti o disponibili sul mercato.
-Amo i webservice, ma...
-Li amo un po' meno quando dalle applicazioni Java EE devo avere a che fare con webservice realizzati in .NET 2.0 . Al momento in cui scrivo questo post, i framework sono arrivati alla versione 4 e oltre già da un po', e con quelli non ci sono più grossi problemi.  La parola magica è "retrocompatibilità, dobbiamo rimanere retrocompatibili scusate" l'ho sentita molte volte e mettendo i panni di chi sviluppa applicazioni nel mondo Microsoft lo capisco perfettamente. 
+Amo i web service.
+Occupandomi di integrazione di applicazioni, applicazioni B2B e, più in generale, di architetture SOA, mi capita spesso di dover creare sistemi le cui funzionalità sono il risultato dell'interazione di vari web service, alcuni sviluppati da me, altri da terze parti o disponibili sul mercato.
+Amo i web service, ma...
+Li amo un po' meno quando dalle applicazioni Java EE devo avere a che fare con web service realizzati in .NET 2.0. Al momento in cui scrivo questo post, i framework sono arrivati alla versione 4 e oltre già da un po', e con quelli non ci sono più grossi problemi. La parola magica è "retrocompatibilità, dobbiamo rimanere retrocompatibili, scusate": l'ho sentita molte volte e, mettendo i panni di chi sviluppa applicazioni nel mondo Microsoft, lo capisco perfettamente. 
 
 In questo caso, i problemi che si presentano sono più o meno sempre gli stessi e il mio IDE preferito NetBeans non mi semplifica più la vita, quindi meglio armarsi di terminale e riscoprire il JDK (Java Development Kit) e i suoi strumenti come wsimport.
 
 Tipo di errore 1
 
-Quando il wizard di NetBeans 8 sta creando le nostre classi client, restituisce righe di errore del tipo seguente
+Quando il wizard di NetBeans 8 sta creando le nostre classi client, restituisce righe di errore del tipo seguente:
 
 [ERROR] A class/interface with the same name X is already in use. Use a class customization to resolve this conflict.
   line NNN of file:/Y:/NetBeansProjects/Application/xml-resources/web-service-references/service/wsdl/service.wsdl
 
 C'è un conflitto di nomi.
-NetBeans lancia semplicemente wsimport e tutto ciò che fa è dirci che potrebbe essere meglio usare l'opzione -B-XautoNameResolution. Farlo dall'IDE non è intuitivo, puoi anche provare a giocherellare con gli attributi dei riferimenti webservice (WebService Reference / Edit WebService Attribute) e vedere se riesci ad impostare l'opzione nei WsImport Option (infatti se trovi il modo posta/scrivi sarò felice di integrare il post con le tue osservazioni), se invece non sei così avventuroso e l'orgoglio nerd riemerge apri il terminale e digita
+NetBeans lancia semplicemente wsimport e tutto ciò che fa è dirci che potrebbe essere meglio usare l'opzione -B-XautoNameResolution. Farlo dall'IDE non è intuitivo, puoi anche provare a giocherellare con gli attributi dei riferimenti web service (WebService Reference / Edit WebService Attribute) e vedere se riesci ad impostare l'opzione nei WsImport Option (infatti se trovi il modo posta/scrivi, sarò felice di integrare il post con le tue osservazioni); se invece non sei così avventuroso e l'orgoglio nerd riemerge, apri il terminale e digita:
 
 wsimport -d e:\mydir -extension -Xnocompile -Xendorsed -B-XautoNameResolution -keep -s e:\mydir -encoding UTF-8 -verbose E:/mydir/service.wsdl -wsdllocation file:/E:/mydir/service.wsdl
 
