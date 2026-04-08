@@ -32,7 +32,7 @@ L'ereditarietà permette la derivazione di una classe da un'altra. Le classi der
 
 # Interfacce e polimorfismo
 Le interfacce comprendono un insieme di prototipi di metodi e diverse
-classi possono implementare le stesse interfacce. Questo facilita il polimorfismo, devi
+classi possono implementare le stesse interfacce. Questo facilita il polimorfismo; devi
 comprendere come le interfacce vengano usate con le classi astratte e l'ereditarietà per supportare il
 polimorfismo.
 

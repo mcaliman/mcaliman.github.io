@@ -90,7 +90,7 @@ Definizione del Tipo di Dato
 
 Un tipo di dato consiste in un insieme di valori e un insieme di operazioni applicabili a tali valori.
 
-Come accennato in precedenza, i tipi di dati in java appartengono a 2 categorie principali:
+Come accennato in precedenza, i tipi di dati in Java appartengono a 2 categorie principali:
 
 * Tipi primitivi: boolean, byte, short, int, long, float, double, char
 * Tipi classe: String ecc.
@@ -114,9 +114,9 @@ Per i tipi di dati byte, short, int, long, il simbolo / rappresenta il quoziente
 Per inserire un apice singolo o doppio all'interno di una stringa si scrive rispettivamente \' e \"
 
 Aggiungiamo per completezza anche i simboli:
-  && e logico o congiunzione 
-  || o logico o disgiunzione 
-  ! not o negazione
+* `&&`: AND logico o congiunzione 
+* `||`: OR logico o disgiunzione 
+* `!`: NOT o negazione
 
 Come già accennato nel caso di un'assegnazione del tipo
 
@@ -127,7 +127,7 @@ T var = expr
 abbiamo detto che expr deve avere tipo compatibile con T (non necessariamente lo stesso). È utile a questo punto dare la definizione di promotion e casting per i tipi che definiscono casi in cui il tipo di var ed expr possono non coincidere ma essere comunque corretti e applicabili.
 
 Definizione
-Se sia il tipo della variabile sia il tipo dell'espressione rappresentano dati numerici e il tipo expr è un sottoinsieme 
+Se sia il tipo della variabile sia il tipo di expr rappresentano dati numerici e il tipo di expr è un sottoinsieme 
 del tipo var prima dell'assegnazione, avviene una conversione automatica chiamata promotion.
 Ad esempio:
 
@@ -150,4 +150,4 @@ int i;
 byte j; 
 j = (byte) i;
 ```
-corretto solo se è minore o uguale al valore massimo disponibile per un byte.
+corretto solo se il valore di i è minore o uguale al valore massimo disponibile per un byte.

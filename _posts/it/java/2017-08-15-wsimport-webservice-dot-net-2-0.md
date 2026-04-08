@@ -28,7 +28,7 @@ Quando il wizard di NetBeans 8 sta creando le nostre classi client, restituisce 
   line NNN of file:/Y:/NetBeansProjects/Application/xml-resources/web-service-references/service/wsdl/service.wsdl
 
 C'è un conflitto di nomi.
-NetBeans lancia semplicemente wsimport e tutto ciò che fa è dirci che potrebbe essere meglio usare l'opzione -B-XautoNameResolution. Farlo dall'IDE non è intuitivo, puoi anche provare a giocherellare con gli attributi dei riferimenti web service (WebService Reference / Edit WebService Attribute) e vedere se riesci ad impostare l'opzione nei WsImport Option (infatti se trovi il modo posta/scrivi, sarò felice di integrare il post con le tue osservazioni); se invece non sei così avventuroso e l'orgoglio nerd riemerge, apri il terminale e digita:
+NetBeans lancia semplicemente wsimport e tutto ciò che fa è dirci che potrebbe essere meglio usare l'opzione -B-XautoNameResolution. Farlo dall'IDE non è intuitivo, puoi anche provare a giocherellare con gli attributi dei riferimenti web service (WebService Reference / Edit WebService Attribute) e vedere se riesci ad impostare l'opzione nei WsImport Option. Infatti, se trovi il modo, posta o scrivimi: sarò felice di integrare il post con le tue osservazioni. Se invece non sei così avventuroso e l'orgoglio nerd riemerge, apri il terminale e digita:
 
 wsimport -d e:\mydir -extension -Xnocompile -Xendorsed -B-XautoNameResolution -keep -s e:\mydir -encoding UTF-8 -verbose E:/mydir/service.wsdl -wsdllocation file:/E:/mydir/service.wsdl
 

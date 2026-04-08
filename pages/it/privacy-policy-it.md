@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 lang: it
 permalink: /privacy-policy-it/
@@ -34,8 +34,8 @@ Modifiche alla presente Informativa sulla privacy
 
 Potremmo modificare la presente Informativa sulla privacy in qualsiasi momento. Ti informeremo di eventuali modifiche pubblicando la nuova Informativa sulla privacy sul nostro sito web e indicando la data di entrata in vigore delle modifiche. Ti invitiamo a rivedere periodicamente la presente Informativa sulla privacy per rimanere aggiornato su come proteggiamo i tuoi dati.
 
-Contatto
+Contatti
 
 Se hai domande sulla presente Informativa sulla privacy, non esitare a contattarci all'indirizzo e-mail mcaliman@gmail.com
 
-Latest update: 24 July 2023
+Ultimo aggiornamento: 24 luglio 2023
