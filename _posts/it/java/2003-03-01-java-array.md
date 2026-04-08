@@ -45,13 +45,13 @@ T[] var = {values_0,value_1, ... ,value_n}
 Quindi, abbiamo i valori dei singoli elementi che equivalgono a
 
 ```java
-var[0] = value_0 ;var[1] = value_1 ;...var[n] = value_n ;
+var[0] = value_0; var[1] = value_1; ... var[n] = value_n;
 ```
 
 Altrimenti, la dichiarazione può avvenire in 2 fasi
 
 ```java
-T[] var; var = new T[n] ;
+T[] var; var = new T[n];
 ```
 oppure
 
@@ -59,9 +59,9 @@ oppure
 var = new T[] { value_0,value_1, ..., value_n }
 ```
 
-ogni elemento dell'array può essere usato allo stesso modo di una variabile
+Ogni elemento dell'array può essere usato allo stesso modo di una variabile
 
-dato l'array var { value_0,value_1, ... , value_n }
+Dato l'array var { value_0,value_1, ... , value_n }
 
 ```java
 var[0] = value_0 ; var[1] = value_1 ;
@@ -90,7 +90,7 @@ Gli array visti finora sono monodimensionali, cioè sono sequenze lineari di dat
 omogenei che possono essere associate a un modello vettoriale. In realtà, possiamo avere anche array multidimensionali in cui ogni 
 elemento è identificato non da un singolo indice ma da un numero maggiore di indici.
 
-per esempio
+Per esempio
 
 ```java
 T[][] var = new T[n][m];

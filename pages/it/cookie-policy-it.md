@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 lang: it
 permalink: /cookie-policy-it/
@@ -36,4 +36,4 @@ Se disabiliti tutti i cookie, potresti non essere in grado di utilizzare tutte l
 
 Per ulteriori informazioni sui cookie, visita il sito web del Garante per la Privacy: https://www.garanteprivacy.it/cookie
 
-Latest update: 24 July 2023
+Ultimo aggiornamento: 24 luglio 2023
