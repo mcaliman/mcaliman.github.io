@@ -1,16 +1,23 @@
-﻿---
+---
 layout: post
 title: "Immutable classes and objects in Java"
 excerpt: ""
+permalink: "/java/immutable-classes-and-objects"
 category: "Java"
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, oop, en]
+takeaways:
+  - "**Immutable objects** cannot change their state after being initialized, making them inherently thread-safe."
+  - "**Design strategies**: Use `final` for the class and its fields, and avoid providing setters."
+  - "**Defensive copying** is critical when working with mutable dependencies to prevent external accidental modifications."
+  - "**Immutability** simplifies concurrency by eliminating the need for complex synchronization."
 ---
 
 Immutable objects are instances whose state does not change after they have been initialised. For example `String` is an immutable class, and once instantiated with its value it no longer changes.
+
 
 ```java
 public final class Immutable {
