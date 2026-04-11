@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 lang: en
-permalink: /privacy-policy-en/
+permalink: /privacypolicy/
 title: Privacy Policy (English)
 date: 2024-07-15
 modified: 2023-07-24

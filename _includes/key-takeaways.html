@@ -1,0 +1,12 @@
+{% if page.takeaways %}
+<section class="key-takeaways" aria-labelledby="takeaways-title">
+  <h3 id="takeaways-title">
+    <i class="fas fa-lightbulb" aria-hidden="true"></i> Key Takeaways
+  </h3>
+  <ul>
+    {% for point in page.takeaways %}
+      <li>{{ point | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
