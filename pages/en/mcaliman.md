@@ -1,14 +1,14 @@
-﻿---
+---
 layout: page
 lang: en
-ref: about
-permalink: /about/
-title: About me
-tags: [abouten]
+permalink: /mcaliman/
+title: About
 date: 2024-07-15
-modified: 2013-09-13
+modified: 2023-07-24
 published: true
+tags: [en]
 ---
+
 
 Hello, I'm Massimo Caliman. 
 I'm a software architect & developer with a consolidated experience on Java.
