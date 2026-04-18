@@ -7,6 +7,17 @@
 @import "so-simple/variables";
 @import "so-simple/notices";
 
+/* Typography Overrides */
+$serif-font-family: "Lora", Georgia, Times, serif !default;
+$sans-serif-font-family: $serif-font-family !default;
+$headline-font-family: $serif-font-family !default;
+
+$base-font-family: $serif-font-family !default;
+$headline-font-family: $headline-font-family !default;
+$title-font-family: $headline-font-family !default;
+$description-font-family: $serif-font-family !default;
+$meta-font-family: $serif-font-family !default;
+
 /* Colors */
 $base-color: #000 !default;
 $text-color: #000 !default;

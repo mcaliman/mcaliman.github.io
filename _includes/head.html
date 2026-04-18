@@ -66,10 +66,12 @@
     }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="stylesheet" href="{{ site.skin | default: '/assets/css/skins/default.css' | relative_url }}">
   {% if site.google_fonts %}
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={%- for font in site.google_fonts -%}{{ font.name | replace: ' ', '+' }}{% if font.weights %}:{% endif %}{{ font.weights | remove: ' ' }}{% if forloop.last != true %}|{% endif %}{%- endfor -%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={%- for font in site.google_fonts -%}{{ font.name | replace: ' ', '+' }}:wght@{{ font.weights | replace: ',', ';' | remove: ' ' }}{% if forloop.last != true %}&{% endif %}{%- endfor -%}&display=swap">
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/key-takeaways.css' | relative_url }}">
 
