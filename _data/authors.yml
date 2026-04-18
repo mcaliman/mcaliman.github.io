@@ -6,3 +6,9 @@ Massimo Caliman:
     - title: Twitter
       url: https://twitter.com/mcaliman
       icon: fab fa-twitter-square
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/mcaliman/
+      icon: fab fa-linkedin-square
+    - title: GitHub
+      url: https://github.com/mcaliman
+      icon: fab fa-github-square
