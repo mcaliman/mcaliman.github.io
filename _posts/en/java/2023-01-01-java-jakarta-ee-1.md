@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "The transition from Java EE to Jakarta EE"
 excerpt: "What you need to know"
@@ -8,10 +8,11 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
+last_review: 2026-04-19
 tags: [java, jakarta-ee, en]
 ---
 
-If you are still stuck on the Java EE 8 version and have missed the project's evolutions, it might be useful for you to know that in 2017, Oracle decided to completely transfer Java EE to an open source foundation. In coordination with Java EE partners Red Hat and IBM, it was decided to transfer Java EE along with the full reference implementation and the Technology Compatibility Kit (TCK) to the Eclipse Foundation.
+If you are still stuck on Java EE 8 and missed the project's evolution, it is important to note that in 2017, Oracle [transitioned Java EE](https://www.eclipse.org/org/press-release/java-ee-moving-to-eclipse-foundation.php) to the [Eclipse Foundation](https://www.eclipse.org). This move, coordinated with partners Red Hat and IBM, included the full reference implementation and the Technology Compatibility Kit (TCK).
 
-The transition from Java EE to Jakarta EE mainly involves changing all Java EE 8 packages in the `javax.*` namespace to `jakarta.*`. Some sub-packages have also been renamed. There is an Apache Tomcat migration tool for Jakarta EE that automatically performs all the necessary changes to migrate an application from Java EE 8 to Jakarta EE 9 by renaming each Java EE 8 package to its Jakarta EE 9 replacement.
+The shift to [Jakarta EE](https://jakarta.ee/) involves a critical breaking change: migrating all packages from the `javax.*` namespace to `jakarta.*` (necessary because Oracle retained the "Java" trademark). Some sub-packages were also renamed. To simplify this, you can use the [Apache Tomcat migration tool for Jakarta EE](https://github.com/apache/tomcat-jakartaee-migration), which automatically renames Java EE 8 packages to their Jakarta EE 9+ replacements.
 

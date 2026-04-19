@@ -19,6 +19,12 @@ layout: default
         {% include page-author.html %}
         {% include page-categories.html %}
         {% include page-tags.html %}
+        {% if page.last_review %}
+          <h3 class="page-taxonomies-title">Last Reviewed</h3>
+          <ul class="page-taxonomies">
+            <li class="page-taxonomy">{{ page.last_review | date: "%d/%m/%Y" }}</li>
+          </ul>
+        {% endif %}
       </div>
 
       <div class="page-content">
