@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  The CMS is dead, long live the Jekyll
 excerpt: The title is provocative and borderline captious...
@@ -8,9 +8,10 @@ share: false
 date: 2014-06-22
 modified: 2024-07-11
 published: true
+last_review: 2026-04-19
 tags: [jekyll, blog, en]
 ---
 
-The title is provocative and borderline captious. CMS systems will of course never die, at least I hope so, designing and implementing them has given me work for many years and I think it still will, but for many of us they are a heavy element to manage, they distract from the objective like word processors. A frequent question is why use them when a normal text editor is sufficient for most tasks? For blogging over the years, I have tried a bit of everything: blogger, WordPress and others, in most cases static HTML is satisfactory for most of us, and it certainly is for my blog.
+The title is provocative. While CMS systems will never truly die—designing them has been my work for years—for many of us, they have become a burden that distracts from the content itself. For blogging, I have tried everything from WordPress to Blogger, but I have found that static HTML is more than sufficient for my needs.
 
-I have to say that, by pure chance, I stumbled upon a blog made with Jekyll while googling, so I started experimenting and was surprised: productivity skyrocketed, not only did I not need to be online to do everything, but I was doing it better because I was only concentrating on the content of what I wanted to communicate, plus hosting for static sites turned out to be cost-effective.
+I discovered **[Jekyll](https://jekyllrb.com/)**, a powerful **[Static Site Generator (SSG)](https://en.wikipedia.org/wiki/Static_site_generator)**, by chance. My productivity skyrocketed: I no longer need to be online to write, I can focus entirely on the content, and hosting static sites is incredibly cost-effective.
