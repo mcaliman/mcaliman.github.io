@@ -1,0 +1,113 @@
+- company_name: Methis Lab S.p.A. (Gruppo AON)
+  title: Chief Technology Officer & Software Architect
+  description: ''
+  location: ''
+  started_on: Jan 2018
+  finished_on: ''
+- company_name: BDA Euro Brokers s.r.l
+  title: Software Development Manager
+  description: 'Software Development Manager for an Insurance Broker, designing, projecting
+    and implementing B2B Portals dedicated to Insurance market. Principal technologies
+    used: Java 8 Enterprise Edition, Java Server Faces 2.0, EJB,  Oracle MySQL, Oracle
+    Glassfish 4.1. '
+  location: ''
+  started_on: Jun 2017
+  finished_on: Dec 2017
+- company_name: Sentosa s.r.l.
+  title: 'Chief Technical Officer & Software Architect '
+  description: 'Chief Technology Officer & Software Architect for a Company which
+    leads in IT and Financials Consultancy Services, mainly experienced on Employee
+    Loan Programs (“Cessione del quinto”) and Java Enterprise (Insurance and others)
+    Application Development Principal technologies used: Java Enterprise Edition,
+    Java Server Faces, EJB,  Oracle MySQL, Oracle Glassfish 4.1. '
+  location: ''
+  started_on: Feb 2012
+  finished_on: May 2017
+- company_name: Arax s.r.l
+  title: Software Architect & Developer
+  description: 'Software Architect & Developer for a Service Company, experiencing
+    on problem solving in Insurance and Finance matters, through Application Development
+    using C#, Java, PHP. Principal technologies used: C#,Java SE, PHP 5, Apache WebServer,
+    MySQL. '
+  location: ''
+  started_on: Jan 2011
+  finished_on: Jan 2012
+- company_name: Stachus s.r.l.
+  title: Java Software Developer
+  description: 'Software Developer for a Service Company, working on datawarehouse,
+    and data web presentation.  Principal technologies used: MySQL, PHP, Java, Jasper
+    Reports, Apache WebServer, Tomcat. '
+  location: ''
+  started_on: Jul 2010
+  finished_on: Sep 2010
+- company_name: Britto Servizi s.r.l
+  title: 'Project Manager & Software Developer '
+  description: 'Project Manager and Software Developer for an Insurance Broker, working
+    on Content Management and paperless digitalization, mainly on Microsoft SharePoint
+    2007. Principal technologies used: Microsoft SharePoint 2007, Java SE.  '
+  location: ''
+  started_on: Jan 2010
+  finished_on: May 2010
+- company_name: Eterbit S.r.l
+  title: 'Chief Technical Officer & Senior Java Developer '
+  description: 'Chief Technical Officer & Senior Java Developer, CMS and ERP development.
+    Principal technologies used: Java SE,Java EE, JSP, Servlet, IBM WebSphere Portal,
+    Struts, Tomcat. '
+  location: ''
+  started_on: Mar 2006
+  finished_on: Dec 2009
+- company_name: Macbit S.r.l
+  title: Senior Java Developer
+  description: 'Senior Java Developer, CMS and ERP development. Principal technologies
+    used: Java SE,Java EE, JSP, Servlet, Tomcat, MySQL. '
+  location: ''
+  started_on: Oct 2005
+  finished_on: Feb 2006
+- company_name: Text-e S.r.l
+  title: 'Team Leader & Senior Java Developer '
+  description: 'Team Leader & Senior Java Developer for Text-e S.r.l. Java Development
+    of Web Content Management Systems and Workflow Management Systems. Team Leadership
+    in server side development. Principal technologies used: Java SE,Java EE, JSP,
+    Servlet, Tomcat, MySQL, MS SQLServer. '
+  location: Genova, Liguria, Italia
+  started_on: Apr 2003
+  finished_on: Jul 2005
+- company_name: Datasys Network
+  title: Project Manager & Senior Software Developer
+  description: 'Project Manager & Senior Java Developer for Datasys Informatia S.p.A.,
+    an IBM e-Business Partner, leading B2B and B2C Projects, Java developed, using
+    JSP and Servlet Technologies on IBM Websphere, on IBM Lotus Domino, and on Legacies.
+    Principal technologies used: Java, AS/400 Toolbox for Java, JSP, Servlet, IBM
+    WebSphere Application Server (WAS), IBM DB2 UDB, IBM DB2/400, Lotus Domino, Visual
+    Basic 6, ASP. '
+  location: ''
+  started_on: Apr 2001
+  finished_on: Apr 2003
+- company_name: Studio Balbi S.u.r.l (Zucchetti PAC s.r.l)
+  title: 'Java Developer '
+  description: 'Java Developer for Studio Balbi S.u.r.l., Software House and IBM Business
+    Partner in Genoa, projecting and developing Java Applications for HR, mainly attendance
+    and wage packet, focusing on interface to Zucchetti Packages. Principal technologies
+    used: Java, AS/400 Toolbox for Java, Servlet, Tomcat, IBM DB2/400, Microsoft Access,
+    Oracle 8i Database.'
+  location: Genoa Area, Italy
+  started_on: Feb 1999
+  finished_on: Apr 2001
+- company_name: Freelance Software Developer
+  title: 'C/C++,Pascal Software Developer '
+  description: 'Software Consultancy and Advisory for many websites sited in Genoa.
+    Script Development (JavaScript, VBScript, Java) and HTML page development for
+    many internet sites. Principal technologies used: Java Applet, JavaScript, VBScript,
+    HTML, Borland Turbo C++, Paradox database, Microsoft Access, Turbo Pascal.'
+  location: Genoa Area, Italy
+  started_on: May 1997
+  finished_on: Aug 1998
+- company_name: Comune Di Mignanego
+  title: IT Specialist & Education
+  description: 'Civil service at Social Service Office, Municipality of Mignanego.
+    Not Only did I take care of Social and Minors Problems, but I solved administrative
+    and operating matters, improving and adapting IT services to Administration needs.
+    Principal technologies used: Microsoft Office Automation '
+  location: Genova, Liguria, Italia
+  started_on: May 1995
+  finished_on: May 1996
