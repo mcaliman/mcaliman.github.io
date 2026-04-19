@@ -29,11 +29,9 @@ You can reach me by email at [mcaliman@gmail.com](mailto:mcaliman@gmail.com)
 
 
 # Skills
-<div class="skills-container">
 {% for item in site.data.linkedin.Skills %}
-  <span class="skill-tag">{{ item.name }}</span>
+* {{ item.name }}
 {% endfor %}
-</div>
 
 # Professional assets
 * Pragmatic problem solving skills 
@@ -60,8 +58,8 @@ You can reach me by email at [mcaliman@gmail.com](mailto:mcaliman@gmail.com)
 
 # Experience
 {% for item in site.data.linkedin.Positions %}
-* **{{ item.company_name }}** 
-  *{{ item.title }}* | {{ item.started_on }} - {% if item.finished_on == "" %} present {% else %}{{ item.finished_on }}{% endif %}
+* **{{ item.company_name }}** ({% if item.location != "" %}{{ item.location }}{% endif %})
+  *{{ item.title }}* | {{ item.started_on }} - {% if item.finished_on == "" %}present{% else %}{{ item.finished_on }}{% endif %}
 
   {{ item.description }}
 {% endfor %}
@@ -73,12 +71,10 @@ You can reach me by email at [mcaliman@gmail.com](mailto:mcaliman@gmail.com)
 
 # Certifications
 {% for item in site.data.linkedin.Certifications %}
-* {{ item.name }}, {{ item.authority }} ({{ item.started_on }})
+* **{{ item.name }}**, {{ item.authority }} ({{ item.started_on }})
   {% if item.license_number != "" %}License: {{ item.license_number }}{% endif %}
   {% if item.url != "" %}[Credential Link]({{ item.url }}){% endif %}
 {% endfor %}
-
-
 
 # Projects
 {% for item in site.data.linkedin.Projects %}
@@ -87,8 +83,6 @@ You can reach me by email at [mcaliman@gmail.com](mailto:mcaliman@gmail.com)
 
   {{ item.description }}
 {% endfor %}
-
-
 
 # Publications and articles
 {% for item in site.data.linkedin.Publications %}
@@ -100,5 +94,5 @@ You can reach me by email at [mcaliman@gmail.com](mailto:mcaliman@gmail.com)
 
 # Organizations
 {% for item in site.data.linkedin.Organizations %}
-* {{ item.name }} - {{ item.position }} - {{ item.started_on }}
+* **{{ item.name }}** ({{ item.position }}) | {{ item.started_on }}
 {% endfor %}

@@ -53,3 +53,32 @@ $base0e: #6c71c4 !default;
 $base0f: #d33682 !default;
 
 @import "so-simple/skin";
+
+/* Skill Tag Cloud */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 1.5rem 0;
+}
+
+.skill-tag {
+  display: inline-block;
+  background-color: transparent;
+  color: $text-color;
+  padding: 4px 14px;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  border: 1px solid $border-color;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  cursor: default;
+  font-family: $sans-serif-font-family;
+  
+  &:hover {
+    background-color: $border-color;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-color: $accent-color;
+  }
+}

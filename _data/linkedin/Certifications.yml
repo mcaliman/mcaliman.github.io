@@ -1,0 +1,125 @@
+- name: SOLID principles & Design Patterns for Java programmers
+  url: https://www.udemy.com/certificate/UC-a6d7daf8-dc31-4937-a4b7-f97b3e00b61d/
+  authority: Udemy
+  started_on: Jan 2023
+  license_number: UC-a6d7daf8-dc31-4937-a4b7-f97b3e00b61d
+- name: Domain Driven Design & Microservices for Architects
+  url: https://www.udemy.com/certificate/UC-72ed5835-8f1e-4695-9a6e-f677f8c02c16/
+  authority: Udemy
+  started_on: Feb 2023
+  license_number: UC-72ed5835-8f1e-4695-9a6e-f677f8c02c16
+- name: Becoming a Production MySQL DBA
+  url: https://ude.my/UC-719df110-a354-4e3d-b1aa-5716f6ee8e23
+  authority: Udemy
+  started_on: Jun 2023
+  license_number: UC-719df110-a354-4e3d-b1aa-5716f6ee8e23
+- name: The English of Insurance
+  url: https://www.udemy.com/certificate/UC-70647f3e-d9c9-48d6-bdc1-784cc539b593/
+  authority: Udemy
+  started_on: Aug 2023
+  license_number: UC-70647f3e-d9c9-48d6-bdc1-784cc539b593/
+- name: 'A Comprehensive Guide to JVM Languages: 2 in 1'
+  url: https://www.udemy.com/certificate/UC-af787ef4-be8a-4dae-b78d-7934a801960e/
+  authority: Udemy
+  started_on: Apr 2024
+  license_number: UC-af787ef4-be8a-4dae-b78d-7934a801960e
+- name: AI Prompt Engineering
+  url: https://www.udemy.com/certificate/UC-bda1f0a1-3891-4ca3-8d1c-b89794ecbeef/
+  authority: Udemy
+  started_on: May 2024
+  license_number: UC-bda1f0a1-3891-4ca3-8d1c-b89794ecbeef
+- name: Introduction to Big Data (2015)
+  url: https://www.coursera.org/account/accomplishments/records/3AJE4934J3WE
+  authority: UC San Diego
+  started_on: Jan 2016
+  license_number: 3AJE4934J3WE
+- name: The Data Scientist’s Toolbox
+  url: https://www.coursera.org/account/accomplishments/records/NG3B75Q3F7YE
+  authority: The Johns Hopkins University
+  started_on: Feb 2016
+  license_number: NG3B75Q3F7YE
+- name: R Programming
+  url: https://www.coursera.org/account/accomplishments/records/ABDF8QZGRQWE
+  authority: The Johns Hopkins University
+  started_on: Mar 2016
+  license_number: ABDF8QZGRQWE
+- name: 'Python Programming: A Concise Introduction'
+  url: https://www.coursera.org/account/accomplishments/records/HYMKLALFGZML
+  authority: Wesleyan University
+  started_on: Oct 2016
+  license_number: HYMKLALFGZML
+- name: Introduction to TCP/IP
+  url: https://www.coursera.org/account/accomplishments/records/8RY35AGNBBWA
+  authority: Yonsei University
+  started_on: Jan 2018
+  license_number: 8RY35AGNBBWA
+- name: Data Science Math Skills
+  url: https://www.coursera.org/account/accomplishments/records/68TRS6HHU3QR
+  authority: Duke University | Coursera
+  started_on: Apr 2018
+  license_number: 68TRS6HHU3QR
+- name: 'Continuous Delivery & DevOps '
+  url: https://www.coursera.org/account/accomplishments/records/MHMXL5RUUVGA
+  authority: University of Virginia
+  started_on: Apr 2019
+  license_number: MHMXL5RUUVGA
+- name: Cybersecurity and Its Ten Domains
+  url: https://www.coursera.org/account/accomplishments/records/L5QCLCRFZGWN
+  authority: University System of Georgia
+  started_on: Dec 2019
+  license_number: L5QCLCRFZGWN
+- name: Docker e Kubernetes da zero a cento
+  url: https://www.udemy.com/certificate/UC-4878377e-f902-45f4-b710-ffb6392070f3/
+  authority: Udemy
+  started_on: May 2024
+  license_number: UC-4878377e-f902-45f4-b710-ffb6392070f3
+- name: Software Architecture & Technology of Large-Scale Systems
+  url: https://www.udemy.com/certificate/UC-3146014f-2900-4690-adbf-931de4ed8a95
+  authority: Udemy
+  started_on: Nov 2022
+  license_number: UC-3146014f
+- name: Software Architecture Case Studies
+  url: https://www.udemy.com/certificate/UC-d9a8ac4c-adfc-45e4-9691-2028bdf33ecb/)
+  authority: Udemy
+  started_on: Nov 2022
+  license_number: UC-d9a8ac4c
+- name: 'Java Application Performance Tuning and Memory Management '
+  url: https://www.udemy.com/certificate/UC-f7b1f3dd-65d9-4343-8c76-bef6f1b7876d/
+  authority: Udemy
+  started_on: Jan 2023
+  license_number: UC-f7b1f3dd-65d9-4343-8c76-bef6f1b7876d
+- name: Software Testing By Innovation Techniques
+  url: https://www.udemy.com/certificate/UC-WTK0FFJN/
+  authority: Udemy
+  started_on: Jan 2018
+  license_number: UC-WTK0FFJN
+- name: Java Multithreading
+  url: https://www.udemy.com/certificate/UC-TE4ZQFOZ/
+  authority: Udemy
+  started_on: Dec 2017
+  license_number: UC-TE4ZQFOZ
+- name: 'Java 8 Functional Programming: Lambda Expressions Quickly '
+  url: https://www.udemy.com/certificate/UC-XFKPD44Z/
+  authority: Udemy
+  started_on: Dec 2017
+  license_number: UC-XFKPD44Z
+- name: 'Java Microservices con Spring Boot, Spring Cloud e AWS '
+  url: https://www.udemy.com/certificate/UC-ae21ff2b-229f-4ec3-90c2-a06d41e41a63/
+  authority: Udemy
+  started_on: Dec 2020
+  license_number: UC-ae21ff2b-229f-4ec3-90c2-a06d41e41a63
+- name: Blockchain Theory 101
+  url: https://www.udemy.com/certificate/UC-X9D1OE3A/
+  authority: Udemy
+  started_on: Dec 2017
+  license_number: UC-X9D1OE3A
+- name: 'Introduction to Cryptocurrencies and Blockchain '
+  url: https://www.udemy.com/certificate/UC-PRVBKWEP/
+  authority: Udemy
+  started_on: Dec 2017
+  license_number: UC-PRVBKWEP
+- name: LANGUAGECERT Entry Level Certificate in ESOL International (Entry 3) (Listening,
+    Reading, Writing, Speaking) (Achiever B1)
+  authority: LANGUAGECERT
+  started_on: Sep 2025
+  license_number: 'Certificate Number: GR525021896MC , Candidate Number: 9980030074719228'
