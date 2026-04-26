@@ -17,7 +17,7 @@ date_format: "%d/%m/%Y" #"%B %-d, %Y"
 read_time: true 
 words_per_minute: 200 
 mathjax:
-  enable: # MathJax equations, e.g. true, false (default)
+  enable: true # MathJax equations, e.g. true, false (default)
   combo:  # "tex-svg" (default), "tex-mml-chtml", etc.: docs.mathjax.org/en/latest/web/components/combined.html
   tags:   # "none", "ams" (default), "all"
 google_fonts:

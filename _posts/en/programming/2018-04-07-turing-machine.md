@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Turing Machine"
 excerpt: "Basic concepts and information on Turing Machines, accepted language, recursively enumerable and recursiv"
@@ -8,56 +8,56 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [computer-science, theory, en]
+tags: [computer-science, theory, en, Updated]
 ---
   
 > Kleeneliness is next to Gödeliness 
 
 #  Deterministic Turing Machines (DTM)
 
-A Turing Machine (henceforth abbreviated to `TM`) is a t-upa of 6 elements &rang;Q,&Sigma;,&Gamma;,q<sub>0</sub>,B,F&lang;  where
-* Q set of `states` (finite)
-* &Sigma; the alphabet of `input`
-* &Gamma; alphabet of the `tape` &Sigma;&sube;&Gamma;
-* &delta;:Q&#x2A2F;&Gamma;&rarr;Q&#x2A2F;&Gamma;&#x2A2F;{L,R} partial function called transition function
-* q<sub>0</sub>&isin;Q initial state
-* B&isin;(&Gamma;\&Sigma;) `special symbol` (Blank)
-* F&sube;Q set of end states`
+A Turing Machine (henceforth abbreviated to `TM`) is a sestuple $\langle Q, \Sigma, \Gamma, q_0, B, F \rangle$ where:
+* $Q$ set of `states` (finite)
+* $\Sigma$ the alphabet of `input`
+* $\Gamma$ alphabet of the `tape` $\Sigma \subseteq \Gamma$
+* $\delta: Q \times \Gamma \to Q \times \Gamma \times \{L, R\}$ partial function called transition function
+* $q_0 \in Q$ initial state
+* $B \in (\Gamma \setminus \Sigma)$ `special symbol` (Blank)
+* $F \subseteq Q$ set of end states
 
-&delta;(q,X)=&rang;q',Y,D&lang; where q' is next state, Y overrides X and D&isin;{L,R}
-a tabular representation can be given by means of a `transition matrix` equivalent to the 5-uple list &rang;q,X,q',Y,D&lang; 
+$\delta(q, X) = \langle q', Y, D \rangle$ where $q'$ is next state, $Y$ overrides $X$ and $D \in \{L, R\}$
+a tabular representation can be given by means of a `transition matrix` equivalent to the 5-uple list $\langle q, X, q', Y, D \rangle$ 
 the `instantaneous description` (or `configuration`) of a TM via the
-triple &rho;=&alpha;q&beta; where
+triple $\rho = \alpha q \beta$ where:
 
-* &alpha;&isin;&Gamma;* symbols to the left of the head
-* &beta;&isin;&Gamma;* symbols to the right of the head
-* q head status
-
-if &beta;&ne;&epsilon; the 
+* $\alpha \in \Gamma^*$ symbols to the left of the head
+* $\beta \in \Gamma^*$ symbols to the right of the head
+* $q$ head status
 
 Single step of execution:
-Let M=&rang;Q,&Sigma;,&Gamma;,q<sub>0</sub>,B,F&lang; a TM defines the relation &rho;&#8866;<sub>M</sub>&rho;'
-induced by the transition function &delta; defined for cases as follows.
-Let &alpha;,&beta;&isin;&Gamma;* and x,y,z&isin;&Gamma; we have
+Let $M = \langle Q, \Sigma, \Gamma, q_0, B, F \rangle$ a TM defines the relation $\rho \vdash_M \rho'$
+induced by the transition function $\delta$ defined for cases as follows.
+Let $\alpha, \beta \in \Gamma^*$ and $x, y, z \in \Gamma$ we have:
 
-* &alpha;qX&beta;&#8866;<sub>M</sub> &alpha;Yq'&beta;     se &delta;(q,X)=&rang;q',Y,R&lang;
-* &alpha;q&#8866;<sub>M</sub> &alpha;Yq'                  se &delta;(q,B)=&rang;q',Y,R&lang;
-* &alpha;ZqX&beta;&#8866;<sub>M</sub> &alpha;q'ZY&beta;   se &delta;(q,X)=&rang;q',Y,L&lang;
-* qX&beta; &#8866;<sub>M</sub> q'BY&beta;                 se &delta;(q,X)=&rang;q',Y,L&lang;
+* $\alpha q X \beta \vdash_M \alpha Y q' \beta$     if $\delta(q, X) = \langle q', Y, R \rangle$
+* $\alpha q \vdash_M \alpha Y q'$                  if $\delta(q, B) = \langle q', Y, R \rangle$
+* $\alpha Z q X \beta \vdash_M \alpha q' Z Y \beta$   if $\delta(q, X) = \langle q', Y, L \rangle$
+* $q X \beta \vdash_M q' B Y \beta$                 if $\delta(q, X) = \langle q', Y, L \rangle$
 
-The Reachability Relationship &#8866;<sub>M</sub>* between configurations is defined as the reflexive and transitive closure of the relationship &#8866;<sub>M</sub>
-i.e. &rho;&#8866;<sub>M</sub>*q' &hArr; there is a sequence &rho;<sub>0</sub>,...,&rho;<sub>n</sub>&ge;0 t.c.
-&rho;<sub>i</sub>&#8866;<sub>M</sub>&rho;<sub>i-1</sub> for i&isin;[1,n-1] , &rho;<sub>0</sub>=&rho;<sub>i</sub>,&rho;<sub>n</sub>=&rho;'
+The Reachability Relationship $\vdash_M^*$ between configurations is defined as the reflexive and transitive closure of the relationship $\vdash_M$.
+i.e. $\rho \vdash_M^* \rho'$ $\iff$ there is a sequence $\rho_0, \dots, \rho_n$ with $n \ge 0$ tale che:
+$\rho_i \vdash_M \rho_{i-1}$ for $i \in [1, n-1]$, $\rho_0 = \rho, \rho_n = \rho'$
 
 # Language accepted by a TM
 
-Let M=&rang;Q,&Sigma;,&Gamma;,q<sub>0</sub>,B,F&lang; a TM, the language L(M)&sube;&Sigma;* accepted by M is defined as
-L(M)={u&isin;&Sigma;* | q<sub>0</sub>u&#8866;&alpha;q&beta;,q&isin;F}
+Let $M = \langle Q, \Sigma, \Gamma, q_0, B, F \rangle$ a TM, the language $L(M) \subseteq \Sigma^*$ accepted by $M$ is defined as:
+$L(M) = \{u \in \Sigma^* \mid q_0 u \vdash^* \alpha q \beta, q \in F\}$
 on non-accepted strings the computation may not terminate.
-Alternative without final states is where the string is accepted &hArr; the corresponding computation terminates.
+Alternative without final states is where the string is accepted $\iff$ the corresponding computation terminates.
 
 # Recursively enumerable languages (r.e.)
-A language is r.e. if it is accepted by a TM, on some string it may happen (if not in the language) that the TM does not terminate.
+A language is r.e. if it is accepted by a TM; on some string it may happen (if not in the language) that the TM does not terminate.
 
 # Recursive languages
 A language is recursive if it is accepted by a TM that terminates on every input
+
+Revision: 2026-04-25
