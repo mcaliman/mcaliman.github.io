@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title: "Design Pattern Visitor"
-excerpt: ""
+excerpt: "The Visitor design pattern explained with practical Java examples"
 category: Programming
 comments: true
 modified: 2024-07-11

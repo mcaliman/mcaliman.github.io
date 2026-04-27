@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Creating a Custom Converter in JSF 2.2"
-excerpt: ""
+excerpt: "Creating and registering a custom type converter in JSF 2.2"
 category: "Java"
 date:   2015-01-01
 comments: true

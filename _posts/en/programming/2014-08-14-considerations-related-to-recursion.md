@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Considerations on recursion"
-excerpt: ""
+excerpt: "Key considerations and trade-offs when using recursion in programming"
 category: Programming
 date:   2014-08-14
 comments: true

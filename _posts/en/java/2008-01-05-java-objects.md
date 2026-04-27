@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Objects in Java"
-excerpt: ""
+excerpt: "Understanding objects and object creation in Java"
 category: "Java"
 date:   2008-01-05
 permalink: /java/objects/
@@ -100,7 +100,7 @@ whose overall architecture can contribute to the definition of models characteri
 The transfer of information between objects is achieved in Java by exchanging messages.
 These include the activation, in the recipient object, of the method specified by the message and the possible export to the sender object
 of the results of carrying out these methods. As we have seen, the passing of parameters is always foreseen by the Java programming language
-by value and this means that the values ​​of the formal parameters at the time of activation of a method are lost when the method completes the
+by value and this means that the values ??of the formal parameters at the time of activation of a method are lost when the method completes the
 its execution. Any export of information from a method can therefore occur exclusively via the return command.
 
 This behavior perfectly adheres to the semantics of passing by value when a parameter consists of a primitive data type.

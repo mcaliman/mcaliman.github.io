@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "MySQL: How to speed up restore operations from mysql dump"
-excerpt: ""
+excerpt: "Techniques to speed up MySQL restore operations from mysqldump"
 category: MySQL
 date:   2011-01-01
 comments: true

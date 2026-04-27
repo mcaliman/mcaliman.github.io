@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Enable the sudo command on debian 8"
-excerpt: ""
+excerpt: "How to enable the sudo command on Debian 8"
 category: Linux
 comments: true
 share: false

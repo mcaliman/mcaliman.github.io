@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Using Channels to Copy Files in Java"
-excerpt: ""
+excerpt: "Using Java NIO Channels for efficient file copy operations"
 category: "Java"
 date:   2014-11-15
 comments: true

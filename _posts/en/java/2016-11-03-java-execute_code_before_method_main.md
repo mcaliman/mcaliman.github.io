@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title: "Can we execute code before the main(String[]) method ?"
-excerpt: ""
+excerpt: "How to execute code before the main method in Java using static initializers"
 category: "Java"
 comments: true
 share: false

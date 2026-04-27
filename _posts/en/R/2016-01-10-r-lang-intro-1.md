@@ -1,7 +1,7 @@
-ï»¿---
+---
 layout: post
 title:  "R language introduction"
-excerpt: ""
+excerpt: "A first introduction to the R programming language"
 category: R 
 date:   2016-01-10
 comments: false
@@ -10,9 +10,9 @@ published: true
 tags: [r, data-analysis, en]
 ---
 
-> â€œWhen debugging, novices insert corrective code; experts remove defective code.â€
+> “When debugging, novices insert corrective code; experts remove defective code.”
 > 
-> â€“ Richard E. Pattis
+> – Richard E. Pattis
 
 I discovered the R programming language almost by chance and was fascinated by it.
 The first thing to know is that R is more than a programming language, it is also a complete development environment. 

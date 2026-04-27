@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title: "The programming language Scala"
-excerpt: ""
+excerpt: "An overview of the Scala programming language and its key features"
 category: Programming 
 permalink: /scala/overview/
 comments: false

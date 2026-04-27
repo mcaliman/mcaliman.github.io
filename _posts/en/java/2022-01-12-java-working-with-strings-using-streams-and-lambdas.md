@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title: "Working with Strings using Streams and Lambdas."
-excerpt: ""
+excerpt: "Processing strings with Java Streams and Lambda expressions"
 category: "Java"
 comments: true
 share: false

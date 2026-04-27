@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "MySQL: A problem when restoring a MySQL database..."
-excerpt: ""
+excerpt: "Solving common issues when restoring a MySQL database from backup"
 category: MySQL
 date:   2010-01-01
 comments: true

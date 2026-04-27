@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "SSH Log in without typing in the password."
-excerpt: ""
+excerpt: "Configuring SSH key-based authentication for passwordless login"
 category: Linux
 comments: true
 share: false

@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Queue"
-excerpt: ""
+excerpt: "The queue data structure: FIFO principle and Java implementation"
 category: Programming
 date:   2014-10-01
 comments: true

@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Sending e-mails with attachments in Java"
-excerpt: ""
+excerpt: "How to send emails with file attachments using the JavaMail API"
 category: "Java"
 date:   2014-07-14
 comments: true

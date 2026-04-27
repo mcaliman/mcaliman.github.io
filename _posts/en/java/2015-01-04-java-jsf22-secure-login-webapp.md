@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Secure logins and pages with JSF 2"
-excerpt: ""
+excerpt: "Building a secure login web application with JSF 2.2"
 category: "Java"
 date:   2015-01-04
 comments: true

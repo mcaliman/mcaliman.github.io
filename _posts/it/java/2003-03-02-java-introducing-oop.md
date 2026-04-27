@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introduzione all'OOP in Java"
-excerpt: ""
+excerpt: "Introduzione ai concetti della programmazione orientata agli oggetti in Java"
 category: "Java"
 permalink: /java/oop/introducing/
 date:   2003-03-02

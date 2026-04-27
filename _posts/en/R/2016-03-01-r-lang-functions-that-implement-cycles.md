@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Functions that implement cycles in R"
-excerpt: ""
+excerpt: "Using apply, sapply and lapply to implement loops in R"
 category: R 
 date:   2016-03-01
 comments: false

@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "DFS o Depth First Search"
-excerpt: ""
+excerpt: "Depth-First Search (DFS) traversal algorithm for trees"
 category: Programming
 date:   2014-10-12
 comments: true
@@ -18,8 +18,8 @@ procedure DFS(node r)
    Stack S
    S.push(r)
    while not S.isEmpty()  do
-      u ← S.pop()
-       if u ≠ null then
+      u ? S.pop()
+       if u ? null then
             visit(u)
             S.push(right_child_of(u))
             S.push(left_child_of(u))

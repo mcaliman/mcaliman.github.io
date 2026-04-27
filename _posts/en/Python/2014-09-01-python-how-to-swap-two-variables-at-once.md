@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "How to swap two variables at once with Python"
-excerpt: ""
+excerpt: "Swapping two variables in a single statement using Python tuples"
 category: Python
 permalink: /python/tuple/swap-variables/
 date:   2014-09-01

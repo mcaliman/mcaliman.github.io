@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Use of keytool and jarsigner"
-excerpt: ""
+excerpt: "How to use the JDK keytool and jarsigner utilities for signing JARs"
 category: "Java"
 permalink: /java/jdk/jarsigner/keytool/
 date:   2011-04-24

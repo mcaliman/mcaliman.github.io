@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Well Formatted referred to an XML document"
-excerpt: ""
+excerpt: "What it means for an XML document to be well-formed"
 category: Programming
 date:   2011-03-07
 comments: true

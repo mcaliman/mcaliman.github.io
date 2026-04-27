@@ -1,7 +1,7 @@
-﻿--- 
+--- 
 layout: post
 title: "Using Prolog to Build Expert Systems"
-excerpt: ""
+excerpt: "Building expert systems with Prolog: a practical approach"
 category: Programming
 date:   2023-08-14
 comments: true

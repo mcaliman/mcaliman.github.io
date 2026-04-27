@@ -1,7 +1,7 @@
-ï»¿--- 
+--- 
 layout: post
 title: "Operatore null-coalescing del C# in Java"
-excerpt: ""
+excerpt: "Come implementare il pattern dell'operatore null-coalescing di C# in Java"
 category: "Java"
 date:   2017-06-15
 comments: true
@@ -11,18 +11,18 @@ published: true
 tags: [java, tutorial, it]
 ---
 
-> â€œUn algoritmo deve essere visto per essere creduto.â€
-> â€“ Donald Knuth
+> “Un algoritmo deve essere visto per essere creduto.”
+> – Donald Knuth
 
-In C# l'operatore `??` Ã¨ chiamato `operatore null-coalescing`. 
+In C# l'operatore `??` è chiamato `operatore null-coalescing`. 
 Ecco un esempio di utilizzo:
 
 ```csharp
 string result = leftHand ?? rightHand ;
 ```
 
-Restituisce l'operando di sinistra se non Ã¨ `null`, altrimenti restituisce l'operando di destra.
-Una possibile alternativa in Java al `??` del C# Ã¨ l'uso di `?`, l'operatore ternario, come segue:
+Restituisce l'operando di sinistra se non è `null`, altrimenti restituisce l'operando di destra.
+Una possibile alternativa in Java al `??` del C# è l'uso di `?`, l'operatore ternario, come segue:
 
 ```java
 String result = leftHand != null ? leftHand : rightHand; 

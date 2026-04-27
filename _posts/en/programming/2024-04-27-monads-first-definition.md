@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title: "Monads: A First Definition"
-excerpt: 
+excerpt: "An introduction to monads in functional programming: algebraic structures, the formal triplet (T, η, μ), and the Maybe monad example"
 category: Programming
 date: 2024-04-27
 comments: false

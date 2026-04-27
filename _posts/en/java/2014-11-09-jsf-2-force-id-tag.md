@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "JSF 2 forcing tag-generated ids"
-excerpt: ""
+excerpt: "How to force specific HTML element IDs in JSF 2 components"
 category: "Java"
 date:   2014-11-09
 comments: true

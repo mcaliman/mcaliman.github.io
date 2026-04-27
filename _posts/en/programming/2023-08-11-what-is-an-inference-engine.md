@@ -1,7 +1,7 @@
-﻿--- 
+--- 
 layout: post
 title: "What is an inference engine?"
-excerpt: ""
+excerpt: "How inference engines work and their role in expert systems"
 category: Programming
 date:   2023-08-11
 comments: true

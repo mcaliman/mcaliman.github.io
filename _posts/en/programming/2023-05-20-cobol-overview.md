@@ -1,7 +1,7 @@
-ï»¿---
+---
 layout: post
 title: "Cobol overview"
-excerpt: ""
+excerpt: "A comprehensive overview of the COBOL programming language"
 date: 2023-05-20
 revised: true
 category: Programming 
@@ -15,7 +15,7 @@ tags: [programming, theory, en]
 
 > Computers are good at following instructions, but not at reading your mind.
 >
-> â€“ Donald Knuth
+> – Donald Knuth
 
 COBOL (an acronym for COmmon Business-Oriented Language) is a programming language developed in 1959 by a working group composed of elements of the US industry and some US government agencies to create a programming language suitable for processing commercial data. Grace Murray Hopper played a primary role in the development and design of the language.
 
@@ -66,4 +66,4 @@ Here are some links to websites that provide information about COBOL:
 - [COBOL Programming - TutorialsPoint](https://www.tutorialspoint.com/cobol/index.htm)
 - [COBOL Resource Hub - Micro Focus](https://www.microfocus.com/en-us/trend/cobol-resource-hub)
 
-Even if you donâ€™t like the COBOL language (I donâ€™t like it), donâ€™t underestimate the strategic importance of knowing its basics. You too could work on a project to rewrite a COBOL program in your preferred language.
+Even if you don’t like the COBOL language (I don’t like it), don’t underestimate the strategic importance of knowing its basics. You too could work on a project to rewrite a COBOL program in your preferred language.

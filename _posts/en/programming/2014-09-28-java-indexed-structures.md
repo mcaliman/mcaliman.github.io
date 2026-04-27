@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Indexed structures"
-excerpt: ""
+excerpt: "Understanding indexed data structures and their implementations in Java"
 category: Programming
 date:   2014-09-28
 comments: true

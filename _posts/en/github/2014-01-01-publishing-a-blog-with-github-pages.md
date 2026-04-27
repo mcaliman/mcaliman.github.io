@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Publishing a website with GitHub Pages."
-excerpt: ""
+excerpt: "How to publish a website using GitHub Pages and Jekyll"
 category: github
 comments: true
 share: false

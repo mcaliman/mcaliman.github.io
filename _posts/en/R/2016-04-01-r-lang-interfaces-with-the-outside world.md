@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Interfaces with the external world in R"
-excerpt: ""
+excerpt: "Interfacing R with external data sources: files, databases and web APIs"
 category: R 
 date:   2016-04-01
 comments: false

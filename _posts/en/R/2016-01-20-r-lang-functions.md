@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Functions in R"
-excerpt: ""
+excerpt: "Defining and using functions in R"
 category: R 
 date:   2016-01-20
 comments: false
@@ -12,7 +12,7 @@ tags: [r, data-analysis, en]
 
 > Computer Science is no more about computers than astronomy is about telescopes.
 >
-> – Edsger W. Dijkstra
+> � Edsger W. Dijkstra
 
 Functions are created using the `function()` directive and stored like any other object in R. 
 Specifically, they are objects of class function.
