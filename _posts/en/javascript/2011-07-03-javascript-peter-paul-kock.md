@@ -11,8 +11,7 @@ tags: [javascript, web, en]
 ---
 
 > "If you have a procedure with ten parameters, you probably missed some."
->
-> – Alan Perlis  
+> â€“ Alan Perlis  
 
 If you happen to have to work in javascript, even if only to copy and paste simple scripts into your site, give yourself a gift,
 buy and read "Java Script according to Peter-Paul Kock" (Pearson Education) translation of PPK ON JAVASCRIPT.
