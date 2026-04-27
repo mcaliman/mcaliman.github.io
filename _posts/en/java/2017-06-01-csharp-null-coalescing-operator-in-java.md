@@ -1,4 +1,4 @@
---- 
+ï»¿--- 
 layout: post
 title: "C# null-coalescing operator in Java"
 excerpt: "Implementing the C# null-coalescing operator pattern in Java"
@@ -11,8 +11,8 @@ published: true
 tags: [java, tutorial, en]
 ---
 
-> “An algorithm must be seen to be believed.”
-> – Donald Knuth
+> "An algorithm must be seen to be believed."
+> â€“ Donald Knuth
 
 In C# the `??` operator is called the `null-coalescing operator`. 
 Here's an example of use:
