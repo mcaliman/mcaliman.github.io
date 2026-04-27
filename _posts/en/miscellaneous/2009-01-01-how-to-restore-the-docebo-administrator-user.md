@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "How to restore the Docebo administrator user"
-excerpt: ""
+excerpt: "Restoring the administrator user in the Docebo LMS platform"
 category: Miscellaneous
 comments: true
 share: false

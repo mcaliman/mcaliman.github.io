@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Concatenating PDFs with iText in Java"
-excerpt: ""
+excerpt: "How to concatenate multiple PDF files using the iText library in Java"
 category: "Java"
 date:   2014-09-18
 comments: true

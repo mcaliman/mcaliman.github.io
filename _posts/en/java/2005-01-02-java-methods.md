@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Let's delve into methods in Java"
-excerpt: ""
+excerpt: "Understanding methods in Java: definition, invocation and return types"
 category: "Java"
 date:   2005-01-02
 permalink: /java/methods/

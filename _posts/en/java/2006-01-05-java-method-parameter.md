@@ -1,8 +1,8 @@
-﻿---
+---
 layout: post
 # lang: en
 title:  "Passing parameters in Java"
-excerpt: ""
+excerpt: "How parameter passing works in Java methods"
 category: "Java"
 date:   2006-01-05
 permalink: /java/parameters/

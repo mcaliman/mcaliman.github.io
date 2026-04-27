@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "JSF 2 How to use comments"
-excerpt: ""
+excerpt: "How to properly use comments in JSF 2 Facelets pages"
 category: "Java"
 date:   2014-11-16
 comments: false

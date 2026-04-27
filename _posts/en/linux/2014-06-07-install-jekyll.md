@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "How to install Jekyll on ubuntu 14.04."
-excerpt: ""
+excerpt: "Installing Jekyll on Ubuntu 14.04 for static site generation"
 category: Linux
 comments: true
 share: false

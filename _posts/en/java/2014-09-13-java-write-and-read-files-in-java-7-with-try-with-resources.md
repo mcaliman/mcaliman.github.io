@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Writing and reading files in Java 7 with try-with-resources"
-excerpt: ""
+excerpt: "Reading and writing files in Java 7 using the try-with-resources statement"
 category: "Java"
 date:   2014-09-13
 comments: true

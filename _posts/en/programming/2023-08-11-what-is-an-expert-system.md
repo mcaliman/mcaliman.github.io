@@ -1,7 +1,7 @@
-﻿--- 
+--- 
 layout: post
 title: "What is an expert system?"
-excerpt: ""
+excerpt: "Understanding expert systems: definition, architecture and applications"
 category: Programming
 date:   2023-08-11
 comments: true

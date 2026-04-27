@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Tree Linked List"
-excerpt: ""
+excerpt: "Linked list representations of tree data structures"
 category: Programming
 date:   2014-10-07
 comments: true

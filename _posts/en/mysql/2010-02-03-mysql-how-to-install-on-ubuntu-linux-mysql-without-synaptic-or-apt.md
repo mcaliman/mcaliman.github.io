@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "MySQL: how to install on ubuntu linux mysql without synaptic or apt"
-excerpt: ""
+excerpt: "Installing MySQL on Ubuntu Linux without using Synaptic or apt"
 category: MySQL
 date:   2011-02-03
 comments: true

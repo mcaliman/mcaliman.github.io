@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "How to find jar file where a certain class is contained (deployed in GlassFish)."
-excerpt: ""
+excerpt: "Locating the JAR file containing a specific class deployed in GlassFish"
 category: "Java"
 permalink: /java/glassfish/jar/
 date:   2014-01-03

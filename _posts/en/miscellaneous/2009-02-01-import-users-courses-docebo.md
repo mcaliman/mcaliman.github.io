@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Importing users and courses with I/O Task in Docebo"
-excerpt: ""
+excerpt: "Importing users and courses into Docebo using I/O Tasks"
 category: Miscellaneous
 comments: true
 share: false

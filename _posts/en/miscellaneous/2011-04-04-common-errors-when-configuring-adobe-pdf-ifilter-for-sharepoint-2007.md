@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Common errors when configuring Adobe PDF iFilter for SharePoint 2007"
-excerpt: ""
+excerpt: "Troubleshooting Adobe PDF iFilter configuration issues in SharePoint 2007"
 category: Miscellaneous
 comments: true
 share: false

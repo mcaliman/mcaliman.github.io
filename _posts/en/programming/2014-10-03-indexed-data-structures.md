@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Structures indexed in depth"
-excerpt: ""
+excerpt: "An in-depth look at indexed data structures and their properties"
 category: Programming
 date:   2014-10-03
 comments: true

@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Tree in Java"
-excerpt: ""
+excerpt: "Tree data structures: concepts, terminology and Java implementation"
 category: Programming
 date:   2014-10-05
 comments: true
@@ -51,7 +51,7 @@ A basic specification of the `Tree` data type must necessarily include operation
    * removeSubtree(Node v) -> `Tree` 
       * detaches and returns the entire subtree rooted in `v`, the operation deletes the `v` node and all its descendants from the tree
 
-A questo punto passare dalla specifica in pseudocodice ad una in linguaggio Java è immediato. 
+A questo punto passare dalla specifica in pseudocodice ad una in linguaggio Java � immediato. 
 
 ```java
 interface Node {

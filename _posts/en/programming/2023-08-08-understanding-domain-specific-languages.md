@@ -1,7 +1,7 @@
-﻿--- 
+--- 
 layout: post
 title: "Understanding Domain Specific Languages"
-excerpt: ""
+excerpt: "What Domain-Specific Languages are and when to use them"
 category: Programming
 date:   2023-08-05
 comments: true
@@ -25,4 +25,4 @@ Using a DSL can bring many benefits. Firstly, it allows for clearer and more dir
 I wrote my first DSL in 2000 to make a management system more flexible. The system was designed to manage payroll and, in particular, the overtime of employees in a company. I had written the management system in Java and used the [Interpreter design pattern](https://en.wikipedia.org/wiki/Interpreter_pattern). Today, for tasks like this, we can use more advanced tools such as [ANTLR](https://www.antlr.org/)(ANother Tool for Language Recognition).
 
 Recently, two websites have become my go-to resources for information on DSLs: 
-[tomassetti.me](https://tomassetti.me) and [strumenta.com](https://strumenta.com). These sites offer a wealth of information on the subject, including articles, tutorials, and other resources. I highly recommend checking them out if you’re interested in learning more about DSLs.
+[tomassetti.me](https://tomassetti.me) and [strumenta.com](https://strumenta.com). These sites offer a wealth of information on the subject, including articles, tutorials, and other resources. I highly recommend checking them out if you�re interested in learning more about DSLs.

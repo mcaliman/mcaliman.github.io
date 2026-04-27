@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Generic visit algorithm for a tree"
-excerpt: ""
+excerpt: "A generic algorithm for visiting nodes in a tree data structure"
 category: Programming
 date:   2014-10-10
 comments: true
@@ -17,11 +17,11 @@ The most generic possible visiting procedure can be seen in the pseudocode algor
 
 ```
 proc generic_tree_visit(node r)
-   S ← { r }
-   while S ≠ ∅ do
-       u ← get node from S
+   S ? { r }
+   while S ? � do
+       u ? get node from S
        visit(u)
-       S ← S ∪ { children of u}
+       S ? S ? { children of u}
    od
 end proc
 ```

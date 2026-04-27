@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "String.format: A printf method for Java"
-excerpt: ""
+excerpt: "Using String.format as a printf-style formatting method in Java"
 category: "Java"
 permalink: /java/string/format/
 date:   2014-07-13

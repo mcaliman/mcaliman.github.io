@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Immutable classes and objects in Java"
-excerpt: ""
+excerpt: "Understanding immutable classes and objects in Java"
 permalink: "/java/immutable-classes-and-objects"
 category: "Java"
 comments: true

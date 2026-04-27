@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Stack"
-excerpt: ""
+excerpt: "The stack data structure: LIFO principle and Java implementation"
 category: Programming
 date:   2014-09-30
 comments: true

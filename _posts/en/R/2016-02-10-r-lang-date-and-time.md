@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Date, time and interval objects in R"
-excerpt: ""
+excerpt: "Working with date, time and interval objects in R"
 category: R 
 date:   2016-02-10
 comments: false

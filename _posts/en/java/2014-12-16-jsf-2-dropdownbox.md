@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Dropdownboxes are easy with JSF 2.2!"
-excerpt: ""
+excerpt: "Implementing dropdown select boxes with JSF 2.2"
 category: "Java"
 date:   2014-12-16
 comments: true

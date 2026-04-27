@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Linked List"
-excerpt: ""
+excerpt: "The linked list data structure: concepts and Java implementation"
 category: Programming
 date:   2014-09-29
 comments: true

@@ -1,7 +1,7 @@
-﻿--- 
+--- 
 layout: post
 title: "Passing Parameters to Methods/Functions/Procedure in Programming Languages"
-excerpt: ""
+excerpt: "Parameter passing strategies in programming: by value, by reference and beyond"
 category: Programming
 date:   2023-08-13
 comments: true

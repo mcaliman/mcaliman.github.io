@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Secure httpbase tomcat authentication"
-excerpt: ""
+excerpt: "Configuring HTTP Basic authentication with Tomcat for secure access"
 category: "Java"
 date:   2014-08-15
 comments: true

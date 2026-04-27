@@ -1,7 +1,7 @@
-﻿--- 
+--- 
 layout: post
 title: "Checking nic.it droptime files with R"
-excerpt: ""
+excerpt: "Monitoring nic.it domain droptime files with R scripts"
 category: R 
 date:   2016-10-01
 comments: false

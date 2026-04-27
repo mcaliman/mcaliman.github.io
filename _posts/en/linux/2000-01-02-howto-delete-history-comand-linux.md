@@ -1,7 +1,7 @@
-﻿--- 
+--- 
 layout: post
 title: "How to delete the command history on Linux"
-excerpt: ""
+excerpt: "How to clear the command history in a Linux terminal"
 category: Linux
 comments: true
 share: false

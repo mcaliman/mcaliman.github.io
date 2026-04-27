@@ -1,7 +1,7 @@
-ï»¿--- 
+--- 
 layout: post
 title: "Come includere jar esterni nel mio progetto Netbeans"
-excerpt: ""
+excerpt: "Come aggiungere librerie JAR esterne a un progetto NetBeans"
 category: "Java"
 date:   2017-09-16
 comments: true
@@ -11,9 +11,9 @@ published: true
 tags: [java, tutorial, it]
 ---
 
-> â€œMisurare il progresso della programmazione in linee di codice Ã¨ come misurare il progresso della costruzione di un aereo in base al peso.â€
+> “Misurare il progresso della programmazione in linee di codice è come misurare il progresso della costruzione di un aereo in base al peso.”
 >
-> â€“ Bill Gates
+> – Bill Gates
 
 Un esempio di file build.xml
 

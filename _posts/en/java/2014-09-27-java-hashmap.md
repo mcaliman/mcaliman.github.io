@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Using HashMap in Java"
-excerpt: ""
+excerpt: "A practical guide to using HashMap in Java"
 category: "Java"
 date:   2014-09-27
 permalink: /java/hashmap/

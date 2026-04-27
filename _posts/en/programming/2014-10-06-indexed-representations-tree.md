@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "Trees indexed representations"
-excerpt: ""
+excerpt: "Indexed representations of tree data structures"
 category: Programming
 date:   2014-10-06
 comments: true

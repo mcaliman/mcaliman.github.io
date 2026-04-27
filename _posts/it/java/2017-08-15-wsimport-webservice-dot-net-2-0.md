@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: "wsimport e Webservice .Net 2.0"
-excerpt: ""
+excerpt: "Utilizzo di wsimport per generare stub client Java da un Web Service .NET 2.0"
 category: "Java"
 date:   2015-08-15
 comments: true

@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title:  "BFS Breadth First Search"
-excerpt: ""
+excerpt: "Breadth-First Search (BFS) traversal algorithm for trees"
 category: Programming
 date:   2014-10-14
 comments: true
@@ -23,8 +23,8 @@ algorithm BFS(node r)
    Queue C
    C.enqueue(r)
    while not C.isEmpty() do 
-       u ← C.dequeue()
-       if u ≠ null then
+       u ? C.dequeue()
+       if u ? null then
            visit(u)
            C.enqueue(leftChildOf(u))
            C.enqueue(rightChildOf(u))  
