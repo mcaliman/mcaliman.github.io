@@ -9,6 +9,7 @@ date: 2014-01-01
 modified: 2024-07-11
 published: true
 tags: [github, pages, en]
+permalink: /github/publishing-website-github-pages/
 ---
 
 If you want to publish the site at `http://USERNAME.github.com`, you need to create a repository (from your GitHub account) 

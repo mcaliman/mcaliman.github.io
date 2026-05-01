@@ -9,6 +9,7 @@ date: 2009-01-01
 modified: 2024-07-11
 published: true
 tags: [docebo, lms, en]
+permalink: /miscellaneous/importing-users-courses-io/
 ---
 
 Those who need to import users, courses, and user-course associations in an automatic and scheduled manner will necessarily have had to deal with I/O Tasks.

@@ -9,6 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [mysql, database, en]
+permalink: /mysql/mysql-problem-when-restoring/
 ---
 
 If you encounter problems when restoring from a mysql dump, try setting these variables before running the `source` command

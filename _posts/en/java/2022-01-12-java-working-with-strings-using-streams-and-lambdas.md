@@ -8,6 +8,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, en]
+permalink: /java/working-strings-using-streams/
 ---
 
 Lambdas and streams are not exotic objects to be used in complex algorithms within the reach only of researchers locked away in the labs of a multinational corporation.

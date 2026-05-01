@@ -9,6 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [programming, theory, en]
+permalink: /programming/structures-indexed-depth/
 ---
 
 Let's pick up the post on indexed structures for a closer look.

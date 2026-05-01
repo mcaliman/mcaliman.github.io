@@ -8,6 +8,7 @@ date: 2011-07-03
 modified: 2024-07-11
 published: true
 tags: [javascript, web, en]
+permalink: /javascript/javascript-according-peter-paul/
 ---
 
 > "If you have a procedure with ten parameters, you probably missed some."

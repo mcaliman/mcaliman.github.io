@@ -9,6 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [java, jsf, en]
+permalink: /java/creating-custom-converter-jsf/
 ---
 
 If the property of the bean we want to display is of type boolean what we will get in the page are the strings `true` and `false`, to 

@@ -4,7 +4,7 @@ title:  "Using HashMap in Java"
 excerpt: "A practical guide to using HashMap in Java"
 category: "Java"
 date:   2014-09-27
-permalink: /java/hashmap/
+permalink: /java/using-hashmap-java/
 comments: true
 share: false
 modified: 2024-07-11

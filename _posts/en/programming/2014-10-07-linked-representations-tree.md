@@ -9,6 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [data-structures, algorithms, en]
+permalink: /programming/tree-linked-list/
 ---
 Continuing with the discussion of trees, representations based on linked structures are normally preferred 
 

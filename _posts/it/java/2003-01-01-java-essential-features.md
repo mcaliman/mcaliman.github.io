@@ -3,7 +3,7 @@ layout: post
 title:  "Caratteristiche Essenziali di Java"
 excerpt: "Le caratteristiche essenziali del linguaggio Java che devi conoscere"
 category: "Java"
-permalink: /java/essential-features/
+permalink: /java/caratteristiche-essenziali-java/
 date:   2003-01-01
 comments: true
 modified: 2024-07-11

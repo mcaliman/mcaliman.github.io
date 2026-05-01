@@ -9,6 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [r, data-analysis, en]
+permalink: /r/interfaces-external-world-r/
 ---
 
 Data are read via connection interfaces . Connections can be to files or urls for example .

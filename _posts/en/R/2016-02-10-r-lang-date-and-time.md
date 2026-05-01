@@ -8,6 +8,7 @@ comments: false
 modified: 2024-07-11
 published: true
 tags: [r, data-analysis, en]
+permalink: /r/date-time-interval-objects/
 ---
 
 ## The Date Class

@@ -9,6 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [data-structures, algorithms, en]
+permalink: /programming/generic-visit-algorithm-tree/
 ---
 
 One of the most common tasks to be performed on a tree is to perform a visit to it, i.e. to review each of its nodes. By the natural language term 'reviewing' we mean 'applying some function' to the node under examination, even if it is simply printing on the screen that it has been visited.
@@ -18,7 +19,7 @@ The most generic possible visiting procedure can be seen in the pseudocode algor
 ```
 proc generic_tree_visit(node r)
    S ? { r }
-   while S ? Ø do
+   while S ? Ã˜ do
        u ? get node from S
        visit(u)
        S ? S ? { children of u}

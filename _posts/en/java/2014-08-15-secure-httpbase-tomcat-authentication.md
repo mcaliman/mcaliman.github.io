@@ -9,6 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [java, security, en]
+permalink: /java/secure-httpbase-tomcat-authentication/
 ---
 
 To set up basic authentication in a java application in tomcat, we can only intervene in two files

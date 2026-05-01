@@ -9,6 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [data-structures, algorithms, en]
+permalink: /programming/stack/
 ---
 
 One of the most recurring basic types is the Stack; a pseudolanguage specification is given below.

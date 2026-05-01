@@ -8,6 +8,7 @@ comments: false
 modified: 2024-07-11
 published: true
 tags: [r, data-analysis, en]
+permalink: /r/functions-implement-cycles-r/
 ---
 
 ## Command-Line Loops

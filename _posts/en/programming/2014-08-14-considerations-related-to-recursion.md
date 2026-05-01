@@ -9,6 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [programming, theory, en]
+permalink: /programming/considerations-recursion/
 ---
 
 In programming languages, the repetition of commands or statements is achieved by loops, usually realised with constructs such as `for`, `foreach` and `white`. For particular problems, recursion is a valid alternative, more elegant, natural and simple to implement.

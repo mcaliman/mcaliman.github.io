@@ -9,6 +9,7 @@ date: 2014-06-07
 modified: 2024-07-11
 published: true
 tags: [linux, ubuntu, en]
+permalink: /linux/install-jekyll-ubuntu-1404/
 ---
 
 What we need
