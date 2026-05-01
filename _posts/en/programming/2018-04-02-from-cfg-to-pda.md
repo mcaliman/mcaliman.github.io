@@ -2,7 +2,7 @@
 layout: post
 title:  "From Context-Free Grammar (CFG) to Pushdown Automata (PDA)"
 excerpt: "Construction of a stack automaton (PDA) from a CF grammar"
-permalink: /en/from-cfg-to-pda/
+permalink: /programming/context-free-grammar-cfg-pushdown/
 category: Programming
 date:   2018-04-02
 comments: true

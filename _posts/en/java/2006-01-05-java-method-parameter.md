@@ -5,7 +5,7 @@ title:  "Passing parameters in Java"
 excerpt: "How parameter passing works in Java methods"
 category: "Java"
 date:   2006-01-05
-permalink: /java/parameters/
+permalink: /java/passing-parameters-java/
 comments: true
 share: false
 modified: 2024-07-11

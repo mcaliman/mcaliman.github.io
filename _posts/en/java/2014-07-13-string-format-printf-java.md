@@ -3,7 +3,7 @@ layout: post
 title:  "String.format: A printf method for Java"
 excerpt: "Using String.format as a printf-style formatting method in Java"
 category: "Java"
-permalink: /java/string/format/
+permalink: /java/stringformat-printf-method-java/
 date:   2014-07-13
 comments: true
 share: false

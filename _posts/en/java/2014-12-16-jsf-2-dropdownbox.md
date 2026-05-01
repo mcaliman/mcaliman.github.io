@@ -9,6 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [java, jsf, en]
+permalink: /java/dropdownboxes-easy-jsf-22/
 ---
 
 Making direct mappings between a `Map` and a dropdown box with Java Server Faces 2.3 is immediate and easy.

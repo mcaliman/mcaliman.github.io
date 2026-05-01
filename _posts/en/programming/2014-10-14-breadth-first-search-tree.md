@@ -9,6 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [data-structures, algorithms, en]
+permalink: /programming/bfs-breadth-first-search/
 ---
   
 > "PHP is a minor evil perpetrated and created by incompetent amateurs, whereas Perl is a great and insidious evil perpetrated by skilled but perverted professionals."

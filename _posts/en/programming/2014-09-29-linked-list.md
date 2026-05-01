@@ -9,6 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [data-structures, algorithms, en]
+permalink: /programming/linked-list/
 ---
   
 The basic constituents of a linked structure are the records, which like array cells are numbered and each contains a collection of objects. The numbers associated with the records are their in-memory addresses (thus global within the programme and not local as in the case of arrays).

@@ -4,7 +4,7 @@ title:  "Let's delve into methods in Java"
 excerpt: "Understanding methods in Java: definition, invocation and return types"
 category: "Java"
 date:   2005-01-02
-permalink: /java/methods/
+permalink: /java/lets-delve-into-methods/
 comments: true
 share: false
 modified: 2024-07-11

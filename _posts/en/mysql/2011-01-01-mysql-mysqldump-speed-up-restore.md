@@ -9,6 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [mysql, database, en]
+permalink: /mysql/mysql-speed-up-restore/
 ---
 
 To speed up the operation of restoring a sql dump in mysql, you can proceed as follows

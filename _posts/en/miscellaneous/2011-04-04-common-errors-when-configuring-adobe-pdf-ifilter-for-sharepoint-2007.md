@@ -9,6 +9,7 @@ date: 2011-04-04
 modified: 2024-07-11
 published: true
 tags: [misc, architecture, en]
+permalink: /miscellaneous/common-errors-when-configuring/
 ---
 A common mistake you can run into when installing iFilter for SharePoint 2007 is forgetting to replace the value of the key
 

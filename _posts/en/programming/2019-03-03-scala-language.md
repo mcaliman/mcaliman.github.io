@@ -3,7 +3,7 @@ layout: post
 title: "The programming language Scala"
 excerpt: "An overview of the Scala programming language and its key features"
 category: Programming 
-permalink: /scala/overview/
+permalink: /programming/programming-language-scala/
 comments: false
 modified: 2024-07-11
 published: true

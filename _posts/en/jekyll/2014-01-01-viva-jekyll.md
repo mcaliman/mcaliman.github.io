@@ -10,6 +10,7 @@ modified: 2024-07-11
 published: true
 last_review: 2026-04-19
 tags: [jekyll, blog, en]
+permalink: /jekyll/cms-dead-long-live/
 ---
 
 The title is provocative. While CMS systems will never truly die—designing them has been my work for years—for many of us, they have become a burden that distracts from the content itself. For blogging, I have tried everything from WordPress to Blogger, but I have found that static HTML is more than sufficient for my needs.

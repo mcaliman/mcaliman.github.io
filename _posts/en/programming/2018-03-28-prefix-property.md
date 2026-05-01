@@ -9,6 +9,7 @@ share: false
 modified: 2026-04-27
 published: true
 tags: [computer-science, theory, en, Updated]
+permalink: /programming/prefix-property/
 ---
    
 > Kleeneliness is next to Gödeliness

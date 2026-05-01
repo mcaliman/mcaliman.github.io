@@ -4,7 +4,7 @@ title:  "Objects in Java"
 excerpt: "Understanding objects and object creation in Java"
 category: "Java"
 date:   2008-01-05
-permalink: /java/objects/
+permalink: /java/objects-java/
 comments: true
 share: false
 modified: 2024-07-11

@@ -2,7 +2,7 @@
 layout: post
 title:  "Alphabets, Symbols, Strings and Languages"
 excerpt: "What are alphabets, symbols and strings from the point of view of theoretical computer science"
-permalink: /en/alphabets-symbols-strings-languages/
+permalink: /programming/alphabets-symbols-strings-languages/
 category: Programming
 date:   2018-03-20
 comments: true

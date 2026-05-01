@@ -9,6 +9,7 @@ date: 2014-01-12
 modified: 2024-07-11
 published: true
 tags: [linux, sysadmin, en]
+permalink: /linux/ssh-log-without-typing/
 ---
 
 If you want to use `Linux` and `OpenSSH` to automate tasks, and you need to be able to log in automatically from host `A` (phobos ubuntu 18.04) with user `a` (mcaliman) to host `B` (deimos ubuntu 20.04) with user `b` (mcaliman) without entering a password, these are the steps you need to take: 

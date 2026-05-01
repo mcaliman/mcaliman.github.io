@@ -9,6 +9,7 @@ share: false
 modified: 2024-07-11
 published: true
 tags: [java, jsf, en]
+permalink: /java/jsf-2-forcing-tag-generated/
 ---
 
 When using tags like `inputHidden` or `form`, i.e. standard HTML components of the JSF, the `id` attributes of the corresponding 
