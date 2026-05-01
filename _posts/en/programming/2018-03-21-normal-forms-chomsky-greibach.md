@@ -22,7 +22,7 @@ Knowing them is important for various reasons; for instance, they are used in th
 
 # Greibach Normal Form
 
-All productions are of the form $A \to \sigma B_1 \dots B_n$ (where $\sigma \in T$ and $A, B_1, \dots, B_n \in N$, $n \ge 0$).
+All productions are of the form $A \to \sigma B\_1 \dots B\_n$ (where $\sigma \in T$ and $A, B\_1, \dots, B\_n \in N$, $n \ge 0$).
 
 One of the reasons to know them is that they are used in algorithms to switch from a CFG to a Pushdown Automaton (PDA).
 

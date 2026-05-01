@@ -36,7 +36,7 @@ More simply by reviewing all the transitions of the automaton:
 
 It follows that:
 
-$$ \forall u \in \Sigma^*, \langle q, u, Z \rangle \vdash^* \langle q, \epsilon, \epsilon \rangle \iff Z \Rightarrow^* u $$
+$$ \forall u \in \Sigma^\*, \langle q, u, Z \rangle \vdash^\* \langle q, \epsilon, \epsilon \rangle \iff Z \Rightarrow^\* u $$
 
 [^footnote1]
 
