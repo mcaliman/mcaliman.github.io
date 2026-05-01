@@ -22,7 +22,7 @@ In other words, beginning to use some mathematical formalism, we have that $\Sig
 
 An example of an alphabet for binary numbers is $\Sigma = \{0,1\}$, the lower case Greek letter sigma $\sigma$ is commonly used to indicate generic symbols, with a numeric index if necessary.
 
-We could then represent a 3-symbol alphabet with $\Sigma = \{\sigma_0, \sigma_1, \sigma_2\}$ and say that $\sigma_0$ is $a$, $\sigma_1$ is $b$ and $\sigma_2$ is $c$, hence that $\Sigma = \{a,b,c\}$.
+We could then represent a 3-symbol alphabet with $\Sigma = \{\sigma\_0, \sigma\_1, \sigma\_2\}$ and say that $\sigma\_0$ is $a$, $\sigma\_1$ is $b$ and $\sigma\_2$ is $c$, hence that $\Sigma = \{a,b,c\}$.
 
 We can write that $\sigma \in \Sigma$ to indicate that a given symbol $\sigma$ belongs to the alphabet $\Sigma$. Alphabets are sets so we can use all the mathematics pertaining to sets, making our lives easier.
 
@@ -42,19 +42,19 @@ Its characteristic is that it has length zero, i.e. if $u$ is a string and in pa
 
 $$ \vert \epsilon \vert = 0 \quad \text{or} \quad \vert \Lambda \vert = 0 $$
 
-If we wanted to represent all possible strings on a given alphabet $\Sigma$ we could use the $\Sigma^*$ representation where the asterisk is placed at the same height as an exponent. $\Sigma^*$ is more than just a representation, it represents an operation. 
+If we wanted to represent all possible strings on a given alphabet $\Sigma$ we could use the $\Sigma^\*$ representation where the asterisk is placed at the same height as an exponent. $\Sigma^\*$ is more than just a representation, it represents an operation. 
 
-For now, we are content to know that if $\Sigma = \{0,1\}$ which is by definition a finite set, then $\Sigma^*$ is a set with an infinite number of elements, i.e., all the strings that I can construct with the symbols of the alphabet $\Sigma$, therefore:
+For now, we are content to know that if $\Sigma = \{0,1\}$ which is by definition a finite set, then $\Sigma^\*$ is a set with an infinite number of elements, i.e., all the strings that I can construct with the symbols of the alphabet $\Sigma$, therefore:
 
-$$ \Sigma^* = \{ \epsilon, 0, 1, 01, 11, 10, 001, 00001, \dots \} $$
+$$ \Sigma^\* = \{ \epsilon, 0, 1, 01, 11, 10, 001, 00001, \dots \} $$
 
 where the three dots $\dots$ indicate that one can continue indefinitely by generating strings of arbitrary length.
 
-The concept of $\Sigma^*$ or of the set of strings on $\Sigma$ allows us to take a further step forward and be able to define something whose concept is more familiar to us in our everyday professional (programmer) life, namely the concept of a **language** on a certain alphabet. Commonly, a language is indicated by the capital letter $L$, and contrary to what happens for $\Sigma^*$, $L$ is not necessarily an infinite set. Since it is a subset of $\Sigma^*$, formally we have:
+The concept of $\Sigma^\*$ or of the set of strings on $\Sigma$ allows us to take a further step forward and be able to define something whose concept is more familiar to us in our everyday professional (programmer) life, namely the concept of a **language** on a certain alphabet. Commonly, a language is indicated by the capital letter $L$, and contrary to what happens for $\Sigma^\*$, $L$ is not necessarily an infinite set. Since it is a subset of $\Sigma^\*$, formally we have:
 
-$$ L \subseteq \Sigma^* $$
+$$ L \subseteq \Sigma^\* $$
 
-Referring to the example seen above for binary numbers, we could define a language for binary numbers of strings of length 2. In this case, our $L$ would be the subset of $\Sigma^*$ composed of the strings:
+Referring to the example seen above for binary numbers, we could define a language for binary numbers of strings of length 2. In this case, our $L$ would be the subset of $\Sigma^\*$ composed of the strings:
 
 $$ L = \{ 00, 01, 10, 11 \} $$
 
@@ -62,7 +62,7 @@ For purely mathematical reasons, we have that both the empty set and the set con
 
 An interesting aspect is the possibility of modelling as mathematical objects even operations that we can commonly do on strings, such as concatenation.
 
-In addition to the operations that we can do on strings, there are similar operations on languages. Of particular interest are the closure operations or closures, the positive closure represented by a $+$ sign at the exponent $L^+$ and the Kleene closure represented by the asterisk symbol $L^*$. Informally the former is the union of all languages of length 1 to $n$, the latter of all languages of length 0 to $n$, so it also includes the string of length 0.
+In addition to the operations that we can do on strings, there are similar operations on languages. Of particular interest are the closure operations or closures, the positive closure represented by a $+$ sign at the exponent $L^+$ and the Kleene closure represented by the asterisk symbol $L^\*$. Informally the former is the union of all languages of length 1 to $n$, the latter of all languages of length 0 to $n$, so it also includes the string of length 0.
 
 If you want to learn something about Stephen Cole Kleene you can go to:
 

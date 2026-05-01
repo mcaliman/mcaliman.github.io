@@ -33,6 +33,6 @@ where $\delta$ is constructed transition by transition starting with each indivi
 
 It follows that:
 
-$$ \forall u \in \Sigma^*, S \Rightarrow^* u \iff \langle q, u, S \rangle \vdash^* \langle q, \epsilon, \epsilon \rangle $$[^footnote1]
+$$ \forall u \in \Sigma^\*, S \Rightarrow^\* u \iff \langle q, u, S \rangle \vdash^\* \langle q, \epsilon, \epsilon \rangle $$[^footnote1]
 
 [^footnote1]: It can be proved by induction.
