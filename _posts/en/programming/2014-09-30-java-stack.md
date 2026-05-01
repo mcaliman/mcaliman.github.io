@@ -18,7 +18,7 @@ One of the most recurring basic types is the Stack; a pseudolanguage specificati
 type: Stack
 data: a sequence S of n elements
 operations
-isEmpty() -> result , result=true iff S=O, false otherwise
+isEmpty() -> result , result=true $\iff$ S=O, false otherwise
 push(elem e) adds e as the last element of S
 pop()-> elem , removes the last element from S and returns it
 top()-> elem returns the last element of S (without removing it from S)

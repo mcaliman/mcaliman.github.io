@@ -26,8 +26,8 @@ We can construct the CFG $G = \langle T, N, P, S \rangle$ equivalent to the PDA 
 2. $N = \Gamma$ (*the alphabet of the PDA stack becomes the set of non-terminals of the CFG*).
 3. $S = Z$ (*the initial symbol of the PDA stack becomes the axiom of the grammar*).
 4. A production $p \in P$ is added according to:
-   1. $X \to \sigma \gamma$ iff $\langle q, \gamma \rangle \in \delta(q, \sigma, X)$ 
-   2. $X \to \gamma Z$ iff $\langle q, \gamma \rangle \in \delta(q, \epsilon, X)$
+   1. $X \to \sigma \gamma$ $\iff$ $\langle q, \gamma \rangle \in \delta(q, \sigma, X)$ 
+   2. $X \to \gamma Z$ $\iff$ $\langle q, \gamma \rangle \in \delta(q, \epsilon, X)$
 
 More simply by reviewing all the transitions of the automaton:
 

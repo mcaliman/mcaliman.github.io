@@ -24,7 +24,7 @@ We construct the PDA $M$ equivalent to the CFG $G$ transformed to Greibach norma
 2. $\Sigma = T$
 3. $\Gamma = N$
 4. $Z = S$
-5. $\langle q, \gamma \rangle \in \delta(q, \sigma, X)$ iff $X \to \sigma \gamma$ is a production of $G$
+5. $\langle q, \gamma \rangle \in \delta(q, \sigma, X)$ $\iff$ $X \to \sigma \gamma$ is a production of $G$
 
 In practice, once we have transformed our grammar $G$ into Greibach normal form and called $G' = \langle T, N, P, S \rangle$ the latter, the equivalent stack automaton $M$ is:
 $M = \langle \{q\}, T, N, \delta, q, S \rangle$ 

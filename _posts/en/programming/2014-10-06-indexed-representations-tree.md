@@ -19,7 +19,7 @@ The simplest
 Let `T = (N,A)` be a tree with `n` nodes numbered `0` to `n-1` a parent vector is a vector `P` of size `n` whose cells contain pairs `(info,parent)` for each index `v` belonging to `[0,n-1]`.
 
 `p[v].info` is the information content of the `v` node
-`p[v].parent = u` iff there is an arc `(u,v)` in `A`
+`p[v].parent = u` $\iff$ there is an arc `(u,v)` in `A`
 If instead `v` is the root `p[v].parent=null` using the vector of fathers from each node it is possible to trace back in time `O(1)` to its father while finding a child requires scanning the array in time `O(n)`
 
 Positional vector
