@@ -11,18 +11,18 @@ published: true
 tags: [java, tutorial, it]
 ---
 
-> “Un algoritmo deve essere visto per essere creduto.”
-> – Donald Knuth
+> â€œUn algoritmo deve essere visto per essere creduto.â€
+> â€“ Donald Knuth
 
-In C# l'operatore `??` è chiamato `operatore null-coalescing`. 
+In C# l'operatore `??` Ã¨ chiamato `operatore null-coalescing`. 
 Ecco un esempio di utilizzo:
 
 ```csharp
 string result = leftHand ?? rightHand ;
 ```
 
-Restituisce l'operando di sinistra se non è `null`, altrimenti restituisce l'operando di destra.
-Una possibile alternativa in Java al `??` del C# è l'uso di `?`, l'operatore ternario, come segue:
+Restituisce l'operando di sinistra se non Ã¨ `null`, altrimenti restituisce l'operando di destra.
+Una possibile alternativa in Java al `??` del C# Ã¨ l'uso di `?`, l'operatore ternario, come segue:
 
 ```java
 String result = leftHand != null ? leftHand : rightHand; 

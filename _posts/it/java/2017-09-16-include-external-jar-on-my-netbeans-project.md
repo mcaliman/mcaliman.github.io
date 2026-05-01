@@ -11,9 +11,9 @@ published: true
 tags: [java, tutorial, it]
 ---
 
-> “Misurare il progresso della programmazione in linee di codice è come misurare il progresso della costruzione di un aereo in base al peso.”
+> â€œMisurare il progresso della programmazione in linee di codice Ã¨ come misurare il progresso della costruzione di un aereo in base al peso.â€
 >
-> – Bill Gates
+> â€“ Bill Gates
 
 Un esempio di file build.xml
 
