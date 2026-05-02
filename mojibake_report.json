@@ -1,0 +1,98 @@
+[
+  {
+    "file": "_posts\\en\\programming\\2023-08-08-understanding-domain-specific-languages.md",
+    "line": 28,
+    "issue": "Invalid UTF-8 byte b'\\x92'",
+    "context": "b'[tomassetti.me](https://tomassetti.me) and [strumenta.com](https://strumenta.com). These sites offer'"
+  },
+  {
+    "file": "_posts\\it\\java\\2017-06-01-csharp-null-coalescing-operator-in-java.md",
+    "line": 14,
+    "issue": "Invalid UTF-8 byte b'\\x93'",
+    "context": "b'> \\x93Un algoritmo deve essere visto per essere creduto.\\x94\\r'"
+  },
+  {
+    "file": "_posts\\it\\java\\2017-06-01-csharp-null-coalescing-operator-in-java.md",
+    "line": 15,
+    "issue": "Invalid UTF-8 byte b'\\x96'",
+    "context": "b'> \\x96 Donald Knuth\\r'"
+  },
+  {
+    "file": "_posts\\it\\java\\2017-06-01-csharp-null-coalescing-operator-in-java.md",
+    "line": 17,
+    "issue": "Invalid UTF-8 byte b'\\xe8'",
+    "context": "b\"In C# l'operatore `??` \\xe8 chiamato `operatore null-coalescing`. \\r\""
+  },
+  {
+    "file": "_posts\\it\\java\\2017-06-01-csharp-null-coalescing-operator-in-java.md",
+    "line": 24,
+    "issue": "Invalid UTF-8 byte b'\\xe8'",
+    "context": "b\"Restituisce l'operando di sinistra se non \\xe8 `null`, altrimenti restituisce l'operando di destra.\\r\""
+  },
+  {
+    "file": "_posts\\it\\java\\2017-06-01-csharp-null-coalescing-operator-in-java.md",
+    "line": 25,
+    "issue": "Invalid UTF-8 byte b'\\xe8'",
+    "context": "b\"Una possibile alternativa in Java al `??` del C# \\xe8 l'uso di `?`, l'operatore ternario, come segue:\\r\""
+  },
+  {
+    "file": "_posts\\it\\java\\2017-09-16-include-external-jar-on-my-netbeans-project.md",
+    "line": 14,
+    "issue": "Invalid UTF-8 byte b'\\x93'",
+    "context": "b'> \\x93Misurare il progresso della programmazione in linee di codice \\xe8 come misurare il progresso della '"
+  },
+  {
+    "file": "_posts\\it\\java\\2017-09-16-include-external-jar-on-my-netbeans-project.md",
+    "line": 16,
+    "issue": "Invalid UTF-8 byte b'\\x96'",
+    "context": "b'> \\x96 Bill Gates\\r'"
+  },
+  {
+    "file": ".\\_posts\\en\\programming\\2023-08-08-understanding-domain-specific-languages.md",
+    "line": 28,
+    "issue": "Invalid UTF-8 byte b'\\x92'",
+    "context": "b'[tomassetti.me](https://tomassetti.me) and [strumenta.com](https://strumenta.com). These sites offer'"
+  },
+  {
+    "file": ".\\_posts\\it\\java\\2017-06-01-csharp-null-coalescing-operator-in-java.md",
+    "line": 14,
+    "issue": "Invalid UTF-8 byte b'\\x93'",
+    "context": "b'> \\x93Un algoritmo deve essere visto per essere creduto.\\x94\\r'"
+  },
+  {
+    "file": ".\\_posts\\it\\java\\2017-06-01-csharp-null-coalescing-operator-in-java.md",
+    "line": 15,
+    "issue": "Invalid UTF-8 byte b'\\x96'",
+    "context": "b'> \\x96 Donald Knuth\\r'"
+  },
+  {
+    "file": ".\\_posts\\it\\java\\2017-06-01-csharp-null-coalescing-operator-in-java.md",
+    "line": 17,
+    "issue": "Invalid UTF-8 byte b'\\xe8'",
+    "context": "b\"In C# l'operatore `??` \\xe8 chiamato `operatore null-coalescing`. \\r\""
+  },
+  {
+    "file": ".\\_posts\\it\\java\\2017-06-01-csharp-null-coalescing-operator-in-java.md",
+    "line": 24,
+    "issue": "Invalid UTF-8 byte b'\\xe8'",
+    "context": "b\"Restituisce l'operando di sinistra se non \\xe8 `null`, altrimenti restituisce l'operando di destra.\\r\""
+  },
+  {
+    "file": ".\\_posts\\it\\java\\2017-06-01-csharp-null-coalescing-operator-in-java.md",
+    "line": 25,
+    "issue": "Invalid UTF-8 byte b'\\xe8'",
+    "context": "b\"Una possibile alternativa in Java al `??` del C# \\xe8 l'uso di `?`, l'operatore ternario, come segue:\\r\""
+  },
+  {
+    "file": ".\\_posts\\it\\java\\2017-09-16-include-external-jar-on-my-netbeans-project.md",
+    "line": 14,
+    "issue": "Invalid UTF-8 byte b'\\x93'",
+    "context": "b'> \\x93Misurare il progresso della programmazione in linee di codice \\xe8 come misurare il progresso della '"
+  },
+  {
+    "file": ".\\_posts\\it\\java\\2017-09-16-include-external-jar-on-my-netbeans-project.md",
+    "line": 16,
+    "issue": "Invalid UTF-8 byte b'\\x96'",
+    "context": "b'> \\x96 Bill Gates\\r'"
+  }
+]
