@@ -3,7 +3,7 @@ layout: post
 title: L'evoluzione di Java dal JDK 1.0 al JDK 21
 excerpt: "Un viaggio attraverso le tappe fondamentali che hanno trasformato Java in uno dei linguaggi di programmazione più influenti della storia"
 category: "Java"
-permalink: /it/java/evoluzione-java-jdk1-21/
+permalink: /it/java/jdk-evolution/
 comments: true
 share: false
 modified: 2026-05-01
@@ -141,3 +141,27 @@ tags: [java, it]
 ### Java 21 (2023)
 * **Caratteristica principale:** Nuova release LTS.
 * **Novità:** Thread virtuali definitivi, pattern matching per `switch` definitivo e sequenze di collezione.
+
+---
+
+### Java 22 (2024)
+* **Caratteristica principale:** Gestione della memoria e programmazione avanzata.
+* **Novità:** *Foreign Function & Memory API* (per interagire con codice e memoria fuori dalla JVM in modo sicuro), espressioni e istruzioni prima di `this(...)` (anteprima), e *Stream Gatherers* (anteprima per operazioni complesse sugli stream).
+
+---
+
+### Java 23 (2024)
+* **Caratteristica principale:** Semplificazione della scrittura del codice.
+* **Novità:** Primitive nei pattern matching, `instanceof` e `switch` (terza anteprima), e classi di dichiarazione implicita e metodi principali di istanza (anteprima per rendere il codice iniziale molto più conciso).
+
+---
+
+### Java 24 (2025)
+* **Caratteristica principale:** Modernizzazione del codice e miglioramento delle prestazioni.
+* **Novità:** *Vector API* (ottava incubazione) e consolidamento delle funzionalità introdotte nelle release precedenti, insieme a miglioramenti nelle prestazioni del Garbage Collector G1.
+
+---
+
+### Java 25 (2025)
+* **Caratteristica principale:** Nuova versione LTS (Long-Term Support).
+* **Novità:** Stabilizzazione definitiva di numerose funzionalità sperimentali, miglioramenti di produttività per i thread virtuali e semplificazione della gestione dei moduli.
