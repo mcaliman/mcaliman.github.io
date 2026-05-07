@@ -14,7 +14,7 @@
   margin-bottom: 0.5em;
   font-family: $title-font-family;
   font-weight: $page-title-weight;
-  font-style: italic;
+  font-style: normal;
   letter-spacing: -2px;
 }
 
@@ -72,7 +72,7 @@
   .page-date,
   .read-time {
     font-family: $meta-font-family;
-    font-style: italic;
+    font-style: normal;
     white-space: nowrap;
   }
 
@@ -194,7 +194,7 @@
   padding: 0;
   font-family: $meta-font-family;
   font-size: 0.9rem;
-  font-style: italic;
+  font-style: normal;
 }
 
 /*
