@@ -38,15 +38,15 @@ $h6-min: ($base-font-size / $modular-scale-1) !default;
 $h6-max: ($base-font-size / $modular-scale-2) !default;
 
 /* Font Families */
-$serif-font-family: "Lora", serif !default;
-$sans-serif-font-family: "Source Sans Pro", sans-serif !default;
-$monospace-font-family: Menlo, Consolas, Monaco, "Courier New", Courier, monospace !default;
+$serif-font-family: "Plus Jakarta Sans", "Lora", system-ui, sans-serif !default;
+$sans-serif-font-family: "Inter", "Lora", system-ui, sans-serif !default;
+$monospace-font-family: "JetBrains Mono", Menlo, Consolas, Monaco, "Courier New", monospace !default;
 
 $base-font-family: $sans-serif-font-family !default;
-$headline-font-family: $sans-serif-font-family !default;
+$headline-font-family: $serif-font-family !default;
 $title-font-family: $serif-font-family !default;
-$description-font-family: $serif-font-family !default;
-$meta-font-family: $serif-font-family !default;
+$description-font-family: $sans-serif-font-family !default;
+$meta-font-family: $sans-serif-font-family !default;
 
 $page-title-weight: bold !default;
 $entry-title-weight: bold !default;

@@ -12,7 +12,7 @@ description: "Massimo Caliman's Blog On Computer Science"
 copyright: "Massimo Caliman - All Rights Reserved - Powered by <a href='https://jekyllrb.com' rel='nofollow'>Jekyll</a> & <a href='https://github.com/mmistakes/so-simple-theme' rel='nofollow'>So Simple</a>."
 baseurl: # the subpath of your site, e.g. "/blog"
 url:     # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: /images/logo.jpg 
+logo: /images/logo.jpg
 date_format: "%d/%m/%Y" #"%B %-d, %Y"
 read_time: true 
 words_per_minute: 200 
@@ -21,8 +21,12 @@ mathjax:
   combo:  # "tex-svg" (default), "tex-mml-chtml", etc.: docs.mathjax.org/en/latest/web/components/combined.html
   tags:   # "none", "ams" (default), "all"
 google_fonts:
-  - name: "Lora"
-    weights: "400,400i,500,500i,600,600i,700,700i"
+  - name: "Inter"
+    weights: "300,400,500,600,700"
+  - name: "Plus Jakarta Sans"
+    weights: "400,500,600,700,800"
+  - name: "JetBrains Mono"
+    weights: "400,500,700"
 # G-KNVE7KY3LB  # Google Analytics id, e.g. "UA-NNNNNNNN-N"
 google_analytics: "G-KNVE7KY3LB"
 # Disqus shortname, e.g. "my_disqus_shortname"
