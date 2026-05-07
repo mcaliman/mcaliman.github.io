@@ -8,15 +8,15 @@
 @import "so-simple/notices";
 
 /* Typography Overrides */
-$serif-font-family: "Lora", Georgia, Times, serif !default;
-$sans-serif-font-family: $serif-font-family !default;
-$headline-font-family: $serif-font-family !default;
+$serif-font-family:      "Plus Jakarta Sans", "Lora", system-ui, sans-serif !default;
+$sans-serif-font-family: "Inter", "Lora", system-ui, sans-serif !default;
+$monospace-font-family:  "JetBrains Mono", Menlo, Consolas, monospace !default;
 
-$base-font-family: $serif-font-family !default;
-$headline-font-family: $headline-font-family !default;
-$title-font-family: $headline-font-family !default;
-$description-font-family: $serif-font-family !default;
-$meta-font-family: $serif-font-family !default;
+$base-font-family:        $sans-serif-font-family !default;
+$headline-font-family:    $serif-font-family !default;
+$title-font-family:       $serif-font-family !default;
+$description-font-family: $sans-serif-font-family !default;
+$meta-font-family:        $sans-serif-font-family !default;
 
 /* Colors */
 $base-color: #000 !default;
