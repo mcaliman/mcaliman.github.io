@@ -1,7 +1,7 @@
 ---
 layout: page
 lang: en
-permalink: /privacypolicy/
+permalink: /en/privacy-policy/
 title: Privacy Policy (English)
 date: 2024-07-15
 modified: 2023-07-24
@@ -9,7 +9,7 @@ published: true
 tags: [en]
 ---
 
-*[Italiano]({{ '/privacy-policy-it/' | relative_url }})*
+*[Italiano]({{ '/it/privacy-policy/' | relative_url }})*
 
 Data Collection and Use
 

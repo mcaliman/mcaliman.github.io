@@ -1,14 +1,14 @@
 ---
 layout: page
 lang: it
-permalink: /cookie-policy-it/
+permalink: /it/cookie-policy/
 title: Cookie Policy (Italiano)
 modified: 2023-07-24
 published: true
 tags: [it]
 ---
 
-*[English]({{ '/cookie-policy-en/' | relative_url }})*
+*[English]({{ '/en/cookie-policy/' | relative_url }})*
 
 Questo sito web utilizza i cookie per migliorare l'esperienza dell'utente. Utilizzando questo sito web, l'utente acconsente all'utilizzo dei cookie in conformità con la presente Cookie Policy.
 
