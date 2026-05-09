@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 lang: en
 permalink: /privacypolicy/
@@ -8,6 +8,8 @@ modified: 2023-07-24
 published: true
 tags: [en]
 ---
+
+*[Italiano]({{ '/privacy-policy-it/' | relative_url }})*
 
 Data Collection and Use
 

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 lang: en
 permalink: /cookie-policy-en/
@@ -8,6 +8,8 @@ modified: 2023-07-24
 published: true
 tags: [en]
 ---
+
+*[Italiano]({{ '/cookie-policy-it/' | relative_url }})*
 
 This website uses cookies to improve the user experience. By using this website, the user consents to the use of cookies in accordance with this Cookie Policy.
 

@@ -8,6 +8,8 @@ published: true
 tags: [it]
 ---
 
+*[English]({{ '/cookie-policy-en/' | relative_url }})*
+
 Questo sito web utilizza i cookie per migliorare l'esperienza dell'utente. Utilizzando questo sito web, l'utente acconsente all'utilizzo dei cookie in conformità con la presente Cookie Policy.
 
 Che cosa sono i cookie?
