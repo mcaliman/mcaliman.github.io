@@ -1,7 +1,7 @@
 ---
 layout: page
 lang: it
-permalink: /privacy-policy-it/
+permalink: /it/privacy-policy/
 title: Informativa sulla privacy - Privacy Policy (Italiano)
 modified: 2023-07-24
 published: true
