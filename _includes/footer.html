@@ -1,4 +1,16 @@
+<style>
+  #footer { background-color: #252a34 !important; color: #eaeaea !important; border-top: none !important; }
+  #footer p, #footer span, #footer div { color: #eaeaea !important; }
+  #footer a { color: #89ddff !important; text-decoration: none !important; }
+  #footer a:hover { color: #ffcb6b !important; text-decoration: underline !important; }
+  #footer .social-icon { color: #eaeaea !important; }
+</style>
 <footer id="footer" class="site-footer">
+  <div style="margin-bottom: 2em;">
+    <a href="{{ '/' | relative_url }}">
+      <img src="{{ '/images/TP_trasparent_white.png' | relative_url }}" alt="{{ site.title }} Logo" style="max-width: 150px; height: auto;">
+    </a>
+  </div>
   {% include footer-custom.html %}
 
   {%- if site.footer_links -%}
