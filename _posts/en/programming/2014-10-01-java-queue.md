@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [data-structures, algorithms, en]
+tags: [data-structures, algorithms, en, peer-review-2026-05-10]
 permalink: /programming/queue/
 ---
 Let us return to the discussion of elementary data structures. In previous posts we have looked at indexed structures, linked structures and Stacks, another of the most common basic types is the Queue, a pseudolanguage specification of which is given below.
