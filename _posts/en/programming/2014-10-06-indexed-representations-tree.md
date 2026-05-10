@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [data-structures, algorithms, en]
+tags: [data-structures, algorithms, en, peer-review-2026-05-10-2]
 permalink: /programming/trees-indexed-representations/
 ---
 
@@ -26,7 +26,7 @@ Positional vector
 ===================
 In the special case of complete d-array trees with `d>=2`, an indexed representation is possible where each node has a fixed position.
 
-Let `T=(N,A)` d-ary tree, `n` nodes numerable from `1` to `n`
+Let `T=(N,A)` d-ary tree, `n` nodes numbered from `1` to `n`
 `p` vector of size `n` such that `p[v]` contains the information associated with node `v`, and such that the information associated with the i-th child of `v` is at position `p[d*v+i] `for `i` in `[0,(d-1)]`.
 
 For simplicity the `0` position in the array is not used the space required for `n` nodes is therefore `n+1`

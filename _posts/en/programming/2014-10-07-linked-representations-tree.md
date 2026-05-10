@@ -8,12 +8,12 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [data-structures, algorithms, en]
+tags: [data-structures, algorithms, en, peer-review-2026-05-10-2]
 permalink: /programming/tree-linked-list/
 ---
 Continuing with the discussion of trees, representations based on linked structures are normally preferred 
 
-1. more flexible than idicised ones
+1. more flexible than indexed ones.
 2. more efficient structure modifications
 
 There are three main ones
@@ -21,7 +21,7 @@ There are three main ones
 Pointer to children
 ==================
 If each node has at most d it is possible to keep in each node a pointer to each of the possible children
-In the case from 2 if a child is absent we place the pointer to Null Required space O(n*d) which for d constant is O(n)
+In the case of d>=2, if a child is absent we set the pointer to null. Required space O(n*d), which for constant d is O(n).
 
 Child list
 ===========

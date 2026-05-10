@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [data-structures, algorithms, en]
+tags: [data-structures, algorithms, en, peer-review-2026-05-10-2]
 permalink: /programming/dfs-depth-first-search/
 ---
 
@@ -19,8 +19,8 @@ procedure DFS(node r)
    Stack S
    S.push(r)
    while not S.isEmpty()  do
-      u ? S.pop()
-       if u ? null then
+      u ← S.pop()
+       if u ≠ null then
             visit(u)
             S.push(right_child_of(u))
             S.push(left_child_of(u))
@@ -29,8 +29,8 @@ procedure DFS(node r)
 end 
 ```
 
-in a visit in depth we continue the visit from the last node left over
-since we stack first the right-hand child of each node and then the left-hand child we tend to follow all the left-hand children going deep until the first left-hand leaf is reached in general we will only visit each right-hand subtree in a node when the left-hand subtree has been visited altogether
+In a depth-first visit, we continue the visit from the last node left over.
+Since we stack first the right-hand child of each node and then the left-hand child, we tend to follow all the left-hand children going deep until the first left-hand leaf is reached. In general, we will only visit each right-hand subtree in a node when the left-hand subtree has been visited altogether.
 
 By reversing the order in which we add the children we have the symmetrical variant
 

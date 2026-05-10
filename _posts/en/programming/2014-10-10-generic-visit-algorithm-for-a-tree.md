@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [data-structures, algorithms, en]
+tags: [data-structures, algorithms, en, peer-review-2026-05-10-2]
 permalink: /programming/generic-visit-algorithm-tree/
 ---
 
@@ -18,11 +18,11 @@ The most generic possible visiting procedure can be seen in the pseudocode algor
 
 ```
 proc generic_tree_visit(node r)
-   S ? { r }
-   while S ? Ø do
-       u ? get node from S
+   S ← { r }
+   while S ≠ Ø do
+       u ← get node from S
        visit(u)
-       S ? S ? { children of u}
+       S ← S ∪ { children of u }
    od
 end proc
 ```

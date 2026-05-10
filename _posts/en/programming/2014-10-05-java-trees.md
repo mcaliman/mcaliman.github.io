@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Tree in Java"
 excerpt: "Tree data structures: concepts, terminology and Java implementation"
@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [data-structures, algorithms, en]
+tags: [data-structures, algorithms, en, peer-review-2026-05-10-2]
 ---
 After the posts on elementary data structures, we move on to deal with trees. Before going into the details of how to implement data structures of this type, let us delve into the theoretical aspect.
 
@@ -19,7 +19,7 @@ A (rooted) tree is a pair `T=(N,A)` consisting of a set `N` of nodes and a set `
 There is a rather intuitive nomenclature regarding trees.
 In a tree every node `v` (except the root) has only one parent (or father) `u` `such that `(u,v)` belongs to `A` (the set of arcs)
 
-A node may have `1` or more `v` children `such that `(u,v)` belongs to `A` and their number is called degree
+A node may have `1` or more `v` children such that `(u,v)` belongs to `A` and their number is called degree
 
 With these definitions we have already established some important concepts.
 
@@ -51,7 +51,7 @@ A basic specification of the `Tree` data type must necessarily include operation
    * removeSubtree(Node v) -> `Tree` 
       * detaches and returns the entire subtree rooted in `v`, the operation deletes the `v` node and all its descendants from the tree
 
-A questo punto passare dalla specifica in pseudocodice ad una in linguaggio Java è immediato. 
+At this point, moving from the pseudocode specification to Java is straightforward. 
 
 ```java
 interface Node {
