@@ -2,7 +2,7 @@
 
 This document tracks the massive peer review of 50 posts, broken down into 5 Macro-Blocks of 10 posts each.
 
-## Macro-Block 1 (Posts 1-10) (IN PROGRESS)
+## Macro-Block 1 (Posts 1-10) (DONE)
 
 ### 1. `2014-10-05-java-trees.md`
 - **Grammar & Formatting:**

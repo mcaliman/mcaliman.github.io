@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "The Design Pattern Strategy"
 excerpt: "Minimal example code on the Strategy pattern"
@@ -7,7 +7,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [design-patterns, architecture, en]
+tags: [design-patterns, architecture, en, peer-review-2026-05-10-2]
 ---
 
 The Strategy pattern is one of the patterns I use most frequently. 
