@@ -86,7 +86,7 @@ Ho analizzato i primi 10 post! Ci sono scoperte notevoli: un'intera frase rimast
 - **Action:** Fix translation. Added tag.
 
 
-## Macro-Block 3 (Posts 21-30) (IN PROGRESS)
+## Macro-Block 3 (Posts 21-30) (DONE)
 
 ### 21. `2019-03-03-scala-language.md`
 - **Typos:**
@@ -136,3 +136,53 @@ Ho analizzato i post da 21 a 30! La scoperta più interessante è che i post del
 
 Inoltre, per questo blocco sto usando il tag `peer-review-2026-05-10-3` visto che siamo sul nuovo branch.
 Attendo il tuo OK per applicare queste correzioni!
+
+
+## Macro-Block 4 (Posts 31-40) (IN PROGRESS)
+
+### 31. `2024-04-27-monads-first-definition.md`
+- **Punctuation:**
+  - Manca il punto fermo alla fine della riga 34: "power in functional programming" -> "power in functional programming."
+- **Action:** Fix punctuation. Add tag `peer-review-2026-05-10-3`.
+
+### 32. `2014-09-01-python-how-to-swap-two-variables-at-once.md`
+- **Typos & Syntax:**
+  - "with Pyhton just do" -> "with Python just do".
+  - Alla riga 31 c'è una virgola superflua a fine riga: `x,y = y,x,` -> `x,y = y,x`.
+- **Action:** Fix typo and syntax. Add tag.
+
+### 33. `2019-02-25-python-download-remote-files-1.md`
+- **Typos:**
+  - "matra" alla riga 14 -> "mantra".
+- **Action:** Fix typo. Add tag.
+
+### 34. `2019-03-05-python-download-remote-files-2.md`
+- **Status:** Clean. Added tag.
+
+### 35. `2020-06-14-python-howto-install-linux.md`
+- **Status:** Clean. Added tag.
+
+### 36. `2020-12-19-python-restore-remote-database.md`
+- **Status:** Clean. Added tag.
+
+### 37. `2023-04-24-python-backup-script-1.md`
+- **Status:** Clean. Added tag.
+
+### 38. `2023-04-24-python-backup-script-2.md`
+- **Status:** Clean. Added tag.
+
+### 39. `2016-01-10-r-lang-intro-1.md`
+- **Grammar & Localization:**
+  - Alla riga 86, l'output in un post in inglese è rimasto in italiano: `Errore: oggetto "x" non trovato` -> `Error: object "x" not found`.
+  - Alla riga 105 c'è una frase parzialmente duplicata dalla riga precedente ("and then with `ls()` get the list...").
+- **Action:** Fix output language and remove duplicate sentence. Add tag.
+
+### 40. `2016-01-15-r-lang-flow-control.md`
+- **Status:** Clean. Added tag.
+
+---
+**Note per l'utente:**
+Ho analizzato i post da 31 a 40 (Python script, R language basics, Monads)!
+Ho trovato piccoli refusi ("Pyhton", "matra"), una virgola di troppo nell'assegnamento multiplo in Python (`x,y = y,x,`), e un po' di italiano rimasto in un blocco di output R (`Errore: oggetto "x" non trovato`).
+
+Attendo il tuo OK per applicare queste modifiche!
