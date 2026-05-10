@@ -2,7 +2,8 @@
   <div class="wrap">
     {% if site.logo %}
       <a href="{{ '/' | relative_url }}" class="site-logo" rel="home" title="{{ site.title }}">
-        <img src="{{ site.logo | relative_url }}" class="site-logo-img animated fadeInDown" alt="{{ site.title }}">
+        <img id="site-logo-light" src="{{ '/images/TP_trasparent_black.png' | relative_url }}" class="site-logo-img animated fadeInDown" alt="{{ site.title }}">
+        <img id="site-logo-dark" src="{{ '/images/TP_trasparent_white.png' | relative_url }}" class="site-logo-img animated fadeInDown" alt="{{ site.title }}" style="display: none;">
       </a>
     {% endif %}
     {% assign page_image = page.image.path | default: page.image %}
