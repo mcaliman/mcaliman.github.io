@@ -187,7 +187,7 @@ Ho trovato piccoli refusi ("Pyhton", "matra"), una virgola di troppo nell'assegn
 
 Attendo il tuo OK per applicare queste modifiche!
 
-## Macro-Block 5 (Posts 41-50) (IN PROGRESS)
+## Macro-Block 5 (Posts 41-50) (DONE)
 
 ### 41. `2023-01-01-r-lang-1.md`
 - **Status:** Clean. Added tag.
