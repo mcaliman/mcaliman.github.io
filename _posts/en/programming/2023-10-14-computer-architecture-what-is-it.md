@@ -1,14 +1,14 @@
-﻿---
+---
 layout: post
 title:  "Computer Architecture: what is it?"
 excerpt: "Computer architecture is a branch of computer science that studies the design and implementation of information processing systems"
 category: Programming
-date:   2014-09-23
+date:   2023-10-14
 comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [programming, theory, en]
+tags: [programming, theory, en, peer-review-2026-05-10-3]
 ---
 
 Computer architecture is a branch of computer science that studies the design and implementation of information processing systems. It deals with how the physical components of a computer, such as the processor, memory, and input/output devices, interact with each other to execute programs.

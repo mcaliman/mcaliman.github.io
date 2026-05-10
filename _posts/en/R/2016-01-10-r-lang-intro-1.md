@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "R language introduction"
 excerpt: "A first introduction to the R programming language"
@@ -7,7 +7,7 @@ date:   2016-01-10
 comments: false
 modified: 2024-07-11
 published: true
-tags: [r, data-analysis, en]
+tags: [r, data-analysis, en, peer-review-2026-05-10-3]
 ---
 
 > "When debugging, novices insert corrective code; experts remove defective code."
@@ -83,7 +83,7 @@ in its most basic use:
 ```r
 > rm(x)
 > x
-Errore: oggetto "x" non trovato
+Error: object "x" not found
 ```
 Let's look at some commands that will often come in handy.
 
@@ -102,7 +102,7 @@ f <- function() {
 }
 ```
 The function named f which I have just defined I can call by its name followed by the parentheses f() the returned value is the last one computed, I can save the function definition with the extension .R and reload it with `source("f.R")` and afterwards with `ls()` have the list of functions contained.
-and then with `ls()` get the list of functions contained.
+
 
 Some system files in the R workspace: `.Rhistory` and `.Rdata`.
 The file `.Rhistory` is an ascii file which reports the codes typed at the prompt, without

@@ -9,7 +9,7 @@ comments: false
 share: false
 modified: 2024-07-11
 published: true
-tags: [python, scripting, en]
+tags: [python, scripting, en, peer-review-2026-05-10-3]
 ---
 
 Has it ever occurred to you to write something like this?
@@ -25,10 +25,10 @@ temp = x ;
 x= y;
 y= temp;
 ``` 
-with Pyhton just do 
+with Python just do 
 
 ```python
-x,y = y,x, 
+x,y = y,x 
 ``` 
 
 magic, no? The beauty of tuples.

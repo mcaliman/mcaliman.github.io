@@ -1,14 +1,14 @@
-﻿---
+---
 layout: post
 title:  "Introduction to Machine Learning"
 excerpt: "Machine learning is a powerful technology that allows computers to learn from data without being explicitly programmed. It is used in a wide range of applications, including image recognition, text classification, and event prediction"
 category: Programming
-date:   2014-09-23
+date:   2023-09-23
 comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [ai, machine-learning, en]
+tags: [ai, machine-learning, en, peer-review-2026-05-10-3]
 ---
 
 Machine learning is a branch of artificial intelligence that deals with developing algorithms that can learn from data without being explicitly programmed. In other words, machine learning allows computers to learn from information without being provided with precise instructions.
@@ -40,9 +40,9 @@ Some examples of machine learning applications
 
 Here are some examples of machine learning applications:
 
-* Facial recognition, is used to unlock mobile phones, access computer systems, and identify people in images.
+* Facial recognition, used to unlock mobile phones, access computer systems, and identify people in images.
 * Speech recognition, used to control electronic devices, translate languages and answer questions.
-* Image classification, is used to organize images into categories, such as landscapes, animals, or people.
+* Image classification, used to organize images into categories, such as landscapes, animals, or people.
 * Sales forecasting, used by businesses to forecast demand for products and services.
 * Drone control, used to fly drones safely and efficiently.
 

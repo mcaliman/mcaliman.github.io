@@ -7,7 +7,7 @@ date: 2024-04-27
 comments: false
 modified: 2024-07-11
 published: true
-tags: [programming, theory, en]
+tags: [programming, theory, en, peer-review-2026-05-10-3]
 permalink: /programming/monads-first-definition/
 ---
 In the world of functional programming, monads can be defined as **algebraic structures that encapsulate values and computations, providing a coherent interface for the management of computational contexts**. 
@@ -31,4 +31,4 @@ The monad **Maybe**, used to handle null values, can be defined as:
 * **η(x) = Just x** (converts a normal value to a Maybe value)
 * **μ(f, mx) = bind f mx** (combines a function f with a Maybe value mx)
 
-This formal definition, although it may seem difficult at first sight, provides a solid basis for understanding the inner workings of monads and their power in functional programming
+This formal definition, although it may seem difficult at first sight, provides a solid basis for understanding the inner workings of monads and their power in functional programming.

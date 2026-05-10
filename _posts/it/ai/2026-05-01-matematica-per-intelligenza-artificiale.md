@@ -3,7 +3,7 @@ layout: post
 title: "La Matematica Necessaria per l'Intelligenza Artificiale e gli LLM"
 date: 2026-05-01 12:00:00 +0200
 categories: [it, ai]
-tags: [intelligenza-artificiale, machine-learning, matematica, llm, generativa]
+tags: [intelligenza-artificiale, machine-learning, matematica, llm, generativa, peer-review-2026-05-10-3]
 excerpt: "Quali sono le basi matematiche necessarie per comprendere a fondo l'Intelligenza Artificiale Generativa e i Large Language Models? Una panoramica delle discipline fondamentali."
 ---
 

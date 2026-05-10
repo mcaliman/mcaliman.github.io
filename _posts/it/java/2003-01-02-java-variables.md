@@ -9,7 +9,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial, it]
+tags: [java, tutorial, it, peer-review-2026-05-10-3]
 ---
 
 Diamo prima una definizione di variabile sufficientemente formale per i nostri scopi:
