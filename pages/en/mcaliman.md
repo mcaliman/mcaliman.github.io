@@ -11,10 +11,10 @@ tags: [en]
 
 
 Hello, I'm Massimo Caliman. 
-I'm a software architect & developer with a consolidated experience on Java.
-I'm working as IT specialist since 1995 and since 1998  almost exclusively of Enterprise Java applications. 
-I'm Java Italian Association member since 1999 and co-founder of Java User Group Genova.
-I also have experience in Python and R and others many languages such as C,C++,C#.
+I'm a software architect & developer with a consolidated experience in Java.
+I have been working as an IT specialist since 1995, and since 1998 almost exclusively on Enterprise Java applications. 
+I have been a member of the Italian Java Association since 1999 and a co-founder of the Java User Group Genova.
+I also have experience in Python and R, and many other languages such as C, C++, and C#.
 
 My interests include coding, Computer Science (especially algorithms and software design) and Data Science.  
 I made my passion my work.

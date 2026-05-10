@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "My thoughts on programming languages Part 1"
 excerpt: "Personal reflections on programming languages"
@@ -12,7 +12,7 @@ tags: [computer-science, theory, en]
 ---
 
 Python is a pleasant language to start programming in for several reasons.
-The syntax is essential, clear and has no syntactic frills, whereas Java has a lot of syntactic sugar. 
+The syntax is minimalistic, clear, and has no syntactic frills, whereas Java has a lot of syntactic sugar. 
 
 It is possible to write powerful and interesting programs without a lot of work. However, Python is a dynamic language and has its merits and flaws. One could think of Python as a fairly informal language. Other languages, such as Java, C# and C++ are more formal.
 

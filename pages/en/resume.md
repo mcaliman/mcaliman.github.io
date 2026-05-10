@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 lang: en
 ref: resume
@@ -38,13 +38,13 @@ Application server: Oracle Glassfish, Jakarta Tomcat, IBM WebSphere 3.5
 
 Databases (RDBMS): IBM DB2 UDB/400, Oracle Database 8i, Microsoft SQL Server 7/2000, Oracle MySQL. 
 
-Java technologies,fameworks and libraries: Servlets, JSP, JSF, EJB, JMS, JPA, JDBC,JAXB,JAX-WS, JavaMail API, Jakarta Struts,Apache POI, iText, Hibernate, Eclipse TopLink. JUnit.
+Java technologies, frameworks and libraries: Servlets, JSP, JSF, EJB, JMS, JPA, JDBC, JAXB, JAX-WS, JavaMail API, Jakarta Struts, Apache POI, iText, Hibernate, Eclipse TopLink. JUnit.
 
 Techniques/methodologies: UML, Unified Process, XP, DDD, Agile.
 
 Other slightly dated technologies and languages that I have worked on during my career: XHTML, Apache Torque, Apache Turbine, Apache Jetspeed, Apache Lucene, Microsoft Visual Basic 6.0, UCSD Pascal, Borland Turbo Pascal, Microsoft Active Server Pages.
 
-Operative systems: Linux (Ubuntu),Unix (Solaris),OS/400.
+Operating systems: Linux (Ubuntu), Unix (Solaris), OS/400.
 
 Microprocessors and microcontrollers: Zilog Z80,micro ST6, SPARC processors.
 
@@ -100,8 +100,7 @@ Principal technologies used: Java, AS/400 Toolbox for Java, JSP, Servlet, IBM We
 **Java Developer** - Studio Balbi S.u.r.l (Zucchetti PAC s.r.l)  
 Feb 1999 - Apr 2001   
 Java Developer for Studio Balbi S.u.r.l., Software House and IBM Business Partner in Genoa, projecting and developing Java Applications for HR, mainly attendance and wage packet, focusing on interface to Zucchetti Packages.
-Principal technologies used: Java, AS/400 Toolbox for Java, Servlet, Tomcat, IBM DB2/400, Microsoft Access, Oracle 8i Database.Java Developer for Studio Balbi S.u.r.l., Software House and IBM Business Partner in Genoa, projecting and developing Java Applications for HR, mainly attendance and wage packet, focusing on interface to Zucchetti Packages. Principal technologies used: Java, AS/400 Toolbox for Java, Servlet, Tomcat, IBM DB2/400, Microsoft Access, Oracle 8i Database.
-C/C++,Pascal Software Developer 
+Principal technologies used: Java, AS/400 Toolbox for Java, Servlet, Tomcat, IBM DB2/400, Microsoft Access, Oracle 8i Database.
 
 **C/C++,Pascal Software Developer** - Freelance Software Developer   
 May 1997 - Aug 1998  
@@ -138,15 +137,15 @@ Powered by Google Developers Groups Genova (GDG Genova) Meetup 2013 Genova conve
 
 **Google App Engine Overview**    
 Google Developer Group Genova · 4 Oct 2013  
-Seminar Presentd about Google App Engine, organized by the Google Developer Group Genova  
+Seminar Presented about Google App Engine, organized by the Google Developer Group Genova  
 
 **Java PDF generation with iText**     
 Jan 2009 - Jan 2009     
-My talk Presentd about Java PDF generation with iText at Department of Computer and Information Science of Genoa organized by the Java User Group Genova.    
+My talk Presented about Java PDF generation with iText at Department of Computer and Information Science of Genoa organized by the Java User Group Genova.    
 
 **Java Base – package I/O e NET**   
 May 2003 - May 2003  
-"Java Base - package I/O e NET" My talk Presentd at Webbit Conference in Padova (Italy), organized by the Java Italian Association. 
+"Java Base - package I/O e NET" My talk Presented at Webbit Conference in Padova (Italy), organized by the Java Italian Association. 
 
 ## Certification/Courses
 

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Java Dictionaries"
 excerpt: "The Java implementation of Dictionaries"
@@ -142,7 +142,7 @@ returns a `Set` with the map keys (useful for iterating with `Iterator`).
 ```java
 V put(K key, V value)
 ```
-associa il valore specificato alla chiave passata.
+associates the specified value with the specified key.
 
 ```java
 void putAll(Map<? extends K,? extends V> m)

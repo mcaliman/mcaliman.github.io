@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "My thoughts on programming languages Part 4"
 excerpt: "Personal reflections on programming languages"
@@ -22,6 +22,5 @@ Python is also widely used in science, I recommend a few books on the subject:
 Because it's widespread, clean and completely OOP despite Edsger Dijkstra's thought "Object-oriented programming is an exceptionally bad idea which could only have originated in California." 
 
 # Why learn C++? 
-C++ is the prince of languages, you can use it to make anything. The Operating Systems, compilers, interpreters and Virtual Machines we use to run our code are written in C or C++.
-you can use it to accomplish anything. Operating Systems the compilers, interpreters and Virtual Machines we use to run our code are written in C or C++.
+C++ is the prince of languages; you can use it to build almost anything. The Operating Systems, compilers, interpreters, and Virtual Machines we use to run our code are primarily written in C or C++.
 
