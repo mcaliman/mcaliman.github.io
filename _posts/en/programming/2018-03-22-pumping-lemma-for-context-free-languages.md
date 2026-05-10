@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2026-04-27
 published: true
-tags: [computer-science, theory, en, Updated]
+tags: [computer-science, theory, en, Updated, peer-review-2026-05-10-2]
 permalink: /programming/pumping-lemma-context-free-languages/
 ---
 

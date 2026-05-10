@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [computer-science, theory, en, Updated]
+tags: [computer-science, theory, en, Updated, peer-review-2026-05-10-2]
 permalink: /programming/turing-machine/
 ---
   
@@ -45,7 +45,7 @@ Let $\alpha, \beta \in \Gamma^\*$ and $x, y, z \in \Gamma$ we have:
 * $q X \beta \vdash\_M q' B Y \beta$                 if $\delta(q, X) = \langle q', Y, L \rangle$
 
 The Reachability Relationship $\vdash\_M^\*$ between configurations is defined as the reflexive and transitive closure of the relationship $\vdash\_M$.
-i.e. $\rho \vdash\_M^\* \rho'$ $\iff$ there is a sequence $\rho\_0, \dots, \rho\_n$ with $n \ge 0$ tale che:
+i.e. $\rho \vdash\_M^\* \rho'$ $\iff$ there is a sequence $\rho\_0, \dots, \rho\_n$ with $n \ge 0$ such that:
 $\rho\_i \vdash\_M \rho\_{i-1}$ for $i \in [1, n-1]$, $\rho\_0 = \rho, \rho\_n = \rho'$
 
 # Language accepted by a TM

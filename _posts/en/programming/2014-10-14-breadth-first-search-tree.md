@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [data-structures, algorithms, en]
+tags: [data-structures, algorithms, en, peer-review-2026-05-10-2]
 permalink: /programming/bfs-breadth-first-search/
 ---
   
@@ -24,9 +24,12 @@ algorithm BFS(node r)
    Queue C
    C.enqueue(r)
    while not C.isEmpty() do 
-       u ? C.dequeue()
-       if u ? null then
-           visit(u)
-           C.enqueue(leftChildOf(u))
-           C.enqueue(rightChildOf(u))  
+          u ← C.dequeue()
+          if u ≠ null then
+              visit(u)
+              C.enqueue(leftChildOf(u))
+              C.enqueue(rightChildOf(u))
+          fi
+      od
+end
 ```
