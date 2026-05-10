@@ -11,7 +11,7 @@ published: true
 tags: [data-structures, algorithms, en]
 permalink: /programming/queue/
 ---
-Let us return to the discussion of elementary data structures. In previous posts we have looked at indexed structures, linked structures and Stacks or Stacks, another of the most common basic types is the Queue or Queue, a pseudolanguage specification of which is given below.
+Let us return to the discussion of elementary data structures. In previous posts we have looked at indexed structures, linked structures and Stacks, another of the most common basic types is the Queue, a pseudolanguage specification of which is given below.
 ```
 type Queue
 data
@@ -25,7 +25,7 @@ first()->elem, returns the first element of S (without removing it from S)
 A natural Java implementation of the specification is provided by an interface like the following one
 
 ```java
-public interface Coda<E> {
+public interface Queue<E> {
     public boolean isEmpty();
     public void enqueue(E e);
     public E dequeue();

@@ -13,7 +13,7 @@ permalink: /programming/structures-indexed-depth/
 ---
 
 Let's pick up the post on indexed structures for a closer look.
-We have seen that the **Java Collection Framework** already provides us with practically any structure we may need for our work. Have you ever been curious to see how these structures are implemented? The source code is public, you can download it along with the JDK with every release, you'll notice that there is often nothing science fiction about the implementation of structures like `ArratList`, for example, the implementation spec seen in pseudocode in the post on indexed structures before this one doesn't differ much in substance. What makes the difference are the optimisations.
+We have seen that the **Java Collection Framework** already provides us with practically any structure we may need for our work. Have you ever been curious to see how these structures are implemented? The source code is public, you can download it along with the JDK with every release, you'll notice that there is often nothing science fiction about the implementation of structures like `ArrayList`, for example, the implementation spec seen in pseudocode in the post on indexed structures before this one doesn't differ much in substance. What makes the difference are the optimisations.
 
 Let us go into detail about the pseudocode of the class ArrayOrdered, and see how to develop some real implementation ideas in Java.
 We will do this without the illusion of realising something better than the Sun/Oracle implementation is intended.

@@ -25,8 +25,8 @@ weak property: the addresses of records in a linked structure are not necessaril
 To delete records if I do not already have an address, however, I must perform a search.
 
 A specification for this type of structure is given below
-class` LinkedList `implements` Dictionary
-`data`: S(n) = ThetaGrande (n)
+class LinkedList implements Dictionary
+`data`: S(n) = Theta(n)
 A collection of `n` records each containing a quadruple `(elem, key,next, prev)`
 `next` and `prev` pointers to the next and previous `records` in the collection. 
 
@@ -49,7 +49,7 @@ else
    list.next<-p
 ```
 Since this is a doubly linked structure (`doubly linked list`), certain limiting cases must be taken into account during implementation, such as deletion of the only element in the list, etc.
-``bash
+```bash
 delete(key k) T(n)=O(n)
 1. find the record p with key k as in the search
 2. perform
@@ -84,7 +84,7 @@ public class Tuple<K,V> {
 ```
 
 We come to our ``Record`` class
-``java
+```java
 public class Record {
     public Integer key;
     public String value;
@@ -94,7 +94,7 @@ public class Record {
 ```
 
 We could have already adopted a generic version such as
-``java
+```java
 public class RecordGen<K,V> {
     public K key;
     public V value;
