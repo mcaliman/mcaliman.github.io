@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Java Dictionaries"
 excerpt: "The Java implementation of Dictionaries"
@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [programming, theory, en]
+tags: [programming, theory, en, peer-review-2026-05-10]
 ---
 
 In older releases of the Java language, the dictionary data type was realised from the `Dictionary<K,V>` class of the `java.util` package. 
@@ -142,7 +142,7 @@ returns a `Set` with the map keys (useful for iterating with `Iterator`).
 ```java
 V put(K key, V value)
 ```
-associa il valore specificato alla chiave passata.
+associates the specified value with the specified key.
 
 ```java
 void putAll(Map<? extends K,? extends V> m)

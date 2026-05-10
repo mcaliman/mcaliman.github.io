@@ -8,11 +8,11 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [programming, theory, en]
+tags: [programming, theory, en, peer-review-2026-05-10]
 permalink: /programming/considerations-recursion/
 ---
 
-In programming languages, the repetition of commands or statements is achieved by loops, usually realised with constructs such as `for`, `foreach` and `white`. For particular problems, recursion is a valid alternative, more elegant, natural and simple to implement.
+In programming languages, the repetition of commands or statements is achieved by loops, usually realised with constructs such as `for`, `foreach` and `while`. For particular problems, recursion is a valid alternative, more elegant, natural and simple to implement.
 We have recursion when a function (in Java a method) calls itself.
 A classical example of recursion is the factorial function: given a number n we denote by `n!` the result of the product of all the integers from `1` to `n`, by convention the factorial of `0`, i.e. the `0!` is equal to `1`.
 

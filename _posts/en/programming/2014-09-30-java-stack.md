@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [data-structures, algorithms, en]
+tags: [data-structures, algorithms, en, peer-review-2026-05-10]
 permalink: /programming/stack/
 ---
 
@@ -18,7 +18,7 @@ One of the most recurring basic types is the Stack; a pseudolanguage specificati
 type: Stack
 data: a sequence S of n elements
 operations
-isEmpty() -> result , result=true $\iff$ S=O, false otherwise
+isEmpty() -> result , result=true $\iff$ S=\emptyset, false otherwise
 push(elem e) adds e as the last element of S
 pop()-> elem , removes the last element from S and returns it
 top()-> elem returns the last element of S (without removing it from S)
@@ -48,7 +48,7 @@ Deque defines methods for making both a Stack and a Queue, I refer you to the ja
 * For `peek()` or `top()` instead `peekFirst()`.
 
 `Deque<E>` implements the `Queueue<E>` interface, an interface also implemented by the classes
-`AbstractQueue`, `ArrayBlockingQueue`, `ArrayDeque`, `ConcurrentLinkedDeque`, `ConcurrentLinkedQue`, `DelayQue`, `LinkedBlockingDeque`, `LinkedBlockingQue`, `LinkedList`, `LinkedTransferQue`, `PriorityBlockingQue`, `PriorityQue`, `SynchronousQue`.
+`AbstractQueue`, `ArrayBlockingQueue`, `ArrayDeque`, `ConcurrentLinkedDeque`, `ConcurrentLinkedQueue`, `DelayQueue`, `LinkedBlockingDeque`, `LinkedBlockingQueue`, `LinkedList`, `LinkedTransferQueue`, `PriorityBlockingQueue`, `PriorityQueue`, `SynchronousQueue`.
 
 The easiest way is to use the old `Stack` class from `java.util`, but you won't get much benefit from it; it is derived from the `Vector` class and has been available since version 1.0 of the JDK
 

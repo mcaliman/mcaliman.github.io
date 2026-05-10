@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [programming, theory, en]
+tags: [programming, theory, en, peer-review-2026-05-10]
 permalink: /programming/indexed-structures/
 ---
 Indexed structures are collections of numbered cells that may contain elements of a predetermined type. We will assume that in an array of size h the indices can range from 0 to h-1 or 1 to h.
@@ -21,7 +21,7 @@ weak property: no new cells can be added to an array.
 A possible implementation of an ordered array is shown below (and is an implementation of the dictionary data type)
 
 class: ArrayOrdered implements Dictionary
-data: an array S of size n containing n pairs (elem,key) S(n) = Tetagrande(n)
+data: an array S of size n containing n pairs (elem,key) S(n) = Theta(n)
 
 In practice, we do not use index i (numeric) as the key but as the cell in which to store the pair (e,k)
 
@@ -30,8 +30,8 @@ Let us now look at commonly defined operations on a dictionary
 insert(elem e,key k) T(n) = O(n)
 
 1. Reallocates S by increasing the size n by 1 (i.e. |S| = |S| + 1 and n = n+1)
-2. Search for t.c. k<=S[i].key (it is ordered!)
-3. Place S[j]<-S[j-1] for every j in [n-1,i+1] and place S[i]<-(e,k)
+2. Search s.t. k<=S[i].key (it is ordered!)
+3. Set S[j]<-S[j-1] for every j in [n-1,i+1] and place S[i]<-(e,k)
 
 In practice, knowing that it is sorted, we simply reallocate the array by one cell, moving the contents of cells i to n to the new positions i+1 to n+1.
 
@@ -39,9 +39,9 @@ Having identified the position to be occupied by the pair (e,k) to be inserted, 
 
 delete(key k) T(n)=O(n)
 
-1. I find the index i of the pair with key k in S i.e. I find t.c. S[i] = (e,k) where k is the given one. In other words I find S[i].key=k
-2. Pose S[j]<-S[j+1] for each j, j in i,...,n-2
-3. Reallocates S by decreasing the size by 1 (I have removed an element and can delete the last cell after I have shifted the elements
+1. I find the index i of the pair with key k in S i.e. I find s.t. S[i] = (e,k) where k is the given one. In other words I find S[i].key=k
+2. Set S[j]<-S[j+1] for each j, j in i,...,n-2
+3. Reallocates S by decreasing the size by 1 (I have removed an element and can delete the last cell after I have shifted the elements)
 
 search(key k) -> elem T(n) = O(log n)
 
