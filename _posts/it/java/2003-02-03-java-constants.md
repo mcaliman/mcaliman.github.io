@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Costanti in Java"
 excerpt: "Costanti simboliche in Java"
@@ -9,7 +9,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial, it]
+tags: [java, tutorial, it, peer-review-2026-05-10-3]
 ---
 
 Una variabile che non cambia mai valore è una costante. In Java, puoi dichiarare esplicitamente una variabile come costante usando la parola chiave `final`. 

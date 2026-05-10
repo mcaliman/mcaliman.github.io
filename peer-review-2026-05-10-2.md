@@ -138,7 +138,7 @@ Inoltre, per questo blocco sto usando il tag `peer-review-2026-05-10-3` visto ch
 Attendo il tuo OK per applicare queste correzioni!
 
 
-## Macro-Block 4 (Posts 31-40) (IN PROGRESS)
+## Macro-Block 4 (Posts 31-40) (DONE)
 
 ### 31. `2024-04-27-monads-first-definition.md`
 - **Punctuation:**
@@ -186,3 +186,43 @@ Ho analizzato i post da 31 a 40 (Python script, R language basics, Monads)!
 Ho trovato piccoli refusi ("Pyhton", "matra"), una virgola di troppo nell'assegnamento multiplo in Python (`x,y = y,x,`), e un po' di italiano rimasto in un blocco di output R (`Errore: oggetto "x" non trovato`).
 
 Attendo il tuo OK per applicare queste modifiche!
+
+## Macro-Block 5 (Posts 41-50) (IN PROGRESS)
+
+### 41. `2023-01-01-r-lang-1.md`
+- **Status:** Clean. Added tag.
+
+### 42. `2026-05-01-matematica-per-intelligenza-artificiale.md`
+- **Status:** Clean. Added tag.
+
+### 43. `2003-01-01-java-essential-features.md`
+- **Status:** Clean. Added tag.
+
+### 44. `2003-01-02-java-variables.md`
+- **Status:** Clean. Added tag.
+
+### 45. `2003-02-03-java-constants.md`
+- **Status:** Clean. Added tag.
+
+### 46. `2003-03-01-java-array.md`
+- **Status:** Clean. Added tag.
+
+### 47. `2003-03-02-java-introducing-oop.md`
+- **Status:** Clean. Added tag.
+
+### 48. `2017-06-01-csharp-null-coalescing-operator-in-java.md`
+- **Status:** Clean. Added tag.
+
+### 49. `2017-08-15-wsimport-webservice-dot-net-2-0.md`
+- **Status:** Clean. Added tag.
+
+### 50. `2017-09-16-include-external-jar-on-my-netbeans-project.md`
+- **Status:** Clean. Added tag.
+
+---
+**Note per l'utente:**
+Ho analizzato gli ultimi 10 post (da 41 a 50)! Questo blocco era molto pulito (molti post storici su Java e alcuni più recenti su R e AI). Non ci sono correzioni sostanziali da fare al testo, ma andrà aggiunto a tutti il tag `peer-review-2026-05-10-3`.
+
+Con questi, siamo a **40 file già revisionati e committati**, e questi ultimi 10 completeranno il target di 50 file!
+
+Attendo il tuo OK per applicare questi ultimi tag e chiudere il ciclo!

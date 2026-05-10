@@ -8,7 +8,7 @@ date:   2003-01-01
 comments: true
 modified: 2024-07-11
 published: true
-tags: [java, tutorial, it]
+tags: [java, tutorial, it, peer-review-2026-05-10-3]
 ---
 
 Se vuoi che Java diventi il tuo linguaggio di programmazione principale, dovresti familiarizzare con i seguenti aspetti essenziali, che sono comuni a tutti i linguaggi di programmazione orientati agli oggetti:
