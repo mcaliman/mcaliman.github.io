@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: "Passing Parameters to Methods/Functions/Procedure in Programming Languages"
+title: "Passing Parameters to Methods/Functions/Procedures in Programming Languages"
 excerpt: "Parameter passing strategies in programming: by value, by reference and beyond"
 category: Programming
 date:   2023-08-13
@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [computer-science, theory, en]
+tags: [computer-science, theory, en, peer-review-2026-05-10-3]
 ---
 
 In a programming language, parameters are variables that are used to pass information into or out of a method (or a function or procedure). There are 2 main ways to pass parameters: **by value** and **by reference**.
@@ -17,7 +17,7 @@ In a programming language, parameters are variables that are used to pass inform
 
 When a parameter is passed by value, the value of the parameter is copied into the method. If the value of the parameter is changed in the method, the change will not be reflected in the value of the original parameter.
 
-For istance, the following pseudocode passes an integer by value to a method:
+For instance, the following pseudocode passes an integer by value to a method:
 
 ```
 proc foo(by val number)

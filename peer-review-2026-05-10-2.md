@@ -84,3 +84,55 @@ Ho analizzato i primi 10 post! Ci sono scoperte notevoli: un'intera frase rimast
 - **Grammar:**
   - Residuo italiano alla riga 48: "tale che:" -> "such that:".
 - **Action:** Fix translation. Added tag.
+
+
+## Macro-Block 3 (Posts 21-30) (IN PROGRESS)
+
+### 21. `2019-03-03-scala-language.md`
+- **Typos:**
+  - "programmes" (UK) preferibile "programs" (US) per uniformità.
+- **Action:** Fix typo. Add tag `peer-review-2026-05-10-3`.
+
+### 22. `2023-05-15-explore-world-artificial-intelligence.md`
+- **Markdown:**
+  - I link nel testo non usano la sintassi corretta (es. `Resumai [https://www.resumai.com/]`).
+- **Action:** Convert to proper Markdown links `[Resumai](https://www.resumai.com/)`. Add tag.
+
+### 23. `2023-05-20-cobol-overview.md`
+- **Status:** Clean. Added tag.
+
+### 24. `2023-08-08-understanding-domain-specific-languages.md`
+- **Status:** Clean. Added tag.
+
+### 25. `2023-08-11-what-is-an-expert-system.md`
+- **Status:** Clean. Added tag.
+
+### 26. `2023-08-11-what-is-an-inference-engine.md`
+- **Status:** Clean. Added tag.
+
+### 27. `2023-08-13-passing-parameters-in-programming-languages.md`
+- **Typos:**
+  - "Procedure" nel titolo dovrebbe essere plurale ("Procedures").
+  - "For istance" alla riga 20 -> "For instance".
+- **Action:** Fix typos. Add tag.
+
+### 28. `2023-08-14-prolog-expert-system.md`
+- **Status:** Clean. Added tag.
+
+### 29. `2023-09-23-introduction-machine-learning.md`
+- **Metadata & Grammar:**
+  - La `date:` nel Front Matter è "2014-09-23" ma il file è del 2023! Errore di copia-incolla.
+  - Incongruenza nella lista ("Facial recognition, is used to..." vs "Speech recognition, used to...").
+- **Action:** Fix date to `2023-09-23` and standardize the list. Add tag.
+
+### 30. `2023-10-14-computer-architecture-what-is-it.md`
+- **Metadata:**
+  - Anche qui la `date:` nel Front Matter è sbagliata ("2014-09-23") anziché "2023-10-14".
+- **Action:** Fix date. Add tag.
+
+---
+**Note per l'utente:**
+Ho analizzato i post da 21 a 30! La scoperta più interessante è che i post del 2023 sul Machine Learning e sull'Architettura avevano la data sbagliata nel Front Matter (erano rimasti al 2014 per via di qualche copia-incolla). C'erano anche dei link Markdown rotti nel post sui tool di AI.
+
+Inoltre, per questo blocco sto usando il tag `peer-review-2026-05-10-3` visto che siamo sul nuovo branch.
+Attendo il tuo OK per applicare queste correzioni!
