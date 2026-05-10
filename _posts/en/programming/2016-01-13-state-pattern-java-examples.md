@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Design Patterns State"
 excerpt: "Features and sample Java code reduced to the essentials"
@@ -7,7 +7,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [design-patterns, architecture, en]
+tags: [design-patterns, architecture, en, peer-review-2026-05-10-2]
 ---
 
 You can find an example project on github at this address:
@@ -22,7 +22,7 @@ It is used when an object must change its behaviour (at **run-time**) according 
 
 Avoid using **if-else** conditional block sequences ( [AntiIF Campaign](http://antiifcampaign.com/) )
 
-It provides a systematic and **lose-coupled** way to achieve this.
+It provides a systematic and **loosely-coupled** way to achieve this.
 
 It consists of a `State` interface, a concrete class `Context` and one or more concrete classes implementing 
 the `State` interface.
@@ -49,7 +49,7 @@ The solution that adopts the State design pattern is one that implements as many
 as there are states.
 
 ```java
-public class DarftState implements State {
+public class DraftState implements State {
    
    @Override
    public void execute() {        
@@ -85,11 +85,11 @@ Finally, an example of use that changes the state of our object three times.
 
 ```java
 Context context = new Context();
-State darftState = new DarftState();
+State draftState = new DraftState();
 State publishState = new PublishState();
 State deletedState = new DeletedState();
 
-context.setState(darftState);
+context.setState(draftState);
 context.execute();
 
 context.setState(publishState);

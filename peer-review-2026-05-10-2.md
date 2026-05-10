@@ -61,4 +61,26 @@ This document tracks the massive peer review of 50 posts, broken down into 5 Mac
 **Note per l'utente:**
 Ho analizzato i primi 10 post! Ci sono scoperte notevoli: un'intera frase rimasta in italiano, caratteri speciali "rotti" (`?` al posto delle freccine negli algoritmi in pseudocodice), e persino un pattern "Responsibilityeton" nato da un mix fortuito tra "Chain of Responsibility" e "Singleton" durante un copia-incolla.
 
-Attendo il tuo OK per applicare queste 10 correzioni.
+
+## Macro-Block 2 (Posts 11-20) (DONE)
+
+### 11. `2016-01-03-visitor-pattern-java-examples.md`
+- **Status:** Clean. Added tag.
+
+### 12. `2016-01-13-state-pattern-java-examples.md`
+- **Typos:**
+  - "lose-coupled" alla riga 25 -> "loosely-coupled".
+  - Il nome della classe `DraftState` è scritto ovunque come `DarftState` (e la variabile come `darftState`).
+- **Action:** Fix "lose-coupled" and "DarftState". Added tag.
+
+### 13-18. Various Theoretical Posts (2018)
+- **Status:** Clean. Added tags.
+
+### 19. `2018-04-02-from-cfg-to-pda.md`
+- **Formatting:** Spaziature anomale a inizio riga 17.
+- **Action:** Fix spaces. Added tag.
+
+### 20. `2018-04-07-turing-machine.md`
+- **Grammar:**
+  - Residuo italiano alla riga 48: "tale che:" -> "such that:".
+- **Action:** Fix translation. Added tag.
