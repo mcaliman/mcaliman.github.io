@@ -10,7 +10,7 @@ comments: false
 share: false
 modified: 2024-07-11
 published: true
-tags: [programming, theory, en, peer-review-2026-05-10-3]
+tags: [programming, theory, en]
 ---
 
 > Computers are good at following instructions, but not at reading your mind.

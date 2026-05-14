@@ -7,7 +7,7 @@ date: 2023-05-15
 comments: true
 modified: 2024-07-11
 published: true
-tags: [ai, machine-learning, en, peer-review-2026-05-10-3]
+tags: [ai, machine-learning, en]
 ---
   
 > If you think your users are idiots, only idiots will use it.

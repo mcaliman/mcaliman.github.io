@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [ai, machine-learning, en, peer-review-2026-05-10-3]
+tags: [ai, machine-learning, en]
 ---
 
 Machine learning is a branch of artificial intelligence that deals with developing algorithms that can learn from data without being explicitly programmed. In other words, machine learning allows computers to learn from information without being provided with precise instructions.

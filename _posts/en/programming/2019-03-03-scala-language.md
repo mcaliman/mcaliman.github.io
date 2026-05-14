@@ -7,7 +7,7 @@ permalink: /programming/programming-language-scala/
 comments: false
 modified: 2024-07-11
 published: true
-tags: [computer-science, theory, en, peer-review-2026-05-10-3]
+tags: [computer-science, theory, en]
 ---
 
 [Scala](https://www.scala-lang.org/) is a programming language that has both object-oriented and functional characteristics. Scala is statically typed, with an advanced type system that is more powerful than that of other languages such as Java and C#. 
