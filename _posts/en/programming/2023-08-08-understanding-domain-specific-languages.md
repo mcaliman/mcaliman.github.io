@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [computer-science, theory, en, peer-review-2026-05-10-3]
+tags: [computer-science, theory, en]
 ---
 
 > Simplicity is the ultimate sophistication.  

@@ -9,7 +9,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial, it, peer-review-2026-05-10-3]
+tags: [java, tutorial, it]
 ---
 
 Una variabile che non cambia mai valore è una costante. In Java, puoi dichiarare esplicitamente una variabile come costante usando la parola chiave `final`. 
@@ -25,6 +25,6 @@ In questo caso `M` viene definita una costante e non una variabile.
 
 Le costanti sono utili per creare applicazioni più flessibili e manutenibili. Aiutano a prevenire gli errori quando un valore numerico o di altro tipo deve essere usato in più punti all'interno del codice.
 
-Così come accade similmente in tutti i linguaggi di programmazione, le parole chiave in Java non possono essere usate come nomi di variabili o costanti, perciò parole come `final`, `int` e come vedremo `while`, `do` e altre non possono essere usate come nomi di variabili o costanti. 
+Come accade in tutti i linguaggi di programmazione, le parole chiave in Java non possono essere usate come identificatori. Perciò, termini come `final`, `int` e, come vedremo in seguito, `while`, `do` e altri, sono riservati.
 
 Vedremo in post futuri che posso usare `final` anche in altri contesti.

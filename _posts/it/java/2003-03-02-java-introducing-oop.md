@@ -9,7 +9,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial, it, peer-review-2026-05-10-3]
+tags: [java, tutorial, it]
 --- 
 
 > Qualsiasi sciocco può scrivere codice che un computer può capire. I bravi programmatori scrivono codice che gli esseri umani possono capire.

@@ -9,7 +9,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial, it, peer-review-2026-05-10-3]
+tags: [java, tutorial, it]
 ---
 
 Diamo prima una definizione di variabile sufficientemente formale per i nostri scopi:
@@ -30,8 +30,8 @@ Prima che una variabile possa essere utilizzata, deve essere dichiarata; la dich
 T var;
 ```
 
-dove `T` è il tipo, per esempio **int** , double e altri.
-Si possono avere come tipi, tipi di base che non sono oggetti, o oggetti ( `T` diventa il nome di una classe). 
+Dove `T` è il tipo, per esempio **int**, double e altri.
+Si possono avere come tipi, tipi di base che non sono oggetti, o oggetti (`T` diventa il nome di una classe). 
 Di seguito alcuni esempi di dichiarazioni di variabili:
 
 ```java
@@ -54,7 +54,7 @@ int z ;
 ```
 
 x 0 y 2 z -
-dove - indica che z è stata dichiarata ma non inizializzata, cioè non le è stato assegnato alcun valore.
+Dove `-` indica che z è stata dichiarata ma non inizializzata, cioè non le è stato assegnato alcun valore.
 
 Diamo ora una definizione di un comando di assegnazione sufficientemente formale per i nostri scopi.
 
@@ -77,12 +77,12 @@ per determinare l'ordine in cui gli operandi sono valutati.
 x = 12;
 ```
 
-assegna alla variabile x il valore 12;
+Assegna alla variabile x il valore 12;
 
 ```java
 y = (x+1)/2;
 ```
-un esempio di espressione.
+Un esempio di espressione.
 
 Abbiamo parlato finora dei tipi di variabili senza darne una definizione formale, corriamo ai ripari:
 
@@ -124,7 +124,7 @@ Come già accennato nel caso di un'assegnazione del tipo
 T var = expr 
 ```
 
-abbiamo detto che expr deve avere tipo compatibile con T (non necessariamente lo stesso). È utile a questo punto dare la definizione di promotion e casting per i tipi che definiscono casi in cui il tipo di var ed expr possono non coincidere ma essere comunque corretti e applicabili.
+Abbiamo detto che `expr` deve avere tipo compatibile con `T` (non necessariamente lo stesso). È utile a questo punto dare la definizione di *promotion* e *casting* per i tipi che definiscono casi in cui il tipo di `var` ed `expr` possono non coincidere ma essere comunque corretti e applicabili.
 
 Definizione
 Se sia il tipo della variabile sia il tipo di expr rappresentano dati numerici e il tipo di expr è un sottoinsieme 
@@ -150,4 +150,4 @@ int i;
 byte j; 
 j = (byte) i;
 ```
-corretto solo se il valore di i è minore o uguale al valore massimo disponibile per un byte.
+Corretto solo se il valore di i è minore o uguale al valore massimo disponibile per un byte.
