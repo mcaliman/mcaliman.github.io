@@ -6,7 +6,7 @@ category: Programming
 comments: true
 modified: 2024-07-11
 published: true
-tags: [design-patterns, architecture, en, peer-review-2026-05-10-2]
+tags: [design-patterns, architecture, en]
 permalink: /programming/design-pattern-visitor/
 ---
 
