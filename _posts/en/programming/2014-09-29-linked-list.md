@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [data-structures, algorithms, en]
+tags: [data-structures, algorithms, en, code]
 permalink: /programming/linked-list/
 ---
   
@@ -34,7 +34,7 @@ We also keep a list pointer containing the address of a `record` if the collecti
 
 operation:
 
-```bash
+```
 insert(elem e,key k) T(n)=O(1)
 1.a record p is created with element e, key k
 2.if list=null then
@@ -49,7 +49,7 @@ else
    list.next<-p
 ```
 Since this is a doubly linked structure (`doubly linked list`), certain limiting cases must be taken into account during implementation, such as deletion of the only element in the list, etc.
-```bash
+```
 delete(key k) T(n)=O(n)
 1. find the record p with key k as in the search
 2. perform
@@ -58,7 +58,7 @@ delete(key k) T(n)=O(n)
 3.destroy the record p
 ```
 
-```bash
+```
 search(key k) -> elem T(n)=O(n)
 if list = null then return null
 else 

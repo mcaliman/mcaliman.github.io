@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, oop, en]
+tags: [java, oop, en, code]
 takeaways:
   - "**Immutable objects** cannot change their state after being initialized, making them inherently thread-safe."
   - "**Design strategies**: Use `final` for the class and its fields, and avoid providing setters."

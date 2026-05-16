@@ -10,7 +10,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial, en]
+tags: [java, tutorial, en, code]
 ---
 
 Arrays are available in most programming languages because they realise 

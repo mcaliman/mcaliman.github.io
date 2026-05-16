@@ -8,7 +8,7 @@ share: false
 date: 2014-01-12
 modified: 2024-07-11
 published: true
-tags: [linux, sysadmin, en]
+tags: [linux, sysadmin, en, code]
 permalink: /linux/ssh-log-without-typing/
 ---
 

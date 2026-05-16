@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [mysql, database, en]
+tags: [mysql, database, en, code]
 ---
 Well, you probably have different collations in some mysql views, try to force collation like this 
 ```sql  

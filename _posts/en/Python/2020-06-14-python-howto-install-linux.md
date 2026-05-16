@@ -8,7 +8,7 @@ comments: false
 share: false
 modified: 2024-07-11
 published: true
-tags: [python, scripting, en]
+tags: [python, scripting, en, code]
 ---
 
 Open terminal via Ctrl+Alt+T. When it opens, run command:

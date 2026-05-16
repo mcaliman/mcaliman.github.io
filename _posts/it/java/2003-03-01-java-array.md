@@ -10,7 +10,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial, it]
+tags: [java, tutorial, it, code]
 ---
 
 Gli array sono disponibili nella maggior parte dei linguaggi di programmazione perché realizzano 

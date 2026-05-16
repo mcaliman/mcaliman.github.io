@@ -8,7 +8,7 @@ share: false
 date: 2015-05-01
 modified: 2024-07-11
 published: true
-tags: [linux, debian, en]
+tags: [linux, debian, en, code]
 permalink: /linux/enable-sudo-command-debian/
 ---
 

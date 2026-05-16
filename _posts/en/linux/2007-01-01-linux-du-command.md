@@ -8,7 +8,7 @@ share: false
 date: 2007-01-01
 modified: 2024-07-11
 published: true
-tags: [linux, sysadmin, en]
+tags: [linux, sysadmin, en, code]
 ---
 
 The `du` command shows the disk space used.

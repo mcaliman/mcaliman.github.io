@@ -7,7 +7,7 @@ date:   2016-01-20
 comments: false
 modified: 2024-07-11
 published: true
-tags: [r, data-analysis, en]
+tags: [r, data-analysis, en, code]
 permalink: /r/functions-r/
 ---
 

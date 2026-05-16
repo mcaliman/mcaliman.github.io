@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, security, en]
+tags: [java, security, en, code]
 permalink: /java/secure-httpbase-tomcat-authentication/
 ---
 

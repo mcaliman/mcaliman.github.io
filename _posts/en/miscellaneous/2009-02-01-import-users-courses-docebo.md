@@ -8,7 +8,7 @@ share: false
 date: 2009-01-01
 modified: 2024-07-11
 published: true
-tags: [docebo, lms, en]
+tags: [docebo, lms, en, code]
 permalink: /miscellaneous/importing-users-courses-io/
 ---
 

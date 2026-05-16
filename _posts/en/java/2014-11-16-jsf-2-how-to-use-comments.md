@@ -8,7 +8,7 @@ comments: false
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, jsf, en]
+tags: [java, jsf, en, code]
 permalink: /java/jsf-2-use-comments/
 ---
 

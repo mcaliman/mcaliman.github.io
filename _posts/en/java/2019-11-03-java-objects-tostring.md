@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, oop, en]
+tags: [java, oop, en, code]
 ---
 
 If you have 'stuff' like this in your code 
