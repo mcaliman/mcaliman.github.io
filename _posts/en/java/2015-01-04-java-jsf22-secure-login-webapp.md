@@ -11,39 +11,37 @@ published: true
 tags: [java, jsf, en, code]
 permalink: /java/secure-logins-pages-jsf/
 ---
-In this post we see how to implement a minimal login system with basic security in a Java Server Faces 2.2 application.
+In this post, we will see how to implement a minimal login system with basic security in a Java Server Faces 2.2 application.
 
-First we open NetBeans 8, then create an application of type `WebApplication` and specify `JSF 2.2` as the framework.
-To create a project of type `WebApplication` we select from the menu `File`->`New Project`, then `Java Web` -> `WebApplication`
-and finally `Next >`.
+First, we open NetBeans 8, then create a `WebApplication` project and specify `JSF 2.2` as the framework.
+To create a `WebApplication` project, select from the menu `File` -> `New Project`, then `Java Web` -> `WebApplication` and finally `Next >`.
 
-We will call our application JSFSecureLoginWebApplication for simplicity's sake
+We will call our application JSFSecureLoginWebApplication for simplicity's sake.
 
-we specify the various steps as below
+The various steps are specified below:
 
 ![](/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot02.png "JSF22SecureLoginWebappScreenshot02")
 
-set the name
+Set the name:
 
 ![](/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot03.png "JSF22SecureLoginWebappScreenshot03")
 
-Application Server Settings
+Application Server Settings:
 
 ![](/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot04.png "JSF22SecureLoginWebappScreenshot04")
 
-the framework JSF 2.2
+Select the JSF 2.2 framework:
 
 ![](/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot05.png "JSF22SecureLoginWebappScreenshot05")
 
-The url Pattern and the language used for JSF pages
+The URL pattern and the language used for JSF pages:
 
 ![](/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot06.png "JSF22SecureLoginWebappScreenshot06")
-We do not select anything for components
+We do not select anything for components:
 ![](/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot07.png "JSF22SecureLoginWebappScreenshot07")
 
-At this point we need to create two `JavaBean` and a `Filter` which will be used to manage access to pages we define as 
-secure. The pages secured by the `Filter` will be in the path/directory `/pages`.
-We will call the two beans `LoginBean` and `NavigationBean`, the function of the `LoginBean` is to manage access, the function of the `NavigationBean` is navigation.
+At this point we need to create two JavaBeans and a `Filter` which will be used to manage access to pages we define as secure. The pages secured by the `Filter` will be in the directory `/pages`.
+We will call the two beans `LoginBean` and `NavigationBean`. The function of the `LoginBean` is to manage access, while the function of the `NavigationBean` is to handle navigation.
 ```java
 package org.caliman.jsfsecurewebapp.login;
 
@@ -125,7 +123,7 @@ public class LoginBean implements Serializable {
 
 ```
 
-The code of `NavigationBean` is shown below
+The code for `NavigationBean` is shown below:
 
 ```java
 package org.caliman.jsfsecurewebapp.login;
@@ -160,13 +158,13 @@ public class NavigationBean implements Serializable {
 }
 
 ```
-Both beans are annotated as `@ManagedBean` and `@SessionScoped` in that they must have session scope and be manageable in our pages with their properties and methods (which carry out the actions to associate with the buttons or links).
+Both beans are annotated with `@ManagedBean` and `@SessionScoped` because they require session scope to be accessible in our pages via their properties and methods (which handle the actions associated with buttons or links).
 
-A separate discussion deserves `LoginFilter`, it's a `Filter` so it's basically a `Servlet`, and as such it will behave in a way that allows us to check the path called and discriminate between accessible pages or resources in relation to whether or not one is accredited to the system. 
+`LoginFilter` deserves a separate discussion. It is a `Filter`, which is basically a `Servlet`; as such, it allows us to check the requested path and discriminate between accessible pages or resources based on whether the user is authenticated.
 
-Accreditation is obviously linked to the correctness of the `username` and `password` given by the user. The example is deliberately simple, there is no logic of checking a database or other persistent or remote source for the `username` and `password`. For teaching purposes, we are content to check from code whether the `username` and `password` match one prefixed in the code. It is my intention to elaborate on this in a future post. The idea will allow me to show a simple table system to handle the username/password match with `JPA` and manage a simple role system. 
+Authentication is obviously linked to the correctness of the `username` and `password` provided by the user. The example is deliberately simple; there is no database or remote source check. For teaching purposes, we will simply check if the `username` and `password` match hard-coded values. I intend to elaborate on this in a future post, showing a system to handle authentication with `JPA` and a simple role system.
 
-Let's come to the filter code
+Here is the filter code:
 ```java
 package org.caliman.jsfsecurewebapp.login;
 
@@ -223,13 +221,13 @@ public class LoginFilter implements Filter {
 
 }
 ```
-At this point we create our JSF login page and our application index page, which can only be accessed if accredited
+At this point, we create our JSF login page and our application index page, which can only be accessed if the user is authenticated.
 
-From the NetBeans menu we create a page for the login as below, the same operation we will then do for the creation of the `index.xhtml` page which will be in the path secured by Filter.
+From the NetBeans menu, we create a login page as shown below. We will follow the same steps to create the `index.xhtml` page in the directory secured by the filter.
 
 ![](/images/post/JSF22SecureLoginWebapp/JSF22SecureLoginWebappScreenshot10.png "JSF22SecureLoginWebappScreenshot10")
 
-The code for the `login.xhtml` is below, and is obviously reduced to the bone. Only what we need, we can then use the template portals to realise our complete application is obviously responsive.
+The code for `login.xhtml` is shown below; it is a minimal implementation. Only what is essential is included; we can then use templates to make the application responsive.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -251,7 +249,7 @@ The code for the `login.xhtml` is below, and is obviously reduced to the bone. O
 </html>
 ```
 
-And finally the one for the `index.xhtml` page.
+Finally, the code for the `index.xhtml` page:
 
 ```xml
 <?xml version='1.0' encoding='UTF-8' ?>
@@ -270,7 +268,7 @@ And finally the one for the `index.xhtml` page.
 </html>
 ```
 
-The code of our `web.xml` is as follows
+The `web.xml` code is as follows:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

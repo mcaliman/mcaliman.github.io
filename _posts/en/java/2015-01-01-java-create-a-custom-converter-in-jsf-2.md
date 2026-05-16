@@ -12,10 +12,8 @@ tags: [java, jsf, en, code]
 permalink: /java/creating-custom-converter-jsf/
 ---
 
-If the property of the bean we want to display is of type boolean what we will get in the page are the strings `true` and `false`, to 
-replace the representation with something more user-oriented we need to render the values true and false with Yes or No, 
-True and False, Active or Disabled, and so on. To do this we need to create a `Converter` and associate it with our `outputText` element.
-The example code below creates a simple `Converter` to render Boolean values with the strings Yes, No.
+If a bean property is of type `boolean`, the page will display the strings `true` and `false`. To replace the representation with something more user-oriented, we need to render the values `true` and `false` with Yes and No, True and False, Active or Disabled, and so on. To do this, we need to create a `Converter` and associate it with our `outputText` element.
+The example code below creates a simple `Converter` to render Boolean values with the strings Yes and No:
 
 ```java
 import javax.faces.component.UIComponent;
@@ -56,7 +54,7 @@ public class BooleanToYesNoConverter implements Converter {
 
 ```
 
-The code in the xhtml file for our Java Server Faces is simply the one below
+The code in the JSF XHTML file is shown below:
 
 ```xml
 <h:form>
@@ -64,7 +62,7 @@ The code in the xhtml file for our Java Server Faces is simply the one below
 </h:form>
 ```
 
-If I do not need the fine control level of a converter, I can solve this with a ternary operator and the use of EL.
+If I do not need the fine control level of a converter, I can solve this using a ternary operator and EL:
 
 ```xml
 <h:form>
