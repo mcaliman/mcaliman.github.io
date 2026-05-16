@@ -10,7 +10,7 @@ published: true
 tags: [java, oop, it, code]
 ---
 
-In Java calcolare la differenza in anni, mesi e giorni richiede alcune righe di codice; con Java 8 è possibile farlo senza librerie esterne e con una sola istruzione.
+In Java, calcolare la differenza in anni, mesi e giorni richiede alcune righe di codice; con Java 8 è possibile farlo senza librerie esterne e con una sola istruzione.
 
 ```java
 //Due date, differenza in giorni, mesi e anni usando java.time.temporal.ChronoUnit e java.time.LocalDate

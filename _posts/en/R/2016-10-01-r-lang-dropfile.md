@@ -11,7 +11,7 @@ published: true
 tags: [r, data-analysis, en, code]
 ---
 
-The script in question is nothing special but shows the convenience of using R when it comes to manipulating data and creating scripts or prototypes. Download the two droptime files from the nic and check whether it contains the domain we are interested in.
+The script in question is straightforward but demonstrates the convenience of using R when it comes to manipulating data and creating scripts or prototypes. It downloads the two droptime files from the NIC and checks whether they contain the domain of interest.
 The updated script is available on github [https://github.com/mcaliman/R-utilities](https://github.com/mcaliman/R-utilities)
 
 ```r
@@ -35,4 +35,4 @@ if (is.element(domain_to_find, droptime_file2)){
 	print('present in droptime file!');
 }
 ```
-We can customise it by emailing instead of printing and then scheduling everything with cron.
+We can customize it by emailing instead of printing and then scheduling everything with cron.
