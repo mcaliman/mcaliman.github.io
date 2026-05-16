@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Chain Of Responsibility design pattern"
+title: "The Chain of Responsibility design pattern"
 excerpt: "Minimal CoR pattern example code"
 category: Programming
 comments: true
@@ -10,6 +10,6 @@ published: true
 tags: [design-patterns, architecture, en]
 ---
 
-You can find an example project on github at this address:
+You can find an example project on GitHub at this address:
 [**https://github.com/mcaliman/JavaPatternsCollection**](https://github.com/mcaliman/JavaPatternsCollection)
 

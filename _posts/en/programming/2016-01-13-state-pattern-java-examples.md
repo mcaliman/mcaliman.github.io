@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Design Patterns State"
+title: "The State Design Pattern"
 excerpt: "Features and sample Java code reduced to the essentials"
 category: Programming
 comments: true
@@ -15,10 +15,10 @@ You can find an example project on github at this address:
 
 Some information on this pattern.
 
-It is a behavioural design pattern (Behavioural patterns provide solutions to the most common 
-types of interaction between objects)
+It is a behavioral design pattern (behavioral patterns provide solutions to the most common 
+types of interaction between objects).
 
-It is used when an object must change its behaviour (at **run-time**) according to its internal state.
+It is used when an object must change its behavior (at **run-time**) according to its internal state.
 
 Avoid using **if-else** conditional block sequences ( [AntiIF Campaign](http://antiifcampaign.com/) )
 
@@ -29,12 +29,11 @@ the `State` interface.
 
 * `Context` defines the client class interface and holds a reference to a `ConcreteState`.
 * `State` defines the interface implemented by `ConcreteState`.
-* `ConcreteState` classes encapsulate the logic of the behaviour associated with a given state.
+* `ConcreteState` classes encapsulate the logic of the behavior associated with a given state.
 
-Let's see how it works with a brief example on github
-and the code of which I give in this post. 
+Let's see how it works with a brief example on GitHub, the code for which I provide in this post. 
 
-First we define the interface, it only needs to have an execute method.
+First, we define the interface; it only needs to have an `execute` method.
 
 ```java
 public interface State {
@@ -98,7 +97,7 @@ context.execute();
 context.setState(deletedState);
 context.execute();
 ```
-If a new behaviour or state is to be added, we must design a 
+If a new behavior or state is to be added, we must design a 
 new class that implements `State`.
 
 What disadvantages can there be in adopting this pattern? 
