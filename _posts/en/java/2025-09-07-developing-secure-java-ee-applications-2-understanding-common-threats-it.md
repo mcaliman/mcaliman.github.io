@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Sviluppo di applicazioni Java EE sicure 2"
 excerpt: "Dalle minacce alle migliori pratiche Parte 2"
@@ -46,10 +46,7 @@ HttpServletRequest.changeSessionId() (Servlet 3.1+)]
 
 ### 2.3 Cross-Site Scripting (XSS) ecc…
 * XSS riflesso, memorizzato e basato su DOM. Come influiscono sulle applicazioni web EE
-* Gli attacchi Cross-Site Scripting (XSS) sfruttano le vulnerabilità delle applicazioni web iniettando
-Gli attacchi Cross-Site Scripting (XSS) sfruttano le vulnerabilità delle applicazioni web iniettando
-script dannosi nelle pagine visualizzate da altri utenti, compromettendo la loro esperienza e potenzialmente
-mettendo a rischio i loro dati.
+* Gli attacchi Cross-Site Scripting (XSS) sfruttano le vulnerabilità delle applicazioni web iniettando script dannosi nelle pagine visualizzate da altri utenti, compromettendo la loro esperienza e potenzialmente mettendo a rischio i loro dati.
     * L'XSS riflesso si verifica quando un aggressore utilizza un link o un modulo dannoso per iniettare uno script, che
 viene poi riflesso sul browser della vittima.
 * L'XSS memorizzato si verifica quando un aggressore inietta uno script dannoso nel database dell'applicazione,
@@ -132,10 +129,7 @@ costruiscono oggetti progettati per attivare azioni dannose.
 
 Contromisure e best practice
 * Evitare la deserializzazione di dati non attendibili
-* L'approccio più sicuro. Se possibile, utilizzare formati di dati alternativi come JSON o XML con schemi definiti con cura
-e utilizzare librerie di analisi specifiche (ad esempio Gson, Jackson, JAXB) per controllare
-gli schemi definiti e utilizzare librerie di analisi specifiche (ad esempio Gson, Jackson, JAXB) per controllare
-la costruzione degli oggetti.
+* L'approccio più sicuro. Se possibile, utilizzare formati di dati alternativi come JSON o XML con schemi definiti con cura e utilizzare librerie di analisi specifiche (ad esempio Gson, Jackson, JAXB) per controllare la costruzione degli oggetti.
 * Utilizzare whitelist, non blacklist
         * Se la deserializzazione è inevitabile, definire e applicare con attenzione quali classi possono
 essere deserializzate. Non cercare mai di bloccare classi notoriamente dannose; si troveranno sempre nuovi exploit.
@@ -146,7 +140,6 @@ quelle con funzionalità di whitelist integrate). Ricercare le migliori pratiche
 * A partire da Java 9 (e con backport ad alcune versioni di Java 8), utilizzare il meccanismo del filtro seriale
 per controllare quali classi possono essere deserializzate. Si tratta di una difesa cruciale, ma
 richiede un'attenta configurazione.
-byte[]
 
 ```java
 byte[] serializedData = getUntrustedData(); // From network, file, etc.

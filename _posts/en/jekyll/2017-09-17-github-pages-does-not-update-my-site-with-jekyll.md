@@ -1,6 +1,6 @@
-﻿--- 
+--- 
 layout: post
-title: Github pages does not update my site with jekyll.
+title: GitHub Pages does not update my site with Jekyll.
 excerpt: Joys and sorrows of maintaining your own site with Jekyll.
 category: Jekyll
 comments: true
@@ -15,9 +15,9 @@ tags: [jekyll, blog, en]
 >
 > – Alan Perlis
 
-If Github thinks your posts are 'in the future' it won't create them, the solution to our headache is rather trivial, tell jekyll (and thus Github) to do it anyway, regardless of our timezone.
+If GitHub thinks your posts are 'in the future' it won't create them; the solution to our headache is rather trivial: tell Jekyll (and thus GitHub) to do it anyway, regardless of our timezone.
 
-We add
+Add:
 
 `future: true`
 

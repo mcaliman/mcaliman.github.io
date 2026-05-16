@@ -1,4 +1,4 @@
-﻿--- 
+--- 
 layout: post
 title: "C# null-coalescing operator in Java"
 excerpt: "Implementing the C# null-coalescing operator pattern in Java"
@@ -15,7 +15,7 @@ tags: [java, tutorial, en, code]
 > – Donald Knuth
 
 In C# the `??` operator is called the `null-coalescing operator`. 
-Here's an example of use:
+Here's an example of use in C#:
 
 ```csharp
 string result = leftHand ?? rightHand ;
@@ -28,7 +28,7 @@ A possible alternative in Java to C#'s `??` is using `?`, the ternary operator, 
 String result = leftHand != null ? leftHand : rightHand; 
 ```
 
-Or, by using a method like this:
+Or, by using a method like this (before Java 8 or without Optional):
 
 ```java
 String nullCoalescingOperator(String leftHand, String rightHand) {

@@ -16,7 +16,7 @@ takeaways:
   - "**Immutability** simplifies concurrency by eliminating the need for complex synchronization."
 ---
 
-Immutable objects are instances whose state does not change after they have been initialised. For example `String` is an immutable class, and once instantiated with its value it no longer changes.
+Immutable objects are instances whose state does not change after they have been initialized. For example `String` is an immutable class, and once instantiated with its value it no longer changes.
 
 
 ```java
@@ -31,15 +31,15 @@ public final class Immutable {
 }
 ```
 What are the advantages of immutability?
-Mainly those related to concurrency, in fact it is difficult to guarantee correctness in objects that may change, several threads may attempt to change the state of the same object, leading some threads to see different states depending on the instant they access it, both reading and writing of course.
+Mainly those related to concurrency; in fact, it is difficult to guarantee correctness in objects that may change. Several threads may attempt to change the state of the same object, leading some threads to see different states depending on the instant they access it—for both reading and writing, of course.
 
-# Some simple strategies for creating immutable objects
+## Some simple strategies for creating immutable objects
 
 * No setters and getters
-* All final fields and private
-* Do not allow subclasses to override methods (class final)
-* If instance fields include references to mutable objects do not allow those objects to be mutated
-* Do not share references to mutable objects !
+* All fields `final` and `private`
+* Do not allow subclasses to override methods (class `final`)
+* If instance fields include references to mutable objects, do not allow those objects to be mutated
+* Do not share references to mutable objects!
 * Do not provide methods that change the state of the object
 
 ```java
@@ -70,9 +70,9 @@ Mainly those related to concurrency, in fact it is difficult to guarantee correc
     }
 ```
 
-# Defensive copying
+## Defensive copying
 
-  Most classes are mutable, so how do we approach the problem? By creating a wrapper around the class and using e.g. the clone() method
+Most classes are mutable, so how do we approach the problem? By creating a wrapper around the class and using, for example, the `clone()` method:
   
 ```java
       public class Wrapper {
@@ -83,7 +83,7 @@ Mainly those related to concurrency, in fact it is difficult to guarantee correc
             this.mutable = mutable.clone();
         }
     
-       //If the caller modifies the object returned by getMutable() this has no effect on the object referred to in Wrapper
+       //If the caller modifies the object returned by getMutable(), this has no effect on the object referred to in Wrapper
         public Mutable getMutable() {
             return mutable.clone();
         }
@@ -91,7 +91,7 @@ Mainly those related to concurrency, in fact it is difficult to guarantee correc
 ```
 Obviously the original type of the `Mutable` object is different from `Wrapper`, so you can't simply replace one with the other within existing code without making changes.
 
-# Difference between an immutable class and an immutable object.
+## Difference between an immutable class and an immutable object
 
 An immutable class generates immutable objects by definition (by its design) whereas an immutable object is not necessarily instantiated by a class that is also immutable.
 
@@ -133,7 +133,7 @@ or
     }
 ```
     
-the standard recipe for an immutable object is in short as follows 
+The standard recipe for an immutable object is, in short, as follows:
 
 1. all properties must be set in the constructor or in a static init method (see create above)
 2. No setters, if needed for some reason they should raise an exception
@@ -141,4 +141,4 @@ the standard recipe for an immutable object is in short as follows
 4. final class 
 5. If you refer to mutable objects: use deep copy to pass values to the constructor and to read them through getter methods
 
-the instance is in this way naturally thread safe, which mind you does not mean that the object is nullable itself or any of its properties.
+The instance is in this way naturally thread-safe, which, mind you, does not mean that the object itself is nullable, nor are any of its properties.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Developing Secure Java EE Applications 1"
 excerpt: "From Threats To Best Practices Part 1"
@@ -44,8 +44,8 @@ tags: [java, security, en]
     * Attackers focus on where they find the most vulnerabilities
 * Common Attack Vectors
 * Code Vulnerabilities
-    * SQL Injection, XSS, Broken Authentication, etc
-* Misconfigurations:
+    * SQL Injection, XSS, Broken Authentication, etc.
+* Misconfigurations
     * Servers, Frameworks, Libraries
 * Components with Known Vulnerabilities
     * Third-party dependencies
@@ -56,20 +56,15 @@ tags: [java, security, en]
 * Power & Complexity
     * The chosen platform for mission-critical enterprise applications
 * Architecture
-    * Distributed Components (EJBs, Servlets, JPA, JMS, JAX-RS, etc.).
+    * Distributed components (EJBs, servlets, JPA, JMS, JAX-RS, etc.).
 * Unique Security Challenges
     * Inherent Complexity
         * Many components must be securely configured and interact
 * Legacy Applications
     * Older applications with outdated security practices
 * Delegating to the Container (But Not Too Much!)
-    * The Java EE container offers us exceptional 'out-of-the-box' security features:
-authentication, role-based authorization, and session management. But it's essential to
-understand that the container is only one part of the solution. If our application code is
-vulnerable (e.g., SQL Injection, XSS), the container cannot work miracles. Application code
-security is our primary responsibility.
-* Security:
-    * A Shared Responsibility Starts with Developers
+    * The Java EE container offers us exceptional 'out-of-the-box' security features: Authentication, role-based authorization, and session management. But it's essential to understand that the container is only one part of the solution. If our application code is vulnerable (e.g., SQL Injection, XSS), the container cannot work miracles. Application code security is our primary responsibility.
+* Security: A Shared Responsibility Starts with Developers
 
 ### 6. The “Plan”
 * Developing Secure Java EE Applications - (1)

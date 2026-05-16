@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Are constructors inheritable?" 
 excerpt: "Are constructors inheritable? Can a subclass call the constructor of the parent class?"
@@ -9,12 +9,12 @@ modified: 2024-07-11
 published: true
 tags: [java, tutorial, en, code]
 ---
-One of the questions that may occur to you at an interview or certification or a simple test concerning the Java language is the following:
+One of the questions that may occur to you at an interview, certification, or a simple test concerning the Java language is the following:
 Are constructors inheritable? 
 Can a subclass call the constructor of the parent class?
 
 We cannot inherit a constructor. What we can do is create an instance of a subclass using a constructor of the superclass.
-Try compiling and executing this code
+Try compiling and executing this code:
 
 ```java
 public class SuperClass {
@@ -47,9 +47,7 @@ SubClass()
 SuperClass.method1()
 ```
 
-The constructor of the superclass was implicitly called before that of the subclass. However, the constructor is not inherited, it has only been called; if it were inherited, I could change its behaviour by overriding it, and this would destroy the encapsulation capability of the language.
-In other words, you cannot make the call to the parent constructor not be made.
-Modify the code like this
+You will get the following output:
 
 ```java
 
@@ -84,7 +82,7 @@ SubClass(boolean)
 SuperClass.method1()
 ```
 
-The code you have just seen is equivalent to this
+You will get the following output:
 
 ```java
 public class SubClass extends SuperClass {
@@ -112,7 +110,7 @@ which produces the same output. It doesn't matter whether or not you insert the 
 
 The existence of `super()` is justified by the fact that your superclass may have multiple constructors, and using `super()` is the only way to enforce which of them will be called.
 
-Modify the code like this
+Modify the code as follows:
 
 ```java
 public class SuperClass {
@@ -150,7 +148,7 @@ public class SubClass extends SuperClass {
     }
 }
 ```
-if you run the `main` method of `SubClass` you will get this output
+if you run the `main` method of `SubClass` you will get this output:
 
 ```java
 SuperClass()
@@ -163,4 +161,4 @@ SuperClass.method1()
 
 `super()` allows me to control which superclass constructor to call at runtime.
 
-And that's it for today, too. As usual if you have a question about this post, want a more in-depth discussion, or have a topic you'd like me to cover in future posts you can write to me.
+And that's it for today. As usual, if you have questions or a topic you would like me to cover, feel free to write to me.

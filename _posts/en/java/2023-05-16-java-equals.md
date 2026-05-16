@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "The equals() method of the Object class in Java"
 excerpt: "Learn how the equals method works and how to use it correctly"
@@ -11,9 +11,7 @@ published: true
 tags: [java, oop, en, code]
 ---
 The equals method is a fundamental method of the Object class in Java. This method allows you to compare two objects to determine if they are equal.
-To use the equals method correctly, it is important to follow some rules. First, the equals method must be appropriately overridden in subclasses. Additionally, the `equals` method must be reflexive, symmetric, transitive and consistent.
-
-The `equals` method must be reflexive, symmetric, transitive and consistent. These properties are called equivalence properties and are important to ensure that the `equals` method works correctly.
+To use the equals method correctly, it is important to follow some rules. First, the equals method must be appropriately overridden in subclasses. Additionally, the `equals` method must be reflexive, symmetric, transitive, and consistent. These properties are called equivalence properties and are important to ensure that the `equals` method works correctly:
 
 - Reflexivity: for any non-null object `x`, `x.equals(x)` must return `true`.
 - Symmetry: for any pair of non-null objects `x` and `y`, `x.equals(y)` must return `true` if and only if `y.equals(x)` returns `true`.
@@ -51,6 +49,6 @@ public class Human {
 ```
 
 In this example, we have overridden the `equals` method in the Human class to compare two Human objects based on their `firstName`, `lastName`, and `passportNumber` attributes.
-Always remember to use the equals method correctly when working with objects in Java!
+Always remember to use the equals method correctly when working with objects in Java.
 
  

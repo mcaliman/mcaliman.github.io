@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "The toString method of the Object class in Java"
 excerpt: "Learn how the toString method works and how to use it correctly"
@@ -44,4 +44,4 @@ public class Human {
 
 In this example, we have overridden the `toString` method in the `Human` class to return a textual representation of a `Human` object that includes its `firstName`, `lastName`, and `passportNumber` attributes.
 
-Always remember to override the `toString` method, it costs little and can help you with debugging and logging!
+Always remember to override the `toString` method; it costs little and can help you with debugging and logging!
