@@ -12,16 +12,16 @@ permalink: /programming/monads-first-definition/
 ---
 In the world of functional programming, monads can be defined as **algebraic structures that encapsulate values and computations, providing a coherent interface for the management of computational contexts**. 
 
-This definition, although more formal, maintains the essence of the monad concept as a container for values and behaviour. 
+This definition, although more formal, maintains the essence of the monad concept as a container for values and behavior. 
 
 To highlight the structural and algebraic aspect of monads, we can use the following formulation:
 
-* **A monad M is a triplet (T, η, μ) where:**
+* **A monad M is a triple (T, η, μ) where:**
     * **T** is a functor
     * **η** is a natural isomorphism between the functor unit T and the empty object
     * **μ** is a bind operation
 
-In some other fashion, the triplet (T, η, μ) defines the rules for the manipulation of values within the monad, ensuring consistent and uniform behaviour.
+In some other fashion, the triple (T, η, μ) defines the rules for the manipulation of values within the monad, ensuring consistent and uniform behavior.
 
 **Example:**
 

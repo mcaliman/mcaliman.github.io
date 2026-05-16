@@ -13,7 +13,7 @@ tags: [computer-science, theory, en, code]
 
 In a programming language, parameters are variables that are used to pass information into or out of a method (or a function or procedure). There are 2 main ways to pass parameters: **by value** and **by reference**.
 
-# Pass by value
+# Passing by Value
 
 When a parameter is passed by value, the value of the parameter is copied into the method. If the value of the parameter is changed in the method, the change will not be reflected in the value of the original parameter.
 
@@ -26,11 +26,11 @@ endproc
 
 number = 5
 foo(number)
-print(number) # the output is 5
+print(number) // The output is 5
 ```
 In the above pseudocode, the `foo()` method is called with the value `5` as an argument. The value `5` is copied into the `number` variable inside the method. The `number` variable is then set to the value `10`. However, the change in the value of `number` is not reflected in the value of the original `number`. When the `foo()` method terminates, the value of `number` is still `5`.
 
-# Pass by reference
+# Passing by Reference
 
 When a parameter is passed by reference, the reference to the parameter is copied into the method. If the value of the parameter is changed in the method, the change will be reflected in the value of the original parameter.
 

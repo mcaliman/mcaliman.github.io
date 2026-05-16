@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Computer Architecture: what is it?"
+title:  "Computer Architecture: What Is It?"
 excerpt: "Computer architecture is a branch of computer science that studies the design and implementation of information processing systems"
 category: Programming
 date:   2023-10-14
@@ -31,7 +31,7 @@ To learn more about computer architecture, you can study some of the famous text
 * Computer Architecture: A Modern Approach by William Stallings
 * Computer Architecture: A Structured Approach by Andrew S. Tanenbaum and Todd Austin
 
-Andrew S. Tanenbaum's book, "Computer Architecture: A Structured Approach," is considered to be a classic in the field of computer architecture. It is a comprehensive and well-written introduction to the topic that is suitable for students at all levels.
+Andrew S. Tanenbaum's book, "Computer Architecture: A Structured Approach," is considered a classic in the field of computer architecture. It is a comprehensive and well-written introduction to the topic that is suitable for students at all levels.
 
 The book covers all of the main topics in computer architecture, including processor architecture, memory architecture, input/output device architecture, and distributed system architecture. It also provides a solid foundation in the underlying principles of computer architecture, such as digital logic, computer arithmetic, and operating systems.
 

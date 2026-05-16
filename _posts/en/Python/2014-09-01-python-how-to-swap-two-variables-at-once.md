@@ -14,18 +14,18 @@ tags: [python, scripting, en, code]
 
 Has it ever occurred to you to write something like this?
 
-```java
+```python
 swap(x,y) 
 ```
 
 but just because if you are maniacal about code readability and write yourself a random swap method every time... and you don't like to drown in 100+ lines of code something like this
 
-```java
+```python
 temp = x ;
 x= y;
 y= temp;
 ``` 
-with Python just do 
+In Python, simply do:
 
 ```python
 x,y = y,x 

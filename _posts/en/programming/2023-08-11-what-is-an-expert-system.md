@@ -15,6 +15,6 @@ An expert system is software that attempts to recreate the decision-making proce
 
 Expert systems are composed of three main elements:
 
-1. A knowledge base: the knowledge base contains the information that the expert system relies on to make its decisions. This information can include facts, rules, and procedures.
-2. An inference engine: the inference engine is the component of the expert system that uses the knowledge base to make decisions. The inference engine uses a logical process to apply the rules to the knowledge base and generate a response.
-3. A user interface: the user interface allows users to interact with the expert system. The user interface can be used to enter information, request information, or receive advice.
+1. A knowledge base: The knowledge base contains the information that the expert system relies on to make its decisions. This information can include facts, rules, and procedures.
+2. An inference engine: The inference engine is the component of the expert system that uses the knowledge base to make decisions. The inference engine uses a logical process to apply the rules to the knowledge base and generate a response.
+3. A user interface: The user interface allows users to interact with the expert system. The user interface can be used to enter information, request information, or receive advice.
