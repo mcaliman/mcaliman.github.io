@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Developing Secure Java EE Applications 2"
 excerpt: "Understanding Common Threats Part 2"
@@ -44,12 +44,9 @@ HttpServletRequest.changeSessionId() (Servlet 3.1+)]
         * Jakarta Security API (JSR 375+)
         * Standard API Usage
 
-### 2.3 Cross-Site Scripting (XSS) etc…
+### 2.3 Cross-Site Scripting (XSS) etc.
 * Reflected, Stored, and DOM-based XSS. How they affect EE web applications
-    * Cross-Site Scripting (XSS) attacks exploit vulnerabilities in web applications by injecting
-Cross-Site Scripting (XSS) attacks exploit vulnerabilities in web applications by injecting
-malicious scripts into pages viewed by other users, affecting their experience and potentially
-compromising their data.
+    * Cross-Site Scripting (XSS) attacks exploit vulnerabilities in web applications by injecting malicious scripts into pages viewed by other users, affecting their experience and potentially compromising their data.
     * Reflected XSS occurs when an attacker uses a malicious link or form to inject a script, which
 is then reflected back to the victim's browser.
     * Stored XSS happens when an attacker injects a malicious script into the application's
@@ -62,7 +59,7 @@ manipulate the Document Object Model (DOM) and inject malicious scripts.
     * Data in Transit: Information intercepted while traveling across networks (e.g., public Wi-Fi,
 internet) can be easily read. Think of login credentials, financial details, or personal
 messages sent over unencrypted connections (HTTP vs. HTTPS).
-        * HTTPS/TLS Always:** Configure your application server (e.g. Tomcat, WildFly, WebSphere,
+        * **HTTPS/TLS Always:** Configure your application server (e.g. Tomcat, WildFly, WebSphere,
 GlassFish) to use HTTPS (HTTP Secure) with TLS (Transport Layer Security) for all
 communications. This is essential for the web tier (browser to server), web services
 (SOAP/REST), and also for database connections if possible.
@@ -134,10 +131,7 @@ construct objects designed to trigger harmful actions.
 
 Countermeasures & Best Practices
 * Avoid Deserialization of Untrusted Data
-    * The safest approach. If possible, use alternative data formats like JSON or XML with carefully
-defined schemas, and use specific parsing libraries (e.g., Gson, Jackson, JAXB) to control
-defined schemas, and use specific parsing libraries (e.g., Gson, Jackson, JAXB) to control
-object construction.
+    * The safest approach. If possible, use alternative data formats like JSON or XML with carefully defined schemas, and use specific parsing libraries (e.g., Gson, Jackson, JAXB) to control object construction.
     * Use Whitelisting, not Blacklisting
         * If deserialization is unavoidable, carefully define and enforce which classes are allowed to
 be deserialized. Never try to block known bad classes; new exploits will always be found.
@@ -148,7 +142,6 @@ those with built-in whitelisting capabilities). Research current best practices.
         * Starting with Java 9 (and backported to some Java 8 versions), use the serial filter
 mechanism to control which classes can be deserialized. This is a crucial defense but
 requires careful configuration.
-byte[]
 
 ```java
 byte[] serializedData = getUntrustedData(); // From network, file, etc.

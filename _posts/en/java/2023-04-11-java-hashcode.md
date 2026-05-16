@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "The hashCode method of the Object class in Java"
 excerpt: "Learn how the hashCode method works and how to use it correctly"
@@ -13,7 +13,7 @@ tags: [java, oop, en, code]
  
 The `hashCode` method is a fundamental method of the `Object` class in Java. This method returns an integer value representing the hash code of the object.
 
-The `hashCode` method is mainly used to improve the performance of hash-based data structures, such as `HashMaps`. When you insert an object into a `HashMap`, its hash code is used to determine the location where the object should be stored in the map.
+The `hashCode` method is mainly used to improve the performance of hash-based data structures, such as `HashMap`s. When you insert an object into a `HashMap`, its hash code is used to determine the location at which the object should be stored in the map.
 
 To use the `hashCode` method correctly, it is important to follow some rules. First, the `hashCode` method must be appropriately overridden in subclasses. Additionally, if two objects are equal according to the `equals` method, then they must return the same hash code value.
 
@@ -40,4 +40,4 @@ public class Human {
 
 In this example, we have overridden the `hashCode` method in the `Human` class to calculate the hash code of a `Human` object based on its `firstName`, `lastName`, and `passportNumber` attributes.
 
-Always remember to use the `hashCode` method correctly when working with objects in Java!
+Always remember to use the `hashCode` method correctly when working with objects in Java.

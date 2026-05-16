@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Sviluppo di applicazioni Java EE sicure 1"
 excerpt: "Dalle minacce alle migliori pratiche Parte 1"
@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2025-09-07
 published: true
-tags: [java, security, en]
+tags: [java, security, it]
 ---
 
 ### 1. Introduzione
@@ -20,7 +20,7 @@ tags: [java, security, en]
 * Empowerment degli sviluppatori
     * Fornire agli sviluppatori Java EE conoscenze e strumenti concreti
 * La sicurezza è responsabilità di tutti
-    * Non è solo un problema per gli esperti di sicurezza informatica o per gli IT Ops.
+    * Non è solo un problema per gli esperti di sicurezza informatica o per gli IT Ops
 * Dalle minacce alla prevenzione
     * Capire cosa cercare e come difendersi
 * Migliora il codice e i processi
@@ -37,7 +37,7 @@ tags: [java, security, en]
     * Data Breaches
     * Perdite finanziarie significative
     * Danno alla reputazione, perdita della fiducia dei clienti
-    * Sanzioni legali e normative (ad es. GDPR)
+    * Sanzioni legali e normative (ad esempio, GDPR)
     
 ### 4. Le applicazioni sono l'obiettivo (Il “perché” - Parte 2)
 * Dalle infrastrutture al codice
@@ -63,13 +63,8 @@ tags: [java, security, en]
 * Applicazioni legacy
     * Applicazioni obsolete con pratiche di sicurezza superate
 * Delegare al contenitore (ma non troppo!)
-    * l contenitore Java EE offre eccezionali funzionalità di sicurezza “pronte all'uso”:
-autenticazione, autorizzazione basata sui ruoli e gestione delle sessioni. Tuttavia, è fondamentale
-comprendere che il contenitore è solo una parte della soluzione. Se il codice della nostra applicazione è
-vulnerabile (ad esempio, SQL Injection, XSS), il contenitore non può fare miracoli. La sicurezza del codice dell'applicazione
-è la nostra responsabilità primaria.
-* Sicurezza:
-    * Una responsabilità condivisa che inizia dagli sviluppatori
+    * Il contenitore Java EE offre eccezionali funzionalità di sicurezza “pronte all'uso”: autenticazione, autorizzazione basata sui ruoli e gestione delle sessioni. Tuttavia, è fondamentale comprendere che il contenitore è solo una parte della soluzione. Se il codice della nostra applicazione è vulnerabile (ad esempio, SQL Injection, XSS), il contenitore non può fare miracoli. La sicurezza del codice dell'applicazione è la nostra responsabilità primaria.
+* Sicurezza: Una responsabilità condivisa che inizia dagli sviluppatori
 
 ### 6. Il “Piano”
 * Sviluppo di applicazioni Java EE sicure - (1)

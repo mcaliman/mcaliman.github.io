@@ -12,9 +12,9 @@ published: true
 tags: [linux, sysadmin, en, code]
 ---
 
-Deleting the command history on Linux is quite simple just give the command.
+Deleting the command history on Linux is quite simple; just run the command:
 ```bash
 history -c
 ```
-the command launched without any parameters instead shows you the entire history.
+The command launched without any parameters, instead, shows you the entire history.
 
