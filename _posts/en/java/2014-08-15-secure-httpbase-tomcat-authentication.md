@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Secure httpbase tomcat authentication"
+title:  "Secure HTTP Basic Tomcat authentication"
 excerpt: "Configuring HTTP Basic authentication with Tomcat for secure access"
 category: "Java"
 date:   2014-08-15
@@ -12,9 +12,9 @@ tags: [java, security, en, code]
 permalink: /java/secure-httpbase-tomcat-authentication/
 ---
 
-To set up basic authentication in a java application in tomcat, we can only intervene in two files
+To set up basic authentication in a Java application in Tomcat, we only need to intervene in two files:
 
-In tomcat-users.xml setting, where we will configure the users.
+In the `tomcat-users.xml` settings, where we will configure the users:
 
 ```XML
 <?xml version='1.0' encoding='utf-8'?>
@@ -27,7 +27,7 @@ In tomcat-users.xml setting, where we will configure the users.
 </tomcat-users>
 ```
 
-While in the web.xml file of our application, we add the lines as below.
+While in the `web.xml` file of our application, we add the lines below:
 
 ```XML
 <?xml version="1.0" encoding="ISO-8859-1"?>  

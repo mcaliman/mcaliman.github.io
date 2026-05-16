@@ -12,9 +12,9 @@ tags: [java, tutorial, en, code]
 permalink: /java/writing-reading-files-java/
 ---
 
-Reading and writing files in Java 7 using the new try-with-resources construct relieves the developer of the task of correctly closing streams, below you can find two example methods.
+Reading and writing files in Java 7 using the new try-with-resources construct relieves the developer of the task of correctly closing streams. Below you can find two example methods:
 
-To write a file
+To write a file:
 ```java
 protected boolean write(String name, String text) {
         boolean completed;
@@ -32,7 +32,7 @@ new OutputStreamWriter(new FileOutputStream(name), "utf-8")))
     }
 ```
 
-and to read its contents
+And to read its contents:
 
 ```java
 public String read(String name) {
@@ -58,16 +58,16 @@ When the try block ends the stream will be closed automatically. This is possibl
 
 All classes that implement this interface can be used within try-with-resources.
 
-The `AutoClosable` interface has only one method `close()`.
+The `AutoCloseable` interface has only one method, `close()`.
 
 ```java
-public interface AutoClosable {
+public interface AutoCloseable {
 
    public void close() throws Exception;
 }
 ```
 
-Implementing `AutoClosable` on one of our objects does not require much effort as can be seen from the example code below.
+Implementing `AutoCloseable` on one of our objects does not require much effort, as can be seen from the example code below:
 
 ```java
 public class AutoClosableExampleObject implements AutoCloseable {
@@ -79,4 +79,4 @@ public class AutoClosableExampleObject implements AutoCloseable {
 }
 ```
 
-If we don't want to catch the exception, just omit the `catch` part of the block, and it will propagate as if it were unhandled (just so a `try` without `catch` and without `finally`). To be honest, the code above could have benefited from other new features in version 7, such as `catch` with multiple exception handling, but more on that in a future post.
+If we don't want to catch the exception, just omit the `catch` part of the block, and it will propagate as if it were unhandled (just a `try` without a `catch` and without a `finally`). To be honest, the code above could have benefited from other new features in version 7, such as `catch` with multiple exception handling, but more on that in a future post.
