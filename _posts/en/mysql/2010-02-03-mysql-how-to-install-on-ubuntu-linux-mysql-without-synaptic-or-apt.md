@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "MySQL: how to install on ubuntu linux mysql without synaptic or apt"
+title:  "MySQL: how to install on Ubuntu Linux MySQL without Synaptic or apt"
 excerpt: "Installing MySQL on Ubuntu Linux without using Synaptic or apt"
 category: MySQL
 date:   2011-02-03
@@ -11,45 +11,45 @@ published: true
 tags: [mysql, database, en, code]
 permalink: /mysql/mysql-install-ubuntu-linux/
 ---
-We download the `tar.gz` from the mysql site www.mysql.com
-place it in `/usr/local` unpack the `tar.gz` with the command
+Download the `.tar.gz` from the MySQL website (www.mysql.com):
+place it in `/usr/local` and unpack the `.tar.gz` with the following command:
 
 ```bash
 tar -xzf mysql-5.1.31-linux-i686-glibc23.tar.gz
 ```
 
-(we have assumed from a real case that the version is 5.1.31, in which case the file name is `mysql-5.1.31-linux-i686-glibc23.tar.gz`) we create the mysql symlink
+(We have assumed from a real case that the version is 5.1.31, in which case the file name is `mysql-5.1.31-linux-i686-glibc23.tar.gz`). Create the MySQL symbolic link:
 
 ```bash
 ln -s mysql-5.1.31-linux-i686-glibc23 mysql
 ```
 
-create users/groups
+Create the users and groups:
 
 ```bash
 groupadd mysql
 useradd -g mysql mysql
 ```
 
-initialise the db
+Initialize the database:
 ```bash
 cd mysql
 ./scripts/mysql_install_db --user=mysql
 ```
 
-we add the necessary permissions to the directories
+Add the necessary permissions to the directories:
 
 ```bash
 chown -R root:mysql .
 chown -R mysql:mysql data
 ```
 
-start the mysql daemon in the background with the command
+Start the MySQL daemon in the background with the following command:
 ```bash
 ./bin/mysqld_safe --user=mysql &
 ```
 
-we configure the environment variables in `/root/.bashrc` (or in your home) add the lines
+Configure the environment variables in your shell configuration file (e.g., `/root/.bashrc` or `~/.bashrc`) by adding the following lines:
 
 ```bash
 MYSQL=/usr/local/mysql
@@ -58,7 +58,7 @@ PATH=$MYSQL/bin:.:$PATH
 export PATH
 ```
 
-we also add the lines in `/etc/init.d/bootmisc.sh` to handle the automatic start-up of the mysql service
+Also, add these lines to `/etc/init.d/bootmisc.sh` to handle the automatic start-up of the MySQL service:
 
 ```bash
 MYSQL=/usr/local/mysql

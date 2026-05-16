@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "The Data Model Resource Book Vol 1 & 2"
 excerpt: "About the series book..."
@@ -12,11 +12,11 @@ published: true
 tags: [data, database, en]
 ---
 
-I want to tell you about these two books I recently purchased on Amazon. There were few hard copies available at the time of purchase and the shipping time was not very fast, but it was worth it. There is however a digital version for those who prefer it. The cost may seem high compared to other texts on management architectures but it is worth every penny paid. I will probably also buy Volume 3 and review it soon.
+I want to tell you about these two books I recently purchased on Amazon. There were few hard copies available at the time of purchase and the shipping time was not very fast, but it was worth it. There is, however, a digital version for those who prefer it. The cost may seem high compared to other texts on management architectures but it is worth every penny paid. I will probably also buy Volume 3 and review it soon.
 
-"The Data Model Resource Book: A Library of Universal Data Models for All Enterprises" by Len Silverstone is a highly regarded work in the field of data modelling. His revised edition, published by Wiley, offers a simple and inexpensive way to design databases for key business functions. Industry experts have praised the book for its set of standardised data models for specific functions shared by most companies, such as human resources management, accounting and project management. These models are easily replicated by developers seeking to make corporate database development more efficient and cost-effective.
+"The Data Model Resource Book: A Library of Universal Data Models for All Enterprises" by Len Silverstone is a highly regarded work in the field of data modeling. His revised edition, published by Wiley, offers a simple and inexpensive way to design databases for key business functions. Industry experts have praised the book for its set of standardized data models for specific functions shared by most companies, such as human resources management, accounting and project management. These models are easily replicated by developers seeking to make corporate database development more efficient and cost-effective.
 
-Volume 1 presents templates for general problems such as orders and invoices. Below is the complete list for Volume 1
+Volume 1 presents templates for general problems such as orders and invoices. Below is the complete list for Volume 1:
 
 1. Party model - People and Organization
 2. Products
@@ -28,10 +28,10 @@ Volume 1 presents templates for general problems such as orders and invoices. Be
 8. Human Resources
 9. Data Warehouse
 
-The second volume, titled "The Data Model Resource Book, Volume 2: A Library of Universal Data Models by Industry Types", goes into detail about models for insurance, financial, professional services and manufacturing companies.
-Below is the complete list for Volume 2
+The second volume, titled "The Data Model Resource Book, Volume 2: A Library of Universal Data Models by Industry Types," goes into detail about models for insurance, financial, professional services, and manufacturing companies.
+Below is the complete list for Volume 2:
 
-1. Manufactoring
+1. Manufacturing
 2. Telecommunications
 3. Health Care
 4. Insurance
