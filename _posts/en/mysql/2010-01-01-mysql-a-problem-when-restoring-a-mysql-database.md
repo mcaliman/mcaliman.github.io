@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [mysql, database, en]
+tags: [mysql, database, en, code]
 permalink: /mysql/mysql-problem-when-restoring/
 ---
 

@@ -7,7 +7,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial, en]
+tags: [java, tutorial, en, code]
 ---
 One of the questions that may occur to you at an interview or certification or a simple test concerning the Java language is the following:
 Are constructors inheritable? 

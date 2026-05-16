@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial, en]
+tags: [java, tutorial, en, code]
 ---
 
 This error is present in version 6.9 but also in version 7.4.

@@ -10,7 +10,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial, en]
+tags: [java, tutorial, en, code]
 ---
 
 In the most general form, a method is characterized by one or more formal parameters.

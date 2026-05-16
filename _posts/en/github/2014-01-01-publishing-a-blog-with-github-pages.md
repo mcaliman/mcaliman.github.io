@@ -8,7 +8,7 @@ share: false
 date: 2014-01-01
 modified: 2024-07-11
 published: true
-tags: [github, pages, en]
+tags: [github, pages, en, code]
 permalink: /github/publishing-website-github-pages/
 ---
 

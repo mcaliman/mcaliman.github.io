@@ -7,7 +7,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, oop, en]
+tags: [java, oop, en, code]
 permalink: /java/can-execute-code-before/
 ---
 One of the questions you might get at an interview or certification or a simple test concerning the Java language is the following:

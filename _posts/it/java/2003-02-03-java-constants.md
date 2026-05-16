@@ -9,7 +9,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial, it]
+tags: [java, tutorial, it, code]
 ---
 
 Una variabile che non cambia mai valore è una costante. In Java, puoi dichiarare esplicitamente una variabile come costante usando la parola chiave `final`. 

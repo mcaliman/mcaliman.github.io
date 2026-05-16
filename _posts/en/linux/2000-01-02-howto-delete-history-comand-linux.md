@@ -9,7 +9,7 @@ permalink: /how-to-delete-the-command-history-on-linux/
 date: 2000-01-02
 modified: 2024-07-11
 published: true
-tags: [linux, sysadmin, en]
+tags: [linux, sysadmin, en, code]
 ---
 
 Deleting the command history on Linux is quite simple just give the command.

@@ -8,7 +8,7 @@ share: false
 date: 2014-06-07
 modified: 2024-07-11
 published: true
-tags: [linux, ubuntu, en]
+tags: [linux, ubuntu, en, code]
 permalink: /linux/install-jekyll-ubuntu-1404/
 ---
 

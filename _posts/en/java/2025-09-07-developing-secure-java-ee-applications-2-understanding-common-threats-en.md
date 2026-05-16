@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2025-09-07
 published: true
-tags: [java, security, en]
+tags: [java, security, en, code]
 ---
 
 ### 2. Understanding Common Threats

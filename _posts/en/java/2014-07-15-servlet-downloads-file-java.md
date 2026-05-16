@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, tutorial, en]
+tags: [java, tutorial, en, code]
 permalink: /java/servlet-manage-file-downloads/
 ---
 Let's see in this post how to write the code for a Java Servlet that allows us to transfer (download) a file from our server application to the client (our users' web browser).

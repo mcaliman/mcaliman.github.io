@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [mysql, database, en]
+tags: [mysql, database, en, code]
 permalink: /mysql/mysql-install-ubuntu-linux/
 ---
 We download the `tar.gz` from the mysql site www.mysql.com

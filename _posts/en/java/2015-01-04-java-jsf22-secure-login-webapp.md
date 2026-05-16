@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [java, jsf, en]
+tags: [java, jsf, en, code]
 permalink: /java/secure-logins-pages-jsf/
 ---
 In this post we see how to implement a minimal login system with basic security in a Java Server Faces 2.2 application.
