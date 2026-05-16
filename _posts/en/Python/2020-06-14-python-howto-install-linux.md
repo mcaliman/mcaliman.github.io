@@ -11,7 +11,7 @@ published: true
 tags: [python, scripting, en, code]
 ---
 
-Open terminal via Ctrl+Alt+T. When it opens, run command:
+Open the terminal using Ctrl+Alt+T. Once open, run the following commands:
 ```
 sudo apt-get install python3
 sudo apt-get install idle3

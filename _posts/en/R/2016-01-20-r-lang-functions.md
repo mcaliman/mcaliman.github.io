@@ -23,7 +23,7 @@ f <- function(<arguments>) {
    # function body
 }
 ```
-Functions in R are `first class objects`, which means they can be treated like any other object in R: they can be passed as arguments to other functions, and they can be nested (so you can define a function inside another function), the return value of a function is the last expression to be evaluated in the body of the function.
+Functions in R are `first class objects`, which means they can be treated like any other object in R: they can be passed as arguments to other functions, and they can be nested (so you can define a function inside another function). The return value of a function is the last expression evaluated in the function body.
 ## Arguments of a function
 
 Formal arguments are arguments included in the definition of a function
@@ -42,13 +42,13 @@ sd(x = dati, na.rm = FALSE)
 sd(na.rm = FALSE, x = dati)
 sd(na.rm = FALSE, dati)
 ```
-Although it is allowed, I do not advise you to play around too much with the natural order (order of the function definition) of the arguments, it only serves to make confusion.
+Although it is allowed, I do not advise you to play around too much with the natural order (order of the function definition) of the arguments; it only serves to cause confusion.
 
 It is possible to combine positional correspondence with correspondence by name.
 When an argument is matched by name, it is removed from the list of arguments and the remaining unnamed arguments are matched in the order in which they are listed in the function definition. 
 
 Personally, given a function, I find it more useful to use only one or the other (either positional matching or name matching), but should you be faced with code written in this mixed mode, it is useful to know the rules of the game.
-## define a function
+## Defining a Function
 ```
 f <- function(a, b = 1, c = 2, d = NULL) {
 }
@@ -56,7 +56,7 @@ f <- function(a, b = 1, c = 2, d = NULL) {
 
 In addition to not specifying a default value, it is also possible to set a NULL argument value.
 ## Lazy Evaluation
-Arguments to functions are evaluated lazy, so that they are evaluated only when necessary .
+Arguments to functions are evaluated lazily, so they are evaluated only when necessary.
 
 ```r
 f <- function(a, b) {

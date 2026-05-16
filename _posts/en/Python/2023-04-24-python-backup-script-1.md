@@ -16,7 +16,7 @@ I am gradually replacing all of my bash scripts used to automate backup and anal
 
 I am very satisfied with the final result. My new Python scripts are much easier to use and maintain than my old ones.
 
-Here is the first simple copy-backup script rewritten in Python
+Here is the first simple copy-backup script, rewritten in Python:
 
 ```python
 #
