@@ -8,7 +8,6 @@ date: 2020-12-19
 comments: false
 share: false
 modified: 2024-07-11
-last_review: 2026-04-19
 tags: [python, scripting, en]
 ---
 

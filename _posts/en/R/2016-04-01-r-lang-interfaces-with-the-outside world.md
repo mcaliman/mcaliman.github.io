@@ -12,7 +12,7 @@ tags: [r, data-analysis, en, code]
 permalink: /r/interfaces-external-world-r/
 ---
 
-Data are read via connection interfaces . Connections can be to files or urls for example .
+Data is read via connection interfaces. Connections can be to files or URLs, for example.
 
 * `file`, opens a connection to a file
 * `gzfile`, opens a link to a gzipped file
@@ -27,15 +27,14 @@ function (description = '', open = '', blocking = TRUE,
 encoding = getOption("encoding"))
 ```
 
-description is the name of the file open is a code indicating
+The `description` is the name of the file, and `open` is a code indicating:
 
 * "r" read only
 * "w" write (and initialization of a new file)
 * "a" append
 * "rb", "wb", "ab" read,write, or append in binary mode (Windows)
 
-In general, shortcuts are powerful tools for navigating files or other external objects. 
-In practice, we often do not need to deal with the link interface directly .
+In general, shortcuts are powerful tools for navigating files. In practice, we often do not need to interact with the connection interface directly.
 
 ```r
 con <- file('foo.txt', 'r')

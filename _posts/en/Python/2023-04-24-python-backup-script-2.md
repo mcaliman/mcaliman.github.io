@@ -16,7 +16,7 @@ I am gradually replacing all of my bash scripts used to automate backup and anal
 
 I am very satisfied with the final result. My new Python scripts are much easier to use and maintain than my old ones.
 
-Python script to zip GlassFish logs and archive them by year and month. The script deletes the files after zipping them.
+Below is a Python script to zip GlassFish logs and archive them by year and month. The script deletes the original files after archiving.
 
 ```python
 

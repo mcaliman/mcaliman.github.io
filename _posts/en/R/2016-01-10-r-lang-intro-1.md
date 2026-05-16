@@ -15,15 +15,15 @@ tags: [r, data-analysis, en, code]
 > – Richard E. Pattis
 
 I discovered the R programming language almost by chance and was fascinated by it.
-The first thing to know is that R is more than a programming language, it is also a complete development environment. 
-Based on the S language, it is used for the management and statistical analysis of data for the production of graphs and is available free of charge under the constraints of the GPL licence. 
+The first thing to know is that R is more than a programming language; it is also a complete development environment. 
+Based on the S language, it is used for the management and statistical analysis of data for the production of graphs and is available free of charge under the constraints of the GPL license. 
 
 R is an interactive environment (like Python): commands produce an immediate response. 
 
 Once R has been launched, all instructions are executable from the
-environment command line, characterised by the `>` prompt.
+environment command line, characterized by the `>` prompt.
  
-the command line is executed by pressing the `Enter` key. 
+The command line is executed by pressing the `Enter` key. 
 At its simplest, it can be used as a calculator (a calculator that has grown a little too big).
 
 ```r
@@ -49,7 +49,7 @@ ignored by the environment (see the instructions just above).
 
 As with any other programming language, when you decide to create an object, any pre-existing object with the same name will be overwritten.
 
-An important note: R is case sensitive, so the `X` object is not the `x` object (exactly as happens in C or Java and Python for example, and unlike in SQL where select is equivalent to Select or SELECT).
+An important note: R is case sensitive, so the `X` object is not the `x` object (exactly as with C or Java and Python for example, and unlike in SQL where select is equivalent to Select or SELECT).
 
 If we try to call an object that hasn't been created yet, we get the message
 
@@ -105,6 +105,6 @@ The function named f which I have just defined I can call by its name followed b
 
 
 Some system files in the R workspace: `.Rhistory` and `.Rdata`.
-The file `.Rhistory` is an ascii file which reports the codes typed at the prompt, without
+The file `.Rhistory` is an ASCII file which reports the codes typed at the prompt, without
 however, reporting R's answers.
-while the `.Rdata` file is the workspace which contains all the objects saved in the environment during the current session; you can save the workspace using the `save.image()` function. Further details on how to use `.Rdata` in a useful way can be found in the online R documentation.
+While the `.Rdata` file is the workspace which contains all the objects saved in the environment during the current session; you can save the workspace using the `save.image()` function. Further details on how to use `.Rdata` in a useful way can be found in the online R documentation.

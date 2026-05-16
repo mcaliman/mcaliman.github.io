@@ -13,14 +13,14 @@ permalink: /r/functions-implement-cycles-r/
 
 ## Command-Line Loops
 
-The `for`, `while` and loop constructs in general are useful when programming, but are not particularly easy when working interactively from the command line. There are some functions that implement loops to make life easier. These are the `*apply` functions (`lapply`,`sapply`,`apply`,`tapply`,`mapply`)
+The `for`, `while` and loop constructs in general are useful when programming, but are not particularly easy when working interactively from the command line. There are some functions that implement loops to make life easier. These are the `*apply` functions (`lapply`, `sapply`, `apply`, `tapply`, `mapply`).
 
 A useful auxiliary function in combination with the `*apply` functions is `split`.
 
 ## lapply
-`lapply` accepts three arguments: (1) an X list; (2) a FUN function; (3) other arguments via its ... argument . If X is not a list, it will be forced to a list using `as.list`.
+`lapply` accepts three arguments: (1) a list `X`; (2) a function `FUN`; and (3) additional arguments via `...`. If `X` is not a list, it will be coerced to one using `as.list()`.
 The actual loop is done internally in C code (so pay attention to the data side of profiling).
-`lapply` always returns a list, regardless of the input class .
+`lapply` always returns a list, regardless of the input class.
 
 ```r
 f <- function(x) {x=x+1}
@@ -42,7 +42,7 @@ y
 ```
 
 ## sapply
-`sapply` attempts to simplify the result of `lappy` if possible.
+`sapply` attempts to simplify the result of `lapply` if possible.
 If the result is a list where each element is of length 1, a vector is returned
 If the result is a list where each element is a vector of the same length ( > 1 ) , an array is returned.
 If `sapply` fails to simplify, a list is returned.
@@ -119,7 +119,7 @@ x <- matrix(rnorm(200), 20, 10)
 
 ```
 ## mapply
-mapply` is a multivariate version of apply which applies a function in parallel over a series of arguments .
+`mapply` is a multivariate version of apply which applies a function in parallel over a series of arguments .
 An example is below, l1 contains the same elements as l2
 rep is a function that "replicates" the passed element a required number of times and returns it as a list, e.g.
 
@@ -148,7 +148,7 @@ tapply(x, f, mean)
 For example, we split the elements of x >1 and those <=1 into two groups
 
 ```r
-> split(x,x[]>1)
+> split(x, x > 1)
 $`FALSE`
  [1] -1.13857804  0.21853696 -0.25563963  0.51938904  0.24105612  0.13492624
  [7] -0.59042828 -0.52559665  0.67772599  0.79394383  0.81569013  0.48512614

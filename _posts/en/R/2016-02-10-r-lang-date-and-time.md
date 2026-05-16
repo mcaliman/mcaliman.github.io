@@ -12,7 +12,7 @@ permalink: /r/date-time-interval-objects/
 ---
 
 ## The Date Class
-R has a special representation of date and time objects, dates are represented by the `Date` class, times and intervals by the `POSIXct` or `POSIXlt` classes. 
+R has a special representation of date and time objects; dates are represented by the `Date` class, while times and intervals are represented by the `POSIXct` or `POSIXlt` classes. 
 Dates are stored internally as the number of days since 1/1/1970 while times and intervals are stored internally as the number of seconds elapsed since 1/1/1970
 
 ## Classes for Times and Intervals
@@ -28,9 +28,9 @@ x
 Times and time intervals are represented using the classes
 `POSIXct` and `POSIXlt` classes 
 
-* `POSIXct` under the "bonnet" is just a large integer and is used when you want to store times in something like a data frame
+* `POSIXct` under the "hood" is just a large integer and is used when you want to store times in something like a data frame
 
-* `POSIXlt` has "detro" a list and stores a variety of other useful information such as day of the week, day of the year , month (and is most useful when you need to do manipulations)
+* `POSIXlt` is stored internally as a list and contains a variety of other useful information such as day of the week, day of the year, and month (making it most useful when you need to perform manipulations)
 
 There are a number of generic functions for date and time type objects
 
@@ -43,7 +43,7 @@ times can be obtained from a character string using the functions `as.POSIXlt` o
 ```
 t1 <- Sys.time()
 posix1<- as.POSIXlt(t1)
-posix1$sec # takes the seconds part, I can do this because I built it as POSIXlt 
+posix1$sec # extracts the seconds, I can do this because I built it as POSIXlt 
 ```
 
 or I can use the `POSIXct` format.
@@ -84,7 +84,7 @@ x>y
 
 ```
 
-also keeps track of leap years, daylight saving time and time zones.
+R also keeps track of leap years, daylight saving time and time zones.
 
 ```r
 > x <- as.Date("2012-03-01") 
