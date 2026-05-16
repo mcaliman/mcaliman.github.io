@@ -25,10 +25,10 @@ It is not allowed to declare methods within other methods.
 
 The signature of a method can be of two types, depending on whether or not the method can return a value:
 
-* **Methods with return:** the setting must specify the type of value returned.
-* **Methods without return:** the setting must use the keyword `void`.
+* **Methods with return:** the declaration must specify the type of value returned.
+* **Methods without return:** the declaration must use the keyword `void`.
 
-The parameters in the setting constitute the **formal parameters** of the method.
+The parameters in the declaration constitute the **formal parameters** of the method.
 
 **Method call**
 

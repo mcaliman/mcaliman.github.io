@@ -38,7 +38,7 @@ class T {
 ```
 Declaration blocks are just placeholders to highlight the structure of the content between the brackets `{`, `}`. `class` is a reserved word in the language.
 
-All declarations in classes, constants, variables and methods, can be characterised by the `public` modifier to make them accessible from outside the class, or they can be specified `private` to restrict their visibility and access to the defining class.
+All declarations in classes (constants, variables, and methods) can be characterised by the `public` modifier to make them accessible from outside the class, or they can be specified `private` to restrict their visibility and access to the defining class.
 
 An intermediate level is `protected`, the purpose of which will be clarified later, after we have mastered the rudiments of object-oriented programming, particularly inheritance.
 
@@ -46,9 +46,9 @@ An intermediate level is `protected`, the purpose of which will be clarified lat
 
 The access modifiers `public`, `private` and `protected` define the visibility of a declaration within a class.
 
-`public`: the declaration is accessible from any class.
-`private`: the declaration is accessible only from the class in which it is defined.
-`protected`: the declaration is accessible from classes derived from the class in which it is defined.
+* **public:** the declaration is accessible from any class.
+* **private:** the declaration is accessible only from the class in which it is defined.
+* **protected:** the declaration is accessible from classes derived from the class in which it is defined.
 
 # Class and instance entities
 

@@ -12,8 +12,7 @@ published: true
 tags: [java, oop, en, code]
 ---
 
-From each class it is possible to obtain one or more entities through the instance, each of which constitutes one
-copy of the data structure described by the class in its dynamic components and of which it shares the information access methods.
+From each class, it is possible to obtain one or more entities through instantiation. Each of these constitutes a copy of the data structure described by the class in its dynamic components, and shares its information access methods.
 
 Definition
 An object is a class instance whose data structure it reflects and shares methods.
@@ -67,7 +66,7 @@ obviously I can do everything in one go.
 T obj = new T();
 ```
 
-declared and instantiated et voil!
+Declared and instantiated, et voilà!
 
 # Messages, messages and more messages.
 
@@ -100,8 +99,7 @@ whose overall architecture can contribute to the definition of models characteri
 The transfer of information between objects is achieved in Java by exchanging messages.
 These include the activation, in the recipient object, of the method specified by the message and the possible export to the sender object
 of the results of carrying out these methods. As we have seen, the passing of parameters is always foreseen by the Java programming language
-by value and this means that the values ??of the formal parameters at the time of activation of a method are lost when the method completes the
-its execution. Any export of information from a method can therefore occur exclusively via the return command.
+by value, and this means that the values of the formal parameters at the time of activation of a method are lost when the method completes its execution. Any export of information from a method can therefore occur exclusively via the return command.
 
 This behavior perfectly adheres to the semantics of passing by value when a parameter consists of a primitive data type.
 If the parameter consists of an object (or an array, which constitutes a special case) the passage by value however presents

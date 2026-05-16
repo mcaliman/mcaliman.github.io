@@ -1,4 +1,4 @@
-﻿--- 
+--- 
 layout: post
 title:  "Java Variables And Assignment"
 excerpt: "Variables and assignment commands"
@@ -31,7 +31,7 @@ T var;
 ```
 
 where `T` is the type, for example **int** , double and others.
-You can have as types, basic types which are not objects, or objects ( `T` becomes a class name). 
+Types can be either basic types (which are not objects) or objects (`T` becomes a class name). 
 Below are some examples of variable declarations:
 
 ```java
@@ -84,13 +84,13 @@ y = (x+1)/2;
 ```
 an example of an expression.
 
-We have talked about variable types so far without giving a formal definition, let's run for cover:
+We have talked about variable types so far without giving a formal definition. Let's run for cover:
 
 Data Type Definition 
 
 A data type consists of a set of values and a set of operations applicable to those values.
 
-As mentioned earlier the data types in java belong to 2 main categories :
+As mentioned earlier, the data types in Java belong to 2 main categories:
 
 * Primitive types : boolean, byte, short, int, long, float, double, char
 * Class types : String etc.
