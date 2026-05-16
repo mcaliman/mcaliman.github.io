@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SSH Log in without typing in the password."
+title:  "SSH login without a password"
 excerpt: "Configuring SSH key-based authentication for passwordless login"
 category: Linux
 comments: true
@@ -12,9 +12,9 @@ tags: [linux, sysadmin, en, code]
 permalink: /linux/ssh-log-without-typing/
 ---
 
-If you want to use `Linux` and `OpenSSH` to automate tasks, and you need to be able to log in automatically from host `A` (phobos ubuntu 18.04) with user `a` (mcaliman) to host `B` (deimos ubuntu 20.04) with user `b` (mcaliman) without entering a password, these are the steps you need to take: 
+If you want to use Linux and OpenSSH to automate tasks, and you need to be able to log in automatically from host `A` (phobos, Ubuntu 18.04) with user `a` (mcaliman) to host `B` (deimos, Ubuntu 20.04) with user `b` (mcaliman) without entering a password, these are the steps: 
 
-First log into `A` (phobos) as user `a` (mcaliman) and generate an authentication key pair (do not enter a passphrase)
+First, log into `A` (phobos) as user `a` (mcaliman) and generate an authentication key pair (do not enter a passphrase):
 
 ```
 a@A:~> ssh-keygen -t rsa
@@ -37,7 +37,7 @@ a@A:~> ssh b@B mkdir -p .ssh
 b@B's password: 
 ```
 
-Finally queue the new **public key** of user `a` to `b@B:.ssh/authorized_keys` and enter `b`'s password last
+Finally, append the new **public key** of user `a` to `b@B:~/.ssh/authorized_keys` and enter `b`'s password one last time:
 
 ```
 a@A:~> cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'

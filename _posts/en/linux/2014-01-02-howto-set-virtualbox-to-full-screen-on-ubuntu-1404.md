@@ -12,8 +12,8 @@ tags: [linux, ubuntu, en, code]
 permalink: /linux/set-virtualbox-full-screen/
 ---
 
-If you have installed VirtualBox on Ubuntu 14.04 but the window is small (the resolution is 800x600) working becomes hard. 
-The solution is to install VirtualBox Guest Addition, I suggest you forget installing from the cd image and proceed with `apt-get`
+If you have installed VirtualBox on Ubuntu 14.04 but the window is small (e.g., 800x600 resolution), working becomes difficult. 
+The solution is to install VirtualBox Guest Additions; I suggest you forget installing from the CD image and proceed with `apt-get`:
 
 ```
 sudo apt-get install virtualbox-guest-x11

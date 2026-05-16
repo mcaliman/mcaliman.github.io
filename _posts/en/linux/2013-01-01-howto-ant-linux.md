@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "How to install Ant on Linux"
 excerpt: "Step-by-step guide to installing Apache Ant on Linux"
@@ -15,9 +15,9 @@ tags: [linux, sysadmin, en, code]
 >
 > – Linus Torvalds
 
-Let's see how to install ant, which is a requirement for installing GlassFish on Linux.
-Download the tar.gz file from the website and transfer it to `/usr/local`
-Unzip the file  `apache-ant-1.7.1-bin.tar.gz` with the command:
+Let's see how to install Ant, which is a requirement for installing GlassFish on Linux.
+Download the `.tar.gz` file from the official website and transfer it to `/usr/local`.
+Unzip the `apache-ant-1.7.1-bin.tar.gz` file with the following command:
 
 ```
 tar xvfz apache-ant-1.7.1-bin.tar.gz
@@ -28,7 +28,7 @@ Create our usual symbolic link with the command `ln`
 ln -s apache-ant-1.7.1 ant
 ```
 
-Add the environment variables to `/root/.bashrc`  (or to our non-root user's home directory)
+Add the environment variables to your shell configuration file (e.g., `/root/.bashrc` or `~/.bashrc`):
 
 ```
 ANT_HOME=/usr/local/ant
