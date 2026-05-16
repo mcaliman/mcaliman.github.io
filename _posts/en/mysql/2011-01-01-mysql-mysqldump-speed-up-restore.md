@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "MySQL: How to speed up restore operations from mysql dump"
+title:  "MySQL: How to speed up restore operations from MySQL dump"
 excerpt: "Techniques to speed up MySQL restore operations from mysqldump"
 category: MySQL
 date:   2011-01-01
@@ -12,7 +12,7 @@ tags: [mysql, database, en, code]
 permalink: /mysql/mysql-speed-up-restore/
 ---
 
-To speed up the operation of restoring a sql dump in mysql, you can proceed as follows
+To speed up the operation of restoring a SQL dump in MySQL, you can proceed as follows:
 
 ```sql
 set autocommit = 0;
