@@ -26,5 +26,5 @@ Inference engines are used in a variety of expert systems, including:
 * Financial intelligence systems
 * Engineering systems
 
-Inference engines are a valuable tool for artificial intelligence. They allow expert  systems to make rapid and complex decisions, and they can be used in a variety of applications.
+Inference engines are a valuable tool for artificial intelligence. They allow expert systems to make rapid and complex decisions, and they can be used in a variety of applications.
 

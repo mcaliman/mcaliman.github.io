@@ -31,7 +31,7 @@ def unzip(zipped, unzipped):
         with open(unzipped, 'wb') as fout:
             shutil.copyfileobj(fin, fout)
 
-def donwload_remote_files(_host, _host_username, _host_password, _remote_path, _local_path):
+def download_remote_files(_host, _host_username, _host_password, _remote_path, _local_path):
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     ssh.connect(hostname=_host, username=_host_username, password=_host_password)
@@ -54,6 +54,6 @@ host_password = 'passw'
 
 local_path = '/home/mcaliman/test/'
 remote_path = '/home/mcaliman/'
-donwload_remote_files(host, host_username, host_password, remote_path, local_path)
+download_remote_files(host, host_username, host_password, remote_path, local_path)
 ```
 

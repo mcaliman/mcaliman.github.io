@@ -11,13 +11,13 @@ published: true
 tags: [python, scripting, en, code]
 ---
 
-There are recurring operations that we continue to perform even on a daily basis just because we are too lazy to automate them or because between a thousand work commitments we repeat to ourselves the mantra 'it only takes me five minutes'. But it is precisely because we are 'lazy' that we should try to avoid these operations, which, besides being boring, can take up to 25 minutes of work in a working week, minutes that could be used, for example, to catch up on a much more important task, or to carry out the refactoring that we continue to postpone.
+There are recurring operations that we continue to perform even on a daily basis just because we are too lazy to automate them or because between a thousand work commitments we repeat to ourselves the mantra 'it only takes me five minutes'. But it is precisely because we are 'lazy' that we should try to avoid these operations, which, besides being boring, can take up to 25 minutes of work in a work week—minutes that could be used, for example, to catch up on a much more important task, or to carry out the refactoring that we continue to postpone.
 
-The code shown below allows us, for example, to download all the logs of our application server, in order to analyse them, or to download the dumps of our production databases in order to restore them (again automatically) on our development system.
+The code shown below allows us, for example, to download all the logs of our application server, in order to analyze them, or to download the dumps of our production databases in order to restore them (again automatically) on our development system.
 
 Please note: the code shown does not recursively download the entire contents of a folder, including sub-directories and their contents, but can be modified to perform this task if required.
 
-To connect remotely via sftp we will use the paramiko library (paramiko.org), to install it we must use pip, having installed both python2 and python3 in my case I will use pip3, which we should already have installed. Paramiko also uses pycrypto, so we should also install it.
+To connect remotely via sftp we will use the paramiko library (paramiko.org), to install it we must use pip, having installed both Python 2 and Python 3 in my case I will use pip3, which we should already have installed. Paramiko also uses pycrypto, so we should also install it.
 
 ```bash
 pip3 install pycrypto
@@ -32,7 +32,7 @@ the remote file list and then iterate over it to perform the get, checking that 
 import paramiko
 import os.path
 
-def donwload_remote_files(_host, _host_username, _host_password, _remote_path, _local_path):
+def download_remote_files(_host, _host_username, _host_password, _remote_path, _local_path):
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     ssh.connect(hostname=_host, username=_host_username, password=_host_password)
@@ -56,5 +56,5 @@ host_password = 'passw'
 
 local_path = '/home/mcaliman/test/'
 remote_path = '/home/mcaliman/'
-donwload_remote_files(host, host_username, host_password, remote_path, local_path)
+download_remote_files(host, host_username, host_password, remote_path, local_path)
 ```
