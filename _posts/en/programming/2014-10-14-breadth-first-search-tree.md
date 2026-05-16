@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "BFS Breadth First Search"
+title:  "BFS (Breadth-First Search)"
 excerpt: "Breadth-First Search (BFS) traversal algorithm for trees"
 category: Programming
 date:   2014-10-14
@@ -15,12 +15,12 @@ permalink: /programming/bfs-breadth-first-search/
 > "PHP is a minor evil perpetrated and created by incompetent amateurs, whereas Perl is a great and insidious evil perpetrated by skilled but perverted professionals."
 (Jon Ribbens)
 
-We start with the generic visitation algorithm and using a queue to represent `S` we obtain breadth-first visitation (Breadth First Search or BFS).
+We start with the generic traversal algorithm and using a queue to represent `S` we obtain breadth-first traversal (Breadth-First Search or BFS).
 
 Nodes are visited by levels, first root, then children of the root, then children of the children.
 
 ```
-algorithm BFS(node r)
+procedure BFS(node r)
    Queue C
    C.enqueue(r)
    while not C.isEmpty() do 

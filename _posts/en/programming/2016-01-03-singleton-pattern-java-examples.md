@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Singleton design pattern"
+title: "The Singleton Design Pattern"
 excerpt: "Some examples of the Singleton pattern"
 category: Programming
 comments: true
