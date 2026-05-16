@@ -16,18 +16,18 @@ At the time of writing, many have not yet upgraded to either Java version 8 or 7
 ```java
 String.format(String format, Object... args)
 ```
-A fairly complete implementation of the good old `printf`, it doesn't print itself, but allows us to apply formatting to the string we're going to print via the classic static `print()` and `println()` methods of `System.out`.
+A fairly complete implementation of the good old `printf`. It doesn't print itself, but allows us to apply formatting to the string we're going to print via the classic static `print()` and `println()` methods of `System.out`.
  
 This alone would be enough to get rid of some of the laziness and possible constraints and upgrade to at least Java version 7.
-Let's look at the signatures above; we have the format parameters and the variable list of args arguments representing the variables we'll pass in succession to be formatted. Regarding the format method from the official Oracle documentation we have the following description
+Let's look at the signatures above; we have the format parameters and the variable list of args arguments representing the variables we'll pass in succession to be formatted. Regarding the format method, from the official Oracle documentation we have the following description:
 
 ```java
 %[argument_index$][flags][width][.precision]conversion
 ```
 where the optional argument `argument_index` is an integer indicating the position of the argument in the list itself. 
-The first argument is referenced with `1$`, the second with `2$`, and so on, pretty easy and intuitive even if you have no experience in C or C++.
+The first argument is referenced with `1$`, the second with `2$`, and so on. It's pretty easy and intuitive even if you have no experience in C or C++.
 
-Optional `flags` is also the character set that modifies the output format, the valid flags depend on the value for the `conversion` argument.
+Optional `flags` is also the character set that modifies the output format. The valid flags depend on the value for the `conversion` argument.
 `width` optional non-negative integer indicates the minimum number of characters to write to the output.
 `precision` non-negative integer is used to limit the number of characters, and the specific behaviour is based on the conversion value.
 As visible `conversion` is the only mandatory argument and indicates the formatting depends on the data type.
@@ -36,7 +36,7 @@ The mechanism is the same as that used in the C language; however, an example ma
 ```java
 String.format ( "%,6.2f", 352.100)
 ```
-formats our number as a float (type), the comma as separator of the decimal part and precision as per the given parameterisation.
+formats our number as a float (type), with the comma as the separator for the decimal part and the precision as per the given parameterisation.
 
 ```java
 352,10

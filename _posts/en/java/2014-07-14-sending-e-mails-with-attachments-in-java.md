@@ -12,7 +12,7 @@ tags: [java, tutorial, en, code]
 permalink: /java/sending-e-mails-attachments-java/
 ---
 
-The javax.mail package is very rich, so at first it can be a bit confusing; we'll see in the code presented in this post how much this complexity pays off in flexibility and potential. True, I don't have a simple mail() method as in other languages, but I do have the tools to create a respectable mail server as well (but we'll go into this in a later post, regarding the simple mail() method we can also create it from the API as we'll see and it will be tailored to our needs)
+The javax.mail package is very rich, so at first it can be a bit confusing; we'll see in the code presented in this post how much this complexity pays off in flexibility and potential. True, I don't have a simple mail() method as in other languages, but I do have the tools to create a respectable mail server as well (but we'll go into this in a later post; regarding the simple `mail()` method, we can also create it from the API as we'll see, and it will be tailored to our needs).
 To create our utility we will refer to the command pattern.
 First we define an abstract class that will contain the mailcap management, which is always useful when we want to manage email notifications from the Java platform.
 
@@ -34,7 +34,7 @@ public class AbstractMailCommand {
 }
 ```
 
-Here follows the code of the main class, the class has specific methods for handling also the sending of mails with smtp authentication.
+Here follows the code of the main class. The class has specific methods for handling the sending of emails with SMTP authentication:
 
 ```java
 import java.io.File;
@@ -213,7 +213,7 @@ public class MailCommandAuthenticator extends Authenticator {
 }
 ```
 
-All that remains now is to show an example of use, but first let us help ourselves with a class that realises the `Singleton` pattern
+All that remains now is to show an example of use, but first let us help ourselves with a class that realises the `Singleton` pattern:
 
 ```java
 public class MailCommandInstantiator {
@@ -232,7 +232,7 @@ public class MailCommandInstantiator {
 }
 ```
 
-And now the call code, this is one of the possible examples illustrating the flexibility of the mini framework we have created and which you will customise according to your needs.
+And now the call code. This is one of the possible examples illustrating the flexibility of the mini framework we have created, which you can customise according to your needs:
 
 ```java
 MailCommand mailCommand = MailCommandInstantiator.getInstance();
