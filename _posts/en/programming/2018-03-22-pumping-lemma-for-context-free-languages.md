@@ -16,7 +16,7 @@ permalink: /programming/pumping-lemma-context-free-languages/
    
 # Lemma 
 
-Given $L$ a CF language, then $\exists n \in \mathbb{N}$, where $n$ is a constant such that $\forall z \in L$, $\vert z \vert \ge n$, we can decompose $z = uvwxy$ such that:
+Given $L$ is a Context-Free (CF) language, there exists a constant $n \in \mathbb{N}$ such that for all $z \in L$ with $\vert z \vert \ge n$, we can decompose $z = uvwxy$ satisfying:
 
 1. $\vert vwx \vert \le n$
 2. $\vert vx \vert > 0$
@@ -24,6 +24,6 @@ Given $L$ a CF language, then $\exists n \in \mathbb{N}$, where $n$ is a constan
 
 # Usage
 
-One uses the lemma to prove that a language **is not** CF. To do so, one must show that for an arbitrary $n$, there exists $z \in L$ with $\vert z \vert \ge n$ such that for every possible decomposition $uvwxy$ satisfying constraints 1 and 2, $uv^iwx^iy \notin L$ for some $i \ge 0$.
+The lemma is used to prove that a language **is not** CF. To do so, one must show that for an arbitrary $n$, there exists $z \in L$ with $\vert z \vert \ge n$ such that for every possible decomposition $uvwxy$ satisfying constraints 1 and 2, $uv^iwx^iy \notin L$ for some $i \ge 0$.
 
-Revision: 2026-04-25
+

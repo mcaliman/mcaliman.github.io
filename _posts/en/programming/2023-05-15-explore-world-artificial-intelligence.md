@@ -22,7 +22,7 @@ Artificial intelligence is revolutionizing the way we work and interact with the
 
 * [Cogram](https://www.cogram.com/) is an AI-based collaboration tool that helps teams work together more efficiently. It uses AI to suggest actions and decisions, helping teams solve problems and make decisions more quickly and effectively.
 
-* [Slide.ai](https://www.slidesai.io/) is an AI-based presentation creation tool that helps users create professional presentations quickly and easily. It uses AI to generate eye-catching layouts and designs, allowing users to focus on the content of their presentation.
+* [SlidesAI](https://www.slidesai.io/) is an AI-based presentation creation tool that helps users create professional presentations quickly and easily. It uses AI to generate eye-catching layouts and designs, allowing users to focus on the content of their presentation.
 
 * [AI Excel Bot](https://aiexcelbot.com/) is an AI-based tool that helps users work with data in Excel more efficiently. It uses AI to perform data analysis, create charts, and generate reports, helping users extract valuable insights from their data.
 
