@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "The Content is not allowed in prolog error"
 excerpt: "Every XML document we work on should be formatted correctly, saved with the right encoding, etc"
@@ -12,8 +12,8 @@ tags: [java, tutorial, en, code]
 ---
 Every XML document we work on should be formatted correctly, saved with the right encoding, etc.
 A classic case is the message "Content is not allowed in prolog" (`SAXParseException`).
-Let's edit the file by hand with a (hexadecimal) editor and remove "ef bb bf" at the top.
-Since we are using Java, it is much better to put a small work-around of just two lines of code:
+You could edit the file by hand with a (hexadecimal) editor and remove "ef bb bf" at the top.
+However, since we are using Java, it is much better to use a small workaround of just two lines of code:
 
 ```java
 Matcher matcher = (Pattern.compile("^([\\W]+)<")).matcher(xmlString.trim());

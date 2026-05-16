@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Java Essential Features"
 excerpt: "The essential features of the Java language that you must know"
@@ -21,18 +21,18 @@ attributes: name, type, value, address, size, lifetime, visibility or scope.
 Primitive types have different behaviour from reference types.
 
 # Parameter Passing
-In Java there is only one mechanism for passing parameters, the pass by value; you will see that despite this apparent limitation, reference types will actually allow you to pass by reference.
+In Java there is only one mechanism for passing parameters: pass-by-value. You will see that despite this apparent limitation, reference types will actually allow you to pass by reference.
 
 # Classes and Objects
 In Java a class encapsulates a set of values or attributes and a set of
-operations, the definition of a class introduces the definition of a new data type and the instances of a class are the objects.
+operations. The definition of a class introduces the definition of a new data type and the instances of a class are the objects.
 
 # Inheritance
 Inheritance allows the derivation of one class from another. The derived classes inherit attributes and methods from the class from which they are derived.
 
 # Interfaces and polymorphism
 Interfaces comprise a set of prototypes of methods and different
-classes can implement the same interfaces. This facilitates polymorphism, you must
+classes can implement the same interfaces. This facilitates polymorphism. You must
 understand how interfaces are used with abstract classes and inheritance to support
 polymorphism.
 
