@@ -1,14 +1,5 @@
 <head>
-<!-- iubenda -->
-  <script type="text/javascript">
-    var _iub = _iub || [];
-    _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"enableFadp":true,"enableLgpd":true,"enableUspr":true,"fadpApplies":true,"floatingPreferencesButtonDisplay":"bottom-right","lang":"en-GB","perPurposeConsent":true,"preferenceCookie":{"expireAfter":180},"siteId":3621451,"usprApplies":true,"whitelabel":false,"cookiePolicyId":31185214, "banner":{ "acceptButtonDisplay":true,"closeButtonDisplay":false,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"ownerName":"trueprogramming.com/","position":"float-top-center","rejectButtonDisplay":true,"showTitle":false,"showTotalNumberOfProviders":true }};
-    </script>
-    <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3621451.js"></script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 
-<!-- end iubenda -->
 
 {% if jekyll.environment == 'production' and site.google_analytics %}
 <script>
@@ -89,6 +80,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={%- for font in site.google_fonts -%}{{ font.name | replace: ' ', '+' }}:wght@{{ font.weights | replace: ',', ';' | remove: ' ' }}{% if forloop.last != true %}&{% endif %}{%- endfor -%}&display=swap">
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/key-takeaways.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/cookie-consent.css' | relative_url }}">
 
 
   {%- if site.plugins contains 'jekyll-feed' or site.gems contains 'jekyll-feed' -%}
