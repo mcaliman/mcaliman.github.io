@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Fluent-API Tutorial"
 excerpt: "Different ways of implementing a Logo Language style turtle in Java."
@@ -10,6 +10,6 @@ published: true
 tags: [java, tutorial, en]
 ---
 
-I started a small educational project on github to show the advantages of the Fluent-API.
+I started a small educational project on GitHub to show the advantages of the Fluent API.
 
 [https://github.com/mcaliman/JavaFluentAPIExamples](https://github.com/mcaliman/JavaFluentAPIExamples)

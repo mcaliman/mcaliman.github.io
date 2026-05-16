@@ -1,6 +1,6 @@
-﻿--- 
+--- 
 layout: post
-title: "How can I include external jar in my Netbeans project"
+title: "How to include external JAR libraries in a NetBeans project"
 excerpt: "How to add external JAR libraries to a NetBeans project"
 category: "Java"
 date:   2017-09-16
@@ -16,7 +16,7 @@ progress by weight."
 >
 > – Bill Gates
 
-An example of build.xml file
+An example of a `build.xml` file:
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -69,9 +69,7 @@ An example of build.xml file
     
     <!--
 
-    There exist several targets which are by default empty and which can be 
-    used for execution of your tasks. These targets are usually executed 
-    before and after some main targets. They are: 
+    Several targets exist that are empty by default and can be used to execute your tasks. These targets are usually executed before and after some main targets. They are: 
 
       -pre-init:                 called before initialization of project properties
       -post-init:                called after initialization of project properties
@@ -97,9 +95,7 @@ An example of build.xml file
             </obfuscate>
         </target>
 
-    For list of available properties check the imported 
-    nbproject/build-impl.xml file. 
-
+    For a list of available properties, check the imported `nbproject/build-impl.xml` file.
     Another way to customize the build is by overriding existing main targets.
     The targets of interest are: 
 
