@@ -12,7 +12,7 @@ tags: [mysql, database, en, code]
 permalink: /mysql/mysql-problem-when-restoring/
 ---
 
-If you encounter problems when restoring from a mysql dump, try setting these variables before running the `source` command
+If you encounter problems when restoring from a MySQL dump, try setting these variables before running the `source` command:
 
 ```sql
 set foreign_key_checks=0;

@@ -16,14 +16,14 @@ Those who need to import users, courses, and user-course associations in an auto
 Scheduling is subject to time settings in the I/O Task administration panel and the launch of a particular URL from cron. 
 For the version under review (`3.6.0.3`), it is not possible to re-launch a (daily) task if it has failed, or if it simply needs to be iterated again. The task is marked as executed. 
 One possibility for re-executing it is to modify the `last_execution` field of the `core_task` table by changing the date to that of the previous day.
-The behaviour is evident by analysing the sources
+The behavior is evident by analyzing the source code:
 
 * docebo/doceboCore/class.module/class.iotask.php
 * docebo/doceboCore/lib/lib.iotask.php
 
 and the tables `core_task`,`core_connection`,`core_connector`.
 
-for better understanding below are the definitions of the tables concerned
+For better understanding, the definitions of the tables concerned are provided below:
 
 # core_task
 
@@ -66,4 +66,4 @@ primary key  (type)
 ) ENGINE=MyISAM default CHARSET=utf8
 ```
 
-I am interested in learning more about the specific behaviour of docebo in this context,please do not hesitate to contact me,the version used of `Docebo` is `3.6.0.3`.
+I am interested in learning more about the specific behavior of Docebo in this context; please do not hesitate to contact me. The version of `Docebo` used is `3.6.0.3`.

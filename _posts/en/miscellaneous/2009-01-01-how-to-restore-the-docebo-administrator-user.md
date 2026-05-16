@@ -14,7 +14,7 @@ permalink: /miscellaneous/restore-docebo-administrator-user/
 
 When importing from CSV files, Docebo sometimes deletes the admin user and it is no longer possible to access the administration panel.
 The bug has been known since 2005, I have found evidence of it on the net and various forums and discussion groups. 
-At the moment I have not found any official patches that solve the problem, one of the tips I have often found is to restore a backup of the database. A painless solution is to restore the admin user with the instructions below.
+At the moment I have not found any official patches that solve the problem; however, a painless solution is to restore the admin user using the instructions below:
 
 ```sql
 insert into core_user (
@@ -56,9 +56,9 @@ insert into core_group_members (idst,idstMember,filter)
 values ('3',last_insert_id(),'');
 ```
 
-The anomaly occurs randomly and is attributable in my opinion to the use of the `MyISAM` engine instead of `InnoDB`.
-The instructions must be executed line by line in the given order and only if the admin user is absent from the core_user and related tables.
-Below are the definitions of the affected tables
+The anomaly occurs randomly and is attributable, in my opinion, to the use of the `MyISAM` engine instead of `InnoDB`.
+The instructions must be executed line by line in the given order, and only if the admin user is absent from the core_user and related tables.
+Below are the definitions of the affected tables:
 
 # core_user
 
@@ -95,4 +95,4 @@ unique key unique_relation (idst,idstMember)
 ) ENGINE=MyISAM default CHARSET=utf8
 ```
 
-I am interested in learning more about the specific behaviour of docebo in this context,please do not hesitate to contact me,the version used of `Docebo` is `3.6.0.3`.
+I am interested in learning more about the specific behavior of Docebo in this context; please do not hesitate to contact me. The version of `Docebo` used is `3.6.0.3`.
