@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Data Science Origins And Motivations"
 excerpt: "All of us are averse to uncertainty"
@@ -13,7 +13,7 @@ tags: [data-science, analytics, en]
   
 The purpose of data analysis is to reduce uncertainty. 
 By reducing uncertainty, human beings can make wise decisions. 
-In the business world (and beyond), informed decisions are based on the analysis of appropriate activities that are measurable. The purpose of these activities is to try to increase revenues, maximise profitability and reduce risks
+In the business world (and beyond), informed decisions are based on the analysis of appropriate activities that are measurable. The purpose of these activities is to try to increase revenues, maximise profitability and reduce risks.
 
 >All of us are averse to uncertainty
 
@@ -23,7 +23,7 @@ Of course, in business as in life, almost all major decisions must still be made
 
 This is normal; it is the nature of life and leadership. 
 
-Although we would all like to be certain, by accepting partial ignorance, we acknowledge to ourselves how much we do not know, this is a form of awareness that leads to better decision-making.
+Although we would all like to be certain, by accepting partial ignorance, we acknowledge to ourselves how much we do not know. This is a form of awareness that leads to better decision-making.
 
 >In fact, uncertainty is essential to avoid excessive risks.
 

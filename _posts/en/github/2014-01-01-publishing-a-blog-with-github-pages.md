@@ -12,16 +12,16 @@ tags: [github, pages, en, code]
 permalink: /github/publishing-website-github-pages/
 ---
 
-If you want to publish the site at `http://USERNAME.github.com`, you need to create a repository (from your GitHub account) 
-called `USERNAME.github.com`, in my case `mcaliman.github.com`
+If you want to publish the site at `http://USERNAME.github.io`, you need to create a repository (from your GitHub account) 
+called `USERNAME.github.io`, in my case `mcaliman.github.io`.
 
 ```bash
 GITHUB_ACCOUNT=USERNAME
-cd ${GITHUB_ACCOUNT}.github.com
+cd ${GITHUB_ACCOUNT}.github.io
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin git@github.com:${GITHUB_ACCOUNT}/${GITHUB_ACCOUNT}.github.com.git
+git remote add origin git@github.com:${GITHUB_ACCOUNT}/${GITHUB_ACCOUNT}.github.io.git
 git push origin master
 ```
 
