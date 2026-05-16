@@ -16,7 +16,7 @@ tags: [java, oop, en, code]
 >
 > <cite>Primo Levi and Tullio Regge, Dialogue, 1984</cite>
 
-You can locate the jar for the `Base64` class (for example) with the code.
+You can locate the jar for the `Base64` class (for example) with the following code:
 
 ```java
 System.out.println(Base64.class.getProtectionDomain().getCodeSource().getLocation());
