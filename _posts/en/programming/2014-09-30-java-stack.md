@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [data-structures, algorithms, en, peer-review-2026-05-10]
+tags: [data-structures, algorithms, en]
 permalink: /programming/stack/
 ---
 

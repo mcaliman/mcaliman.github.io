@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2026-04-27
 published: true
-tags: [computer-science, theory, en, Updated]
+tags: [computer-science, theory, en, Updated, math]
 permalink: /programming/pushdown-automata-pda-context-free/
 ---
    

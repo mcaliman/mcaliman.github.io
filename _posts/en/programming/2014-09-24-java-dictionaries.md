@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [programming, theory, en, peer-review-2026-05-10]
+tags: [programming, theory, en]
 ---
 
 In older releases of the Java language, the dictionary data type was realised from the `Dictionary<K,V>` class of the `java.util` package. 
