@@ -29,7 +29,7 @@ We construct the PDA $M$ equivalent to the CFG $G$ transformed to Greibach norma
 In practice, once we have transformed our grammar $G$ into Greibach normal form and called $G' = \langle T, N, P, S \rangle$ the latter, the equivalent stack automaton $M$ is:
 $M = \langle \{q\}, T, N, \delta, q, S \rangle$ 
 
-where $\delta$ is constructed transition by transition starting with each individual production according to the rule in step 5. i.e. for each production that will necessarily have the form $X \to \sigma \gamma$, we construct a transition $\langle q, \gamma \rangle \in \delta(q, \sigma, X)$ (i.e., $(q, \sigma, X) \to \langle q, \gamma \rangle$).
+where $\delta$ is constructed transition by transition starting with each individual production according to the rule in step 5. Specifically, for each production, which will necessarily have the form $X \to \sigma \gamma$, we construct a transition $\langle q, \gamma \rangle \in \delta(q, \sigma, X)$ (i.e., $(q, \sigma, X) \to \langle q, \gamma \rangle$).
 
 It follows that:
 

@@ -17,7 +17,7 @@ permalink: /programming/pushdown-automata-pda-context-free/
 We will start from the assumption that the following two statements apply:
 
 * It is always possible to construct an equivalent CFG from a PDA.
-* For a PDA, by increasing the symbols in the stack, it is possible to reduce the automaton to one with only one state (Given a PDA $M$, $\exists$ PDA $M'$ with $Q=\{q\}$ such that $L(M)=L(M')$, i.e., an equivalent PDA with only one state capable of recognizing the same language).
+* For any PDA, by expanding the stack alphabet, it is possible to reduce the automaton to an equivalent one with a single state (Given a PDA $M$, $\exists$ PDA $M'$ with $Q=\{q\}$ such that $L(M)=L(M')$, i.e., an equivalent PDA with only one state capable of recognizing the same language).
 
 So for the construction of the equivalent context-free grammar, we start with a first step of simplifying the stack automaton, making it a single-state automaton.
 We can construct the CFG $G = \langle T, N, P, S \rangle$ equivalent to the PDA $M = \langle \{q\}, \Sigma, \Gamma, \delta, q, Z \rangle$ with the following procedure:
@@ -29,7 +29,7 @@ We can construct the CFG $G = \langle T, N, P, S \rangle$ equivalent to the PDA 
    1. $X \to \sigma \gamma$ $\iff$ $\langle q, \gamma \rangle \in \delta(q, \sigma, X)$ 
    2. $X \to \gamma Z$ $\iff$ $\langle q, \gamma \rangle \in \delta(q, \epsilon, X)$
 
-More simply by reviewing all the transitions of the automaton:
+To simplify, by reviewing all the transitions of the automaton:
 
 * if $(q, \sigma, X) \to \langle q, \gamma \rangle$, then we add $X \to \sigma \gamma$ to the productions of $G$
 * if $(q, \epsilon, X) \to \langle q, \gamma \rangle$, then we add $X \to \gamma Z$ to the productions of $G$
@@ -42,4 +42,4 @@ $$ \forall u \in \Sigma^\*, \langle q, u, Z \rangle \vdash^\* \langle q, \epsilo
 
 [^footnote1]: It can be proved by induction.
 
-Revision: 2026-04-25
+
