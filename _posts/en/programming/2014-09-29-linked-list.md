@@ -12,15 +12,15 @@ tags: [data-structures, algorithms, en, code]
 permalink: /programming/linked-list/
 ---
   
-The basic constituents of a linked structure are the records, which like array cells are numbered and each contains a collection of objects. The numbers associated with the records are their in-memory addresses (thus global within the programme and not local as in the case of arrays).
+The basic constituents of a linked structure are the records, which like array cells are numbered and each contains a collection of objects. The numbers associated with the records are their in-memory addresses (thus global within the program and not local as in the case of arrays).
 Memory addresses are not necessarily consecutive and are constructed dynamically.
 
 If a record `A` contains the address of another record `B` we will say that there is a link between `A` and `B` made by a pointer.
 Pointers allow you to explore a linked structure by jumping from record to record, and there must be a record from which you can reach all the others. 
 Such a record allows easy insertion and deletion of elements. The structure is updated via pointers (much more versatile than arrays).
 
-strong property: it is possible to add or remove records to a linked structure
-weak property: the addresses of records in a linked structure are not necessarily consecutive
+**Strong property**: It is possible to add or remove records to a linked structure.
+**Weak property**: The addresses of records in a linked structure are not necessarily consecutive.
 
 To delete records if I do not already have an address, however, I must perform a search.
 
@@ -62,10 +62,9 @@ delete(key k) T(n)=O(n)
 search(key k) -> elem T(n)=O(n)
 if list = null then return null
 else 
-scan the structure by jumping from record to record with p<-p.next until it becomes p=list 
-checking if any p has key k if so we return the element found otherwise `null
+scan the structure by jumping from record to record with `p <- p.next` until it becomes `p == list`, checking if any `p` has key `k`; if so, we return the element found, otherwise `null`.
 ```
-To realise an implementation in Java from the specification seen above we first need to create a class to model the records, but to do this we also need to model the information content with an Info or Tuple class, let us simplify at this early stage and assume that both the key (integer) and the value (string) are attributes of the record class itself. 
+To realize an implementation in Java from the specification seen above, we first need to create a class to model the records. However, to do this we also need to model the information content with an `Info` or `Tuple` class. Let us simplify at this early stage and assume that both the key (integer) and the value (string) are attributes of the record class itself. 
 
 In other words, we avoid handling something like this
 ```java

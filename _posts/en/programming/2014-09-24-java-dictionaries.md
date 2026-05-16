@@ -11,7 +11,7 @@ published: true
 tags: [programming, theory, en, code]
 ---
 
-In older releases of the Java language, the dictionary data type was realised from the `Dictionary<K,V>` class of the `java.util` package. 
+In older releases of the Java language, the dictionary data type was realized from the `Dictionary<K,V>` class of the `java.util` package. 
 
 The `Dictionary` class is the abstract parent of `Hashtable`, which associates keys with values. 
 
@@ -23,11 +23,11 @@ Given a dictionary and a key, the associated element can be retrieved. Any non `
 
 By default, the `equals` method must be implemented by this class to decide whether two keys are equal.
 
-Although not yet deprecated `Dictionary` can be considered obsolete now, since `Map` is the standard interface for this kind of data collection. `Dictionary` remains since the concrete class `HashTable` is derived directly from it.
+Although not yet deprecated, `Dictionary` can be considered obsolete now, as `Map` is the standard interface for this kind of data collection. `Dictionary` remains because the concrete class `HashTable` is derived directly from it.
 
 A lot of code still uses `HashTable`, hence its survival, necessary for backward compatibility.
 
-However, `Dictionary` has been "freshened up" by Sun now Oracle by redesigning it with generics, and by reviewing the javadoc, we can get a pretty good idea of the signatures of its main methods.
+However, `Dictionary` has been "freshened up" by Sun (now Oracle) by redesigning it with generics, and by reviewing the Javadoc, we can get a pretty good idea of the signatures of its main methods.
 
 ```java 
 abstract Enumeration<V> elements() 
@@ -62,11 +62,11 @@ removes the key and the corresponding value from the dictionary
 ```java
 abstract int size() 
 ```
-returns the number of distinct elements contained in the dictionary (i.e. the number of keys).
+returns the number of distinct elements contained in the dictionary (i.e., the number of keys).
 
 These are the classic methods of a generic data structure of the dictionary type, let's delve into the theoretical aspect by brushing up on some notions:
 
-A dictionary is a collection of elements to which keys taken from a totally ordered universe are associated. The notion of a datatype is used to describe the operations of interest on a collection, in other words it specifies what an operation must do, not how the operation can be carried out, this corresponds to the concept of interface in the Java language.
+A dictionary is a collection of elements to which keys taken from a totally ordered universe are associated. The notion of a datatype is used to describe the operations of interest on a collection; in other words, it specifies what an operation must do, not how the operation can be carried out; this corresponds to the concept of interface in the Java language.
 
 A pseudolanguage specification might be, for example, as follows
 
@@ -85,15 +85,15 @@ A set `S` of pairs (`element`,`key`).
 more formally, borrowing set notions (because `S` is a set) we have 
 `S={ (e,k) | e&isin;element,k&isin;key }`
 
-1. `insert(e,k)` realizes `S = S&#8746;(e,k)`
-2. `delete(k)` realises `S = S&minus;(e,k) if (e,k)&isin;S`
-3. `search(k) -> e` realises if `k` in `S` then returns `e`, `null` otherwise.
+1. `insert(e,k)` realizes `S = S ∪ {(e,k)}`
+2. `delete(k)` realizes `S = S - {(e,k)}` if `(e,k) ∈ S`
+3. `search(k) -> e` realizes if `k` in `S` then returns `e`, `null` otherwise.
            
 Today in fact the `HashTable` class is no longer used, collections today are much more structured, clean and organic.
 
-The place of `Dictionary` has been taken by `Map<K,V>`, which is an interface as opposed to `Dictionary` which is instead an abstract class,`Map` is therefore much more flexible from the point of view of OOP, or at least the OOP adopted by the Java language (it inherits multiple interfaces only from the point of view of interfaces at release 7)
+The place of `Dictionary` has been taken by `Map<K,V>`, which is an interface as opposed to `Dictionary`, which is instead an abstract class. `Map` is therefore much more flexible from the point of view of OOP, or at least the OOP adopted by the Java language.
 
-Referring to its javadoc we have the methods
+Referring to its Javadoc, we have the methods:
 
 ```java
 void clear()

@@ -11,12 +11,12 @@ published: true
 tags: [programming, theory, en]
 permalink: /programming/indexed-structures/
 ---
-Indexed structures are collections of numbered cells that may contain elements of a predetermined type. We will assume that in an array of size h the indices can range from 0 to h-1 or 1 to h.
+Indexed structures are collections of numbered cells that may contain elements of a predetermined type. We will assume that in an array of size `h`, the indices can range from `0` to `h-1` or `1` to `h`.
 
 Normally, two properties are defined, one commonly called strong and the other weak.
 
-strong property: the cell indices of an array are consecutive numbers.
-weak property: no new cells can be added to an array.
+**Strong property**: The cell indices of an array are consecutive numbers.
+**Weak property**: No new cells can be added to an array.
 
 A possible implementation of an ordered array is shown below (and is an implementation of the dictionary data type)
 
@@ -48,6 +48,6 @@ search(key k) -> elem T(n) = O(log n)
 1. Runs the binary search algorithm on S to check whether S contains k
 2. If it finds returns element otherwise null
 
-In the Java language the natural implementation is provided by arrays, which can also contain objects beyond the basic types, so even pairs or tuples of the type `<K,V>` i.e. pairs (key,value)
+In the Java language, the natural implementation is provided by arrays, which can also contain objects beyond basic types, such even pairs or tuples of type `<K,V>` (i.e., pairs of key and value).
 
-In addition to arrays, the basic structure of the language, we can of course use lists, e.g. ArrayLists, which adopt precisely this type of philosophy plus a few tricks to make the implementation more efficient.
+In addition to arrays, the basic structure of the language, we can of course use lists (e.g., `ArrayList`), which adopt precisely this philosophy plus a few tricks to make the implementation more efficient.

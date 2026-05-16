@@ -31,6 +31,6 @@ the algorithm keeps instant by instant in `S` the nodes representing the branch 
 
 Concerning costs in terms of space occupied in memory and time for execution we have the following theorem.
 
-Theorem: The generic visiting algorithm applied to the root of a tree with n n nodes terminates in `O(n)` iterations, and the space used is `O(n)`.
+Theorem: The generic visiting algorithm applied to the root of a tree with $n$ nodes terminates in `O(n)` iterations, and the space used is `O(n)`.
 
 This is self-evident in itself and is formally provable. Demonstrating it is beyond the scope of this post, which is only to lay the foundations for subsequent posts which explore the theoretical and practical aspects in more detail.
