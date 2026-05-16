@@ -22,7 +22,7 @@ T var = value ;
 
 Le variabili in un programma memorizzano i dati che vengono elaborati durante l'esecuzione.
 Durante l'esecuzione del programma i valori delle variabili vengono modificati (altrimenti sarebbero costanti).
-Le variabili nascono, vivono e muoiono; è nostro compito prendercene cura, della loro vita, della loro visibilità (scope).
+Le variabili nascono, vivono e muoiono; è nostro compito gestirne il ciclo di vita e la visibilità (scope).
 Trattiamole bene, diamo loro un nome di tutto rispetto per far sì che non ci odino e non ci facciano passare notti insonni.
 Prima che una variabile possa essere utilizzata, deve essere dichiarata; la dichiarazione di una variabile è necessaria per riservare uno spazio di memoria in cui scrivere il suo valore. La dichiarazione definisce il tipo della variabile.
 

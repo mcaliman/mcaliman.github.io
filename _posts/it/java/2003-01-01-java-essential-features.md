@@ -11,11 +11,10 @@ published: true
 tags: [java, tutorial, it]
 ---
 
-Se vuoi che Java diventi il tuo linguaggio di programmazione principale, dovresti familiarizzare con i seguenti aspetti essenziali, che sono comuni a tutti i linguaggi di programmazione orientati agli oggetti:
+Se vuoi che Java diventi il tuo linguaggio di programmazione principale, dovresti familiarizzare con i seguenti concetti fondamentali dell'Object-Oriented Programming (OOP):
 
 # Variabili
-Le variabili sono la base di qualsiasi linguaggio di programmazione. Le variabili hanno i seguenti
-attributi: nome, tipo, valore, indirizzo, dimensione, durata, visibilità o scope.
+Le variabili rappresentano le fondamenta di ogni linguaggio. Possiedono i seguenti attributi: nome, tipo, valore, indirizzo, dimensione, durata, visibilità o scope.
 
 # Tipi primitivi e tipi di riferimento
 I tipi primitivi hanno un comportamento diverso rispetto ai tipi di riferimento.
