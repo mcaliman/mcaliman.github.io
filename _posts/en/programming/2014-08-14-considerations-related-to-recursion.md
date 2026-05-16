@@ -8,7 +8,7 @@ comments: true
 share: false
 modified: 2024-07-11
 published: true
-tags: [programming, theory, en, peer-review-2026-05-10]
+tags: [programming, theory, en]
 permalink: /programming/considerations-recursion/
 ---
 
