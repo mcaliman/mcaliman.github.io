@@ -12,15 +12,16 @@ tags: [computer-science, theory, en]
 ---
 
 # Why learn Python? 
-It is great for implementing or simply describing algorithms, in several university courses it has been chosen for its cleanliness, if you think about it, transforming pseudo-code that is normally used into Python code is quite straightforward.
-Python is also widely used in science, I recommend a few books on the subject: 
+It is great for implementing or simply describing algorithms; in several university courses, it has been chosen for its cleanliness; in fact, transforming pseudo-code that is normally used into Python code is quite straightforward.
+Python is also widely used in science; I recommend a few books on the subject: 
 
 * Python for Data Analysis, by Wes McKinney Ed. O'Reilly Media.
-* Bioinformatics Programming Using Python "Natural Language Processing with Python
+* Bioinformatics Programming Using Python.
+* "Natural Language Processing with Python."
 
-* Why learn the Java language? 
-Because it's widespread, clean and completely OOP despite Edsger Dijkstra's thought "Object-oriented programming is an exceptionally bad idea which could only have originated in California." 
+# Why learn the Java language? 
+Because it's widespread, clean, and completely OOP, despite Edsger Dijkstra's thought: "Object-oriented programming is an exceptionally bad idea which could only have originated in California." 
 
 # Why learn C++? 
-C++ is the prince of languages; you can use it to build almost anything. The Operating Systems, compilers, interpreters, and Virtual Machines we use to run our code are primarily written in C or C++.
+C++ is the prince of languages; you can use it to build almost anything. The operating systems, compilers, interpreters, and Virtual Machines we use to run our code are primarily written in C or C++.
 
