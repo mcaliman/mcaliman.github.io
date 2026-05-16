@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Dropdownboxes are easy with JSF 2.2!"
+title:  "Dropdownboxes are easy with JSF 2.3!"
 excerpt: "Implementing dropdown select boxes with JSF 2.2"
 category: "Java"
 date:   2014-12-16
@@ -12,8 +12,8 @@ tags: [java, jsf, en, code]
 permalink: /java/dropdownboxes-easy-jsf-22/
 ---
 
-Making direct mappings between a `Map` and a dropdown box with Java Server Faces 2.3 is immediate and easy.
-Given a sample Session Bean below
+Making direct mappings between a `Map` and a dropdown box with Java Server Faces 2.3 is simple and immediate.
+Given the sample Session Bean below:
 
 ```java
 import java.io.Serializable;
@@ -49,7 +49,7 @@ public class ThatBean implements Serializable {
     }
 }
 ```
-The code in the jsf xhtml file is reduced to just a few lines
+The code in the JSF XHTML file is reduced to just a few lines:
 
 ```xml
 <h:selectOneMenu  value="#{thatBean.thatId}">
@@ -57,9 +57,9 @@ The code in the jsf xhtml file is reduced to just a few lines
 </h:selectOneMenu>
 ```
 
-the mapping is automatic with key and value of the option tag of the select tag.
-However, the automation can influence quite a bit the way we populate our `Map`.
-For finer control we can use the following form
+The mapping is automatic with key and value of the option tag of the select tag.
+However, the automation can significantly influence the way we populate our `Map`.
+For finer control we can use the following form:
 
 ```xml
 <h:selectOneMenu  value="#{thatBean.thatId}">
@@ -71,7 +71,7 @@ For finer control we can use the following form
 </h:selectOneMenu>
 ```
 
-In the simplest cases, if we don't need a `Map` and I can hard code the values
+In the simplest cases, if we don't need a `Map` and can hard-code the values:
 
 ```xml
 <h:selectOneMenu  value="#{thatBean.thatId}">
@@ -80,7 +80,7 @@ In the simplest cases, if we don't need a `Map` and I can hard code the values
 </h:selectOneMenu>
 ```
 
-Here is the full text of the example page.
+Below is the full text of the example page:
 
 ```html
 <?xml version='1.0' encoding='UTF-8' ?>
@@ -115,5 +115,5 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
    </h:body>
 </html>
 ```
-One clarification, the `@SessionScoped` and `@Named` annotations replace the old and deprecated `@ManagedBean` and `@SessionScoped`
+One clarification, the `@SessionScoped` and `@Named` annotations replace the old and deprecated ones,
 which we can obviously continue to use for the moment.

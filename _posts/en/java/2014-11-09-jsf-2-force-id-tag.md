@@ -15,25 +15,25 @@ permalink: /java/jsf-2-forcing-tag-generated/
 When using tags like `inputHidden` or `form`, i.e. standard HTML components of the JSF, the `id` attributes of the corresponding 
 HTML tag are automatically generated according to precise rules.
 
-e.g.
+e.g.:
 
-``xml
+```xml
 <h:form id="form1">
    <t:inputHidden id="field1"/>
 </h:form>
 ```
 
-gives rise to this HTML code
+gives rise to this HTML code:
 
 ```html
 <input type="hidden" name="form:field1"/>
 ```
 
-Obviously we don't have to value the `id` attribute, the Java Server Faces rendering takes care of automatically generating appropriate and unique ones.
+Obviously, we don't have to provide a value for the `id` attribute; the Java Server Faces rendering takes care of automatically generating appropriate and unique ones.
 
 However, when we want to reference a given component by its `id`, whether in CSS or Javascript, this behaviour prevents us from doing so (at the very least, it makes life difficult, think of referencing something like `#form:field1` with JQuery, escape?).
 
-In cases like this we can declare the `id` and at the `form` level specify the `prependId="false"` attribute. Applied to the code seen above we have
+In cases like this we can declare the `id` and at the `form` level specify the `prependId="false"` attribute. Applied to the code seen above, we have:
 
 ```xml
 <h:form id="form1" prependId="false">
@@ -41,7 +41,7 @@ In cases like this we can declare the `id` and at the `form` level specify the `
 </h:form>
 ```
 
-which will result in 
+which will result in: 
 
 ```html
 <input type="hidden" name="field1"/>
