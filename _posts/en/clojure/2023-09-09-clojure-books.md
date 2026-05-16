@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "A list of books on Clojure"
 excerpt: "A list of Clojure books that I think are great"
@@ -53,12 +53,11 @@ Here is a list of Clojure books that I think are great.
    * Copyright © 2010
 
 # Quick Clojure: Effective Functional Programming
-   Mark McDonnell
-   Publisher: Apress
-   Copyright © 2017
+   * Author: Mark McDonnell
+   * Publisher: Apress
+   * Copyright © 2017
 
 # The Joy of Clojure
-   MICHAEL FOGUS
-   CHRIS HOUSER
-   Publisher: Manning Publications Co.
-   Copyright © 2011
+   * Author: Michael Fogus and Chris Houser
+   * Publisher: Manning Publications Co.
+   * Copyright © 2011
