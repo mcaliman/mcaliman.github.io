@@ -12,7 +12,7 @@ tags: [data-structures, algorithms, en, code]
 permalink: /programming/stack/
 ---
 
-One of the most recurring basic types is the Stack; a pseudolanguage specification is given below.
+One of the most recurring basic types is the stack; a pseudolanguage specification is given below.
 
 ```
 type: Stack
@@ -47,7 +47,7 @@ Deque defines methods for making both a Stack and a Queue, I refer you to the ja
 * For the `pop()` we have `removeFirst()`.
 * For `peek()` or `top()` instead `peekFirst()`.
 
-`Deque<E>` implements the `Queueue<E>` interface, an interface also implemented by the classes
+`Deque<E>` implements the `Queue<E>` interface, an interface also implemented by the classes:
 `AbstractQueue`, `ArrayBlockingQueue`, `ArrayDeque`, `ConcurrentLinkedDeque`, `ConcurrentLinkedQueue`, `DelayQueue`, `LinkedBlockingDeque`, `LinkedBlockingQueue`, `LinkedList`, `LinkedTransferQueue`, `PriorityBlockingQueue`, `PriorityQueue`, `SynchronousQueue`.
 
 The easiest way is to use the old `Stack` class from `java.util`, but you won't get much benefit from it; it is derived from the `Vector` class and has been available since version 1.0 of the JDK
@@ -63,7 +63,7 @@ while (!lifo.isEmpty()) {
 }
 ```
 
-The recommended class is `ArrayDeque<E>` a simple use case is as follows
+The recommended class is `ArrayDeque<E>`; a simple use case is as follows:
 
 ```java
 Deque<Integer> stack = new ArrayDeque<Integer>();

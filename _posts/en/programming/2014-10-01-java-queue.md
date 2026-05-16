@@ -11,7 +11,7 @@ published: true
 tags: [data-structures, algorithms, en, code]
 permalink: /programming/queue/
 ---
-Let us return to the discussion of elementary data structures. In previous posts we have looked at indexed structures, linked structures and Stacks, another of the most common basic types is the Queue, a pseudolanguage specification of which is given below.
+Let us return to the discussion of elementary data structures. In previous posts, we have looked at indexed structures, linked structures, and stacks; another of the most common basic types is the queue, a pseudolanguage specification of which is given below.
 ```
 type Queue
 data
@@ -35,8 +35,8 @@ public interface Queue<E> {
 
 Again, we can implement this in various ways, either using indexed or linked structures. 
 
-As with the Stack, the most natural and fastest way is to use the concrete classes derived from the Java `Deque` interface.
-Again, we can use the methods of Deque related to its behaviour as Queue.
+As with the stack, the most natural and fastest way is to use the concrete classes derived from the Java `Deque` interface.
+Again, we can use the methods of `Deque` related to its behavior as a queue.
 
 ```java
 addLast(e)

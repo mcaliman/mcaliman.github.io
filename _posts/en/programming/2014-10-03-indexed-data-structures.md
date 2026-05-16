@@ -13,10 +13,10 @@ permalink: /programming/structures-indexed-depth/
 ---
 
 Let's pick up the post on indexed structures for a closer look.
-We have seen that the **Java Collection Framework** already provides us with practically any structure we may need for our work. Have you ever been curious to see how these structures are implemented? The source code is public, you can download it along with the JDK with every release, you'll notice that there is often nothing science fiction about the implementation of structures like `ArrayList`, for example, the implementation spec seen in pseudocode in the post on indexed structures before this one doesn't differ much in substance. What makes the difference are the optimisations.
+We have seen that the **Java Collection Framework** already provides us with practically any structure we may need for our work. Have you ever been curious to see how these structures are implemented? The source code is public; you can download it along with the JDK with every release. You'll notice that there is often nothing "science fiction" about the implementation of structures like `ArrayList`; for example, the implementation spec seen in pseudocode in the post on indexed structures before this one doesn't differ much in substance. What makes the difference are the optimizations.
 
 Let us go into detail about the pseudocode of the class ArrayOrdered, and see how to develop some real implementation ideas in Java.
-We will do this without the illusion of realising something better than the Sun/Oracle implementation is intended.
+We will do this without the illusion of realizing something better than the Sun/Oracle implementation.
 The insert and delete operations include the reallocation phase of the array, so how do we perform these operations in reality?
 
 A somewhat pedantic first version might be as follows. Let's assume for simplicity of exposition that the array is of simple `int` and we don't have to handle a tuple (element, key).
@@ -24,8 +24,8 @@ A somewhat pedantic first version might be as follows. Let's assume for simplici
 ```java
 public class Realloc {
 
-    int n ;
-    int[] S ;
+    int n;
+    int[] S;
     
     public Realloc(){
         n = 10;
@@ -75,9 +75,9 @@ public class Realloc {
 }
 ```
 
-The effect is as desired, using a backing array `t`, the `main()` method shows some test calls.
+The effect is as desired; using a backing array `t`, the `main()` method shows some test calls.
 
-We can use something ready-made like `System.arraycopy()` to achieve a more compact release. For simplicity, I'm only reporting the methods involved in refactoring
+We can use something ready-made like `System.arraycopy()` to achieve a more compact version. For simplicity, I am only reporting the methods involved in the refactoring:
 
 ```java
 public void realloc(){
