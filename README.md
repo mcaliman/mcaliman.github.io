@@ -1,6 +1,8 @@
 # True Programming - Massimo Caliman's Blog
 
-Benvenuto nel repository del blog tecnico **True Programming** di Massimo Caliman. Questo file raccoglie tutte le informazioni strutturali, le configurazioni e le procedure di sviluppo utili come base di contesto per futuri aggiornamenti e interazioni.
+Benvenuto nel repository del blog tecnico **True Programming** di Massimo Caliman. Questo file raccoglie le informazioni di base sulla struttura del progetto e sui comandi per lo sviluppo in locale.
+
+Per tutte le specifiche di lavoro, le convenzioni del codice, la stesura dei post e il workflow Git, fare riferimento al file [spec.md](spec.md).
 
 ---
 
@@ -58,80 +60,15 @@ bundle exec jekyll build
 
 ---
 
-## 4. Linee Guida per i Post e Contenuti
+## 4. Specifiche e Linee Guida di Lavoro
 
-### Nomenclatura File
-I file dei post in `_posts/en/` o `_posts/it/` devono seguire lo standard di Jekyll:
-```
-YYYY-MM-DD-titolo-post.md
-```
-Ad esempio: `2014-10-12-depth-first-search-tree.md`.
+Tutte le specifiche operative dettagliate sono documentate in:
+👉 **[spec.md](spec.md)**
 
-### Front Matter Standard per i Post
-Ogni post deve includere le seguenti chiavi nel Front Matter (delimitato da `---`):
-
-```yaml
----
-layout: post
-title:  "Titolo del Post"
-excerpt: "Una breve descrizione dell'articolo per l'anteprima"
-category: Programming # Categoria principale (es. Programming, Linux, Systems)
-date:   YYYY-MM-DD
-comments: true
-share: false
-modified: YYYY-MM-DD # Data dell'ultima modifica (se presente)
-published: true
-tags: [data-structures, algorithms, en, code] # Tag rilevanti per la categorizzazione
-permalink: /programming/nome-univoco-url/
----
-```
-
-### Supporto MathJax
-Il supporto per le formule matematiche è abilitato globalmente in `_config.yml` (`mathjax.enable: true`). È possibile scrivere formule matematiche utilizzando la sintassi LaTeX standard all'interno dei post, racchiuse tra `$ ... $` (inline) o `$$ ... $$` (blocco).
-
----
-
-## 5. Generazione Automatica del Curriculum (CV/Resume)
-
-Il curriculum di Massimo Caliman viene generato in formato Word (`.docx`) a partire dai dati YAML sincronizzati/esportati da LinkedIn situati nella cartella `_data/linkedin/`.
-
-All'interno della cartella `scripts/` sono presenti i seguenti generatori:
-
-* **Curriculum Standard**:
-  ```bash
-  ruby scripts/generate_resume.rb
-  ```
-  Genera: `Massimo_Caliman_Resume.docx`
-* **Curriculum Advanced**:
-  ```bash
-  ruby scripts/generate_resume_adv.rb
-  ```
-  Genera: `Massimo_Caliman_Resume_Advanced.docx`
-* **Curriculum Europass**:
-  ```bash
-  ruby scripts/generate_resume_eu.rb
-  ```
-  Genera: `Massimo_Caliman_Resume_Europass.docx`
-
-*Nota: Assicurarsi di aver eseguito `bundle install` prima di lanciare gli script, in quanto richiedono la gemma `caracal` per la creazione dei file Word.*
-
----
-
-## 6. Flusso di Deploy e Pubblicazione
-
-Il sito viene ospitato ed erogato tramite **GitHub Pages**. Il flusso di pubblicazione sul branch principale (`master` o branch di produzione) avviene tramite i comandi Git tradizionali:
-
-```bash
-# Aggiungere le modifiche
-git add --all .
-
-# Eseguire il commit
-git commit -m "Messaggio descrittivo delle modifiche"
-
-# Eseguire il push (prestare attenzione a non forzare inutilmente sul branch principale)
-git push origin docs-update-2026-05-23
-```
-
-> [!IMPORTANT]
-> Non utilizzare l'opzione `--force` o `--force-with-lease` se non strettamente necessario o se si lavora in team, per evitare la sovrascrittura di modifiche concorrenti.
+Consultare questo file per:
+* **Workflow Git**: Convenzioni sui branch, commit e deploy su GitHub Pages.
+* **Linee guida per la creazione di nuovi post**: Struttura delle cartelle, standard di Front Matter, tag obbligatori.
+* **MathJax**: Sintassi per formule matematiche e pseudocodice.
+* **Generazione dei Curriculum**: Istruzioni per l'uso dei generatori automatici a partire da file YAML LinkedIn.
+* **Customizzazione Grafica**: Linee guida per layout e CSS.
 
