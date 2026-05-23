@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Alphabets, Symbols, Strings and Languages"
+title: "Alphabets, Symbols, Strings and Languages"
 excerpt: "What are alphabets, symbols and strings from the point of view of theoretical computer science"
-permalink: /programming/alphabets-symbols-strings-languages/
 category: Programming
-date:   2018-03-20
+date: 2018-03-20
 comments: true
 share: false
 modified: 2026-04-27
 published: true
-tags: [computer-science, theory, en, Updated, math]
+tags: [computer-science, theory, en, Updated, math, code]
+permalink: /programming/alphabets-symbols-strings-languages/
 ---
+
 
 > Kleeneliness is next to Gödeliness  
 

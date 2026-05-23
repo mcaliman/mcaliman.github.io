@@ -1,8 +1,9 @@
 ---
 layout: post
-title: How can you limit inheritance for a class?
+title: "How can you limit inheritance for a class?"
 excerpt: "Techniques to restrict class inheritance in Java"
-category: "Java"
+category: Java
+date: 2016-11-01
 comments: true
 share: false
 modified: 2024-07-11
@@ -10,6 +11,7 @@ published: true
 tags: [java, oop, en, code]
 permalink: /java/can-you-limit-inheritance/
 ---
+
 One of the questions you might get at an interview or a certification is: How can you limit inheritance for a class?
 The commonly accepted answers to this question are:
 

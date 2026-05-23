@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "Functions that implement cycles in R"
+title: "Functions that implement cycles in R"
 excerpt: "Using apply, sapply and lapply to implement loops in R"
-category: R 
-date:   2016-03-01
-comments: false
+category: R
+date: 2016-03-01
+comments: true
+share: false
 modified: 2024-07-11
 published: true
 tags: [r, data-analysis, en, code]
 permalink: /r/functions-implement-cycles-r/
 ---
+
 
 ## Command-Line Loops
 

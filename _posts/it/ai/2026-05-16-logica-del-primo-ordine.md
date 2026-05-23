@@ -2,14 +2,15 @@
 layout: post
 title: "Introduzione alla Logica del Primo Ordine"
 excerpt: "Cos'è la logica del primo ordine (FOL) e perché è fondamentale per l'informatica e l'intelligenza artificiale."
-category: "AI"
-permalink: /it/ai/logica-primo-ordine/
+category: AI
 date: 2026-05-16
 comments: true
 share: false
 published: true
 tags: [logica, ai, informatica, tutorial, it]
+permalink: /it/ai/logica-primo-ordine/
 ---
+
 
 > "La logica è l'inizio della saggezza, non la fine."
 > – Leonard Nimoy (Spock)

@@ -1,14 +1,17 @@
 ---
 layout: post
-title:  "R language introduction"
+title: "R language introduction"
 excerpt: "A first introduction to the R programming language"
-category: R 
-date:   2016-01-10
-comments: false
+category: R
+date: 2016-01-10
+comments: true
+share: false
 modified: 2024-07-11
 published: true
 tags: [r, data-analysis, en, code]
+permalink: /r/r-lang-intro-1/
 ---
+
 
 > "When debugging, novices insert corrective code; experts remove defective code."
 > 

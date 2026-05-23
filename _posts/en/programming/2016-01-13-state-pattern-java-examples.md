@@ -3,12 +3,15 @@ layout: post
 title: "The State Design Pattern"
 excerpt: "Features and sample Java code reduced to the essentials"
 category: Programming
+date: 2016-01-13
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [design-patterns, architecture, en, code]
+permalink: /programming/state-pattern-java-examples/
 ---
+
 
 You can find an example project on github at this address:
 [**https://github.com/mcaliman/JavaPatternsCollection**](https://github.com/mcaliman/JavaPatternsCollection)

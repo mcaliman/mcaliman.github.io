@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "Introducing OOP in Java"
+title: "Introducing OOP in Java"
 excerpt: "An introduction to Object-Oriented Programming concepts in Java"
-category: "Java"
-permalink: /java/oop/introducing/
-date:   2003-03-02
+category: Java
+date: 2003-03-02
 comments: true
 share: false
 modified: 2024-07-11
 published: true
---- 
+tags: [en]
+permalink: /java/oop/introducing/
+---
+ 
 
 > Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
 > <cite>Martin Fowler</cite>

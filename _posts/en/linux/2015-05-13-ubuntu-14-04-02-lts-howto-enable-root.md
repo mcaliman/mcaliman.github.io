@@ -1,0 +1,26 @@
+---
+layout: post
+title: "How to enable the root user on Ubuntu 14.04.02 LTS"
+excerpt: "How to enable the root user on Ubuntu 14.04.02 LTS"
+category: Linux
+date: 2015-05-13
+comments: true
+share: false
+modified: 2024-07-11
+published: true
+tags: [linux, ubuntu, en, code]
+permalink: /linux/enable-root-user-ubuntu/
+---
+
+
+By default, the root user on Ubuntu is disabled; there is no particular reason to enable it since it can be used more securely with the `sudo` command. If we really want to enable it, we can set the password for the first time with:
+
+```bash
+$ sudo passwd
+```
+
+We can then become root with:
+
+```bash
+$ su -
+```

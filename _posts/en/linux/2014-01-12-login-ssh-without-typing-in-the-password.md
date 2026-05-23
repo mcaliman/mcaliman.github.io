@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "SSH login without a password"
+title: "SSH login without a password"
 excerpt: "Configuring SSH key-based authentication for passwordless login"
 category: Linux
+date: 2014-01-12
 comments: true
 share: false
-date: 2014-01-12
 modified: 2024-07-11
 published: true
 tags: [linux, sysadmin, en, code]
 permalink: /linux/ssh-log-without-typing/
 ---
+
 
 If you want to use Linux and OpenSSH to automate tasks, and you need to be able to log in automatically from host `A` (phobos, Ubuntu 18.04) with user `a` (mcaliman) to host `B` (deimos, Ubuntu 20.04) with user `b` (mcaliman) without entering a password, these are the steps: 
 

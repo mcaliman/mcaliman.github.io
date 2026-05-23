@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Introduzione all'OOP in Java"
+title: "Introduzione all'OOP in Java"
 excerpt: "Introduzione ai concetti della programmazione orientata agli oggetti in Java"
-category: "Java"
-permalink: /java/oop/introducing/
-date:   2003-03-02
+category: Java
+date: 2003-03-02
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, it]
---- 
+permalink: /java/oop/introducing/
+---
+ 
 
 > Qualsiasi sciocco può scrivere codice che un computer può capire. I bravi programmatori scrivono codice che gli esseri umani possono capire.
 > <cite>Martin Fowler</cite>

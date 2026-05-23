@@ -2,7 +2,8 @@
 layout: post
 title: "Working with Strings using Streams and Lambdas."
 excerpt: "Processing strings with Java Streams and Lambda expressions"
-category: "Java"
+category: Java
+date: 2022-01-12
 comments: true
 share: false
 modified: 2024-07-11
@@ -10,6 +11,7 @@ published: true
 tags: [java, tutorial, en, code]
 permalink: /java/working-strings-using-streams/
 ---
+
 
 Lambdas and streams are not exotic objects to be used in complex algorithms within the reach only of researchers locked away in the labs of a multinational corporation.
 Even in the life of the everyday developer, they can make life easier; remember: less code and more elegance equal fewer bugs and headaches.

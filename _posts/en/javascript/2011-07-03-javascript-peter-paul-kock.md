@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "JavaScript according to Peter Paul Koch (PPK)"
+title: "JavaScript according to Peter Paul Koch (PPK)"
 excerpt: "An overview of JavaScript according to Peter-Paul Koch (PPK)"
 category: JavaScript
-comments: false
 date: 2011-07-03
+comments: true
+share: false
 modified: 2024-07-11
 published: true
 tags: [JavaScript, web, en]
 permalink: /javascript/javascript-according-peter-paul/
 ---
+
 
 > "If you have a procedure with ten parameters, you probably missed some."
 > – Alan Perlis  

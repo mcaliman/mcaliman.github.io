@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "How to install Jekyll on Ubuntu 14.04"
+title: "How to install Jekyll on Ubuntu 14.04"
 excerpt: "Installing Jekyll on Ubuntu 14.04 for static site generation"
 category: Linux
+date: 2014-06-07
 comments: true
 share: false
-date: 2014-06-07
 modified: 2024-07-11
 published: true
 tags: [linux, ubuntu, en, code]
 permalink: /linux/install-jekyll-ubuntu-1404/
 ---
+
 
 Prerequisites:
 

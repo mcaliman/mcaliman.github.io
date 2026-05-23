@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Secure HTTP Basic Tomcat authentication"
+title: "Secure HTTP Basic Tomcat authentication"
 excerpt: "Configuring HTTP Basic authentication with Tomcat for secure access"
-category: "Java"
-date:   2014-08-15
+category: Java
+date: 2014-08-15
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [java, security, en, code]
 permalink: /java/secure-httpbase-tomcat-authentication/
 ---
+
 
 To set up basic authentication in a Java application in Tomcat, we only need to intervene in two files:
 

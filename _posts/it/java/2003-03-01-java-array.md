@@ -1,16 +1,17 @@
---- 
+---
 layout: post
-title:  "Gli Array in Java"
+title: "Gli Array in Java"
 excerpt: "la più semplice organizzazione di strutture dati complesse"
-category: "Java"
-date:   2003-03-01
-permalink: /java/array/
+category: Java
+date: 2003-03-01
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, it, code]
+permalink: /java/array/
 ---
+
 
 Gli array sono disponibili nella maggior parte dei linguaggi di programmazione perché realizzano 
 la più semplice organizzazione di strutture dati complesse.

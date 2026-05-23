@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "DFS (Depth-First Search)"
+title: "DFS (Depth-First Search)"
 excerpt: "Depth-First Search (DFS) traversal algorithm for trees"
 category: Programming
-date:   2014-10-12
+date: 2014-10-12
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [data-structures, algorithms, en, code]
 permalink: /programming/dfs-depth-first-search/
 ---
+
 
 Starting from the generic algorithm shown and using a stack to represent $S$, we obtain depth-first search (or DFS):
 

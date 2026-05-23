@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Stack"
+title: "Stack"
 excerpt: "The stack data structure: LIFO principle and Java implementation"
 category: Programming
-date:   2014-09-30
+date: 2014-09-30
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [data-structures, algorithms, en, code]
 permalink: /programming/stack/
 ---
+
 
 One of the most recurring basic types is the stack; a pseudolanguage specification is given below.
 

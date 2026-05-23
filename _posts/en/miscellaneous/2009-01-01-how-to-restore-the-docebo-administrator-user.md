@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "How to restore the Docebo administrator user"
+title: "How to restore the Docebo administrator user"
 excerpt: "Restoring the administrator user in the Docebo LMS platform"
 category: Miscellaneous
+date: 2009-01-01
 comments: true
 share: false
-date: 2009-01-01
 modified: 2024-07-11
 published: true
 tags: [docebo, lms, en, code]
 permalink: /miscellaneous/restore-docebo-administrator-user/
 ---
+
 
 When importing from CSV files, Docebo sometimes deletes the admin user and it is no longer possible to access the administration panel.
 The bug has been known since 2005, I have found evidence of it on the net and various forums and discussion groups. 

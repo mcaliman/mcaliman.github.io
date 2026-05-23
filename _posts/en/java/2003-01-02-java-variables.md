@@ -1,16 +1,17 @@
---- 
+---
 layout: post
-title:  "Java Variables And Assignment"
+title: "Java Variables And Assignment"
 excerpt: "Variables and assignment commands"
-category: "Java"
-date:   2003-01-02
-permalink: /java/variables/
+category: Java
+date: 2003-01-02
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, en, code]
+permalink: /java/variables/
 ---
+
 
 Let us first give a sufficiently formal definition for our purposes of a variable:
 Definition of variable

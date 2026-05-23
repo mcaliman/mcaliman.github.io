@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "How to install Ant on Linux"
+title: "How to install Ant on Linux"
 excerpt: "Step-by-step guide to installing Apache Ant on Linux"
 category: Linux
+date: 2013-01-01
 comments: true
 share: false
-date: 2013-01-01
 modified: 2024-07-11
 published: true
 tags: [linux, sysadmin, en, code]
+permalink: /linux/howto-ant-linux/
 ---
+
 
 > "Software is like sex: it's better when it's free."
 >

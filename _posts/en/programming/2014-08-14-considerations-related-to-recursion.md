@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Considerations on recursion"
+title: "Considerations on recursion"
 excerpt: "Key considerations and trade-offs when using recursion in programming"
 category: Programming
-date:   2014-08-14
+date: 2014-08-14
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [programming, theory, en, code]
 permalink: /programming/considerations-recursion/
 ---
+
 
 In programming languages, the repetition of commands or statements is achieved by loops, usually realized with constructs such as `for`, `foreach`, and `while`. For particular problems, recursion is a valid alternative, more elegant, natural, and simple to implement.
 We have recursion when a function (in Java, a method) calls itself.

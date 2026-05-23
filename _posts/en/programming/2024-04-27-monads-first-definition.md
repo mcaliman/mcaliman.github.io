@@ -4,12 +4,14 @@ title: "Monads: A First Definition"
 excerpt: "An introduction to monads in functional programming: algebraic structures, the formal triplet (T, η, μ), and the Maybe monad example"
 category: Programming
 date: 2024-04-27
-comments: false
+comments: true
+share: false
 modified: 2024-07-11
 published: true
 tags: [programming, theory, en]
 permalink: /programming/monads-first-definition/
 ---
+
 In the world of functional programming, monads can be defined as **algebraic structures that encapsulate values and computations, providing a coherent interface for the management of computational contexts**. 
 
 This definition, although more formal, maintains the essence of the monad concept as a container for values and behavior. 

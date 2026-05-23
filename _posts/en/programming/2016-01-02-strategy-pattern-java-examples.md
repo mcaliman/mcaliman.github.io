@@ -3,12 +3,15 @@ layout: post
 title: "The Strategy Design Pattern"
 excerpt: "Minimal example code on the Strategy pattern"
 category: Programming
+date: 2016-01-02
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [design-patterns, architecture, en]
+permalink: /programming/strategy-pattern-java-examples/
 ---
+
 
 The Strategy pattern is one of the patterns I use most frequently. 
 You can find an example project on GitHub at this address:

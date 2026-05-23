@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "The Content is not allowed in prolog error"
+title: "The Content is not allowed in prolog error"
 excerpt: "Every XML document we work on should be formatted correctly, saved with the right encoding, etc"
-category: "Java"
-date:   2011-02-27
+category: Java
+date: 2011-02-27
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, en, code]
+permalink: /java/content-is-not-allowed-in-prolog/
 ---
+
 Every XML document we work on should be formatted correctly, saved with the right encoding, etc.
 A classic case is the message "Content is not allowed in prolog" (`SAXParseException`).
 You could edit the file by hand with a (hexadecimal) editor and remove "ef bb bf" at the top.

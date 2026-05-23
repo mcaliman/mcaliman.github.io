@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "JSF 2 forcing tag-generated ids"
+title: "JSF 2 forcing tag-generated ids"
 excerpt: "How to force specific HTML element IDs in JSF 2 components"
-category: "Java"
-date:   2014-11-09
+category: Java
+date: 2014-11-09
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [java, jsf, en, code]
 permalink: /java/jsf-2-forcing-tag-generated/
 ---
+
 
 When using tags like `inputHidden` or `form`, i.e. standard HTML components of the JSF, the `id` attributes of the corresponding 
 HTML tag are automatically generated according to precise rules.

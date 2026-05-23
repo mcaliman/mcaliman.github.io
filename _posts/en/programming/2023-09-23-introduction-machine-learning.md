@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "Introduction to Machine Learning"
+title: "Introduction to Machine Learning"
 excerpt: "Machine learning is a powerful technology that allows computers to learn from data without being explicitly programmed. It is used in a wide range of applications, including image recognition, text classification, and event prediction"
 category: Programming
-date:   2023-09-23
+date: 2023-09-23
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [ai, machine-learning, en]
+permalink: /programming/introduction-machine-learning/
 ---
+
 
 Machine learning is a branch of artificial intelligence that deals with developing algorithms that can learn from data without being explicitly programmed. In other words, machine learning enables computers to learn from data without explicit instructions.
 

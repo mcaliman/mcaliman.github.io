@@ -2,14 +2,16 @@
 layout: post
 title: "Sviluppo di applicazioni Java EE sicure 2"
 excerpt: "Dalle minacce alle migliori pratiche Parte 2"
-category: "Java"
+category: Java
 date: 2025-09-07
 comments: true
 share: false
 modified: 2025-09-07
 published: true
 tags: [java, security, en, code]
+permalink: /java/developing-secure-java-ee-applications-2-understanding-common-threats-it/
 ---
+
 
 ### 2. Comprendere le minacce comuni
 * Difetti di iniezione (SQL, NoSQL, iniezione di comandi)

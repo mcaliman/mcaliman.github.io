@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "MySQL: A problem when restoring a MySQL database..."
+title: "MySQL: A problem when restoring a MySQL database..."
 excerpt: "Solving common issues when restoring a MySQL database from backup"
 category: MySQL
-date:   2010-01-01
+date: 2010-01-01
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [mysql, database, en, code]
 permalink: /mysql/mysql-problem-when-restoring/
 ---
+
 
 If you encounter problems when restoring from a MySQL dump, try setting these variables before running the `source` command:
 

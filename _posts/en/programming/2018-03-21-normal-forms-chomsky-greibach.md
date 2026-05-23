@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "CFG in Chomsky and Greibach's Normal Form"
+title: "CFG in Chomsky and Greibach's Normal Form"
 excerpt: "Chomsky and Greibach's context-free grammar in normal form, how they are made and why they are interesting"
 category: Programming
-date:   2018-03-21
+date: 2018-03-21
 comments: true
 share: false
 modified: 2026-04-27
@@ -11,6 +11,7 @@ published: true
 tags: [computer-science, theory, en, Updated]
 permalink: /programming/cfg-chomsky-greibachs-normal/
 ---
+
 
 > Kleeneliness is next to Gödeliness 
 

@@ -1,15 +1,17 @@
---- 
+---
 layout: post
 title: "Understanding Domain Specific Languages"
 excerpt: "What Domain-Specific Languages are and when to use them"
 category: Programming
-date:   2023-08-05
+date: 2023-08-05
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [computer-science, theory, en]
+permalink: /programming/understanding-domain-specific-languages/
 ---
+
 
 > Simplicity is the ultimate sophistication.  
 > <cite>Leonardo da Vinci</cite>

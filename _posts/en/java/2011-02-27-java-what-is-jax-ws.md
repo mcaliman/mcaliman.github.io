@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "What is JAX-WS"
+title: "What is JAX-WS"
 excerpt: "Java API for XML Web Services"
-category: "Java"
-permalink: /java/jax-ws/
-date:   2011-02-27
+category: Java
+date: 2011-02-27
 comments: true
 share: false
 modified: 2024-07-11
-last_review: 2026-04-19
 tags: [java, tutorial, en]
+permalink: /java/jax-ws/
+last_review: #<Date: 2026-04-19 ((2461150j,0s,0n),+0s,-Infj)>
 ---
+
 
 **JAX-WS** stands for **Java API for XML Web Services**.
 

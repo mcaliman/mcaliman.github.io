@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Let's delve into methods in Java"
+title: "Let's delve into methods in Java"
 excerpt: "Understanding methods in Java: definition, invocation and return types"
-category: "Java"
-date:   2005-01-02
-permalink: /java/lets-delve-into-methods/
+category: Java
+date: 2005-01-02
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, oop, en, code]
+permalink: /java/lets-delve-into-methods/
 ---
+
 
 # Let's delve into methods in Java
 
