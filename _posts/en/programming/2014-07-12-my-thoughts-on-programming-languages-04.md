@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "My thoughts on programming languages Part 4"
+title: "My thoughts on programming languages Part 4"
 excerpt: "Personal reflections on programming languages"
 category: Programming
-date:   2014-07-12
+date: 2014-07-12
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [computer-science, theory, en]
+permalink: /programming/my-thoughts-on-programming-languages-04/
 ---
+
 
 # Why learn Python? 
 It is great for implementing or simply describing algorithms; in several university courses, it has been chosen for its cleanliness; in fact, transforming pseudo-code that is normally used into Python code is quite straightforward.

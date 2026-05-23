@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "About the Limits of the Calculable"
+title: "About the Limits of the Calculable"
 excerpt: "Physical limits of computation according to Meyer and Stockmeyer"
 category: Programming
-date:   2014-09-06
+date: 2014-09-06
 comments: true
 share: false
 modified: 2026-04-27
@@ -11,6 +11,7 @@ published: true
 tags: [computer-science, theory, en, Updated]
 permalink: /programming/limits-calculable/
 ---
+
 
 The following argument, due to L.J. Stockmeyer, is purely physical but clearly shows what is meant by the limits of the calculable:
 

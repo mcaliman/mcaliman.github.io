@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Tree Linked List"
+title: "Tree Linked List"
 excerpt: "Linked list representations of tree data structures"
 category: Programming
-date:   2014-10-07
+date: 2014-10-07
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [data-structures, algorithms, en]
 permalink: /programming/tree-linked-list/
 ---
+
 Continuing with the discussion of trees, representations based on linked structures are normally preferred 
 
 1. more flexible than indexed ones;

@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Importing users and courses with I/O Task in Docebo"
+title: "Importing users and courses with I/O Task in Docebo"
 excerpt: "Importing users and courses into Docebo using I/O Tasks"
 category: Miscellaneous
+date: 2009-01-01
 comments: true
 share: false
-date: 2009-01-01
 modified: 2024-07-11
 published: true
 tags: [docebo, lms, en, code]
 permalink: /miscellaneous/importing-users-courses-io/
 ---
+
 
 Those who need to import users, courses, and user-course associations in an automatic and scheduled manner will necessarily have had to deal with I/O Tasks.
 Scheduling is subject to time settings in the I/O Task administration panel and the launch of a particular URL from cron. 

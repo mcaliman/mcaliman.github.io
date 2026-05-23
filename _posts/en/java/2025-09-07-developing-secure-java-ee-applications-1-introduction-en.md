@@ -2,14 +2,16 @@
 layout: post
 title: "Developing Secure Java EE Applications 1"
 excerpt: "From Threats To Best Practices Part 1"
-category: "Java"
+category: Java
 date: 2025-09-07
 comments: true
 share: false
 modified: 2025-09-07
 published: true
 tags: [java, security, en]
+permalink: /java/developing-secure-java-ee-applications-1-introduction-en/
 ---
+
 
 ### 1. Introduction
 * Welcome and Objective

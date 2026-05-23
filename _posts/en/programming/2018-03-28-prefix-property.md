@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Prefix Property"
+title: "Prefix Property"
 excerpt: "Pushdown Automata (PDA) and language recognition problems with special features"
 category: Programming
-date:   2018-03-28
+date: 2018-03-28
 comments: true
 share: false
 modified: 2026-04-27
@@ -11,6 +11,7 @@ published: true
 tags: [computer-science, theory, en, Updated]
 permalink: /programming/prefix-property/
 ---
+
    
 > Kleeneliness is next to Gödeliness
 

@@ -1,14 +1,17 @@
 ---
 layout: post
-title:  "Big Data, Data Science, Databases the fundamentals #1"
+title: "Big Data, Data Science, Databases the fundamentals #1"
 excerpt: "When we talk about Big Data, we are talking about an evolution of databases.."
 category: Miscellaneous
-date:   2016-05-01
-comments: false
+date: 2016-05-01
+comments: true
+share: false
 modified: 2024-07-11
 published: true
 tags: [data, database, en]
+permalink: /miscellaneous/bigdata-datascience-database-1/
 ---
+
    
 When we talk about Big Data, we are talking about an evolution of databases—but on a large scale—or, rather, we are talking about a collection of data so extensive in terms of volume, speed, and variety that it requires specific technologies and analytical methods for value extraction.
 

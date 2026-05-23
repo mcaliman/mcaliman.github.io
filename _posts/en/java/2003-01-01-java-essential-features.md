@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "Java Essential Features"
+title: "Java Essential Features"
 excerpt: "The essential features of the Java language that you must know"
-category: "Java"
-permalink: /java/essential-features/
-date:   2003-01-01
+category: Java
+date: 2003-01-01
 comments: true
+share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, en]
+permalink: /java/essential-features/
 ---
+
 
 If you want Java to become your main programming language, you should familiarize yourself with the following essential aspects, which are common to all object oriented programming languages:
 

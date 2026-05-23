@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Use of keytool and jarsigner"
+title: "Use of keytool and jarsigner"
 excerpt: "How to use the JDK keytool and jarsigner utilities for signing JARs"
-category: "Java"
-permalink: /java/use-keytool-jarsigner/
-date:   2011-04-24
+category: Java
+date: 2011-04-24
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, en, code]
+permalink: /java/use-keytool-jarsigner/
 ---
+
 
 To extract a certificate that we already know is on our keyring:
 

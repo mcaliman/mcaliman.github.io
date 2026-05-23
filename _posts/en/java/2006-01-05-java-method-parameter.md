@@ -1,17 +1,17 @@
 ---
 layout: post
-# lang: en
-title:  "Passing parameters in Java"
+title: "Passing parameters in Java"
 excerpt: "How parameter passing works in Java methods"
-category: "Java"
-date:   2006-01-05
-permalink: /java/passing-parameters-java/
+category: Java
+date: 2006-01-05
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, en, code]
+permalink: /java/passing-parameters-java/
 ---
+
 
 In the most general form, a method is characterized by one or more formal parameters.
 

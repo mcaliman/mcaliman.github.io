@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "Tree in Java"
+title: "Tree in Java"
 excerpt: "Tree data structures: concepts, terminology and Java implementation"
 category: Programming
-date:   2014-10-05
+date: 2014-10-05
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [data-structures, algorithms, en, code]
+permalink: /programming/java-trees/
 ---
+
 After the posts on elementary data structures, we move on to deal with trees. Before going into the details of how to implement data structures of this type, let us delve into the theoretical aspect.
 
 First, let's look at the classic definition

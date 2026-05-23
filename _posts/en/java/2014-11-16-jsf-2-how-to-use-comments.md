@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "JSF 2 How to use comments"
+title: "JSF 2 How to use comments"
 excerpt: "How to properly use comments in JSF 2 Facelets pages"
-category: "Java"
-date:   2014-11-16
-comments: false
+category: Java
+date: 2014-11-16
+comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, jsf, en, code]
 permalink: /java/jsf-2-use-comments/
 ---
+
 
 Granted, it is always possible to use the classic comment tags `<!--` and `-->` in HTML, but these are rendered by default. In case the commented code is a hidden feature for the next (not yet official) release, or a part of EL or JSF tags, this could be awkward, if not a security hole.
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Queue"
+title: "Queue"
 excerpt: "The queue data structure: FIFO principle and Java implementation"
 category: Programming
-date:   2014-10-01
+date: 2014-10-01
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [data-structures, algorithms, en, code]
 permalink: /programming/queue/
 ---
+
 Let us return to the discussion of elementary data structures. In previous posts, we have looked at indexed structures, linked structures, and stacks; another of the most common basic types is the queue, a pseudolanguage specification of which is given below.
 ```
 type Queue

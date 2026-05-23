@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "From Context-Free Grammar (CFG) to Pushdown Automata (PDA)"
+title: "From Context-Free Grammar (CFG) to Pushdown Automata (PDA)"
 excerpt: "Construction of a stack automaton (PDA) from a CF grammar"
-permalink: /programming/context-free-grammar-cfg-pushdown/
 category: Programming
-date:   2018-04-02
+date: 2018-04-02
 comments: true
 share: false
 modified: 2026-04-27
 published: true
-tags: [computer-science, theory, en, Updated, math]
+tags: [computer-science, theory, en, Updated, math, code]
+permalink: /programming/context-free-grammar-cfg-pushdown/
 ---
+
 
 > Kleeneliness is next to Gödeliness 
 

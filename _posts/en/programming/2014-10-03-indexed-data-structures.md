@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Structures indexed in depth"
+title: "Structures indexed in depth"
 excerpt: "An in-depth look at indexed data structures and their properties"
 category: Programming
-date:   2014-10-03
+date: 2014-10-03
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [programming, theory, en, code]
 permalink: /programming/structures-indexed-depth/
 ---
+
 
 Let's pick up the post on indexed structures for a closer look.
 We have seen that the **Java Collection Framework** already provides us with practically any structure we may need for our work. Have you ever been curious to see how these structures are implemented? The source code is public; you can download it along with the JDK with every release. You'll notice that there is often nothing "science fiction" about the implementation of structures like `ArrayList`; for example, the implementation spec seen in pseudocode in the post on indexed structures before this one doesn't differ much in substance. What makes the difference are the optimizations.

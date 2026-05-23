@@ -1,14 +1,17 @@
 ---
 layout: post
-title:  "Explore the World of Artificial Intelligence"
+title: "Explore the World of Artificial Intelligence"
 excerpt: "Five Websites to Boost Your Productivity and Creativity"
 category: Programming
 date: 2023-05-15
 comments: true
+share: false
 modified: 2024-07-11
 published: true
 tags: [ai, machine-learning, en]
+permalink: /programming/explore-world-artificial-intelligence/
 ---
+
   
 > If you think your users are idiots, only idiots will use it.
 >

@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Java Constants"
+title: "Java Constants"
 excerpt: "Symbolic constants in Java"
-category: "Java"
-permalink: /java/constants/
-date:   2003-02-03
+category: Java
+date: 2003-02-03
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, en, code]
+permalink: /java/constants/
 ---
+
 
 A variable that never changes value is a constant. In Java, you can explicitly declare a variable as a constant by using the `final` keyword. 
 

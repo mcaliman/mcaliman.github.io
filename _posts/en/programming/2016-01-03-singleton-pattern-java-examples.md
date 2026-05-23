@@ -3,12 +3,15 @@ layout: post
 title: "The Singleton Design Pattern"
 excerpt: "Some examples of the Singleton pattern"
 category: Programming
+date: 2016-01-03
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [design-patterns, architecture, en]
+permalink: /programming/singleton-pattern-java-examples/
 ---
+
 
 The Singleton is probably the simplest pattern, some languages like Scala provide 
 a keyword (`object` instead of `class`) to create them directly without defining a class according to the 

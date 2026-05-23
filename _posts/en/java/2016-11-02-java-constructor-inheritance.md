@@ -1,14 +1,17 @@
 ---
 layout: post
-title: "Are constructors inheritable?" 
+title: "Are constructors inheritable?"
 excerpt: "Are constructors inheritable? Can a subclass call the constructor of the parent class?"
-category: "Java"
+category: Java
+date: 2016-11-02
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, en, code]
+permalink: /java/java-constructor-inheritance/
 ---
+
 One of the questions that may occur to you at an interview, certification, or a simple test concerning the Java language is the following:
 Are constructors inheritable? 
 Can a subclass call the constructor of the parent class?

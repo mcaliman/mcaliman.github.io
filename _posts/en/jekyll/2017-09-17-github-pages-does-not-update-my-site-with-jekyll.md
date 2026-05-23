@@ -1,15 +1,17 @@
---- 
+---
 layout: post
-title: GitHub Pages does not update my site with Jekyll.
-excerpt: Joys and sorrows of maintaining your own site with Jekyll.
+title: "GitHub Pages does not update my site with Jekyll."
+excerpt: "Joys and sorrows of maintaining your own site with Jekyll."
 category: Jekyll
+date: 2017-09-16
 comments: true
 share: false
-date: 2017-09-16
 modified: 2024-07-11
 published: true
 tags: [jekyll, blog, en]
+permalink: /jekyll/github-pages-does-not-update-my-site-with-jekyll/
 ---
+
 
 > If you have a procedure with ten parameters, you probably missed some.
 >

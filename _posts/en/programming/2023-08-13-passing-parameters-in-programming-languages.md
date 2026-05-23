@@ -1,15 +1,17 @@
---- 
+---
 layout: post
 title: "Passing Parameters to Methods/Functions/Procedures in Programming Languages"
 excerpt: "Parameter passing strategies in programming: by value, by reference and beyond"
 category: Programming
-date:   2023-08-13
+date: 2023-08-13
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [computer-science, theory, en, code]
+permalink: /programming/passing-parameters-in-programming-languages/
 ---
+
 
 In a programming language, parameters are variables that are used to pass information into or out of a method (or a function or procedure). There are 2 main ways to pass parameters: **by value** and **by reference**.
 

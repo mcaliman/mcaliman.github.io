@@ -1,15 +1,17 @@
---- 
+---
 layout: post
 title: "What is an inference engine?"
 excerpt: "How inference engines work and their role in expert systems"
 category: Programming
-date:   2023-08-11
+date: 2023-08-11
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [ai, machine-learning, en]
+permalink: /programming/what-is-an-inference-engine/
 ---
+
 
 An inference engine is a component of an expert system that uses the knowledge base to make decisions. The inference engine uses a logical process to apply the rules to the knowledge base and generate a response.
 

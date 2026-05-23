@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "MySQL: how to install on Ubuntu Linux MySQL without Synaptic or apt"
+title: "MySQL: how to install on Ubuntu Linux MySQL without Synaptic or apt"
 excerpt: "Installing MySQL on Ubuntu Linux without using Synaptic or apt"
 category: MySQL
-date:   2011-02-03
+date: 2011-02-03
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [mysql, database, en, code]
 permalink: /mysql/mysql-install-ubuntu-linux/
 ---
+
 Download the `.tar.gz` from the MySQL website (www.mysql.com):
 place it in `/usr/local` and unpack the `.tar.gz` with the following command:
 

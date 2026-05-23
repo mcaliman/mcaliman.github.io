@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Writing and reading files in Java 7 with try-with-resources"
+title: "Writing and reading files in Java 7 with try-with-resources"
 excerpt: "Reading and writing files in Java 7 using the try-with-resources statement"
-category: "Java"
-date:   2014-09-13
+category: Java
+date: 2014-09-13
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [java, tutorial, en, code]
 permalink: /java/writing-reading-files-java/
 ---
+
 
 Reading and writing files in Java 7 using the new try-with-resources construct relieves the developer of the task of correctly closing streams. Below you can find two example methods:
 

@@ -1,15 +1,17 @@
---- 
+---
 layout: post
 title: "wsimport e Webservice .Net 2.0"
 excerpt: "Utilizzo di wsimport per generare stub client Java da un Web Service .NET 2.0"
-category: "Java"
-date:   2015-08-15
+category: Java
+date: 2015-08-15
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, it, code]
+permalink: /java/wsimport-webservice-dot-net-2-0/
 ---
+
 
 Aggiornamento 2017: Con NetBeans 8.2 il problema di seguito sembra essere gestito in modo completamente trasparente dalla procedura di generazione delle classi dal wsdl (wizard di NB8.2).
 

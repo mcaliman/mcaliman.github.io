@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "Date, time and interval objects in R"
+title: "Date, time and interval objects in R"
 excerpt: "Working with date, time and interval objects in R"
-category: R 
-date:   2016-02-10
-comments: false
+category: R
+date: 2016-02-10
+comments: true
+share: false
 modified: 2024-07-11
 published: true
 tags: [r, data-analysis, en, code]
 permalink: /r/date-time-interval-objects/
 ---
+
 
 ## The Date Class
 R has a special representation of date and time objects; dates are represented by the `Date` class, while times and intervals are represented by the `POSIXct` or `POSIXlt` classes. 

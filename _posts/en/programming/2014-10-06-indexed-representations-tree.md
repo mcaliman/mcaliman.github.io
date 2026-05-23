@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Trees indexed representations"
+title: "Trees indexed representations"
 excerpt: "Indexed representations of tree data structures"
 category: Programming
-date:   2014-10-06
+date: 2014-10-06
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [data-structures, algorithms, en]
 permalink: /programming/trees-indexed-representations/
 ---
+
 
 Indexed representations based on parent vector arrays and positional vectors both require `O(n)` space.
 Parent vector

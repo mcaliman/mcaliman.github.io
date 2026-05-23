@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Pumping Lemma for Context-Free Languages"
+title: "Pumping Lemma for Context-Free Languages"
 excerpt: "The pumping lemma version for context-free languages"
 category: Programming
-date:   2018-03-22
+date: 2018-03-22
 comments: true
 share: false
 modified: 2026-04-27
@@ -11,6 +11,7 @@ published: true
 tags: [computer-science, theory, en, Updated]
 permalink: /programming/pumping-lemma-context-free-languages/
 ---
+
 
 > Kleeneliness is next to Gödeliness 
    

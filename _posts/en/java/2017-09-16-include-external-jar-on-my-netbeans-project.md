@@ -1,15 +1,17 @@
---- 
+---
 layout: post
 title: "How to include external JAR libraries in a NetBeans project"
 excerpt: "How to add external JAR libraries to a NetBeans project"
-category: "Java"
-date:   2017-09-16
+category: Java
+date: 2017-09-16
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, en, code]
+permalink: /java/include-external-jar-on-my-netbeans-project/
 ---
+
 
 > "Measuring programming progress by lines of code is like measuring aircraft building 
 progress by weight."

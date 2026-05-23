@@ -2,16 +2,17 @@
 layout: post
 title: "The transition from Java EE to Jakarta EE"
 excerpt: "What you need to know"
-category: "Java"
+category: Java
 date: 2023-01-01
 comments: true
 share: false
 modified: 2024-07-11
 published: true
-last_review: 2026-04-19
 tags: [java, jakarta-ee, en]
 permalink: /java/transition-java-ee-jakarta/
+last_review: #<Date: 2026-04-19 ((2461150j,0s,0n),+0s,-Infj)>
 ---
+
 
 If you are still stuck on Java EE 8 and missed the project's evolution, it is important to note that in 2017, Oracle [transitioned Java EE](https://www.eclipse.org/org/press-release/java-ee-moving-to-eclipse-foundation.php) to the [Eclipse Foundation](https://www.eclipse.org). This move, coordinated with partners Red Hat and IBM, included the full reference implementation and the Technology Compatibility Kit (TCK).
 

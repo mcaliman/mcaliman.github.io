@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Creating a Custom Converter in JSF 2.2"
+title: "Creating a Custom Converter in JSF 2.2"
 excerpt: "Creating and registering a custom type converter in JSF 2.2"
-category: "Java"
-date:   2015-01-01
+category: Java
+date: 2015-01-01
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [java, jsf, en, code]
 permalink: /java/creating-custom-converter-jsf/
 ---
+
 
 If a bean property is of type `boolean`, the page will display the strings `true` and `false`. To replace the representation with something more user-oriented, we need to render the values `true` and `false` with Yes and No, True and False, Active or Disabled, and so on. To do this, we need to create a `Converter` and associate it with our `outputText` element.
 The example code below creates a simple `Converter` to render Boolean values with the strings Yes and No:

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Dropdownboxes are easy with JSF 2.3!"
+title: "Dropdownboxes are easy with JSF 2.3!"
 excerpt: "Implementing dropdown select boxes with JSF 2.2"
-category: "Java"
-date:   2014-12-16
+category: Java
+date: 2014-12-16
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [java, jsf, en, code]
 permalink: /java/dropdownboxes-easy-jsf-22/
 ---
+
 
 Making direct mappings between a `Map` and a dropdown box with Java Server Faces 2.3 is simple and immediate.
 Given the sample Session Bean below:

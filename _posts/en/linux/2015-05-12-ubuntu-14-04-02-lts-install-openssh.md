@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Ubuntu 14.04.02 LTS 64-bit: how to install OpenSSH"
+title: "Ubuntu 14.04.02 LTS 64-bit: how to install OpenSSH"
 excerpt: "Installing OpenSSH server on Ubuntu 14.04.02 LTS 64-bit"
 category: Linux
+date: 2015-05-12
 comments: true
 share: false
-date: 2015-05-12
 modified: 2024-07-11
 published: true
 tags: [linux, ubuntu, en, code]
 permalink: /linux/ubuntu-140402-lts-64bit/
 ---
+
 
 Installing the OpenSSH server and client applications is simple. To install the OpenSSH client application on Ubuntu systems, use this command at a terminal prompt:
 

@@ -1,16 +1,17 @@
---- 
+---
 layout: post
 title: "How to delete the command history on Linux"
 excerpt: "How to clear the command history in a Linux terminal"
 category: Linux
+date: 2000-01-02
 comments: true
 share: false
-permalink: /how-to-delete-the-command-history-on-linux/
-date: 2000-01-02
 modified: 2024-07-11
 published: true
 tags: [linux, sysadmin, en, code]
+permalink: /how-to-delete-the-command-history-on-linux/
 ---
+
 
 Deleting the command history on Linux is quite simple; just run the command:
 ```bash

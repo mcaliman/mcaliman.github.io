@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Ubuntu 14.04.02 LTS How to install git"
+title: "Ubuntu 14.04.02 LTS How to install git"
 excerpt: "Installing Git on Ubuntu 14.04.02 LTS"
 category: Linux
+date: 2015-05-14
 comments: true
 share: false
-date: 2015-05-14
 modified: 2024-07-11
 published: true
 tags: [linux, ubuntu, en, code]
 permalink: /linux/ubuntu-140402-lts-install/
 ---
+
 
 Our new Linux server can also be very useful for making local, regular and systematic copies of our projects in a versioning system such as subversion (svn) or git. 
 Let's start with Git. Installing it will help us, for example, to make a scheduled checkout of what we have on GitHub or another Git server.
