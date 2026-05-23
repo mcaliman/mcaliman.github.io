@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Context-Free Languages Properties"
+title: "Context-Free Languages Properties"
 excerpt: "Context-free language properties and considerations"
 category: Programming
-date:   2018-03-24
+date: 2018-03-24
 comments: true
 share: false
 modified: 2026-04-27
@@ -11,6 +11,7 @@ published: true
 tags: [computer-science, theory, en, Updated]
 permalink: /programming/context-free-languages-properties/
 ---
+
    
 > Kleeneliness is next to Gödeliness 
 

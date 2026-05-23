@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "Functions in R"
+title: "Functions in R"
 excerpt: "Defining and using functions in R"
-category: R 
-date:   2016-01-20
-comments: false
+category: R
+date: 2016-01-20
+comments: true
+share: false
 modified: 2024-07-11
 published: true
 tags: [r, data-analysis, en, code]
 permalink: /r/functions-r/
 ---
+
 
 > Computer Science is no more about computers than astronomy is about telescopes.
 >

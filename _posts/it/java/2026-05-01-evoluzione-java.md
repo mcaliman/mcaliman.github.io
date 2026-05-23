@@ -1,15 +1,17 @@
 ---
 layout: post
-title: L'evoluzione di Java dal JDK 1.0 al JDK 25
+title: "L'evoluzione di Java dal JDK 1.0 al JDK 25"
 excerpt: "Un viaggio attraverso le tappe fondamentali che hanno trasformato Java in uno dei linguaggi di programmazione più influenti della storia"
-category: "Java"
-permalink: /it/java/jdk-evolution/
+category: Java
+date: 2026-05-01
 comments: true
 share: false
 modified: 2026-05-01
 published: true
 tags: [java, it]
+permalink: /it/java/jdk-evolution/
 ---
+
 
 
 ### JDK 1.0 (1996)

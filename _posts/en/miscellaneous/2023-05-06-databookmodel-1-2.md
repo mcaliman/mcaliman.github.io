@@ -6,11 +6,13 @@ category: Miscellaneous
 date: 2023-05-06
 comments: true
 share: false
-updated: true
 modified: 2024-07-11
 published: true
 tags: [data, database, en]
+permalink: /miscellaneous/databookmodel-1-2/
+updated: true
 ---
+
 
 I want to tell you about these two books I recently purchased on Amazon. There were few hard copies available at the time of purchase and the shipping time was not very fast, but it was worth it. There is, however, a digital version for those who prefer it. The cost may seem high compared to other texts on management architectures but it is worth every penny paid. I will probably also buy Volume 3 and review it soon.
 

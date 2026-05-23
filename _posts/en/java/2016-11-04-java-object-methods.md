@@ -2,7 +2,8 @@
 layout: post
 title: "What are the methods of the Object class?"
 excerpt: "A guide to the methods of the Java Object class: clone, equals, hashCode, toString, finalize, notify and wait"
-category: "Java"
+category: Java
+date: 2016-11-04
 comments: true
 share: false
 modified: 2024-07-11
@@ -10,6 +11,7 @@ published: true
 tags: [java, oop, en, code]
 permalink: /java/methods-object-class/
 ---
+
 
 One of the questions you may be asked at an interview, certification, or a simple test concerning the Java language is the following:
 What are the methods of the `Object` class?

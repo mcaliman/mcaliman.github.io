@@ -1,11 +1,16 @@
 ---
 layout: post
 title: "La Matematica Necessaria per l'Intelligenza Artificiale e gli LLM"
-date: 2026-05-01 12:00:00 +0200
-categories: [it, ai]
-tags: [intelligenza-artificiale, machine-learning, matematica, llm, generativa]
 excerpt: "Quali sono le basi matematiche necessarie per comprendere a fondo l'Intelligenza Artificiale Generativa e i Large Language Models? Una panoramica delle discipline fondamentali."
+category: Ai
+date: 2026-05-01
+comments: true
+share: false
+tags: [intelligenza-artificiale, machine-learning, matematica, llm, generativa, it]
+permalink: /ai/matematica-per-intelligenza-artificiale/
+categories: ["it", "ai"]
 ---
+
 
 L'[Intelligenza Artificiale (IA)](https://it.wikipedia.org/wiki/Intelligenza_artificiale) e, in particolare, l'[IA Generativa](https://it.wikipedia.org/wiki/Intelligenza_artificiale_generativa) e i [Large Language Models (LLM)](https://it.wikipedia.org/wiki/Modello_linguistico_di_grandi_dimensioni) sembrano quasi magia quando li utilizziamo. Tuttavia, dietro le quinte, si basano interamente su solidi principi matematici. Se desideri andare oltre il semplice utilizzo di questi strumenti per capire veramente *come* funzionano, o magari per costruirne di tuoi, è indispensabile padroneggiare alcune specifiche branche della matematica. 
 

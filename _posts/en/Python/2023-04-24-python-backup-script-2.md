@@ -3,12 +3,15 @@ layout: post
 title: "I am replacing my old bash scripts with Python #2."
 excerpt: "Python script to zip GlassFish logs and archive them by year and month. The script deletes the files after zipping them."
 category: Python
-comments: false
+date: 2023-04-24
+comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [python, scripting, en, code]
+permalink: /python/python-backup-script-2/
 ---
+
 
 Like me, have you also accumulated many bash scripts over the years to automate operations on your systems?
 

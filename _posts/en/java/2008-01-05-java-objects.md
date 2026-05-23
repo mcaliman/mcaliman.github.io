@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Objects in Java"
+title: "Objects in Java"
 excerpt: "Understanding objects and object creation in Java"
-category: "Java"
-date:   2008-01-05
-permalink: /java/objects-java/
+category: Java
+date: 2008-01-05
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, oop, en, code]
+permalink: /java/objects-java/
 ---
+
 
 From each class, it is possible to obtain one or more entities through instantiation. Each of these constitutes a copy of the data structure described by the class in its dynamic components, and shares its information access methods.
 

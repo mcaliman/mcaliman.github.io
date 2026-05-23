@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Software Architect"
+title: "Software Architect"
 excerpt: "A Software Architect is a professional who designs and develops the architecture of a software system"
 category: miscellaneous
-permalink: 
 date: 2025-05-09
-comments: false
+comments: true
 share: false
 modified: 2025-05-09
 published: true
 tags: [misc, architecture, en]
+permalink: /miscellaneous/software-architect/
 ---
+
 
 > **The Architect:** Hello, Neo.
 **Neo:** Who are you?

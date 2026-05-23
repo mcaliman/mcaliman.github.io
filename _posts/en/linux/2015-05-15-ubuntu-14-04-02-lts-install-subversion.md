@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "How to install subversion (svn) on Ubuntu 14.04.02 LTS"
+title: "How to install subversion (svn) on Ubuntu 14.04.02 LTS"
 excerpt: "Installing Subversion (SVN) on Ubuntu 14.04.02 LTS"
 category: Linux
+date: 2015-05-15
 comments: true
 share: false
-date: 2015-05-15
 modified: 2024-07-11
 published: true
 tags: [linux, ubuntu, en, code]
+permalink: /linux/ubuntu-14.04.02-LTS-install-subversion/
 ---
+
 
 > When debugging, novices insert corrective code; experts remove defective code.
 > 

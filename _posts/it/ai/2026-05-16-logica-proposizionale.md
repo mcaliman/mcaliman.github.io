@@ -2,14 +2,15 @@
 layout: post
 title: "Introduzione alla Logica Proposizionale"
 excerpt: "Le basi del ragionamento logico: variabili, connettivi e tavole della verità. Come l'informatica trasforma il pensiero in calcolo."
-category: "AI"
-permalink: /it/ai/logica-proposizionale/
+category: AI
 date: 2026-05-16
 comments: true
 share: false
 published: true
 tags: [logica, informatica, tutorial, it]
+permalink: /it/ai/logica-proposizionale/
 ---
+
 
 > "I limiti del mio linguaggio sono i limiti del mio mondo."
 > – Ludwig Wittgenstein

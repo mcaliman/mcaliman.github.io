@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "HOWTO FIX error 'illegal pattern character g' JAXB in NetBeans."
+title: "HOWTO FIX error 'illegal pattern character g' JAXB in NetBeans."
 excerpt: "Java Architecture for XML Binding"
-category: "Java"
-date:   2014-01-10
+category: Java
+date: 2014-01-10
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, en, code]
+permalink: /java/howto-fix-error-jaxb-netbeans-illegal-pattern-character-g/
 ---
+
 
 This error is present in versions 6.9 and 7.4.
 

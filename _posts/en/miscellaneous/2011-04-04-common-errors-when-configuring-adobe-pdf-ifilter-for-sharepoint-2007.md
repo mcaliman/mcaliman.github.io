@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Common errors when configuring Adobe PDF iFilter for SharePoint 2007"
+title: "Common errors when configuring Adobe PDF iFilter for SharePoint 2007"
 excerpt: "Troubleshooting Adobe PDF iFilter configuration issues in SharePoint 2007"
 category: Miscellaneous
+date: 2011-04-04
 comments: true
 share: false
-date: 2011-04-04
 modified: 2024-07-11
 published: true
 tags: [misc, architecture, en, code]
 permalink: /miscellaneous/common-errors-when-configuring/
 ---
+
 A common mistake you may encounter when installing iFilter for SharePoint 2007 is forgetting to replace the value of the key:
 
 ```

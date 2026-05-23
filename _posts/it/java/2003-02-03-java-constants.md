@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Costanti in Java"
+title: "Costanti in Java"
 excerpt: "Costanti simboliche in Java"
-category: "Java"
-permalink: /java/constants/
-date:   2003-02-03
+category: Java
+date: 2003-02-03
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, it, code]
+permalink: /java/constants/
 ---
+
 
 In Java, una variabile il cui valore non cambia mai è definita costante. Per dichiararla esplicitamente, si utilizza la parola chiave `final`. 
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Concatenating PDFs with iText in Java"
+title: "Concatenating PDFs with iText in Java"
 excerpt: "How to concatenate multiple PDF files using the iText library in Java"
-category: "Java"
-date:   2014-09-18
+category: Java
+date: 2014-09-18
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [java, tutorial, en, code]
 permalink: /java/concatenating-pdfs-itext-java/
 ---
+
 iText is definitely the most popular and complete library for processing PDF files. I highly recommend taking a look at it before evaluating other frameworks or reinventing the wheel.
 
 But let's get down to brass tacks. Below is the code for a class that allows you to merge a series of PDFs together, effectively concatenating a series of files and creating one resulting from the process.

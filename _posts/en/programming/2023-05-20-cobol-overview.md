@@ -2,16 +2,17 @@
 layout: post
 title: "COBOL Overview"
 excerpt: "A comprehensive overview of the COBOL programming language"
+category: Programming
 date: 2023-05-20
-revised: true
-category: Programming 
-permalink: /cobol/overview/
-comments: false
+comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [programming, theory, en, code]
+permalink: /cobol/overview/
+revised: true
 ---
+
 
 > Computers are good at following instructions, but not at reading your mind.
 >

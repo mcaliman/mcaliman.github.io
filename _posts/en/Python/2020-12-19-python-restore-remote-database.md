@@ -3,13 +3,14 @@ layout: post
 title: "Restore remote database backup to local"
 excerpt: "How do I restore a remote Mysql database to local? With Python script!"
 category: Python
-permalink: /python/restore-remote-database-backup/
 date: 2020-12-19
-comments: false
+comments: true
 share: false
 modified: 2024-07-11
 tags: [python, scripting, en]
+permalink: /python/restore-remote-database-backup/
 ---
+
 
 **[PySysop](https://github.com/mcaliman/PySysop)** is a collection of Python utilities designed to simplify system operations. One of its key scripts, `restore_remote_database.py`, automates the process of creating a remote database dump, downloading it, and restoring it to a local instance.
 

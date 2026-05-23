@@ -1,15 +1,17 @@
---- 
+---
 layout: post
 title: "C# null-coalescing operator in Java"
 excerpt: "Implementing the C# null-coalescing operator pattern in Java"
-category: "Java"
-date:   2017-06-15
+category: Java
+date: 2017-06-15
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, en, code]
+permalink: /java/csharp-null-coalescing-operator-in-java/
 ---
+
 
 > "An algorithm must be seen to be believed."
 > – Donald Knuth

@@ -1,15 +1,17 @@
---- 
+---
 layout: post
 title: "Checking nic.it droptime files with R"
 excerpt: "Monitoring nic.it domain droptime files with R scripts"
-category: R 
-date:   2016-10-01
-comments: false
+category: R
+date: 2016-10-01
+comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [r, data-analysis, en, code]
+permalink: /r/r-lang-dropfile/
 ---
+
 
 The script in question is straightforward but demonstrates the convenience of using R when it comes to manipulating data and creating scripts or prototypes. It downloads the two droptime files from the NIC and checks whether they contain the domain of interest.
 The updated script is available on github [https://github.com/mcaliman/R-utilities](https://github.com/mcaliman/R-utilities)

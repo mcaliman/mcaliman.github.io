@@ -3,13 +3,15 @@ layout: post
 title: "Downloading remote files with Python #1"
 excerpt: "Automating recurring tasks such as downloading remote files locally"
 category: Python
-permalink: /python/download-remote-files/1/
-comments: false
+date: 2019-02-25
+comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [python, scripting, en, code]
+permalink: /python/download-remote-files/1/
 ---
+
 
 There are recurring operations that we continue to perform even on a daily basis just because we are too lazy to automate them or because between a thousand work commitments we repeat to ourselves the mantra 'it only takes me five minutes'. But it is precisely because we are 'lazy' that we should try to avoid these operations, which, besides being boring, can take up to 25 minutes of work in a work week—minutes that could be used, for example, to catch up on a much more important task, or to carry out the refactoring that we continue to postpone.
 

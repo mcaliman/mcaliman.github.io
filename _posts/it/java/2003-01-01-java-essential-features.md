@@ -1,15 +1,17 @@
 ---
 layout: post
-title:  "Caratteristiche Essenziali di Java"
+title: "Caratteristiche Essenziali di Java"
 excerpt: "Le caratteristiche essenziali del linguaggio Java che devi conoscere"
-category: "Java"
-permalink: /java/caratteristiche-essenziali-java/
-date:   2003-01-01
+category: Java
+date: 2003-01-01
 comments: true
+share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, it]
+permalink: /java/caratteristiche-essenziali-java/
 ---
+
 
 Se vuoi che Java diventi il tuo linguaggio di programmazione principale, dovresti familiarizzare con i seguenti concetti fondamentali dell'Object-Oriented Programming (OOP):
 

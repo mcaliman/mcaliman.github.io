@@ -2,14 +2,16 @@
 layout: post
 title: "Developing Secure Java EE Applications 2"
 excerpt: "Understanding Common Threats Part 2"
-category: "Java"
+category: Java
 date: 2025-09-07
 comments: true
 share: false
 modified: 2025-09-07
 published: true
 tags: [java, security, en, code]
+permalink: /java/developing-secure-java-ee-applications-2-understanding-common-threats-en/
 ---
+
 
 ### 2. Understanding Common Threats
 * Injection Flaws (SQL, NoSQL, Command Injection)

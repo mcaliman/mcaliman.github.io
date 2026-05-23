@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Interfaces with the external world in R"
+title: "Interfaces with the external world in R"
 excerpt: "Interfacing R with external data sources: files, databases and web APIs"
-category: R 
-date:   2016-04-01
-comments: false
+category: R
+date: 2016-04-01
+comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [r, data-analysis, en, code]
 permalink: /r/interfaces-external-world-r/
 ---
+
 
 Data is read via connection interfaces. Connections can be to files or URLs, for example.
 

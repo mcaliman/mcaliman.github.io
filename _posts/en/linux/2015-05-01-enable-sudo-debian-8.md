@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Enable the sudo command on debian 8"
+title: "Enable the sudo command on debian 8"
 excerpt: "How to enable the sudo command on Debian 8"
 category: Linux
+date: 2015-05-01
 comments: true
 share: false
-date: 2015-05-01
 modified: 2024-07-11
 published: true
 tags: [linux, debian, en, code]
 permalink: /linux/enable-sudo-command-debian/
 ---
+
 
 > Part of the inhumanity of the computer is that, once it is competently programmed and working smoothly, it is completely honest. 
 >

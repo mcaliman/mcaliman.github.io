@@ -1,16 +1,17 @@
---- 
+---
 layout: post
-title:  "Variabili Java e Assegnazione"
+title: "Variabili Java e Assegnazione"
 excerpt: "Variabili e comandi di assegnazione"
-category: "Java"
-date:   2003-01-02
-permalink: /java/variables/
+category: Java
+date: 2003-01-02
 comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [java, tutorial, it, code]
+permalink: /java/variables/
 ---
+
 
 Diamo prima una definizione di variabile sufficientemente formale per i nostri scopi:
 Definizione di variabile

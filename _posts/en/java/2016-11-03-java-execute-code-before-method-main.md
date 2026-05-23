@@ -2,7 +2,8 @@
 layout: post
 title: "Can we execute code before the main(String[]) method?"
 excerpt: "How to execute code before the main method in Java using static initializers"
-category: "Java"
+category: Java
+date: 2016-11-03
 comments: true
 share: false
 modified: 2024-07-11
@@ -10,6 +11,7 @@ published: true
 tags: [java, oop, en, code]
 permalink: /java/can-execute-code-before/
 ---
+
 One of the questions you might get at an interview, certification, or a simple test concerning the Java language is the following:
 Can we execute code before the `main(String[])` method?
 

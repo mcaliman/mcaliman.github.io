@@ -2,13 +2,16 @@
 layout: post
 title: "The programming language Scala"
 excerpt: "An overview of the Scala programming language and its key features"
-category: Programming 
-permalink: /programming/programming-language-scala/
-comments: false
+category: Programming
+date: 2019-03-03
+comments: true
+share: false
 modified: 2024-07-11
 published: true
 tags: [computer-science, theory, en]
+permalink: /programming/programming-language-scala/
 ---
+
 
 [Scala](https://www.scala-lang.org/) is a programming language that has both object-oriented and functional features. Scala is statically typed, with an advanced type system that is more powerful than that of other languages such as Java and C#. 
 Its name is derived from Scalable Language; scalable in the sense that the language's core constructs are so modular that new functionality can be added via libraries rather than by modifying the language itself.

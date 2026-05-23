@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Generic visit algorithm for a tree"
+title: "Generic visit algorithm for a tree"
 excerpt: "A generic algorithm for visiting nodes in a tree data structure"
 category: Programming
-date:   2014-10-10
+date: 2014-10-10
 comments: true
 share: false
 modified: 2024-07-11
@@ -11,6 +11,7 @@ published: true
 tags: [data-structures, algorithms, en, code]
 permalink: /programming/generic-visit-algorithm-tree/
 ---
+
 
 One of the most common tasks to be performed on a tree is to perform a visit to it, i.e. to review each of its nodes. By the natural language term 'reviewing' we mean 'applying some function' to the node under examination, even if it is simply printing on the screen that it has been visited.
 

@@ -3,12 +3,15 @@ layout: post
 title: "I am replacing my old bash scripts with Python #1."
 excerpt: "Copy a list of directories with their contents to a shared folder."
 category: Python
-comments: false
+date: 2023-04-24
+comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [python, scripting, en, code]
+permalink: /python/python-backup-script-1/
 ---
+
 
 Like me, have you also accumulated many bash scripts over the years to automate operations on your systems?
 

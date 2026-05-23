@@ -1,14 +1,17 @@
---- 
+---
 layout: post
 title: "Using Prolog to Build Expert Systems"
 excerpt: "Building expert systems with Prolog: a practical approach"
 category: Programming
-date:   2023-08-14
+date: 2023-08-14
 comments: true
+share: false
 modified: 2024-07-11
 published: true
 tags: [ai, machine-learning, en, code]
+permalink: /programming/prolog-expert-system/
 ---
+
 
 Prolog is a logical programming language that is often used to write expert systems. An expert system is a computer program that can mimic human reasoning in a specific domain. Expert systems are often used to solve problems that are difficult or impossible for humans to solve, such as medical diagnosis or financial planning.
 

@@ -2,14 +2,16 @@
 layout: post
 title: "Sviluppo di applicazioni Java EE sicure 1"
 excerpt: "Dalle minacce alle migliori pratiche Parte 1"
-category: "Java"
+category: Java
 date: 2025-09-07
 comments: true
 share: false
 modified: 2025-09-07
 published: true
-tags: [java, security, it]
+tags: [java, security, it, en]
+permalink: /java/developing-secure-java-ee-applications-1-introduction-it/
 ---
+
 
 ### 1. Introduzione
 * Benvenuto e obiettivi

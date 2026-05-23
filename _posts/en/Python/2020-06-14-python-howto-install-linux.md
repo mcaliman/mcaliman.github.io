@@ -4,12 +4,14 @@ title: "Install Python 3"
 excerpt: "How to install Python 3 in Linux/Ubuntu"
 category: Python
 date: 2020-06-13
-comments: false
+comments: true
 share: false
 modified: 2024-07-11
 published: true
 tags: [python, scripting, en, code]
+permalink: /python/python-howto-install-linux/
 ---
+
 
 Open the terminal using Ctrl+Alt+T. Once open, run the following commands:
 ```
